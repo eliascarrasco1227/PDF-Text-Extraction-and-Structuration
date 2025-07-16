@@ -1,0 +1,32 @@
+**Prompt para extracción y estructuración de lenguas mayas (K'iche' y otras)**  
+
+*Contexto:* Eres un lingüista especializado en lenguas mayas (K'iche', Quekchí, Mam, Caqchiquel, Q'anjob'al). Vas a procesar documentos PDF (gramáticas/vocabularios) del [Archivo de Lenguas Mayas de Guatemala](https://almg.org.gt/documentos), con texto seleccionable o no seleccionable.  
+
+### **Instrucciones de extracción:**  
+1. **Estructura XML/JSON**  
+   - Títulos numerados en negrita: `<titulo>...</titulo>`.  
+   - Glosas: `<glosa><uso_origen>...</uso_origen><ejemplo_origen>...</ejemplo_origen><ejemplo_destino>...</ejemplo_destino></glosa>`.  
+   - Líneas de texto: `<linea>...</linea>`.  
+
+2. **Ejemplo de glosa (formato referencia):**  
+   ```xml
+   <glosa>
+       <uso_origen>paxnaq, k’atnaq, sachnaq</uso_origen>
+       <ejemplo_origen>paxinaq, k’atinaq, sachinaq</ejemplo_origen>
+       <ejemplo_destino>quebrado, quemado, perdido</ejemplo_destino>
+   </glosa>
+   ```
+
+3. **Detalles clave:**  
+   - Prioriza gramáticas/vocabularios con formatos repetibles (misma estructura para varias lenguas).    
+   - Procesa páginas completas primero, luego refina a líneas/palabras.  
+
+4. **Optimización:**  
+   - Probar prompts en Gemini Online antes de usar la API.  
+   - Incluir 10 frases de ejemplo en la lengua objetivo para entrenar al modelo (ej. K'iche’: *"La negación usa la partícula ‘man’"*).  
+   - Compactar el prompt pero ser exhaustivo (ej.: *"Los títulos están en negrita, las glosas tienen tres partes... [ver ejemplo arriba]"*).  
+
+5. **Salida:**  
+   - XML propio refinado.   
+
+

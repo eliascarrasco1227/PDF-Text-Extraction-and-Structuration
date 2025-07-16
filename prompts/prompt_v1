@@ -10,8 +10,18 @@ k’atnaq k’atinaq quemado
 sachnaq sachinaq perdido
 
 Output o resultado esperado:
-<glosa>
-    <uso en idioma origen> paxnaq, k’atnaq, sachnaq </uso en idioma origen>
-    <ejemplo idioma origen> paxinaq, k’atinaq, sachinaq </ejemplo idioma origen>
-    <ejemplo idioma destino> quebrado, quemado, perdido </ejemplo idioma destino>
-</glosa>
+  <glosa>
+    <uso_origen>paxnaq</uso_origen>
+    <ejemplo_origen>paxinaq</ejemplo_origen>
+    <ejemplo_destino>quebrado</ejemplo_destino>
+  </glosa>
+  <glosa>
+    <uso_origen>k'atnaq</uso_origen>
+    <ejemplo_origen>k'atinaq</ejemplo_origen>
+    <ejemplo_destino>quemado</ejemplo_destino>
+  </glosa>
+  <glosa>
+    <uso_origen>sachnaq</uso_origen>
+    <ejemplo_origen>sachinaq</ejemplo_origen>
+    <ejemplo_destino>perdido</ejemplo_destino>
+  </glosa>

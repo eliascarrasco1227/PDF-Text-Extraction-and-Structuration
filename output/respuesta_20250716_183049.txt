@@ -1,0 +1,28 @@
+```xml
+<linea>Gramática pedagógica K'iche'</linea>
+<linea>Se encontró en varios municipios que en el marcador de los perfectivos –inaq se pierde una vocal y solo queda –naq.</linea>
+<glosa>
+    <uso en idioma origen>paxnaq, k'atnaq, sachnaq</uso en idioma origen>
+    <ejemplo idioma origen>paxinaq, k'atinaq, sachinaq</ejemplo idioma origen>
+    <ejemplo idioma destino>quebrado, quemado, perdido</ejemplo idioma destino>
+</glosa>
+<linea>En el estudio dialectal se encontró que la mayoría de municipios pierden la vocal temática para formar la base antes del sufijo -b'al que indica instrumental o locación.</linea>
+<glosa>
+    <uso en idioma origen>tz'ib'b'al, erb'al, k'ayb'al, tijb'al, chakb'al</uso en idioma origen>
+    <ejemplo idioma origen>tz'ib'ab'al, ereb'al, k'ayib'al, tijob'al, chakub'al</ejemplo idioma origen>
+    <ejemplo idioma destino>instrumento para escribir, instrumento para acarrear, mercado, tienda, escuela, instrumento para trabajar</ejemplo idioma destino>
+</glosa>
+<linea>La mayoría de los municipios de la Comunidad K'iche' pierden la vocal en el sufijo del marcador de derivación en los verbos transitivos derivados; que completo se usa –isa- pero solo usan -sa-.</linea>
+<glosa>
+    <uso en idioma origen>xinawatinsaj, katub'insaj</uso en idioma origen>
+    <ejemplo idioma origen>xinawatinisaj, katub'inisaj</ejemplo idioma origen>
+    <ejemplo idioma destino>me bañaste, te encamina</ejemplo idioma destino>
+</glosa>
+<linea>Se ha encontrado que varios municipios pierden la vocal temática para la base en posicionales antes del sufijo -b'a' en verbos transitivos.</linea>
+<glosa>
+    <uso en idioma origen>xuxekb'a', kuq'oyb'a', xuxukb'a'</uso en idioma origen>
+    <ejemplo idioma origen>xuxekeb'a', kuq'oyob'a', xuxukub'a'</ejemplo idioma origen>
+    <ejemplo idioma destino>lo colgó, lo acuesta, lo hincó</ejemplo idioma destino>
+</glosa>
+<linea>19</linea>
+```
