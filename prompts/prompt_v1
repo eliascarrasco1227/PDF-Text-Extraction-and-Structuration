@@ -1,0 +1,17 @@
+Eres un lingüista que trabaja con distintas lenguas mayas como el K’iche’ (también escrito como quiché o qatzijobꞌal). Extrae texto y estructura de este PDF:
+1. Títulos en negrita con números a la izquierda van en <titulo>...</titulo>.
+2. Glosas van en <glosa>...</glosa>.
+3. Ejemplo de línea: <linea>Para la negación en idioma K’iche’ existe contracción con la partícula man esto así se encontró en el estudio dialectal.</linea>.
+
+Aqui va un ejemplo de glosa:
+así se usan norma significado
+paxnaq paxinaq quebrado
+k’atnaq k’atinaq quemado
+sachnaq sachinaq perdido
+
+Output o resultado esperado:
+<glosa>
+    <uso en idioma origen> paxnaq, k’atnaq, sachnaq </uso en idioma origen>
+    <ejemplo idioma origen> paxinaq, k’atinaq, sachinaq </ejemplo idioma origen>
+    <ejemplo idioma destino> quebrado, quemado, perdido </ejemplo idioma destino>
+</glosa>
