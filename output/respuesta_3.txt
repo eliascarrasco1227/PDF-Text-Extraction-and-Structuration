@@ -1,0 +1,71 @@
+<linea>Gramática pedagógica K’iche’</linea>
+<linea>Se encontró en varios municipios que en el marcador de los perfectivos –inaq se pierde una vocal y solo queda –naq.</linea>
+<glosa>
+  <uso_origen>paxnaq</uso_origen>
+  <ejemplo_origen>paxinaq</ejemplo_origen>
+  <ejemplo_destino>quebrado</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>k’atnaq</uso_origen>
+  <ejemplo_origen>k’atinaq</ejemplo_origen>
+  <ejemplo_destino>quemado</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>sachnaq</uso_origen>
+  <ejemplo_origen>sachinaq</ejemplo_origen>
+  <ejemplo_destino>perdido</ejemplo_destino>
+</glosa>
+<linea>En el estudio dialectal se encontró que la mayoría de municipios pierden la vocal temática para formar la base antes del sufijo -b’al que indica instrumental o locación.</linea>
+<glosa>
+  <uso_origen>tz’ib’b’al</uso_origen>
+  <ejemplo_origen>tz’ib’ab’al</ejemplo_origen>
+  <ejemplo_destino>instrumento para escribir</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>erb’al</uso_origen>
+  <ejemplo_origen>ereb’al</ejemplo_origen>
+  <ejemplo_destino>instrumento para acarrear</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>k’ayb’al</uso_origen>
+  <ejemplo_origen>k’ayib’al</ejemplo_origen>
+  <ejemplo_destino>mercado, tienda</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>tijb’al</uso_origen>
+  <ejemplo_origen>tijob’al</ejemplo_origen>
+  <ejemplo_destino>escuela</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>chakb’al</uso_origen>
+  <ejemplo_origen>chakub’al</ejemplo_origen>
+  <ejemplo_destino>instrumento para trabajar</ejemplo_destino>
+</glosa>
+<linea>La mayoría de los municipios de la Comunidad K’iche’ pierden la vocal en el sufijo del marcador de derivación en los verbos transitivos derivados; que completo se usa –isa- pero solo usan –sa-.</linea>
+<glosa>
+  <uso_origen>xinawatinsaj</uso_origen>
+  <ejemplo_origen>xinawatinisaj</ejemplo_origen>
+  <ejemplo_destino>me bañaste</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>katub’insaj</uso_origen>
+  <ejemplo_origen>katub’inisaj</ejemplo_origen>
+  <ejemplo_destino>te encamina</ejemplo_destino>
+</glosa>
+<linea>Se ha encontrado que varios municipios pierden la vocal temática para la base en posicionales antes del sufijo -b’a’ en verbos transitivos.</linea>
+<glosa>
+  <uso_origen>xuxekb’a’</uso_origen>
+  <ejemplo_origen>xuxekeb’a’</ejemplo_origen>
+  <ejemplo_destino>lo colgó</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>kuq’oyb’a’</uso_origen>
+  <ejemplo_origen>kuq’oyob’a’</ejemplo_origen>
+  <ejemplo_destino>lo acuesta</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>xuxukb’a’</uso_origen>
+  <ejemplo_origen>xuxukub’a’</ejemplo_origen>
+  <ejemplo_destino>lo hincó</ejemplo_destino>
+</glosa>
+<linea>19</linea>

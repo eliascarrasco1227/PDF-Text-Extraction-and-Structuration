@@ -1,0 +1,12 @@
+
+tu_proyecto/
+│
+├── config/
+│   └── paths.py           # Configuraciones
+│
+├── core/                  # Lógica principal
+│   ├── prompt_reader.py
+│   ├── ai_generator.py
+│   └── file_writer.py
+│
+└── main.py                # Punto de entrada

@@ -12,7 +12,7 @@ client = genai.Client()
 pdf_path = 'data/Gramatica-Normativa-Kiche_PAG_20.pdf'
 # Ruta del archivo de prompt
 #prompt_path = 'prompts/prompt_v1'
-prompt_path = 'prompts/prompt_v2'
+prompt_path = 'prompts/prompt_v1'
 
 # Leer el prompt
 with open(prompt_path, 'r', encoding='utf-8') as f:

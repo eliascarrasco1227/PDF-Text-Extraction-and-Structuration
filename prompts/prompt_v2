@@ -4,7 +4,8 @@
 
 ### **Instrucciones de extracción:**  
 1. **Estructura XML/JSON**  
-   - Títulos numerados en negrita: `<titulo>...</titulo>`.  
+   - Títulos numerados con dos dígitos (1.1, 3.7...) en negrita y mayusculas: `<titulo>...</titulo>`. Algunos ejemplos pueden ser: PRESTAMOS LINGÜISTICOS, PRESTAMOS LINGÜISTICOS
+   - Secciones numeradas con tres dígitos (1.2.1, 3.4.2...) en negrita y minusculas: <seccion tipo="..."> Algunos ejemplos de secciones pueden ser: Perdida de Vocales, Pérdida de Consonantes, Derivación de un sustantivo,  Semejanzas sintácticas ...
    - Glosas: `<glosa><uso_origen>...</uso_origen><ejemplo_origen>...</ejemplo_origen><ejemplo_destino>...</ejemplo_destino></glosa>`.  
    - Líneas de texto: `<linea>...</linea>`.  
 
@@ -17,6 +18,8 @@
    </glosa>
    ```
 
+
+
 3. **Detalles clave:**  
    - Prioriza gramáticas/vocabularios con formatos repetibles (misma estructura para varias lenguas).    
    - Procesa páginas completas primero, luego refina a líneas/palabras.  
@@ -26,7 +29,12 @@
    - Incluir 10 frases de ejemplo en la lengua objetivo para entrenar al modelo (ej. K'iche’: *"La negación usa la partícula ‘man’"*).  
    - Compactar el prompt pero ser exhaustivo (ej.: *"Los títulos están en negrita, las glosas tienen tres partes... [ver ejemplo arriba]"*).  
 
-5. **Salida:**  
+5. **Solventar problemas comunes:**
+    - Asegurate de mantener los signos de exclamación ya que a veces se eliminan en la salida.
+    - Extraer texto literal, incluyendo signos ortográficos para evitar perder signos de excalación e interrogación que se suelen perder.
+    - Ten cuidado con la información redundante, los pdf suelen tener al principio de la página una linea donde pone el titulo del libro y se repite en cada página como por ejemolo "Gramática pedagógica K'iche'". Esta información no debe de estar en la salida.
+
+6. **Salida:**  
    - XML propio refinado.   
 
 
