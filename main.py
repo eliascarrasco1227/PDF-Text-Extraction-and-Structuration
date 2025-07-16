@@ -1,4 +1,4 @@
-from config.paths import PDF_PATH, PROMPT_PATH, OUTPUT_DIR
+from config.paths import PDF_PATH, PROMPT_PATH, OUTPUT_DIR, PAGINAS
 from core.prompt_reader import PromptReader
 from core.ai_generator import AIGenerator
 from core.file_writer import FileWriter
@@ -10,19 +10,24 @@ class DocumentProcessor:
         self.file_writer = FileWriter(OUTPUT_DIR)
     
     def run(self):
+        print(f"📄 Procesando páginas {PAGINAS[0]} a {PAGINAS[1]}")
+        
         # 1. Leer prompt
         prompt = self.prompt_reader.read()
         print(f"📝 Prompt usado: {self.prompt_reader.preview}")
         
         # 2. Generar respuesta
-        response = self.ai_generator.generate_from_pdf(PDF_PATH, prompt)
-        print("\n🤖 Respuesta generada:")
-        print(response[:200] + "...")  # Muestra fragmento
+        response = self.ai_generator.generate_from_pdf(
+            pdf_path=PDF_PATH,
+            prompt=prompt,
+            page_range=PAGINAS
+        )
         
-        # 3. Guardar (elige un método)
+        print("\n🤖 Fragmento de respuesta:")
+        print(response[:200] + "...")
+        
+        # 3. Guardar
         saved_path = self.file_writer.save_with_counter(response)
-        # saved_path = self.file_writer.save_with_timestamp(response)
-        
         print(f"\n💾 Respuesta guardada en: {saved_path}")
 
 if __name__ == "__main__":

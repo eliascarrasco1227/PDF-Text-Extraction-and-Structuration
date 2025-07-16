@@ -1,0 +1,148 @@
+<linea>Se encontró en varios municipios que en el marcador de los perfectivos –inaq se pierde una vocal y solo queda –naq.</linea>
+<glosa>
+  <uso_origen>paxnaq</uso_origen>
+  <ejemplo_origen>paxinaq</ejemplo_origen>
+  <ejemplo_destino>quebrado</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>k'atnaq</uso_origen>
+  <ejemplo_origen>k'atinaq</ejemplo_origen>
+  <ejemplo_destino>quemado</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>sachnaq</uso_origen>
+  <ejemplo_origen>sachinaq</ejemplo_origen>
+  <ejemplo_destino>perdido</ejemplo_destino>
+</glosa>
+<linea>En el estudio dialectal se encontró que la mayoría de municipios pierden la vocal temática para formar la base antes del sufijo -b'al que indica instrumental o locación.</linea>
+<glosa>
+  <uso_origen>tz'ib'b'al</uso_origen>
+  <ejemplo_origen>tz'ib'ab'al</ejemplo_origen>
+  <ejemplo_destino>instrumento para escribir</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>erb'al</uso_origen>
+  <ejemplo_origen>ereb'al</ejemplo_origen>
+  <ejemplo_destino>instrumento para acarrear</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>k'ayb'al</uso_origen>
+  <ejemplo_origen>k'ayib'al</ejemplo_origen>
+  <ejemplo_destino>mercado, tienda</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>tijb'al</uso_origen>
+  <ejemplo_origen>tijob'al</ejemplo_origen>
+  <ejemplo_destino>escuela</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>chakb'al</uso_origen>
+  <ejemplo_origen>chakub'al</ejemplo_origen>
+  <ejemplo_destino>instrumento para trabajar</ejemplo_destino>
+</glosa>
+<linea>La mayoría de los municipios de la Comunidad K'iche' pierden la vocal en el sufijo del marcador de derivación en los verbos transitivos derivados; que completo se usa –isa- pero solo usan -sa-.</linea>
+<glosa>
+  <uso_origen>xinawatinsaj</uso_origen>
+  <ejemplo_origen>xinawatinisaj</ejemplo_origen>
+  <ejemplo_destino>me bañaste</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>katub'insaj</uso_origen>
+  <ejemplo_origen>katub'inisaj</ejemplo_origen>
+  <ejemplo_destino>te encamina</ejemplo_destino>
+</glosa>
+<linea>Se ha encontrado que varios municipios pierden la vocal temática para la base en posicionales antes del sufijo -b'a' en verbos transitivos.</linea>
+<glosa>
+  <uso_origen>xuxekb'a'</uso_origen>
+  <ejemplo_origen>xuxekeb'a'</ejemplo_origen>
+  <ejemplo_destino>lo colgó</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>kuq'oyb'a'</uso_origen>
+  <ejemplo_origen>kuq'oyob'a'</ejemplo_origen>
+  <ejemplo_destino>lo acuesta</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>xuxukb'a'</uso_origen>
+  <ejemplo_origen>xuxukub'a'</ejemplo_origen>
+  <ejemplo_destino>lo hincó</ejemplo_destino>
+</glosa>
+<linea>Para la negación en idioma K'iche' existe contracción con la partícula man esto así se encontró en el estudio dialectal.</linea>
+<glosa>
+  <uso_origen>mawilo</uso_origen>
+  <ejemplo_origen>man kawil taj</ejemplo_origen>
+  <ejemplo_destino>no lo mires</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>machupu</uso_origen>
+  <ejemplo_origen>man kachup taj</ejemplo_origen>
+  <ejemplo_destino>no lo apagues</ejemplo_destino>
+</glosa>
+<linea>En la contracción de la preposición más el sustantivo relacional se pierde una vocal.</linea>
+<glosa>
+  <uso_origen>chawach</uso_origen>
+  <ejemplo_origen>chi awach</ejemplo_origen>
+  <ejemplo_destino>en frente de ti</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>pi'tzal</uso_origen>
+  <ejemplo_origen>pa itzal</ejemplo_origen>
+  <ejemplo_destino>al lado de ustedes</ejemplo_destino>
+</glosa>
+<linea>Así también lo encontrado en los municipios es la contracción del demostrativo más sustantivo, se pierde la vocal en el demostrativo.</linea>
+<glosa>
+  <uso_origen>li'mul</uso_origen>
+  <ejemplo_origen>le imul</ejemplo_origen>
+  <ejemplo_destino>ese conejo</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>ra'jij</uso_origen>
+  <ejemplo_origen>ri ajij</ejemplo_origen>
+  <ejemplo_destino>la caña</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>la'li</uso_origen>
+  <ejemplo_origen>le ali</ejemplo_origen>
+  <ejemplo_destino>la señorita</ejemplo_destino>
+</glosa>
+<linea>En la contracción del artículo más el pronombre personal independiente se pierde una vocal, esto ocurre en la mayoría de municipios.</linea>
+<glosa>
+  <uso_origen>rin</uso_origen>
+  <ejemplo_origen>ri in</ejemplo_origen>
+  <ejemplo_destino>yo</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>rat</uso_origen>
+  <ejemplo_origen>ri at</ejemplo_origen>
+  <ejemplo_destino>tú</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>rlal</uso_origen>
+  <ejemplo_origen>ri lal</ejemplo_origen>
+  <ejemplo_destino>usted</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>rare'</uso_origen>
+  <ejemplo_origen>ri are'</ejemplo_origen>
+  <ejemplo_destino>él o ella</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>ruj</uso_origen>
+  <ejemplo_origen>ri uj</ejemplo_origen>
+  <ejemplo_destino>nosotros</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>rix</uso_origen>
+  <ejemplo_origen>ri ix</ejemplo_origen>
+  <ejemplo_destino>ustedes</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>ra'laq</uso_origen>
+  <ejemplo_origen>ri aläq</ejemplo_origen>
+  <ejemplo_destino>ustedes</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>a're'</uso_origen>
+  <ejemplo_origen>e are'</ejemplo_origen>
+  <ejemplo_destino>ellos o ellas</ejemplo_destino>
+</glosa>
