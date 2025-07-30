@@ -138,7 +138,7 @@ sachinaq -> perdido
    - XML propio refinado.   
 
 7. **Ejemplos**
-Aqui te voy a pasar ejemplos de input, es decir lo que verás en el pdf y ejemplos de output, es decir lo que deberías generar a partir de ese input. Hay ejemplos de frases paralelas (paralel_phrase), también de gloasas interlineales (interlinear_gloss) 
+Aqui te voy a pasar ejemplos de input, es decir lo que verás en el pdf y ejemplos de output, es decir lo que deberías generar a partir de ese input. Hay ejemplos de frases paralelas (paralel_phrase), también de gloasas interlineales (interlinear_gloss) con análisis morfológico (morpheme_analysis) en su interior y a veces con análisis sintáctico (syntactic_analysis).
 
 ***Ejemplo input***:
 Sustantivo Traducción Sustantivo Traducción
@@ -148,25 +148,20 @@ nukotz'i'j mi flor woj mi aguacate
 
 ***Ejemplo output***:
 <paralel_phrase>
-<original>kotz'i'j</original>
-<translation>flor</translation>
+    <original>kotz'i'j</original>
+    <translation>flor</translation>
 </paralel_phrase>
-
 <paralel_phrase>
-<original>nukotz'i'j</original>
-<translation>mi flor</translation>
+    <original>nukotz'i'j</original>
+    <translation>mi flor</translation>
 </paralel_phrase>
-
-
 <paralel_phrase>
-<original>oj</original>
-<translation>flor</translation>
+    <original>oj</original>
+    <translation>flor</translation>
 </paralel_phrase>
-
-
 <paralel_phrase>
-<original>woj</original>
-<translation>mi aguacate</translation>
+    <original>woj</original>
+    <translation>mi aguacate</translation>
 </paralel_phrase>
 
 
@@ -177,42 +172,36 @@ No lo veo
 
 ***Ejemplo output***:
 <interlinear_gloss>
-<paralel_phrase>
-    <original>k’am chi-∅ w-il-a’</original>
-    <translation>No lo veo</translation>
-</paralel_phrase>
-
-<morpheme_analysis>
-    <unit>
-    <form>k’am</form>
-    <gloss>NEG</gloss>
-    </unit>
-    
-    <unit>
-    <form>chi-</form>
-    <gloss>INC</gloss>
-    </unit>
-    
-    <unit>
-    <form>∅</form>  <!-- Morfema cero -->
-    <gloss>B3</gloss>  <!-- Parte de B3A1SG -->
-    </unit>
-    
-    <unit>
-    <form>w-</form>
-    <gloss>A1SG</gloss>  <!-- Parte de B3A1SG -->
-    </unit>
-    
-    <unit>
-    <form>il</form>
-    <gloss>ver</gloss>
-    </unit>
-    
-    <unit>
-    <form>-a’</form>  <!-- Nota el guión indicando sufijo -->
-    <gloss>SC</gloss>
-    </unit>
-</morpheme_analysis>
+    <paralel_phrase>
+        <original>k’am chi-∅ w-il-a’</original>
+        <translation>No lo veo</translation>
+    </paralel_phrase>
+    <morpheme_analysis>
+        <unit>
+            <form>k’am</form>
+            <gloss>NEG</gloss>
+        </unit>
+        <unit>
+            <form>chi-</form>
+            <gloss>INC</gloss>
+        </unit>        
+        <unit>
+            <form>∅</form>  <!-- Morfema cero -->
+            <gloss>B3</gloss>  <!-- Parte de B3A1SG -->
+        </unit>        
+        <unit>
+            <form>w-</form>
+            <gloss>A1SG</gloss>  <!-- Parte de B3A1SG -->
+        </unit>        
+        <unit>
+            <form>il</form>
+            <gloss>ver</gloss>
+        </unit>        
+        <unit>
+            <form>-a’</form>  <!-- Nota el guión indicando sufijo -->
+            <gloss>SC</gloss>
+        </unit>
+    </morpheme_analysis>
 </interlinear_gloss>
 
 ***Ejemlo input***:
@@ -223,25 +212,24 @@ Este ladrón
 
 ***Ejemplo output***:
 <interlinear_gloss>
-<paralel_phrase>
-    <original>jun elq’om ti’</original>
-    <translation>Este ladrón</translation>
-</paralel_phrase>
-
-<morpheme_analysis>
-    <unit>
-        <form>jun</form>
-        <gloss>ART</gloss>
-    </unit>
-    <unit>
-        <form>elq’om</form>
-        <gloss>ladrón</gloss>
-    </unit>
-    <unit>
-        <form>ti’</form>
-        <gloss>DEM:este</gloss>
-    </unit>
-</morpheme_analysis>
+    <paralel_phrase>
+        <original>jun elq’om ti’</original>
+        <translation>Este ladrón</translation>
+    </paralel_phrase>
+    <morpheme_analysis>
+        <unit>
+            <form>jun</form>
+            <gloss>ART</gloss>
+        </unit>
+        <unit>
+            <form>elq’om</form>
+            <gloss>ladrón</gloss>
+        </unit>
+        <unit>
+            <form>ti’</form>
+            <gloss>DEM:este</gloss>
+        </unit>
+    </morpheme_analysis>
 </interlinear_gloss>
 
 ***Ejemplo input imagen***:
@@ -309,4 +297,32 @@ PL/DIM enfermedad
 </interlinear_gloss>
 
 
+**Ejemplo input:**
+xub’ano lo hizo transitivo
+b’anik hacer intransitivo
 
+**Ejemplo output:**
+</interlinear_gloss>
+    <paralel_phrase>
+        <original>xub'ano</original>
+        <translation>lo hizo</translation>
+    </paralel_phrase>
+    <morpheme_analysis>
+            <unit>
+            <form>xub'ano</form>
+            <gloss>transitivo</gloss>
+        </unit>
+    </morpheme_analysis>
+</interlinear_gloss>
+</interlinear_gloss>
+    <paralel_phrase>
+        <original>b’anik</original>
+        <translation>hacer</translation>
+    </paralel_phrase>
+    <morpheme_analysis>
+            <unit>
+            <form>b’anik</form>
+            <gloss>intransitivo</gloss>
+        </unit>
+    </morpheme_analysis>
+</interlinear_gloss>

@@ -14,7 +14,8 @@ class DocumentProcessor:
         
         # 1. Leer prompt
         prompt = self.prompt_reader.read()
-        print(f"📝 Prompt usado: {self.prompt_reader.preview}")
+        #print(f"📝 Prompt usado: {self.prompt_reader.preview}")PROMPT_PATH
+        print(f"📝 Prompt usado: {PROMPT_PATH}")
 
         # 2. Generar respuesta
         print("🤖 Generando respuesta...")
