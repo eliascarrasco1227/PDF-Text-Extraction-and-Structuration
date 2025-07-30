@@ -1,0 +1,64 @@
+```xml
+<linea>Gramática pedagógica K'iche'</linea>
+<linea>Verbos transitivos derivados con movimiento</linea>
+<glosa>jate'ub'inisaj j-at-e-u-b'in-isa-j IMP-B2s-MOV-A3s-caminar-DER-SC que te vaya encaminar</glosa>
+<linea>e) sufijos de categoría se utilizan como indicadores de la clase del verbo al que acompañan.</linea>
+<linea>Los verbos intransitivos utilizan el sufijo -ik, así:</linea>
+<glosa>kinatinik me baño k-in-atin-ik INC-B1s-bañar-SC</glosa>
+<linea>Los verbos transitivos radicales utilizan el sufijo –u cuando en la raíz llevan la vocal u y el sufijo -o en las demás vocales, así:</linea>
+<glosa>kusu'u lo limpia</glosa>
+<glosa>xumu'u lo remojó</glosa>
+<glosa>xutijo lo comió</glosa>
+<glosa>xrilo lo vió</glosa>
+<linea>Los verbos transitivos derivados utilizan el sufijo -j</linea>
+<glosa>kratinisaj lo baña</glosa>
+<glosa>xub'inisaj lo encaminó</glosa>
+<linea>Los verbos intransitivos imperativos con y sin movimiento utilizan el sufijo -oq, así:</linea>
+<linea>con movimiento sin movimiento</linea>
+<glosa>jate'atinoq anda a bañarte</glosa>
+<glosa>chatatinoq báñate</glosa>
+<glosa>jixewa'oq vayan a comer</glosa>
+<glosa>chixwa'oq coman</glosa>
+<linea>Los verbos transitivos imperativos con y sin movimiento utilizan los sufijos a' y u', así:</linea>
+<linea>con movimiento sin movimiento</linea>
+<glosa>je'eqachapa' vayamos a agarrarlos</glosa>
+<glosa>che'qachapa' que los agarremos</glosa>
+<glosa>je'e'achupu' que vaya a apagarlos</glosa>
+<glosa>che'achupu' que los apagues</glosa>
+<linea>Gramática pedagógica K'iche'</linea>
+<titulo>1.6 DERIVACION</titulo>
+<linea>Los afijos de derivación forman nuevas palabras en el idioma Maya K'iche' a través de cambiar la clase de la raíz o base a la cual se le agregan, o a través de cambiar su significado, así:</linea>
+<linea>a) Derivación de un sustantivo</linea>
+<glosa>chun cal sustantivo</glosa>
+<glosa>chunaj encalar verbo transitivo</glosa>
+<glosa>chunab'al instrumento instrumental</glosa>
+<glosa>chunanik encalar verbo intransitivo</glosa>
+<glosa>chunanel encalador agentivo</glosa>
+<glosa>chunanem encalar sustantivo verbal</glosa>
+<linea>b) Derivación de un adjetivo</linea>
+<glosa>nim grande adjetivo</glosa>
+<glosa>unimal su grandeza sustantivo abstracto</glosa>
+<glosa>nimarik agrandarse verbo intransitivo</glosa>
+<glosa>nimarisaj agrandar verbo transitivo</glosa>
+<glosa>nimalaj muy grande superlativo</glosa>
+<glosa>nimarisanik agrandar verbo intransitivo</glosa>
+<glosa>nimarisanel agrandador agentivo</glosa>
+<glosa>nimarisanem agrandar sustantivo verbal</glosa>
+<linea>c) Derivación de un posicional</linea>
+<glosa>ketelik está redondo posicional</glosa>
+<glosa>kete'ik ponerse redondo verbo intransitivo</glosa>
+<glosa>keteb'a' ponerlo redondo verbo transitivo</glosa>
+<glosa>ketekik redondo descriptivo</glosa>
+<glosa>keteb'al instrumento instrumental</glosa>
+<linea>d) Derivación de un intransitivo</linea>
+<glosa>atinik bañar intransitivo</glosa>
+<glosa>atinem bañar sustantivo verbal</glosa>
+<glosa>xinratinisaj me bañó transitivo (derivado)</glosa>
+<glosa>atininaq bañado perfectivo</glosa>
+<linea>e) Derivación de un transitivo</linea>
+<glosa>xub'ano lo hizo transitivo</glosa>
+<glosa>b'anik hacer intransitivo</glosa>
+<glosa>b'anom hecho perfectivo</glosa>
+<glosa>b'anal el que hace agentivo</glosa>
+<glosa>b'anib'al instrumento instrumental</glosa>
+```

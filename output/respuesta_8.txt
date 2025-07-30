@@ -1,0 +1,236 @@
+<linea>Gramática pedagógica K'iche'</linea>
+<titulo>Verbos transitivos derivados con movimiento</titulo>
+<glosa>
+  <uso_origen>jate'ub'inisaj</uso_origen>
+  <ejemplo_origen>j-at-e-u-b'in-isa-j</ejemplo_origen>
+  <ejemplo_destino>que te vaya encaminar</ejemplo_destino>
+</glosa>
+<linea>e) sufijos de categoría se utilizan como indicadores de la clase del verbo al que acompañan.</linea>
+<linea>Los verbos intransitivos utilizan el sufijo -ik, así:</linea>
+<glosa>
+  <uso_origen>kinatinik</uso_origen>
+  <ejemplo_origen>k-in-atin-ik</ejemplo_origen>
+  <ejemplo_destino>me baño</ejemplo_destino>
+</glosa>
+<linea>Los verbos transitivos radicales utilizan el sufijo –u cuando en la raíz llevan la vocal u y el sufijo -o en las demás vocales, así:</linea>
+<glosa>
+  <uso_origen>kusu'u</uso_origen>
+  <ejemplo_origen>kusu'u</ejemplo_origen>
+  <ejemplo_destino>lo limpia</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>xumu'u</uso_origen>
+  <ejemplo_origen>xumu'u</ejemplo_origen>
+  <ejemplo_destino>lo remojó</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>xutijo</uso_origen>
+  <ejemplo_origen>xutijo</ejemplo_origen>
+  <ejemplo_destino>lo comió</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>xrilo</uso_origen>
+  <ejemplo_origen>xrilo</ejemplo_origen>
+  <ejemplo_destino>lo vió</ejemplo_destino>
+</glosa>
+<linea>Los verbos transitivos derivados utilizan el sufijo -j</linea>
+<glosa>
+  <uso_origen>kratinisaj</uso_origen>
+  <ejemplo_origen>kratinisaj</ejemplo_origen>
+  <ejemplo_destino>lo baña</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>xub'inisaj</uso_origen>
+  <ejemplo_origen>xub'inisaj</ejemplo_origen>
+  <ejemplo_destino>lo encaminó</ejemplo_destino>
+</glosa>
+<linea>Los verbos intransitivos imperativos con y sin movimiento utilizan el sufijo -oq, así:</linea>
+<glosa>
+  <uso_origen>jate'atinoq</uso_origen>
+  <ejemplo_origen>jate'atinoq</ejemplo_origen>
+  <ejemplo_destino>anda a bañarte</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>chatatinoq</uso_origen>
+  <ejemplo_origen>chatatinoq</ejemplo_origen>
+  <ejemplo_destino>báñate</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>jixewa'oq</uso_origen>
+  <ejemplo_origen>jixewa'oq</ejemplo_origen>
+  <ejemplo_destino>vayan a comer</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>chixwa'oq</uso_origen>
+  <ejemplo_origen>chixwa'oq</ejemplo_origen>
+  <ejemplo_destino>coman</ejemplo_destino>
+</glosa>
+<linea>Los verbos transitivos imperativos con y sin movimiento utilizan los sufijos a' y u', así:</linea>
+<glosa>
+  <uso_origen>je'eqachapa'</uso_origen>
+  <ejemplo_origen>je'eqachapa'</ejemplo_origen>
+  <ejemplo_destino>vayamos a agarrarlos</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>che'qachapa'</uso_origen>
+  <ejemplo_origen>che'qachapa'</ejemplo_origen>
+  <ejemplo_destino>que los agarremos</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>je'e'achupu'</uso_origen>
+  <ejemplo_origen>je'e'achupu'</ejemplo_origen>
+  <ejemplo_destino>que vaya a apagarlos</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>che'achupu'</uso_origen>
+  <ejemplo_origen>che'achupu'</ejemplo_origen>
+  <ejemplo_destino>que los apagues</ejemplo_destino>
+</glosa>
+<linea>Gramática pedagógica K'iche'</linea>
+<titulo>1.6 DERIVACION</titulo>
+<linea>Los afijos de derivación forman nuevas palabras en el idioma Maya K'iche' a través de cambiar la clase de la raíz o base a la cual se le agregan, o a través de cambiar su significado, así:</linea>
+<linea>a) Derivación de un sustantivo</linea>
+<glosa>
+  <uso_origen>chun</uso_origen>
+  <ejemplo_origen>chun</ejemplo_origen>
+  <ejemplo_destino>cal</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>chunaj</uso_origen>
+  <ejemplo_origen>chunaj</ejemplo_origen>
+  <ejemplo_destino>encalar</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>chunab'al</uso_origen>
+  <ejemplo_origen>chunab'al</ejemplo_origen>
+  <ejemplo_destino>instrumento</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>chunanik</uso_origen>
+  <ejemplo_origen>chunanik</ejemplo_origen>
+  <ejemplo_destino>encalar</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>chunanel</uso_origen>
+  <ejemplo_origen>chunanel</ejemplo_origen>
+  <ejemplo_destino>encalador</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>chunanem</uso_origen>
+  <ejemplo_origen>chunanem</ejemplo_origen>
+  <ejemplo_destino>encalar</ejemplo_destino>
+</glosa>
+<linea>b) Derivación de un adjetivo</linea>
+<glosa>
+  <uso_origen>nim</uso_origen>
+  <ejemplo_origen>nim</ejemplo_origen>
+  <ejemplo_destino>grande</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>unimal</uso_origen>
+  <ejemplo_origen>unimal</ejemplo_origen>
+  <ejemplo_destino>su grandeza</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>nimarik</uso_origen>
+  <ejemplo_origen>nimarik</ejemplo_origen>
+  <ejemplo_destino>agrandarse</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>nimarisaj</uso_origen>
+  <ejemplo_origen>nimarisaj</ejemplo_origen>
+  <ejemplo_destino>agrandar</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>nimalaj</uso_origen>
+  <ejemplo_origen>nimalaj</ejemplo_origen>
+  <ejemplo_destino>muy grande</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>nimarisanik</uso_origen>
+  <ejemplo_origen>nimarisanik</ejemplo_origen>
+  <ejemplo_destino>agrandar</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>nimarisanel</uso_origen>
+  <ejemplo_origen>nimarisanel</ejemplo_origen>
+  <ejemplo_destino>agrandador</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>nimarisanem</uso_origen>
+  <ejemplo_origen>nimarisanem</ejemplo_origen>
+  <ejemplo_destino>agrandar</ejemplo_destino>
+</glosa>
+<linea>c) Derivación de un posicional</linea>
+<glosa>
+  <uso_origen>ketelik</uso_origen>
+  <ejemplo_origen>ketelik</ejemplo_origen>
+  <ejemplo_destino>está redondo</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>kete'ik</uso_origen>
+  <ejemplo_origen>kete'ik</ejemplo_origen>
+  <ejemplo_destino>ponerse redondo</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>keteb'a'</uso_origen>
+  <ejemplo_origen>keteb'a'</ejemplo_origen>
+  <ejemplo_destino>ponerlo redondo</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>ketekik</uso_origen>
+  <ejemplo_origen>ketekik</ejemplo_origen>
+  <ejemplo_destino>redondo</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>keteb'al</uso_origen>
+  <ejemplo_origen>keteb'al</ejemplo_origen>
+  <ejemplo_destino>instrumento</ejemplo_destino>
+</glosa>
+<linea>d) Derivación de un intransitivo</linea>
+<glosa>
+  <uso_origen>atinik</uso_origen>
+  <ejemplo_origen>atinik</ejemplo_origen>
+  <ejemplo_destino>bañar</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>atinem</uso_origen>
+  <ejemplo_origen>atinem</ejemplo_origen>
+  <ejemplo_destino>bañar</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>xinratinisaj</uso_origen>
+  <ejemplo_origen>xinratinisaj</ejemplo_origen>
+  <ejemplo_destino>me bañó</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>atininaq</uso_origen>
+  <ejemplo_origen>atininaq</ejemplo_origen>
+  <ejemplo_destino>bañado</ejemplo_destino>
+</glosa>
+<linea>e) Derivación de un transitivo</linea>
+<glosa>
+  <uso_origen>xub'ano</uso_origen>
+  <ejemplo_origen>xub'ano</ejemplo_origen>
+  <ejemplo_destino>lo hizo</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>b'anik</uso_origen>
+  <ejemplo_origen>b'anik</ejemplo_origen>
+  <ejemplo_destino>hacer</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>b'anom</uso_origen>
+  <ejemplo_origen>b'anom</ejemplo_origen>
+  <ejemplo_destino>hecho</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>b'anal</uso_origen>
+  <ejemplo_origen>b'anal</ejemplo_origen>
+  <ejemplo_destino>el que hace</ejemplo_destino>
+</glosa>
+<glosa>
+  <uso_origen>b'anib'al</uso_origen>
+  <ejemplo_origen>b'anib'al</ejemplo_origen>
+  <ejemplo_destino>instrumento</ejemplo_destino>
+</glosa>

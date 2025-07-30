@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kiche.pdf" paginas="30-31">
+```xml
+<document>
+  <metadatos>
+    <titulo>Gramatica-Normativa-Kiche.pdf</titulo>
+    <paginas_procesadas>29-30</paginas_procesadas>
+  </metadatos>
+  <pagina num="29">
+    <contenido>
+      <linea>Gramática pedagógica K'iche'</linea>
+      <linea>Verbos transitivos derivados con movimiento</linea>
+      <glosa>
+        <uso_origen>jate'ub'inisaj</uso_origen>
+        <ejemplo_destino>que te vaya encaminar</ejemplo_destino>
+      </glosa>
+      <linea>j-at-e-u-b'in-isa-j</linea>
+      <linea>IMP-B2s-MOV-A3s-caminar-DER-SC</linea>
+      <linea>e) sufijos de categoría se utilizan como indicadores de la clase del verbo al que acompañan.</linea>
+      <linea>Los verbos intransitivos utilizan el sufijo -ik, así:</linea>
+      <glosa>
+        <uso_origen>kinatinik</uso_origen>
+        <ejemplo_destino>me baño</ejemplo_destino>
+      </glosa>
+      <linea>k-in-atin-ik</linea>
+      <linea>INC-B1s-bañar-SC</linea>
+      <linea>Los verbos transitivos radicales utilizan el sufijo –u cuando en la raíz llevan la vocal u y el sufijo -o en las demás vocales, así:</linea>
+      <glosa>
+        <uso_origen>kusu'u</uso_origen>
+        <ejemplo_destino>lo limpia</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>xumu'u</uso_origen>
+        <ejemplo_destino>lo remojó</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>xutijo</uso_origen>
+        <ejemplo_destino>lo comió</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>xrilo</uso_origen>
+        <ejemplo_destino>lo vió</ejemplo_destino>
+      </glosa>
+      <linea>Los verbos transitivos derivados utilizan el sufijo -j</linea>
+      <glosa>
+        <uso_origen>kratinisaj</uso_origen>
+        <ejemplo_destino>lo baña</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>xub'inisaj</uso_origen>
+        <ejemplo_destino>lo encaminó</ejemplo_destino>
+      </glosa>
+      <linea>Los verbos intransitivos imperativos con y sin movimiento utilizan el sufijo -oq, así:</linea>
+      <linea>con movimiento</linea>
+      <linea>sin movimiento</linea>
+      <glosa>
+        <uso_origen>jate'atinoq</uso_origen>
+        <ejemplo_destino>anda a bañarte</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>chatatinoq</uso_origen>
+        <ejemplo_destino>báñate</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>jixewa'oq</uso_origen>
+        <ejemplo_destino>vayan a comer</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>chixwa'oq</uso_origen>
+        <ejemplo_destino>coman</ejemplo_destino>
+      </glosa>
+      <linea>Los verbos transitivos imperativos con y sin movimiento utilizan los sufijos a' y u', así:</linea>
+      <linea>con movimiento</linea>
+      <linea>sin movimiento</linea>
+      <glosa>
+        <uso_origen>je'eqachapa'</uso_origen>
+        <ejemplo_destino>vayamos a agarrarlos</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>che'qachapa'</uso_origen>
+        <ejemplo_destino>que los agarremos</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>je'e'achupu'</uso_origen>
+        <ejemplo_destino>que vaya a apagarlos</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>che'achupu'</uso_origen>
+        <ejemplo_destino>que los apagues</ejemplo_destino>
+      </glosa>
+    </contenido>
+  </pagina>
+  <pagina num="30">
+    <contenido>
+      <linea>Gramática pedagógica K'iche'</linea>
+      <titulo>1.6 DERIVACION</titulo>
+      <linea>Los afijos de derivación forman nuevas palabras en el idioma Maya K'iche' a través de cambiar la clase de la raíz o base a la cual se le agregan, o a través de cambiar su significado, así:</linea>
+      <linea>a) Derivación de un sustantivo</linea>
+      <glosa>
+        <uso_origen>chun</uso_origen>
+        <ejemplo_destino>cal sustantivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>chunaj</uso_origen>
+        <ejemplo_destino>encalar verbo transitivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>chunab'al</uso_origen>
+        <ejemplo_destino>instrumento instrumental</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>chunanik</uso_origen>
+        <ejemplo_destino>encalar verbo intransitivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>chunanel</uso_origen>
+        <ejemplo_destino>encalador agentivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>chunanem</uso_origen>
+        <ejemplo_destino>encalar sustantivo verbal</ejemplo_destino>
+      </glosa>
+      <linea>b) Derivación de un adjetivo</linea>
+      <glosa>
+        <uso_origen>nim</uso_origen>
+        <ejemplo_destino>grande adjetivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>unimal</uso_origen>
+        <ejemplo_destino>su grandeza sustantivo abstracto</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>nimarik</uso_origen>
+        <ejemplo_destino>agrandarse verbo intransitivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>nimarisaj</uso_origen>
+        <ejemplo_destino>agrandar verbo transitivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>nimalaj</uso_origen>
+        <ejemplo_destino>muy grande superlativo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>nimarisanik</uso_origen>
+        <ejemplo_destino>agrandar verbo intransitivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>nimarisanel</uso_origen>
+        <ejemplo_destino>agrandador agentivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>nimarisanem</uso_origen>
+        <ejemplo_destino>agrandar sustantivo verbal</ejemplo_destino>
+      </glosa>
+      <linea>c) Derivación de un posicional</linea>
+      <glosa>
+        <uso_origen>ketelik</uso_origen>
+        <ejemplo_destino>está redondo posicional</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>kete'ik</uso_origen>
+        <ejemplo_destino>ponerse redondo verbo intransitivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>keteb'a'</uso_origen>
+        <ejemplo_destino>ponerlo redondo verbo transitivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>ketekik</uso_origen>
+        <ejemplo_destino>redondo descriptivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>keteb'al</uso_origen>
+        <ejemplo_destino>instrumento instrumental</ejemplo_destino>
+      </glosa>
+      <linea>d) Derivación de un intransitivo</linea>
+      <glosa>
+        <uso_origen>atinik</uso_origen>
+        <ejemplo_destino>bañar intransitivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>atinem</uso_origen>
+        <ejemplo_destino>bañar sustantivo verbal</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>xinratinisaj</uso_origen>
+        <ejemplo_destino>me bañó transitivo (derivado)</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>atininaq</uso_origen>
+        <ejemplo_destino>bañado perfectivo</ejemplo_destino>
+      </glosa>
+      <linea>e) Derivación de un transitivo</linea>
+      <glosa>
+        <uso_origen>xub'ano</uso_origen>
+        <ejemplo_destino>lo hizo transitivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>b'anik</uso_origen>
+        <ejemplo_destino>hacer intransitivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>b'anom</uso_origen>
+        <ejemplo_destino>hecho perfectivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>b'anal</uso_origen>
+        <ejemplo_destino>el que hace agentivo</ejemplo_destino>
+      </glosa>
+      <glosa>
+        <uso_origen>b'anib'al</uso_origen>
+        <ejemplo_destino>instrumento instrumental</ejemplo_destino>
+      </glosa>
+      <linea>««««««««««««</linea>
+    </contenido>
+  </pagina>
+</document>
+```
+</documento>
