@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kiche.pdf" paginas="30-31">
+```xml
+<documento>
+    <pagina num="204">
+        <titulo>Pakb'an ipyol tuk'il ipnik'x / Predicado verbal transitivo</titulo>
+        <linea>El predicado verbal transitivo está tiene dos argumentos: el su-</linea>
+        <linea>jeto (agente) y objeto (paciente). El verbo transitivo (núcleo del</linea>
+        <linea>predicado verbal transitivo) marca el objeto a través del juego B</linea>
+        <linea>absolutivo y al sujeto a través del juego A ergativo.</linea>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>Ma txi' tnimana tmana ex ttxu'ya.</original>
+                <translation>Respetaste a tu padre y madre.</translation>
+            </paralel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>Ma txi' tnimana</form>
+                    <gloss>VT</gloss>
+                </unit>
+                <unit>
+                    <form>tmana ex ttxu'ya.</form>
+                    <gloss>Objeto</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>Ma kub' tb'inchan k'wal jun tsaqchb'il</original>
+                <translation>El niño construyó un juguete.</translation>
+            </paralel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>Ma kub' tb'inchan</form>
+                    <gloss>VT</gloss>
+                </unit>
+                <unit>
+                    <form>k'wal</form>
+                    <gloss>S</gloss>
+                </unit>
+                <unit>
+                    <form>jun tsaqchb'il</form>
+                    <gloss>O</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <titulo>Mya' pakb'an ipyol / Predicado no verbal</titulo>
+        <linea>El predicado no verbal indica estado, equivalencia, identidad,</linea>
+        <linea>lugar o existencia a través de un predicado estativo cuyo nú-</linea>
+        <linea>cleo puede ser un sustantivo, un adjetivo, un posicional o un</linea>
+        <linea>numeral. En las oraciones con predicado no verbal interviene</linea>
+        <linea>únicamente un participante que es el sujeto, para indicarlo se</linea>
+        <linea>utilizan los marcadores del JB.</linea>
+        <paralel_phrase>
+            <original>Ttx'aqin xb'alin.</original>
+            <translation>La tela está vieja.</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>Aj u'jqe' ntzikya.</original>
+            <translation>Mis hermanos mayores son escritores.</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>Mejli witz'ine twitz pop.</original>
+            <translation>Mi hermano está hincado sobre el petate.</translation>
+        </paralel_phrase>
+    </pagina>
+    <pagina num="29">
+        <seccion tipo="verbos">Verbos transitivos derivados con movimiento</seccion>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>jate'ub'inisaj</original>
+                <translation>que te vaya encaminar</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>j-</form><gloss>IMP</gloss></unit>
+                <unit><form>at-</form><gloss>B2s</gloss></unit>
+                <unit><form>e-</form><gloss>MOV</gloss></unit>
+                <unit><form>u-</form><gloss>A3s</gloss></unit>
+                <unit><form>b'in-</form><gloss>caminar</gloss></unit>
+                <unit><form>isa-</form><gloss>DER</gloss></unit>
+                <unit><form>j</form><gloss>SC</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <linea>e) sufijos de categoría se utilizan como indicadores de la clase del verbo al que</linea>
+        <linea>acompañan.</linea>
+        <linea>Los verbos intransitivos utilizan el sufijo -ik, así:</linea>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>kinatinik</original>
+                <translation>me baño</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>k-</form><gloss>INC</gloss></unit>
+                <unit><form>in-</form><gloss>B1s</gloss></unit>
+                <unit><form>atin-</form><gloss>bañar</gloss></unit>
+                <unit><form>ik</form><gloss>SC</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <linea>Los verbos transitivos radicales utilizan el sufijo –u cuando en la raíz llevan la vocal u y</linea>
+        <linea>el sufijo -o en las demás vocales, así:</linea>
+        <paralel_phrase>
+            <original>kusu'u</original>
+            <translation>lo limpia</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>xumu'u</original>
+            <translation>lo remojó</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>xutijo</original>
+            <translation>lo comió</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>xrilo</original>
+            <translation>lo vió</translation>
+        </paralel_phrase>
+        <linea>Los verbos transitivos derivados utilizan el sufijo -j</linea>
+        <paralel_phrase>
+            <original>kratinisaj</original>
+            <translation>lo baña</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>xub'inisaj</original>
+            <translation>lo encaminó</translation>
+        </paralel_phrase>
+        <linea>Los verbos intransitivos imperativos con y sin movimiento utilizan el sufijo</linea>
+        <linea>-oq, así:</linea>
+        <linea>con movimiento</linea>
+        <linea>sin movimiento</linea>
+        <paralel_phrase>
+            <original>jate'atinoq</original>
+            <translation>anda a bañarte</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>chatatinoq</original>
+            <translation>báñate</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>jixewa'oq</original>
+            <translation>vayan a comer</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>chixwa'oq</original>
+            <translation>coman</translation>
+        </paralel_phrase>
+        <linea>Los verbos transitivos imperativos con y sin movimiento utilizan los sufijos a' y u', así:</linea>
+        <linea>con movimiento</linea>
+        <linea>sin movimiento</linea>
+        <paralel_phrase>
+            <original>je'eqachapa'</original>
+            <translation>vayamos a agarrarlos</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>che'qachapa'</original>
+            <translation>que los agarremos</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>je'e'achupu'</original>
+            <translation>que vaya a apagarlos</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>che'achupu'</original>
+            <translation>que los apagues</translation>
+        </paralel_phrase>
+    </pagina>
+    <pagina num="30">
+        <titulo>1.6 DERIVACION</titulo>
+        <linea>Los afijos de derivación forman nuevas palabras en el idioma Maya K'iche' a través</linea>
+        <linea>de cambiar la clase de la raíz o base a la cual se le agregan, o a través de cambiar su</linea>
+        <linea>significado, así:</linea>
+        <seccion tipo="derivacion">a) Derivación de un sustantivo</seccion>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>chun</original>
+                <translation>cal</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>chun</form><gloss>sustantivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>chunaj</original>
+                <translation>encalar</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>chunaj</form><gloss>verbo transitivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>chunab'al</original>
+                <translation>instrumento</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>chunab'al</form><gloss>instrumental</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>chunanik</original>
+                <translation>encalar</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>chunanik</form><gloss>verbo intransitivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>chunanel</original>
+                <translation>encalador</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>chunanel</form><gloss>agentivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>chunanem</original>
+                <translation>encalar</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>chunanem</form><gloss>sustantivo verbal</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <seccion tipo="derivacion">b) Derivación de un adjetivo</seccion>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>nim</original>
+                <translation>grande</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>nim</form><gloss>adjetivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>unimal</original>
+                <translation>su grandeza</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>unimal</form><gloss>sustantivo abstracto</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>nimarik</original>
+                <translation>agrandarse</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>nimarik</form><gloss>verbo intransitivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>nimarisaj</original>
+                <translation>agrandar</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>nimarisaj</form><gloss>verbo transitivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>nimalaj</original>
+                <translation>muy grande</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>nimalaj</form><gloss>superlativo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>nimarisanik</original>
+                <translation>agrandar</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>nimarisanik</form><gloss>verbo intransitivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>nimarisanel</original>
+                <translation>agrandador</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>nimarisanel</form><gloss>agentivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>nimarisanem</original>
+                <translation>agrandar</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>nimarisanem</form><gloss>sustantivo verbal</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <seccion tipo="derivacion">c) Derivación de un posicional</seccion>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>ketelik</original>
+                <translation>está</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>ketelik</form><gloss>redondo posicional</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>kete'ik</original>
+                <translation>ponerse</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>kete'ik</form><gloss>redondo verbo intransitivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>keteb'a'</original>
+                <translation>ponerlo</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>keteb'a'</form><gloss>redondo verbo transitivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>ketekik</original>
+                <translation>redondo</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>ketekik</form><gloss>descriptivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>keteb'al</original>
+                <translation>instrumento</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>keteb'al</form><gloss>instrumental</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <seccion tipo="derivacion">d) Derivación de un intransitivo</seccion>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>atinik</original>
+                <translation>bañar</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>atinik</form><gloss>intransitivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>atinem</original>
+                <translation>bañar</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>atinem</form><gloss>sustantivo verbal</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>xinratinisaj</original>
+                <translation>me bañó</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>xinratinisaj</form><gloss>transitivo (derivado)</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>atininaq</original>
+                <translation>bañado</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>atininaq</form><gloss>perfectivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <seccion tipo="derivacion">e) Derivación de un transitivo</seccion>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>xub'ano</original>
+                <translation>lo hizo</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>xub'ano</form><gloss>transitivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>b'anik</original>
+                <translation>hacer</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>b'anik</form><gloss>intransitivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>b'anom</original>
+                <translation>hecho</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>b'anom</form><gloss>perfectivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>b'anal</original>
+                <translation>el que hace</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>b'anal</form><gloss>agentivo</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>b'anib'al</original>
+                <translation>instrumento</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit><form>b'anib'al</form><gloss>instrumental</gloss></unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+    </pagina>
+</documento>
+```
+</documento>

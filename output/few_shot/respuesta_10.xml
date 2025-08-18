@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kiche.pdf" paginas="30-31">
+```xml
+<documento fuente="Gramatica-Normativa-Kiche.pdf" paginas="204">
+    <pagina num="204">
+        <seccion tipo="predicado verbal transitivo">
+            <titulo>Pakb'an ipyol tuk'il ipnik'x / Predicado verbal transitivo</titulo>
+            <linea>El predicado verbal transitivo está tiene dos argumentos: el sujeto (agente) y objeto (paciente). El verbo transitivo (núcleo del predicado verbal transitivo) marca el objeto a través del juego B absolutivo y al sujeto a través del juego A ergativo.</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Ma txi' tnimana tmana ex ttxu'ya.</original>
+                    <translation>Respetaste a tu padre y madre.</translation>
+                </paralel_phrase>
+                <syntactic_analysis>
+                    <unit>
+                        <form>tnimana</form>
+                        <gloss>VT</gloss>
+                    </unit>
+                    <unit>
+                        <form>tmana ex ttxu'ya.</form>
+                        <gloss>Objeto</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Ma kub' tb'inchan k'wal jun tsaqchb'il</original>
+                    <translation>El niño construyó un juguete.</translation>
+                </paralel_phrase>
+                <syntactic_analysis>
+                    <unit>
+                        <form>tb'inchan</form>
+                        <gloss>VT</gloss>
+                    </unit>
+                    <unit>
+                        <form>k'wal</form>
+                        <gloss>S</gloss>
+                    </unit>
+                    <unit>
+                        <form>jun tsaqchb'il</form>
+                        <gloss>O</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+        </seccion>
+        <seccion tipo="predicado no verbal">
+            <titulo>Mya' pakb'an ipyol / Predicado no verbal</titulo>
+            <linea>El predicado no verbal indica estado, equivalencia, identidad, lugar o existencia a través de un predicado estativo cuyo núcleo puede ser un sustantivo, un adjetivo, un posicional o un numeral. En las oraciones con predicado no verbal interviene únicamente un participante que es el sujeto, para indicarlo se utilizan los marcadores del JB.</linea>
+            <paralel_phrase>
+                <original>Ttx'aqin xb'alin.</original>
+                <translation>La tela está vieja.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Aj u'jqe' ntzikya.</original>
+                <translation>Mis hermanos mayores son escritores.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Mejli witz'ine twitz pop.</original>
+                <translation>Mi hermano está hincado sobre el petate.</translation>
+            </paralel_phrase>
+        </seccion>
+    </pagina>
+</documento>
+```
+</documento>
