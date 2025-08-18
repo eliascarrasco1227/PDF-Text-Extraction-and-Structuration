@@ -326,3 +326,35 @@ b’anik hacer intransitivo
         </unit>
     </morpheme_analysis>
 </interlinear_gloss>
+
+**Ejemplo input:**
+Ejemplos:
+joj cuervo kjo’n milpa q’ij sol/día
+jun uno xjel pregunta k’oj máscara
+
+**Ejemplo output:**
+<linea>Ejemplos:</linea>
+<paralel_phrase>
+    <original>joj</original>
+    <translation>cuervo</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>kjo’n</original>
+    <translation>milpa</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>q’ij</original>
+    <translation>sol/día</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>jun</original>
+    <translation>uno</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>xjel</original>
+    <translation>pregunta</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>k’oj</original>
+    <translation>máscara</translation>
+</paralel_phrase>
