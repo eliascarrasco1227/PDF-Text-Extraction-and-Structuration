@@ -138,9 +138,10 @@ sachinaq -> perdido
    - XML propio refinado.   
 
 7. **Ejemplos**
-Aqui te voy a pasar ejemplos de input, es decir lo que verás en el pdf y ejemplos de output, es decir lo que deberías generar a partir de ese input. Hay ejemplos de frases paralelas (paralel_phrase), también de gloasas interlineales (interlinear_gloss) con análisis morfológico (morpheme_analysis) en su interior y a veces con análisis sintáctico (syntactic_analysis).
+Aqui te voy a pasar ejemplos de input en distintas lenguas mayas (es decir lo que verás en el pdf) y ejemplos de output, es decir lo que deberías generar a partir de ese input. Hay ejemplos de frases paralelas (paralel_phrase), también de gloasas interlineales (interlinear_gloss) con análisis morfológico (morpheme_analysis) en su interior y a veces con análisis sintáctico (syntactic_analysis).
 
-***Ejemplo input***:
+
+***Ejemplo input (de la gramática normativa kaqchikel, página 54 del libro (56 del pdf))***:
 Sustantivo Traducción Sustantivo Traducción
 consonante inicial vocal inicial
 kotz'i'j flor oj aguacate
@@ -165,9 +166,9 @@ nukotz'i'j mi flor woj mi aguacate
 </paralel_phrase>
 
 
-***Ejemplo input***:
-k’am             chi-∅    w-il-a’
-NEG             INC-B3A1SG-ver-SC
+***Ejemplo input (de la gramática normativa kaqchikel)***:
+k’am             chi-∅    w-il-a’ 
+NEG             INC-B3A1SG-ver-SC 
 No lo veo
 
 ***Ejemplo output***:
@@ -204,13 +205,13 @@ No lo veo
     </morpheme_analysis>
 </interlinear_gloss>
 
-***Ejemlo input***:
+***Ejemlo input (de la gramática normativa kaqchikel)***:
 jun       elq’om       ti’
 ART      ladrón      DEM:este
 Este ladrón
 
 
-***Ejemplo output***:
+***Ejemplo output ***:
 <interlinear_gloss>
     <paralel_phrase>
         <original>jun elq’om ti’</original>
@@ -232,7 +233,7 @@ Este ladrón
     </morpheme_analysis>
 </interlinear_gloss>
 
-***Ejemplo input imagen***:
+***Ejemplo input imagen (de la gramática normativa kaqchikel, página 158 del libro (160 del pdf))***:
 ...nqil nima'q taq yab'il,...
         _______
         SA
@@ -297,7 +298,7 @@ PL/DIM enfermedad
 </interlinear_gloss>
 
 
-**Ejemplo input:**
+**Ejemplo input (de la gramática normativa Kiche, página 22 del libro (23 del pdf)):**
 xub’ano lo hizo transitivo
 b’anik hacer intransitivo
 
@@ -327,7 +328,7 @@ b’anik hacer intransitivo
     </morpheme_analysis>
 </interlinear_gloss>
 
-**Ejemplo input:**
+**Ejemplo input (de la gramática normativa Mam, página 38 del libro (39 del pdf)):**
 Ejemplos:
 joj cuervo kjo’n milpa q’ij sol/día
 jun uno xjel pregunta k’oj máscara
