@@ -2,6 +2,7 @@ from config.paths import PDF_PATH, PROMPT_PATH, OUTPUT_DIR, PAGINAS, PAGES_PER_B
 from core.prompt_reader import PromptReader
 from core.ai_generator import AIGenerator
 from core.file_writer import FileWriter
+import re
 
 class DocumentProcessor:
     def __init__(self):
@@ -20,6 +21,9 @@ class DocumentProcessor:
         # 2. Generar respuesta
         print("🤖 Generando respuesta...")
         response = self.ai_generator.generate_from_pdf(PDF_PATH, prompt)
+
+        page_numbers = re.findall(r'<pagina num="(\d+)">', response)
+        print(f"📊 Páginas procesadas encontradas: {sorted(set(map(int, page_numbers)))}")
 
         print("\n🤖 Fragmento de respuesta:")
         print(response[:200] + "...")

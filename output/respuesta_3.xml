@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kiche.pdf" paginas="30-37">
+```xml
+<document>
+  <metadata>
+    <title>Gramatica-Normativa-Kiche.pdf</title>
+    <pages_processed>30-34</pages_processed>
+  </metadata>
+  <pagina num="30">
+    <seccion tipo="titulo">Verbos transitivos derivados con movimiento</seccion>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>jate'ub'inisaj</original>
+        <translation>que te vaya encaminar</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>j-</form>
+          <gloss>IMP</gloss>
+        </unit>
+        <unit>
+          <form>at-</form>
+          <gloss>B2s</gloss>
+        </unit>
+        <unit>
+          <form>e-</form>
+          <gloss>MOV</gloss>
+        </unit>
+        <unit>
+          <form>u-</form>
+          <gloss>A3s</gloss>
+        </unit>
+        <unit>
+          <form>b'in</form>
+          <gloss>caminar</gloss>
+        </unit>
+        <unit>
+          <form>-isa-</form>
+          <gloss>DER</gloss>
+        </unit>
+        <unit>
+          <form>j</form>
+          <gloss>SC</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <linea>e) sufijos de categoría se utilizan como indicadores de la clase del verbo al que</linea>
+    <linea>acompañan.</linea>
+    <linea>Los verbos intransitivos utilizan el sufijo -ik, así:</linea>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>kinatinik</original>
+        <translation>me baño</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>k-</form>
+          <gloss>INC</gloss>
+        </unit>
+        <unit>
+          <form>in-</form>
+          <gloss>B1s</gloss>
+        </unit>
+        <unit>
+          <form>atin-</form>
+          <gloss>bañar</gloss>
+        </unit>
+        <unit>
+          <form>-ik</form>
+          <gloss>SC</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <linea>Los verbos transitivos radicales utilizan el sufijo –u cuando en la raíz llevan la vocal u y</linea>
+    <linea>el sufijo -o en las demás vocales, así:</linea>
+    <paralel_phrase>
+      <original>kusu'u</original>
+      <translation>lo limpia</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>xumu'u</original>
+      <translation>lo remojó</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>xutijo</original>
+      <translation>lo comió</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>xrilo</original>
+      <translation>lo vió</translation>
+    </paralel_phrase>
+    <linea>Los verbos transitivos derivados utilizan el sufijo -j</linea>
+    <paralel_phrase>
+      <original>kratinisaj</original>
+      <translation>lo baña</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>xub'inisaj</original>
+      <translation>lo encaminó</translation>
+    </paralel_phrase>
+    <linea>Los verbos intransitivos imperativos con y sin movimiento utilizan el sufijo</linea>
+    <linea>-oq, así:</linea>
+    <linea>con movimiento</linea>
+    <paralel_phrase>
+      <original>jate'atinoq</original>
+      <translation>anda a bañarte</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>jixewa'oq</original>
+      <translation>vayan a comer</translation>
+    </paralel_phrase>
+    <linea>sin movimiento</linea>
+    <paralel_phrase>
+      <original>chatatinoq</original>
+      <translation>báñate</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>chixwa'oq</original>
+      <translation>coman</translation>
+    </paralel_phrase>
+    <linea>Los verbos transitivos imperativos con y sin movimiento utilizan los sufijos a' y u', así:</linea>
+    <linea>con movimiento</linea>
+    <paralel_phrase>
+      <original>je'eqachapa'</original>
+      <translation>vayamos a agarrarlos</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>je'e'achupu'</original>
+      <translation>que vaya a apagarlos</translation>
+    </paralel_phrase>
+    <linea>sin movimiento</linea>
+    <paralel_phrase>
+      <original>che'qachapa'</original>
+      <translation>que los agarremos</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>che'achupu'</original>
+      <translation>que los apagues</translation>
+    </paralel_phrase>
+  </pagina>
+  <pagina num="31">
+    <seccion tipo="titulo">1.6 DERIVACION</seccion>
+    <linea>Los afijos de derivación forman nuevas palabras en el idioma Maya K'iche' a través</linea>
+    <linea>de cambiar la clase de la raíz o base a la cual se le agregan, o a través de cambiar su</linea>
+    <linea>significado, así:</linea>
+    <seccion tipo="Derivación de un sustantivo">a) Derivación de un sustantivo</seccion>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>chun</original>
+        <translation>cal</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>chun</form>
+          <gloss>NOUN</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>chunaj</original>
+        <translation>encalar</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>chunaj</form>
+          <gloss>TRANSITIVE VERB</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>chunab'al</original>
+        <translation>instrumento</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>chunab'al</form>
+          <gloss>INSTRUMENTAL</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>chunanik</original>
+        <translation>encalar</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>chunanik</form>
+          <gloss>INTRANSITIVE VERB</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>chunanel</original>
+        <translation>encalador</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>chunanel</form>
+          <gloss>AGENTIVE</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>chunanem</original>
+        <translation>encalar</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>chunanem</form>
+          <gloss>VERBAL NOUN</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <seccion tipo="Derivación de un adjetivo">b) Derivación de un adjetivo</seccion>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>nim</original>
+        <translation>grande</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>nim</form>
+          <gloss>ADJECTIVE</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>unimal</original>
+        <translation>su grandeza</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>unimal</form>
+          <gloss>ABSTRACT NOUN</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>nimarik</original>
+        <translation>agrandarse</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>nimarik</form>
+          <gloss>INTRANSITIVE VERB</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>nimarisaj</original>
+        <translation>agrandar</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>nimarisaj</form>
+          <gloss>TRANSITIVE VERB</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>nimalaj</original>
+        <translation>muy grande</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>nimalaj</form>
+          <gloss>SUPERLATIVE</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>nimarisanik</original>
+        <translation>agrandar</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>nimarisanik</form>
+          <gloss>INTRANSITIVE VERB</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>nimarisanel</original>
+        <translation>agrandador</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>nimarisanel</form>
+          <gloss>AGENTIVE</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>nimarisanem</original>
+        <translation>agrandar</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>nimarisanem</form>
+          <gloss>VERBAL NOUN</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <seccion tipo="Derivación de un posicional">c) Derivación de un posicional</seccion>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>ketelik</original>
+        <translation>está</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>ketelik</form>
+          <gloss>POSITIONAL ROUND</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>kete'ik</original>
+        <translation>ponerse</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>kete'ik</form>
+          <gloss>ROUND INTRANSITIVE VERB</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>keteb'a'</original>
+        <translation>ponerlo</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>keteb'a'</form>
+          <gloss>ROUND TRANSITIVE VERB</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>ketekik</original>
+        <translation>redondo</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>ketekik</form>
+          <gloss>DESCRIPTIVE</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>keteb'al</original>
+        <translation>instrumento</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>keteb'al</form>
+          <gloss>INSTRUMENTAL</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <seccion tipo="Derivación de un intransitivo">d) Derivación de un intransitivo</seccion>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>atinik</original>
+        <translation>bañar</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>atinik</form>
+          <gloss>INTRANSITIVE</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>atinem</original>
+        <translation>bañar</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>atinem</form>
+          <gloss>VERBAL NOUN</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>xinratinisaj</original>
+        <translation>me bañó</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>xinratinisaj</form>
+          <gloss>TRANSITIVE DERIVED</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>atininaq</original>
+        <translation>bañado</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>atininaq</form>
+          <gloss>PERFECTIVE</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <seccion tipo="Derivación de un transitivo">e) Derivación de un transitivo</seccion>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>xub'ano</original>
+        <translation>lo hizo</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>xub'ano</form>
+          <gloss>TRANSITIVE</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>b'anik</original>
+        <translation>hacer</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>b'anik</form>
+          <gloss>INTRANSITIVE</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>b'anom</original>
+        <translation>hecho</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>b'anom</form>
+          <gloss>PERFECTIVE</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>b'anal</original>
+        <translation>el que hace</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>b'anal</form>
+          <gloss>AGENTIVE</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>b'anib'al</original>
+        <translation>instrumento</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>b'anib'al</form>
+          <gloss>INSTRUMENTAL</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+  </pagina>
+  <pagina num="32">
+    <linea>Para definir la clase de una palabra es necesario mencionar los siguientes criterios.</linea>
+    <seccion tipo="titulo">1.6.1 Semejanzas morfológicas</seccion>
+    <linea>En este tipo de semejanza, todas las palabras de una clase se les pueden aplicar los</linea>
+    <linea>mismos afijos de flexión y de derivación. Por ejemplo, los verbos llevan los prefijos de</linea>
+    <linea>tiempo / aspecto y marcadores de personas gramaticales.</linea>
+    <seccion tipo="flexión">flexión</seccion>
+    <paralel_phrase>
+      <original>xinchakunik</original>
+      <translation>trabajé</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>xatatinik</original>
+      <translation>te bañaste</translation>
+    </paralel_phrase>
+    <seccion tipo="Derivación">Derivación</seccion>
+    <paralel_phrase>
+      <original>chakub'al</original>
+      <translation>instrumento</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>warab'al</original>
+      <translation>dormitorio</translation>
+    </paralel_phrase>
+    <seccion tipo="titulo">1.6.2 Semejanzas sintácticas</seccion>
+    <linea>Todas las palabras de una misma clase desempeñan igual papel sintáctico. Esto quiere</linea>
+    <linea>decir que se puede sustituir por otra de la misma clase dentro de la misma oración, y se</linea>
+    <linea>tiene como resultado una oración gramaticalmente bien formada, aunque quizás esa otra</linea>
+    <linea>palabra no tenga un buen sentido en la nueva oración. Ejemplo:</linea>
+    <paralel_phrase>
+      <original>Kb'in le ak'al pa ja.</original>
+      <translation>La niña camina en la casa.</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>Kb'in le sanik pa ja.</original>
+      <translation>La hormiga camina en la casa.</translation>
+    </paralel_phrase>
+    <seccion tipo="titulo">1.6.3 SEMEJANZAS SEMÁNTICAS:</seccion>
+    <linea>Todas las palabras de una misma clase son similares en cuanto al tipo de constituyente</linea>
+    <linea>que indican, o sea, en relación con los significados que poseen. Por ejemplo: todos los</linea>
+    <linea>sustantivos en el plano semántico equivalen al concepto cosas; los verbos equivalen a</linea>
+    <linea>eventos; adjetivos y adverbios a atributos; etc. Ejemplos:</linea>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>tz'ib'anel</original>
+        <translation>escritor</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>tz'ib'anel</form>
+          <gloss>NOUN</gloss>
+        </unit>
+        <unit>
+          <form>tz'ib'anel</form>
+          <gloss>THING</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>b'ixonik</original>
+        <translation>cantar</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>b'ixonik</form>
+          <gloss>VERB</gloss>
+        </unit>
+        <unit>
+          <form>b'ixonik</form>
+          <gloss>ACTION</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <paralel_phrase>
+        <original>chom</original>
+        <translation>gordo</translation>
+      </paralel_phrase>
+      <morpheme_analysis>
+        <unit>
+          <form>chom</form>
+          <gloss>ADJECTIVE</gloss>
+        </unit>
+        <unit>
+          <form>chom</form>
+          <gloss>ATTRIBUTE</gloss>
+        </unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+  </pagina>
+  <pagina num="33">
+    <seccion tipo="titulo">1.7 CLASIFICACIÓN DE PALABRAS</seccion>
+    <seccion tipo="titulo">1.7.1 Sustantivos</seccion>
+    <linea>En el idioma maya K'iche' existen varias clases de sustantivos; se definen según los</linea>
+    <linea>cambios que sufren cuando se poseen, según su patrón de composición.</linea>
+    <seccion tipo="titulo">A. SUSTANTIVOS SEGÚN POSESIÓN</seccion>
+    <seccion tipo="Sustantivos invariables">a) Sustantivos invariables</seccion>
+    <linea>Son los sustantivos que no cambian de significado al momento de ser poseídos.</linea>
+    <linea>Forma no poseída</linea>
+    <linea>Forma poseída</linea>
+    <paralel_phrase>
+      <original>kematz'ib'</original>
+      <translation>computadora</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>nukematz'ib'</original>
+      <translation>mi computadora</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>ch'at</original>
+      <translation>cama</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>ach'at</original>
+      <translation>tu cama</translation>
+    </paralel_phrase>
+    <seccion tipo="Sustantivos pierde sufijo/sustractivos">b) Sustantivos pierde sufijo/sustractivos</seccion>
+    <linea>Son los sustantivos que al ser poseídos pierden el sufijo. Ejemplos:</linea>
+    <linea>Forma no poseída</linea>
+    <linea>Forma poseída</linea>
+    <paralel_phrase>
+      <original>chaq'ixel</original>
+      <translation>herman@ menor</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>qachaq'</original>
+      <translation>nuestro herman@ menor</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>q'abaj</original>
+      <translation>mano</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>nuq'ab'</original>
+      <translation>mi mano</translation>
+    </paralel_phrase>
+    <seccion tipo="Sustantivos agrega sufijo/ agregativos">c) Sustantivos agrega sufijo/ agregativos</seccion>
+    <linea>Son sustantivos que al ser poseídos se les agrega un sufijo.</linea>
+    <linea>Forma no poseída Forma poseída</linea>
+    <paralel_phrase>
+      <original>kik'</original>
+      <translation>sangre</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>nukik'el</original>
+      <translation>mi sangre</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>ib'och'</original>
+      <translation>vena</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>kib'och'il</original>
+      <translation>sus vena</translation>
+    </paralel_phrase>
+    <seccion tipo="Sustantivos siempre poseídos">d) Sustantivos siempre poseídos</seccion>
+    <linea>Se identifica por no tener raíz suelta, siempre depende de un marcador posesivo.</linea>
+    <paralel_phrase>
+      <original>rij</original>
+      <translation>su espalda / su cáscara</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>raq'</original>
+      <translation>su lengua</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>uk'a'mal</original>
+      <translation>su raíz</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>rab'</original>
+      <translation>su origen / descendencia</translation>
+    </paralel_phrase>
+  </pagina>
+  <pagina num="34">
+    <seccion tipo="Sustantivos supletivos">e) Sustantivos supletivos</seccion>
+    <linea>Son raíces de un grupo reducido de sustantivos comunes, al anteponerles el prefijo</linea>
+    <linea>posesivo cambia absolutamente la palabra. Ejemplos:</linea>
+    <linea>No poseida</linea>
+    <linea>Forma poseida</linea>
+    <paralel_phrase>
+      <original>ja</original>
+      <translation>casa</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>wachoch</original>
+      <translation>mi casa</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>k'ul</original>
+      <translation>poncho (chamarra)</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>aq'u'</original>
+      <translation>tu poncho (chamarra)</translation>
+    </paralel_phrase>
+    <seccion tipo="Sustantivos nunca poseídos">f) Sustantivos nunca poseídos:</seccion>
+    <linea>Son palabras que nombran a los elementos naturales, que no admiten posesión,</linea>
+    <linea>ejemplos:</linea>
+    <linea>K'iche'</linea>
+    <linea>K'iche'</linea>
+    <paralel_phrase>
+      <original>kaqiq'</original>
+      <translation>aire</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>ik'</original>
+      <translation>luna</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>sutz'</original>
+      <translation>nube</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>palow</original>
+      <translation>mar</translation>
+    </paralel_phrase>
+    <seccion tipo="titulo">B. SUSTANTIVOS SEGÚN COMPOSICIÓN</seccion>
+    <seccion tipo="Sustantivos compuestos">a) Sustantivos compuestos</seccion>
+    <linea>Tienen dos raíces que pueden ser: dos sustantivos o un adjetivo más un sustantivo, éstas</linea>
+    <linea>van siempre ligadas. Ejemplos:</linea>
+    <paralel_phrase>
+      <original>nimaq'ij</original>
+      <translation>fiesta</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>saqwach</original>
+      <translation>papa</translation>
+    </paralel_phrase>
+    <seccion tipo="Sustantivos complejos">b) Sustantivos complejos</seccion>
+    <linea>Se componen de dos raíces que pueden ser: dos sustantivos o un sustantivo y un adjetivo,</linea>
+    <linea>a diferencia del anterior, se escriben en forma separadas, indicando un solo significado.</linea>
+    <linea>Cuando se poseen, el prefijo posesivo se agrega en la segunda palabra. Ejemplos:</linea>
+    <paralel_phrase>
+      <original>uq'ab' che'</original>
+      <translation>rama</translation>
+    </paralel_phrase>
+    <paralel_phrase>
+      <original>rij wuj folder,</original>
+      <translation>empastado</translation>
+    </paralel_phrase>
+  </pagina>
+</document>
+```
+```xml
+<document>
+    <metadata>
+        <title>Gramática pedagógica K'iche'</title>
+        <processed_pages>35-37</processed_pages>
+    </metadata>
+    <pagina num="35">
+        <contenido>
+            <seccion tipo="gramatical">Sustantivos de sustantivos</seccion>
+            <linea>son sustantivos que tienen un solo significado, se componen de dos palabras, la primera palabra siempre va poseída por un marcador de 3ra. Persona singular del Juego Ergativo.</linea>
+            <paralel_phrase>
+                <original>k'amal b'e</original>
+                <translation>guía</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>b'anal si'</original>
+                <translation>leñador</translation>
+            </paralel_phrase>
+            <seccion tipo="gramatical">Sustantivo más sustantivo</seccion>
+            <linea>Se forman de dos sustantivos que se mantienen como palabras separadas y al poseerlos, los marcadores se agregan a las dos palabras.</linea>
+            <paralel_phrase>
+                <original>qati't qamam</original>
+                <translation>nuestros abuelos</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>qachuch qatat</original>
+                <translation>nuestros padres</translation>
+            </paralel_phrase>
+            <seccion tipo="gramatical">Sustantivos Relacionales</seccion>
+            <linea>La raíz de estos sustantivos no funcionan por si solos, siempre llevan como prefijo los marcadores posesivos del Juego Ergativo.</linea>
+            <linea>Se dividen en dos clases: gramatical y locación.</linea>
+            <seccion tipo="gramatical">Caso gramatical</seccion>
+            <linea>Es un fenómeno que ocurre con raíces sustantivales que adquieren significado al anteponerles los prefijos del Juego Ergativo.</linea>
+            <seccion tipo="gramatical">Comitativo</seccion>
+            <linea>Se refiere a la persona o entidad humana, en cuya compañía se hace la acción.</linea>
+            <paralel_phrase>
+                <original>wuk'</original>
+                <translation>conmigo</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>awuk'</original>
+                <translation>contigo</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>ruk'</original>
+                <translation>con (él o ella)</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>quk'</original>
+                <translation>con nosotros</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>iwuk'</original>
+                <translation>con ustedes</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>kuk'</original>
+                <translation>con (ellos o ellas)</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Xinchakun ruk' nutat</original>
+                <translation>Trabajé con mi papá</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Kinwa'kat ruk' wanab'</original>
+                <translation>Paseo con mi hermana</translation>
+            </paralel_phrase>
+        </contenido>
+    </pagina>
+    <pagina num="36">
+        <contenido>
+            <seccion tipo="gramatical">Instrumental</seccion>
+            <linea>Se refiere al objeto o cosa que ayuda al sujeto para realizar una acción. Se identifica por la tercera personal singular del Juego Ergativo. Este tipo de sustantivo relacional adquiere esta función en oraciones. Ejemplos:</linea>
+            <paralel_phrase>
+                <original>Xinpaq' si' ruk' ikaj</original>
+                <translation>Rajé leña con hacha</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Kinwarej ja' ruk' nuq'eb'al</original>
+                <translation>Acarreo agua con mi tinaja</translation>
+            </paralel_phrase>
+            <seccion tipo="gramatical">Posesivo</seccion>
+            <linea>Indica que el objeto pertenece al agente o persona. Su raíz es –ech, su escrita debe ser completa. Ejemplos:</linea>
+            <linea>wech</linea>
+            <linea>awech</linea>
+            <linea>rech</linea>
+            <linea>qech</linea>
+            <linea>iwech</linea>
+            <linea>kech</linea>
+            <paralel_phrase>
+                <original>Rech le ali le po't</original>
+                <translation>El güipil es de la señorita.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Wech ri kej</original>
+                <translation>El caballo es mío.</translation>
+            </paralel_phrase>
+            <seccion tipo="gramatical">Benefactivo/Dativo</seccion>
+            <linea>Se refiere a la persona a quien se le hace la acción o a la persona quien recibe la acción, se complementa con la preposición chi, se antepone al sustantivo relacional en forma separada. Ejemplos:</linea>
+            <linea>chi wech</linea>
+            <linea>chi awech</linea>
+            <linea>chi rech</linea>
+            <linea>chi qech</linea>
+            <linea>chi iwech</linea>
+            <linea>chi kech</linea>
+            <paralel_phrase>
+                <original>Xub'an wa le ixoq chi kech le winaq</original>
+                <translation>La mujer preparó comida para la gente</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Kinya' we nurakil chi kech</original>
+                <translation>Doy mi comida a ellos</translation>
+            </paralel_phrase>
+        </contenido>
+    </pagina>
+    <pagina num="37">
+        <contenido>
+            <seccion tipo="gramatical">Causativo / agente</seccion>
+            <linea>Se refiere al objeto o persona que causa o efectúa una acción que cae sobre el participante. La raíz es -umal. Ejemplos:</linea>
+            <linea>wumal</linea>
+            <linea>awumal</linea>
+            <linea>rumal</linea>
+            <linea>qumal</linea>
+            <linea>iwumal</linea>
+            <linea>kumal</linea>
+            <paralel_phrase>
+                <original>Rumal ri ali tajin kinki'kotik</original>
+                <translation>Estoy contento por la señorita</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Awumal kinb'isonik</original>
+                <translation>Estoy triste por vos</translation>
+            </paralel_phrase>
+            <seccion tipo="gramatical">Reflexivo</seccion>
+            <linea>Se refiera a las acciones que recae sobre la misma persona, la raíz es -ib' y siempre va antecedida por los prefijos del Juego Ergativo singular. Ejemplos:</linea>
+            <linea>wib'</linea>
+            <linea>awib'</linea>
+            <linea>rib'</linea>
+            <paralel_phrase>
+                <original>Kinchajij wib' pa nuchak</original>
+                <translation>Me cuido en mi trabajo</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Kril rib' pa ri ilb'al wachaj</original>
+                <translation>Se mira en el espejo</translation>
+            </paralel_phrase>
+            <seccion tipo="gramatical">Recíproco</seccion>
+            <linea>Indica que las acciones recae sobre las mismas personas, necesariamente tienen que existir dos o más participantes. La raíz es -ib' antecedida por los prefijos del Juego Ergativo plural. Ejemplos:</linea>
+            <linea>qib'</linea>
+            <linea>iwib'</linea>
+            <linea>kib'</linea>
+            <paralel_phrase>
+                <original>Chqaq'aluj qib'</original>
+                <translation>Abracémonos</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Chiwila iwib' ak'alab'</original>
+                <translation>Cuídense niños</translation>
+            </paralel_phrase>
+        </contenido>
+    </pagina>
+</document>
+```
+</documento>
