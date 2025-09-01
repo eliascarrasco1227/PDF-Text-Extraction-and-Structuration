@@ -14,7 +14,7 @@ class AIGenerator:
     def generate_from_pdf(self, pdf_path: str, prompt: str) -> str:
         """Genera respuesta con estructura XML por bloques de páginas"""
         start_page, end_page = PAGINAS
-        #start_page = max(1, start_page - 1)  # Asegurar que la página inicial es al menos 1 
+        start_page = max(1, start_page - 1)  # Asegurar que la página inicial es al menos 1 
         all_responses = []
         
         # Process pages in blocks to avoid timeout
