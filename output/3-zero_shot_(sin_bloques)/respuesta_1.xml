@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kiche.pdf" paginas="30-31">
+```xml
+<document>
+  <metadata>
+    <title>Gramática pedagógica K'iche'</title>
+    <language>K'iche'</language>
+    <language>Spanish</language>
+    <document_type>Grammar Pedagogy</document_type>
+  </metadata>
+
+  <pagina num="1">
+    <contenido>
+      <linea>Gramática pedagógica K'iche'</linea>
+      <titulo>Verbos transitivos derivados con movimiento</titulo>
+      <glosa>
+        <kiche_term>jate'ub'inisaj</kiche_term>
+        <morpheme_breakdown>j-at-e-u-b'in-isa-j</morpheme_breakdown>
+        <gloss_breakdown>IMP-B2s-MOV-A3s-caminar-DER-SC</gloss_breakdown>
+        <spanish_translation>que te vaya encaminar</spanish_translation>
+      </glosa>
+      <linea>e) sufijos de categoría se utilizan como indicadores de la clase del verbo al que acompañan.</linea>
+      <linea>Los verbos intransitivos utilizan el sufijo -ik, así:</linea>
+      <glosa>
+        <kiche_term>kinatinik</kiche_term>
+        <morpheme_breakdown>k-in-atin-ik</morpheme_breakdown>
+        <gloss_breakdown>INC-B1s-bañar-SC</gloss_breakdown>
+        <spanish_translation>me baño</spanish_translation>
+      </glosa>
+      <linea>Los verbos transitivos radicales utilizan el sufijo –u cuando en la raíz llevan la vocal u y el sufijo -o en las demás vocales, así:</linea>
+      <glosa>
+        <kiche_term>kusu'u</kiche_term>
+        <spanish_translation>lo limpia</spanish_translation>
+      </glosa>
+      <glosa>
+        <kiche_term>xumu'u</kiche_term>
+        <spanish_translation>lo remojó</spanish_translation>
+      </glosa>
+      <glosa>
+        <kiche_term>xutijo</kiche_term>
+        <spanish_translation>lo comió</spanish_translation>
+      </glosa>
+      <glosa>
+        <kiche_term>xrilo</kiche_term>
+        <spanish_translation>lo vió</spanish_translation>
+      </glosa>
+      <linea>Los verbos transitivos derivados utilizan el sufijo -j</linea>
+      <glosa>
+        <kiche_term>kratinisaj</kiche_term>
+        <spanish_translation>lo baña</spanish_translation>
+      </glosa>
+      <glosa>
+        <kiche_term>xub'inisaj</kiche_term>
+        <spanish_translation>lo encaminó</spanish_translation>
+      </glosa>
+      <linea>Los verbos intransitivos imperativos con y sin movimiento utilizan el sufijo -oq, así:</linea>
+      <table>
+        <row>
+          <column_header>con movimiento</column_header>
+          <column_header>sin movimiento</column_header>
+        </row>
+        <row>
+          <glosa>
+            <kiche_term>jate'atinoq</kiche_term>
+            <spanish_translation>anda a bañarte</spanish_translation>
+          </glosa>
+          <glosa>
+            <kiche_term>chatatinoq</kiche_term>
+            <spanish_translation>báñate</spanish_translation>
+          </glosa>
+        </row>
+        <row>
+          <glosa>
+            <kiche_term>jixewa'oq</kiche_term>
+            <spanish_translation>vayan a comer</spanish_translation>
+          </glosa>
+          <glosa>
+            <kiche_term>chixwa'oq</kiche_term>
+            <spanish_translation>coman</spanish_translation>
+          </glosa>
+        </row>
+      </table>
+      <linea>Los verbos transitivos imperativos con y sin movimiento utilizan los sufijos a' y u', así:</linea>
+      <table>
+        <row>
+          <column_header>con movimiento</column_header>
+          <column_header>sin movimiento</column_header>
+        </row>
+        <row>
+          <glosa>
+            <kiche_term>je'eqachapa'</kiche_term>
+            <spanish_translation>vayamos a agarrarlos</spanish_translation>
+          </glosa>
+          <glosa>
+            <kiche_term>che'qachapa'</kiche_term>
+            <spanish_translation>que los agarremos</spanish_translation>
+          </glosa>
+        </row>
+        <row>
+          <glosa>
+            <kiche_term>je'e'achupu'</kiche_term>
+            <spanish_translation>que vaya a apagarlos</spanish_translation>
+          </glosa>
+          <glosa>
+            <kiche_term>che'achupu'</kiche_term>
+            <spanish_translation>que los apagues</spanish_translation>
+          </glosa>
+        </row>
+      </table>
+    </contenido>
+  </pagina>
+
+  <pagina num="2">
+    <contenido>
+      <linea>Gramática pedagógica K'iche'</linea>
+      <titulo>1.6 DERIVACION</titulo>
+      <linea>Los afijos de derivación forman nuevas palabras en el idioma Maya K'iche' a través de cambiar la clase de la raíz o base a la cual se le agregan, o a través de cambiar su significado, así:</linea>
+
+      <linea>a) Derivación de un sustantivo</linea>
+      <glosa>
+        <kiche_term>chun</kiche_term>
+        <meaning>cal</meaning>
+        <morpho_category>sustantivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>chunaj</kiche_term>
+        <meaning>encalar</meaning>
+        <morpho_category>verbo transitivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>chunab'al</kiche_term>
+        <meaning>instrumento</meaning>
+        <morpho_category>instrumental</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>chunanik</kiche_term>
+        <meaning>encalar</meaning>
+        <morpho_category>verbo intransitivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>chunanel</kiche_term>
+        <meaning>encalador</meaning>
+        <morpho_category>agentivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>chunanem</kiche_term>
+        <meaning>encalar</meaning>
+        <morpho_category>sustantivo verbal</morpho_category>
+      </glosa>
+
+      <linea>b) Derivación de un adjetivo</linea>
+      <glosa>
+        <kiche_term>nim</kiche_term>
+        <meaning>grande</meaning>
+        <morpho_category>adjetivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>unimal</kiche_term>
+        <meaning>su grandeza</meaning>
+        <morpho_category>sustantivo abstracto</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>nimarik</kiche_term>
+        <meaning>agrandarse</meaning>
+        <morpho_category>verbo intransitivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>nimarisaj</kiche_term>
+        <meaning>agrandar</meaning>
+        <morpho_category>verbo transitivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>nimalaj</kiche_term>
+        <meaning>muy grande</meaning>
+        <morpho_category>superlativo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>nimarisanik</kiche_term>
+        <meaning>agrandar</meaning>
+        <morpho_category>verbo intransitivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>nimarisanel</kiche_term>
+        <meaning>agrandador</meaning>
+        <morpho_category>agentivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>nimarisanem</kiche_term>
+        <meaning>agrandar</meaning>
+        <morpho_category>sustantivo verbal</morpho_category>
+      </glosa>
+
+      <linea>c) Derivación de un posicional</linea>
+      <glosa>
+        <kiche_term>ketelik</kiche_term>
+        <meaning>está redondo</meaning>
+        <morpho_category>posicional</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>kete'ik</kiche_term>
+        <meaning>ponerse redondo</meaning>
+        <morpho_category>verbo intransitivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>keteb'a'</kiche_term>
+        <meaning>ponerlo redondo</meaning>
+        <morpho_category>verbo transitivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>ketekik</kiche_term>
+        <meaning>redondo</meaning>
+        <morpho_category>descriptivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>keteb'al</kiche_term>
+        <meaning>instrumento</meaning>
+        <morpho_category>instrumental</morpho_category>
+      </glosa>
+
+      <linea>d) Derivación de un intransitivo</linea>
+      <glosa>
+        <kiche_term>atinik</kiche_term>
+        <meaning>bañar</meaning>
+        <morpho_category>intransitivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>atinem</kiche_term>
+        <meaning>bañar</meaning>
+        <morpho_category>sustantivo verbal</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>xinratinisaj</kiche_term>
+        <meaning>me bañó</meaning>
+        <morpho_category>transitivo (derivado)</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>atininaq</kiche_term>
+        <meaning>bañado</meaning>
+        <morpho_category>perfectivo</morpho_category>
+      </glosa>
+
+      <linea>e) Derivación de un transitivo</linea>
+      <glosa>
+        <kiche_term>xub'ano</kiche_term>
+        <meaning>lo hizo</meaning>
+        <morpho_category>transitivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>b'anik</kiche_term>
+        <meaning>hacer</meaning>
+        <morpho_category>intransitivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>b'anom</kiche_term>
+        <meaning>hecho</meaning>
+        <morpho_category>perfectivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>b'anal</kiche_term>
+        <meaning>el que hace</meaning>
+        <morpho_category>agentivo</morpho_category>
+      </glosa>
+      <glosa>
+        <kiche_term>b'anib'al</kiche_term>
+        <meaning>instrumento</meaning>
+        <morpho_category>instrumental</morpho_category>
+      </glosa>
+    </contenido>
+  </pagina>
+</document>
+```
+</documento>
