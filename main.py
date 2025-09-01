@@ -11,8 +11,9 @@ class DocumentProcessor:
         self.file_writer = FileWriter(OUTPUT_DIR)
     
     def run(self):
-        print(f"📄 Procesando {PDF_PATH} (páginas {PAGINAS[0]}-{PAGINAS[1]})")
-        print(f"📦 Procesando en bloques de {PAGES_PER_BLOCK} páginas")
+        print(f"📄 Procesando: {PDF_PATH}")
+        print(f"📖 Páginas PDF: {PAGINAS[0]}-{PAGINAS[1]}")
+        print(f"📦 Bloques de: {PAGES_PER_BLOCK} páginas")
         
         # 1. Leer prompt
         prompt = self.prompt_reader.read()
