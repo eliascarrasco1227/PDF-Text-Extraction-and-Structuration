@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kiche-1-4.pdf" paginas="1-4">
+```xml
+<document>
+    <metadata>
+        <title>Gramatica-Normativa-Kiche-1-4.pdf</title>
+        <pages_processed>1-4</pages_processed>
+    </metadata>
+    <pagina num="1">
+        <contenido>
+            <titulo>CHOLTAQANEM TZIJ</titulo>
+            <titulo>RECH K'ICHE' CHI'</titulo>
+            <titulo>GRAMÁTICA</titulo>
+            <titulo>NORMATIVA KICHE'</titulo>
+            <linea>ALMG</linea>
+            <linea>KICHE MAYAB' CHOLCHI</linea>
+            <linea>MAYAB' CHOLCHI RECH PAXIL KAYALA</linea>
+            <linea>COMUNIDAD LINGUISTICA MAYA KICHE</linea>
+            <linea>ACADEMIA DE LENGUAS MAYAS DE GUATEMALA</linea>
+        </contenido>
+    </pagina>
+    <pagina num="2">
+        <contenido>
+            <linea>ACADEMIA DE LENGUAS MAYAS DE GUATEMALA</linea>
+            <linea>K'ULB'IL YOL TWITZ PAXIL</linea>
+            <linea>ALMG</linea>
+            <linea>ACADEMIA DE LENGUAS MAYAS DE GUATEMALA</linea>
+            <titulo>CHOLTAQANEM TZIJ RECH K’ICHE' CHI'</titulo>
+            <titulo>GRAMÁTICA NORMATIVA K’ICHE'</titulo>
+        </contenido>
+    </pagina>
+    <pagina num="3">
+        <contenido>
+            <seccion>K'AMAL TAQ B'E RECH LE K'ICHE' MAYAB' CHOLCHI'</seccion>
+            <linea>Modesto Baquiax Barreno</linea>
+            <linea>K'AMAL B'E</linea>
+            <linea>Francisco Samuel Pérez Zacarías</linea>
+            <linea>UKAB' K'AMAL B'E</linea>
+            <linea>María Encarnación Alvarado Toc</linea>
+            <linea>AJTZ'IB'</linea>
+            <linea>Cristóbal Tzep Carac</linea>
+            <linea>K'OLOL PWAQ</linea>
+            <linea>Isaac Cux García</linea>
+            <linea>NAB'E TOB'ANEL</linea>
+            <linea>Francisco Lobos Togual</linea>
+            <linea>UKAB' TOB'ANEL</linea>
+            <linea>Augusto Isaías Tzunún Talé</linea>
+            <linea>UROX TOB'ANEL</linea>
+            <seccion>AJCHAKIB' RECH LE K'ICHE' MAYAB' CHOLCHI'</seccion>
+            <linea>Tomás Matías Gutiérrez Tzunún</linea>
+            <linea>K'AMAL B'E RECH SOLB'AL CHAK PATAN K'ICHE'</linea>
+            <linea>Diego Guachiac y Guachiac</linea>
+            <linea>TOB'K'AMAL B'E RECH SOLB'AL CHAK PATAN K'ICHE'</linea>
+            <linea>María Lorenza Chuc Páxtor</linea>
+            <linea>ILONEL SOLINEL RECH CHAK PATAN K'ICHE'</linea>
+            <linea>Diego Adrían Guarchaj Ajtzalam</linea>
+            <linea>ΤΖ'ΙΒ'ΑΝEL SOLINEL RECH ΤΖ'ΙΒ' Κ'ICHE'</linea>
+            <linea>Marta Alicia Chitic Morales</linea>
+            <linea>AJTZ'IB'- CHAJINEL RECH ME'R KORTI'L</linea>
+            <linea>María Canil Morales</linea>
+            <linea>K'ULAL ULA'</linea>
+            <seccion>UKOLOMAL RACHOCH K'ICHE' MAYAB' CHOLCHI'</seccion>
+            <linea>6a. Avenida 9-17 zona 1, Santa Cruz del Quiché, El Quiché, Guatemala, C.A.</linea>
+        </contenido>
+    </pagina>
+    <pagina num="4">
+        <contenido>
+            <linea>Tel/fax: 7755-2470. E- mail: kiche@almg.org.gt y clkiche@yahoo.com</linea>
+            <titulo>ABREVIATURAS</titulo>
+            <linea>PALABRAS</linea>
+            <paralel_phrase>
+                <original>Absolutivo</original>
+                <translation>Absvo.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Absoluto</original>
+                <translation>Absto.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Abstracto</original>
+                <translation>Abst.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Acción</original>
+                <translation>Ac.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Adelantamiento</original>
+                <translation>Adelto.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Adjetivo</original>
+                <translation>Adj.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Adjetivo Verbal</original>
+                <translation>Adj.V.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Adjunto</original>
+                <translation>Adjto.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Adjunto Adverbial</original>
+                <translation>Adjto.V.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Adjunto Benefactivo</original>
+                <translation>Adjto.Ben</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Adjunto de Agentivo</original>
+                <translation>Adjto.Ag.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Adjunto de Lugar</original>
+                <translation>Adjto.L.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Adposicional</original>
+                <translation>Adpos.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Adverbio</original>
+                <translation>Adv.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Adverbio de Lugar</original>
+                <translation>Adv.L.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Adverbio de Tiempo</original>
+                <translation>Adv.T.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Afectivo</original>
+                <translation>Afec.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Afijo</original>
+                <translation>Af.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Afirmación</original>
+                <translation>Afir.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Agente/Agentivo</original>
+                <translation>Agte./Agto.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Animado</original>
+                <translation>Ani.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Antipasivo</original>
+                <translation>Antip.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Artículo</original>
+                <translation>Art.</translation>
+            </paralel_phrase>
+            <paralel_phrase>
+                <original>Aspecto</original>
+                <translation>Asp.</translation>
+            </paralel_phrase>
+        </contenido>
+    </pagina>
+</document>
+```
+</documento>

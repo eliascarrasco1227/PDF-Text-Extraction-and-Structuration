@@ -17,21 +17,29 @@ class AIGenerator:
         with open(pdf_path, 'rb') as f:
             pdf = PdfReader(f)
             return len(pdf.pages)
-    
-    def generate_from_pdf(self, pdf_path: str, prompt: str) -> str:
-        """Genera respuesta con estructura XML por bloques de páginas"""
+        
+    def _determine_page_range(self, pdf_path: str) -> tuple:
+        """Determina el rango de páginas a procesar basado en la configuración"""
+        # Procesar todas las páginas del PDF
+        total_pdf_pages = self._get_total_pages(pdf_path)
+
         # Determinar el rango de páginas a procesar
         if ALL_PAGES:
-            # Procesar todas las páginas del PDF
-            total_pdf_pages = self._get_total_pages(pdf_path)
             start_page, end_page = 1, total_pdf_pages
             print(f"📄 Procesando TODAS las páginas del PDF (1-{total_pdf_pages})")
         else:
             # Procesar solo el rango especificado en PAGINAS
             start_page, end_page = PAGINAS
             print(f"📄 Procesando páginas {start_page}-{end_page}")
+            start_page = max(1, start_page)  # Asegurar que la página inicial es al menos 1 
+            end_page = min(total_pdf_pages, end_page)  # Asegurar que la página final no excede el total
         
-        start_page = max(1, start_page)  # Asegurar que la página inicial es al menos 1 
+        return start_page, end_page
+    
+    def generate_from_pdf(self, pdf_path: str, prompt: str) -> str:
+        """Genera respuesta con estructura XML por bloques de páginas"""
+
+        start_page, end_page = self._determine_page_range(pdf_path)
         all_responses = []
         
         # Calcular el total de páginas a procesar
