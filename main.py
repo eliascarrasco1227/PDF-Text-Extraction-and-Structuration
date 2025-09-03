@@ -25,7 +25,7 @@ class DocumentProcessor:
         print("")
 
         print(f"📄 Procesando: {PDF_PATH}")
-        print(f"📖 Páginas PDF: {paginas_info}")
+        print(f"📖 Páginas a procesar: {paginas_info}")
         print(f"📦 Bloques de: {PAGES_PER_BLOCK} páginas")
         print(f"📝 Prompt usado: {PROMPT_PATH}")
         print("-" * CHAIN_SIZE)
