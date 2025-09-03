@@ -9,18 +9,31 @@ class DocumentProcessor:
         self.prompt_reader = PromptReader(PROMPT_PATH)
         self.ai_generator = AIGenerator(pages_per_block=PAGES_PER_BLOCK)
         self.file_writer = FileWriter(OUTPUT_DIR)
-    
-    def run(self):
+
+    def pretty_print(self):
+        CHAIN_SIZE = 38
+        PROGRAM_NAME = "PDF TEXT EXTRACTOR AND STRUCTURATOR"
+
+        print("-" * CHAIN_SIZE)
+        print(f"| {PROGRAM_NAME} |")
+        print("-" * CHAIN_SIZE)
+        print("")
+
         print(f"📄 Procesando: {PDF_PATH}")
         print(f"📖 Páginas PDF: {PAGINAS[0]}-{PAGINAS[1]}")
         print(f"📦 Bloques de: {PAGES_PER_BLOCK} páginas")
+        print(f"📝 Prompt usado: {PROMPT_PATH}")
+        print("-" * CHAIN_SIZE)
+        print("")
+    
+    def run(self):
+        self.pretty_print()
         
         # 1. Leer prompt
         prompt = self.prompt_reader.read()
-        print(f"📝 Prompt usado: {PROMPT_PATH}")
 
         # 2. Generar respuesta
-        print("🤖 Generando respuesta...")
+        print("🤖 Generando respuesta")
         response = self.ai_generator.generate_from_pdf(PDF_PATH, prompt)
 
         page_numbers = re.findall(r'<pagina num="(\d+)">', response)

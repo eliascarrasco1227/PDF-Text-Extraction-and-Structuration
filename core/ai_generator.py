@@ -17,8 +17,13 @@ class AIGenerator:
         start_page = max(1, start_page)  # Asegurar que la página inicial es al menos 1 
         all_responses = []
         
+        # Calcular el total de páginas a procesar
+        total_pages = end_page - start_page + 1
+        
         # Process pages in blocks to avoid timeout
         current_page = start_page
+        processed_pages = 0
+        
         while current_page <= end_page:
             # Calcular el final del bloque CORRECTAMENTE
             block_end = min(current_page + self.pages_per_block, end_page + 1)  # +1 para inclusivo
@@ -50,6 +55,21 @@ class AIGenerator:
                 ]
             )
             all_responses.append(response.text)
+            
+            # Actualizar contador de páginas procesadas
+            processed_pages += pages_in_block
+            
+            # Calcular porcentaje completado
+            percentage = int((processed_pages / total_pages) * 100)
+            
+            # Crear barra de progreso
+            bar_length = 10
+            filled_length = int(bar_length * percentage / 100)
+            bar = '█' * filled_length + '▒' * (bar_length - filled_length)
+            
+            # Mostrar progreso
+            print(f"{bar} {percentage}%")
+            print("-" * 38)
             
             # Move to next block CORRECTAMENTE
             current_page = block_end
