@@ -3,6 +3,7 @@ from google import genai
 from google.genai import types
 from .pdf_processor import PDFProcessor
 from config.paths import PAGINAS, ALL_PAGES
+from PyPDF2 import PdfReader
 
 class AIGenerator:
     def __init__(self, model: str = 'gemini-2.5-flash', pages_per_block: int = 5):
@@ -11,14 +12,30 @@ class AIGenerator:
         self.pdf_processor = PDFProcessor()
         self.pages_per_block = pages_per_block
     
+    def _get_total_pages(self, pdf_path: str) -> int:
+        """Obtiene el número total de páginas del PDF"""
+        with open(pdf_path, 'rb') as f:
+            pdf = PdfReader(f)
+            return len(pdf.pages)
+    
     def generate_from_pdf(self, pdf_path: str, prompt: str) -> str:
         """Genera respuesta con estructura XML por bloques de páginas"""
-        start_page, end_page = PAGINAS
+        # Determinar el rango de páginas a procesar
+        if ALL_PAGES:
+            # Procesar todas las páginas del PDF
+            total_pdf_pages = self._get_total_pages(pdf_path)
+            start_page, end_page = 1, total_pdf_pages
+            print(f"📄 Procesando TODAS las páginas del PDF (1-{total_pdf_pages})")
+        else:
+            # Procesar solo el rango especificado en PAGINAS
+            start_page, end_page = PAGINAS
+            print(f"📄 Procesando páginas {start_page}-{end_page}")
+        
         start_page = max(1, start_page)  # Asegurar que la página inicial es al menos 1 
         all_responses = []
         
         # Calcular el total de páginas a procesar
-        total_pages = end_page - start_page + 1
+        total_pages_to_process = end_page - start_page + 1
         
         # Process pages in blocks to avoid timeout
         current_page = start_page
@@ -60,7 +77,7 @@ class AIGenerator:
             processed_pages += pages_in_block
             
             # Calcular porcentaje completado
-            percentage = int((processed_pages / total_pages) * 100)
+            percentage = int((processed_pages / total_pages_to_process) * 100)
             
             # Crear barra de progreso
             bar_length = 10
@@ -69,7 +86,7 @@ class AIGenerator:
             
             # Mostrar progreso
             print(f"{bar} {percentage}%")
-            print("-" * 38)
+            print("---------------------------------")
             
             # Move to next block CORRECTAMENTE
             current_page = block_end

@@ -1,4 +1,4 @@
-from config.paths import PDF_PATH, PROMPT_PATH, OUTPUT_DIR, PAGINAS, PAGES_PER_BLOCK
+from config.paths import PDF_PATH, PROMPT_PATH, OUTPUT_DIR, PAGINAS, PAGES_PER_BLOCK, ALL_PAGES
 from core.prompt_reader import PromptReader
 from core.ai_generator import AIGenerator
 from core.file_writer import FileWriter
@@ -11,6 +11,11 @@ class DocumentProcessor:
         self.file_writer = FileWriter(OUTPUT_DIR)
 
     def pretty_print(self):
+        if ALL_PAGES:
+            paginas_info = "todas las páginas"
+        else:
+            paginas_info = f"páginas {PAGINAS[0]}-{PAGINAS[1]}"
+
         CHAIN_SIZE = 38
         PROGRAM_NAME = "PDF TEXT EXTRACTOR AND STRUCTURATOR"
 
@@ -20,7 +25,7 @@ class DocumentProcessor:
         print("")
 
         print(f"📄 Procesando: {PDF_PATH}")
-        print(f"📖 Páginas PDF: {PAGINAS[0]}-{PAGINAS[1]}")
+        print(f"📖 Páginas PDF: {paginas_info}")
         print(f"📦 Bloques de: {PAGES_PER_BLOCK} páginas")
         print(f"📝 Prompt usado: {PROMPT_PATH}")
         print("-" * CHAIN_SIZE)

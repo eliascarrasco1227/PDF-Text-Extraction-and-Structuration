@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kiche_pag_40.pdf" paginas="1-1">
+```xml
+<document>
+  <metadata>
+    <title>data/Gramatica-Normativa-Kiche_pag_40.pdf</title>
+    <processed_pages>
+      <page_num>1</page_num>
+    </processed_pages>
+  </metadata>
+  <pagina num="1">
+    <seccion type="c">
+      <titulo>NÚMEROS DISTRIBUTIVOS</titulo>
+      <linea>Los números distributivos dan la idea de grupos equitativos de uno en uno, de dos en</linea>
+      <linea>dos... Los números uno al cuatro se forman duplicando las raíces más el sufijo -al o -il.</linea>
+      <linea>Mientras que del numeral cinco al diez se le agrega el sufijo -taq y del once en adelante</linea>
+      <linea>este sufijo se escribe en medio de la palabra. Además de los sufijos -al, -il, -taq, los</linea>
+      <linea>números distributivos también se pueden formar agregándoles el sufijo -ichal. A todos</linea>
+      <linea>se les antepone la preposición chi.</linea>
+      <paralel_phrase>
+        <original>Chi jujunal</original>
+        <translation>de uno en uno</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>Chi kakab'il</original>
+        <translation>de dos en dos</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>Chi ox oxil</original>
+        <translation>de tres en tres</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>Chi kajkajil</original>
+        <translation>de cuatro en cuatro</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>Chi jotaq</original>
+        <translation>de cinco en cinco</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>Chi waqtaq</original>
+        <translation>de seis en seis</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>Chi wuqtaq</original>
+        <translation>de siete en siete</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>Chi b'elejtaq</original>
+        <translation>de nueve en nueve</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>Chi lajujtaq</original>
+        <translation>de diez en diez</translation>
+      </paralel_phrase>
+    </seccion>
+    <seccion type="d">
+      <titulo>NÚMEROS COMITATIVOS</titulo>
+      <linea>Se clasifican como un grupo de palabras que indican compañía, funcionan como</linea>
+      <linea>pronombres y se forman agregando el sufijo -ichal.</linea>
+      <linea>Comitativos</linea>
+      <paralel_phrase>
+        <original>jujunal</original>
+        <translation>individualmente</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>kab'ichal</original>
+        <translation>entre dos</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>oxichal</original>
+        <translation>entre tres</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>kajichal</original>
+        <translation>entre cuatro</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>jo'ichal</original>
+        <translation>entre cinco</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>waqichal</original>
+        <translation>entre seis</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>wuqichal</original>
+        <translation>entre siete</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>wajxaqichal</original>
+        <translation>entre ocho</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>b'elejichal</original>
+        <translation>entre nueve</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>lajichal</original>
+        <translation>entre diez</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>julajichal</original>
+        <translation>entre once</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>kab'lajichal</original>
+        <translation>entre doce</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>oxlajichal</original>
+        <translation>entre trece</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>kajlajichal</original>
+        <translation>entre catorce</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>jo'lajichal</original>
+        <translation>entre quince</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>wulajichal</original>
+        <translation>entre diecisiete</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>wajxaqichal</original>
+        <translation>entre dieciocho</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>b'elejichal</original>
+        <translation>entre diecinueve</translation>
+      </paralel_phrase>
+      <paralel_phrase>
+        <original>juwinaqichal</original>
+        <translation>entre veinte</translation>
+      </paralel_phrase>
+    </seccion>
+  </pagina>
+</document>
+```
+</documento>
