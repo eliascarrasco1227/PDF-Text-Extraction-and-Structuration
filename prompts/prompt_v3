@@ -127,6 +127,7 @@ sachinaq -> perdido
    - Procesa páginas completas primero, luego refina a líneas/palabras.  
    - No iventes etiquetas, usa unicamente las predefinidas, las escritas en el apartado estructura xml. Es decir todo el texto que no corresponda con las etiquetas mencionadas anteriormente, transcribirlo como literalmente como líneas.
    - Las glosas siguen un formato estricto como el de los ejemlos. Si no puede seguir este formato de morpheme_analysis (analisis morfologico) de las interlinear_gloss (glosas interlineales), entonces al menos transcribir como  paralel_phrase (frase paralela).
+   - La salida en formato xml debe tener siempre el sangrado correspondiente.
 
 5. **Solventar problemas comunes, indicaciones clave:**
     - Asegurate de mantener los signos de exclamación ya que a veces se eliminan en la salida.
