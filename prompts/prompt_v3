@@ -113,9 +113,9 @@ sachinaq -> perdido
     │     ├─ form
     │     └─ gloss
     └─ syntactic_analysis (opcional)
-    └─ unit
-        ├─ form
-        └─ gloss
+        └─ unit (repetible)
+            ├─ form
+            └─ gloss
     ``` 
 
 
@@ -128,7 +128,7 @@ sachinaq -> perdido
    - No iventes etiquetas, usa unicamente las predefinidas, las escritas en el apartado estructura xml. Es decir todo el texto que no corresponda con las etiquetas mencionadas anteriormente, transcribirlo como literalmente como líneas.
    - Las glosas siguen un formato estricto como el de los ejemlos. Si no puede seguir este formato de morpheme_analysis (analisis morfologico) de las interlinear_gloss (glosas interlineales), entonces al menos transcribir como  paralel_phrase (frase paralela).
    - La salida en formato xml debe tener siempre el sangrado correspondiente.
-   - Siempre que se abre una etiqueta, debe tener una etiqueta de cierre. Siempre que haya una etiqueta de cierre, tiene que haber previamente una que la abra. No puede haber <contenido/> sin que haya <contenido> antes.
+   - Siempre que se abre una etiqueta, debe tener una etiqueta de cierre. Siempre que haya una etiqueta de cierre, tiene que haber previamente una que la abra. No puede haber </contenido> sin que haya <contenido> antes.
 
 5. **Solventar problemas comunes, indicaciones clave:**
     - Asegurate de mantener los signos de exclamación ya que a veces se eliminan en la salida.
@@ -361,3 +361,31 @@ jun uno xjel pregunta k’oj máscara
     <original>k’oj</original>
     <translation>máscara</translation>
 </paralel_phrase>
+
+**Ejemplo input (de la gramática normativa Kaqchikel, página 103 del libro (105 del pdf)):**
+Je',xkitz'ib'aj kan ri rub'ї.
+Si, inscribieron su nombre.
+Eje',rije' xek'amon el.
+Si, ellos fueron los que se lo llevaron.
+
+Direccionales
+Los direccionales son partículas que indican el lugar hacia donde se dirige la acción.
+Esta clase de palabra no acepta flexión ni derivación, no funcionan por sí solas y siempre
+se posponen al núcleo predicativo que puede ser verbal o no verbal. Los direccionales
+se presentan y funcionan asi:
+
+<paralel_phrase>
+    <original>Je',xkitz'ib'aj kan ri rub'ї.</original>
+    <translation>Si, inscribieron su nombre.</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>Eje',rije' xek'amon el.</original>
+    <translation>Si, ellos fueron los que se lo llevaron.</translation>
+</paralel_phrase>
+<seccion type="Direccionales">
+    <linea> Direccionales</linea>
+    </seccion>
+    <linea>Los direccionales son partículas que indican el lugar hacia donde se dirige la acción.</linea>
+    <linea>Esta clase de palabra no acepta flexión ni derivación, no funcionan por sí solas y siempre</linea>
+    <linea>se posponen al núcleo predicativo que puede ser verbal o no verbal. Los direccionales</linea>
+    <linea>se presentan y funcionan así:</linea>
