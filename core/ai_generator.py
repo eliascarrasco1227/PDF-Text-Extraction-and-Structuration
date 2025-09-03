@@ -2,7 +2,7 @@
 from google import genai
 from google.genai import types
 from .pdf_processor import PDFProcessor
-from config.paths import PAGINAS
+from config.paths import PAGINAS, ALL_PAGES
 
 class AIGenerator:
     def __init__(self, model: str = 'gemini-2.5-flash', pages_per_block: int = 5):

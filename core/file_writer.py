@@ -17,11 +17,15 @@ class FileWriter:
     
     def save_with_counter(self, content: str) -> str:
         """Guarda con numeración y formato XML"""
+        INPUT_FILE_NAME = PDF_PATH.split('/')[-1].replace('.pdf', '')
+
+        OUTPUT_FILE_NAME = (f"{INPUT_FILE_NAME}_páginas_{PAGINAS[0]}-{PAGINAS[1]}")
+
         xml_content = self._generate_xml_wrapper(content)
         counter = 1
-        while os.path.exists(self._get_path(f"respuesta_{counter}.xml")):
+        while os.path.exists(self._get_path(f"{OUTPUT_FILE_NAME}_version_{counter}.xml")):
             counter += 1
-        return self._save_file(xml_content, f"respuesta_{counter}.xml")
+        return self._save_file(xml_content, f"{OUTPUT_FILE_NAME}_version_{counter}.xml")
     
     def _save_file(self, content: str, filename: str) -> str:
         path = self._get_path(filename)
