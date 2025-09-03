@@ -129,6 +129,8 @@ sachinaq -> perdido
    - Las glosas siguen un formato estricto como el de los ejemlos. Si no puede seguir este formato de morpheme_analysis (analisis morfologico) de las interlinear_gloss (glosas interlineales), entonces al menos transcribir como  paralel_phrase (frase paralela).
    - La salida en formato xml debe tener siempre el sangrado correspondiente.
    - Siempre que se abre una etiqueta, debe tener una etiqueta de cierre. Siempre que haya una etiqueta de cierre, tiene que haber previamente una que la abra. No puede haber </contenido> sin que haya <contenido> antes.
+   - NUNCA generes comentarios explicativos.
+   - Extrae TODO el texto literalmente SIN EXCEPCIONES.
 
 5. **Solventar problemas comunes, indicaciones clave:**
     - Asegurate de mantener los signos de exclamación ya que a veces se eliminan en la salida.

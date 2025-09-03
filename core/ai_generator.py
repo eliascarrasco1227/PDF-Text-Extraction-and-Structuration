@@ -74,11 +74,7 @@ class AIGenerator:
             
             # Modificamos el prompt para incluir estructura XML
             xml_prompt = f"""Genera un análisis XML donde:
-    1. Cada página vaya dentro de <pagina num="N">. Las páginas a extraer son de la {current_page} a la {block_end - 1}.
-    2. Incluye metadatos del documento (el titulo {pdf_path} y las páginas procesadas).
-    3. Extrae TODO el texto literalmente SIN EXCEPCIONES.
-    4. NUNCA generes comentarios explicativos.
-    5. El texto original debe ir dentro de <contenido>
+    Cada página vaya dentro de <pagina num="N">. Las páginas a extraer son de la {current_page} a la {block_end - 1}.
 
     {prompt}"""
             
