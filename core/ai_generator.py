@@ -36,6 +36,19 @@ class AIGenerator:
         
         return start_page, end_page
     
+    def _pretty_print_progress(self, processed_pages: int, total_pages_to_process: int):
+        # Calcular porcentaje completado
+        percentage = int((processed_pages / total_pages_to_process) * 100)
+        
+        # Crear barra de progreso
+        bar_length = 10
+        filled_length = int(bar_length * percentage / 100)
+        bar = '█' * filled_length + '▒' * (bar_length - filled_length)
+        
+        # Mostrar progreso
+        print(f"{bar} {percentage}%")
+        print("---------------------------------")
+    
     def generate_from_pdf(self, pdf_path: str, prompt: str) -> str:
         """Genera respuesta con estructura XML por bloques de páginas"""
 
@@ -83,18 +96,8 @@ class AIGenerator:
             
             # Actualizar contador de páginas procesadas
             processed_pages += pages_in_block
-            
-            # Calcular porcentaje completado
-            percentage = int((processed_pages / total_pages_to_process) * 100)
-            
-            # Crear barra de progreso
-            bar_length = 10
-            filled_length = int(bar_length * percentage / 100)
-            bar = '█' * filled_length + '▒' * (bar_length - filled_length)
-            
-            # Mostrar progreso
-            print(f"{bar} {percentage}%")
-            print("---------------------------------")
+
+            self._pretty_print_progress(processed_pages, total_pages_to_process)
             
             # Move to next block CORRECTAMENTE
             current_page = block_end

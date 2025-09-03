@@ -10,7 +10,7 @@ class DocumentProcessor:
         self.ai_generator = AIGenerator(pages_per_block=PAGES_PER_BLOCK)
         self.file_writer = FileWriter(OUTPUT_DIR)
 
-    def pretty_print(self):
+    def _pretty_print(self):
         if ALL_PAGES:
             paginas_info = "todas las páginas"
         else:
@@ -32,7 +32,7 @@ class DocumentProcessor:
         print("")
     
     def run(self):
-        self.pretty_print()
+        self._pretty_print()
         
         # 1. Leer prompt
         prompt = self.prompt_reader.read()
