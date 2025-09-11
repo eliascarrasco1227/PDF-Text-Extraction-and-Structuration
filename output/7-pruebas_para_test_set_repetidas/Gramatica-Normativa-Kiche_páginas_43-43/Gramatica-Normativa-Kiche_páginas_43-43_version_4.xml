@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kiche.pdf" paginas="43-43">
+<pagina num="43">
+  <seccion type="Diminutivas">
+    <linea>Diminutivas</linea>
+  </seccion>
+  <linea>Las partículas diminutivas que se usan en K'iche' son alaj, k'in y sin.</linea>
+  <paralel_phrase>
+    <original>alaj ak'</original>
+    <translation>al niñito</translation>
+  </paralel_phrase>
+  <paralel_phrase>
+    <original>alaj tz'i'</original>
+    <translation>perrito</translation>
+  </paralel_phrase>
+  <paralel_phrase>
+    <original>alaj taq me's</original>
+    <translation>gatitos</translation>
+  </paralel_phrase>
+  <paralel_phrase>
+    <original>k'in ixoq</original>
+    <translation>mujercita</translation>
+  </paralel_phrase>
+  <paralel_phrase>
+    <original>sin ala</original>
+    <translation>muchachito</translation>
+  </paralel_phrase>
+  <linea>El uso de las partículas sin y k'in tienden a ser despectivos.</linea>
+  <seccion type="Enfatizador">
+    <linea>Enfatizador</linea>
+  </seccion>
+  <linea>Son partículas que enfatizan la acción en una oración. Estas son "wi” y “qas”.</linea>
+  <paralel_phrase>
+    <original>Tzij wi</original>
+    <translation>es cierto</translation>
+  </paralel_phrase>
+  <paralel_phrase>
+    <original>In wi xinb'anowik</original>
+    <translation>fui yo quien lo hizo</translation>
+  </paralel_phrase>
+  <paralel_phrase>
+    <original>Kinb'e wi</original>
+    <translation>tengo que irme</translation>
+  </paralel_phrase>
+  <paralel_phrase>
+    <original>Qas tzij</original>
+    <translation>es cierto/es verdad</translation>
+  </paralel_phrase>
+  <paralel_phrase>
+    <original>Qas jela'</original>
+    <translation>así es</translation>
+  </paralel_phrase>
+</pagina>
+</documento>

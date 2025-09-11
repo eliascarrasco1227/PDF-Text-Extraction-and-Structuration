@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <documento fuente="Gramatica-Normativa-Kiche.pdf" paginas="43-43">
+```xml
 <pagina num="43">
     <linea>-ib' y -ab': Son pluralizadores que se refieren a personas, oficios o profesiones, funcionan</linea>
     <linea>como sufijos.</linea>
@@ -153,6 +154,7 @@
     <paralel_phrase>
         <original>Qas jela'</original>
         <translation>así es</translation>
-    </paralel_phrase>
+    </paralal_phrase>
 </pagina>
+```
 </documento>
