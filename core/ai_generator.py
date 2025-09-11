@@ -4,6 +4,7 @@ from google.genai import types
 from .pdf_processor import PDFProcessor
 from config.paths import PAGINAS, ALL_PAGES
 from PyPDF2 import PdfReader
+from core.logger_config import app_logger
 
 class AIGenerator:
     def __init__(self, model: str = 'gemini-2.5-flash', pages_per_block: int = 5):
@@ -11,6 +12,7 @@ class AIGenerator:
         self.model = model
         self.pdf_processor = PDFProcessor()
         self.pages_per_block = pages_per_block
+        self.logger = app_logger
     
     def _get_total_pages(self, pdf_path: str) -> int:
         """Obtiene el número total de páginas del PDF"""
@@ -26,11 +28,11 @@ class AIGenerator:
         # Determinar el rango de páginas a procesar
         if ALL_PAGES:
             start_page, end_page = 1, total_pdf_pages
-            print(f"📄 Procesando TODAS las páginas del PDF (1-{total_pdf_pages})")
+            self.logger.info(f"📄 Procesando TODAS las páginas del PDF (1-{total_pdf_pages})")
         else:
             # Procesar solo el rango especificado en PAGINAS
             start_page, end_page = PAGINAS
-            print(f"📄 Procesando páginas {start_page}-{end_page}")
+            self.logger.info(f"📄 Procesando páginas {start_page}-{end_page}")
             start_page = max(1, start_page)  # Asegurar que la página inicial es al menos 1 
             end_page = min(total_pdf_pages, end_page)  # Asegurar que la página final no excede el total
         
@@ -46,8 +48,8 @@ class AIGenerator:
         bar = '█' * filled_length + '▒' * (bar_length - filled_length)
         
         # Mostrar progreso
-        print(f"{bar} {percentage}%")
-        print("---------------------------------")
+        self.logger.info(f"{bar} {percentage}%")
+        self.logger.info("---------------------------------")
     
     def generate_from_pdf(self, pdf_path: str, prompt: str) -> str:
         """Genera respuesta con estructura XML por bloques de páginas"""
@@ -67,7 +69,7 @@ class AIGenerator:
             block_end = min(current_page + self.pages_per_block, end_page + 1)  # +1 para inclusivo
             pages_in_block = block_end - current_page
             
-            print(f"Processing pages {current_page} to {block_end - 1} ({pages_in_block} pages)...")
+            self.logger.info(f"Processing pages {current_page} to {block_end - 1} ({pages_in_block} pages)...")
             
             # Extraer las páginas (current_page hasta block_end - 1, inclusive)
             pdf_bytes = self.pdf_processor.extract_pages(pdf_path, (current_page, block_end))
