@@ -56,7 +56,10 @@ class DocumentProcessor:
             self.logger.info(f"\n💾 XML guardado en: {saved_path}")
 
         except Exception as e:
-            self.logger.error(f"Error durante el procesamiento: {str(e)}", exc_info=True)
+            if "503" in str(e):
+                self.logger.error("❌ El servidor de Gemini está sobrecargado. Por favor, intenta nuevamente más tarde.")
+            else:
+                self.logger.error(f"❌ Error durante el procesamiento: {str(e)}", exc_info=True)
             raise
 
 if __name__ == "__main__":
