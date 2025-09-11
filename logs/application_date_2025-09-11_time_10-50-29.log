@@ -1,0 +1,27 @@
+2025-09-11 10:50:29 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-09-11_time_10-50-29.log
+2025-09-11 10:50:33 - pdf_processor - INFO - --------------------------------------
+2025-09-11 10:50:33 - pdf_processor - INFO - | PDF TEXT EXTRACTOR AND STRUCTURATOR |
+2025-09-11 10:50:33 - pdf_processor - INFO - --------------------------------------
+2025-09-11 10:50:33 - pdf_processor - INFO - 
+2025-09-11 10:50:33 - pdf_processor - INFO - 📄 Procesando: data/Gramatica-Normativa-Kiche.pdf
+2025-09-11 10:50:33 - pdf_processor - INFO - 📖 Páginas a procesar: páginas 43-43
+2025-09-11 10:50:33 - pdf_processor - INFO - 📦 Bloques de: 5 páginas
+2025-09-11 10:50:33 - pdf_processor - INFO - 📝 Prompt usado: prompts/prompt_v3
+2025-09-11 10:50:33 - pdf_processor - INFO - --------------------------------------
+2025-09-11 10:50:33 - pdf_processor - INFO - 
+2025-09-11 10:50:33 - pdf_processor - INFO - 🤖 Generando respuesta
+2025-09-11 10:50:33 - pdf_processor - INFO - 📄 Procesando páginas 43-43
+2025-09-11 10:50:33 - pdf_processor - INFO - Processing pages 43 to 43 (1 pages)...
+2025-09-11 10:50:48 - pdf_processor - INFO - ██████████ 100%
+2025-09-11 10:50:48 - pdf_processor - INFO - ---------------------------------
+2025-09-11 10:50:48 - pdf_processor - INFO - 📊 Páginas procesadas encontradas: [43]
+2025-09-11 10:50:48 - pdf_processor - INFO - 
+🤖 Fragmento de respuesta:
+2025-09-11 10:50:48 - pdf_processor - INFO - <pagina num="43">
+    <linea>-ib' y -ab': Son pluralizadores que se refieren a personas, oficios o profesiones, funcionan</linea>
+    <linea>como sufijos.</linea>
+    <paralel_phrase>
+        <origina...
+2025-09-11 10:50:48 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kiche_páginas_43-43_version_2.xml
+2025-09-11 10:50:48 - pdf_processor - INFO - 
+💾 XML guardado en: output\Gramatica-Normativa-Kiche_páginas_43-43_version_2.xml

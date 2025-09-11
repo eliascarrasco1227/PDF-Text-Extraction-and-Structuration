@@ -16,23 +16,32 @@ def setup_logging():
     log_filename = f"application_date_{date_part}_time_{time_part}.log"
     log_path = os.path.join(LOG_DIR, log_filename)
     
-    # Configurar formato
-    log_format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    # Configurar formato para archivo (completo)
+    file_format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     date_format = '%Y-%m-%d %H:%M:%S'
     
-    # Configurar logging básico
-    logging.basicConfig(
-        level=logging.INFO,
-        format=log_format,
-        datefmt=date_format,
-        handlers=[
-            logging.FileHandler(log_path, encoding='utf-8'),
-            logging.StreamHandler()  # También mostrar en consola
-        ]
-    )
+    # Configurar formato para consola (limpio)
+    console_format = '%(message)s'
     
-    # Logger específico para la aplicación
+    # Crear logger
     logger = logging.getLogger('pdf_processor')
+    logger.setLevel(logging.INFO)
+    
+    # Eliminar handlers existentes si los hay
+    logger.handlers.clear()
+    
+    # Handler para archivo (formato completo)
+    file_handler = logging.FileHandler(log_path, encoding='utf-8')
+    file_handler.setFormatter(logging.Formatter(file_format, date_format))
+    
+    # Handler para consola (formato limpio)
+    console_handler = logging.StreamHandler()
+    console_handler.setFormatter(logging.Formatter(console_format))
+    
+    # Agregar handlers al logger
+    logger.addHandler(file_handler)
+    logger.addHandler(console_handler)
+    
     logger.info(f"Logging configurado. Archivo: {log_path}")
     
     return logger

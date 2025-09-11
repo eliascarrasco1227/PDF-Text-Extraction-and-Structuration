@@ -131,6 +131,7 @@ sachinaq -> perdido
    - Siempre que se abre una etiqueta, debe tener una etiqueta de cierre. Siempre que haya una etiqueta de cierre, tiene que haber previamente una que la abra. No puede haber </contenido> sin que haya <contenido> antes.
    - NUNCA generes comentarios explicativos.
    - Extrae TODO el texto literalmente SIN EXCEPCIONES.
+   - NUNCA debes empezar a extraer a mitad de página o en la página siguiente. SIEMPRE DEBES EXTRAER EL CONTENIDO DESDE LA PRIMERA PALABRA DEL PDF, aunque no sea el principio de una sección o no sea la página indicada.
 
 5. **Solventar problemas comunes, indicaciones clave:**
     - Asegurate de mantener los signos de exclamación ya que a veces se eliminan en la salida.

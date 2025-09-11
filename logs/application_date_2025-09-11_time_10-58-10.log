@@ -1,0 +1,47 @@
+2025-09-11 10:58:10 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-09-11_time_10-58-10.log
+2025-09-11 10:58:13 - pdf_processor - INFO - --------------------------------------
+2025-09-11 10:58:13 - pdf_processor - INFO - | PDF TEXT EXTRACTOR AND STRUCTURATOR |
+2025-09-11 10:58:13 - pdf_processor - INFO - --------------------------------------
+2025-09-11 10:58:13 - pdf_processor - INFO - 
+2025-09-11 10:58:13 - pdf_processor - INFO - 📄 Procesando: data/Gramatica-Normativa-Kiche.pdf
+2025-09-11 10:58:13 - pdf_processor - INFO - 📖 Páginas a procesar: páginas 43-43
+2025-09-11 10:58:13 - pdf_processor - INFO - 📦 Bloques de: 5 páginas
+2025-09-11 10:58:13 - pdf_processor - INFO - 📝 Prompt usado: prompts/prompt_v3
+2025-09-11 10:58:13 - pdf_processor - INFO - --------------------------------------
+2025-09-11 10:58:13 - pdf_processor - INFO - 
+2025-09-11 10:58:13 - pdf_processor - INFO - 🤖 Generando respuesta
+2025-09-11 10:58:13 - pdf_processor - INFO - 📄 Procesando páginas 43-43
+2025-09-11 10:58:13 - pdf_processor - INFO - Processing pages 43 to 43 (1 pages)...
+2025-09-11 10:58:17 - pdf_processor - ERROR - Error durante el procesamiento: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "C:\Users\elcar\OneDrive\Documentos\MASTER\TFM\main.py", line 45, in run
+    response = self.ai_generator.generate_from_pdf(PDF_PATH, prompt)
+  File "C:\Users\elcar\OneDrive\Documentos\MASTER\TFM\core\ai_generator.py", line 83, in generate_from_pdf
+    response = self.client.models.generate_content(
+  File "C:\Users\elcar\anaconda3\envs\gemini-env\lib\site-packages\google\genai\models.py", line 5898, in generate_content
+    response = self._generate_content(
+  File "C:\Users\elcar\anaconda3\envs\gemini-env\lib\site-packages\google\genai\models.py", line 4838, in _generate_content
+    response = self._api_client.request(
+  File "C:\Users\elcar\anaconda3\envs\gemini-env\lib\site-packages\google\genai\_api_client.py", line 1077, in request
+    response = self._request(http_request, stream=False)
+  File "C:\Users\elcar\anaconda3\envs\gemini-env\lib\site-packages\google\genai\_api_client.py", line 968, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+  File "C:\Users\elcar\anaconda3\envs\gemini-env\lib\site-packages\tenacity\__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\elcar\anaconda3\envs\gemini-env\lib\site-packages\tenacity\__init__.py", line 376, in iter
+    result = action(retry_state)
+  File "C:\Users\elcar\anaconda3\envs\gemini-env\lib\site-packages\tenacity\__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+  File "C:\Users\elcar\anaconda3\envs\gemini-env\lib\site-packages\tenacity\__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+  File "C:\Users\elcar\anaconda3\envs\gemini-env\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "C:\Users\elcar\anaconda3\envs\gemini-env\lib\concurrent\futures\_base.py", line 391, in __get_result
+    raise self._exception
+  File "C:\Users\elcar\anaconda3\envs\gemini-env\lib\site-packages\tenacity\__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\elcar\anaconda3\envs\gemini-env\lib\site-packages\google\genai\_api_client.py", line 958, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "C:\Users\elcar\anaconda3\envs\gemini-env\lib\site-packages\google\genai\errors.py", line 107, in raise_for_response
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
