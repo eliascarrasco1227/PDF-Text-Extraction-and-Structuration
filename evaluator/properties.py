@@ -9,5 +9,11 @@
 
 
 # Bucle
+#REFERENCE_XML = "../test_set/Gramatica-Normativa-Kiche_páginas_43-43_version_1.xml" 
+#HYPOTHESIS_XML = "../output/7-pruebas_para_test_set_repetidas/Gramatica-Normativa-Kiche_páginas_43-43/Gramatica-Normativa-Kiche_páginas_43-43_version_1.xml"  
+
 REFERENCE_XML = "../test_set/Gramatica-Normativa-Kiche_páginas_43-43_version_1.xml" 
 HYPOTHESIS_XML = "../output/7-pruebas_para_test_set_repetidas/Gramatica-Normativa-Kiche_páginas_43-43/Gramatica-Normativa-Kiche_páginas_43-43"  
+
+
+
