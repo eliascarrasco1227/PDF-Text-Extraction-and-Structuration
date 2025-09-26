@@ -63,46 +63,29 @@ def calculate_character_error_rate(reference_path: str, hypothesis_path: str) ->
 # --- EJEMPLO DE USO ---
 
 # Rutas de ejemplo (ajústalas a tu configuración real)
-REFERENCE_XML = "../test_set/Gramatica-Normativa-Kiche_páginas_43-43_version_1.xml"  # El XML generado por Gemini (Output)
-HYPOTHESIS_XML = "../output/6-pruebas_para_test_set/Gramatica-Normativa-Kiche_páginas_43-43_version_1.xml"  # El XML creado manualmente (Ground Truth)
+#REFERENCE_XML = "../test_set/Gramatica-Normativa-Kiche_páginas_43-43_version_1.xml"  # El XML generado por Gemini (Output)
+#HYPOTHESIS_XML = "../output/6-pruebas_para_test_set/Gramatica-Normativa-Kiche_páginas_43-43_version_1.xml"  # El XML creado manualmente (Ground Truth)
+
+#REFERENCE_XML = "../test_set/Gramatica-Normativa-Mam_páginas_80-80_version_1.xml"  # El XML generado por Gemini (Output)
+#HYPOTHESIS_XML = "../output/6-pruebas_para_test_set/Gramatica-Normativa-Mam_páginas_80-80_version_1.xml"  # El XML creado manualmente (Ground Truth)
+
+REFERENCE_XML = "../output/6-pruebas_para_test_set/Gramatica-Normativa-Kaqchikel_páginas_146-146.xml"  # El XML generado por Gemini (Output)
+HYPOTHESIS_XML = "../test_set/Gramatica-Normativa-Kaqchikel_páginas_146-146.xml"  # El XML creado manualmente (Ground Truth)
 
 
 if __name__ == '__main__':
     # Creamos archivos de ejemplo (deberías tenerlos de tu flujo de trabajo)
     # Suponemos que la "referencia" tiene el texto correcto
-    # reference_content = """
-    # <documento>
-    #     <pagina num="1">
-    #         <linea>El perro corre rápido por el parque.</linea>
-    #     </pagina>
-    # </documento>
-    # """
-    # # Suponemos que la "hipótesis" tiene un error de carácter (corre -> corre) y una palabra borrada (por)
-    # hypothesis_content = """
-    # <documento>
-    #     <pagina num="1">
-    #         <linea>El perru corre rápidi el parque.</linea>
-    #     </pagina>
-    # </documento>
-    # """
-    
-    # # Guardar para el ejemplo
-    # Path(REFERENCE_XML).parent.mkdir(parents=True, exist_ok=True)
-    # with open(REFERENCE_XML, 'w', encoding='utf-8') as f:
-    #     f.write(reference_content)
-        
-    # Path(HYPOTHESIS_XML).parent.mkdir(parents=True, exist_ok=True)
-    # with open(HYPOTHESIS_XML, 'w', encoding='utf-8') as f:
-    #     f.write(hypothesis_content)
-
+   
     # Cálculo
     cer_result = calculate_character_error_rate(REFERENCE_XML, HYPOTHESIS_XML)
     
     if cer_result >= 0:
         print("\n--- Resultado del Análisis CER ---")
-        print(f"Texto de Referencia (extraído): '{extract_text_from_xml(REFERENCE_XML)}'")
-        print(f"Texto de Hipótesis (extraído): '{extract_text_from_xml(HYPOTHESIS_XML)}'")
+        # print(f"Texto de Referencia (extraído): '{extract_text_from_xml(REFERENCE_XML)}'")
+        # print(f"Texto de Hipótesis (extraído): '{extract_text_from_xml(HYPOTHESIS_XML)}'")
         print(f"\nCharacter Error Rate (CER): {cer_result:.4f}")
         print(f"Interpretación: Un valor de 0.0 es perfecto. Un valor de 1.0 es un 100% de error.")
+        print(f"Similitud de los textos: {(1 - cer_result) * 100:.2f}%")
     else:
         print("El cálculo falló debido a errores de archivo o parseo.")
