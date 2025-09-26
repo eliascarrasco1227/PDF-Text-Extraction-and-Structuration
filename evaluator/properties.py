@@ -1,3 +1,4 @@
+# Pruebas
 #REFERENCE_XML = "../test_set/Gramatica-Normativa-Kiche_páginas_43-43_version_1.xml" 
 #HYPOTHESIS_XML = "../output/6-pruebas_para_test_set/Gramatica-Normativa-Kiche_páginas_43-43_version_1.xml"  
 
@@ -12,6 +13,8 @@
 #REFERENCE_XML = "../test_set/Gramatica-Normativa-Kiche_páginas_43-43_version_1.xml" 
 #HYPOTHESIS_XML = "../output/7-pruebas_para_test_set_repetidas/Gramatica-Normativa-Kiche_páginas_43-43/Gramatica-Normativa-Kiche_páginas_43-43_version_1.xml"  
 
+# Si le pasas un directorio, devuelve la media de todos. 
+# Si le pasas un xml devuelve su similitud.
 REFERENCE_XML = "../test_set/Gramatica-Normativa-Kiche_páginas_43-43_version_1.xml" 
 HYPOTHESIS_XML = "../output/7-pruebas_para_test_set_repetidas/Gramatica-Normativa-Kiche_páginas_43-43/Gramatica-Normativa-Kiche_páginas_43-43"  
 

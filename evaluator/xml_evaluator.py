@@ -1,8 +1,9 @@
 import xml.etree.ElementTree as ET
-import lxml.etree as etree # Necesario para el parsing robusto
+import lxml.etree as etree 
 from jiwer import cer
 from pathlib import Path
 import re 
+# Asegúrate de que 'properties' exista y contenga REFERENCE_XML, HYPOTHESIS_XML
 from properties import REFERENCE_XML, HYPOTHESIS_XML 
 
 def extract_text_from_xml(xml_path: str) -> str:
@@ -21,8 +22,6 @@ def extract_text_from_xml(xml_path: str) -> str:
             xml_content = f.read()
 
         # 2. Reemplazar caracteres problemáticos comunes ANTES del parseo.
-        # Esto es una limpieza preventiva, pero el parser de lxml con recover=True
-        # es el mecanismo principal de robustez.
         xml_content = xml_content.replace('&', '&amp;')
         
         # 3. Usar lxml con el parser de recuperación (RECOVERY)
@@ -40,7 +39,6 @@ def extract_text_from_xml(xml_path: str) -> str:
     except Exception as e:
         # Captura cualquier error de lxml o IO
         print(f"Error: No se pudo parsear (o leer) el archivo XML en la ruta: {xml_path}.")
-        # El detalle exacto del error se ha quitado aquí, ya que el usuario lo ha visto
         return ""
 
 
@@ -48,12 +46,6 @@ def get_hypothesis_paths(base_hypothesis_path: str) -> list[str]:
     """
     Determina si la ruta es un archivo exacto (.xml) o una base para buscar
     múltiples versiones.
-
-    Args:
-        base_hypothesis_path: La ruta o prefijo base proporcionado.
-        
-    Returns:
-        Una lista de rutas de archivos de hipótesis encontrados.
     """
     base_path = Path(base_hypothesis_path)
 
@@ -68,21 +60,13 @@ def get_hypothesis_paths(base_hypothesis_path: str) -> list[str]:
     # Lógica 2 (La que se usaba antes): Si no termina en '.xml', buscar con comodín.
     else:
         parent_dir = base_path.parent
-        # Usamos el nombre base como prefijo para la búsqueda
         base_name_prefix = base_path.name 
         
-        # Patrón de búsqueda: el prefijo seguido de cualquier cosa y terminando en .xml
         search_pattern = f"{base_name_prefix}*.xml"
         
-        # Búsqueda recursiva o no, dependiendo de la estructura de tu proyecto.
-        # Usaremos glob() para buscar solo en el directorio padre,
-        # lo que es más eficiente y suele ser suficiente para proyectos estructurados.
         found_files = list(parent_dir.glob(search_pattern))
         
-        # Si no se encuentra ningún archivo, intentar buscar con la ruta completa como comodín
         if not found_files:
-             # Esto intenta cubrir el caso donde el prefijo dado está en el mismo nivel
-             # pero no termina en la extensión.
              search_pattern = f"{base_path.name}*.xml"
              found_files = list(parent_dir.glob(search_pattern))
 
@@ -110,25 +94,20 @@ def calculate_character_error_rate(reference_path: str, base_hypothesis_path: st
     
     # 3. Iterar sobre todos los archivos encontrados y calcular el CER
     for h_path in hypothesis_paths:
-        # Extraer el texto de la hipótesis
         hypothesis_text = extract_text_from_xml(h_path)
         
-        # Manejar el caso de error de parseo que está capturado dentro de extract_text_from_xml
         if not hypothesis_text:
+            # Usamos -1.0 para indicar un error de parseo o archivo
             results[Path(h_path).name] = -1.0
             continue 
         
-        # Calcular el CER
         error_rate = cer(reference_text, hypothesis_text)
-        
-        # Guardar el resultado en el diccionario
         results[Path(h_path).name] = error_rate
         
     return results
 
 if __name__ == '__main__':
     
-    # --- Ejecución del Cálculo ---
     all_cer_results = calculate_character_error_rate(REFERENCE_XML, HYPOTHESIS_XML)
     
     print("\n--- Resultados del Análisis CER para Hipótesis ---")
@@ -136,11 +115,28 @@ if __name__ == '__main__':
     if isinstance(all_cer_results, dict) and "Error" in all_cer_results:
         print(all_cer_results["Error"])
     else:
+        valid_percentages = []
+        
+        # 1. Imprimir resultados individuales y recopilar porcentajes
         for filename, cer_result in all_cer_results.items():
             if cer_result >= 0:
+                similitud_percent = (1 - cer_result) * 100
+                valid_percentages.append(similitud_percent)
+                
                 print(f"\nArchivo Hipótesis: {filename}")
                 print(f"  Character Error Rate (CER): {cer_result:.4f}")
-                print(f"  Similitud del Texto: {(1 - cer_result) * 100:.2f}%")
+                print(f"  Similitud del Texto: {similitud_percent:.2f}%")
             else:
                 print(f"\nArchivo Hipótesis: {filename}")
+                # El error de parseo se imprime dentro de extract_text_from_xml
                 print("  El cálculo falló (error de parseo o archivo no encontrado).")
+
+        # 2. Calcular e imprimir la media
+        print("\n" + "="*40)
+        if valid_percentages:
+            average_percentage = sum(valid_percentages) / len(valid_percentages)
+            
+            print(f"✅ MEDIA DE SIMILITUD (N={len(valid_percentages)}): {average_percentage:.2f}%")
+        else:
+            print("❌ No hay resultados válidos para calcular la media.")
+        print("="*40)
