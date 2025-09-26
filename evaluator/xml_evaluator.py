@@ -1,33 +1,44 @@
 import xml.etree.ElementTree as ET
 from jiwer import cer
 from pathlib import Path
-# Asumo que 'properties' contiene las rutas correctas
+import lxml.etree as etree # Importa lxml
 from properties import REFERENCE_XML, HYPOTHESIS_XML 
 
 def extract_text_from_xml(xml_path: str) -> str:
     """
-    Lee un archivo XML y extrae todo el texto de todos los elementos, 
-    concatenándolo en una sola cadena.
+    Lee un archivo XML de forma robusta usando lxml para intentar la recuperación
+    en caso de errores de parseo.
     """
+    xml_path = Path(xml_path) 
+    if not xml_path.exists():
+        print(f"Error: Archivo no encontrado en la ruta: {xml_path}")
+        return ""
+        
     try:
-        # Usamos Path para manejar la ruta fácilmente
-        xml_path = Path(xml_path) 
-        
-        # Comprobación de existencia fuera del parseo para un mejor manejo de errores
-        if not xml_path.exists():
-            print(f"Error: Archivo no encontrado en la ruta: {xml_path}")
-            return ""
+        # 1. Leer el contenido como una cadena
+        with open(xml_path, 'r', encoding='utf-8') as f:
+            xml_content = f.read()
 
-        tree = ET.parse(xml_path)
-        root = tree.getroot()
+        # 2. Reemplazar caracteres problemáticos comunes ANTES del parseo
+        # Esto soluciona problemas de & y < que no han sido 'escapados'
+        xml_content = xml_content.replace('&', '&amp;')
         
+        # 3. Usar lxml con el parser de recuperación (RECOVERY)
+        # Esto intenta corregir errores comunes de XML como etiquetas sin cerrar.
+        parser = etree.XMLParser(recover=True, encoding='utf-8')
+        
+        # 4. Parsear desde la cadena de texto
+        root = etree.fromstring(xml_content.encode('utf-8'), parser=parser)
+        
+        # 5. Extraer el texto como antes
         text_content = ' '.join(root.itertext()).strip()
         clean_text = ' '.join(text_content.split())
         
         return clean_text
     
-    except ET.ParseError:
-        print(f"Error: No se pudo parsear el archivo XML en la ruta: {xml_path}")
+    except Exception as e:
+        # Captura cualquier error de lxml o IO
+        print(f"Error: No se pudo parsear (o leer) el archivo XML en la ruta: {xml_path}. Detalle: {e}")
         return ""
 
 

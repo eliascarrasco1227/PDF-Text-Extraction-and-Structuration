@@ -138,6 +138,8 @@ sachinaq -> perdido
     - Extraer texto literal, incluyendo signos ortográficos para evitar perder signos de excalación e interrogación que se suelen perder.
     - Ten cuidado con la información redundante, los pdf suelen tener al principio de la página una linea donde pone el titulo del libro y se repite en cada página como por ejemolo "Gramática pedagógica K'iche'". Esta información no debe de estar en la salida.
     - Si falta información en la fuente NO IVENTES NADA, es una transcripción, no hay que generar texto nuevo
+    - NUNCA escribas nada que pueda romper el formato xml como por ejemplo poner esto al inicio "```xml" o poner "```" al final. 
+    - TODO lo generado DEBE ser un formato XML valido.
 
 6. **Salida:**  
    - XML propio refinado.   
