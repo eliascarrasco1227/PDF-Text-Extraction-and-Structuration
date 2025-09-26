@@ -3,7 +3,7 @@ from google import genai
 from google.genai import types
 from google.genai.errors import ServerError
 from .pdf_processor import PDFProcessor
-from config.paths import PAGINAS, ALL_PAGES, RETRY_DELAY, MAX_RETRIES
+from config.properties import PAGINAS, ALL_PAGES, RETRY_DELAY, MAX_RETRIES
 from PyPDF2 import PdfReader
 from core.logger_config import app_logger
 import time

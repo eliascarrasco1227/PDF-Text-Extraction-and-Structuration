@@ -2,7 +2,7 @@
 import logging
 import os
 from datetime import datetime
-from config.paths import LOG_DIR
+from config.properties import LOG_DIR
 
 def setup_logging():
     """Configura el sistema de logging de la aplicación"""

@@ -14,4 +14,4 @@ MAX_RETRIES = 5    # Número máximo de reintentos
 
 
 # Evaluator
-# Las variables de evaluator están en evaluator/evaluator.properties.py
+# Las variables de evaluator están en evaluator/properties.py

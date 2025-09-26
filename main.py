@@ -1,4 +1,4 @@
-from config.paths import PDF_PATH, PROMPT_PATH, OUTPUT_DIR, PAGINAS, PAGES_PER_BLOCK, ALL_PAGES
+from config.properties import PDF_PATH, PROMPT_PATH, OUTPUT_DIR, PAGINAS, PAGES_PER_BLOCK, ALL_PAGES
 from core.prompt_reader import PromptReader
 from core.ai_generator import AIGenerator
 from core.file_writer import FileWriter

@@ -1,7 +1,7 @@
 # file_writer.py
 import os
 from datetime import datetime
-from config.paths import PDF_PATH, PAGINAS, ALL_PAGES
+from config.properties import PDF_PATH, PAGINAS, ALL_PAGES
 from PyPDF2 import PdfReader
 from core.logger_config import app_logger
 
