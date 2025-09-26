@@ -1,0 +1,72 @@
+2025-09-26 22:47:28 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-09-26_time_22-47-28.log
+2025-09-26 22:47:36 - pdf_processor - INFO - --------------------------------------
+2025-09-26 22:47:36 - pdf_processor - INFO - | PDF TEXT EXTRACTOR AND STRUCTURATOR |
+2025-09-26 22:47:36 - pdf_processor - INFO - --------------------------------------
+2025-09-26 22:47:36 - pdf_processor - INFO - 
+2025-09-26 22:47:36 - pdf_processor - INFO - 📄 Procesando: data/Gramatica-Normativa-Kiche.pdf
+2025-09-26 22:47:36 - pdf_processor - INFO - 📖 Páginas a procesar: todas las páginas
+2025-09-26 22:47:36 - pdf_processor - INFO - 📦 Bloques de: 5 páginas
+2025-09-26 22:47:36 - pdf_processor - INFO - 📝 Prompt usado: prompts/prompt_v3
+2025-09-26 22:47:36 - pdf_processor - INFO - --------------------------------------
+2025-09-26 22:47:36 - pdf_processor - INFO - 
+2025-09-26 22:47:36 - pdf_processor - INFO - 🤖 Generando respuesta
+2025-09-26 22:47:36 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-75)
+2025-09-26 22:47:36 - pdf_processor - INFO - 📖 Procesando páginas 1 a 5 (5 páginas)...
+2025-09-26 22:47:51 - pdf_processor - INFO - ▒▒▒▒▒▒▒▒▒▒ 6%
+2025-09-26 22:47:51 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:47:51 - pdf_processor - INFO - 📖 Procesando páginas 6 a 10 (5 páginas)...
+2025-09-26 22:48:14 - pdf_processor - INFO - █▒▒▒▒▒▒▒▒▒ 13%
+2025-09-26 22:48:14 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:48:14 - pdf_processor - INFO - 📖 Procesando páginas 11 a 15 (5 páginas)...
+2025-09-26 22:48:55 - pdf_processor - INFO - ██▒▒▒▒▒▒▒▒ 20%
+2025-09-26 22:48:55 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:48:55 - pdf_processor - INFO - 📖 Procesando páginas 16 a 20 (5 páginas)...
+2025-09-26 22:49:57 - pdf_processor - INFO - ██▒▒▒▒▒▒▒▒ 26%
+2025-09-26 22:49:57 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:49:57 - pdf_processor - INFO - 📖 Procesando páginas 21 a 25 (5 páginas)...
+2025-09-26 22:50:56 - pdf_processor - INFO - ███▒▒▒▒▒▒▒ 33%
+2025-09-26 22:50:56 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:50:56 - pdf_processor - INFO - 📖 Procesando páginas 26 a 30 (5 páginas)...
+2025-09-26 22:51:49 - pdf_processor - INFO - ████▒▒▒▒▒▒ 40%
+2025-09-26 22:51:49 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:51:49 - pdf_processor - INFO - 📖 Procesando páginas 31 a 35 (5 páginas)...
+2025-09-26 22:53:04 - pdf_processor - INFO - ████▒▒▒▒▒▒ 46%
+2025-09-26 22:53:04 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:53:04 - pdf_processor - INFO - 📖 Procesando páginas 36 a 40 (5 páginas)...
+2025-09-26 22:53:51 - pdf_processor - INFO - █████▒▒▒▒▒ 53%
+2025-09-26 22:53:51 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:53:51 - pdf_processor - INFO - 📖 Procesando páginas 41 a 45 (5 páginas)...
+2025-09-26 22:55:05 - pdf_processor - INFO - ██████▒▒▒▒ 60%
+2025-09-26 22:55:05 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:55:05 - pdf_processor - INFO - 📖 Procesando páginas 46 a 50 (5 páginas)...
+2025-09-26 22:56:02 - pdf_processor - INFO - ██████▒▒▒▒ 66%
+2025-09-26 22:56:02 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:56:02 - pdf_processor - INFO - 📖 Procesando páginas 51 a 55 (5 páginas)...
+2025-09-26 22:56:48 - pdf_processor - INFO - ███████▒▒▒ 73%
+2025-09-26 22:56:48 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:56:48 - pdf_processor - INFO - 📖 Procesando páginas 56 a 60 (5 páginas)...
+2025-09-26 22:57:28 - pdf_processor - INFO - ████████▒▒ 80%
+2025-09-26 22:57:28 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:57:28 - pdf_processor - INFO - 📖 Procesando páginas 61 a 65 (5 páginas)...
+2025-09-26 22:58:15 - pdf_processor - INFO - ████████▒▒ 86%
+2025-09-26 22:58:15 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:58:15 - pdf_processor - INFO - 📖 Procesando páginas 66 a 70 (5 páginas)...
+2025-09-26 22:59:03 - pdf_processor - INFO - █████████▒ 93%
+2025-09-26 22:59:03 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:59:03 - pdf_processor - INFO - 📖 Procesando páginas 71 a 75 (5 páginas)...
+2025-09-26 22:59:28 - pdf_processor - INFO - ██████████ 100%
+2025-09-26 22:59:28 - pdf_processor - INFO - ---------------------------------
+2025-09-26 22:59:28 - pdf_processor - INFO - 📊 Páginas procesadas encontradas: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74]
+2025-09-26 22:59:28 - pdf_processor - INFO - 
+🤖 Fragmento de respuesta:
+2025-09-26 22:59:28 - pdf_processor - INFO - ```xml
+<pagina num="1">
+  <linea>CHOLTAQANEM TZIJ</linea>
+  <linea>RECH K'ICHE' CHI'</linea>
+  <linea>GRAMÁTICA</linea>
+  <linea>NORMATIVA KICHE'</linea>
+  <linea>ALMG</linea>
+  <linea>KICHE MAYAB' CH...
+2025-09-26 22:59:28 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kiche_páginas_1-75_version_1.xml
+2025-09-26 22:59:28 - pdf_processor - INFO - 
+💾 XML guardado en: output\Gramatica-Normativa-Kiche_páginas_1-75_version_1.xml
