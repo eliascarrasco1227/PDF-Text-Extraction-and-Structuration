@@ -10,3 +10,8 @@ PAGES_PER_BLOCK = 5  # Número de páginas a procesar por bloque
 # Configuración para reintentos
 RETRY_DELAY = 15  # Segundos a esperar entre reintentos (para errores 503, servidor de gemini colapsado)
 MAX_RETRIES = 5    # Número máximo de reintentos
+
+
+
+# Evaluator
+# Las variables de evaluator están en evaluator/evaluator.properties.py
