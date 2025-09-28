@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kaqchikel.pdf" paginas="146-146">
+<pagina num="145">
+    <linea>145</linea>
+    <linea>Demos</linea>
+    <linea>.... ۰۰۰/۰۰/۰۰</linea>
+    <titulo>Demostrativos</titulo>
+    <linea>Los sustantivos pueden ser señalados por los demostrativos ri...ri', re...re' y la...la'.</linea>
+    <linea>Si el sustantivo es acompañado de algún adjetivo, éste también se coloca entre los</linea>
+    <linea>demostrativos. Ejemplos:</linea>
+    <titulo>Demostrativo ri.....ri':</titulo>
+    <paralel_phrase>
+        <original>Xb'e ri ti umül ri'.</original>
+        <translation>Aquel conejito se fue.</translation>
+    </paralel_phrase>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>X-0-b'eri ti umül ri'</original>
+            <translation>Aquel conejito se fue.</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit>
+                <form>X-</form>
+                <gloss>COM</gloss>
+            </unit>
+            <unit>
+                <form>0-</form>
+                <gloss>B3s</gloss>
+            </unit>
+            <unit>
+                <form>b'eri</form>
+                <gloss>ir</gloss>
+            </unit>
+            <unit>
+                <form>ti</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>umül</form>
+                <gloss>DIM</gloss>
+            </unit>
+            <unit>
+                <form>conejo</form>
+                <gloss>conejo</gloss>
+            </unit>
+            <unit>
+                <form>ri'</form>
+                <gloss>DEM</gloss>
+            </unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+    <paralel_phrase>
+        <original>...man xkokisaj ta ri tzyäq ri'.</original>
+        <translation>...no usaron esa ropa.</translation>
+    </paralel_phrase>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>...man x-0-k-ok-isa-j ta ri tzyäq ri'</original>
+            <translation>...no usaron esa ropa.</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit>
+                <form>...man</form>
+                <gloss>NEG</gloss>
+            </unit>
+            <unit>
+                <form>x-</form>
+                <gloss>COM</gloss>
+            </unit>
+            <unit>
+                <form>0-</form>
+                <gloss>B3s</gloss>
+            </unit>
+            <unit>
+                <form>k-</form>
+                <gloss>A3p</gloss>
+            </unit>
+            <unit>
+                <form>ok-isa-j</form>
+                <gloss>usar-CAU-SC</gloss>
+            </unit>
+            <unit>
+                <form>ta</form>
+                <gloss>PAR</gloss>
+            </unit>
+            <unit>
+                <form>ri</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>tzyäq</form>
+                <gloss>ropa</gloss>
+            </unit>
+            <unit>
+                <form>ri'</form>
+                <gloss>DEM</gloss>
+            </unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+    <paralel_phrase>
+        <original>...toq nk'achoj ri k'utunïk ri'...</original>
+        <translation>...cuando se termina la pedida...</translation>
+    </paralel_phrase>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>...toq n-0-k'achoj ri k'utunïk ri'...</original>
+            <translation>...cuando se termina la pedida...</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit>
+                <form>...toq</form>
+                <gloss>PAR</gloss>
+            </unit>
+            <unit>
+                <form>n-</form>
+                <gloss>INC</gloss>
+            </unit>
+            <unit>
+                <form>0-</form>
+                <gloss>B3s</gloss>
+            </unit>
+            <unit>
+                <form>k'achoj</form>
+                <gloss>terminar</gloss>
+            </unit>
+            <unit>
+                <form>ri</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>k'utunïk</form>
+                <gloss>pedida</gloss>
+            </unit>
+            <unit>
+                <form>ri'...</form>
+                <gloss>DEM</gloss>
+            </unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+    <titulo>Demostrativo re.....re':</titulo>
+    <paralel_phrase>
+        <original>Re jun pawi'aj re' man junam ta rik'in la awichin rat.</original>
+        <translation>Este sombrero no es igual al tuyo.</translation>
+    </paralel_phrase>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>Re jun pawi'aj re' man junam ta r-ik'in la aw-ichin rat.</original>
+            <translation>Este sombrero no es igual al tuyo.</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit>
+                <form>Re</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>jun</form>
+                <gloss>IND</gloss>
+            </unit>
+            <unit>
+                <form>pawi'aj</form>
+                <gloss>sombrero</gloss>
+            </unit>
+            <unit>
+                <form>re'</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>man</form>
+                <gloss>NEG</gloss>
+            </unit>
+            <unit>
+                <form>junam</form>
+                <gloss>ADV</gloss>
+            </unit>
+            <unit>
+                <form>ta</form>
+                <gloss>PAR</gloss>
+            </unit>
+            <unit>
+                <form>r-ik'in</form>
+                <gloss>A3s-SR</gloss>
+            </unit>
+            <unit>
+                <form>la</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>aw-ichin</form>
+                <gloss>A2s-SR</gloss>
+            </unit>
+            <unit>
+                <form>rat.</form>
+                <gloss>usted</gloss>
+            </unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+    <paralel_phrase>
+        <original>Re jay re' manäq rub'onil.</original>
+        <translation>Esta casa no tiene color.</translation>
+    </paralel_phrase>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>Re jay re' manäq ru-b'onil</original>
+            <translation>Esta casa no tiene color.</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit>
+                <form>Re</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>jay</form>
+                <gloss>casa</gloss>
+            </unit>
+            <unit>
+                <form>re'</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>manäq</form>
+                <gloss>ADV</gloss>
+            </unit>
+            <unit>
+                <form>ru-b'onil</form>
+                <gloss>A3s-color</gloss>
+            </unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+    <titulo>Demostrativo la.....la':</titulo>
+    <paralel_phrase>
+        <original>Yalan nxik'an la jun tz'ikïn la'.</original>
+        <translation>Ese pájaro vuela mucho.</translation>
+    </paralel_phrase>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>yalan n-0-xik'-a-n. la jun tz'ikïn la'</original>
+            <translation>Ese pájaro vuela mucho.</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit>
+                <form>yalan</form>
+                <gloss>INT</gloss>
+            </unit>
+            <unit>
+                <form>n-</form>
+                <gloss>INC</gloss>
+            </unit>
+            <unit>
+                <form>0-</form>
+                <gloss>B3s</gloss>
+            </unit>
+            <unit>
+                <form>xik'-</form>
+                <gloss>volar</gloss>
+            </unit>
+            <unit>
+                <form>a-n.</form>
+                <gloss>BV-AP</gloss>
+            </unit>
+            <unit>
+                <form>la</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>jun</form>
+                <gloss>IND</gloss>
+            </unit>
+            <unit>
+                <form>tz'ikïn</form>
+                <gloss>pájaro</gloss>
+            </unit>
+            <unit>
+                <form>la'</form>
+                <gloss>DEM</gloss>
+            </unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+    <paralel_phrase>
+        <original>Pa la jun tinamït la' e k'o mama' taq che'.</original>
+        <translation>En ese pueblo hay árboles muy grandes.</translation>
+    </paralel_phrase>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>Pa la jun tinamït la' e k'o mama' taq che'.</original>
+            <translation>En ese pueblo hay árboles muy grandes.</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit>
+                <form>Pa</form>
+                <gloss>PRE</gloss>
+            </unit>
+            <unit>
+                <form>la</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>jun</form>
+                <gloss>IND</gloss>
+            </unit>
+            <unit>
+                <form>tinamït</form>
+                <gloss>pueblo</gloss>
+            </unit>
+            <unit>
+                <form>la'</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>e</form>
+                <gloss>B3p</gloss>
+            </unit>
+            <unit>
+                <form>k'o</form>
+                <gloss>EST</gloss>
+            </unit>
+            <unit>
+                <form>mama'</form>
+                <gloss>grande</gloss>
+            </unit>
+            <unit>
+                <form>taq</form>
+                <gloss>PL/DIM</gloss>
+            </unit>
+            <unit>
+                <form>che'.</form>
+                <gloss>árbol</gloss>
+            </unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+    <linea>De los anteriores demostrativos pueden acompañar al sustantivo solamente los</linea>
+    <linea>antepuestos re y la, para indicar la visibilidad o cercanía del sustantivo. La particula ri</linea>
+    <linea>también funciona como demostrativo lo cual indica lejanía y sustantivo conocido.</linea>
+    <linea>Ejemplos:</linea>
+    <titulo>Demostrativo re:</titulo>
+    <paralel_phrase>
+        <original>...re ixög nqakanoj.</original>
+        <translation>...la señora que buscamos.</translation>
+    </paralel_phrase>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>re ixög n-0-qa-kan-o-j.</original>
+            <translation>...la señora que buscamos.</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit>
+                <form>re</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>ixög</form>
+                <gloss>mujer</gloss>
+            </unit>
+            <unit>
+                <form>n-</form>
+                <gloss>INC</gloss>
+            </unit>
+            <unit>
+                <form>0-</form>
+                <gloss>B3s</gloss>
+            </unit>
+            <unit>
+                <form>qa-</form>
+                <gloss>A1p</gloss>
+            </unit>
+            <unit>
+                <form>kan-o-j.</form>
+                <gloss>buscar-BV-SC</gloss>
+            </unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+    <paralel_phrase>
+        <original>Re ak'wala' xketamaj.</original>
+        <translation>Estos niños lo supieron.</translation>
+    </paralel_phrase>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>Re ak'wal-a x-0-k-etam-a-j.</original>
+            <translation>Estos niños lo supieron.</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit>
+                <form>Re</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>ak'wal-a</form>
+                <gloss>niño-PL</gloss>
+            </unit>
+            <unit>
+                <form>x-</form>
+                <gloss>COM</gloss>
+            </unit>
+            <unit>
+                <form>0-</form>
+                <gloss>B3s</gloss>
+            </unit>
+            <unit>
+                <form>k-</form>
+                <gloss>A3p</gloss>
+            </unit>
+            <unit>
+                <form>etam-a-j.</form>
+                <gloss>saber-BV-VT</gloss>
+            </unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+    <titulo>Demostrativo la:</titulo>
+    <paralel_phrase>
+        <original>...chuqa la tz'ite' che'...</original>
+        <translation>...también ese árbol de pito...</translation>
+    </paralel_phrase>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>...chuqa la tz'ite' che'</original>
+            <translation>...también ese árbol de pito</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit>
+                <form>...chuqa</form>
+                <gloss>CONJ</gloss>
+            </unit>
+            <unit>
+                <form>la</form>
+                <gloss>DEM</gloss>
+            </unit>
+            <unit>
+                <form>tz'ite'</form>
+                <gloss>palo de pito</gloss>
+            </unit>
+            <unit>
+                <form>che'</form>
+                <gloss>árbol</gloss>
+            </unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+</pagina>
+</documento>

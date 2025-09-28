@@ -14,13 +14,17 @@ class PDFProcessor:
             
             with open(pdf_path, 'rb') as f:
                 pdf = PdfReader(f)
+                total_pages = len(pdf.pages)
+                # Ajuste correcto: ambos valores base 1, convertir a base 0
                 start = max(0, page_range[0] - 1)
-                end = min(len(pdf.pages), page_range[1])
+                end = min(total_pages, page_range[1])  # end base 1
 
-                if start >= end:
-                    start = end - 1
+                # Para incluir la página final, sumamos 1 a end (porque range no incluye el último)
+                end = min(total_pages, end)  # end no puede ser mayor que total_pages
+                if start > end - 1:
                     self.logger.warning(f"Rango inválido ajustado a: ({start + 1}, {end})")
-                
+                    start = end - 1  # ajusta para evitar error
+
                 writer = PdfWriter()
                 for i in range(start, end):
                     writer.add_page(pdf.pages[i])
@@ -32,5 +36,5 @@ class PDFProcessor:
                 return output.getvalue()
                 
         except Exception as e:
-            self.logger.error(f"Error al extraer páginas: {str(e)}", exc_info=True)
+            self.logger.error(f"Error extrayendo páginas: {e}", exc_info=True)
             raise

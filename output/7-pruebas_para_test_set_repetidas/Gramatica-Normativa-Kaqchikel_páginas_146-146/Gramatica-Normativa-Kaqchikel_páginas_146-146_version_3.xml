@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kaqchikel.pdf" paginas="146-146">
+<pagina num="145">
+    <seccion type="demostrativo">
+        <linea>Demostrativo la.....la':</linea>
+    </seccion>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>Yalan nxik'an la jun tz'ikïn la'.</original>
+            <translation>Ese pájaro vuela mucho.</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit><form>yalan</form><gloss>INT</gloss></unit>
+            <unit><form>n-</form><gloss>INC</gloss></unit>
+            <unit><form>0-</form><gloss>B3s</gloss></unit>
+            <unit><form>xik</form><gloss>volar</gloss></unit>
+            <unit><form>-a-n.</form><gloss>BV-AP</gloss></unit>
+            <unit><form>la</form><gloss>DEM</gloss></unit>
+            <unit><form>jun</form><gloss>IND</gloss></unit>
+            <unit><form>tz'ikïn</form><gloss>pájaro</gloss></unit>
+            <unit><form>la'</form><gloss>DEM</gloss></unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>Pa la jun tinamït la' e k'o mama' taq che'.</original>
+            <translation>En ese pueblo hay árboles muy grandes.</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit><form>Pa</form><gloss>PRE</gloss></unit>
+            <unit><form>la</form><gloss>DEM</gloss></unit>
+            <unit><form>jun</form><gloss>IND</gloss></unit>
+            <unit><form>tinamït</form><gloss>pueblo</gloss></unit>
+            <unit><form>la'</form><gloss>DEM</gloss></unit>
+            <unit><form>e</form><gloss>B3p</gloss></unit>
+            <unit><form>k'o</form><gloss>EST</gloss></unit>
+            <unit><form>mama'</form><gloss>grande</gloss></unit>
+            <unit><form>taq</form><gloss>PL/DIM</gloss></unit>
+            <unit><form>che'.</form><gloss>árbol</gloss></unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+    <linea>De los anteriores demostrativos pueden acompañar al sustantivo solamente los</linea>
+    <linea>antepuestos re y la, para indicar la visibilidad o cercanía del sustantivo. La particula ri</linea>
+    <linea>también funciona como demostrativo lo cual indica lejanía y sustantivo conocido.</linea>
+    <linea>Ejemplos:</linea>
+    <seccion type="demostrativo">
+        <linea>Demostrativo re:</linea>
+    </seccion>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>...re ixög nqakanoj.</original>
+            <translation>...la señora que buscamos.</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit><form>re</form><gloss>DEM</gloss></unit>
+            <unit><form>ixöq</form><gloss>mujer</gloss></unit>
+            <unit><form>n-</form><gloss>INC</gloss></unit>
+            <unit><form>Ø-</form><gloss>B3s</gloss></unit>
+            <unit><form>qa-</form><gloss>Alp</gloss></unit>
+            <unit><form>kan-</form><gloss>buscar</gloss></unit>
+            <unit><form>o-j.</form><gloss>BV-SC</gloss></unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>Re ak'wala' xketamaj.</original>
+            <translation>Estos niños lo supieron.</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit><form>Re</form><gloss>DEM</gloss></unit>
+            <unit><form>ak'wal-a</form><gloss>niño-PL</gloss></unit>
+            <unit><form>x-</form><gloss>COM</gloss></unit>
+            <unit><form>0-</form><gloss>B3s</gloss></unit>
+            <unit><form>k-</form><gloss>A3p</gloss></unit>
+            <unit><form>etam-</form><gloss>saber</gloss></unit>
+            <unit><form>-a-j.</form><gloss>BV-VT</gloss></unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+    <seccion type="demostrativo">
+        <linea>Demostrativo la:</linea>
+    </seccion>
+    <linea>SN</linea>
+    <interlinear_gloss>
+        <paralel_phrase>
+            <original>...chuqa la tz'ite' che'...</original>
+            <translation>...también ese árbol de pito...</translation>
+        </paralel_phrase>
+        <morpheme_analysis>
+            <unit><form>...chuqa</form><gloss>CONJ</gloss></unit>
+            <unit><form>la</form><gloss>DEM</gloss></unit>
+            <unit><form>tz'ite</form><gloss>palo de pito</gloss></unit>
+            <unit><form>che'</form><gloss>árbol</gloss></unit>
+        </morpheme_analysis>
+    </interlinear_gloss>
+</pagina>
+</documento>

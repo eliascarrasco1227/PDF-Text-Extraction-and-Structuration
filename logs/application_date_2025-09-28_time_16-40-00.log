@@ -1,0 +1,28 @@
+2025-09-28 16:40:00 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-09-28_time_16-40-00.log
+2025-09-28 16:40:06 - pdf_processor - INFO - --------------------------------------
+2025-09-28 16:40:06 - pdf_processor - INFO - | PDF TEXT EXTRACTOR AND STRUCTURATOR |
+2025-09-28 16:40:06 - pdf_processor - INFO - --------------------------------------
+2025-09-28 16:40:06 - pdf_processor - INFO - 
+2025-09-28 16:40:06 - pdf_processor - INFO - 📄 Procesando: data/Gramatica-Normativa-Kaqchikel.pdf
+2025-09-28 16:40:06 - pdf_processor - INFO - 📖 Páginas a procesar: páginas 146-146
+2025-09-28 16:40:06 - pdf_processor - INFO - 📦 Bloques de: 5 páginas
+2025-09-28 16:40:06 - pdf_processor - INFO - 📝 Prompt usado: prompts/prompt_v3
+2025-09-28 16:40:06 - pdf_processor - INFO - --------------------------------------
+2025-09-28 16:40:06 - pdf_processor - INFO - 
+2025-09-28 16:40:06 - pdf_processor - INFO - 🤖 Generando respuesta
+2025-09-28 16:40:06 - pdf_processor - INFO - 📄 Procesando páginas 146-146
+2025-09-28 16:40:06 - pdf_processor - INFO - 📖 Procesando páginas 146 a 146 (1 páginas)...
+2025-09-28 16:41:12 - pdf_processor - INFO - ██████████ 100%
+2025-09-28 16:41:12 - pdf_processor - INFO - ---------------------------------
+2025-09-28 16:41:12 - pdf_processor - INFO - 📊 Páginas procesadas encontradas: [145]
+2025-09-28 16:41:12 - pdf_processor - INFO - 
+🤖 Fragmento de respuesta:
+2025-09-28 16:41:12 - pdf_processor - INFO - <pagina num="145">
+  <seccion tipo="Demostrativo la.....la':">
+    <linea>Demostrativo la.....la':</linea>
+    <paralel_phrase>
+      <original>Yalan nxik'an la jun tz'ikïn la'.</original>
+      <tran...
+2025-09-28 16:41:12 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_páginas_146-146_version_1.xml
+2025-09-28 16:41:12 - pdf_processor - INFO - 
+💾 XML guardado en: output\Gramatica-Normativa-Kaqchikel_páginas_146-146_version_1.xml
