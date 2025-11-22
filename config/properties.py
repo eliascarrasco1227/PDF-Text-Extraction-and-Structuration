@@ -1,5 +1,6 @@
 # Configuración editable
 PDF_PATH = 'data/Gramatica-Normativa-Mam.pdf'
+#PDF_PATH = 'data/few-shot/Gramatica-Normativa-Kaqchikel_pag_146.pdf'
 PROMPT_PATH = 'prompts/prompt_v3'
 OUTPUT_DIR = 'output'
 LOG_DIR = 'logs'  # directorio de logs
@@ -12,6 +13,12 @@ RETRY_DELAY = 15  # Segundos a esperar entre reintentos (para errores 503, servi
 MAX_RETRIES = 5    # Número máximo de reintentos
 
 
+# Few shot
+FEW_SHOT_PDF_PATH = 'data/few-shot/Gramatica-Normativa-Kaqchikel_pag_146.pdf'
+FEW_SHOT_XML_PATH = 'data/few-shot/Gramatica-Normativa-Kaqchikel_páginas_146-146.xml'
+
+# Interruptor para activar/desactivar el few-shot si quieres probar sin él
+USE_FEW_SHOT = True
 
 # Evaluator
 # Las variables de evaluator están en evaluator/properties.py

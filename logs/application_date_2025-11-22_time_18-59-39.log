@@ -1,0 +1,29 @@
+2025-11-22 18:59:39 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-11-22_time_18-59-39.log
+2025-11-22 18:59:45 - pdf_processor - INFO - 🧠 Cargando datos de ejemplo (Few-Shot)...
+2025-11-22 18:59:45 - pdf_processor - INFO - ✅ Datos Few-Shot cargados correctamente.
+2025-11-22 18:59:45 - pdf_processor - INFO - --------------------------------------
+2025-11-22 18:59:45 - pdf_processor - INFO - | PDF TEXT EXTRACTOR AND STRUCTURATOR |
+2025-11-22 18:59:45 - pdf_processor - INFO - --------------------------------------
+2025-11-22 18:59:45 - pdf_processor - INFO - 
+2025-11-22 18:59:45 - pdf_processor - INFO - 📄 Procesando: data/few-shot/Gramatica-Normativa-Kaqchikel_pag_146.pdf
+2025-11-22 18:59:45 - pdf_processor - INFO - 📖 Páginas a procesar: todas las páginas
+2025-11-22 18:59:45 - pdf_processor - INFO - 📦 Bloques de: 5 páginas
+2025-11-22 18:59:45 - pdf_processor - INFO - 📝 Prompt usado: prompts/prompt_v3
+2025-11-22 18:59:45 - pdf_processor - INFO - --------------------------------------
+2025-11-22 18:59:45 - pdf_processor - INFO - 
+2025-11-22 18:59:45 - pdf_processor - INFO - 🤖 Generando respuesta
+2025-11-22 18:59:45 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-11-22 18:59:45 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-11-22 19:00:07 - pdf_processor - INFO - ██████████ 100%
+2025-11-22 19:00:07 - pdf_processor - INFO - ---------------------------------
+2025-11-22 19:00:07 - pdf_processor - INFO - 📊 Páginas procesadas encontradas: [145]
+2025-11-22 19:00:07 - pdf_processor - INFO - 
+🤖 Fragmento de respuesta:
+2025-11-22 19:00:07 - pdf_processor - INFO - <?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kaqchikel.pdf" paginas="145-145">
+    <pagina num="145">
+        <seccion type="Demostrativo la">
+            <linea>Demos...
+2025-11-22 19:00:07 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_4.xml
+2025-11-22 19:00:07 - pdf_processor - INFO - 
+💾 XML guardado en: output\Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_4.xml

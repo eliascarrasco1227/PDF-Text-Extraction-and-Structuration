@@ -1,12 +1,13 @@
-# Updated ai_generator.py
+# core/ai_generator.py
 from google import genai
 from google.genai import types
 from google.genai.errors import ServerError
 from .pdf_processor import PDFProcessor
-from config.properties import PAGINAS, ALL_PAGES, RETRY_DELAY, MAX_RETRIES
+from config.properties import PAGINAS, ALL_PAGES, RETRY_DELAY, MAX_RETRIES, FEW_SHOT_PDF_PATH, FEW_SHOT_XML_PATH, USE_FEW_SHOT
 from PyPDF2 import PdfReader
 from core.logger_config import app_logger
 import time
+import os
 
 class AIGenerator:
     def __init__(self, model: str = 'gemini-2.5-flash', pages_per_block: int = 5):
@@ -17,15 +18,40 @@ class AIGenerator:
         self.logger = app_logger
         self.retry_delay = RETRY_DELAY
         self.max_retries = MAX_RETRIES
-    
+        
+        # Cargar datos Few-Shot en memoria al iniciar
+        self.few_shot_data = self._load_few_shot_data() if USE_FEW_SHOT else None
+
+    def _load_few_shot_data(self):
+        """Carga los archivos de ejemplo en memoria una sola vez"""
+        try:
+            self.logger.info("🧠 Cargando datos de ejemplo (Few-Shot)...")
+            
+            # Cargar PDF de ejemplo
+            if not os.path.exists(FEW_SHOT_PDF_PATH):
+                raise FileNotFoundError(f"No se encuentra el PDF de ejemplo: {FEW_SHOT_PDF_PATH}")
+            with open(FEW_SHOT_PDF_PATH, "rb") as f:
+                pdf_bytes = f.read()
+
+            # Cargar Respuesta XML de ejemplo
+            if not os.path.exists(FEW_SHOT_XML_PATH):
+                raise FileNotFoundError(f"No se encuentra el XML de ejemplo: {FEW_SHOT_XML_PATH}")
+            with open(FEW_SHOT_XML_PATH, "r", encoding="utf-8") as f:
+                xml_text = f.read()
+
+            self.logger.info("✅ Datos Few-Shot cargados correctamente.")
+            return {"pdf": pdf_bytes, "xml": xml_text}
+
+        except Exception as e:
+            self.logger.warning(f"⚠️ No se pudo cargar el Few-Shot, se procederá sin él. Error: {e}")
+            return None
+
     def _get_total_pages(self, pdf_path: str) -> int:
-        """Obtiene el número total de páginas del PDF"""
         with open(pdf_path, 'rb') as f:
             pdf = PdfReader(f)
             return len(pdf.pages)
         
     def _determine_page_range(self, pdf_path: str) -> tuple:
-        """Determina el rango de páginas a procesar basado en la configuración"""
         total_pdf_pages = self._get_total_pages(pdf_path)
 
         if ALL_PAGES:
@@ -47,19 +73,49 @@ class AIGenerator:
         self.logger.info(f"{bar} {percentage}%")
         self.logger.info("---------------------------------")
     
-    def _generate_content_with_retry(self, pdf_bytes: bytes, prompt: str) -> str:
-        """Genera contenido con reintentos automáticos para errores 503"""
+    def _generate_content_with_retry(self, target_pdf_bytes: bytes, prompt: str) -> str:
+        """Genera contenido construyendo un prompt multimodal con Few-Shot"""
+        
+        # Construcción de la lista de contenidos (Prompt Engineering)
+        contents = []
+
+        # 1. Inyectar Few-Shot (si está disponible)
+        if self.few_shot_data:
+            contents.append("INSTRUCIONES DE ENTRENAMIENTO (FEW-SHOT):")
+            contents.append("A continuación se presenta un documento PDF de EJEMPLO y su transcripción XML CORRECTA. Úsalo únicamente como referencia de formato y estilo. NO extraigas contenido de este ejemplo en tu respuesta final.")
+            
+            # PDF Ejemplo
+            contents.append(types.Part.from_bytes(
+                data=self.few_shot_data["pdf"],
+                mime_type='application/pdf'
+            ))
+            
+            # Respuesta Ejemplo
+            contents.append("SALIDA XML ESPERADA PARA EL EJEMPLO ANTERIOR:")
+            contents.append(self.few_shot_data["xml"])
+            
+            contents.append("--- FIN DEL EJEMPLO ---")
+            contents.append("TAREA ACTUAL: Ahora procesa el siguiente documento PDF aplicando la misma lógica y formato que en el ejemplo anterior.")
+
+        else:
+            # Fallback si no hay few-shot
+            contents.append("Procesa el siguiente documento PDF:")
+
+        # 2. Inyectar el PDF Objetivo (Target)
+        contents.append(types.Part.from_bytes(
+            data=target_pdf_bytes,
+            mime_type='application/pdf'
+        ))
+
+        # 3. Inyectar el Prompt de instrucciones
+        contents.append(prompt)
+
         for attempt in range(self.max_retries):
             try:
+                # Llamada a la API con la lista de contenidos estructurada
                 response = self.client.models.generate_content(
                     model=self.model,
-                    contents=[
-                        types.Part.from_bytes(
-                            data=pdf_bytes,
-                            mime_type='application/pdf',
-                        ),
-                        prompt
-                    ]
+                    contents=contents
                 )
                 return response.text
                 
@@ -69,17 +125,13 @@ class AIGenerator:
                     time.sleep(self.retry_delay)
                     continue
                 else:
-                    # Si no es un error 503 o ya hemos agotado los reintentos, relanzamos la excepción
                     raise
             except Exception as e:
-                # Para otros tipos de errores, no hacemos reintentos
                 raise
         
-        # Esto no debería ejecutarse nunca, pero por seguridad
         raise ServerError("No se pudo completar la solicitud después de todos los reintentos")
     
     def generate_from_pdf(self, pdf_path: str, prompt: str) -> str:
-        """Genera respuesta con estructura XML por bloques de páginas con reintentos"""
         start_page, end_page = self._determine_page_range(pdf_path)
         all_responses = []
         total_pages_to_process = end_page - start_page + 1
@@ -92,34 +144,30 @@ class AIGenerator:
             
             self.logger.info(f"📖 Procesando páginas {current_page} a {block_end - 1} ({pages_in_block} páginas)...")
             
-            # Extraer las páginas
+            # Extraer las páginas del PDF objetivo
             pdf_bytes = self.pdf_processor.extract_pages(pdf_path, (current_page, block_end))
             
-            # Modificar el prompt para incluir estructura XML
+            # Prompt específico para el bloque
             xml_prompt = f"""Genera un análisis XML donde:
 Cada página vaya dentro de <pagina num="N">. Las páginas a extraer son de la {current_page} a la {block_end - 1}.
 
 {prompt}"""
             
             try:
-                # Usar el método con reintentos
                 response_text = self._generate_content_with_retry(pdf_bytes, xml_prompt)
                 all_responses.append(response_text)
                 
-                # Actualizar contador de páginas procesadas
                 processed_pages += pages_in_block
                 self._pretty_print_progress(processed_pages, total_pages_to_process)
                 
             except ServerError as e:
                 if "503" in str(e):
-                    self.logger.error(f"❌ Error crítico: Servidor sobrecargado después de {self.max_retries} intentos. Deteniendo ejecución.")
+                    self.logger.error(f"❌ Error crítico: Servidor sobrecargado después de {self.max_retries} intentos.")
                 raise
             except Exception as e:
-                self.logger.error(f"❌ Error inesperado durante el procesamiento: {str(e)}")
+                self.logger.error(f"❌ Error inesperado: {str(e)}")
                 raise
             
-            # Mover al siguiente bloque
             current_page = block_end
         
-        # Combinar todas las respuestas
         return "\n".join(all_responses)
