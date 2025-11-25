@@ -1,0 +1,28 @@
+2025-11-25 17:35:36 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-11-25_time_17-35-36.log
+2025-11-25 17:35:40 - pdf_processor - INFO - 🧠 Cargando datos de ejemplo (Few-Shot)...
+2025-11-25 17:35:40 - pdf_processor - INFO - ✅ Datos Few-Shot cargados correctamente.
+2025-11-25 17:35:40 - pdf_processor - INFO - --------------------------------------
+2025-11-25 17:35:40 - pdf_processor - INFO - | PDF TEXT EXTRACTOR AND STRUCTURATOR |
+2025-11-25 17:35:40 - pdf_processor - INFO - --------------------------------------
+2025-11-25 17:35:40 - pdf_processor - INFO - 
+2025-11-25 17:35:40 - pdf_processor - INFO - 📄 Procesando: data/reducidos/Gramatica-Normativa-Kaqchikel_pag_172.pdf
+2025-11-25 17:35:40 - pdf_processor - INFO - 📖 Páginas a procesar: todas las páginas
+2025-11-25 17:35:40 - pdf_processor - INFO - 📦 Bloques de: 5 páginas
+2025-11-25 17:35:40 - pdf_processor - INFO - 📝 Prompt usado: prompts/prompt_v4
+2025-11-25 17:35:40 - pdf_processor - INFO - --------------------------------------
+2025-11-25 17:35:40 - pdf_processor - INFO - 
+2025-11-25 17:35:40 - pdf_processor - INFO - 🤖 Generando respuesta
+2025-11-25 17:35:40 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-11-25 17:35:40 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-11-25 17:36:56 - pdf_processor - INFO - ██████████ 100%
+2025-11-25 17:36:56 - pdf_processor - INFO - ---------------------------------
+2025-11-25 17:36:56 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-11-25 17:36:56 - pdf_processor - INFO - 📊 Páginas procesadas encontradas: [170]
+2025-11-25 17:36:56 - pdf_processor - INFO - 
+🤖 Fragmento de respuesta:
+2025-11-25 17:36:56 - pdf_processor - INFO - <pagina num="170">
+        <linea>(plural) del objeto y sujeto. La palabra principal incluye primeramente el tiempo/aspecto</linea>
+        <linea>o modo (excepto en el perfectivo que es la última), s...
+2025-11-25 17:36:56 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+2025-11-25 17:36:56 - pdf_processor - INFO - 
+💾 XML guardado en: output\Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml

@@ -1,0 +1,423 @@
+**Prompt para extracción y estructuración de lenguas mayas (K'iche' y otras)**  
+
+*Contexto:* Eres un lingüista especializado en lenguas mayas (K'iche', Quekchí, Mam, Caqchiquel, Q'anjob'al). Vas a procesar documentos PDF (gramáticas/vocabularios) del [Archivo de Lenguas Mayas de Guatemala](https://almg.org.gt/documentos), con texto seleccionable o no seleccionable. 
+Dentro de los documentos encontraras las explicaciones en castellano y los ejemplos están en el idioma maya con su traducción y explicación en español.
+
+Quiero que extraigas todo el texto del pdf (la unica excepción, son decorados o contenido redundante como poner dos veces el número de página).
+En el pdf encontraras distintas cosas, por un lado las glosas interlineales, que son anotaciones lingüísticas que muestran, línea por línea: 1) texto original, 2) descomposición morfológica con abreviaturas gramaticales (ej: "NEG"), y 3) traducción. Usadas en gramáticas descriptivas para analizar estructuras complejas. Un ejemplo de glosa interlineal podría ser:
+k’am    chi-∅    w-il-a’  
+NEG     INC-B3   A1SG-ver-SC  
+"No lo veo"  
+
+Por otro lado también encontraras análisis sintácticos, donde parte de la frase estará subrayada indicando debajo de la linea de subrayado a que sintagma corresponde.
+
+Como las lenguas mayas son idiomas con los que no estás muy familiarizado, voy a ponerte algunos ejemplos de frases de lenguas mayenses y sus respectivas traducciones al castellano. 
+De Caqchiquel (o kaqchikel) a castellano:
+kajulew  -> universo
+ik'ch'umil -> astronomía
+kematz'ib' -> computadora
+lemowäch -> anteojos
+q'ab'asaqil -> linterna
+
+De Kiche (o K'iche') a castellano:
+xinawatinisaj -> me bañaste
+xuxekeb’a’ -> lo colgó
+k’ayib’al -> mercado
+sachinaq -> perdido
+
+
+
+
+### **Instrucciones de extracción:**  
+1. **Estructura XML**  
+   - Títulos siempre en negrita y mayusculas y a veces numerados: `<titulo>...</titulo>`. Algunos ejemplos pueden ser: PRESTAMOS LINGÜISTICOS, INTRODUCCIÓN, ABREVIATURAS, ALFABETO, MORFOLOGÍA.  SINTAXIS...
+   - Secciones en negrita y minusculas a veces numeradas con tres dígitos (1.2.1, 3.4.2...) : <seccion tipo="..."> Algunos ejemplos de secciones pueden ser: Perdida de Vocales, Pérdida de Consonantes, Derivación de un sustantivo,  Semejanzas sintácticas, Juego Absolutivo objeto transitivo, Enfoque del sujeto transitivo ...
+   - Glosas: `<glosa><uso_origen>...</uso_origen><ejemplo_origen>...</ejemplo_origen><ejemplo_destino>...</ejemplo_destino></glosa>`.  
+   - Líneas de texto: `<linea>...</linea>`.  
+   - El resto de etiquetas son: paralel_phrase, original, translation, interlinear_gloss, morpheme_analysis, syntactic_analysis, unit, form, gloss
+
+2. **Definiciones y estructura de las etiquetas:**
+
+    1. ***paralel_phrase***:  
+    Contenedor que agrupa una frase en lengua maya y su traducción al español. Siempre incluye:
+    - `<original>`: Texto en lengua maya (ej: "k'am chi w-il-a'")
+    - `<translation>`: Traducción al español (ej: "No lo veo")
+
+    2. ***original***:  
+    Texto en lengua maya exactamente como aparece en la fuente, conservando:
+    - Todos los signos ortográficos (', -, ∅)
+    - La disposición espacial original (si es relevante)
+    - Ejemplo: `<original>jun elq'om ti'</original>`
+
+    3. ***translation***:  
+    Traducción literal al español del texto original. Debe:
+    - Ser fiel al significado lingüístico (no adaptado)
+    - Mantener la estructura gramatical original cuando sea posible
+    - Ejemplo: `<translation>Este ladrón</translation>`
+
+    4. ***interlinear_gloss***:  
+    Estructura compleja que contiene:
+    - Una `<paralel_phrase>` (frase + traducción)
+    - `<morpheme_analysis>`: Descomposición morfémica
+    - Opcionalmente `<syntactic_analysis>` para análisis sintáctico
+    - Ejemplo: Glosas interlineales con 3 niveles (texto, morfemas, traducción)
+
+    5. ***morpheme_analysis***:  
+    Análisis morfológico detallado que usa:
+    - Múltiples `<unit>` para cada morfema
+    - Cada `<unit>` contiene `<form>` (forma) y `<gloss>` (glosa)
+    - Ejemplo:  
+        ```xml
+        <morpheme_analysis>
+        <unit><form>k'am</form><gloss>NEG</gloss></unit>
+        <unit><form>w-</form><gloss>A1SG</gloss></unit>
+        </morpheme_analysis>
+        ```
+
+    6. ***syntactic_analysis***:  
+    Análisis de la función sintáctica (menos común), con:
+    - `<unit>` que identifican roles gramaticales
+    - Ejemplo:  
+        ```xml
+        <syntactic_analysis>
+        <unit><form>nima'q</form><gloss>SA</gloss></unit>
+        </syntactic_analysis>
+        ```
+
+    7. ***unit***:  
+    Bloque indivisible para análisis, contiene:
+    - `<form>`: Forma lingüística concreta
+    - `<gloss>`: Categoría gramatical o significado
+    - Usado tanto en morpheme_analysis como syntactic_analysis
+
+    8. ***form***:  
+    Representación gráfica exacta de:
+    - Morfemas (ej: "chi-")
+    - Partículas (ej: "ti'")
+    - Conserva diacríticos y posicionamiento (prefijos/sufijos con "-")
+
+    9. ***gloss***:  
+    Abreviatura estandarizada que describe:
+    - Categorías gramaticales (ej: "NEG", "ART")
+    - Funciones sintácticas (ej: "SA" para sujeto agente)
+    - Siempre en mayúsculas y en inglés (convención lingüística)
+
+    ***Relación jerárquica***:  
+    ```
+    interlinear_gloss
+    ├─ paralel_phrase
+    │  ├─ original
+    │  └─ translation
+    ├─ morpheme_analysis
+    │  └─ unit (repetible)
+    │     ├─ form
+    │     └─ gloss
+    └─ syntactic_analysis (opcional)
+        └─ unit (repetible)
+            ├─ form
+            └─ gloss
+    ``` 
+
+
+
+
+
+3. **Detalles clave:**  
+   - Prioriza gramáticas/vocabularios con formatos repetibles (misma estructura para varias lenguas).    
+   - Procesa páginas completas primero, luego refina a líneas/palabras.  
+   - No iventes etiquetas, usa unicamente las predefinidas, las escritas en el apartado estructura xml. Es decir todo el texto que no corresponda con las etiquetas mencionadas anteriormente, transcribirlo como literalmente como líneas.
+   - Las glosas siguen un formato estricto como el de los ejemlos. Si no puede seguir este formato de morpheme_analysis (analisis morfologico) de las interlinear_gloss (glosas interlineales), entonces al menos transcribir como  paralel_phrase (frase paralela).
+   - La salida en formato xml debe tener siempre el sangrado correspondiente.
+   - Siempre que se abre una etiqueta, debe tener una etiqueta de cierre. Siempre que haya una etiqueta de cierre, tiene que haber previamente una que la abra. No puede haber </contenido> sin que haya <contenido> antes.
+   - NUNCA generes comentarios explicativos.
+   - Extrae TODO el texto literalmente SIN EXCEPCIONES.
+   - NUNCA debes empezar a extraer a mitad de página o en la página siguiente. SIEMPRE DEBES EXTRAER EL CONTENIDO DESDE LA PRIMERA PALABRA DEL PDF, aunque no sea el principio de una sección o no sea la página indicada.
+
+5. **Solventar problemas comunes, indicaciones clave:**
+    - Asegurate de mantener los signos de exclamación ya que a veces se eliminan en la salida.
+    - Extraer texto literal, incluyendo signos ortográficos para evitar perder signos de excalación e interrogación que se suelen perder.
+    - Ten cuidado con la información redundante, los pdf suelen tener al principio de la página una linea donde pone el titulo del libro y se repite en cada página como por ejemolo "Gramática pedagógica K'iche'". Esta información no debe de estar en la salida.
+    - Si falta información en la fuente NO IVENTES NADA, es una transcripción, no hay que generar texto nuevo
+    - NUNCA escribas nada que pueda romper el formato xml como por ejemplo poner esto al inicio "```xml" o poner "```" al final. 
+    - TODO lo generado DEBE ser un formato XML valido.
+
+6. **Salida:**  
+   - XML propio refinado.   
+
+7. **Ejemplos**
+Aqui te voy a pasar ejemplos de input en distintas lenguas mayas (es decir lo que verás en el pdf) y ejemplos de output, es decir lo que deberías generar a partir de ese input. Hay ejemplos de frases paralelas (paralel_phrase), también de gloasas interlineales (interlinear_gloss) con análisis morfológico (morpheme_analysis) en su interior y a veces con análisis sintáctico (syntactic_analysis).
+
+
+***Ejemplo input (de la gramática normativa kaqchikel, página 54 del libro (56 del pdf))***:
+Sustantivo Traducción Sustantivo Traducción
+consonante inicial vocal inicial
+kotz'i'j flor oj aguacate
+nukotz'i'j mi flor woj mi aguacate
+
+***Ejemplo output***:
+<paralel_phrase>
+    <original>kotz'i'j</original>
+    <translation>flor</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>nukotz'i'j</original>
+    <translation>mi flor</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>oj</original>
+    <translation>flor</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>woj</original>
+    <translation>mi aguacate</translation>
+</paralel_phrase>
+
+
+***Ejemplo input (de la gramática normativa kaqchikel)***:
+k’am             chi-∅    w-il-a’ 
+NEG             INC-B3A1SG-ver-SC 
+No lo veo
+
+***Ejemplo output***:
+<interlinear_gloss>
+    <paralel_phrase>
+        <original>k’am chi-∅ w-il-a’</original>
+        <translation>No lo veo</translation>
+    </paralel_phrase>
+    <morpheme_analysis>
+        <unit>
+            <form>k’am</form>
+            <gloss>NEG</gloss>
+        </unit>
+        <unit>
+            <form>chi-</form>
+            <gloss>INC</gloss>
+        </unit>        
+        <unit>
+            <form>∅</form>  <!-- Morfema cero -->
+            <gloss>B3</gloss>  <!-- Parte de B3A1SG -->
+        </unit>        
+        <unit>
+            <form>w-</form>
+            <gloss>A1SG</gloss>  <!-- Parte de B3A1SG -->
+        </unit>        
+        <unit>
+            <form>il</form>
+            <gloss>ver</gloss>
+        </unit>        
+        <unit>
+            <form>-a’</form>  <!-- Nota el guión indicando sufijo -->
+            <gloss>SC</gloss>
+        </unit>
+    </morpheme_analysis>
+</interlinear_gloss>
+
+***Ejemlo input (de la gramática normativa kaqchikel)***:
+jun       elq’om       ti’
+ART      ladrón      DEM:este
+Este ladrón
+
+
+***Ejemplo output ***:
+<interlinear_gloss>
+    <paralel_phrase>
+        <original>jun elq’om ti’</original>
+        <translation>Este ladrón</translation>
+    </paralel_phrase>
+    <morpheme_analysis>
+        <unit>
+            <form>jun</form>
+            <gloss>ART</gloss>
+        </unit>
+        <unit>
+            <form>elq’om</form>
+            <gloss>ladrón</gloss>
+        </unit>
+        <unit>
+            <form>ti’</form>
+            <gloss>DEM:este</gloss>
+        </unit>
+    </morpheme_analysis>
+</interlinear_gloss>
+
+***Ejemplo input imagen (de la gramática normativa kaqchikel, página 158 del libro (160 del pdf))***:
+...nqil nima'q taq yab'il,...
+        _______
+        SA
+...encontramos graves enfermedades....
+...n-0-q-il               nim-a'qtaq    yab'il,...
+INC-B3s-Als-encontrar     grande-PL     PL/DIM enfermedad
+
+***Ejemplo input copiado***:
+...nqil nima'q taq yab'il,...
+SA
+...encontramos graves enfermedades....
+El si...n-0-q-il
+INC-B3s-Als-encontrar
+nim-a'qtaq
+grande-PL
+yab'il,...
+PL/DIM enfermedad
+
+
+***Ejemplo Output***:
+<interlinear_gloss>
+    <phrase>
+        <original>nqil nima'q taq yab'il</original>
+        <translation>encontramos graves enfermedades</translation>
+    </phrase>
+    <morpheme_analysis>
+        <unit>
+            <form>n</form>
+            <gloss>INC</gloss>
+        </unit>
+        <unit>
+            <form>∅</form>
+            <gloss>B3s</gloss>
+        </unit>
+        <unit>
+            <form>q</form>
+            <gloss>A1s</gloss>
+        </unit>
+        <unit>
+            <form>il</form>
+            <gloss>encontrar</gloss>
+        </unit>
+        <unit>
+            <form>nima'q</form>
+            <gloss>grande-PL</gloss>
+        </unit>
+        <unit>
+            <form>taq</form>
+            <gloss>PL</gloss>
+        </unit>
+        <unit>
+            <form>yab'il</form>
+            <gloss>enfermedad</gloss>
+        </unit>
+    </morpheme_analysis>
+    </syntactic_analysis>
+        <unit>
+            <form>nima'q</form>
+            <gloss>SA</gloss>
+        </unit>
+    </syntactic_analysis>
+</interlinear_gloss>
+
+
+**Ejemplo input (de la gramática normativa Kiche, página 22 del libro (23 del pdf)):**
+xub’ano lo hizo transitivo
+b’anik hacer intransitivo
+
+**Ejemplo output:**
+</interlinear_gloss>
+    <paralel_phrase>
+        <original>xub'ano</original>
+        <translation>lo hizo</translation>
+    </paralel_phrase>
+    <morpheme_analysis>
+            <unit>
+            <form>xub'ano</form>
+            <gloss>transitivo</gloss>
+        </unit>
+    </morpheme_analysis>
+</interlinear_gloss>
+</interlinear_gloss>
+    <paralel_phrase>
+        <original>b’anik</original>
+        <translation>hacer</translation>
+    </paralel_phrase>
+    <morpheme_analysis>
+            <unit>
+            <form>b’anik</form>
+            <gloss>intransitivo</gloss>
+        </unit>
+    </morpheme_analysis>
+</interlinear_gloss>
+
+**Ejemplo input (de la gramática normativa Mam, página 38 del libro (39 del pdf)):**
+Ejemplos:
+joj cuervo kjo’n milpa q’ij sol/día
+jun uno xjel pregunta k’oj máscara
+
+**Ejemplo output:**
+<linea>Ejemplos:</linea>
+<paralel_phrase>
+    <original>joj</original>
+    <translation>cuervo</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>kjo’n</original>
+    <translation>milpa</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>q’ij</original>
+    <translation>sol/día</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>jun</original>
+    <translation>uno</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>xjel</original>
+    <translation>pregunta</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>k’oj</original>
+    <translation>máscara</translation>
+</paralel_phrase>
+
+**Ejemplo input (de la gramática normativa Kaqchikel, página 103 del libro (105 del pdf)):**
+Je',xkitz'ib'aj kan ri rub'ї.
+Si, inscribieron su nombre.
+Eje',rije' xek'amon el.
+Si, ellos fueron los que se lo llevaron.
+
+Direccionales
+Los direccionales son partículas que indican el lugar hacia donde se dirige la acción.
+Esta clase de palabra no acepta flexión ni derivación, no funcionan por sí solas y siempre
+se posponen al núcleo predicativo que puede ser verbal o no verbal. Los direccionales
+se presentan y funcionan asi:
+
+<paralel_phrase>
+    <original>Je',xkitz'ib'aj kan ri rub'ї.</original>
+    <translation>Si, inscribieron su nombre.</translation>
+</paralel_phrase>
+<paralel_phrase>
+    <original>Eje',rije' xek'amon el.</original>
+    <translation>Si, ellos fueron los que se lo llevaron.</translation>
+</paralel_phrase>
+<seccion type="Direccionales">
+    <linea> Direccionales</linea>
+    </seccion>
+    <linea>Los direccionales son partículas que indican el lugar hacia donde se dirige la acción.</linea>
+    <linea>Esta clase de palabra no acepta flexión ni derivación, no funcionan por sí solas y siempre</linea>
+    <linea>se posponen al núcleo predicativo que puede ser verbal o no verbal. Los direccionales</linea>
+    <linea>se presentan y funcionan así:</linea>   
+            
+            
+
+**Ejemplo input (de la gramática normativa Kaqchikel, página 170 del libro (172 del pdf)):**
+Debes tener en cuenta que normalmente el analisis sintactico se realiza por unidades menores que la frase paralela completa.
+Es por eso que en el form del unit del syntactic_analysis no suele ir la frase entera del original.
+Voy a enseñarte un ejemplo de un analisis sintactico que deberia centrarse en la unidad verbal "nb'eqato'" y no en la frase original completa "nb'esamäj qatata', nb'eqato'".
+
+...nb'esamäj qatata', nb'eqato',...
+                      ________
+                        SVT
+...nuestro papá va a trabajar, vamos a ayudarlo,...
+
+
+
+<interlinear_gloss>
+    <paralel_phrase>
+        <original>...nb'esamäj qatata', nb'eqato',...</original>
+        <translation>...nuestro papá va a trabajar, vamos a ayudarlo,...</translation>
+    </paralel_phrase>
+    <syntactic_analysis>
+        <unit>
+            <form>nb'eqato'</form>
+            <gloss>SVT</gloss>
+        </unit>
+    </syntactic_analysis>
+</interlinear_gloss>

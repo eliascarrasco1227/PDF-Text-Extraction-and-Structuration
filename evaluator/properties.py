@@ -32,6 +32,9 @@
 #HYPOTHESIS_XML = "../output/7-pruebas_para_test_set_repetidas/few-shot/Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1"  
 
 
-REFERENCE_XML = "../test_set/Gramatica-Normativa-Mam_páginas_80-80_version_1.xml"
-HYPOTHESIS_XML = "../output/7-pruebas_para_test_set_repetidas/few-shot-mam/Gramatica-Normativa"
+#REFERENCE_XML = "../test_set/Gramatica-Normativa-Mam_páginas_80-80_version_1.xml"
+#HYPOTHESIS_XML = "../output/7-pruebas_para_test_set_repetidas/few-shot-mam/Gramatica-Normativa"
 
+
+REFERENCE_XML = "../test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"
+HYPOTHESIS_XML = "../output/7-pruebas_para_test_set_repetidas/zero-shot-Kaqchikel_pag_147/G"
