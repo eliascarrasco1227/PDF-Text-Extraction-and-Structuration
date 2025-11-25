@@ -1,0 +1,29 @@
+2025-11-25 18:05:35 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-11-25_time_18-05-35.log
+2025-11-25 18:05:39 - pdf_processor - INFO - 🧠 Cargando datos de ejemplo (Few-Shot)...
+2025-11-25 18:05:39 - pdf_processor - INFO - ✅ Datos Few-Shot cargados correctamente.
+2025-11-25 18:05:39 - pdf_processor - INFO - --------------------------------------
+2025-11-25 18:05:39 - pdf_processor - INFO - | PDF TEXT EXTRACTOR AND STRUCTURATOR |
+2025-11-25 18:05:39 - pdf_processor - INFO - --------------------------------------
+2025-11-25 18:05:39 - pdf_processor - INFO - 
+2025-11-25 18:05:39 - pdf_processor - INFO - 📄 Procesando: data/Gramatica-Normativa-Kiche.pdf
+2025-11-25 18:05:39 - pdf_processor - INFO - 📖 Páginas a procesar: páginas 43-43
+2025-11-25 18:05:39 - pdf_processor - INFO - 📦 Bloques de: 5 páginas
+2025-11-25 18:05:39 - pdf_processor - INFO - 📝 Prompt usado: prompts/prompt_v4
+2025-11-25 18:05:39 - pdf_processor - INFO - --------------------------------------
+2025-11-25 18:05:39 - pdf_processor - INFO - 
+2025-11-25 18:05:39 - pdf_processor - INFO - 🤖 Generando respuesta
+2025-11-25 18:05:39 - pdf_processor - INFO - 📄 Procesando páginas 43-43
+2025-11-25 18:05:39 - pdf_processor - INFO - 📖 Procesando páginas 43 a 43 (1 páginas)...
+2025-11-25 18:05:56 - pdf_processor - INFO - ██████████ 100%
+2025-11-25 18:05:56 - pdf_processor - INFO - ---------------------------------
+2025-11-25 18:05:56 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-11-25 18:05:56 - pdf_processor - INFO - 📊 Páginas procesadas encontradas: [43]
+2025-11-25 18:05:56 - pdf_processor - INFO - 
+🤖 Fragmento de respuesta:
+2025-11-25 18:05:56 - pdf_processor - INFO - <pagina num="43">
+        <seccion type="Pluralizadores">
+            <linea>-ib' y -ab': Son pluralizadores que se refieren a personas, oficios o profesiones, funcionan</linea>
+            <linea>com...
+2025-11-25 18:05:56 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kiche_páginas_43-43_version_5.xml
+2025-11-25 18:05:56 - pdf_processor - INFO - 
+💾 XML guardado en: output\Gramatica-Normativa-Kiche_páginas_43-43_version_5.xml

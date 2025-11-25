@@ -1,0 +1,20 @@
+2025-11-25 17:58:54 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-11-25_time_17-58-54.log
+2025-11-25 17:58:59 - pdf_processor - INFO - 🧠 Cargando datos de ejemplo (Few-Shot)...
+2025-11-25 17:58:59 - pdf_processor - INFO - ✅ Datos Few-Shot cargados correctamente.
+2025-11-25 17:58:59 - pdf_processor - INFO - --------------------------------------
+2025-11-25 17:58:59 - pdf_processor - INFO - | PDF TEXT EXTRACTOR AND STRUCTURATOR |
+2025-11-25 17:58:59 - pdf_processor - INFO - --------------------------------------
+2025-11-25 17:58:59 - pdf_processor - INFO - 
+2025-11-25 17:58:59 - pdf_processor - INFO - 📄 Procesando: data/Gramatica-Normativa-Kiche.pdf
+2025-11-25 17:58:59 - pdf_processor - INFO - 📖 Páginas a procesar: todas las páginas
+2025-11-25 17:58:59 - pdf_processor - INFO - 📦 Bloques de: 5 páginas
+2025-11-25 17:58:59 - pdf_processor - INFO - 📝 Prompt usado: prompts/prompt_v4
+2025-11-25 17:58:59 - pdf_processor - INFO - --------------------------------------
+2025-11-25 17:58:59 - pdf_processor - INFO - 
+2025-11-25 17:58:59 - pdf_processor - INFO - 🤖 Generando respuesta
+2025-11-25 17:58:59 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-75)
+2025-11-25 17:58:59 - pdf_processor - INFO - 📖 Procesando páginas 1 a 5 (5 páginas)...
+2025-11-25 17:59:33 - pdf_processor - INFO - ▒▒▒▒▒▒▒▒▒▒ 6%
+2025-11-25 17:59:33 - pdf_processor - INFO - ---------------------------------
+2025-11-25 17:59:33 - pdf_processor - INFO - 📖 Procesando páginas 6 a 10 (5 páginas)...
+2025-11-25 17:59:40 - pdf_processor - WARNING - ⚠️  Servidor sobrecargado (503). Reintentando en 15 segundos... (Intento 1/5)
