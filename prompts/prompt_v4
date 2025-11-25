@@ -398,6 +398,7 @@ se presentan y funcionan asi:
             
 
 **Ejemplo input (de la gramática normativa Kaqchikel, página 170 del libro (172 del pdf)):**
+(Ten en cuenta que este es un ejemplo de syntactic_analysis, pero faltaría el morpheme_analysis para ser una interlinear_gloss completa).
 Debes tener en cuenta que normalmente el analisis sintactico se realiza por unidades menores que la frase paralela completa.
 Es por eso que en el form del unit del syntactic_analysis no suele ir la frase entera del original.
 Voy a enseñarte un ejemplo de un analisis sintactico que deberia centrarse en la unidad verbal "nb'eqato'" y no en la frase original completa "nb'esamäj qatata', nb'eqato'".
@@ -418,6 +419,38 @@ Voy a enseñarte un ejemplo de un analisis sintactico que deberia centrarse en l
         <unit>
             <form>nb'eqato'</form>
             <gloss>SVT</gloss>
+        </unit>
+    </syntactic_analysis>
+</interlinear_gloss>
+
+
+
+**Ejemplo input (de la gramática normativa Kaqchikel, página 143 del libro (145 del pdf)):**
+(Ten en cuenta que este es un ejemplo de syntactic_analysis, pero faltaría el morpheme_analysis para ser una interlinear_gloss completa).
+(Habrá ocasiones en las que haya más de un unit en el syntactic_analysis, como en este caso).
+...k'atzinel chi röj yojtzijon kik'in ri nima'q taq nan, nima'q taq tat... 
+                ____                  _________________  ______________
+                 SN                          SN               SN
+...es importante que platiquemos con los principales señores y señoras...
+
+
+<interlinear_gloss>
+    <paralel_phrase>
+        <original>...k'atzinel chi röj yojtzijon kik'in ri nima'q taq nan, nima'q taq tat...</original>
+        <translation>...es importante que platiquemos con los principales señores y señoras...</translation>
+    </paralel_phrase>
+    <syntactic_analysis>
+        <unit>
+            <form>röj</form>
+            <gloss>SN</gloss>
+        </unit>
+        <unit>
+            <form>ri nima'q taq nan</form>
+            <gloss>SN</gloss>
+        </unit>
+        <unit>
+            <form>nima'q taq tat</form>
+            <gloss>SN</gloss>
         </unit>
     </syntactic_analysis>
 </interlinear_gloss>

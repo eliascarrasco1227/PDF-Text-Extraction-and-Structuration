@@ -1,0 +1,30 @@
+2025-11-25 18:48:45 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-11-25_time_18-48-45.log
+2025-11-25 18:48:50 - pdf_processor - INFO - 🧠 Cargando datos de ejemplo (Few-Shot)...
+2025-11-25 18:48:50 - pdf_processor - INFO - ✅ Datos Few-Shot cargados correctamente.
+2025-11-25 18:48:50 - pdf_processor - INFO - --------------------------------------
+2025-11-25 18:48:50 - pdf_processor - INFO - | PDF TEXT EXTRACTOR AND STRUCTURATOR |
+2025-11-25 18:48:50 - pdf_processor - INFO - --------------------------------------
+2025-11-25 18:48:50 - pdf_processor - INFO - 
+2025-11-25 18:48:50 - pdf_processor - INFO - 📄 Procesando: data/Gramatica-Normativa-Kaqchikel.pdf
+2025-11-25 18:48:50 - pdf_processor - INFO - 📖 Páginas a procesar: páginas 145-145
+2025-11-25 18:48:50 - pdf_processor - INFO - 📦 Bloques de: 5 páginas
+2025-11-25 18:48:50 - pdf_processor - INFO - 📝 Prompt usado: prompts/prompt_v4
+2025-11-25 18:48:50 - pdf_processor - INFO - --------------------------------------
+2025-11-25 18:48:50 - pdf_processor - INFO - 
+2025-11-25 18:48:50 - pdf_processor - INFO - 🤖 Generando respuesta
+2025-11-25 18:48:50 - pdf_processor - INFO - 📄 Procesando páginas 145-145
+2025-11-25 18:48:50 - pdf_processor - INFO - 📖 Procesando páginas 145 a 145 (1 páginas)...
+2025-11-25 18:49:22 - pdf_processor - INFO - ██████████ 100%
+2025-11-25 18:49:22 - pdf_processor - INFO - ---------------------------------
+2025-11-25 18:49:22 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-11-25 18:49:22 - pdf_processor - INFO - 📊 Páginas procesadas encontradas: [143]
+2025-11-25 18:49:22 - pdf_processor - INFO - 
+🤖 Fragmento de respuesta limpio:
+2025-11-25 18:49:22 - pdf_processor - INFO - <pagina num="143">
+        <linea>c) En algunos contextos, los clasificadores tat y nan se usan como pronombres o</linea>
+        <linea>como títulos. Ejemplos:</linea>
+        <interlinear_gloss>
+   ...
+2025-11-25 18:49:22 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_páginas_145-145_version_1.xml
+2025-11-25 18:49:22 - pdf_processor - INFO - 
+💾 XML guardado en: output\Gramatica-Normativa-Kaqchikel_páginas_145-145_version_1.xml

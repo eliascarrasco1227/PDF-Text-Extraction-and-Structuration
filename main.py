@@ -4,6 +4,7 @@ from core.ai_generator import AIGenerator
 from core.file_writer import FileWriter
 from core.logger_config import app_logger
 import re
+import os
 
 class DocumentProcessor:
     def __init__(self):
@@ -52,11 +53,21 @@ class DocumentProcessor:
         text = text.replace('```', '')
         
         return text.strip()
-
+    
     def run(self):
         try:
             self._pretty_print()
             
+            # --- VALIDACIÓN PREVIA ---
+            # Verificamos si los archivos existen antes de intentar procesar nada
+            # Esto nos permite dar un mensaje mucho más preciso.
+            if not os.path.exists(PDF_PATH):
+                raise FileNotFoundError(f"El archivo PDF no existe en la ruta: {PDF_PATH}")
+            
+            if not os.path.exists(PROMPT_PATH):
+                raise FileNotFoundError(f"El archivo de Prompt no existe en la ruta: {PROMPT_PATH}")
+            # -------------------------
+
             # 1. Leer prompt
             prompt = self.prompt_reader.read()
 
@@ -64,29 +75,37 @@ class DocumentProcessor:
             self.logger.info("🤖 Generando respuesta")
             response = self.ai_generator.generate_from_pdf(PDF_PATH, prompt)
 
-            # --- CORRECCIÓN APLICADA AQUÍ ---
-            # 3. Limpiar respuesta antes de procesar
+            # 3. Limpiar respuesta
             self.logger.info("🧹 Limpiando respuesta de la IA...")
             response = self._clean_ai_response(response)
-            # --------------------------------
 
-            # 4. Analizar respuesta (búsqueda de páginas)
+            # 4. Analizar respuesta
             page_numbers = re.findall(r'<pagina num="(\d+)">', response)
             self.logger.info(f"📊 Páginas procesadas encontradas: {sorted(set(map(int, page_numbers)))}")
 
-            self.logger.info("\n🤖 Fragmento de respuesta:")
+            self.logger.info("\n🤖 Fragmento de respuesta limpio:")
             self.logger.info(response[:200] + "...")
             
-            # 5. Guardar respuesta (El FileWriter añadirá las etiquetas correctas)
+            # 5. Guardar respuesta
             saved_path = self.file_writer.save_with_counter(response)
             self.logger.info(f"\n💾 XML guardado en: {saved_path}")
 
+        # --- GESTIÓN DE ERRORES CONTROLADA ---
+        except FileNotFoundError as e:
+            # Capturamos específicamente el error de archivo no encontrado
+            self.logger.error("\n❌ ERROR DE ARCHIVO NO ENCONTRADO")
+            self.logger.error(f"👉 {str(e)}")
+            self.logger.error("💡 Por favor, verifica la ruta y el nombre del archivo en 'config/properties.py'")
+            # AL NO PONER 'raise' AQUÍ, EL PROGRAMA TERMINA SUAVEMENTE SIN TRACEBACK
+            
         except Exception as e:
+            # Para cualquier otro error (servidor, lógica, etc.)
             if "503" in str(e):
                 self.logger.error("❌ El servidor de Gemini está sobrecargado. Por favor, intenta nuevamente más tarde.")
             else:
-                self.logger.error(f"❌ Error durante el procesamiento: {str(e)}", exc_info=True)
-            raise
+                self.logger.error(f"❌ Error inesperado durante el procesamiento: {str(e)}", exc_info=True)
+            raise # Aquí sí mantenemos el raise por si es un error de código que necesitas depurar
+        # -------------------------------------
 
 if __name__ == "__main__":
     processor = DocumentProcessor()

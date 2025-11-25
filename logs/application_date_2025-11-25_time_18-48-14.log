@@ -1,0 +1,17 @@
+2025-11-25 18:48:14 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-11-25_time_18-48-14.log
+2025-11-25 18:48:18 - pdf_processor - INFO - 🧠 Cargando datos de ejemplo (Few-Shot)...
+2025-11-25 18:48:18 - pdf_processor - INFO - ✅ Datos Few-Shot cargados correctamente.
+2025-11-25 18:48:18 - pdf_processor - INFO - --------------------------------------
+2025-11-25 18:48:18 - pdf_processor - INFO - | PDF TEXT EXTRACTOR AND STRUCTURATOR |
+2025-11-25 18:48:18 - pdf_processor - INFO - --------------------------------------
+2025-11-25 18:48:18 - pdf_processor - INFO - 
+2025-11-25 18:48:18 - pdf_processor - INFO - 📄 Procesando: data/reducidos/Gramatica-Normativa-Kaqchikel.pdf
+2025-11-25 18:48:18 - pdf_processor - INFO - 📖 Páginas a procesar: páginas 145-145
+2025-11-25 18:48:18 - pdf_processor - INFO - 📦 Bloques de: 5 páginas
+2025-11-25 18:48:18 - pdf_processor - INFO - 📝 Prompt usado: prompts/prompt_v4
+2025-11-25 18:48:18 - pdf_processor - INFO - --------------------------------------
+2025-11-25 18:48:18 - pdf_processor - INFO - 
+2025-11-25 18:48:18 - pdf_processor - ERROR - 
+❌ ERROR DE ARCHIVO NO ENCONTRADO
+2025-11-25 18:48:18 - pdf_processor - ERROR - 👉 El archivo PDF no existe en la ruta: data/reducidos/Gramatica-Normativa-Kaqchikel.pdf
+2025-11-25 18:48:18 - pdf_processor - ERROR - 💡 Por favor, verifica la ruta y el nombre del archivo en 'config/properties.py'
