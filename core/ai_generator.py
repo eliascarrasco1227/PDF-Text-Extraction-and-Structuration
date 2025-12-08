@@ -7,8 +7,8 @@ from config.properties import (
     PAGINAS, ALL_PAGES, RETRY_DELAY, MAX_RETRIES, 
     FEW_SHOT_PDF_PATH, FEW_SHOT_XML_PATH,
     FEW_SHOT_PDF_PATH_2, FEW_SHOT_XML_PATH_2, 
-    USE_FEW_SHOT,
-    TEMPERATURE
+    USE_FEW_SHOT
+    #TEMPERATURE
 )
 from PyPDF2 import PdfReader
 from core.logger_config import app_logger
@@ -16,7 +16,7 @@ import time
 import os
 
 class AIGenerator:
-    def __init__(self, model: str = 'gemini-2.5-flash', pages_per_block: int = 5):
+    def __init__(self, model: str = 'gemini-2.5-flash', pages_per_block: int = 5, temperature: float = 0.1):
         self.client = genai.Client()
         self.model = model
         self.pdf_processor = PDFProcessor()
@@ -24,6 +24,7 @@ class AIGenerator:
         self.logger = app_logger
         self.retry_delay = RETRY_DELAY
         self.max_retries = MAX_RETRIES
+        self.temperature = temperature
         
         # Cargar lista de ejemplos Few-Shot en memoria
         self.few_shot_examples = self._load_few_shot_data() if USE_FEW_SHOT else []
@@ -140,7 +141,7 @@ class AIGenerator:
                     model=self.model,
                     contents=contents,
                     config=types.GenerateContentConfig(
-                        temperature=TEMPERATURE
+                        temperature=self.temperature
                     )
                 )
                 return response.text

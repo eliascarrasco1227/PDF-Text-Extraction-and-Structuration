@@ -29,8 +29,8 @@ FEW_SHOT_PDF_PATH_2 = 'data/few-shot/Gramatica-Normativa-Mam_pag_80.pdf'
 FEW_SHOT_XML_PATH_2 = 'data/few-shot/Gramatica-Normativa-Mam_páginas_80-80.xml'
 
 
-# Temperatura: 0.0 = Deterministico (Mejor para extracción fiel). 1.0 = Creativo. (default in gemini 1.0, balanced)
-TEMPERATURE = 0.1
+# Temperatura: 0.0 = Deterministico (Mejor para extracción fiel). 1.0 = Creativo. (default in gemini 1.0, balanced) 
+TEMPERATURE = 0.0
 
 # Evaluator
 # Las variables de evaluator están en evaluator/properties.py

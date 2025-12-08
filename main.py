@@ -1,4 +1,4 @@
-from config.properties import PDF_PATH, PROMPT_PATH, OUTPUT_DIR, PAGINAS, PAGES_PER_BLOCK, ALL_PAGES
+from config.properties import PDF_PATH, PROMPT_PATH, OUTPUT_DIR, PAGINAS, PAGES_PER_BLOCK, ALL_PAGES, TEMPERATURE
 from core.prompt_reader import PromptReader
 from core.ai_generator import AIGenerator
 from core.file_writer import FileWriter
@@ -7,106 +7,87 @@ import re
 import os
 
 class DocumentProcessor:
-    def __init__(self):
+    def __init__(self, pdf_path=None, output_dir=None, temperature=None):
+        # 1. Configuración Dinámica (Prioridad a argumentos, fallback a properties.py)
+        self.pdf_path = pdf_path if pdf_path else PDF_PATH
+        self.output_dir = output_dir if output_dir else OUTPUT_DIR
+        # Si temperature es None, usamos el de properties, si no, el argumento
+        self.temperature = temperature if temperature is not None else TEMPERATURE
+
+        # 2. Inicialización de componentes
         self.prompt_reader = PromptReader(PROMPT_PATH)
-        self.ai_generator = AIGenerator(pages_per_block=PAGES_PER_BLOCK)
-        self.file_writer = FileWriter(OUTPUT_DIR)
+        
+        # Inyectamos la temperatura al generador
+        self.ai_generator = AIGenerator(
+            pages_per_block=PAGES_PER_BLOCK, 
+            temperature=self.temperature
+        )
+        
+        # Inyectamos el directorio de salida al escritor
+        self.file_writer = FileWriter(self.output_dir)
         self.logger = app_logger
+    
+    def _clean_ai_response(self, text: str) -> str:
+        """Limpieza de etiquetas extra que a veces pone Gemini"""
+        # 1. Eliminar declaración XML
+        text = re.sub(r'<\?xml.*?\?>', '', text, flags=re.DOTALL)
+        # 2. Eliminar etiqueta <documento>
+        text = re.sub(r'<documento[^>]*>', '', text, flags=re.DOTALL)
+        text = text.replace('</documento>', '')
+        # 3. Eliminar markdown
+        text = re.sub(r'```xml', '', text, flags=re.IGNORECASE)
+        text = text.replace('```', '')
+        return text.strip()
 
     def _pretty_print(self):
+        # Lógica para mostrar info bonita en el log
         if ALL_PAGES:
             paginas_info = "todas las páginas"
         else:
             paginas_info = f"páginas {PAGINAS[0]}-{PAGINAS[1]}"
 
-        CHAIN_SIZE = 38
-        PROGRAM_NAME = "PDF TEXT EXTRACTOR AND STRUCTURATOR"
+        self.logger.info("-" * 40)
+        self.logger.info(f"📄 Procesando: {os.path.basename(self.pdf_path)}")
+        self.logger.info(f"🌡️  Temp:      {self.temperature}")
+        self.logger.info(f"📂 Salida:    {self.output_dir}")
+        self.logger.info(f"📖 Rango:     {paginas_info}")
+        self.logger.info("-" * 40)
 
-        self.logger.info("-" * CHAIN_SIZE)
-        self.logger.info(f"| {PROGRAM_NAME} |")
-        self.logger.info("-" * CHAIN_SIZE)
-        self.logger.info("")
-
-        self.logger.info(f"📄 Procesando: {PDF_PATH}")
-        self.logger.info(f"📖 Páginas a procesar: {paginas_info}")
-        self.logger.info(f"📦 Bloques de: {PAGES_PER_BLOCK} páginas")
-        self.logger.info(f"📝 Prompt usado: {PROMPT_PATH}")
-        self.logger.info("-" * CHAIN_SIZE)
-        self.logger.info("")
-    
-    def _clean_ai_response(self, text: str) -> str:
+    def process(self):
         """
-        Limpia las etiquetas XML de documento y cabeceras que la IA pueda haber generado
-        para evitar duplicados con el FileWriter.
+        Método principal unificado.
         """
-        # 1. Eliminar declaración XML (<?xml ... ?>)
-        text = re.sub(r'<\?xml.*?\?>', '', text, flags=re.DOTALL)
-        
-        # 2. Eliminar etiqueta de apertura <documento ...> (con cualquier atributo)
-        text = re.sub(r'<documento[^>]*>', '', text, flags=re.DOTALL)
-        
-        # 3. Eliminar etiqueta de cierre </documento>
-        text = text.replace('</documento>', '')
-        
-        # 4. Eliminar bloques de código markdown si la IA los pone (```xml ... ```)
-        text = re.sub(r'```xml', '', text, flags=re.IGNORECASE)
-        text = text.replace('```', '')
-        
-        return text.strip()
-    
-    def run(self):
         try:
             self._pretty_print()
             
-            # --- VALIDACIÓN PREVIA ---
-            # Verificamos si los archivos existen antes de intentar procesar nada
-            # Esto nos permite dar un mensaje mucho más preciso.
-            if not os.path.exists(PDF_PATH):
-                raise FileNotFoundError(f"El archivo PDF no existe en la ruta: {PDF_PATH}")
-            
-            if not os.path.exists(PROMPT_PATH):
-                raise FileNotFoundError(f"El archivo de Prompt no existe en la ruta: {PROMPT_PATH}")
-            # -------------------------
+            # VALIDACIÓN
+            if not os.path.exists(self.pdf_path):
+                raise FileNotFoundError(f"El archivo PDF no existe: {self.pdf_path}")
 
-            # 1. Leer prompt
+            # PASO 1: Leer Prompt
+            self.logger.info("📜 Leyendo prompt...")
             prompt = self.prompt_reader.read()
 
-            # 2. Generar respuesta
-            self.logger.info("🤖 Generando respuesta")
-            response = self.ai_generator.generate_from_pdf(PDF_PATH, prompt)
-
-            # 3. Limpiar respuesta
+            # PASO 2: Generar con IA
+            self.logger.info(f"🤖 Iniciando generación con Temperatura {self.temperature}...")
+            response = self.ai_generator.generate_from_pdf(self.pdf_path, prompt)
+            
+            # PASO 3: Limpiar respuesta
             self.logger.info("🧹 Limpiando respuesta de la IA...")
             response = self._clean_ai_response(response)
 
-            # 4. Analizar respuesta
-            page_numbers = re.findall(r'<pagina num="(\d+)">', response)
-            self.logger.info(f"📊 Páginas procesadas encontradas: {sorted(set(map(int, page_numbers)))}")
-
-            self.logger.info("\n🤖 Fragmento de respuesta limpio:")
-            self.logger.info(response[:200] + "...")
-            
-            # 5. Guardar respuesta
-            saved_path = self.file_writer.save_with_counter(response)
-            self.logger.info(f"\n💾 XML guardado en: {saved_path}")
-
-        # --- GESTIÓN DE ERRORES CONTROLADA ---
-        except FileNotFoundError as e:
-            # Capturamos específicamente el error de archivo no encontrado
-            self.logger.error("\n❌ ERROR DE ARCHIVO NO ENCONTRADO")
-            self.logger.error(f"👉 {str(e)}")
-            self.logger.error("💡 Por favor, verifica la ruta y el nombre del archivo en 'config/properties.py'")
-            # AL NO PONER 'raise' AQUÍ, EL PROGRAMA TERMINA SUAVEMENTE SIN TRACEBACK
-            
-        except Exception as e:
-            # Para cualquier otro error (servidor, lógica, etc.)
-            if "503" in str(e):
-                self.logger.error("❌ El servidor de Gemini está sobrecargado. Por favor, intenta nuevamente más tarde.")
+            # PASO 4: Guardar Resultados
+            if response:
+                saved_path = self.file_writer.save_with_counter(response)
+                self.logger.info(f"✅ Guardado correctamente en: {saved_path}")
             else:
-                self.logger.error(f"❌ Error inesperado durante el procesamiento: {str(e)}", exc_info=True)
-            raise # Aquí sí mantenemos el raise por si es un error de código que necesitas depurar
-        # -------------------------------------
+                self.logger.warning("⚠️ La respuesta de la IA estaba vacía.")
+
+        except Exception as e:
+            self.logger.error(f"❌ Error durante el proceso: {str(e)}")
+            raise e 
 
 if __name__ == "__main__":
+    # Ejecución manual (usa defaults de properties.py)
     processor = DocumentProcessor()
-    processor.run()
+    processor.process()
