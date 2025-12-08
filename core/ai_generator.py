@@ -7,7 +7,8 @@ from config.properties import (
     PAGINAS, ALL_PAGES, RETRY_DELAY, MAX_RETRIES, 
     FEW_SHOT_PDF_PATH, FEW_SHOT_XML_PATH,
     FEW_SHOT_PDF_PATH_2, FEW_SHOT_XML_PATH_2, 
-    USE_FEW_SHOT
+    USE_FEW_SHOT,
+    TEMPERATURE
 )
 from PyPDF2 import PdfReader
 from core.logger_config import app_logger
@@ -137,7 +138,10 @@ class AIGenerator:
             try:
                 response = self.client.models.generate_content(
                     model=self.model,
-                    contents=contents
+                    contents=contents,
+                    config=types.GenerateContentConfig(
+                        temperature=TEMPERATURE
+                    )
                 )
                 return response.text
                 
