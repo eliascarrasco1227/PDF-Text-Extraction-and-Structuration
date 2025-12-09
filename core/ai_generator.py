@@ -1,4 +1,3 @@
-# core/ai_generator.py
 from google import genai
 from google.genai import types
 from google.genai.errors import ServerError
@@ -9,14 +8,15 @@ from config.properties import (
     FEW_SHOT_PDF_PATH_2, FEW_SHOT_XML_PATH_2, 
     USE_FEW_SHOT,
     GEMINI_MODEL
-    #TEMPERATURE
 )
 from PyPDF2 import PdfReader
 from core.logger_config import app_logger
 import time
 import os
+import re
 
 class AIGenerator:
+    # He cambiado el default a 1.5-flash para intentar evitar el error 429 desde el inicio
     def __init__(self, model: str = GEMINI_MODEL, pages_per_block: int = 5, temperature: float = 0.1):
         self.client = genai.Client()
         self.model = model
@@ -27,15 +27,12 @@ class AIGenerator:
         self.max_retries = MAX_RETRIES
         self.temperature = temperature
         
-        # Cargar lista de ejemplos Few-Shot en memoria
         self.few_shot_examples = self._load_few_shot_data() if USE_FEW_SHOT else []
 
     def _load_few_shot_data(self) -> list:
-        """Carga múltiples ejemplos de entrenamiento en una lista"""
         examples = []
         self.logger.info("🧠 Cargando ejemplos Few-Shot...")
 
-        # Lista de configuraciones de ejemplos (puedes añadir más aquí en el futuro)
         example_configs = [
             {"pdf": FEW_SHOT_PDF_PATH, "xml": FEW_SHOT_XML_PATH, "name": "Ejemplo 1 (Kaqchikel)"},
             {"pdf": FEW_SHOT_PDF_PATH_2, "xml": FEW_SHOT_XML_PATH_2, "name": "Ejemplo 2 (Mam)"}
@@ -44,26 +41,19 @@ class AIGenerator:
         for config in example_configs:
             try:
                 if not os.path.exists(config["pdf"]):
-                    self.logger.warning(f"⚠️ PDF no encontrado para {config['name']}: {config['pdf']}")
                     continue
-                
                 if not os.path.exists(config["xml"]):
-                    self.logger.warning(f"⚠️ XML no encontrado para {config['name']}: {config['xml']}")
                     continue
 
                 with open(config["pdf"], "rb") as f:
                     pdf_bytes = f.read()
-                
                 with open(config["xml"], "r", encoding="utf-8") as f:
                     xml_text = f.read()
 
                 examples.append({
-                    "pdf": pdf_bytes,
-                    "xml": xml_text,
-                    "name": config["name"]
+                    "pdf": pdf_bytes, "xml": xml_text, "name": config["name"]
                 })
                 self.logger.info(f"✅ {config['name']} cargado correctamente.")
-
             except Exception as e:
                 self.logger.error(f"❌ Error cargando {config['name']}: {str(e)}")
 
@@ -98,42 +88,22 @@ class AIGenerator:
         self.logger.info("---------------------------------")
     
     def _generate_content_with_retry(self, target_pdf_bytes: bytes, prompt: str) -> str:
-        """Genera contenido inyectando múltiples ejemplos few-shot"""
-        
         contents = []
 
-        # 1. Inyectar Ejemplos Few-Shot
         if self.few_shot_examples:
             contents.append("INSTRUCCIONES DE ENTRENAMIENTO (FEW-SHOT):")
             contents.append("A continuación se presentan ejemplos de documentos PDF y sus transcripciones XML correctas. Úsalos como referencia estricta de formato y estructura.")
-            
             for i, example in enumerate(self.few_shot_examples):
                 contents.append(f"--- INICIO EJEMPLO {i + 1} ({example['name']}) ---")
-                
-                # PDF del ejemplo
-                contents.append(types.Part.from_bytes(
-                    data=example["pdf"],
-                    mime_type='application/pdf'
-                ))
-                
-                # Respuesta XML del ejemplo
+                contents.append(types.Part.from_bytes(data=example["pdf"], mime_type='application/pdf'))
                 contents.append(f"SALIDA XML CORRECTA PARA EJEMPLO {i + 1}:")
                 contents.append(example["xml"])
-                
                 contents.append(f"--- FIN EJEMPLO {i + 1} ---")
-            
             contents.append("TAREA ACTUAL: Ahora procesa el siguiente documento PDF aplicando la misma lógica, estructura y formato XML que en los ejemplos anteriores.")
-
         else:
             contents.append("Procesa el siguiente documento PDF:")
 
-        # 2. Inyectar el PDF Objetivo
-        contents.append(types.Part.from_bytes(
-            data=target_pdf_bytes,
-            mime_type='application/pdf'
-        ))
-
-        # 3. Inyectar el Prompt
+        contents.append(types.Part.from_bytes(data=target_pdf_bytes, mime_type='application/pdf'))
         contents.append(prompt)
 
         for attempt in range(self.max_retries):
@@ -141,9 +111,7 @@ class AIGenerator:
                 response = self.client.models.generate_content(
                     model=self.model,
                     contents=contents,
-                    config=types.GenerateContentConfig(
-                        temperature=self.temperature
-                    )
+                    config=types.GenerateContentConfig(temperature=self.temperature)
                 )
                 return response.text
                 
@@ -186,13 +154,28 @@ Cada página vaya dentro de <pagina num="N">. Las páginas a extraer son de la {
                 processed_pages += pages_in_block
                 self._pretty_print_progress(processed_pages, total_pages_to_process)
                 
-            except ServerError as e:
-                if "503" in str(e):
-                    self.logger.error(f"❌ Error crítico: Servidor sobrecargado después de {self.max_retries} intentos.")
-                raise
             except Exception as e:
-                self.logger.error(f"❌ Error inesperado: {str(e)}")
-                raise
+                error_msg = str(e)
+                # DETECCION DE ERROR DE CUOTA (LIMPIEZA DE LOGS)
+                if "RESOURCE_EXHAUSTED" in error_msg:
+                    # Parseamos el límite para mostrarlo
+                    limit_match = re.search(r"limit: (\d+)", error_msg)
+                    if not limit_match:
+                         limit_match = re.search(r"quotaValue': '(\d+)'", error_msg)
+                    limit = limit_match.group(1) if limit_match else "?"
+                    
+                    # Mensaje bonito y único
+                    self.logger.error(f"🚫 Superaste el limite de uso de gemini de tu versión, recuerda que el limite diario es {limit}")
+                    
+                    # Lanzamos el error para que main lo atrape y pare el programa
+                    raise e 
+                
+                elif "503" in error_msg:
+                    self.logger.error(f"❌ Error crítico: Servidor sobrecargado después de {self.max_retries} intentos.")
+                    raise
+                else:
+                    self.logger.error(f"❌ Error inesperado: {error_msg}")
+                    raise
             
             current_page = block_end
         

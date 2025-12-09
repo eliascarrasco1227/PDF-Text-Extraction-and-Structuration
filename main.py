@@ -24,18 +24,11 @@ class DocumentProcessor:
     
     def _clean_ai_response(self, text: str) -> str:
         """Limpieza robusta de etiquetas y markdown"""
-        # 1. Eliminar declaración XML antigua si existe
         text = re.sub(r'<\?xml.*?\?>', '', text, flags=re.DOTALL)
-        
-        # 2. Eliminar etiqueta <documento> si la IA la pone
         text = re.sub(r'<documento[^>]*>', '', text, flags=re.DOTALL)
         text = text.replace('</documento>', '')
-        
-        # 3. Eliminar CUALQUIER bloque de código markdown (```xml, ```html, ```, etc)
-        # La regex \w* busca cualquier palabra después de los 3 backticks
         text = re.sub(r'```\w*', '', text) 
         text = text.replace('```', '')
-        
         return text.strip()
 
     def _pretty_print(self):
@@ -73,7 +66,6 @@ class DocumentProcessor:
             response = self._clean_ai_response(response)
 
             # PASO 4: Guardar Resultados
-            # IMPORTANTE: Pasamos self.pdf_path para que el escritor sepa el nombre real
             if response:
                 saved_path = self.file_writer.save_with_counter(response, self.pdf_path)
                 self.logger.info(f"✅ Guardado correctamente en: {saved_path}")
@@ -81,8 +73,16 @@ class DocumentProcessor:
                 self.logger.warning("⚠️ La respuesta de la IA estaba vacía.")
 
         except Exception as e:
-            self.logger.error(f"❌ Error durante el proceso: {str(e)}")
-            raise e 
+            error_str = str(e)
+            # GESTIÓN DE ERROR LIMPIA:
+            # Si es error de recursos, solo avisamos y paramos. NO hacemos 'raise'.
+            if "RESOURCE_EXHAUSTED" in error_str:
+                self.logger.info("⏹️  Proceso detenido por límite de API.")
+                return # <--- ESTO ES LA CLAVE PARA EVITAR EL TRACEBACK FEO
+            else:
+                # Para otros errores (bugs de código, archivo no encontrado), sí queremos ver el detalle
+                self.logger.error(f"❌ Error durante el proceso: {error_str}")
+                raise e 
 
 if __name__ == "__main__":
     processor = DocumentProcessor()
