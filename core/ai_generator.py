@@ -7,7 +7,8 @@ from config.properties import (
     PAGINAS, ALL_PAGES, RETRY_DELAY, MAX_RETRIES, 
     FEW_SHOT_PDF_PATH, FEW_SHOT_XML_PATH,
     FEW_SHOT_PDF_PATH_2, FEW_SHOT_XML_PATH_2, 
-    USE_FEW_SHOT
+    USE_FEW_SHOT,
+    GEMINI_MODEL
     #TEMPERATURE
 )
 from PyPDF2 import PdfReader
@@ -16,7 +17,7 @@ import time
 import os
 
 class AIGenerator:
-    def __init__(self, model: str = 'gemini-2.5-flash', pages_per_block: int = 5, temperature: float = 0.1):
+    def __init__(self, model: str = GEMINI_MODEL, pages_per_block: int = 5, temperature: float = 0.1):
         self.client = genai.Client()
         self.model = model
         self.pdf_processor = PDFProcessor()

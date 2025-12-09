@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<documento fuente="Gramatica-Normativa-Kiche_pag_44.pdf" paginas="1-1">
+<documento fuente="Gramatica-Normativa-Kaqchikel_pag_172.pdf" paginas="1-1" fecha="1764088427.9015613">
 <pagina num="171">
-        <linea>plural) del objeto y sujeto. La palabra principal incluye primeramente el tiempo/aspecto</linea>
+        <linea>(plural) del objeto y sujeto. La palabra principal incluye primeramente el tiempo/aspecto</linea>
         <linea>o modo (excepto en el perfectivo que es la última), seguido por el juego absolutivo,</linea>
         <linea>juego ergativo, la raíz o base en calidad de obligatorios y sufijos de categoría en casos</linea>
         <linea>específicos (si el verbo es derivado). Como elementos opcionales incluye el movimiento,</linea>
@@ -19,8 +19,8 @@
                         <gloss>COM-</gloss>
                     </unit>
                     <unit>
-                        <form>0-</form>
-                        <gloss>B3S-</gloss>
+                        <form>Ø-</form>
+                        <gloss>B3s-</gloss>
                     </unit>
                     <unit>
                         <form>b'e-</form>
@@ -28,7 +28,7 @@
                     </unit>
                     <unit>
                         <form>n-</form>
-                        <gloss>Als-</gloss>
+                        <gloss>A1s-</gloss>
                     </unit>
                     <unit>
                         <form>tz'et-</form>
@@ -57,7 +57,7 @@
                 </morpheme_analysis>
                 <syntactic_analysis>
                     <unit>
-                        <form>Xb'entz'eta' na kan ri ak'wal.</form>
+                        <form>Xb'entz'eta' na kan ri ak'wal</form>
                         <gloss>SVT</gloss>
                     </unit>
                 </syntactic_analysis>
@@ -108,12 +108,8 @@
                         <gloss>DIM</gloss>
                     </unit>
                     <unit>
-                        <form>xtan-</form>
-                        <gloss>Niña-</gloss>
-                    </unit>
-                    <unit>
-                        <form>i'</form>
-                        <gloss>PL</gloss>
+                        <form>xtan-i'</form>
+                        <gloss>Niña-PL</gloss>
                     </unit>
                     <unit>
                         <form>rija'</form>
@@ -141,7 +137,7 @@
                         <gloss>COM-</gloss>
                     </unit>
                     <unit>
-                        <form>0-</form>
+                        <form>Ø-</form>
                         <gloss>B3s-</gloss>
                     </unit>
                     <unit>
@@ -169,17 +165,13 @@
                         <gloss>dos</gloss>
                     </unit>
                     <unit>
-                        <form>achi'-</form>
-                        <gloss>hombre-</gloss>
-                    </unit>
-                    <unit>
-                        <form>a'.</form>
-                        <gloss>PL</gloss>
+                        <form>achi'-a'.</form>
+                        <gloss>hombre-PL</gloss>
                     </unit>
                 </morpheme_analysis>
                 <syntactic_analysis>
                     <unit>
-                        <form>Xkilöq' jun uqaj ri ka'i' achi'a'.</form>
+                        <form>Xkilöq' jun uqaj ri ka'i' achi'a'</form>
                         <gloss>SVT</gloss>
                     </unit>
                 </syntactic_analysis>
@@ -195,7 +187,7 @@
                         <gloss>COM-</gloss>
                     </unit>
                     <unit>
-                        <form>0-</form>
+                        <form>Ø-</form>
                         <gloss>B3s-</gloss>
                     </unit>
                     <unit>
@@ -233,7 +225,7 @@
                 </morpheme_analysis>
                 <syntactic_analysis>
                     <unit>
-                        <form>Xusipaj ri xkoya' ri xtän.</form>
+                        <form>Xusipaj ri xkoya' ri xtän</form>
                         <gloss>SVT</gloss>
                     </unit>
                 </syntactic_analysis>

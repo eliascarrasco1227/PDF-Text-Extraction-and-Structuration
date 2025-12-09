@@ -32,5 +32,7 @@ FEW_SHOT_XML_PATH_2 = 'data/few-shot/Gramatica-Normativa-Mam_páginas_80-80.xml'
 # Temperatura: 0.0 = Deterministico (Mejor para extracción fiel). 1.0 = Creativo. (default in gemini 1.0, balanced) 
 TEMPERATURE = 0.0
 
+GEMINI_MODEL = 'gemini-2.0-flash'  # Modelo de Gemini a usar
+
 # Evaluator
 # Las variables de evaluator están en evaluator/properties.py

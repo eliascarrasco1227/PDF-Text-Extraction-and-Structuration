@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<documento fuente="Gramatica-Normativa-Kiche_pag_44.pdf" paginas="1-1">
+<documento fuente="Gramatica-Normativa-Kaqchikel_pag_172.pdf" paginas="1-1" fecha="1764088427.9015613">
 <pagina num="171">
-        <linea>(plural) del objeto y sujeto. La palabra principal incluye primeramente el tiempo/aspecto</linea>
+        <linea>plural) del objeto y sujeto. La palabra principal incluye primeramente el tiempo/aspecto</linea>
         <linea>o modo (excepto en el perfectivo que es la última), seguido por el juego absolutivo,</linea>
         <linea>juego ergativo, la raíz o base en calidad de obligatorios y sufijos de categoría en casos</linea>
         <linea>específicos (si el verbo es derivado). Como elementos opcionales incluye el movimiento,</linea>
@@ -19,7 +19,7 @@
                         <gloss>COM-</gloss>
                     </unit>
                     <unit>
-                        <form>Ø-</form>
+                        <form>0-</form>
                         <gloss>B3s-</gloss>
                     </unit>
                     <unit>
@@ -57,7 +57,7 @@
                 </morpheme_analysis>
                 <syntactic_analysis>
                     <unit>
-                        <form>Xb'entz'eta' na kan ri ak'wal</form>
+                        <form>Xb'entz'eta'</form>
                         <gloss>SVT</gloss>
                     </unit>
                 </syntactic_analysis>
@@ -118,7 +118,7 @@
                 </morpheme_analysis>
                 <syntactic_analysis>
                     <unit>
-                        <form>...kan jeb'ël ok xerutz'ët ri ch'uta'q xtani' rija'...</form>
+                        <form>xerutz'ët</form>
                         <gloss>SVT</gloss>
                     </unit>
                 </syntactic_analysis>
@@ -137,7 +137,7 @@
                         <gloss>COM-</gloss>
                     </unit>
                     <unit>
-                        <form>Ø-</form>
+                        <form>0-</form>
                         <gloss>B3s-</gloss>
                     </unit>
                     <unit>
@@ -165,13 +165,17 @@
                         <gloss>dos</gloss>
                     </unit>
                     <unit>
-                        <form>achi'-a'.</form>
-                        <gloss>hombre-PL</gloss>
+                        <form>achi'-</form>
+                        <gloss>hombre-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a'.</form>
+                        <gloss>PL</gloss>
                     </unit>
                 </morpheme_analysis>
                 <syntactic_analysis>
                     <unit>
-                        <form>Xkilöq' jun uqaj ri ka'i' achi'a'</form>
+                        <form>Xkilöq'</form>
                         <gloss>SVT</gloss>
                     </unit>
                 </syntactic_analysis>
@@ -187,7 +191,7 @@
                         <gloss>COM-</gloss>
                     </unit>
                     <unit>
-                        <form>Ø-</form>
+                        <form>0-</form>
                         <gloss>B3s-</gloss>
                     </unit>
                     <unit>
@@ -225,7 +229,7 @@
                 </morpheme_analysis>
                 <syntactic_analysis>
                     <unit>
-                        <form>Xusipaj ri xkoya' ri xtän</form>
+                        <form>Xusipaj</form>
                         <gloss>SVT</gloss>
                     </unit>
                 </syntactic_analysis>
@@ -240,7 +244,7 @@
                 </paralel_phrase>
                 <syntactic_analysis>
                     <unit>
-                        <form>...nb'esamäj qatata', nb'eqato'....</form>
+                        <form>nb'eqato'</form>
                         <gloss>SVT</gloss>
                     </unit>
                 </syntactic_analysis>

@@ -8,39 +8,37 @@ import os
 
 class DocumentProcessor:
     def __init__(self, pdf_path=None, output_dir=None, temperature=None):
-        # 1. Configuración Dinámica (Prioridad a argumentos, fallback a properties.py)
+        # 1. Configuración Dinámica
         self.pdf_path = pdf_path if pdf_path else PDF_PATH
         self.output_dir = output_dir if output_dir else OUTPUT_DIR
-        # Si temperature es None, usamos el de properties, si no, el argumento
         self.temperature = temperature if temperature is not None else TEMPERATURE
 
         # 2. Inicialización de componentes
         self.prompt_reader = PromptReader(PROMPT_PATH)
-        
-        # Inyectamos la temperatura al generador
         self.ai_generator = AIGenerator(
             pages_per_block=PAGES_PER_BLOCK, 
             temperature=self.temperature
         )
-        
-        # Inyectamos el directorio de salida al escritor
         self.file_writer = FileWriter(self.output_dir)
         self.logger = app_logger
     
     def _clean_ai_response(self, text: str) -> str:
-        """Limpieza de etiquetas extra que a veces pone Gemini"""
-        # 1. Eliminar declaración XML
+        """Limpieza robusta de etiquetas y markdown"""
+        # 1. Eliminar declaración XML antigua si existe
         text = re.sub(r'<\?xml.*?\?>', '', text, flags=re.DOTALL)
-        # 2. Eliminar etiqueta <documento>
+        
+        # 2. Eliminar etiqueta <documento> si la IA la pone
         text = re.sub(r'<documento[^>]*>', '', text, flags=re.DOTALL)
         text = text.replace('</documento>', '')
-        # 3. Eliminar markdown
-        text = re.sub(r'```xml', '', text, flags=re.IGNORECASE)
+        
+        # 3. Eliminar CUALQUIER bloque de código markdown (```xml, ```html, ```, etc)
+        # La regex \w* busca cualquier palabra después de los 3 backticks
+        text = re.sub(r'```\w*', '', text) 
         text = text.replace('```', '')
+        
         return text.strip()
 
     def _pretty_print(self):
-        # Lógica para mostrar info bonita en el log
         if ALL_PAGES:
             paginas_info = "todas las páginas"
         else:
@@ -54,9 +52,7 @@ class DocumentProcessor:
         self.logger.info("-" * 40)
 
     def process(self):
-        """
-        Método principal unificado.
-        """
+        """Método principal unificado"""
         try:
             self._pretty_print()
             
@@ -77,8 +73,9 @@ class DocumentProcessor:
             response = self._clean_ai_response(response)
 
             # PASO 4: Guardar Resultados
+            # IMPORTANTE: Pasamos self.pdf_path para que el escritor sepa el nombre real
             if response:
-                saved_path = self.file_writer.save_with_counter(response)
+                saved_path = self.file_writer.save_with_counter(response, self.pdf_path)
                 self.logger.info(f"✅ Guardado correctamente en: {saved_path}")
             else:
                 self.logger.warning("⚠️ La respuesta de la IA estaba vacía.")
@@ -88,6 +85,5 @@ class DocumentProcessor:
             raise e 
 
 if __name__ == "__main__":
-    # Ejecución manual (usa defaults de properties.py)
     processor = DocumentProcessor()
     processor.process()

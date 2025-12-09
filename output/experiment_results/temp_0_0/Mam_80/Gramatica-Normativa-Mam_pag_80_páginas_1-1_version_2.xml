@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<documento fuente="Gramatica-Normativa-Kiche_pag_44.pdf" paginas="1-1">
+<documento fuente="Gramatica-Normativa-Mam_pag_80.pdf" paginas="1-1" fecha="1763835949.046171">
 <pagina num="80">
         <linea>Ejemplo:</linea>
         <paralel_phrase>
@@ -10,7 +10,7 @@
             <original>wuk'ila</original>
             <translation>mi compañero</translation>
         </paralel_phrase>
-        <seccion type="Uso de la consonante epentética /y/">
+        <seccion tipo="Uso de la consonante epentética /y/">
             <linea>Uso de la consonante epentética /y/</linea>
             <linea>Cuando el sustantivo finaliza con vocal, se introduce la /y/ para</linea>
             <linea>separar la vocal del enclítico de persona.</linea>
@@ -24,7 +24,7 @@
                 <translation>mi casa</translation>
             </paralel_phrase>
             <paralel_phrase>
-                <original>tjaya</
+                <original>tjaya</original>
                 <translation>tu casa</translation>
             </paralel_phrase>
             <paralel_phrase>
@@ -57,7 +57,7 @@
             </paralel_phrase>
         </seccion>
         <seccion
-            type="Techlal b'ib'aj toj mya' pakb'a'n yol / Pronombres personales para predicados no verbales">
+            tipo="Techlal b'ib'aj toj mya' pakb'a'n yol / Pronombres personales para predicados no verbales">
             <linea>Techlal b'ib'aj toj mya' pakb'a'n yol /</linea>
             <linea>Pronombres personales para predicados no</linea>
             <linea>verbales</linea>
