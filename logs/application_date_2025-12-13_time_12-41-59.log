@@ -1,0 +1,17 @@
+2025-12-13 12:41:59 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-12-13_time_12-41-59.log
+2025-12-13 12:42:02 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 12:42:02 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 12:42:02 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 12:42:02 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 12:42:02 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 12:42:02 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel_pag_146.pdf
+2025-12-13 12:42:02 - pdf_processor - INFO - 🌡️  Temp:      0.5
+2025-12-13 12:42:02 - pdf_processor - INFO - 📂 Salida:    output/experiment_results_2\temp_0_5\Kaqchikel_146
+2025-12-13 12:42:02 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 12:42:02 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 12:42:02 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 12:42:02 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.5...
+2025-12-13 12:42:02 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 12:42:02 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 12:42:03 - pdf_processor - ERROR - 🚫 Superaste el limite de uso de gemini de tu versión, recuerda que el limite diario es 0
+2025-12-13 12:42:03 - pdf_processor - INFO - ⏹️  Proceso detenido por límite de API.
