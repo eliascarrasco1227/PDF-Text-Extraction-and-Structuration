@@ -4,7 +4,7 @@ import re
 from jiwer import cer
 from pathlib import Path
 
-# Importación de configuración
+# Intentamos importar la configuración
 try:
     from properties import EXPERIMENTS_DIR, TEST_CASE_MAPPING
 except ImportError:
@@ -13,9 +13,8 @@ except ImportError:
 
 def get_raw_content_strict(file_path: str) -> str:
     """
-    Lee el archivo tal cual es (Raw).
-    Solo limpia los bloques de código Markdown para que la comparación sea justa
-    con el contenido XML real.
+    Lee el archivo tal cual es (Raw) para una evaluación estricta.
+    Solo limpia los bloques de código Markdown (```xml) iniciales/finales.
     """
     path_obj = Path(file_path)
     if not path_obj.exists():
@@ -25,87 +24,108 @@ def get_raw_content_strict(file_path: str) -> str:
         with open(path_obj, 'r', encoding='utf-8') as f:
             content = f.read()
 
-        # --- LIMPIEZA ÚNICA: MARKDOWN ---
-        # Solo quitamos ```xml al inicio y ``` al final.
-        # Todo lo demás (etiquetas, espacios, saltos de línea) SE MANTIENE para el CER.
-        content = re.sub(r'^```\w*\s*', '', content.strip()) # Quita ```xml del inicio
-        content = re.sub(r'```\s*$', '', content.strip())    # Quita ``` del final
+        # Limpieza mínima: Solo quitamos el "envoltorio" de markdown si existe
+        content = re.sub(r'^```\w*\s*', '', content.strip()) 
+        content = re.sub(r'```\s*$', '', content.strip())
         
-        return content.strip() # Un strip final por seguridad
+        return content.strip()
 
     except Exception as e:
         print(f"❌ Error leyendo {path_obj.name}: {e}")
         return ""
 
 def run_batch_evaluation():
-    print(f"🚀 Iniciando Evaluación ESTRICTA (Raw XML) desde: {EXPERIMENTS_DIR}\n")
+    print(f"🚀 Iniciando Evaluación AGRUPADA (Promedio por Carpeta) desde: {EXPERIMENTS_DIR}\n")
     results = []
     
     # 1. Verificación de Referencias
     print("--- Verificando Referencias ---")
-    for case, ref in TEST_CASE_MAPPING.items():
-        content = get_raw_content_strict(ref)
+    valid_references = {}
+    for case, ref_path in TEST_CASE_MAPPING.items():
+        content = get_raw_content_strict(ref_path)
         if content:
             print(f"✔ {case}: Referencia cargada ({len(content)} caracteres).")
+            valid_references[case] = content # Guardamos el texto en memoria para no leerlo mil veces
         else:
-            print(f"❌ {case}: Referencia VACÍA o no encontrada en {ref}")
-    print("-" * 50 + "\n")
+            print(f"❌ {case}: Referencia VACÍA o no encontrada en {ref_path}")
+    print("-" * 60 + "\n")
 
-    # 2. Bucle de Evaluación
-    for case_folder_name, reference_path in TEST_CASE_MAPPING.items():
-        # Busca en todas las carpetas de temperatura
-        search_pattern = os.path.join(EXPERIMENTS_DIR, "temp_*", case_folder_name, "*.xml")
-        found_files = glob.glob(search_pattern)
+    # 2. Bucle de Evaluación Agrupada
+    for case_folder_name, ref_text in valid_references.items():
+        
+        # Paso A: Encontrar todas las carpetas de este caso (una por temperatura)
+        # Patrón: ../output/.../temp_*/Caso_X/
+        case_dirs_pattern = os.path.join(EXPERIMENTS_DIR, "temp_*", case_folder_name)
+        found_dirs = glob.glob(case_dirs_pattern)
 
-        if not found_files:
+        if not found_dirs:
             continue
 
-        # Cargamos el texto de referencia UNA vez por caso
-        ref_text = get_raw_content_strict(reference_path)
-        if not ref_text: continue # Si falla la ref, saltamos
+        for specific_case_dir in found_dirs:
+            # Paso B: Identificar la temperatura
+            # La ruta es algo como: .../temp_0_1/Kaqchikel_146
+            # El padre es .../temp_0_1, extraemos el nombre base del padre
+            parent_dir = os.path.dirname(specific_case_dir)
+            temp_name = os.path.basename(parent_dir)
 
-        for hypothesis_path in found_files:
-            try:
-                # Extraer info del path
-                path_parts = os.path.normpath(hypothesis_path).split(os.sep)
-                temp_name = path_parts[-3] 
-                file_name = os.path.basename(hypothesis_path)
+            # Paso C: Buscar todos los XMLs DENTRO de esa carpeta específica
+            xml_files = glob.glob(os.path.join(specific_case_dir, "*.xml"))
+            
+            if not xml_files:
+                continue
 
-                # --- CÁLCULO CER ESTRICTO ---
-                hyp_text = get_raw_content_strict(hypothesis_path)
+            # Paso D: Calcular métricas para cada archivo individualmente
+            folder_cers = []
+            folder_sims = []
+
+            for xml_file in xml_files:
+                hyp_text = get_raw_content_strict(xml_file)
                 
                 if not hyp_text:
-                    score = 1.0 # Archivo vacío o ilegible
+                    score = 1.0 # Archivo vacío o roto = 100% error
                 else:
                     score = cer(ref_text, hyp_text)
+                
+                folder_cers.append(score)
+                folder_sims.append((1 - score) * 100)
 
-                # Guardamos
+            # Paso E: Calcular MEDIAS
+            if folder_cers:
+                avg_cer = sum(folder_cers) / len(folder_cers)
+                avg_sim = sum(folder_sims) / len(folder_sims)
+                
+                # Nombre del archivo para mostrar
+                if len(xml_files) > 1:
+                    file_label = f"(Promedio de {len(xml_files)} archivos)"
+                else:
+                    file_label = os.path.basename(xml_files[0]) # Si solo hay uno, ponemos su nombre
+
                 results.append({
                     "Temp": temp_name,
                     "Caso": case_folder_name,
-                    "Archivo": file_name,
-                    "CER": score,
-                    "Similitud %": (1 - score) * 100
+                    "Archivo": file_label,
+                    "CER_Media": avg_cer,
+                    "Similitud_Media": avg_sim,
+                    "N": len(xml_files)
                 })
 
-            except Exception as e:
-                print(f"❌ Error en {file_name}: {e}")
-
     # 3. Tabla Final
-    print("\n" + "="*100)
-    print(f"{'TEMP':<15} | {'CASO':<15} | {'SIMILITUD (ESTRICTA)':<22} | {'CER':<8} | {'ARCHIVO'}")
-    print("="*100)
+    print("\n" + "="*110)
+    print(f"{'TEMP':<15} | {'CASO':<15} | {'SIMILITUD (Media)':<20} | {'CER (Media)':<12} | {'N':<3} | {'DETALLE'}")
+    print("="*110)
     
-    # Ordenar: Caso -> Mejor Similitud
-    results.sort(key=lambda x: (x["Caso"], -x["Similitud %"]))
+    # Ordenamos: Primero Caso, luego mejor Similitud
+    results.sort(key=lambda x: (x["Caso"], -x["Similitud_Media"]))
 
     for r in results:
-        # Formateo visual
-        sim_str = f"{r['Similitud %']:6.2f}%"
-        if r['Similitud %'] < 0: sim_str = "   0.00% (Neg)" # CER > 1 da sim negativa
-        if r['CER'] == 1.0: sim_str = "   0.00% ⚠️"
+        sim_str = f"{r['Similitud_Media']:6.2f}%"
+        cer_str = f"{r['CER_Media']:.4f}"
+        
+        # Marcamos visualmente si es negativo o error total
+        if r['Similitud_Media'] < 0: sim_str = "   0.00% (Neg)"
+        if r['CER_Media'] >= 1.0: sim_str = "   0.00% ⚠️"
 
-        print(f"{r['Temp']:<15} | {r['Caso']:<15} | {sim_str:<22} | {r['CER']:.4f}   | {r['Archivo']}")
+        print(f"{r['Temp']:<15} | {r['Caso']:<15} | {sim_str:<20} | {cer_str:<12} | {r['N']:<3} | {r['Archivo']}")
 
 if __name__ == "__main__":
     run_batch_evaluation()

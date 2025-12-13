@@ -1,0 +1,37 @@
+🚀 Iniciando Evaluación AGRUPADA (Promedio por Carpeta) desde: ..\output\experiment_results
+
+--- Verificando Referencias ---
+✔ Kaqchikel_146: Referencia cargada (9526 caracteres).
+✔ Kaqchikel_172: Referencia cargada (10016 caracteres).
+✔ Kiche_43: Referencia cargada (6231 caracteres).
+✔ Mam_80: Referencia cargada (2978 caracteres).
+------------------------------------------------------------
+
+
+==============================================================================================================
+TEMP            | CASO            | SIMILITUD (Media)    | CER (Media)  | N   | DETALLE
+==============================================================================================================
+temp_1_0        | Kaqchikel_146   |  99.61%              | 0.0039       | 1   | Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_1.xml
+temp_0_0_real   | Kaqchikel_146   |  99.26%              | 0.0074       | 15  | (Promedio de 15 archivos)
+temp_0_25       | Kaqchikel_146   |  99.20%              | 0.0080       | 4   | (Promedio de 4 archivos)
+temp_0_5        | Kaqchikel_146   |  99.11%              | 0.0089       | 1   | Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_1.xml
+temp_1_5        | Kaqchikel_146   |  99.11%              | 0.0089       | 1   | Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_1.xml
+temp_0_1        | Kaqchikel_146   |  99.07%              | 0.0093       | 4   | (Promedio de 4 archivos)
+temp_0_25       | Kaqchikel_172   |  91.84%              | 0.0816       | 4   | (Promedio de 4 archivos)
+temp_0_1        | Kaqchikel_172   |  90.72%              | 0.0928       | 4   | (Promedio de 4 archivos)
+temp_0_0_real   | Kaqchikel_172   |  81.03%              | 0.1897       | 10  | (Promedio de 10 archivos)
+temp_1_0        | Kaqchikel_172   |  69.59%              | 0.3041       | 1   | Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+temp_1_5        | Kaqchikel_172   |  58.71%              | 0.4129       | 1   | Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+temp_0_5        | Kaqchikel_172   |  43.44%              | 0.5656       | 1   | Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+temp_0_1        | Kiche_43        |  97.02%              | 0.0298       | 4   | (Promedio de 4 archivos)
+temp_0_25       | Kiche_43        |  96.80%              | 0.0320       | 4   | (Promedio de 4 archivos)
+temp_0_0_real   | Kiche_43        |  94.11%              | 0.0589       | 10  | (Promedio de 10 archivos)
+temp_1_0        | Kiche_43        |  90.85%              | 0.0915       | 1   | Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_1.xml
+temp_1_5        | Kiche_43        |  89.97%              | 0.1003       | 1   | Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_1.xml
+temp_0_5        | Kiche_43        |  85.19%              | 0.1481       | 1   | Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_1.xml
+temp_0_1        | Mam_80          |  97.41%              | 0.0259       | 4   | (Promedio de 4 archivos)
+temp_0_0_real   | Mam_80          |  96.56%              | 0.0344       | 10  | (Promedio de 10 archivos)
+temp_1_5        | Mam_80          |  95.20%              | 0.0480       | 1   | Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml
+temp_0_25       | Mam_80          |  93.59%              | 0.0641       | 1   | Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml
+temp_0_5        | Mam_80          |  93.59%              | 0.0641       | 1   | Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml
+temp_1_0        | Mam_80          |  93.59%              | 0.0641       | 1   | Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml
