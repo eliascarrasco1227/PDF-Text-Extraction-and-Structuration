@@ -53,5 +53,22 @@
 #REFERENCE_XML = "../test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"
 #HYPOTHESIS_XML = "../output/experiment_results/temp_0_0/Kaqchikel_172/G"
 
-REFERENCE_XML = "../test_set/Gramatica-Normativa-Mam_páginas_80.xml"
-HYPOTHESIS_XML = "../output/experiment_results/temp_0_0/Mam_80/G"
+REFERENCE_XML = "../test_set/Gramatica-Normativa-Kiche_páginas_43.xml"
+HYPOTHESIS_XML = "../output/experiment_results/temp_1_5/Kiche_43/G"
+
+
+import os
+
+# --- NUEVA CONFIGURACIÓN PARA EVALUACIÓN MASIVA ---
+
+# Ruta base donde están todas las carpetas de temperaturas (temp_0_1, temp_0_5, etc.)
+EXPERIMENTS_DIR = os.path.join("..", "output", "experiment_results")
+
+# Mapeo: "Nombre de la carpeta del caso" -> "Ruta del XML de Referencia (Gold Standard)"
+# Asegúrate de que las rutas relativas apuntan correctamente a tu carpeta test_set
+TEST_CASE_MAPPING = {
+    "Kaqchikel_146": os.path.join("..", "test_set", "Gramatica-Normativa-Kaqchikel_páginas_146.xml"),
+    "Kaqchikel_172": os.path.join("..", "test_set", "Gramatica-Normativa-Kaqchikel_páginas_172.xml"),
+    "Kiche_43":      os.path.join("..", "test_set", "Gramatica-Normativa-Kiche_páginas_43.xml"),
+    "Mam_80":        os.path.join("..", "test_set", "Gramatica-Normativa-Mam_páginas_80.xml")
+}

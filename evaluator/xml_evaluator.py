@@ -1,142 +1,111 @@
-import xml.etree.ElementTree as ET
-import lxml.etree as etree 
+import os
+import glob
+import re
 from jiwer import cer
 from pathlib import Path
-import re 
-# Asegúrate de que 'properties' exista y contenga REFERENCE_XML, HYPOTHESIS_XML
-from properties import REFERENCE_XML, HYPOTHESIS_XML 
 
-def extract_text_from_xml(xml_path: str) -> str:
+# Importación de configuración
+try:
+    from properties import EXPERIMENTS_DIR, TEST_CASE_MAPPING
+except ImportError:
+    print("❌ Error: Revisa properties.py para asegurar que EXPERIMENTS_DIR y TEST_CASE_MAPPING están definidos.")
+    exit()
+
+def get_raw_content_strict(file_path: str) -> str:
     """
-    Lee un archivo XML de forma robusta usando lxml para intentar la recuperación
-    en caso de errores de parseo.
+    Lee el archivo tal cual es (Raw).
+    Solo limpia los bloques de código Markdown para que la comparación sea justa
+    con el contenido XML real.
     """
-    xml_path = Path(xml_path) 
-    if not xml_path.exists():
-        print(f"Error: Archivo no encontrado en la ruta: {xml_path}")
+    path_obj = Path(file_path)
+    if not path_obj.exists():
         return ""
-        
+
     try:
-        # 1. Leer el contenido como una cadena
-        with open(xml_path, 'r', encoding='utf-8') as f:
-            xml_content = f.read()
+        with open(path_obj, 'r', encoding='utf-8') as f:
+            content = f.read()
 
-        # 2. Reemplazar caracteres problemáticos comunes ANTES del parseo.
-        xml_content = xml_content.replace('&', '&amp;')
+        # --- LIMPIEZA ÚNICA: MARKDOWN ---
+        # Solo quitamos ```xml al inicio y ``` al final.
+        # Todo lo demás (etiquetas, espacios, saltos de línea) SE MANTIENE para el CER.
+        content = re.sub(r'^```\w*\s*', '', content.strip()) # Quita ```xml del inicio
+        content = re.sub(r'```\s*$', '', content.strip())    # Quita ``` del final
         
-        # 3. Usar lxml con el parser de recuperación (RECOVERY)
-        parser = etree.XMLParser(recover=True, encoding='utf-8')
-        
-        # 4. Parsear desde la cadena de texto
-        root = etree.fromstring(xml_content.encode('utf-8'), parser=parser)
-        
-        # 5. Extraer el texto de forma recursiva
-        text_content = ' '.join(root.itertext()).strip()
-        clean_text = ' '.join(text_content.split())
-        
-        return clean_text
-    
+        return content.strip() # Un strip final por seguridad
+
     except Exception as e:
-        # Captura cualquier error de lxml o IO
-        print(f"Error: No se pudo parsear (o leer) el archivo XML en la ruta: {xml_path}.")
+        print(f"❌ Error leyendo {path_obj.name}: {e}")
         return ""
 
-
-def get_hypothesis_paths(base_hypothesis_path: str) -> list[str]:
-    """
-    Determina si la ruta es un archivo exacto (.xml) o una base para buscar
-    múltiples versiones.
-    """
-    base_path = Path(base_hypothesis_path)
-
-    # Lógica 1: Si la ruta termina en '.xml', tratarla como un archivo único.
-    if base_path.suffix == '.xml':
-        if base_path.exists():
-            return [str(base_path)]
+def run_batch_evaluation():
+    print(f"🚀 Iniciando Evaluación ESTRICTA (Raw XML) desde: {EXPERIMENTS_DIR}\n")
+    results = []
+    
+    # 1. Verificación de Referencias
+    print("--- Verificando Referencias ---")
+    for case, ref in TEST_CASE_MAPPING.items():
+        content = get_raw_content_strict(ref)
+        if content:
+            print(f"✔ {case}: Referencia cargada ({len(content)} caracteres).")
         else:
-            print(f"Advertencia: Archivo único especificado no encontrado: {base_hypothesis_path}")
-            return []
+            print(f"❌ {case}: Referencia VACÍA o no encontrada en {ref}")
+    print("-" * 50 + "\n")
 
-    # Lógica 2 (La que se usaba antes): Si no termina en '.xml', buscar con comodín.
-    else:
-        parent_dir = base_path.parent
-        base_name_prefix = base_path.name 
-        
-        search_pattern = f"{base_name_prefix}*.xml"
-        
-        found_files = list(parent_dir.glob(search_pattern))
-        
+    # 2. Bucle de Evaluación
+    for case_folder_name, reference_path in TEST_CASE_MAPPING.items():
+        # Busca en todas las carpetas de temperatura
+        search_pattern = os.path.join(EXPERIMENTS_DIR, "temp_*", case_folder_name, "*.xml")
+        found_files = glob.glob(search_pattern)
+
         if not found_files:
-             search_pattern = f"{base_path.name}*.xml"
-             found_files = list(parent_dir.glob(search_pattern))
+            continue
 
-        return [str(f) for f in found_files]
+        # Cargamos el texto de referencia UNA vez por caso
+        ref_text = get_raw_content_strict(reference_path)
+        if not ref_text: continue # Si falla la ref, saltamos
 
+        for hypothesis_path in found_files:
+            try:
+                # Extraer info del path
+                path_parts = os.path.normpath(hypothesis_path).split(os.sep)
+                temp_name = path_parts[-3] 
+                file_name = os.path.basename(hypothesis_path)
 
-def calculate_character_error_rate(reference_path: str, base_hypothesis_path: str) -> dict:
-    """
-    Calcula la Tasa de Error de Carácter (CER) para una referencia contra 
-    uno o múltiples archivos de hipótesis.
-    """
-    
-    # 1. Extraer el texto de referencia UNA SOLA VEZ
-    reference_text = extract_text_from_xml(reference_path)
-    if not reference_text:
-        return {"Error": "No se pudo extraer el texto de referencia."}
-
-    # 2. Obtener la lista de archivos de hipótesis usando la nueva lógica
-    hypothesis_paths = get_hypothesis_paths(base_hypothesis_path)
-    
-    if not hypothesis_paths:
-        return {"Error": f"No se encontraron archivos de hipótesis para la ruta/prefijo: {base_hypothesis_path}"}
-    
-    results = {}
-    
-    # 3. Iterar sobre todos los archivos encontrados y calcular el CER
-    for h_path in hypothesis_paths:
-        hypothesis_text = extract_text_from_xml(h_path)
-        
-        if not hypothesis_text:
-            # Usamos -1.0 para indicar un error de parseo o archivo
-            results[Path(h_path).name] = -1.0
-            continue 
-        
-        error_rate = cer(reference_text, hypothesis_text)
-        results[Path(h_path).name] = error_rate
-        
-    return results
-
-if __name__ == '__main__':
-    
-    all_cer_results = calculate_character_error_rate(REFERENCE_XML, HYPOTHESIS_XML)
-    
-    print("\n--- Resultados del Análisis CER para Hipótesis ---")
-    
-    if isinstance(all_cer_results, dict) and "Error" in all_cer_results:
-        print(all_cer_results["Error"])
-    else:
-        valid_percentages = []
-        
-        # 1. Imprimir resultados individuales y recopilar porcentajes
-        for filename, cer_result in all_cer_results.items():
-            if cer_result >= 0:
-                similitud_percent = (1 - cer_result) * 100
-                valid_percentages.append(similitud_percent)
+                # --- CÁLCULO CER ESTRICTO ---
+                hyp_text = get_raw_content_strict(hypothesis_path)
                 
-                print(f"\nArchivo Hipótesis: {filename}")
-                print(f"  Character Error Rate (CER): {cer_result:.4f}")
-                print(f"  Similitud del Texto: {similitud_percent:.2f}%")
-            else:
-                print(f"\nArchivo Hipótesis: {filename}")
-                # El error de parseo se imprime dentro de extract_text_from_xml
-                print("  El cálculo falló (error de parseo o archivo no encontrado).")
+                if not hyp_text:
+                    score = 1.0 # Archivo vacío o ilegible
+                else:
+                    score = cer(ref_text, hyp_text)
 
-        # 2. Calcular e imprimir la media
-        print("\n" + "="*40)
-        if valid_percentages:
-            average_percentage = sum(valid_percentages) / len(valid_percentages)
-            
-            print(f"✅ MEDIA DE SIMILITUD (N={len(valid_percentages)}): {average_percentage:.2f}%")
-        else:
-            print("❌ No hay resultados válidos para calcular la media.")
-        print("="*40)
+                # Guardamos
+                results.append({
+                    "Temp": temp_name,
+                    "Caso": case_folder_name,
+                    "Archivo": file_name,
+                    "CER": score,
+                    "Similitud %": (1 - score) * 100
+                })
+
+            except Exception as e:
+                print(f"❌ Error en {file_name}: {e}")
+
+    # 3. Tabla Final
+    print("\n" + "="*100)
+    print(f"{'TEMP':<15} | {'CASO':<15} | {'SIMILITUD (ESTRICTA)':<22} | {'CER':<8} | {'ARCHIVO'}")
+    print("="*100)
+    
+    # Ordenar: Caso -> Mejor Similitud
+    results.sort(key=lambda x: (x["Caso"], -x["Similitud %"]))
+
+    for r in results:
+        # Formateo visual
+        sim_str = f"{r['Similitud %']:6.2f}%"
+        if r['Similitud %'] < 0: sim_str = "   0.00% (Neg)" # CER > 1 da sim negativa
+        if r['CER'] == 1.0: sim_str = "   0.00% ⚠️"
+
+        print(f"{r['Temp']:<15} | {r['Caso']:<15} | {sim_str:<22} | {r['CER']:.4f}   | {r['Archivo']}")
+
+if __name__ == "__main__":
+    run_batch_evaluation()
