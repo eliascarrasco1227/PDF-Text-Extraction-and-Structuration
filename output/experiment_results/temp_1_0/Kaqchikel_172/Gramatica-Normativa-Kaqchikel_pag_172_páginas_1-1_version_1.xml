@@ -15,12 +15,44 @@
                 </paralel_phrase>
                 <morpheme_analysis>
                     <unit>
-                        <form>Xb'e</form>
-                        <gloss>COM-B3s-MOV-</gloss>
+                        <form>Xb'entz'et-</form>
+                        <gloss>MOV-Als-ver-</gloss>
                     </unit>
                     <unit>
-                        <form>ntz'et-a'</form>
-                        <gloss>Als-ver-SC</gloss>
+                        <form>a'</form>
+                        <gloss>SVT</gloss>
+                    </unit>
+                </morpheme_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>X-0-b'e-n-tz'et-a'</original>
+                    <translation></translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>X-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>0-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>b'e-</form>
+                        <gloss>MOV-</gloss>
+                    </unit>
+                    <unit>
+                        <form>n-</form>
+                        <gloss>Als-</gloss>
+                    </unit>
+                    <unit>
+                        <form>tz'et-</form>
+                        <gloss>ver-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a'</form>
+                        <gloss>SC</gloss>
                     </unit>
                 </morpheme_analysis>
                 <syntactic_analysis>
@@ -47,16 +79,22 @@
             <linea>Marca el objeto en el verbo:</linea>
             <interlinear_gloss>
                 <paralel_phrase>
-                    <original>...kan jeb’ël ok xerutz’ët ri ch’uta’q xtani’ rija’...</original>
+                    <original>...kan jeb'ël ok xerutz'ët ri ch'uta'q xtani' rija'...</original>
                     <translation>...vio muy hermosas a las niñas...</translation>
                 </paralel_phrase>
                 <morpheme_analysis>
+                    <unit>
+                        <form>x-e-ru-tz'ët</form>
+                        <gloss>COM-B3p-A3s-ver</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
                     <unit>
                         <form>kan</form>
                         <gloss>PAR</gloss>
                     </unit>
                     <unit>
-                        <form>jeb’ël</form>
+                        <form>jeb'ël</form>
                         <gloss>hermosa</gloss>
                     </unit>
                     <unit>
@@ -64,15 +102,11 @@
                         <gloss>DIR</gloss>
                     </unit>
                     <unit>
-                        <form>x-e-ru-tz'ët</form>
-                        <gloss>COM-B3p-A3s-ver</gloss>
-                    </unit>
-                    <unit>
                         <form>ri</form>
                         <gloss>DET</gloss>
                     </unit>
                     <unit>
-                        <form>ch’uta’q</form>
+                        <form>ch'uta'q</form>
                         <gloss>DIM</gloss>
                     </unit>
                     <unit>
@@ -83,7 +117,7 @@
                         <form>rija'...</form>
                         <gloss>él</gloss>
                     </unit>
-                </morpheme_analysis>
+                </syntactic_analysis>
             </interlinear_gloss>
         </seccion>
         <seccion type="Marca el sujeto en el verbo">
@@ -95,24 +129,14 @@
                 </paralel_phrase>
                 <morpheme_analysis>
                     <unit>
-                        <form>X-</form>
-                        <gloss>COM-</gloss>
+                        <form>X-0-ki-löq'</form>
+                        <gloss>COM-B3s-A3p-comprar</gloss>
                     </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
                     <unit>
-                        <form>Ø-</form>
-                        <gloss>B3s-</gloss>
-                    </unit>
-                    <unit>
-                        <form>ki-löq</form>
-                        <gloss>A3p-comprar</gloss>
-                    </unit>
-                    <unit>
-                        <form>jun</form>
+                        <form>jun uqaj</form>
                         <gloss>IND</gloss>
-                    </unit>
-                    <unit>
-                        <form>uqaj</form>
-                        <gloss>corte</gloss>
                     </unit>
                     <unit>
                         <form>ri</form>
@@ -126,7 +150,7 @@
                         <form>achi'-a'.</form>
                         <gloss>hombre-PL</gloss>
                     </unit>
-                </morpheme_analysis>
+                </syntactic_analysis>
             </interlinear_gloss>
             <interlinear_gloss>
                 <paralel_phrase>
@@ -135,17 +159,11 @@
                 </paralel_phrase>
                 <morpheme_analysis>
                     <unit>
-                        <form>X-</form>
-                        <gloss>COM-</gloss>
+                        <form>X-0-u-sip-a-j</form>
+                        <gloss>COM-B3s-A3s-regalar-BV-SC</gloss>
                     </unit>
-                    <unit>
-                        <form>Ø-</form>
-                        <gloss>B3s-</gloss>
-                    </unit>
-                    <unit>
-                        <form>u-sip-a-j</form>
-                        <gloss>A3s-regalar-BV-SC</gloss>
-                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
                     <unit>
                         <form>ri</form>
                         <gloss>DET</gloss>
@@ -162,7 +180,7 @@
                         <form>xtän.</form>
                         <gloss>señorita</gloss>
                     </unit>
-                </morpheme_analysis>
+                </syntactic_analysis>
             </interlinear_gloss>
         </seccion>
         <seccion type="Marca movimiento en el verbo">
@@ -182,20 +200,23 @@
         </seccion>
     </pagina>
     <pagina num="171">
-        <linea>171</linea>
-        <linea>ING</linea>
-        <linea>X</linea>
-        <linea>CO</linea>
-        <linea>X</linea>
-        <linea>E</linea>
-        <linea>Ot</linea>
-        <linea>a</linea>
-        <linea>et</linea>
-        <linea>a</linea>
-        <linea>C</linea>
-        <linea>C</linea>
-        <linea>H</linea>
-        <linea>g</linea>
-        <linea>a</linea>
+        <seccion type="Demostrativo">
+            <linea>ING</linea>
+            <linea>X</linea>
+            <linea>CO</linea>
+            <linea>X</linea>
+            <linea>E</linea>
+            <linea>Ot</linea>
+            <linea>a</linea>
+            <linea>et</linea>
+            <linea>a</linea>
+            <linea>c</linea>
+            <linea>c</linea>
+            <linea>e</linea>
+            <linea>c</linea>
+            <linea>H</linea>
+            <linea>g</linea>
+            <linea>a</linea>
+        </seccion>
     </pagina>
 </documento>

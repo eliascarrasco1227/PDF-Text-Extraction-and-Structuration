@@ -34,5 +34,7 @@ TEMPERATURE = 0.0
 
 GEMINI_MODEL = 'gemini-2.5-flash-lite'  # Modelo de Gemini a usar
 
+
+
 # Evaluator
 # Las variables de evaluator están en evaluator/properties.py

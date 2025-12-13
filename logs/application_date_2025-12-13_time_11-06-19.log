@@ -1,0 +1,381 @@
+2025-12-13 11:06:19 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-12-13_time_11-06-19.log
+2025-12-13 11:06:22 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:06:22 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:06:22 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:06:22 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:06:22 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:06:22 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel_pag_146.pdf
+2025-12-13 11:06:22 - pdf_processor - INFO - 🌡️  Temp:      0.1
+2025-12-13 11:06:22 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_0_1\Kaqchikel_146
+2025-12-13 11:06:22 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:06:22 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:06:22 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:06:22 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.1...
+2025-12-13 11:06:22 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:06:22 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:06:33 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:06:33 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:06:33 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:06:33 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_1.xml
+2025-12-13 11:06:33 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_0_1\Kaqchikel_146\Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_1.xml
+2025-12-13 11:06:36 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:06:36 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:06:36 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:06:36 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:06:36 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:06:36 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel_pag_172.pdf
+2025-12-13 11:06:36 - pdf_processor - INFO - 🌡️  Temp:      0.1
+2025-12-13 11:06:36 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_0_1\Kaqchikel_172
+2025-12-13 11:06:36 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:06:36 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:06:36 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:06:36 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.1...
+2025-12-13 11:06:36 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:06:36 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:06:45 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:06:45 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:06:45 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:06:45 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+2025-12-13 11:06:45 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_0_1\Kaqchikel_172\Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+2025-12-13 11:06:48 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:06:48 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:06:48 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:06:48 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:06:48 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:06:48 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kiche_pag_44.pdf
+2025-12-13 11:06:48 - pdf_processor - INFO - 🌡️  Temp:      0.1
+2025-12-13 11:06:48 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_0_1\Kiche_43
+2025-12-13 11:06:48 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:06:48 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:06:48 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:06:48 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.1...
+2025-12-13 11:06:48 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:06:48 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:06:56 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:06:56 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:06:56 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:06:56 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_1.xml
+2025-12-13 11:06:56 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_0_1\Kiche_43\Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_1.xml
+2025-12-13 11:06:59 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:06:59 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:06:59 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:06:59 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:06:59 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:06:59 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Mam_pag_80.pdf
+2025-12-13 11:06:59 - pdf_processor - INFO - 🌡️  Temp:      0.1
+2025-12-13 11:06:59 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_0_1\Mam_80
+2025-12-13 11:06:59 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:06:59 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:06:59 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:06:59 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.1...
+2025-12-13 11:07:00 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:07:00 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:07:07 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:07:07 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:07:07 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:07:07 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml
+2025-12-13 11:07:07 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_0_1\Mam_80\Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml
+2025-12-13 11:07:10 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:07:10 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:07:10 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:07:10 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:07:10 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:07:10 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel_pag_146.pdf
+2025-12-13 11:07:10 - pdf_processor - INFO - 🌡️  Temp:      0.25
+2025-12-13 11:07:10 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_0_25\Kaqchikel_146
+2025-12-13 11:07:10 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:07:10 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:07:10 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:07:10 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.25...
+2025-12-13 11:07:10 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:07:10 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:07:20 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:07:20 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:07:20 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:07:20 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_1.xml
+2025-12-13 11:07:20 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_0_25\Kaqchikel_146\Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_1.xml
+2025-12-13 11:07:23 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:07:23 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:07:23 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:07:23 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:07:23 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:07:23 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel_pag_172.pdf
+2025-12-13 11:07:23 - pdf_processor - INFO - 🌡️  Temp:      0.25
+2025-12-13 11:07:23 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_0_25\Kaqchikel_172
+2025-12-13 11:07:23 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:07:23 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:07:23 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:07:23 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.25...
+2025-12-13 11:07:23 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:07:23 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:07:32 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:07:32 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:07:32 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:07:32 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+2025-12-13 11:07:32 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_0_25\Kaqchikel_172\Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+2025-12-13 11:07:36 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:07:36 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:07:36 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:07:36 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:07:36 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:07:36 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kiche_pag_44.pdf
+2025-12-13 11:07:36 - pdf_processor - INFO - 🌡️  Temp:      0.25
+2025-12-13 11:07:36 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_0_25\Kiche_43
+2025-12-13 11:07:36 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:07:36 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:07:36 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:07:36 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.25...
+2025-12-13 11:07:36 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:07:36 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:07:46 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:07:46 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:07:46 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:07:46 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_1.xml
+2025-12-13 11:07:46 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_0_25\Kiche_43\Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_1.xml
+2025-12-13 11:07:49 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:07:49 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:07:49 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:07:49 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:07:49 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:07:49 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Mam_pag_80.pdf
+2025-12-13 11:07:49 - pdf_processor - INFO - 🌡️  Temp:      0.25
+2025-12-13 11:07:49 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_0_25\Mam_80
+2025-12-13 11:07:49 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:07:49 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:07:49 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:07:49 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.25...
+2025-12-13 11:07:49 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:07:49 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:07:57 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:07:57 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:07:57 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:07:57 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml
+2025-12-13 11:07:57 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_0_25\Mam_80\Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml
+2025-12-13 11:07:59 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:07:59 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:07:59 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:07:59 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:07:59 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:07:59 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel_pag_146.pdf
+2025-12-13 11:07:59 - pdf_processor - INFO - 🌡️  Temp:      0.5
+2025-12-13 11:07:59 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_0_5\Kaqchikel_146
+2025-12-13 11:07:59 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:07:59 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:07:59 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:07:59 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.5...
+2025-12-13 11:07:59 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:07:59 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:08:09 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:08:09 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:08:09 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:08:09 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_1.xml
+2025-12-13 11:08:09 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_0_5\Kaqchikel_146\Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_1.xml
+2025-12-13 11:08:11 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:08:11 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:08:11 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:08:11 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:08:11 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:08:11 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel_pag_172.pdf
+2025-12-13 11:08:11 - pdf_processor - INFO - 🌡️  Temp:      0.5
+2025-12-13 11:08:11 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_0_5\Kaqchikel_172
+2025-12-13 11:08:11 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:08:11 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:08:11 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:08:11 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.5...
+2025-12-13 11:08:11 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:08:11 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:08:25 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:08:25 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:08:25 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:08:25 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+2025-12-13 11:08:25 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_0_5\Kaqchikel_172\Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+2025-12-13 11:08:27 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:08:27 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:08:27 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:08:27 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:08:27 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:08:27 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kiche_pag_44.pdf
+2025-12-13 11:08:27 - pdf_processor - INFO - 🌡️  Temp:      0.5
+2025-12-13 11:08:27 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_0_5\Kiche_43
+2025-12-13 11:08:27 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:08:27 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:08:27 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:08:27 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.5...
+2025-12-13 11:08:27 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:08:27 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:08:35 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:08:35 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:08:35 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:08:35 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_1.xml
+2025-12-13 11:08:35 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_0_5\Kiche_43\Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_1.xml
+2025-12-13 11:08:37 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:08:37 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:08:37 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:08:37 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:08:37 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:08:37 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Mam_pag_80.pdf
+2025-12-13 11:08:37 - pdf_processor - INFO - 🌡️  Temp:      0.5
+2025-12-13 11:08:37 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_0_5\Mam_80
+2025-12-13 11:08:37 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:08:37 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:08:37 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:08:37 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.5...
+2025-12-13 11:08:37 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:08:37 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:08:43 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:08:43 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:08:43 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:08:43 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml
+2025-12-13 11:08:43 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_0_5\Mam_80\Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml
+2025-12-13 11:08:46 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:08:46 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:08:46 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:08:46 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:08:46 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:08:46 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel_pag_146.pdf
+2025-12-13 11:08:46 - pdf_processor - INFO - 🌡️  Temp:      1.0
+2025-12-13 11:08:46 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_1_0\Kaqchikel_146
+2025-12-13 11:08:46 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:08:46 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:08:46 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:08:46 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 1.0...
+2025-12-13 11:08:46 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:08:46 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:08:55 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:08:55 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:08:55 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:08:55 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_1.xml
+2025-12-13 11:08:55 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_1_0\Kaqchikel_146\Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_1.xml
+2025-12-13 11:08:58 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:08:58 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:08:58 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:08:58 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:08:58 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:08:58 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel_pag_172.pdf
+2025-12-13 11:08:58 - pdf_processor - INFO - 🌡️  Temp:      1.0
+2025-12-13 11:08:58 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_1_0\Kaqchikel_172
+2025-12-13 11:08:58 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:08:58 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:08:58 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:08:58 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 1.0...
+2025-12-13 11:08:58 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:08:58 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:09:07 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:09:07 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:09:07 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:09:07 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+2025-12-13 11:09:07 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_1_0\Kaqchikel_172\Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+2025-12-13 11:09:09 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:09:09 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:09:09 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:09:09 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:09:09 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:09:09 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kiche_pag_44.pdf
+2025-12-13 11:09:09 - pdf_processor - INFO - 🌡️  Temp:      1.0
+2025-12-13 11:09:09 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_1_0\Kiche_43
+2025-12-13 11:09:09 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:09:09 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:09:09 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:09:09 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 1.0...
+2025-12-13 11:09:09 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:09:09 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:09:17 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:09:17 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:09:17 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:09:17 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_1.xml
+2025-12-13 11:09:17 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_1_0\Kiche_43\Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_1.xml
+2025-12-13 11:09:20 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:09:20 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:09:20 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:09:20 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:09:20 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:09:20 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Mam_pag_80.pdf
+2025-12-13 11:09:20 - pdf_processor - INFO - 🌡️  Temp:      1.0
+2025-12-13 11:09:20 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_1_0\Mam_80
+2025-12-13 11:09:20 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:09:20 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:09:20 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:09:20 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 1.0...
+2025-12-13 11:09:20 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:09:20 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:09:27 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:09:27 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:09:27 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:09:27 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml
+2025-12-13 11:09:27 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_1_0\Mam_80\Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml
+2025-12-13 11:09:30 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:09:30 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:09:30 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:09:30 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:09:30 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:09:30 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel_pag_146.pdf
+2025-12-13 11:09:30 - pdf_processor - INFO - 🌡️  Temp:      1.5
+2025-12-13 11:09:30 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_1_5\Kaqchikel_146
+2025-12-13 11:09:30 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:09:30 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:09:30 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:09:30 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 1.5...
+2025-12-13 11:09:30 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:09:30 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:09:39 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:09:39 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:09:39 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:09:39 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_1.xml
+2025-12-13 11:09:39 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_1_5\Kaqchikel_146\Gramatica-Normativa-Kaqchikel_pag_146_páginas_1-1_version_1.xml
+2025-12-13 11:09:41 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:09:41 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:09:41 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:09:41 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:09:41 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:09:41 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel_pag_172.pdf
+2025-12-13 11:09:41 - pdf_processor - INFO - 🌡️  Temp:      1.5
+2025-12-13 11:09:41 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_1_5\Kaqchikel_172
+2025-12-13 11:09:41 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:09:41 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:09:41 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:09:41 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 1.5...
+2025-12-13 11:09:41 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:09:41 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:09:57 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:09:57 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:09:57 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:09:57 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+2025-12-13 11:09:57 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_1_5\Kaqchikel_172\Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.xml
+2025-12-13 11:09:59 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:09:59 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:09:59 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:09:59 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:09:59 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:09:59 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kiche_pag_44.pdf
+2025-12-13 11:09:59 - pdf_processor - INFO - 🌡️  Temp:      1.5
+2025-12-13 11:09:59 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_1_5\Kiche_43
+2025-12-13 11:09:59 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:09:59 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:09:59 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:09:59 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 1.5...
+2025-12-13 11:09:59 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:09:59 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:10:10 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:10:10 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:10:10 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:10:10 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_1.xml
+2025-12-13 11:10:10 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_1_5\Kiche_43\Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_1.xml
+2025-12-13 11:10:12 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 11:10:12 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 11:10:12 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 11:10:12 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 11:10:12 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:10:12 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Mam_pag_80.pdf
+2025-12-13 11:10:12 - pdf_processor - INFO - 🌡️  Temp:      1.5
+2025-12-13 11:10:12 - pdf_processor - INFO - 📂 Salida:    output/experiment_results\temp_1_5\Mam_80
+2025-12-13 11:10:12 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 11:10:12 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 11:10:12 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 11:10:12 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 1.5...
+2025-12-13 11:10:12 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 11:10:12 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 11:10:18 - pdf_processor - INFO - ██████████ 100%
+2025-12-13 11:10:18 - pdf_processor - INFO - ---------------------------------
+2025-12-13 11:10:18 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2025-12-13 11:10:18 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml
+2025-12-13 11:10:18 - pdf_processor - INFO - ✅ Guardado correctamente en: output/experiment_results\temp_1_5\Mam_80\Gramatica-Normativa-Mam_pag_80_páginas_1-1_version_1.xml

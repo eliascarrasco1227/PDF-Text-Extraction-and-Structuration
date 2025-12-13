@@ -4,8 +4,8 @@ from main import DocumentProcessor
 from config.properties import PROMPT_PATH
 
 # --- CONFIGURACIÓN DEL EXPERIMENTO ---
-TEMPERATURES = [0.0, 0.1, 0.25, 0.5, 1.0, 1.5, 2.0]
-ITERATIONS = 5
+TEMPERATURES = [0.1, 0.25, 0.5, 1.0, 1.5]
+ITERATIONS = 1
 
 # Definimos tus casos de test (Ruta del PDF, Páginas)
 # Nota: Como main.py procesa lo que digan las propiedades, aquí trucaremos un poco

@@ -1,0 +1,17 @@
+2025-12-13 10:56:32 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-12-13_time_10-56-32.log
+2025-12-13 10:56:35 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2025-12-13 10:56:35 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2025-12-13 10:56:35 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2025-12-13 10:56:35 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2025-12-13 10:56:35 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 10:56:35 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kiche_pag_44.pdf
+2025-12-13 10:56:35 - pdf_processor - INFO - 🌡️  Temp:      0.0
+2025-12-13 10:56:35 - pdf_processor - INFO - 📂 Salida:    output
+2025-12-13 10:56:35 - pdf_processor - INFO - 📖 Rango:     todas las páginas
+2025-12-13 10:56:35 - pdf_processor - INFO - ----------------------------------------
+2025-12-13 10:56:35 - pdf_processor - INFO - 📜 Leyendo prompt...
+2025-12-13 10:56:35 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.0...
+2025-12-13 10:56:35 - pdf_processor - INFO - 📄 Procesando TODAS las páginas del PDF (1-1)
+2025-12-13 10:56:35 - pdf_processor - INFO - 📖 Procesando páginas 1 a 1 (1 páginas)...
+2025-12-13 10:56:35 - pdf_processor - ERROR - ❌ Error inesperado: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2025-12-13 10:56:35 - pdf_processor - ERROR - ❌ Error durante el proceso: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}

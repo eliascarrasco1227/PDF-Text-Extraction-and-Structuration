@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kaqchikel_pag_172.pdf" paginas="1-1" fecha="1764088427.9015613">
+<pagina num="170">
+        <linea>(plural) del objeto y sujeto. La palabra principal incluye primeramente el tiempo/aspecto</linea>
+        <linea>o modo (excepto en el perfectivo que es la última), seguido por el juego absolutivo,</linea>
+        <linea>juego ergativo, la raíz o base en calidad de obligatorios y sufijos de categoría en casos</linea>
+        <linea>específicos (si el verbo es derivado). Como elementos opcionales incluye el movimiento,</linea>
+        <linea>su posición es siempre antes del juego ergativo. Ejemplos:</linea>
+        <seccion type="Marca de tiempo/aspecto/modo:">
+            <linea>Marca de tiempo/aspecto/modo:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Xb'entz'eta' na kan ri ak'wal.</original>
+                    <translation>Todavía fui a ver al niño.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>Xb'e</form>
+                        <gloss>COM-MOV-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ntz'et-</form>
+                        <gloss>ver-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a'</form>
+                        <gloss>Als-</gloss>
+                    </unit>
+                    <unit>
+                        <form>na</form>
+                        <gloss>SVT</gloss>
+                    </unit>
+                    <unit>
+                        <form>kan</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>ak'wal</form>
+                        <gloss>niño</gloss>
+                    </unit>
+                </morpheme_analysis>
+            </interlinear_gloss>
+        </seccion>
+        <seccion type="Marca el objeto en el verbo:">
+            <linea>Marca el objeto en el verbo:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...kan jeb’ël ok xerutz’ët ri ch’uta’q xtani’ rija’...</original>
+                    <translation>...vio muy hermosas a las niñas...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>kan</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>jeb’ël</form>
+                        <gloss>hermosa</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>x-e-ru-tz'ët</form>
+                        <gloss>COM-B3p-A3s-ver</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>ch’uta’q</form>
+                        <gloss>DIM</gloss>
+                    </unit>
+                    <unit>
+                        <form>xtani’</form>
+                        <gloss>Niña-PL</gloss>
+                    </unit>
+                    <unit>
+                        <form>rija’...</form>
+                        <gloss>él</gloss>
+                    </unit>
+                </morpheme_analysis>
+            </interlinear_gloss>
+        </seccion>
+        <seccion type="Marca el sujeto en el verbo:">
+            <linea>Marca el sujeto en el verbo:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Xkilöq' jun uqaj ri ka'i' achi'a'.</original>
+                    <translation>Los dos hombres compraron un corte.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>X-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>Ø-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ki-</form>
+                        <gloss>A3p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>löq</form>
+                        <gloss>comprar</gloss>
+                    </unit>
+                    <unit>
+                        <form>jun</form>
+                        <gloss>IND</gloss>
+                    </unit>
+                    <unit>
+                        <form>uqaj</form>
+                        <gloss>corte</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>ka'i'</form>
+                        <gloss>dos</gloss>
+                    </unit>
+                    <unit>
+                        <form>achi'-a'.</form>
+                        <gloss>hombre-PL</gloss>
+                    </unit>
+                </morpheme_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Xusipaj ri xkoya' ri xtän.</original>
+                    <translation>La señorita regaló el tomate.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>X-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>Ø-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>u-</form>
+                        <gloss>A3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>sip-</form>
+                        <gloss>regalar-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a-</form>
+                        <gloss>BV-</gloss>
+                    </unit>
+                    <unit>
+                        <form>j</form>
+                        <gloss>SC</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>xkoya'</form>
+                        <gloss>tomate</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>xtän.</form>
+                        <gloss>señorita</gloss>
+                    </unit>
+                </morpheme_analysis>
+            </interlinear_gloss>
+        </seccion>
+        <seccion type="Marca movimiento en el verbo:">
+            <linea>Marca movimiento en el verbo:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...nb'esamäj qatata', nb'eqato'....</original>
+                    <translation>...nuestro papá va a trabajar, vamos a ayudarlo....</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>n-</form>
+                        <gloss>INC-</gloss>
+                    </unit>
+                    <unit>
+                        <form>Ø-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>b'e-</form>
+                        <gloss>MOV-</gloss>
+                    </unit>
+                    <unit>
+                        <form>samäj</form>
+                        <gloss>trabajar</gloss>
+                    </unit>
+                    <unit>
+                        <form>qatata',</form>
+                        <gloss>nuestro papá</gloss>
+                    </unit>
+                    <unit>
+                        <form>nb'eqato'....</form>
+                        <gloss>vamos a ayudarlo</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>nb'eqato'</form>
+                        <gloss>SVT</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+        </seccion>
+    </pagina>
+    <pagina num="171">
+        <seccion type="ING">
+            <linea>ING</linea>
+        </seccion>
+        <seccion type="X">
+            <linea>X</linea>
+        </seccion>
+        <seccion type="CO">
+            <linea>CO</linea>
+        </seccion>
+        <seccion type="X-0-b'e-n-tz'et-a'">
+            <linea>X-0-b'e-n-tz'et-a'</linea>
+        </seccion>
+        <seccion type="COM-B3S-MOV-Als-ver-SC">
+            <linea>COM-B3S-MOV-Als-ver-SC</linea>
+        </seccion>
+        <seccion type="na kan ri ak'wal">
+            <linea>na kan ri ak'wal</linea>
+        </seccion>
+        <seccion type="PAR DIR DET niño">
+            <linea>PAR DIR DET niño</linea>
+        </seccion>
+        <seccion type="E">
+            <linea>E</linea>
+        </seccion>
+        <seccion type="Ot">
+            <linea>Ot</linea>
+        </seccion>
+        <seccion type="a">
+            <linea>a</linea>
+        </seccion>
+        <seccion type="et">
+            <linea>et</linea>
+        </seccion>
+        <seccion type="a">
+            <linea>a</linea>
+        </seccion>
+        <seccion type="c">
+            <linea>c</linea>
+        </seccion>
+        <seccion type="c">
+            <linea>c</linea>
+        </seccion>
+        <seccion type="H">
+            <linea>H</linea>
+        </seccion>
+        <seccion type="SVT">
+            <linea>SVT</linea>
+        </seccion>
+        <seccion type="...kan jeb’ël ok xerutz’ët ri ch’uta’q xtani’ rija’...">
+            <linea>...kan jeb’ël ok xerutz’ët ri ch’uta’q xtani’ rija’...</linea>
+        </seccion>
+        <seccion type="...vio muy hermosas a las niñas...">
+            <linea>...vio muy hermosas a las niñas...</linea>
+        </seccion>
+        <seccion type="...kan jeb’ël ok">
+            <linea>...kan jeb’ël ok</linea>
+        </seccion>
+        <seccion type="x-e-ru-tz'ët">
+            <linea>x-e-ru-tz'ët</linea>
+        </seccion>
+        <seccion type="ri">
+            <linea>ri</linea>
+        </seccion>
+        <seccion type="ch’uta’q">
+            <linea>ch’uta’q</linea>
+        </seccion>
+        <seccion type="xtan-i'">
+            <linea>xtan-i'</linea>
+        </seccion>
+        <seccion type="rija’...">
+            <linea>rija’...</linea>
+        </seccion>
+        <seccion type="PAR hermosa DIR COM-B3p-A3s-ver DET DIM Niña-PL él">
+            <linea>PAR hermosa DIR COM-B3p-A3s-ver DET DIM Niña-PL él</linea>
+        </seccion>
+        <seccion type="SVT">
+            <linea>SVT</linea>
+        </seccion>
+        <seccion type="Los dos hombres compraron un corte.">
+            <linea>Los dos hombres compraron un corte.</linea>
+        </seccion>
+        <seccion type="X-0-ki-löq">
+            <linea>X-0-ki-löq</linea>
+        </seccion>
+        <seccion type="COM-B3s-A3p-comprar">
+            <linea>COM-B3s-A3p-comprar</linea>
+        </seccion>
+        <seccion type="jun uqaj">
+            <linea>jun uqaj</linea>
+        </seccion>
+        <seccion type="IND corte">
+            <linea>IND corte</linea>
+        </seccion>
+        <seccion type="ri">
+            <linea>ri</linea>
+        </seccion>
+        <seccion type="ka'i'">
+            <linea>ka'i'</linea>
+        </seccion>
+        <seccion type="achi'-a'.">
+            <linea>achi'-a'.</linea>
+        </seccion>
+        <seccion type="DET dos hombre-PL">
+            <linea>DET dos hombre-PL</linea>
+        </seccion>
+        <seccion type="Xusipaj ri xkoya' ri xtän.">
+            <linea>Xusipaj ri xkoya' ri xtän.</linea>
+        </seccion>
+        <seccion type="SVT">
+            <linea>SVT</linea>
+        </seccion>
+        <seccion type="La señorita regaló el tomate.">
+            <linea>La señorita regaló el tomate.</linea>
+        </seccion>
+        <seccion type="X-0-u-sip-a-j">
+            <linea>X-0-u-sip-a-j</linea>
+        </seccion>
+        <seccion type="COM-B3s-A3s-regalar-BV-SC">
+            <linea>COM-B3s-A3s-regalar-BV-SC</linea>
+        </seccion>
+        <seccion type="ri">
+            <linea>ri</linea>
+        </seccion>
+        <seccion type="xkoya' ri">
+            <linea>xkoya' ri</linea>
+        </seccion>
+        <seccion type="xtän.">
+            <linea>xtän.</linea>
+        </seccion>
+        <seccion type="DET tomate DET señorita">
+            <linea>DET tomate DET señorita</linea>
+        </seccion>
+        <seccion type="Marca movimiento en el verbo:">
+            <linea>Marca movimiento en el verbo:</linea>
+        </seccion>
+        <seccion type="...nb'esamäj qatata', nb'eqato'....">
+            <linea>...nb'esamäj qatata', nb'eqato'....</linea>
+        </seccion>
+        <seccion type="SVT">
+            <linea>SVT</linea>
+        </seccion>
+        <seccion type="...nuestro papá va a trabajar, vamos a ayudarlo....">
+            <linea>...nuestro papá va a trabajar, vamos a ayudarlo....</linea>
+        </seccion>
+        <seccion type="g">
+            <linea>g</linea>
+        </seccion>
+        <seccion type="a">
+            <linea>a</linea>
+        </seccion>
+    </pagina>
+</documento>
