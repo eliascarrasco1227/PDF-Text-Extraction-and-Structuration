@@ -5,7 +5,7 @@ from config.properties import PROMPT_PATH
 
 # --- CONFIGURACIÓN DEL EXPERIMENTO ---
 TEMPERATURES = [0.1, 0.25, 0.5, 1.0, 1.5]
-ITERATIONS = 1
+ITERATIONS = 3
 
 # Definimos tus casos de test (Ruta del PDF, Páginas)
 # Nota: Como main.py procesa lo que digan las propiedades, aquí trucaremos un poco
@@ -30,7 +30,7 @@ TEST_CASES = [
     }
 ]
 
-BASE_OUTPUT_DIR = "output/experiment_results"
+BASE_OUTPUT_DIR = "output/experiment_results_2"
 
 def run_experiment():
     print(f"🚀 INICIANDO EXPERIMENTO MASIVO DE TEMPERATURAS")
