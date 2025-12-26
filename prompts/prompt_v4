@@ -32,7 +32,7 @@ sachinaq -> perdido
 1. **Estructura XML**  
    - Títulos siempre en negrita y mayusculas y a veces numerados: `<titulo>...</titulo>`. Algunos ejemplos pueden ser: PRESTAMOS LINGÜISTICOS, INTRODUCCIÓN, ABREVIATURAS, ALFABETO, MORFOLOGÍA.  SINTAXIS...
    - Secciones en negrita y minusculas a veces numeradas con tres dígitos (1.2.1, 3.4.2...) : <seccion tipo="..."> Algunos ejemplos de secciones pueden ser: Perdida de Vocales, Pérdida de Consonantes, Derivación de un sustantivo,  Semejanzas sintácticas, Juego Absolutivo objeto transitivo, Enfoque del sujeto transitivo ...
-   - Glosas: `<glosa><uso_origen>...</uso_origen><ejemplo_origen>...</ejemplo_origen><ejemplo_destino>...</ejemplo_destino></glosa>`.  
+   - Glosas: `<interlinear_gloss><paralel_phrase>...</paralel_phrase><morpheme_analysis>...</morpheme_analysis><syntactic_analysis>...</syntactic_analysis></interlinear_gloss>`.  
    - Líneas de texto: `<linea>...</linea>`.  
    - El resto de etiquetas son: paralel_phrase, original, translation, interlinear_gloss, morpheme_analysis, syntactic_analysis, unit, form, gloss
 

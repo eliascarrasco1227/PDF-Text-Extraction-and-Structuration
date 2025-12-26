@@ -5,7 +5,7 @@ PDF_PATH = 'data/reducidos/Gramatica-Normativa-Kaqchikel_pag_172.pdf'
 #PDF_PATH = 'data/Gramatica-Normativa-Kaqchikel.pdf'
 #PDF_PATH = 'data/Gramatica-Normativa-Kiche.pdf'
 #PDF_PATH = 'data/reducidos/Gramatica-Normativa-Kiche_pag_44.pdf'
-PROMPT_PATH = 'prompts/prompt_v4'
+PROMPT_PATH = 'prompts/'
 OUTPUT_DIR = 'output'
 LOG_DIR = 'logs'  # directorio de logs
 ALL_PAGES = True  # Si es True, procesa todas las páginas del PDF ignorando PAGINAS
@@ -18,7 +18,7 @@ MAX_RETRIES = 5    # Número máximo de reintentos
 
 # Few shot
 # Interruptor para activar/desactivar el few-shot
-USE_FEW_SHOT = True 
+USE_FEW_SHOT = False 
 
 # Ejemplo 1 (Kaqchikel)
 FEW_SHOT_PDF_PATH = 'data/few-shot/Gramatica-Normativa-Kaqchikel_pag_146.pdf'
@@ -31,10 +31,10 @@ FEW_SHOT_XML_PATH_2 = 'data/few-shot/Gramatica-Normativa-Mam_páginas_80-80.xml'
 
 # Temperatura: 0.0 = Deterministico (Mejor para extracción fiel). 1.0 = Creativo. (default in gemini 1.0, balanced) 
 TEMPERATURE = 0.25
+GEMINI_MODEL =  'gemini-2.5-flash' #'gemma-3-27b-it'  # Modelo de Gemini a usar
 
-GEMINI_MODEL =  'gemma-3-27b-it' #'gemini-2.5-flash'  # Modelo de Gemini a usar
 
-
+OUTPUT_FORMAT = "json"  # Opciones: "xml", "json"
 
 # Evaluator
 # Las variables de evaluator están en evaluator/properties.py

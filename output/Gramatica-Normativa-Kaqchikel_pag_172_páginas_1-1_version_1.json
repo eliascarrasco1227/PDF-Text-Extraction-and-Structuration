@@ -1,0 +1,398 @@
+{
+    "metadata": {
+        "fuente": "Gramatica-Normativa-Kaqchikel_pag_172.pdf",
+        "paginas_procesadas": "1-1",
+        "timestamp": "2025-12-26 23:36:17",
+        "formato_salida": "JSON"
+    },
+    "data": [
+        {
+            "page_number": 170,
+            "content": [
+                {
+                    "line": "plural) del objeto y sujeto. La palabra principal incluye primeramente el tiempo/aspecto"
+                },
+                {
+                    "line": "o modo (excepto en el perfectivo que es la última), seguido por el juego absolutivo,"
+                },
+                {
+                    "line": "juego ergativo, la raíz o base en calidad de obligatorios y sufijos de categoría en casos"
+                },
+                {
+                    "line": "específicos (si el verbo es derivado). Como elementos opcionales incluye el movimiento,"
+                },
+                {
+                    "line": "su posición es siempre antes del juego ergativo. Ejemplos:"
+                },
+                {
+                    "section": {
+                        "name": "Marca de tiempo/aspecto/modo:",
+                        "content": [
+                            {
+                                "interlinear_gloss": {
+                                    "paralel_phrase": {
+                                        "original": "Xb'entz'eta' na kan ri ak'wal.",
+                                        "translation": "Todavía fui a ver al niño."
+                                    },
+                                    "morpheme_analysis": [
+                                        {
+                                            "unit": {
+                                                "form": "X-",
+                                                "gloss": "COM-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "0-",
+                                                "gloss": "B3S-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "b'e-",
+                                                "gloss": "MOV-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "n-",
+                                                "gloss": "Als-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "tz'et-",
+                                                "gloss": "ver-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "a'",
+                                                "gloss": "SC"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "na",
+                                                "gloss": "PAR"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "kan",
+                                                "gloss": "DIR"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "ri",
+                                                "gloss": "DET"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "ak'wal",
+                                                "gloss": "niño"
+                                            }
+                                        }
+                                    ],
+                                    "syntactic_analysis": [
+                                        {
+                                            "unit": {
+                                                "form": "Xb'entz'eta' na kan ri ak'wal.",
+                                                "gloss": "SVT"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "section": {
+                        "name": "Marca el objeto en el verbo:",
+                        "content": [
+                            {
+                                "interlinear_gloss": {
+                                    "paralel_phrase": {
+                                        "original": "...kan jeb'ël ok xerutz'ët ri ch'uta'q xtani' rija'...",
+                                        "translation": "...vio muy hermosas a las niñas..."
+                                    },
+                                    "morpheme_analysis": [
+                                        {
+                                            "unit": {
+                                                "form": "kan",
+                                                "gloss": "PAR"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "jeb'ël",
+                                                "gloss": "hermosa"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "ok",
+                                                "gloss": "DIR"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "x-",
+                                                "gloss": "COM-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "e-",
+                                                "gloss": "B3p-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "ru-",
+                                                "gloss": "A3s-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "tz'ët",
+                                                "gloss": "ver"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "ri",
+                                                "gloss": "DET"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "ch'uta'q",
+                                                "gloss": "DIM"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "xtan-",
+                                                "gloss": "Niña-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "i'",
+                                                "gloss": "PL"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "rija'",
+                                                "gloss": "él"
+                                            }
+                                        }
+                                    ],
+                                    "syntactic_analysis": [
+                                        {
+                                            "unit": {
+                                                "form": "...kan jeb'ël ok xerutz'ët ri ch'uta'q xtani' rija'...",
+                                                "gloss": "SVT"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "section": {
+                        "name": "Marca el sujeto en el verbo:",
+                        "content": [
+                            {
+                                "interlinear_gloss": {
+                                    "paralel_phrase": {
+                                        "original": "Xkilöq' jun uqaj ri ka'i' achi'a'.",
+                                        "translation": "Los dos hombres compraron un corte."
+                                    },
+                                    "morpheme_analysis": [
+                                        {
+                                            "unit": {
+                                                "form": "X-",
+                                                "gloss": "COM-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "0-",
+                                                "gloss": "B3s-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "ki-",
+                                                "gloss": "A3p-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "löq",
+                                                "gloss": "comprar"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "jun",
+                                                "gloss": "IND"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "uqaj",
+                                                "gloss": "corte"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "ri",
+                                                "gloss": "DET"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "ka'i'",
+                                                "gloss": "dos"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "achi'-",
+                                                "gloss": "hombre-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "a'.",
+                                                "gloss": "PL"
+                                            }
+                                        }
+                                    ],
+                                    "syntactic_analysis": [
+                                        {
+                                            "unit": {
+                                                "form": "Xkilöq' jun uqaj ri ka'i' achi'a'.",
+                                                "gloss": "SVT"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "interlinear_gloss": {
+                                    "paralel_phrase": {
+                                        "original": "Xusipaj ri xkoya' ri xtän.",
+                                        "translation": "La señorita regaló el tomate."
+                                    },
+                                    "morpheme_analysis": [
+                                        {
+                                            "unit": {
+                                                "form": "X-",
+                                                "gloss": "COM-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "0-",
+                                                "gloss": "B3s-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "u-",
+                                                "gloss": "A3s-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "sip-",
+                                                "gloss": "regalar-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "a-",
+                                                "gloss": "BV-"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "j",
+                                                "gloss": "SC"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "ri",
+                                                "gloss": "DET"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "xkoya'",
+                                                "gloss": "tomate"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "ri",
+                                                "gloss": "DET"
+                                            }
+                                        },
+                                        {
+                                            "unit": {
+                                                "form": "xtän.",
+                                                "gloss": "señorita"
+                                            }
+                                        }
+                                    ],
+                                    "syntactic_analysis": [
+                                        {
+                                            "unit": {
+                                                "form": "Xusipaj ri xkoya' ri xtän.",
+                                                "gloss": "SVT"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "section": {
+                        "name": "Marca movimiento en el verbo:",
+                        "content": [
+                            {
+                                "interlinear_gloss": {
+                                    "paralel_phrase": {
+                                        "original": "...nb'esamäj qatata', nb'eqato'....",
+                                        "translation": "...nuestro papá va a trabajar, vamos a ayudarlo...."
+                                    },
+                                    "syntactic_analysis": [
+                                        {
+                                            "unit": {
+                                                "form": "...nb'esamäj qatata', nb'eqato'....",
+                                                "gloss": "SVT"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

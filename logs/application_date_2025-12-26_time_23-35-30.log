@@ -1,0 +1,16 @@
+2025-12-26 23:35:30 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-12-26_time_23-35-30.log
+2025-12-26 23:35:33 - pdf_processor - INFO - ---------------------------------------------
+2025-12-26 23:35:33 - pdf_processor - INFO - 🚀 INICIANDO PROCESAMIENTO TFM
+2025-12-26 23:35:33 - pdf_processor - INFO - 📄 Archivo:    Gramatica-Normativa-Kaqchikel_pag_172.pdf
+2025-12-26 23:35:33 - pdf_processor - INFO - 🛠️  Formato:    JSON
+2025-12-26 23:35:33 - pdf_processor - INFO - 🌡️  Temp:       0.25
+2025-12-26 23:35:33 - pdf_processor - INFO - 📖 Rango:      todas las páginas
+2025-12-26 23:35:33 - pdf_processor - INFO - 📂 Salida:     output
+2025-12-26 23:35:33 - pdf_processor - INFO - ---------------------------------------------
+2025-12-26 23:35:33 - pdf_processor - INFO - 📜 Cargando instrucciones del prompt...
+2025-12-26 23:35:33 - pdf_processor - INFO - 🤖 Solicitando generación a Gemini (gemini-2.5-flash)...
+2025-12-26 23:35:33 - pdf_processor - INFO - 📖 Bloque: Páginas 1 a 1...
+2025-12-26 23:36:17 - pdf_processor - INFO - 📊 Progreso: [██████████] 100%
+2025-12-26 23:36:17 - pdf_processor - INFO - 🧹 Saneando respuesta (eliminando artefactos)...
+2025-12-26 23:36:17 - pdf_processor - INFO - ✅ Resultado guardado en [JSON]: Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.json
+2025-12-26 23:36:17 - pdf_processor - INFO - 💾 Proceso finalizado. Archivo creado en: output\Gramatica-Normativa-Kaqchikel_pag_172_páginas_1-1_version_1.json

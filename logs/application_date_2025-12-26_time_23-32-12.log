@@ -1,0 +1,13 @@
+2025-12-26 23:32:12 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-12-26_time_23-32-12.log
+2025-12-26 23:32:16 - pdf_processor - INFO - ---------------------------------------------
+2025-12-26 23:32:16 - pdf_processor - INFO - 🚀 INICIANDO PROCESAMIENTO TFM
+2025-12-26 23:32:16 - pdf_processor - INFO - 📄 Archivo:    Gramatica-Normativa-Kaqchikel_pag_172.pdf
+2025-12-26 23:32:16 - pdf_processor - INFO - 🛠️  Formato:    JSON
+2025-12-26 23:32:16 - pdf_processor - INFO - 🌡️  Temp:       0.25
+2025-12-26 23:32:16 - pdf_processor - INFO - 📖 Rango:      todas las páginas
+2025-12-26 23:32:16 - pdf_processor - INFO - 📂 Salida:     output
+2025-12-26 23:32:16 - pdf_processor - INFO - ---------------------------------------------
+2025-12-26 23:32:16 - pdf_processor - INFO - 📜 Cargando instrucciones del prompt...
+2025-12-26 23:32:16 - pdf_processor - INFO - 🤖 Solicitando generación a Gemini (gemma-3-27b-it)...
+2025-12-26 23:32:16 - pdf_processor - INFO - 📖 Bloque: Páginas 1 a 1...
+2025-12-26 23:32:17 - pdf_processor - ERROR - ❌ ERROR CRÍTICO: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'JSON mode is not enabled for models/gemma-3-27b-it', 'status': 'INVALID_ARGUMENT'}}

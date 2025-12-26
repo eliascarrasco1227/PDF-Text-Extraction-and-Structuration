@@ -1,0 +1,12 @@
+2025-12-26 23:29:09 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2025-12-26_time_23-29-09.log
+2025-12-26 23:29:12 - pdf_processor - INFO - ---------------------------------------------
+2025-12-26 23:29:12 - pdf_processor - INFO - 🚀 INICIANDO PROCESAMIENTO TFM
+2025-12-26 23:29:12 - pdf_processor - INFO - 📄 Archivo:    Gramatica-Normativa-Kaqchikel_pag_172.pdf
+2025-12-26 23:29:12 - pdf_processor - INFO - 🛠️  Formato:    JSON
+2025-12-26 23:29:12 - pdf_processor - INFO - 🌡️  Temp:       0.25
+2025-12-26 23:29:12 - pdf_processor - INFO - 📖 Rango:      todas las páginas
+2025-12-26 23:29:12 - pdf_processor - INFO - 📂 Salida:     output
+2025-12-26 23:29:12 - pdf_processor - INFO - ---------------------------------------------
+2025-12-26 23:29:12 - pdf_processor - INFO - 📜 Cargando instrucciones del prompt...
+2025-12-26 23:29:12 - pdf_processor - ERROR - Error al leer prompt: [Errno 2] No such file or directory: 'prompts\\json'
+2025-12-26 23:29:12 - pdf_processor - ERROR - ❌ ERROR CRÍTICO: [Errno 2] No such file or directory: 'prompts\\json'
