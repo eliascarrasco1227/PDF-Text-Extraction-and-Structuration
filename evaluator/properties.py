@@ -36,8 +36,8 @@
 #HYPOTHESIS_XML = "../output/7-pruebas_para_test_set_repetidas/few-shot-mam/Gramatica-Normativa"
 
 
-#REFERENCE_XML = "../test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"
-#HYPOTHESIS_XML = "../output/7-pruebas_para_test_set_repetidas/zero-shot-Kaqchikel_pag_147/G"
+REFERENCE_XML = "../test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"
+HYPOTHESIS_XML = "../output/Gramatica-Normativa-Kaqchikel"
 
 #REFERENCE_XML = "../test_set/Gramatica-Normativa-Kiche_páginas_43-43_version_1.xml"
 #HYPOTHESIS_XML = "../output/7-pruebas_para_test_set_repetidas/few-shot-kiche/G"
@@ -53,8 +53,8 @@
 #REFERENCE_XML = "../test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"
 #HYPOTHESIS_XML = "../output/experiment_results/temp_0_0/Kaqchikel_172/G"
 
-REFERENCE_XML = "../test_set/Gramatica-Normativa-Kiche_páginas_43.xml"
-HYPOTHESIS_XML = "../output/Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_7.xml"
+#REFERENCE_XML = "../test_set/Gramatica-Normativa-Kiche_páginas_43.xml"
+#HYPOTHESIS_XML = "../output/Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_7.xml"
 
 
 

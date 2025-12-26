@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kaqchikel_pag_172.pdf" paginas="1-1" fecha="1764088427.9015613">
+<pagina num="170">
+        <linea>plural) del objeto y sujeto. La palabra principal incluye primeramente el tiempo/aspecto</linea>
+        <linea>o modo (excepto en el perfectivo que es la última), seguido por el juego absolutivo,</linea>
+        <linea>juego ergativo, la raíz o base en calidad de obligatorios y sufijos de categoría en casos</linea>
+        <linea>específicos (si el verbo es derivado). Como elementos opcionales incluye el movimiento,</linea>
+        <linea>su posición es siempre antes del juego ergativo. Ejemplos:</linea>
+        <seccion type="Marca de tiempo/aspecto/modo">
+            <linea>Marca de tiempo/aspecto/modo:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Xb'entz'eta' na kan ri ak'wal.</original>
+                    <translation>Todavía fui a ver al niño.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>X-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>0-</form>
+                        <gloss>B3S-</gloss>
+                    </unit>
+                    <unit>
+                        <form>b'e-</form>
+                        <gloss>MOV-</gloss>
+                    </unit>
+                    <unit>
+                        <form>n-</form>
+                        <gloss>Als-</gloss>
+                    </unit>
+                    <unit>
+                        <form>tz'et-</form>
+                        <gloss>ver-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a'</form>
+                        <gloss>SC</gloss>
+                    </unit>
+                    <unit>
+                        <form>na</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>kan</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>ak'wal</form>
+                        <gloss>niño</gloss>
+                    </unit>
+                </morpheme_analysis>
+            </interlinear_gloss>
+        </seccion>
+        <seccion type="Marca el objeto en el verbo">
+            <linea>Marca el objeto en el verbo:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...kan jeb'ël ok xerutz'ët ri ch'uta'q xtani' rija'...</original>
+                    <translation>...vio muy hermosas a las niñas...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>kan</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>jeb'ël</form>
+                        <gloss>hermosa</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>x-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>e-</form>
+                        <gloss>B3p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ru-</form>
+                        <gloss>A3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>tz'ët</form>
+                        <gloss>ver</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>ch'uta'q</form>
+                        <gloss>DIM</gloss>
+                    </unit>
+                    <unit>
+                        <form>xtani'</form>
+                        <gloss>Niña-PL</gloss>
+                    </unit>
+                    <unit>
+                        <form>rija'</form>
+                        <gloss>él</gloss>
+                    </unit>
+                </morpheme_analysis>
+            </interlinear_gloss>
+        </seccion>
+        <seccion type="Marca el sujeto en el verbo">
+            <linea>Marca el sujeto en el verbo:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Xkilöq' jun uqaj ri ka'i' achi'a'.</original>
+                    <translation>Los dos hombres compraron un corte.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>X-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>0-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ki-</form>
+                        <gloss>A3p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>löq</form>
+                        <gloss>comprar</gloss>
+                    </unit>
+                    <unit>
+                        <form>jun</form>
+                        <gloss>IND</gloss>
+                    </unit>
+                    <unit>
+                        <form>uqaj</form>
+                        <gloss>corte</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>ka'i'</form>
+                        <gloss>dos</gloss>
+                    </unit>
+                    <unit>
+                        <form>achi'a'.</form>
+                        <gloss>hombre-PL</gloss>
+                    </unit>
+                </morpheme_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Xusipaj ri xkoya' ri xtän.</original>
+                    <translation>La señorita regaló el tomate.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>X-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>0-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>u-</form>
+                        <gloss>A3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>sip-</form>
+                        <gloss>regalar-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a-</form>
+                        <gloss>BV-</gloss>
+                    </unit>
+                    <unit>
+                        <form>j</form>
+                        <gloss>SC</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>xkoya'</form>
+                        <gloss>tomate</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>xtän.</form>
+                        <gloss>señorita</gloss>
+                    </unit>
+                </morpheme_analysis>
+            </interlinear_gloss>
+        </seccion>
+        <seccion type="Marca movimiento en el verbo">
+            <linea>Marca movimiento en el verbo:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...nb'esamäj qatata', nb'eqato'....</original>
+                    <translation>...nuestro papá va a trabajar, vamos a ayudarlo....</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>nb'esamäj</form>
+                        <gloss>SVT</gloss>
+                    </unit>
+                    <unit>
+                        <form>qatata'</form>
+                        <gloss>SVT</gloss>
+                    </unit>
+                    <unit>
+                        <form>nb'eqato'</form>
+                        <gloss>SVT</gloss>
+                    </unit>
+                </morpheme_analysis>
+            </interlinear_gloss>
+        </seccion>
+    </pagina>
+</documento>
