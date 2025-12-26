@@ -67,22 +67,29 @@ sachinaq -> perdido
     - Múltiples `<unit>` para cada morfema
     - Cada `<unit>` contiene `<form>` (forma) y `<gloss>` (glosa)
     - Ejemplo:  
-        ```xml
         <morpheme_analysis>
-        <unit><form>k'am</form><gloss>NEG</gloss></unit>
-        <unit><form>w-</form><gloss>A1SG</gloss></unit>
+        <unit>
+            <form>k'am</form>
+            <gloss>NEG</gloss>
+        </unit>
+        <unit>
+            <form>w-</form>
+            <gloss>A1SG</gloss>
+        </unit>
         </morpheme_analysis>
-        ```
+
 
     6. ***syntactic_analysis***:  
     Análisis de la función sintáctica (menos común), con:
     - `<unit>` que identifican roles gramaticales
     - Ejemplo:  
-        ```xml
         <syntactic_analysis>
-        <unit><form>nima'q</form><gloss>SA</gloss></unit>
+            <unit>
+                <form>nima'q</form>
+                <gloss>SA</gloss>
+            </unit>
         </syntactic_analysis>
-        ```
+
 
     7. ***unit***:  
     Bloque indivisible para análisis, contiene:
@@ -103,7 +110,6 @@ sachinaq -> perdido
     - Siempre en mayúsculas y en inglés (convención lingüística)
 
     ***Relación jerárquica***:  
-    ```
     interlinear_gloss
     ├─ paralel_phrase
     │  ├─ original
@@ -116,7 +122,6 @@ sachinaq -> perdido
         └─ unit (repetible)
             ├─ form
             └─ gloss
-    ``` 
 
 
 
@@ -140,7 +145,41 @@ sachinaq -> perdido
     - Si falta información en la fuente NO IVENTES NADA, es una transcripción, no hay que generar texto nuevo
     - NUNCA escribas nada que pueda romper el formato xml como por ejemplo poner esto al inicio "```xml" o poner "```" al final. 
     - TODO lo generado DEBE ser un formato XML valido.
+    - Si se ve un poco de otra página, una pequeña parte, por ser una foto mal escaneada (se ve parte de la página siguiente a la actual), no extraigas ese texto, ese texto se extraerá cuando llegues a la correspondiente página. 
+    - Siempre que hagas un analisis morfologico y encuentres en el libro una palabra que este separada por guiones (-), dividela en distintas unidades (unit).
+    - No se debe generar analisis morfologicos (morpheme_analysis) que tengan las unidades juntas en el verbo, es decir SIEMPRE se debe seprar el contenido en las unidades más pequeñas. Voy a pasarte un ejemplo de una entrada y una salida correcta y otra salida incorrecta (erronea).
+    Entrada:
+    x-e-ru-tz'ët
+    COM-B3p-A3s-ver
 
+    Salida correcta:
+    ...
+    <unit>
+        <form>x-</form>
+        <gloss>COM-</gloss>
+    </unit>
+    <unit>
+        <form>e-</form>
+        <gloss>B3p-</gloss>
+    </unit>
+    <unit>
+        <form>ru-</form>
+        <gloss>A3s-</gloss>
+    </unit>
+    <unit>
+        <form>tz'ët</form>
+        <gloss>ver</gloss>
+    </unit>
+    ...
+
+    Salida incorrecta (erronea):
+    ...
+    <unit>
+        <form>x-e-ru-tz'ët</form>
+        <gloss>COM-B3p-A3s-ver</gloss>
+    <unit>
+    ...
+ 
 6. **Salida:**  
    - XML propio refinado.   
 
