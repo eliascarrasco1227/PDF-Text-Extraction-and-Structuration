@@ -54,7 +54,8 @@
 #HYPOTHESIS_XML = "../output/experiment_results/temp_0_0/Kaqchikel_172/G"
 
 REFERENCE_XML = "../test_set/Gramatica-Normativa-Kiche_páginas_43.xml"
-HYPOTHESIS_XML = "../output/experiment_results/temp_1_5/Kiche_43/G"
+HYPOTHESIS_XML = "../output/Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_7.xml"
+
 
 
 import os
