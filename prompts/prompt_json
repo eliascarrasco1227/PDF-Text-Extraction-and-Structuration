@@ -573,7 +573,7 @@ se presentan y funcionan asi:
       }
    },
    {
-      "seccion":{
+      "section":{
          "name":"Direccionales",
          "content":[
             {

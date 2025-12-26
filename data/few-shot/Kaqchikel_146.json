@@ -1,0 +1,224 @@
+[
+  {
+    "fuente": "Gramatica-Normativa-Kaqchikel.pdf",
+    "paginas": "145-145"
+  },
+  {
+    "pagina": 145,
+    "contenido": [
+      {
+        "section": {
+          "tipo": "Demostrativo la",
+          "content": {
+            "line": "Demostrativo la.....la':"
+          }
+          
+        }
+      },
+      {
+        "interlinear_gloss": {
+          "paralel_phrase": {
+            "original": "Yalan nxik'an la jun tz'ikïn la'.",
+            "translation": "Ese pájaro vuela mucho."
+          },
+          "morpheme_analysis": [
+            {
+              "unit": {
+                "form": "yalan",
+                "gloss": "INT"
+              }
+            },
+            {
+              "unit": {
+                "form": "n-",
+                "gloss": "INC-"
+              }
+            },
+            {
+              "unit": {
+                "form": "Ø-",
+                "gloss": "B3s-"
+              }
+            },
+            {
+              "unit": {
+                "form": "xik-",
+                "gloss": "volar-"
+              }
+            },
+            {
+              "unit": {
+                "form": "a-",
+                "gloss": "BV-"
+              }
+            },
+            {
+              "unit": {
+                "form": "n.",
+                "gloss": "AP"
+              }
+            },
+            {
+              "unit": {
+                "form": "la",
+                "gloss": "DEM"
+              }
+            },
+            {
+              "unit": {
+                "form": "jun",
+                "gloss": "IND"
+              }
+            },
+            {
+              "unit": {
+                "form": "tz'ikïn",
+                "gloss": "pájaro"
+              }
+            },
+            {
+              "unit": {
+                "form": "la'",
+                "gloss": "DEM"
+              }
+            }
+          ],
+          "syntactic_analysis": [
+            {
+              "unit": {
+                "form": "la jun tz'ikïn la'",
+                "gloss": "SN"
+              }
+            }
+          ]
+        }
+      },
+    {
+        "interlinear_gloss": {
+            "paralel_phrase": {
+                "original": "Pa la jun tinamït la' e k'o mama' taq che'.",
+                "translation": "En ese pueblo hay árboles muy grandes."
+            },
+            "morpheme_analysis": [
+                { "unit": { "form": "Pa", "gloss": "PRE" } },
+                { "unit": { "form": "la", "gloss": "DEM" } },
+                { "unit": { "form": "jun", "gloss": "IND" } },
+                { "unit": { "form": "tinamït", "gloss": "pueblo" } },
+                { "unit": { "form": "la'", "gloss": "DEM" } },
+                { "unit": { "form": "e", "gloss": "B3p" } },
+                { "unit": { "form": "k'o", "gloss": "EST" } },
+                { "unit": { "form": "mama'", "gloss": "grande" } },
+                { "unit": { "form": "taq", "gloss": "PL/DIM" } },
+                { "unit": { "form": "che'.", "gloss": "árbol" } }
+            ],
+            "syntactic_analysis": [
+                { "unit": { "form": "la jun tinamït la'", "gloss": "SN" } }
+            ]
+            }
+        },
+        { "linea": "De los anteriores demostrativos pueden acompañar al sustantivo solamente los" },
+        { "linea": "antepuestos re y la, para indicar la visibilidad o cercanía del sustantivo. La particula ri" },
+        { "linea": "también funciona como demostrativo lo cual indica lejanía y sustantivo conocido." },
+        { "linea": "Ejemplos:" },
+        {
+            "seccion": {
+            "tipo": "Demostrativo re",
+            "valor": "Demostrativo re:"
+            }
+        },
+        {
+            "interlinear_gloss": {
+            "paralel_phrase": {
+                "original": "...re ixög nqakanoj.",
+                "translation": "...la señora que buscamos."
+            },
+            "morpheme_analysis": [
+                { "unit": { "form": "re", "gloss": "DEM" } },
+                { "unit": { "form": "ixöq", "gloss": "mujer" } },
+                { "unit": { "form": "n-", "gloss": "INC-" } },
+                { "unit": { "form": "Ø-", "gloss": "B3s-" } },
+                { "unit": { "form": "qa-", "gloss": "Alp-" } },
+                { "unit": { "form": "kan-", "gloss": "buscar-" } },
+                { "unit": { "form": "o-", "gloss": "BV-" } },
+                { "unit": { "form": "j.", "gloss": "SC" } }
+            ],
+            "syntactic_analysis": [
+                { "unit": { "form": "re ixög", "gloss": "SN" } }
+            ]
+            }
+        },
+        {
+            "interlinear_gloss": {
+            "paralel_phrase": {
+                "original": "Re ak'wala' xketamaj.",
+                "translation": "Estos niños lo supieron."
+            },
+            "morpheme_analysis": [
+                { "unit": { "form": "Re", "gloss": "DEM" } },
+                { "unit": { "form": "ak'wal-", "gloss": "niño" } },
+                { "unit": { "form": "a'", "gloss": "PL" } },
+                { "unit": { "form": "x-", "gloss": "COM-" } },
+                { "unit": { "form": "Ø-", "gloss": "B3s-" } },
+                { "unit": { "form": "k-", "gloss": "A3p-" } },
+                { "unit": { "form": "etam-", "gloss": "saber-" } },
+                { "unit": { "form": "a-", "gloss": "BV-" } },
+                { "unit": { "form": "j.", "gloss": "VT" } }
+            ],
+            "syntactic_analysis": [
+                { "unit": { "form": "Re ak'wala'", "gloss": "SN" } }
+            ]
+            }
+        }
+        ,
+      {
+        "seccion": {
+          "tipo": "Demostrativo",
+          "valor": "Demostrativo la:"
+        }
+      },
+      {
+        "interlinear_gloss": {
+          "paralel_phrase": {
+            "original": "...chuqa' la tz'ite' che'...",
+            "translation": "...también ese árbol de pito..."
+          },
+          "morpheme_analysis": [
+            {
+              "unit": {
+                "form": "chuqa'",
+                "gloss": "CONJ"
+              }
+            },
+            {
+              "unit": {
+                "form": "la",
+                "gloss": "DEM"
+              }
+            },
+            {
+              "unit": {
+                "form": "tz'ite'",
+                "gloss": "palo de pito"
+              }
+            },
+            {
+              "unit": {
+                "form": "che'",
+                "gloss": "árbol"
+              }
+            }
+          ],
+          "syntactic_analysis": [
+            {
+              "unit": {
+                "form": "la tz'ite' che'",
+                "gloss": "SN"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
+                

@@ -21,12 +21,16 @@ MAX_RETRIES = 5    # Número máximo de reintentos
 USE_FEW_SHOT = False 
 
 # Ejemplo 1 (Kaqchikel)
+#FEW_SHOT_PDF_PATH = 'data/few-shot/Gramatica-Normativa-Kaqchikel_pag_146.pdf'
+#FEW_SHOT_XML_PATH = 'data/few-shot/Gramatica-Normativa-Kaqchikel_páginas_146-146.xml'
 FEW_SHOT_PDF_PATH = 'data/few-shot/Gramatica-Normativa-Kaqchikel_pag_146.pdf'
-FEW_SHOT_XML_PATH = 'data/few-shot/Gramatica-Normativa-Kaqchikel_páginas_146-146.xml'
+FEW_SHOT_XML_PATH = 'data/few-shot/Gramatica-Normativa-Kaqchikel_páginas_146.json'
 
 # Ejemplo 2 (Mam) 
+#FEW_SHOT_PDF_PATH_2 = 'data/few-shot/Gramatica-Normativa-Mam_pag_80.pdf'
+#FEW_SHOT_XML_PATH_2 = 'data/few-shot/Gramatica-Normativa-Mam_páginas_80-80.xml'
 FEW_SHOT_PDF_PATH_2 = 'data/few-shot/Gramatica-Normativa-Mam_pag_80.pdf'
-FEW_SHOT_XML_PATH_2 = 'data/few-shot/Gramatica-Normativa-Mam_páginas_80-80.xml'
+FEW_SHOT_XML_PATH_2 = 'data/few-shot/Gramatica-Normativa-Mam_páginas_80.json'
 
 
 # Temperatura: 0.0 = Deterministico (Mejor para extracción fiel). 1.0 = Creativo. (default in gemini 1.0, balanced) 
