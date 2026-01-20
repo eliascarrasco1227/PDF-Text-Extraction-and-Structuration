@@ -33,7 +33,7 @@ class FileWriter:
                 paginas_str = f"{PAGINAS[0]}-{PAGINAS[1]}"
                 
             return f'''<?xml version="1.0" encoding="UTF-8"?>
-<documento fuente="{pdf_name}" paginas="{paginas_str}"">
+<documento fuente="{pdf_name}" paginas="{paginas_str}">
 {content}
 </documento>'''
         except Exception as e:

@@ -3,7 +3,8 @@ from core.prompt_reader import PromptReader
 from core.ai_generator import AIGenerator
 from core.file_writer import FileWriter
 from core.logger_config import app_logger
-from latex_generator.converter import XMLToLaTeXConverter # <--- NUEVO IMPORT
+from latex_generator.converter import XMLToLaTeXConverter 
+from pdf_generator.compiler import LaTeXCompiler
 import re
 import os
 
@@ -82,6 +83,10 @@ class DocumentProcessor:
                     converter = XMLToLaTeXConverter(saved_xml_path)
                     converter.parse_and_generate()
                     converter.save_tex(base_name) # Guardará un archivo .tex con el mismo nombre
+
+                    # 2. Compilar a PDF (NUEVO PASO)
+                    compiler = LaTeXCompiler()
+                    success = compiler.compile_to_pdf(base_name + ".tex")
                     
                     self.logger.info(f"✨ LaTeX generado correctamente en: {base_name}.tex")
                 except Exception as e:
