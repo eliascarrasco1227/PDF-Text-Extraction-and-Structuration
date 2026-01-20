@@ -23,7 +23,7 @@ class XMLToLaTeXConverter:
         root = tree.getroot()
         fuente = root.get('fuente', 'Documento').replace('_', ' ').replace('-', '--')
         self.doc.preamble.append(Command('title', f"Análisis Lingüístico: {fuente}"))
-        self.doc.preamble.append(Command('author', 'Generado por Maya API TFM'))
+        self.doc.preamble.append(Command('author', 'Generado por el TFM de Elías Carrasco'))
         self.doc.append(NoEscape(r'\maketitle'))
         for pagina in root.xpath('//pagina'):
             num_pag = pagina.get('num')

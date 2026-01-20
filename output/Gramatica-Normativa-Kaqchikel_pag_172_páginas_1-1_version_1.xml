@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <documento fuente="Gramatica-Normativa-Kaqchikel_pag_172.pdf" paginas="1-1" fecha="1764088427.9015613">
-<pagina num="171">
+<pagina num="170">
         <linea>(plural) del objeto y sujeto. La palabra principal incluye primeramente el tiempo/aspecto</linea>
         <linea>o modo (excepto en el perfectivo que es la última), seguido por el juego absolutivo,</linea>
         <linea>juego ergativo, la raíz o base en calidad de obligatorios y sufijos de categoría en casos</linea>
@@ -55,6 +55,12 @@
                         <gloss>niño</gloss>
                     </unit>
                 </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Xb'entz'eta' na kan ri ak'wal.</form>
+                        <gloss>SVT</gloss>
+                    </unit>
+                </syntactic_analysis>
             </interlinear_gloss>
         </seccion>
         <seccion type="Marca el objeto en el verbo">
@@ -114,6 +120,12 @@
                         <gloss>él</gloss>
                     </unit>
                 </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>...kan jeb'ël ok xerutz'ët ri ch'uta'q xtani' rija'...</form>
+                        <gloss>SVT</gloss>
+                    </unit>
+                </syntactic_analysis>
             </interlinear_gloss>
         </seccion>
         <seccion type="Marca el sujeto en el verbo">
@@ -165,14 +177,16 @@
                         <gloss>PL</gloss>
                     </unit>
                 </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Xkilöq' jun uqaj ri ka'i' achi'a'.</form>
+                        <gloss>SVT</gloss>
+                    </unit>
+                </syntactic_analysis>
             </interlinear_gloss>
-        </seccion>
-        <seccion type="Xusipaj ri xkoya' ri xtän.">
-            <linea>Xusipaj ri xkoya' ri xtän.</linea>
-            <linea>La señorita regaló el tomate.</linea>
             <interlinear_gloss>
                 <paralel_phrase>
-                    <original>X-Ø-u-sip-a-j ri xkoya' ri xtän.</original>
+                    <original>Xusipaj ri xkoya' ri xtän.</original>
                     <translation>La señorita regaló el tomate.</translation>
                 </paralel_phrase>
                 <morpheme_analysis>
@@ -217,6 +231,12 @@
                         <gloss>señorita</gloss>
                     </unit>
                 </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Xusipaj ri xkoya' ri xtän.</form>
+                        <gloss>SVT</gloss>
+                    </unit>
+                </syntactic_analysis>
             </interlinear_gloss>
         </seccion>
         <seccion type="Marca movimiento en el verbo">
@@ -226,6 +246,12 @@
                     <original>...nb'esamäj qatata', nb'eqato'....</original>
                     <translation>...nuestro papá va a trabajar, vamos a ayudarlo....</translation>
                 </paralel_phrase>
+                <syntactic_analysis>
+                    <unit>
+                        <form>nb'eqato'</form>
+                        <gloss>SVT</gloss>
+                    </unit>
+                </syntactic_analysis>
             </interlinear_gloss>
         </seccion>
     </pagina>
