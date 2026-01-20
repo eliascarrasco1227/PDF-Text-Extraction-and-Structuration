@@ -7,9 +7,11 @@ from config.properties import (
     FEW_SHOT_PDF_PATH, FEW_SHOT_XML_PATH,
     FEW_SHOT_PDF_PATH_2, FEW_SHOT_XML_PATH_2, 
     USE_FEW_SHOT,
-    GEMINI_MODEL
+    GEMINI_MODEL,
+    DTD_PATH
 )
 from PyPDF2 import PdfReader
+from validator.xml_validator import XMLValidator
 from core.logger_config import app_logger
 import time
 import os
@@ -26,7 +28,6 @@ class AIGenerator:
         self.retry_delay = RETRY_DELAY
         self.max_retries = MAX_RETRIES
         self.temperature = temperature
-        
         self.few_shot_examples = self._load_few_shot_data() if USE_FEW_SHOT else []
 
     def _load_few_shot_data(self) -> list:
@@ -87,9 +88,15 @@ class AIGenerator:
         self.logger.info(f"{bar} {percentage}%")
         self.logger.info("---------------------------------")
     
+    def _clean_xml_response(self, text: str) -> str:
+            """Elimina posibles bloques de código markdown (```xml ... ```)"""
+            clean_text = re.sub(r'```xml\s*', '', text)
+            clean_text = re.sub(r'```\s*', '', clean_text)
+            return clean_text.strip()
+
     def _generate_content_with_retry(self, target_pdf_bytes: bytes, prompt: str) -> str:
         contents = []
-
+        # ... (Carga de Few-Shot igual que antes) ...
         if self.few_shot_examples:
             contents.append("INSTRUCCIONES DE ENTRENAMIENTO (FEW-SHOT):")
             contents.append("A continuación se presentan ejemplos de documentos PDF y sus transcripciones XML correctas. Úsalos como referencia estricta de formato y estructura.")
@@ -106,6 +113,7 @@ class AIGenerator:
         contents.append(types.Part.from_bytes(data=target_pdf_bytes, mime_type='application/pdf'))
         contents.append(prompt)
 
+        # --- BUCLE DE REINTENTOS CON VALIDACIÓN ---
         for attempt in range(self.max_retries):
             try:
                 response = self.client.models.generate_content(
@@ -113,19 +121,31 @@ class AIGenerator:
                     contents=contents,
                     config=types.GenerateContentConfig(temperature=self.temperature)
                 )
-                return response.text
                 
-            except ServerError as e:
-                if "503" in str(e) and attempt < self.max_retries - 1:
-                    self.logger.warning(f"⚠️  Servidor sobrecargado (503). Reintentando en {self.retry_delay} segundos... (Intento {attempt + 1}/{self.max_retries})")
+                # 1. Limpiamos la respuesta
+                xml_candidato = self._clean_xml_response(response.text)
+                
+                # 2. Validamos (Bien formado y DTD)
+                resultado_val = XMLValidator.check_valid(xml_candidato, DTD_PATH)
+                
+                if resultado_val == 1:
+                    self.logger.info(f"✅ XML validado correctamente en el intento {attempt + 1}.")
+                    return xml_candidato
+                else:
+                    self.logger.warning(f"⚠️ XML inválido (Código {resultado_val}). Reintentando generación... ({attempt + 1}/{self.max_retries})")
                     time.sleep(self.retry_delay)
                     continue
-                else:
-                    raise
+
+            except ServerError as e:
+                if "503" in str(e) and attempt < self.max_retries - 1:
+                    self.logger.warning(f"⚠️ Servidor sobrecargado. Reintentando... ({attempt + 1}/{self.max_retries})")
+                    time.sleep(self.retry_delay)
+                    continue
+                else: raise
             except Exception as e:
                 raise
         
-        raise ServerError("No se pudo completar la solicitud después de todos los reintentos")
+        raise Exception(f"❌ No se pudo obtener un XML válido después de {self.max_retries} intentos.")
     
     def generate_from_pdf(self, pdf_path: str, prompt: str) -> str:
         start_page, end_page = self._determine_page_range(pdf_path)

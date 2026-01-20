@@ -35,6 +35,8 @@ TEMPERATURE = 0.25
 GEMINI_MODEL =  'gemma-3-27b-it' #'gemini-2.5-flash'  # Modelo de Gemini a usar
 
 
+# Validator
+DTD_PATH = "validator/gramatica.dtd"
 
 # Evaluator
 # Las variables de evaluator están en evaluator/properties.py
