@@ -43,7 +43,7 @@ class DocumentProcessor:
 
         self.logger.info("-" * 40)
         self.logger.info(f"📄 Procesando: {os.path.basename(self.pdf_path)}")
-        self.logger.info(f"🌡️  Temp:      {self.temperature}")
+        self.logger.info(f"🌡️ Temp:      {self.temperature}")
         self.logger.info(f"📂 Salida:    {self.output_dir}")
         self.logger.info(f"📖 Rango:     {paginas_info}")
         self.logger.info("-" * 40)

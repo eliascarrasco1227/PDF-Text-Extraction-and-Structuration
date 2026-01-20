@@ -59,7 +59,7 @@ sachinaq -> perdido
     Estructura compleja que contiene:
     - Una `<paralel_phrase>` (frase + traducción)
     - `<morpheme_analysis>`: Descomposición morfémica
-    - Opcionalmente `<syntactic_analysis>` para análisis sintáctico
+    - `<syntactic_analysis>` para análisis sintáctico, unicamente cuando haya análisis sintáctico en el documento original.
     - Ejemplo: Glosas interlineales con 3 niveles (texto, morfemas, traducción)
 
     5. ***morpheme_analysis***:  
@@ -89,6 +89,7 @@ sachinaq -> perdido
                 <gloss>SA</gloss>
             </unit>
         </syntactic_analysis>
+    - Siempre que haya análisis sintáctico en el documento original, debes generarlo en la salida.
 
 
     7. ***unit***:  
@@ -147,6 +148,7 @@ sachinaq -> perdido
     - TODO lo generado DEBE ser un formato XML valido.
     - Si se ve un poco de otra página, una pequeña parte, por ser una foto mal escaneada (se ve parte de la página siguiente a la actual), no extraigas ese texto, ese texto se extraerá cuando llegues a la correspondiente página. 
     - Siempre que hagas un analisis morfologico y encuentres en el libro una palabra que este separada por guiones (-), dividela en distintas unidades (unit).
+    - Si en la glosa interlineal hay un análisis sintáctico (lineas debajo de la frase original o letras mayúsculas entre la frase original arriba y el análisis morfológico abajo o un sintagma como SN, SP, SVT...) debés crear el componente syntactic_analysis obligatoriamente. Se te suele olvidar, así que estate atento a poner syntactic_analysis.
     - No se debe generar analisis morfologicos (morpheme_analysis) que tengan las unidades juntas en el verbo, es decir SIEMPRE se debe seprar el contenido en las unidades más pequeñas. Voy a pasarte un ejemplo de una entrada y una salida correcta y otra salida incorrecta (erronea).
     Entrada:
     x-e-ru-tz'ët
