@@ -3,6 +3,7 @@ from core.prompt_reader import PromptReader
 from core.ai_generator import AIGenerator
 from core.file_writer import FileWriter
 from core.logger_config import app_logger
+from latex_generator.converter import XMLToLaTeXConverter # <--- NUEVO IMPORT
 import re
 import os
 
@@ -24,6 +25,7 @@ class DocumentProcessor:
     
     def _clean_ai_response(self, text: str) -> str:
         """Limpieza robusta de etiquetas y markdown"""
+        # (Se mantiene igual que tu código original)
         text = re.sub(r'<\?xml.*?\?>', '', text, flags=re.DOTALL)
         text = re.sub(r'<documento[^>]*>', '', text, flags=re.DOTALL)
         text = text.replace('</documento>', '')
@@ -32,6 +34,7 @@ class DocumentProcessor:
         return text.strip()
 
     def _pretty_print(self):
+        # (Se mantiene igual que tu código original)
         if ALL_PAGES:
             paginas_info = "todas las páginas"
         else:
@@ -49,7 +52,6 @@ class DocumentProcessor:
         try:
             self._pretty_print()
             
-            # VALIDACIÓN
             if not os.path.exists(self.pdf_path):
                 raise FileNotFoundError(f"El archivo PDF no existe: {self.pdf_path}")
 
@@ -65,22 +67,37 @@ class DocumentProcessor:
             self.logger.info("🧹 Limpiando respuesta de la IA...")
             response = self._clean_ai_response(response)
 
-            # PASO 4: Guardar Resultados
+            # PASO 4: Guardar XML y Generar LaTeX
             if response:
-                saved_path = self.file_writer.save_with_counter(response, self.pdf_path)
-                self.logger.info(f"✅ Guardado correctamente en: {saved_path}")
+                # Guardamos el XML
+                saved_xml_path = self.file_writer.save_with_counter(response, self.pdf_path)
+                self.logger.info(f"✅ XML guardado correctamente en: {saved_xml_path}")
+
+                # --- NUEVA ETAPA: GENERACIÓN DE LATEX ---
+                try:
+                    self.logger.info("🎨 Generando archivo LaTeX a partir del XML...")
+                    # Quitamos la extensión .xml para el nombre del archivo .tex
+                    base_name = os.path.splitext(saved_xml_path)[0]
+                    
+                    converter = XMLToLaTeXConverter(saved_xml_path)
+                    converter.parse_and_generate()
+                    converter.save_tex(base_name) # Guardará un archivo .tex con el mismo nombre
+                    
+                    self.logger.info(f"✨ LaTeX generado correctamente en: {base_name}.tex")
+                except Exception as e:
+                    self.logger.error(f"❌ Error durante la generación de LaTeX: {str(e)}")
+                # ----------------------------------------
+
             else:
                 self.logger.warning("⚠️ La respuesta de la IA estaba vacía.")
 
         except Exception as e:
+            # (Se mantiene igual que tu gestión de errores original)
             error_str = str(e)
-            # GESTIÓN DE ERROR LIMPIA:
-            # Si es error de recursos, solo avisamos y paramos. NO hacemos 'raise'.
             if "RESOURCE_EXHAUSTED" in error_str:
                 self.logger.info("⏹️  Proceso detenido por límite de API.")
-                return # <--- ESTO ES LA CLAVE PARA EVITAR EL TRACEBACK FEO
+                return 
             else:
-                # Para otros errores (bugs de código, archivo no encontrado), sí queremos ver el detalle
                 self.logger.error(f"❌ Error durante el proceso: {error_str}")
                 raise e 
 
