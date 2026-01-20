@@ -1,0 +1,28 @@
+
+<!ELEMENT documento (pagina+)>
+<!ATTLIST documento
+            fuente CDATA #REQUIRED
+            paginas CDATA #REQUIRED>
+
+<!ELEMENT pagina (linea | seccion | interlinear_gloss | paralel_phrase)*>
+<!ATTLIST pagina
+            num CDATA #REQUIRED>
+
+<!ELEMENT seccion (linea | interlinear_gloss | paralel_phrase)*>
+<!ATTLIST seccion
+            type CDATA #REQUIRED>
+
+<!ELEMENT linea (#PCDATA)>
+
+<!ELEMENT interlinear_gloss (paralel_phrase, morpheme_analysis?, syntactic_analysis?)>
+
+<!ELEMENT paralel_phrase (original, translation)>
+<!ELEMENT original (#PCDATA)>
+<!ELEMENT translation (#PCDATA)>
+
+<!ELEMENT morpheme_analysis (unit+)>
+<!ELEMENT syntactic_analysis (unit+)>
+
+<!ELEMENT unit (form, gloss)>
+<!ELEMENT form (#PCDATA)>
+<!ELEMENT gloss (#PCDATA)>
