@@ -1,17 +1,15 @@
-
 <!ELEMENT documento (pagina+)>
 <!ATTLIST documento
             fuente CDATA #REQUIRED
-            paginas CDATA #REQUIRED>
-
-<!ELEMENT pagina (linea | seccion | interlinear_gloss | paralel_phrase)*>
+            paginas CDATA #REQUIRED
+            fecha CDATA #IMPLIED> <!ELEMENT pagina (linea | seccion | interlinear_gloss | paralel_phrase | titulo)*>
 <!ATTLIST pagina
             num CDATA #REQUIRED>
 
-<!ELEMENT seccion (linea | interlinear_gloss | paralel_phrase)*>
+<!ELEMENT seccion (linea | seccion | interlinear_gloss | paralel_phrase | titulo)*>
 <!ATTLIST seccion
-            type CDATA #REQUIRED>
-
+            type CDATA #IMPLIED
+            tipo CDATA #IMPLIED> <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT linea (#PCDATA)>
 
 <!ELEMENT interlinear_gloss (paralel_phrase, morpheme_analysis?, syntactic_analysis?)>

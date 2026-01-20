@@ -1,0 +1,34 @@
+2026-01-20 18:20:56 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2026-01-20_time_18-20-56.log
+2026-01-20 18:21:01 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2026-01-20 18:21:01 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2026-01-20 18:21:01 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2026-01-20 18:21:01 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2026-01-20 18:21:01 - pdf_processor - INFO - ----------------------------------------
+2026-01-20 18:21:01 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel.pdf
+2026-01-20 18:21:01 - pdf_processor - INFO - 🌡️ Temp:      0.25
+2026-01-20 18:21:01 - pdf_processor - INFO - 📂 Salida:    output
+2026-01-20 18:21:01 - pdf_processor - INFO - 📖 Rango:     páginas 160-180
+2026-01-20 18:21:01 - pdf_processor - INFO - ----------------------------------------
+2026-01-20 18:21:01 - pdf_processor - INFO - 📜 Leyendo prompt...
+2026-01-20 18:21:01 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.25...
+2026-01-20 18:21:01 - pdf_processor - INFO - 📄 Procesando páginas 160-180
+2026-01-20 18:21:01 - pdf_processor - INFO - 📖 Procesando páginas 160 a 164 (5 páginas)...
+2026-01-20 18:22:09 - pdf_processor - INFO - ✅ XML validado correctamente en el intento 1.
+2026-01-20 18:22:09 - pdf_processor - INFO - ██▒▒▒▒▒▒▒▒ 23%
+2026-01-20 18:22:09 - pdf_processor - INFO - ---------------------------------
+2026-01-20 18:22:09 - pdf_processor - INFO - 📖 Procesando páginas 165 a 169 (5 páginas)...
+2026-01-20 18:23:11 - pdf_processor - INFO - ✅ XML validado correctamente en el intento 1.
+2026-01-20 18:23:11 - pdf_processor - INFO - ████▒▒▒▒▒▒ 47%
+2026-01-20 18:23:11 - pdf_processor - INFO - ---------------------------------
+2026-01-20 18:23:11 - pdf_processor - INFO - 📖 Procesando páginas 170 a 174 (5 páginas)...
+2026-01-20 18:24:33 - pdf_processor - INFO - ✅ XML validado correctamente en el intento 1.
+2026-01-20 18:24:33 - pdf_processor - INFO - ███████▒▒▒ 71%
+2026-01-20 18:24:33 - pdf_processor - INFO - ---------------------------------
+2026-01-20 18:24:33 - pdf_processor - INFO - 📖 Procesando páginas 175 a 179 (5 páginas)...
+2026-01-20 18:26:10 - pdf_processor - WARNING - ⚠️ XML inválido (Código 0). Reintentando generación... (1/5)
+2026-01-20 18:28:03 - pdf_processor - INFO - ✅ XML validado correctamente en el intento 2.
+2026-01-20 18:28:03 - pdf_processor - INFO - █████████▒ 95%
+2026-01-20 18:28:03 - pdf_processor - INFO - ---------------------------------
+2026-01-20 18:28:03 - pdf_processor - INFO - 📖 Procesando páginas 180 a 180 (1 páginas)...
+2026-01-20 18:28:04 - pdf_processor - ERROR - 🚫 Superaste el limite de uso de gemini de tu versión, recuerda que el limite diario es 20
+2026-01-20 18:28:04 - pdf_processor - INFO - ⏹️  Proceso detenido por límite de API.
