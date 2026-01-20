@@ -9,10 +9,10 @@ from pylatex.utils import italic
 class XMLToLaTeXConverter:
     def __init__(self, xml_path):
         self.xml_path = xml_path
-        # Configuramos el documento con márgenes estándar para evitar Overfull hbox
+        # Margen de 2.5cm y configuración para evitar errores de compilación
         self.doc = Document(default_filepath='output_document', geometry_options={"margin": "2.5cm"})
         
-        # Paquetes necesarios
+        # Paquetes de lingüística y codificación
         self.doc.packages.append(Command('usepackage', 'expex'))
         self.doc.packages.append(Command('usepackage[T1]', 'fontenc'))
         self.doc.packages.append(Command('usepackage[utf8]', 'inputenc'))
@@ -26,7 +26,7 @@ class XMLToLaTeXConverter:
         tree = etree.parse(self.xml_path, parser)
         root = tree.getroot()
 
-        # Limpiamos el nombre de la fuente para el título
+        # Limpieza del título (fuente)
         fuente = root.get('fuente', 'Documento').replace('_', ' ').replace('-', '--')
         self.doc.preamble.append(Command('title', f"Análisis Lingüístico: {fuente}"))
         self.doc.preamble.append(Command('author', 'Generado por Maya API TFM'))
@@ -47,12 +47,10 @@ class XMLToLaTeXConverter:
             elif elemento.tag == 'linea':
                 texto = elemento.text.strip() if elemento.text else ""
                 if texto:
-                    # En lugar de \newline, usamos texto normal. 
-                    # LaTeX se encarga de ajustar los párrafos.
+                    # Texto fluido sin \newline forzados
                     self.doc.append(texto + " ") 
             
             elif elemento.tag == 'interlinear_gloss':
-                # Añadimos un salto de párrafo antes de la glosa para que no se pegue al texto
                 self.doc.append(NoEscape(r'\par\medskip'))
                 self._process_gloss(elemento)
                 self.doc.append(NoEscape(r'\medskip'))
@@ -64,12 +62,12 @@ class XMLToLaTeXConverter:
         original = orig_node.text.strip() if orig_node is not None else ""
         translation = trans_node.text.strip() if trans_node is not None else ""
         
-        # 2. Análisis Morfológico (Líneas B y C)
+        # 2. Análisis Morfológico
         units_m = gloss.xpath('.//morpheme_analysis/unit')
         forms_m = " ".join([f"\\textbf{{{u.find('form').text.strip()}}}" for u in units_m if u.find('form') is not None])
         glosses_m = " ".join([u.find('gloss').text.strip() for u in units_m if u.find('gloss') is not None])
 
-        # 3. Análisis Sintáctico (Lo preparamos para ir dentro de la glosa)
+        # 3. Análisis Sintáctico
         syntax_node = gloss.find('.//syntactic_analysis')
         syntax_content = ""
         if syntax_node is not None:
@@ -82,20 +80,21 @@ class XMLToLaTeXConverter:
                     parts.append(f"{f} [\\textsc{{{g}}}]")
             syntax_content = " ".join(parts)
 
-        # 4. Construcción del bloque expex (Sin usar \gld para evitar errores)
-        # Ponemos el análisis sintáctico como una línea destacada antes de la traducción
+        # 4. Construcción del bloque EX PEX con el NUEVO ORDEN
         expex_block = [
             r'\ex',
+            # LA TRADUCCIÓN VA PRIMERO (en cursiva y con un punto final si no tiene)
+            f"\\textit{{{translation}}} \\\\", 
             r'\begingl',
-            f'\\gla {original} //',   # Frase original
-            f'\\glb {forms_m} //',    # Morfemas
-            f'\\glc {glosses_m} //',   # Glosas morfológicas
+            f'\\gla {original} //',      # Frase original después
+            f'\\glb {forms_m} //',       # Morfemas en negrita
+            f'\\glc {glosses_m} //',      # Glosas morfológicas
         ]
         
-        # Si hay sintaxis, la metemos con un formato especial
-        syntax_line = f"\\glft \\textbf{{Sintaxis:}} {syntax_content} \\\\ " if syntax_content else "\\glft "
+        # El análisis sintáctico aparece al final como una nota aclaratoria
+        if syntax_content:
+            expex_block.append(f"\\glft \\textbf{{Sintaxis:}} {syntax_content} //")
         
-        expex_block.append(f"{syntax_line}`\\textit{{{translation}}}' //")
         expex_block.append(r'\endgl')
         expex_block.append(r'\xe')
         
