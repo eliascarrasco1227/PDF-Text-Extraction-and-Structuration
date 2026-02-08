@@ -1,0 +1,531 @@
+2026-02-08 17:55:58 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2026-02-08_time_17-55-58.log
+2026-02-08 17:56:01 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2026-02-08 17:56:01 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2026-02-08 17:56:01 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2026-02-08 17:56:01 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2026-02-08 17:56:02 - pdf_processor - INFO - ----------------------------------------
+2026-02-08 17:56:02 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel.pdf
+2026-02-08 17:56:02 - pdf_processor - INFO - 🌡️ Temp:      0.25
+2026-02-08 17:56:02 - pdf_processor - INFO - 📂 Salida:    output
+2026-02-08 17:56:02 - pdf_processor - INFO - 📖 Rango:     páginas 160-164
+2026-02-08 17:56:02 - pdf_processor - INFO - ----------------------------------------
+2026-02-08 17:56:02 - pdf_processor - INFO - 📜 Leyendo prompt...
+2026-02-08 17:56:02 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.25...
+2026-02-08 17:56:02 - pdf_processor - INFO - 📄 Procesando páginas 160-164
+2026-02-08 17:56:02 - pdf_processor - INFO - 📖 Procesando páginas 160 a 164 (5 páginas)...
+2026-02-08 17:56:02 - pdf_processor - INFO - 📡 Generando XML inicial...
+2026-02-08 17:56:59 - pdf_processor - ERROR - ❌ Validación fallida: Error de sintaxis: etiquetas mal cerradas o estructura XML inválida.
+2026-02-08 17:57:14 - pdf_processor - WARNING - 🔧 Intento 2: XML no válido. Llamando al Corrector...
+2026-02-08 17:58:14 - pdf_processor - INFO - ✅ XML validado correctamente en el intento 2.
+2026-02-08 17:58:14 - pdf_processor - INFO - ██████████ 100%
+2026-02-08 17:58:14 - pdf_processor - INFO - ---------------------------------
+2026-02-08 17:58:14 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2026-02-08 17:58:14 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_páginas_160-164_version_1.xml
+2026-02-08 17:58:14 - pdf_processor - INFO - ✅ XML guardado correctamente en: output\Gramatica-Normativa-Kaqchikel_páginas_160-164_version_1.xml
+2026-02-08 17:58:14 - pdf_processor - INFO - 🎨 Generando archivo LaTeX a partir del XML...
+2026-02-08 17:58:14 - pdf_processor - INFO - ⏳ Compilando output\Gramatica-Normativa-Kaqchikel_páginas_160-164_version_1.tex a PDF...
+2026-02-08 17:58:16 - pdf_processor - ERROR - ❌ Error crítico de LaTeX: This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(output/Gramatica-Normativa-Kaqchikel_pÃ¡ginas_160-164_version_1.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty)
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.sty
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage2e.sty
+
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpageclassi
+c.sty) 
+))
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/expex\expex.sty
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex)
+)) (C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/generic/expex\expex.tex))
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd))
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def)
+No file Gramatica-Normativa-Kaqchikel_pÃ¡ginas_160-164_version_1.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\elcar\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 Û°
+       Û°Û°/Û°Û°Û°/Û°Û°Û°/Û°Û° Como adverbio (modificador en predicado verba...
+
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 Û°Û°
+         Û°/Û°Û°Û°/Û°Û°Û°/Û°Û° Como adverbio (modificador en predicado verba...
+
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 Û°Û°Û°
+           /Û°Û°Û°/Û°Û°Û°/Û°Û° Como adverbio (modificador en predicado verba...
+
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 Û°Û°Û°/Û°
+              Û°Û°/Û°Û°Û°/Û°Û° Como adverbio (modificador en predicado verba...
+
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 Û°Û°Û°/Û°Û°
+                Û°/Û°Û°Û°/Û°Û° Como adverbio (modificador en predicado verba...
+
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 Û°Û°Û°/Û°Û°Û°
+                  /Û°Û°Û°/Û°Û° Como adverbio (modificador en predicado verba...
+
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 Û°Û°Û°/Û°Û°Û°/Û°
+                     Û°Û°/Û°Û° Como adverbio (modificador en predicado verba...
+
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 Û°Û°Û°/Û°Û°Û°/Û°Û°
+                       Û°/Û°Û° Como adverbio (modificador en predicado verba...
+
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 Û°Û°Û°/Û°Û°Û°/Û°Û°Û°
+                         /Û°Û° Como adverbio (modificador en predicado verba...
+
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 Û°Û°Û°/Û°Û°Û°/Û°Û°Û°/Û°
+                            Û° Como adverbio (modificador en predicado verba...
+
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 Û°Û°Û°/Û°Û°Û°/Û°Û°Û°/Û°Û°
+                               Como adverbio (modificador en predicado verba...
+
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 Û°
+       Û°Û°/Û°/Û°Û° %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 Û°Û°
+         Û°/Û°/Û°Û° %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 Û°Û°Û°
+           /Û°/Û°Û° %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 Û°Û°Û°/Û°
+              /Û°Û° %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 Û°Û°Û°/Û°/Û°
+                 Û° %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 Û°Û°Û°/Û°/Û°Û°
+                    %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 Û°
+       Û°Û°/Û°/Û°Û°Û°/Û° Sintagma verbal intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 Û°Û°
+         Û°/Û°/Û°Û°Û°/Û° Sintagma verbal intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 Û°Û°Û°
+           /Û°/Û°Û°Û°/Û° Sintagma verbal intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 Û°Û°Û°/Û°
+              /Û°Û°Û°/Û° Sintagma verbal intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 Û°Û°Û°/Û°/Û°
+                 Û°Û°/Û° Sintagma verbal intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 Û°Û°Û°/Û°/Û°Û°
+                   Û°/Û° Sintagma verbal intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 Û°Û°Û°/Û°/Û°Û°Û°
+                     /Û° Sintagma verbal intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 Û°Û°Û°/Û°/Û°Û°Û°/Û°
+                         Sintagma verbal intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 Û°
+       Û°Û°/Û°/Û°Û°Û°/Û°/ Modificadores del verbo intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 Û°Û°
+         Û°/Û°/Û°Û°Û°/Û°/ Modificadores del verbo intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 Û°Û°Û°
+           /Û°/Û°Û°Û°/Û°/ Modificadores del verbo intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 Û°Û°Û°/Û°
+              /Û°Û°Û°/Û°/ Modificadores del verbo intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 Û°Û°Û°/Û°/Û°
+                 Û°Û°/Û°/ Modificadores del verbo intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 Û°Û°Û°/Û°/Û°Û°
+                   Û°/Û°/ Modificadores del verbo intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 Û°Û°Û°/Û°/Û°Û°Û°
+                     /Û°/ Modificadores del verbo intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 Û°Û°Û°/Û°/Û°Û°Û°/Û°
+                        / Modificadores del verbo intransitivo %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 Û°
+       Û°Û°/Û°/Û°Û°Û°/Û°/Û°/Û° PartÃ­culas %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 Û°Û°
+         Û°/Û°/Û°Û°Û°/Û°/Û°/Û° PartÃ­culas %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 Û°Û°Û°
+           /Û°/Û°Û°Û°/Û°/Û°/Û° PartÃ­culas %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 Û°Û°Û°/Û°
+              /Û°Û°Û°/Û°/Û°/Û° PartÃ­culas %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 Û°Û°Û°/Û°/Û°
+                 Û°Û°/Û°/Û°/Û° PartÃ­culas %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 Û°Û°Û°/Û°/Û°Û°
+                   Û°/Û°/Û°/Û° PartÃ­culas %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 Û°Û°Û°/Û°/Û°Û°Û°
+                     /Û°/Û°/Û° PartÃ­culas %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 Û°Û°Û°/Û°/Û°Û°Û°/Û°
+                        /Û°/Û° PartÃ­culas %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 Û°Û°Û°/Û°/Û°Û°Û°/Û°/Û°
+                           /Û° PartÃ­culas %
+
+! LaTeX Error: Unicode character Û° (U+06F0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 Û°Û°Û°/Û°/Û°Û°Û°/Û°/Û°/Û°
+                               PartÃ­culas %
+
+Package lastpage Warning: Rerun to get the references right on input line 73.
+
+
+AED: lastpage setting LastPage
+[1{C:/Users/elcar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/el
+car/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}]
+(C:\Users\elcar\OneDrive\Documentos\MASTER\TFM\output\Gramatica-Normativa-Kaqch
+ikel_pÃ¡ginas_160-164_version_1.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)<C:/Users/elcar/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/elcar/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/elcar/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/elcar/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb>
+Output written on C:\Users\elcar\OneDrive\Documentos\MASTER\TFM\output\Gramatic
+a-Normativa-Kaqchikel_pÃ¡ginas_160-164_version_1.pdf (1 page, 118067 bytes).
+Transcript written on C:\Users\elcar\OneDrive\Documentos\MASTER\TFM\output\Gram
+atica-Normativa-Kaqchikel_pÃ¡ginas_160-164_version_1.log.
+
+2026-02-08 17:58:16 - pdf_processor - INFO - ✨ LaTeX generado correctamente en: output\Gramatica-Normativa-Kaqchikel_páginas_160-164_version_1.tex

@@ -1,0 +1,20 @@
+2026-02-08 17:50:54 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2026-02-08_time_17-50-54.log
+2026-02-08 17:50:59 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2026-02-08 17:50:59 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2026-02-08 17:50:59 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2026-02-08 17:50:59 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2026-02-08 17:51:00 - pdf_processor - INFO - ----------------------------------------
+2026-02-08 17:51:00 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel.pdf
+2026-02-08 17:51:00 - pdf_processor - INFO - 🌡️ Temp:      0.25
+2026-02-08 17:51:00 - pdf_processor - INFO - 📂 Salida:    output
+2026-02-08 17:51:00 - pdf_processor - INFO - 📖 Rango:     páginas 160-164
+2026-02-08 17:51:00 - pdf_processor - INFO - ----------------------------------------
+2026-02-08 17:51:00 - pdf_processor - INFO - 📜 Leyendo prompt...
+2026-02-08 17:51:00 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.25...
+2026-02-08 17:51:00 - pdf_processor - INFO - 📄 Procesando páginas 160-164
+2026-02-08 17:51:00 - pdf_processor - INFO - 📖 Procesando páginas 160 a 164 (5 páginas)...
+2026-02-08 17:51:01 - pdf_processor - INFO - 📡 Generando XML inicial...
+2026-02-08 17:51:51 - pdf_processor - ERROR - ❌ Validación fallida: Error de sintaxis: etiquetas mal cerradas o estructura XML inválida.
+2026-02-08 17:52:06 - pdf_processor - WARNING - 🔧 Intento 2: XML no válido. Llamando al Corrector...
+2026-02-08 17:52:06 - pdf_processor - ERROR - ❌ Error inesperado: fix_xml() got an unexpected keyword argument 'error_message'
+2026-02-08 17:52:06 - pdf_processor - ERROR - ❌ Error durante el proceso: fix_xml() got an unexpected keyword argument 'error_message'

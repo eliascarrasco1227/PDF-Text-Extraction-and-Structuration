@@ -12,6 +12,7 @@ from config.properties import (
 )
 from PyPDF2 import PdfReader
 from validator.xml_validator import XMLValidator
+from core.xml_corrector import XMLCorrector
 from core.logger_config import app_logger
 import time
 import os
@@ -29,6 +30,8 @@ class AIGenerator:
         self.max_retries = MAX_RETRIES
         self.temperature = temperature
         self.few_shot_examples = self._load_few_shot_data() if USE_FEW_SHOT else []
+        self.corrector = XMLCorrector() 
+        self.validator = XMLValidator()
 
     def _load_few_shot_data(self) -> list:
         examples = []
@@ -114,27 +117,49 @@ class AIGenerator:
         contents.append(prompt)
 
         # --- BUCLE DE REINTENTOS CON VALIDACIÓN ---
+        """Bucle de reintentos con flujo de corrección"""
+        
+        # Cargamos el DTD una vez para pasárselo al corrector
+        with open(DTD_PATH, 'r', encoding='utf-8') as f:
+            dtd_content = f.read()
+
+        xml_candidato = None
+        error_detallado = ""
+
         for attempt in range(self.max_retries):
             try:
-                response = self.client.models.generate_content(
-                    model=self.model,
-                    contents=contents,
-                    config=types.GenerateContentConfig(temperature=self.temperature)
-                )
-                
-                # 1. Limpiamos la respuesta
-                xml_candidato = self._clean_xml_response(response.text)
-                
-                # 2. Validamos (Bien formado y DTD)
-                resultado_val = XMLValidator.check_valid(xml_candidato, DTD_PATH)
-                
-                if resultado_val == 1:
+                # PASO 1: Obtener el XML (Generación inicial o Corrección)
+                if attempt == 0:
+                    self.logger.info(f"📡 Generando XML inicial...")
+                    # Tu llamada original a Gemini
+                    response = self.client.models.generate_content(
+                        model=self.model,
+                        contents=contents,
+                        config=types.GenerateContentConfig(temperature=self.temperature)
+                    )
+                    xml_candidato = self._clean_xml_response(response.text)
+                else:
+                    self.logger.warning(f"🔧 Intento {attempt + 1}: XML no válido. Llamando al Corrector...")
+                    # Llamada al segundo LLM especializado en corregir
+                    xml_candidato = self.corrector.fix_xml(
+                        faulty_xml=xml_candidato,
+                        error_message=error_detallado,
+                        dtd_content=dtd_content,
+                        pdf_bytes=target_pdf_bytes
+                    )
+                    xml_candidato = self._clean_xml_response(xml_candidato)
+
+                # PASO 2: Validar el XML resultante
+                codigo, mensaje = self.validator.check_valid(xml_candidato, DTD_PATH)
+
+                if codigo == 1:
                     self.logger.info(f"✅ XML validado correctamente en el intento {attempt + 1}.")
                     return xml_candidato
                 else:
-                    self.logger.warning(f"⚠️ XML inválido (Código {resultado_val}). Reintentando generación... ({attempt + 1}/{self.max_retries})")
+                    # Guardamos el error para el siguiente intento del corrector
+                    error_detallado = mensaje
+                    self.logger.error(f"❌ Validación fallida: {mensaje}")
                     time.sleep(self.retry_delay)
-                    continue
 
             except ServerError as e:
                 if "503" in str(e) and attempt < self.max_retries - 1:

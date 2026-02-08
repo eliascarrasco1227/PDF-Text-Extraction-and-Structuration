@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kaqchikel.pdf" paginas="160-164">
+<pagina num="160">
+        <linea>...yalan taq e koköj chik ok ri ruwäch nuya'... </linea>
+        <linea>SA</linea>
+        <linea>...ahora da frutos muy pequeños...</linea>
+        <paralel_phrase>
+            <original>...yalan taq e koköj chik ok ri ruwäch nuya'... </original>
+            <translation>...ahora da frutos muy pequeños...</translation>
+        </paralel_phrase>
+        <linea>...yalan taq e koköj chik ok ri ruwäch n-0-u-ya'... </linea>
+        <linea>INT PL/DIM B3s pequeños PAR DIR DET A3s-SR INC-B3s-A3s-dar</linea>
+        <linea>۰۰۰/۰۰۰/۰۰۰/۰۰ Como adverbio (modificador en predicado verbal y no verbal)</linea>
+        <linea>El adjetivo funciona como adverbio en predicado verbal o no verbal. Es negado a</linea>
+        <linea>través de la partícula negativa man en complemento de la partícula ta (man....ta),</linea>
+        <linea>modificado por el intensificador yalan, así como modificado por las partículas na u</linea>
+        <linea>ok. Ejemplos:</linea>
+        <paralel_phrase>
+            <original>Jeb'ël ütz xina'.</original>
+            <translation>Qué bien lo sintieron.</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>Jeb'ël ütz x-0-i-na'.</original>
+            <translation>Bonito bueno COM-B3s-A2p-sentir</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>Man ütz ta ninna' chi re la rikil la'.</original>
+            <translation>No me gusta esa comida.</translation>
+        </paralel_phrase>
+        <linea>Man ütz ta n-0-in-na' chi r-e la rikil la'.</linea>
+        <linea>NEG bueno PAR INC-B3s-A2p-sentir PRE A3s-SR DEM comida DEM</linea>
+    </pagina>
+    <pagina num="161">
+        <paralel_phrase>
+            <original>k'a jeb'ël na yech'on...</original>
+            <translation>...aún hablan bien...</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>...k'a öj koköj ok...</original>
+            <translation>...aún somos pequeños...</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>...k'a öj koköj ok...</original>
+            <translation>...aún somos pequeños...</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>Yalan jeb'ël ninwak'axaj ri qach'ab'äl...</original>
+            <translation>Me gusta mucho nuestro idioma...</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>Yalan jeb'ël n-0-inw-ak'axajri qa-ch'ab'äl...</original>
+            <translation>INT bonito INC-B3s-A3s-oir DET Alp-idioma</translation>
+        </paralel_phrase>
+    </pagina>
+    <pagina num="162">
+        <linea>۰۰۰/۰/۰۰ Sintagma Verbal</linea>
+        <linea>La palabra principal de este tipo de sintagma es un verbo. Contiene raíz o base verbal.</linea>
+        <linea>más los accidentes gramaticales, tales como el tiempo/aspecto, modo y la persona</linea>
+        <linea>gramatical, como elementos obligatorios. El verbo puede tener opcionalmente afijos</linea>
+        <linea>de movimiento, sufijos y partículas direccionales. Hay dos clases de sintagma verbal,</linea>
+        <linea>los cuales se diferencian por el tipo de verbo: el sintagma verbal intransitivo y el sintagma</linea>
+        <linea>verbal transitivo. El verbo es el primer elemento en la estructura oracional, aunque</linea>
+        <linea>puede adelantársele un adverbio o algún constituyente con énfasis.</linea>
+        <linea>۰۰۰/۰/۰۰۰/۰ Sintagma verbal intransitivo</linea>
+        <linea>La palabra principal de este sintagma es un verbo intransitivo. Hace referencia al sujeto</linea>
+        <linea>agente o paciente a través del Juego Absolutivo. La estructura del núcleo es: el tiempo</linea>
+        <linea>aspecto y modo, excepto el aspecto perfectivo que va de último; movimiento (optativo),</linea>
+        <linea>raíz o base verbal intransitiva y sufijos para los verbos intransitivos derivados. Ejemplos:</linea>
+        <paralel_phrase>
+            <original>Xpe ri ala', xotz'uye'.</original>
+            <translation>El muchacho vino a sentarse.</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>X-0-pe ri ala', x-0-o-tz'uy-e'.</original>
+            <translation>COM-B3s-venir DET muchacho COM-B3s-MOV-sentar-SC</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>Man kixel el chi ruwa jay.</original>
+            <translation>No salgan al patio.</translation>
+        </paralel_phrase>
+        <linea>Man k-ix-el el chi ruwa jay.</linea>
+        <linea>NEG IMP-B2p-salir DIR PRE A3s-frente casa</linea>
+        <paralel_phrase>
+            <original>Elenäq el ri ixöq.</original>
+            <translation>La mujer ha salido</translation>
+        </paralel_phrase>
+        <linea>Ø-El-enäq el ri ixöq.</linea>
+        <linea>B3s-Salir-PP DIR DET mujer</linea>
+        <paralel_phrase>
+            <original>...xa choj xowär...</original>
+            <translation>...solamente vino a dormir...</translation>
+        </paralel_phrase>
+    </pagina>
+    <pagina num="163">
+        <paralel_phrase>
+            <original>xa choj x-0-o-wär...</original>
+            <translation>PAR ADV COM-B3s-MOV-dormir</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>...toq xoqa chi rochoch....</original>
+            <translation>...cuando vino a su casa,...</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>...toq x-0-o-qa chi r-ochoch,...</original>
+            <translation>Cuando COM-B3s-MOV-vino PRE A3s-casa</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>...xoxuke', xuk'utuj rukuyb'äl mak.</original>
+            <translation>...se vino a hincar y pidió perdon.</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>x-4-o-xuk-e', x-0-u-kutuj ru-kuy-b'äl mak.</original>
+            <translation>COM-B3s-MOV-hincar-SC COM-B3s-A3s-pedir A3s-perdonar-INTR culpa</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>Xek'is el ri wakx....</original>
+            <translation>Las vacas se terminaron....</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>X-e-k'is el ri wakx,...</original>
+            <translation>COM-B3p-terminar DIR DET vaca</translation>
+        </paralel_phrase>
+        <paralel_phrase>
+            <original>Iwir xilitäj jun kök chi wochoch</original>
+            <translation>Ayer se encontró una tortuga en mi casa.</translation>
+        </paralel_phrase>
+        <linea>Iwir x-0-il-itäj jun kök chi w-ochoch.</linea>
+        <linea>ADV COM-B3s-encontrar-PAS IND tortuga PRE A3s.casa</linea>
+        <linea>۰۰۰/۰۰۰/۰۰۰/۰/ Modificadores del verbo intransitivo</linea>
+        <linea>Como queda dicho, un sintagma verbal está constituido por un verbo intransitivo más</linea>
+        <linea>otros elementos que lo modifican, los que cumplen distintas funciones; algunos lo</linea>
+        <linea>anteceden y otros lo posponen. Entre estos modificadores hay partículas y diferentes</linea>
+        <linea>tipos de adjuntos (adverbiales o nominales).</linea>
+        <linea>۰۰۰/۰۰۰/۰۰۰/۰/۰/۰ Partículas</linea>
+        <linea>El verbo intransitivo puede ser acompañado por diversas partículas que modifican su</linea>
+        <linea>significado. Las partículas pueden ser: direccionales, auxiliares, negativa más partícula</linea>
+        <linea>complementaria y otras partículas como wi, kan, k'a, na, y yan. A continuación su</linea>
+        <linea>descripción:</linea>
+    </pagina>
+    <pagina num="164">
+        
+    </pagina>
+</documento>

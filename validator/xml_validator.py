@@ -2,6 +2,7 @@
 # pip install lxml
 
 import logging
+import io
 from lxml import etree
 from io import BytesIO
 
@@ -32,31 +33,23 @@ class XMLValidator:
     @staticmethod
     def check_valid(xml_string, dtd_path):
         """
-        Comprueba si el XML es válido según un archivo DTD.
-        Retorna:
-             1: Si es válido.
-             0: Si está bien formado pero NO cumple el DTD.
-            -1: Si ni siquiera está bien formado.
+        Retorna: (codigo, mensaje_error)
         """
-        # Primero verificamos si está bien formado
+        # Verificación de formación básica
         if XMLValidator.check_well_formed(xml_string) == -1:
-            return -1
+            return -1, "Error de sintaxis: etiquetas mal cerradas o estructura XML inválida."
 
         try:
-            # Cargamos el DTD
             with open(dtd_path, 'rb') as f:
                 dtd_content = f.read()
-            dtd = etree.DTD(BytesIO(dtd_content))
-
-            # Parseamos el XML para validarlo
+            dtd = etree.DTD(io.BytesIO(dtd_content))
             root = etree.fromstring(xml_string.encode('utf-8'))
             
             if dtd.validate(root):
-                return 1
+                return 1, "OK"
             else:
-                logging.warning(f"XML bien formado pero INVÁLIDO según DTD: {dtd.error_log.filter_from_errors()}")
-                return 0
-                
+                # Capturamos el primer error del log para pasárselo a la IA
+                error = dtd.error_log.filter_from_errors()[0]
+                return 0, f"Error en línea {error.line}: {error.message}"
         except Exception as e:
-            logging.error(f"Error durante la validación DTD: {e}")
-            return 0
+            return -1, str(e)

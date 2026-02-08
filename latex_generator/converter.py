@@ -29,16 +29,41 @@ class XMLToLaTeXConverter:
             num_pag = pagina.get('num')
             with self.doc.create(Section(f"Página {num_pag}")):
                 self._process_elements(pagina)
+    
+    def _clean_for_latex(self, text: str) -> str:
+        """Limpia caracteres Unicode problemáticos para pdflatex"""
+        if not text:
+            return ""
+        
+        # Mapa de caracteres extraños que hemos detectado en tus logs (U+06F0, etc)
+        # Convertimos números árabes/índicos a números estándar
+        replacements = {
+            '\u06f0': '0', '\u06f1': '1', '\u06f2': '2', '\u06f3': '3', 
+            '\u06f4': '4', '\u06f5': '5', '\u06f6': '6', '\u06f7': '7', 
+            '\u06f8': '8', '\u06f9': '9',
+            # Otros caracteres de control que suelen dar guerra
+            '\u200b': '',  # Zero width space
+            '\u200e': '',  # Left-to-right mark
+            '\u200f': '',  # Right-to-left mark
+        }
+        
+        for char, rep in replacements.items():
+            text = text.replace(char, rep)
+            
+        # Escapamos caracteres especiales de LaTeX si no vienen ya protegidos
+        # (Pero con cuidado de no romper las etiquetas \textbf o \textit)
+        # Por ahora, nos centramos en los caracteres Unicode que fallaron.
+        return text
 
     def _process_elements(self, container):
         for elemento in container:
             if elemento.tag == 'seccion':
-                titulo = elemento.get('type', 'Sección')
-                self.doc.append(Subsection(titulo))
+                titulo = elemento.get('type', 'Seccion')
+                self.doc.append(Subsection(self._clean_for_latex(titulo)))
                 self._process_elements(elemento)
             elif elemento.tag == 'linea':
                 texto = elemento.text.strip() if elemento.text else ""
-                if texto: self.doc.append(texto + " ") 
+                if texto: self.doc.append(self._clean_for_latex(texto) + " ") 
             elif elemento.tag == 'interlinear_gloss':
                 self.doc.append(NoEscape(r'\par\medskip'))
                 self._process_gloss(elemento)

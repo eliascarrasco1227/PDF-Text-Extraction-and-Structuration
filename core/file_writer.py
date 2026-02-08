@@ -55,9 +55,9 @@ class FileWriter:
             
             if ALL_PAGES:
                 total_pages = self._get_total_pages(original_pdf_path)
-                pages_range = f"páginas_1-{total_pages}"
+                pages_range = f"pag_1-{total_pages}"
             else:
-                pages_range = f"páginas_{PAGINAS[0]}-{PAGINAS[1]}"
+                pages_range = f"pag_{PAGINAS[0]}-{PAGINAS[1]}"
             
             # Construimos el nombre de salida basado en el input real
             output_file_base = f"{input_file_name}_{pages_range}"

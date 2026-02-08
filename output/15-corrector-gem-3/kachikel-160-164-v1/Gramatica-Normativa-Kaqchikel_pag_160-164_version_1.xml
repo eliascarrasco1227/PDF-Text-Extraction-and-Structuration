@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kaqchikel.pdf" paginas="160-164">
+<pagina num="158">
+        <seccion tipo="Sintagma Adjetival">
+            <linea>Sintagma Adjetival</linea>
+            <linea>La palabra principal del sintagma adjetival es uno o más adjetivos; cuando es más de</linea>
+            <linea>un adjetivo actúan de manera complementaria. Está compuesto facultativamente por la</linea>
+            <linea>raíz y en casos específicos por sufijos de plural. Ejemplos:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...nqil nima'q taq yab'il,...</original>
+                    <translation>...encontramos graves enfermedades,...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>n-</form>
+                        <gloss>INC-</gloss>
+                    </unit>
+                    <unit>
+                        <form>0-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>q-</form>
+                        <gloss>A1s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>il</form>
+                        <gloss>encontrar</gloss>
+                    </unit>
+                    <unit>
+                        <form>nim-</form>
+                        <gloss>grande-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a'qtaq</form>
+                        <gloss>PL</gloss>
+                    </unit>
+                    <unit>
+                        <form>yab'il,...</form>
+                        <gloss>PL/DIM enfermedad</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>nima'q</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...achi'el ri ch'uta'q xtani'...</original>
+                    <translation>...así como las niñas...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>achi'el</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>ch'ut-</form>
+                        <gloss>pequeño-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a'q</form>
+                        <gloss>PL</gloss>
+                    </unit>
+                    <unit>
+                        <form>xtan-</form>
+                        <gloss>niña-</gloss>
+                    </unit>
+                    <unit>
+                        <form>i'...</form>
+                        <gloss>PL</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>ch'uta'q</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+        </seccion>
+        <seccion tipo="Modificadores del adjetivo">
+            <linea>Modificadores del adjetivo</linea>
+            <linea>Este sintagma puede estar formado por más de un adjetivo, funcionan de manera</linea>
+            <linea>complementaria, generalmente indica plural. También es modificado por las partículas</linea>
+            <linea>chik y ok o por el intensificador yalan. Ejemplos:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...xkokisaj yan qa la juley chik tzyäq, la ch'uta'q xax ok xkokisaj qa...</original>
+                    <translation>...usaron la otra clase de ropa, las más livianas...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>x-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>0-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>k-</form>
+                        <gloss>A3p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok-</form>
+                        <gloss>usar-</gloss>
+                    </unit>
+                    <unit>
+                        <form>isa-</form>
+                        <gloss>CAU-</gloss>
+                    </unit>
+                    <unit>
+                        <form>j</form>
+                        <gloss>SC</gloss>
+                    </unit>
+                    <unit>
+                        <form>yan</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>qa</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>la</form>
+                        <gloss>DEM</gloss>
+                    </unit>
+                    <unit>
+                        <form>ju-</form>
+                        <gloss>uno-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ley</form>
+                        <gloss>clase</gloss>
+                    </unit>
+                    <unit>
+                        <form>chik</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>tzyäq,</form>
+                        <gloss>ropa</gloss>
+                    </unit>
+                    <unit>
+                        <form>la</form>
+                        <gloss>DEM</gloss>
+                    </unit>
+                    <unit>
+                        <form>ch'ut-</form>
+                        <gloss>pequeño-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a'q</form>
+                        <gloss>PL</gloss>
+                    </unit>
+                    <unit>
+                        <form>xax</form>
+                        <gloss>delgado</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>x-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>0-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>k-</form>
+                        <gloss>A3p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok-</form>
+                        <gloss>usar-</gloss>
+                    </unit>
+                    <unit>
+                        <form>isa-</form>
+                        <gloss>CAU-</gloss>
+                    </unit>
+                    <unit>
+                        <form>j</form>
+                        <gloss>SC</gloss>
+                    </unit>
+                    <unit>
+                        <form>qa...</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>juley chik tzyäq</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                    <unit>
+                        <form>ch'uta'q xax ok</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...relik uqaj, relik ok ch'uta'q pas...</original>
+                    <translation>...corte común fajas pequeñas comunes...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>relik</form>
+                        <gloss>común</gloss>
+                    </unit>
+                    <unit>
+                        <form>uqaj,</form>
+                        <gloss>corte</gloss>
+                    </unit>
+                    <unit>
+                        <form>relik</form>
+                        <gloss>común</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>ch'ut-</form>
+                        <gloss>pequeño-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a'q</form>
+                        <gloss>PL</gloss>
+                    </unit>
+                    <unit>
+                        <form>pas...</form>
+                        <gloss>faja</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>relik</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                    <unit>
+                        <form>relik ok ch'uta'q</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+        </seccion>
+    </pagina>
+    <pagina num="159">
+        <seccion tipo="Funciones del Sintagma Adjetival">
+            <linea>Funciones del Sintagma Adjetival</linea>
+            <linea>El sintagma adjetival funciona dentro de la cláusula así:</linea>
+            <linea>Como modificador del sintagma nominal.</linea>
+            <linea>Como núcleo del predicado no verbal.</linea>
+            <linea>Como adverbio (modificador en predicados verbal y no verbal).</linea>
+            <linea>A continuación se detalla cada una de las funciones del sintagma adjetival y los</linea>
+            <linea>modificadores para cada caso:</linea>
+        </seccion>
+        <seccion tipo="Como modificador del sintagma nominal">
+            <linea>Como modificador del sintagma nominal</linea>
+            <linea>El adjetivo se antepone al nominal para modificarlo, los adjetivos siempre concuerdan</linea>
+            <linea>en cuanto al número, es decir, si el nominal es plural, el adjetivo también se escribirá</linea>
+            <linea>en plural. Ejemplos:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...nima'q taq ixoqi',...</original>
+                    <translation>...mujeres importantes,...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>nima'q</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </morpheme_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...nim-a'q taq ixoq-i',...</original>
+                    <translation>...mujeres importantes,...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>nim-a'q</form>
+                        <gloss>grande-PL</gloss>
+                    </unit>
+                    <unit>
+                        <form>taq</form>
+                        <gloss>PL/DIM</gloss>
+                    </unit>
+                    <unit>
+                        <form>ixoq-i',...</form>
+                        <gloss>mujer-PL</gloss>
+                    </unit>
+                </morpheme_analysis>
+            </interlinear_gloss>
+        </seccion>
+    </pagina>
+</documento>
