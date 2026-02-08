@@ -85,8 +85,12 @@ class XMLToLaTeXConverter:
         current_g_block = ""
 
         for i, u in enumerate(units_m):
-            f = u.find('form').text.strip() if u.find('form') is not None else ""
-            g = u.find('gloss').text.strip() if u.find('gloss') is not None else ""
+            # Usamos (node.text or "") para convertir None en un string vacío antes de hacer strip()
+            f_node = u.find('form')
+            g_node = u.find('gloss')
+            
+            f = (f_node.text or "").strip() if f_node is not None else ""
+            g = (g_node.text or "").strip() if g_node is not None else ""
             
             # Aplicamos negrita al morfema individual como pidió el tutor
             current_f_block += f"\\textbf{{{f}}}"

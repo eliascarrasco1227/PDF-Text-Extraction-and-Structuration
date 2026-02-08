@@ -1,0 +1,16 @@
+2026-02-08 19:26:55 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2026-02-08_time_19-26-55.log
+2026-02-08 19:26:59 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2026-02-08 19:26:59 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2026-02-08 19:26:59 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2026-02-08 19:26:59 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2026-02-08 19:27:00 - pdf_processor - INFO - ----------------------------------------
+2026-02-08 19:27:00 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel.pdf
+2026-02-08 19:27:00 - pdf_processor - INFO - 🌡️ Temp:      0.25
+2026-02-08 19:27:00 - pdf_processor - INFO - 📂 Salida:    output
+2026-02-08 19:27:00 - pdf_processor - INFO - 📖 Rango:     páginas 160-161
+2026-02-08 19:27:00 - pdf_processor - INFO - ----------------------------------------
+2026-02-08 19:27:00 - pdf_processor - INFO - 📜 Leyendo prompt...
+2026-02-08 19:27:00 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.25...
+2026-02-08 19:27:00 - pdf_processor - INFO - 📄 Procesando páginas 160-161
+2026-02-08 19:27:00 - pdf_processor - INFO - 📖 Procesando páginas 160 a 161 (2 páginas)...
+2026-02-08 19:27:00 - pdf_processor - INFO - 📡 Generando XML inicial...

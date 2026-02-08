@@ -12,7 +12,7 @@
             tipo CDATA #IMPLIED> <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT linea (#PCDATA)>
 
-<!ELEMENT interlinear_gloss (paralel_phrase, morpheme_analysis?, syntactic_analysis?)>
+<!ELEMENT interlinear_gloss (paralel_phrase?, morpheme_analysis?, syntactic_analysis?)>
 
 <!ELEMENT paralel_phrase (original, translation)>
 <!ELEMENT original (#PCDATA)>

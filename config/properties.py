@@ -10,12 +10,12 @@ PROMPT_PATH = 'prompts/prompt_v4'
 OUTPUT_DIR = 'output'
 LOG_DIR = 'logs'  # directorio de logs
 ALL_PAGES = False  # Si es True, procesa todas las páginas del PDF ignorando PAGINAS
-PAGINAS = (160, 164)  # Páginas a procesar (inicio, fin), ambas inclusive.  (primera página = 0. pagina = las que indica el pdf - 1)
+PAGINAS = (160, 161)  # Páginas a procesar (inicio, fin), ambas inclusive.  (primera página = 0. pagina = las que indica el pdf - 1)
 PAGES_PER_BLOCK = 2  # Número de páginas a procesar por bloque
 
 # Configuración para reintentos
 RETRY_DELAY = 15  # Segundos a esperar entre reintentos (para errores 503, servidor de gemini colapsado)
-MAX_RETRIES = 5    # Número máximo de reintentos
+MAX_RETRIES = 3    # Número máximo de reintentos
 
 # Few shot
 # Interruptor para activar/desactivar el few-shot
@@ -33,7 +33,7 @@ FEW_SHOT_XML_PATH_2 = 'data/few-shot/Gramatica-Normativa-Mam_páginas_80-80.xml'
 # Temperatura: 0.0 = Deterministico (Mejor para extracción fiel). 1.0 = Creativo. (default in gemini 1.0, balanced) 
 TEMPERATURE = 0.25
 
-GEMINI_MODEL = 'gemini-3-flash-preview' #'gemma-3-27b-it' #'gemini-2.5-flash-lite' #  # Modelo de Gemini a usar
+GEMINI_MODEL = 'gemini-2.5-flash' #'gemini-3-flash-preview' #'gemma-3-27b-it' #'gemini-2.5-flash-lite' #  # Modelo de Gemini a usar
 
 
 # Validator

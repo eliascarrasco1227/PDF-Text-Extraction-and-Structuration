@@ -123,7 +123,7 @@ class AIGenerator:
         with open(DTD_PATH, 'r', encoding='utf-8') as f:
             dtd_content = f.read()
 
-        xml_candidato = None
+        xml_candidato = ""
         error_detallado = ""
 
         for attempt in range(self.max_retries):
@@ -170,7 +170,12 @@ class AIGenerator:
             except Exception as e:
                 raise
         
-        raise Exception(f"❌ No se pudo obtener un XML válido después de {self.max_retries} intentos.")
+        self.logger.warning(f"⚠️ No se pudo obtener un XML válido tras {self.max_retries} intentos.")
+        self.logger.warning(f"📄 Se devolverá el último XML generado para no detener el proceso.")
+        
+        return xml_candidato # Devolvemos lo que tengamos, aunque no sea válido
+    
+        #raise Exception(f"❌ No se pudo obtener un XML válido después de {self.max_retries} intentos.")
     
     def generate_from_pdf(self, pdf_path: str, prompt: str) -> str:
         start_page, end_page = self._determine_page_range(pdf_path)

@@ -1,0 +1,30 @@
+2026-02-08 19:11:29 - pdf_processor - INFO - Logging configurado. Archivo: logs\application_date_2026-02-08_time_19-11-29.log
+2026-02-08 19:11:32 - pdf_processor - INFO - 🧠 Cargando ejemplos Few-Shot...
+2026-02-08 19:11:32 - pdf_processor - INFO - ✅ Ejemplo 1 (Kaqchikel) cargado correctamente.
+2026-02-08 19:11:32 - pdf_processor - INFO - ✅ Ejemplo 2 (Mam) cargado correctamente.
+2026-02-08 19:11:32 - pdf_processor - INFO - 🧠 Total ejemplos cargados: 2
+2026-02-08 19:11:33 - pdf_processor - INFO - ----------------------------------------
+2026-02-08 19:11:33 - pdf_processor - INFO - 📄 Procesando: Gramatica-Normativa-Kaqchikel.pdf
+2026-02-08 19:11:33 - pdf_processor - INFO - 🌡️ Temp:      0.25
+2026-02-08 19:11:33 - pdf_processor - INFO - 📂 Salida:    output
+2026-02-08 19:11:33 - pdf_processor - INFO - 📖 Rango:     páginas 160-161
+2026-02-08 19:11:33 - pdf_processor - INFO - ----------------------------------------
+2026-02-08 19:11:33 - pdf_processor - INFO - 📜 Leyendo prompt...
+2026-02-08 19:11:33 - pdf_processor - INFO - 🤖 Iniciando generación con Temperatura 0.25...
+2026-02-08 19:11:33 - pdf_processor - INFO - 📄 Procesando páginas 160-161
+2026-02-08 19:11:33 - pdf_processor - INFO - 📖 Procesando páginas 160 a 161 (2 páginas)...
+2026-02-08 19:11:33 - pdf_processor - INFO - 📡 Generando XML inicial...
+2026-02-08 19:12:31 - pdf_processor - ERROR - ❌ Validación fallida: Error de sintaxis: etiquetas mal cerradas o estructura XML inválida.
+2026-02-08 19:12:46 - pdf_processor - WARNING - 🔧 Intento 2: XML no válido. Llamando al Corrector...
+2026-02-08 19:14:32 - pdf_processor - ERROR - ❌ Validación fallida: Error de sintaxis: etiquetas mal cerradas o estructura XML inválida.
+2026-02-08 19:14:47 - pdf_processor - WARNING - 🔧 Intento 3: XML no válido. Llamando al Corrector...
+2026-02-08 19:16:35 - pdf_processor - ERROR - ❌ Validación fallida: Error de sintaxis: etiquetas mal cerradas o estructura XML inválida.
+2026-02-08 19:16:50 - pdf_processor - WARNING - ⚠️ No se pudo obtener un XML válido tras 3 intentos.
+2026-02-08 19:16:50 - pdf_processor - WARNING - 📄 Se devolverá el último XML generado para no detener el proceso.
+2026-02-08 19:16:50 - pdf_processor - INFO - ██████████ 100%
+2026-02-08 19:16:50 - pdf_processor - INFO - ---------------------------------
+2026-02-08 19:16:50 - pdf_processor - INFO - 🧹 Limpiando respuesta de la IA...
+2026-02-08 19:16:50 - pdf_processor - INFO - Archivo guardado como: Gramatica-Normativa-Kaqchikel_pag_160-161_version_1.xml
+2026-02-08 19:16:50 - pdf_processor - INFO - ✅ XML guardado correctamente en: output\Gramatica-Normativa-Kaqchikel_pag_160-161_version_1.xml
+2026-02-08 19:16:50 - pdf_processor - INFO - 🎨 Generando archivo LaTeX a partir del XML...
+2026-02-08 19:16:50 - pdf_processor - ERROR - ❌ Error durante la generación de LaTeX: Opening and ending tag mismatch: form line 198 and gloss, line 198, column 40 (output/Gramatica-Normativa-Kaqchikel_pag_160-161_version_1.xml, line 198)

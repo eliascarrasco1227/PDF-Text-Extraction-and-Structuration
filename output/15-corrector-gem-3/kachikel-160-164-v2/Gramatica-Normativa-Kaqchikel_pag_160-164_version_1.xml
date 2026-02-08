@@ -1,0 +1,1681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento fuente="Gramatica-Normativa-Kaqchikel.pdf" paginas="160-164">
+<pagina num="158">
+        <seccion tipo="Sintagma Adjetival">
+            <linea>... / . .. Sintagma Adjetival</linea>
+            <linea>La palabra principal del sintagma adjetival es uno o más adjetivos; cuando es más de</linea>
+            <linea>un adjetivo actúan de manera complementaria. Está compuesto facultativamente por la</linea>
+            <linea>raíz y en casos específicos por sufijos de plural. Ejemplos:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...nqil nima'q taq yab'il,...</original>
+                    <translation>...encontramos graves enfermedades,...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>n-</form>
+                        <gloss>INC-</gloss>
+                    </unit>
+                    <unit>
+                        <form>0-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>q-</form>
+                        <gloss>A1s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>il</form>
+                        <gloss>encontrar</gloss>
+                    </unit>
+                    <unit>
+                        <form>nim-</form>
+                        <gloss>grande-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a'q</form>
+                        <gloss>PL</gloss>
+                    </unit>
+                    <unit>
+                        <form>taq</form>
+                        <gloss>PL/DIM</gloss>
+                    </unit>
+                    <unit>
+                        <form>yab'il,...</form>
+                        <gloss>enfermedad</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>nima'q taq yab'il</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...achi'el ri ch'uta'q xtani'...</original>
+                    <translation>...así como las niñas...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>achi'el</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>ch'ut-</form>
+                        <gloss>pequeño-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a'q</form>
+                        <gloss>PL</gloss>
+                    </unit>
+                    <unit>
+                        <form>xtan-</form>
+                        <gloss>niña-</gloss>
+                    </unit>
+                    <unit>
+                        <form>i'...</form>
+                        <gloss>PL</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>ch'uta'q xtani'</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+        </seccion>
+        <seccion tipo="Modificadores del adjetivo">
+            <linea>... / . / .. Modificadores del adjetivo</linea>
+            <linea>Este sintagma puede estar formado por más de un adjetivo, funcionan de manera</linea>
+            <linea>complementaria, generalmente indica plural. También es modificado por las partículas</linea>
+            <linea>chik y ok o por el intensificador yalan. Ejemplos:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...xkokisaj yan qa la juley chik tzyäq, la ch'uta'q xax ok xkokisaj qa...</original>
+                    <translation>... usaron la otra clase de ropa, las más livianas...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>x-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>0-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>k-</form>
+                        <gloss>A3p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok-</form>
+                        <gloss>usar-</gloss>
+                    </unit>
+                    <unit>
+                        <form>isa-</form>
+                        <gloss>CAU-</gloss>
+                    </unit>
+                    <unit>
+                        <form>j</form>
+                        <gloss>SC</gloss>
+                    </unit>
+                    <unit>
+                        <form>yan</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>qa</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>la</form>
+                        <gloss>DEM</gloss>
+                    </unit>
+                    <unit>
+                        <form>ju-</form>
+                        <gloss>uno-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ley</form>
+                        <gloss>clase</gloss>
+                    </unit>
+                    <unit>
+                        <form>chik</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>tzyäq,</form>
+                        <gloss>ropa</gloss>
+                    </unit>
+                    <unit>
+                        <form>la</form>
+                        <gloss></gloss>
+                    </unit>
+                    <unit>
+                        <form>ch'ut-</form>
+                        <gloss>pequeño-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a'q</form>
+                        <gloss>PL</gloss>
+                    </unit>
+                    <unit>
+                        <form>xax</form>
+                        <gloss>delgado</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>x-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>0-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>k-</form>
+                        <gloss>A3p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok-</form>
+                        <gloss>usar-</gloss>
+                    </unit>
+                    <unit>
+                        <form>isa-</form>
+                        <gloss>CAU-</gloss>
+                    </unit>
+                    <unit>
+                        <form>j</form>
+                        <gloss>SC</gloss>
+                    </unit>
+                    <unit>
+                        <form>qa...</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>juley chik tzyäq</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                    <unit>
+                        <form>ch'uta'q xax ok</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...relik uqaj, relik ok ch'uta'q pas...</original>
+                    <translation>... corte común fajas pequeñas comunes...</translation>
+                </paralel_phrase>
+                <syntactic_analysis>
+                    <unit>
+                        <form>relik</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                    <unit>
+                        <form>relik ok ch'uta'q</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+        </seccion>
+    </pagina>
+    <pagina num="159">
+        <interlinear_gloss>
+            <morpheme_analysis>
+                <unit>
+                    <form>relik</form>
+                    <gloss>común</gloss>
+                </unit>
+                <unit>
+                    <form>uqaj,</form>
+                    <gloss>corte</gloss>
+                </unit>
+                <unit>
+                    <form>relik</form>
+                    <gloss>común</gloss>
+                </unit>
+                <unit>
+                    <form>ok</form>
+                    <gloss>DIR</gloss>
+                </unit>
+                <unit>
+                    <form>ch'ut-</form>
+                    <gloss>pequeño-</gloss>
+                </unit>
+                <unit>
+                    <form>a'q</form>
+                    <gloss>PL</gloss>
+                </unit>
+                <unit>
+                    <form>pas...</form>
+                    <gloss>faja</gloss>
+                </unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <seccion tipo="Funciones del Sintagma Adjetival">
+            <linea>... / . / .. / . Funciones del Sintagma Adjetival</linea>
+            <linea>El sintagma adjetival funciona dentro de la cláusula así:</linea>
+            <linea>... / . / .. / . / . Como modificador del sintagma nominal.</linea>
+            <linea>... / . / .. / . / .. Como núcleo del predicado no verbal.</linea>
+            <linea>... / . / .. / . / ... Como adverbio (modificador en predicados verbal y no verbal).</linea>
+            <linea>A continuación se detalla cada una de las funciones del sintagma adjetival y los</linea>
+            <linea>modificadores para cada caso:</linea>
+        </seccion>
+        <seccion tipo="Como modificador del sintagma nominal">
+            <linea>... / . / .. / . / . Como modificador del sintagma nominal</linea>
+            <linea>El adjetivo se antepone al nominal para modificarlo, los adjetivos siempre concuerdan</linea>
+            <linea>en cuanto al número, es decir, si el nominal es plural, el adjetivo también se escribirá</linea>
+            <linea>en plural. Ejemplos:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...nima'q taq ixoqi',...</original>
+                    <translation>...mujeres importantes,...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>nim-</form>
+                        <gloss>grande-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a'q</form>
+                        <gloss>PL</gloss>
+                    </unit>
+                    <unit>
+                        <form>taq</form>
+                        <gloss>PL/DIM</gloss>
+                    </unit>
+                    <unit>
+                        <form>ixoq-</form>
+                        <gloss>mujer-</gloss>
+                    </unit>
+                    <unit>
+                        <form>i'...</form>
+                        <gloss>PL</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>nima'q taq</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...chi rupam la jun tinamït la' k'o mama' taq jay...</original>
+                    <translation>En ese pueblo hay casas muy grandes.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>chi</form>
+                        <gloss>PRE</gloss>
+                    </unit>
+                    <unit>
+                        <form>rupam</form>
+                        <gloss>A3s-PRE</gloss>
+                    </unit>
+                    <unit>
+                        <form>la</form>
+                        <gloss>DEM</gloss>
+                    </unit>
+                    <unit>
+                        <form>jun</form>
+                        <gloss>IND</gloss>
+                    </unit>
+                    <unit>
+                        <form>tinamït</form>
+                        <gloss>pueblo</gloss>
+                    </unit>
+                    <unit>
+                        <form>la'</form>
+                        <gloss>DEM</gloss>
+                    </unit>
+                    <unit>
+                        <form>0</form>
+                        <gloss>B3s</gloss>
+                    </unit>
+                    <unit>
+                        <form>k'o</form>
+                        <gloss>EST</gloss>
+                    </unit>
+                    <unit>
+                        <form>mama'</form>
+                        <gloss>grande</gloss>
+                    </unit>
+                    <unit>
+                        <form>taq</form>
+                        <gloss>PL/DIM</gloss>
+                    </unit>
+                    <unit>
+                        <form>jay...</form>
+                        <gloss>casa</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>mama' taq jay</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...ch'uta'q koköj ok chikopi', xaq ok kij,...</original>
+                    <translation>...pájaros pequeños, negros,...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>ch'ut-</form>
+                        <gloss>pequeño-</gloss>
+                    </unit>
+                    <unit>
+                        <form>a'q</form>
+                        <gloss>PL</gloss>
+                    </unit>
+                    <unit>
+                        <form>koköj</form>
+                        <gloss>pequeño</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>chikopi',</form>
+                        <gloss>pájaro</gloss>
+                    </unit>
+                    <unit>
+                        <form>xaq</form>
+                        <gloss>negro</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>k-</form>
+                        <gloss>A3p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ij,...</form>
+                        <gloss>espalda</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>ch'uta'q koköj ok</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                    <unit>
+                        <form>xaq ok</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+        </seccion>
+    </pagina>
+    <pagina num="160">
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>...ninb'än jata'q nutiko'n...</original>
+                <translation>...siembro un poco...</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>n-</form>
+                    <gloss>INC-</gloss>
+                </unit>
+                <unit>
+                    <form>0-</form>
+                    <gloss>B3s-</gloss>
+                </unit>
+                <unit>
+                    <form>in-</form>
+                    <gloss>A3s-</gloss>
+                </unit>
+                <unit>
+                    <form>b'än</form>
+                    <gloss>hacer</gloss>
+                </unit>
+                <unit>
+                    <form>jata'q</form>
+                    <gloss>poca</gloss>
+                </unit>
+                <unit>
+                    <form>nu-</form>
+                    <gloss>A1s-</gloss>
+                </unit>
+                <unit>
+                    <form>tiko'n...</form>
+                    <gloss>siembra</gloss>
+                </unit>
+            </morpheme_analysis>
+            <syntactic_analysis>
+                <unit>
+                    <form>jata'q</form>
+                    <gloss>SA</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <seccion tipo="Como núcleo del predicado no verbal">
+            <linea>... / . / .. / . / .. Como núcleo del predicado no verbal</linea>
+            <linea>El adjetivo puede ser la palabra principal de un predicado no verbal, marca al sujeto a</linea>
+            <linea>través del Juego Absolutivo (elemento obligatorio). La palabra principal puede ser</linea>
+            <linea>modificada por las partículas k'a (a veces en complemento con las partículas na u ok),</linea>
+            <linea>la partícula negativa man en complemento de la partícula ta o por el intensificador</linea>
+            <linea>yalan, estos van antes del Juego Absolutivo. Ejemplos:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...k'a k'iy na...</original>
+                    <translation>... aún es mucho...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>k'a</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>0</form>
+                        <gloss>B3s</gloss>
+                    </unit>
+                    <unit>
+                        <form>k'iy</form>
+                        <gloss>mucho</gloss>
+                    </unit>
+                    <unit>
+                        <form>na...</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>k'a k'iy na</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...k'a in ko'öl ok ri'...</original>
+                    <translation>...aún era pequeño...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>k'a</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>in</form>
+                        <gloss>B1s</gloss>
+                    </unit>
+                    <unit>
+                        <form>ko'öl</form>
+                        <gloss>pequeño</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri'...</form>
+                        <gloss>DEM</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>k'a in ko'öl ok ri'</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...k'a öj koköj ok...</original>
+                    <translation>...aún somos pequeños...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>k'a</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>öj</form>
+                        <gloss>nosotros</gloss>
+                    </unit>
+                    <unit>
+                        <form>koköj</form>
+                        <gloss>pequeños</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok...</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>k'a öj koköj ok</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Man käq ta rub'onil ri potaj.</original>
+                    <translation>El güipil no es rojo.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>Man</form>
+                        <gloss>NEG</gloss>
+                    </unit>
+                    <unit>
+                        <form>0</form>
+                        <gloss>B3s</gloss>
+                    </unit>
+                    <unit>
+                        <form>käq</form>
+                        <gloss>rojo</gloss>
+                    </unit>
+                    <unit>
+                        <form>ta</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>ru-</form>
+                        <gloss>A3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>b'onil</form>
+                        <gloss>color</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>potaj.</form>
+                        <gloss>güipil.</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Man käq ta</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+        </seccion>
+    </pagina>
+
+
+
+    <pagina num="160">
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>...ninb'än jata'q nutiko'n...</original>
+                <translation>...siembro un poco...</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>...n-</form>
+                    <gloss>INC-</gloss>
+                </unit>
+                <unit>
+                    <form>∅-</form>
+                    <gloss>B3s-</gloss>
+                </unit>
+                <unit>
+                    <form>in-</form>
+                    <gloss>A3s-</gloss>
+                </unit>
+                <unit>
+                    <form>b'än</form>
+                    <gloss>hacer</gloss>
+                </unit>
+                <unit>
+                    <form>jata'q</form>
+                    <gloss>poca</gloss>
+                </unit>
+                <unit>
+                    <form>nu-</form>
+                    <gloss>A1s-</gloss>
+                </unit>
+                <unit>
+                    <form>tiko'n...</form>
+                    <gloss>siembra</gloss>
+                </unit>
+            </morpheme_analysis>
+            <syntactic_analysis>
+                <unit>
+                    <form>ninb'än jata'q nutiko'n</form>
+                    <gloss>SA</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <seccion tipo="Como núcleo del predicado no verbal">
+            <linea>Como núcleo del predicado no verbal</linea>
+            <linea>El adjetivo puede ser la palabra principal de un predicado no verbal, marca al sujeto a</linea>
+            <linea>través del Juego Absolutivo (elemento obligatorio). La palabra principal puede ser</linea>
+            <linea>modificada por las partículas k'a (a veces en complemento con las partículas na u ok),</linea>
+            <linea>la partícula negativa man en complemento de la partícula ta o por el intensificador</linea>
+            <linea>yalan, estos van antes del Juego Absolutivo. Ejemplos:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...k'a k'iy na...</original>
+                    <translation>...aún es mucho...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>...k'a</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>∅</form>
+                        <gloss>B3s</gloss>
+                    </unit>
+                    <unit>
+                        <form>k'iy</form>
+                        <gloss>mucho</gloss>
+                    </unit>
+                    <unit>
+                        <form>na...</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>k'a k'iy na</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...k'a in ko'öl ok ri'...</original>
+                    <translation>...aún era pequeño...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>...k'a</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>in</form>
+                        <gloss>B1s</gloss>
+                    </unit>
+                    <unit>
+                        <form>ko'öl</form>
+                        <gloss>pequeño</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri'...</form>
+                        <gloss>DEM</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>k'a in ko'öl ok ri'</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...k'a öj koköj ok...</original>
+                    <translation>...aún somos pequeños...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>...k'a</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>öj</form>
+                        <gloss>nosotros</gloss>
+                    </unit>
+                    <unit>
+                        <form>koköj</form>
+                        <gloss>pequeños</gloss>
+                    </unit>
+                    <unit>
+                        <form>ok...</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>k'a öj koköj ok</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Man käq ta rub'onil ri potaj.</original>
+                    <translation>El güipil no es rojo.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>Man</form>
+                        <gloss>NEG</gloss>
+                    </unit>
+                    <unit>
+                        <form>∅</form>
+                        <gloss>B3s</gloss>
+                    </unit>
+                    <unit>
+                        <form>käq</form>
+                        <gloss>rojo</gloss>
+                    </unit>
+                    <unit>
+                        <form>ta</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>ru-</form>
+                        <gloss>A3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>b'onil</form>
+                        <gloss>color</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>potaj.</form>
+                        <gloss>güipil.</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Man käq ta rub'onil ri potaj</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+        </seccion>
+    </pagina>
+    <pagina num="161">
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>...yalan taq e koköj chik ok ri ruwäch nuya'...</original>
+                <translation>...ahora da frutos muy pequeños...</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>...yalan</form>
+                    <gloss>INT</gloss>
+                </unit>
+                <unit>
+                    <form>taq</form>
+                    <gloss>PL/DIM</gloss>
+                </unit>
+                <unit>
+                    <form>e</form>
+                    <gloss>B3s</gloss>
+                </unit>
+                <unit>
+                    <form>koköj</form>
+                    <gloss>pequeños</gloss>
+                </unit>
+                <unit>
+                    <form>chik</form>
+                    <gloss>PAR</gloss>
+                </unit>
+                <unit>
+                    <form>ok</form>
+                    <gloss>DIR</gloss>
+                </unit>
+                <unit>
+                    <form>ri</form>
+                    <gloss>DET</gloss>
+                </unit>
+                <unit>
+                    <form>ru-</form>
+                    <gloss>A3s-</gloss>
+                </unit>
+                <unit>
+                    <form>wäch</form>
+                    <gloss>SR</gloss>
+                </unit>
+                <unit>
+                    <form>n-</form>
+                    <gloss>INC-</gloss>
+                </unit>
+                <unit>
+                    <form>∅-</form>
+                    <gloss>B3s-</gloss>
+                </unit>
+                <unit>
+                    <form>u-</form>
+                    <gloss>A3s-</gloss>
+                </unit>
+                <unit>
+                    <form>ya'...</form>
+                    <gloss>dar</gloss>
+                </unit>
+            </morpheme_analysis>
+            <syntactic_analysis>
+                <unit>
+                    <form>yalan taq e koköj chik ok ri ruwäch nuya'</form>
+                    <gloss>SA</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <seccion tipo="Como adverbio (modificador en predicado verbal y no verbal)">
+            <linea>Como adverbio (modificador en predicado verbal y no verbal)</linea>
+            <linea>El adjetivo funciona como adverbio en predicado verbal o no verbal. Es negado a</linea>
+            <linea>través de la partícula negativa man en complemento de la partícula ta (man....ta),</linea>
+            <linea>modificado por el intensificador yalan, así como modificado por las partículas na u</linea>
+            <linea>ok. Ejemplos:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Jeb'ël ütz xina'.</original>
+                    <translation>Qué bien lo sintieron.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>Jeb'ël</form>
+                        <gloss>Bonito</gloss>
+                    </unit>
+                    <unit>
+                        <form>ütz</form>
+                        <gloss>bueno</gloss>
+                    </unit>
+                    <unit>
+                        <form>x-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>∅-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>i-</form>
+                        <gloss>A2p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>na'.</form>
+                        <gloss>sentir</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Jeb'ël ütz xina'</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Man ütz ta ninna' chi re la rikil la'.</original>
+                    <translation>No me gusta esa comida.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>Man</form>
+                        <gloss>NEG</gloss>
+                    </unit>
+                    <unit>
+                        <form>ütz</form>
+                        <gloss>bueno</gloss>
+                    </unit>
+                    <unit>
+                        <form>ta</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>n-</form>
+                        <gloss>INC-</gloss>
+                    </unit>
+                    <unit>
+                        <form>∅-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>in-</form>
+                        <gloss>A2p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>na'</form>
+                        <gloss>sentir</gloss>
+                    </unit>
+                    <unit>
+                        <form>chi</form>
+                        <gloss>PRE</gloss>
+                    </unit>
+                    <unit>
+                        <form>r-</form>
+                        <gloss>A3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>e</form>
+                        <gloss>SR</gloss>
+                    </unit>
+                    <unit>
+                        <form>la</form>
+                        <gloss>DEM</gloss>
+                    </unit>
+                    <unit>
+                        <form>rikil</form>
+                        <gloss>comida</gloss>
+                    </unit>
+                    <unit>
+                        <form>la'.</form>
+                        <gloss>DEM</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Man ütz ta ninna' chi re la rikil la'</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...k'a jeb'ël na yech'on...</original>
+                    <translation>...aún hablan bien...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>...k'a</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>jeb'ël</form>
+                        <gloss>bonito</gloss>
+                    </unit>
+                    <unit>
+                        <form>na</form>
+                        <gloss>PAR</gloss>
+                    </unit>
+                    <unit>
+                        <form>y-</form>
+                        <gloss>INC-</gloss>
+                    </unit>
+                    <unit>
+                        <form>e-</form>
+                        <gloss>B3p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ch'-</form>
+                        <gloss>hablar-</gloss>
+                    </unit>
+                    <unit>
+                        <form>on...</form>
+                        <gloss>AP</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>k'a jeb'ël na yech'on</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Yalan jeb'ël ninwak'axaj ri qach'ab'äl...</original>
+                    <translation>Me gusta mucho nuestro idioma...</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>Yalan</form>
+                        <gloss>INT</gloss>
+                    </unit>
+                    <unit>
+                        <form>jeb'ël</form>
+                        <gloss>bonito</gloss>
+                    </unit>
+                    <unit>
+                        <form>n-</form>
+                        <gloss>INC-</gloss>
+                    </unit>
+                    <unit>
+                        <form>∅-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>inw-</form>
+                        <gloss>A3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ak'axaj</form>
+                        <gloss>oír</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>qa-</form>
+                        <gloss>A1p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ch'ab'äl...</form>
+                        <gloss>idioma</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Yalan jeb'ël ninwak'axaj ri qach'ab'äl</form>
+                        <gloss>SA</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+        </seccion>
+    </pagina>
+    <pagina num="162">
+        <seccion tipo="Sintagma Verbal">
+            <linea>Sintagma Verbal</linea>
+            <linea>La palabra principal de este tipo de sintagma es un verbo. Contiene raíz o base verbal,</linea>
+            <linea>más los accidentes gramaticales, tales como el tiempo/aspecto, modo y la persona</linea>
+            <linea>gramatical, como elementos obligatorios. El verbo puede tener opcionalmente afijos</linea>
+            <linea>de movimiento, sufijos y partículas direccionales. Hay dos clases de sintagma verbal,</linea>
+            <linea>los cuales se diferencian por el tipo de verbo: el sintagma verbal intransitivo y el sintagma</linea>
+            <linea>verbal transitivo. El verbo es el primer elemento en la estructura oracional, aunque</linea>
+            <linea>puede adelantársele un adverbio o algún constituyente con énfasis.</linea>
+        </seccion>
+        <seccion tipo="Sintagma verbal intransitivo">
+            <linea>Sintagma verbal intransitivo</linea>
+            <linea>La palabra principal de este sintagma es un verbo intransitivo. Hace referencia al sujeto/</linea>
+            <linea>agente o paciente a través del Juego Absolutivo. La estructura del núcleo es: el tiempo/</linea>
+            <linea>aspecto y modo, excepto el aspecto perfectivo que va de último; movimiento (optativo),</linea>
+            <linea>raíz o base verbal intransitiva y sufijos para los verbos intransitivos derivados. Ejemplos:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Xpe ri ala', xotz'uye'.</original>
+                    <translation>El muchacho vino a sentarse.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>X-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>∅-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>pe</form>
+                        <gloss>venir</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>ala',</form>
+                        <gloss>muchacho</gloss>
+                    </unit>
+                    <unit>
+                        <form>x-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>∅-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>o-</form>
+                        <gloss>MOV-</gloss>
+                    </unit>
+                    <unit>
+                        <form>tz'uy-</form>
+                        <gloss>sentar-</gloss>
+                    </unit>
+                    <unit>
+                        <form>e'.</form>
+                        <gloss>SC</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Xpe ri ala', xotz'uye'</form>
+                        <gloss>SVI</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Man kixel el chi ruwa jay.</original>
+                    <translation>No salgan al patio.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>Man</form>
+                        <gloss>NEG</gloss>
+                    </unit>
+                    <unit>
+                        <form>k-</form>
+                        <gloss>IMP-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ix-</form>
+                        <gloss>B2p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>el</form>
+                        <gloss>salir</gloss>
+                    </unit>
+                    <unit>
+                        <form>el</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>chi</form>
+                        <gloss>PRE</gloss>
+                    </unit>
+                    <unit>
+                        <form>ruwa</form>
+                        <gloss>A3s-frente</gloss>
+                    </unit>
+                    <unit>
+                        <form>jay.</form>
+                        <gloss>casa</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Man kixel el chi ruwa jay</form>
+                        <gloss>SVI</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Elenäq el ri ixöq.</original>
+                    <translation>La mujer ha salido.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>∅-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>El-</form>
+                        <gloss>Salir-</gloss>
+                    </unit>
+                    <unit>
+                        <form>enäq</form>
+                        <gloss>PP</gloss>
+                    </unit>
+                    <unit>
+                        <form>el</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>ixöq.</form>
+                        <gloss>mujer</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Elenäq el ri ixöq</form>
+                        <gloss>SVI</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...xa choj xowär...</original>
+                    <translation>...solamente vino a dormir...</translation>
+                </paralel_phrase>
+                <syntactic_analysis>
+                    <unit>
+                        <form>...xa choj xowär...</form>
+                        <gloss>SVI</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+        </seccion>
+    </pagina>
+
+
+
+    <pagina num="162">
+        <seccion tipo="Sintagma Verbal">
+            <linea>... / ... / ... Sintagma Verbal</linea>
+            <linea>La palabra principal de este tipo de sintagma es un verbo. Contiene raíz o base verbal,</linea>
+            <linea>más los accidentes gramaticales, tales como el tiempo/aspecto, modo y la persona</linea>
+            <linea>gramatical, como elementos obligatorios. El verbo puede tener opcionalmente afijos</linea>
+            <linea>de movimiento, sufijos y partículas direccionales. Hay dos clases de sintagma verbal,</linea>
+            <linea>los cuales se diferencian por el tipo de verbo: el sintagma verbal intransitivo y el sintagma</linea>
+            <linea>verbal transitivo. El verbo es el primer elemento en la estructura oracional, aunque</linea>
+            <linea>puede adelantársele un adverbio o algún constituyente con énfasis.</linea>
+        </seccion>
+        <seccion tipo="Sintagma verbal intransitivo">
+            <linea>... / ... / ... Sintagma verbal intransitivo</linea>
+            <linea>La palabra principal de este sintagma es un verbo intransitivo. Hace referencia al sujeto/</linea>
+            <linea>agente o paciente a través del Juego Absolutivo. La estructura del núcleo es: el tiempo/</linea>
+            <linea>aspecto y modo, excepto el aspecto perfectivo que va de último; movimiento (optativo),</linea>
+            <linea>raíz o base verbal intransitiva y sufijos para los verbos intransitivos derivados. Ejemplos:</linea>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Xpe ri ala', xotz'uye'.</original>
+                    <translation>El muchacho vino a sentarse.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>X-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>Ø-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>pe</form>
+                        <gloss>venir</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>ala',</form>
+                        <gloss>muchacho</gloss>
+                    </unit>
+                    <unit>
+                        <form>x-</form>
+                        <gloss>COM-</gloss>
+                    </unit>
+                    <unit>
+                        <form>Ø-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>o-</form>
+                        <gloss>MOV-</gloss>
+                    </unit>
+                    <unit>
+                        <form>tz'uy-</form>
+                        <gloss>sentar-</gloss>
+                    </unit>
+                    <unit>
+                        <form>e'.</form>
+                        <gloss>SC</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Xpe ri ala', xotz'uye'.</form>
+                        <gloss>SVI</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Man kixel el chi ruwa jay.</original>
+                    <translation>No salgan al patio.</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>Man</form>
+                        <gloss>NEG</gloss>
+                    </unit>
+                    <unit>
+                        <form>k-</form>
+                        <gloss>IMP-</gloss>
+                    </unit>
+                    <unit>
+                        <form>ix-</form>
+                        <gloss>B2p-</gloss>
+                    </unit>
+                    <unit>
+                        <form>el</form>
+                        <gloss>salir</gloss>
+                    </unit>
+                    <unit>
+                        <form>el</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>chi</form>
+                        <gloss>PRE</gloss>
+                    </unit>
+                    <unit>
+                        <form>ruwa</form>
+                        <gloss>A3s-frente</gloss>
+                    </unit>
+                    <unit>
+                        <form>jay.</form>
+                        <gloss>casa</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Man kixel el chi ruwa jay.</form>
+                        <gloss>SVI</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>Elenäg el ri ixöq.</original>
+                    <translation>La mujer ha salido</translation>
+                </paralel_phrase>
+                <morpheme_analysis>
+                    <unit>
+                        <form>Ø-</form>
+                        <gloss>B3s-</gloss>
+                    </unit>
+                    <unit>
+                        <form>El-</form>
+                        <gloss>Salir-</gloss>
+                    </unit>
+                    <unit>
+                        <form>enäg</form>
+                        <gloss>PP</gloss>
+                    </unit>
+                    <unit>
+                        <form>el</form>
+                        <gloss>DIR</gloss>
+                    </unit>
+                    <unit>
+                        <form>ri</form>
+                        <gloss>DET</gloss>
+                    </unit>
+                    <unit>
+                        <form>ixöq.</form>
+                        <gloss>mujer</gloss>
+                    </unit>
+                </morpheme_analysis>
+                <syntactic_analysis>
+                    <unit>
+                        <form>Elenäg el ri ixöq.</form>
+                        <gloss>SVI</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+            <interlinear_gloss>
+                <paralel_phrase>
+                    <original>...xa choj xowär...</original>
+                    <translation>...solamente vino a dormir...</translation>
+                </paralel_phrase>
+                <syntactic_analysis>
+                    <unit>
+                        <form>...xa choj xowär...</form>
+                        <gloss>SVI</gloss>
+                    </unit>
+                </syntactic_analysis>
+            </interlinear_gloss>
+        </seccion>
+    </pagina>
+    <pagina num="163">
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>xa choj x-0-o-wär...</original>
+                <translation>...</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>xa</form>
+                    <gloss>PAR</gloss>
+                </unit>
+                <unit>
+                    <form>choj</form>
+                    <gloss>ADV</gloss>
+                </unit>
+                <unit>
+                    <form>x-</form>
+                    <gloss>COM-</gloss>
+                </unit>
+                <unit>
+                    <form>0-</form>
+                    <gloss>B3s-</gloss>
+                </unit>
+                <unit>
+                    <form>o-</form>
+                    <gloss>MOV-</gloss>
+                </unit>
+                <unit>
+                    <form>wär...</form>
+                    <gloss>dormir</gloss>
+                </unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>...toq xoqa chi rochoch....</original>
+                <translation>...cuando vino a su casa,...</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>...toq</form>
+                    <gloss>Cuando</gloss>
+                </unit>
+                <unit>
+                    <form>x-</form>
+                    <gloss>COM-</gloss>
+                </unit>
+                <unit>
+                    <form>Ø-</form>
+                    <gloss>B3s-</gloss>
+                </unit>
+                <unit>
+                    <form>o-</form>
+                    <gloss>MOV-</gloss>
+                </unit>
+                <unit>
+                    <form>qa</form>
+                    <gloss>vino</gloss>
+                </unit>
+                <unit>
+                    <form>chi</form>
+                    <gloss>PRE</gloss>
+                </unit>
+                <unit>
+                    <form>r-</form>
+                    <gloss>A3s-</gloss>
+                </unit>
+                <unit>
+                    <form>ochoch,...</form>
+                    <gloss>casa</gloss>
+                </unit>
+            </morpheme_analysis>
+            <syntactic_analysis>
+                <unit>
+                    <form>...toq xoqa chi rochoch....</form>
+                    <gloss>SVI</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>...xoxuke', xuk'utuj rukuyb'äl mak.</original>
+                <translation>...se vino a hincar y pidió perdon.</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>x-</form>
+                    <gloss>COM-</gloss>
+                </unit>
+                <unit>
+                    <form>Ø-</form>
+                    <gloss>B3s-</gloss>
+                </unit>
+                <unit>
+                    <form>o-</form>
+                    <gloss>MOV-</gloss>
+                </unit>
+                <unit>
+                    <form>xuk-</form>
+                    <gloss>hincar-</gloss>
+                </unit>
+                <unit>
+                    <form>e',</form>
+                    <gloss>SC</gloss>
+                </unit>
+                <unit>
+                    <form>x-</form>
+                    <gloss>COM-</gloss>
+                </unit>
+                <unit>
+                    <form>Ø-</form>
+                    <gloss>B3s-</gloss>
+                </unit>
+                <unit>
+                    <form>u-</form>
+                    <gloss>A3s-</gloss>
+                </unit>
+                <unit>
+                    <form>k'utuj</form>
+                    <gloss>pedir</gloss>
+                </unit>
+                <unit>
+                    <form>ru-</form>
+                    <gloss>A3s-</gloss>
+                </unit>
+                <unit>
+                    <form>kuy-</form>
+                    <gloss>perdonar-</gloss>
+                </unit>
+                <unit>
+                    <form>b'äl</form>
+                    <gloss>INTR</gloss>
+                </unit>
+                <unit>
+                    <form>mak.</form>
+                    <gloss>culpa</gloss>
+                </unit>
+            </morpheme_analysis>
+            <syntactic_analysis>
+                <unit>
+                    <form>...xoxuke', xuk'utuj rukuyb'äl mak.</form>
+                    <gloss>SVI</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>Xek'is el ri wakx,...</original>
+                <translation>Las vacas se terminaron,...</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>X-</form>
+                    <gloss>COM-</gloss>
+                </unit>
+                <unit>
+                    <form>e-</form>
+                    <gloss>B3p-</gloss>
+                </unit>
+                <unit>
+                    <form>k'is</form>
+                    <gloss>terminar</gloss>
+                </unit>
+                <unit>
+                    <form>el</form>
+                    <gloss>DIR</gloss>
+                </unit>
+                <unit>
+                    <form>ri</form>
+                    <gloss>DET</gloss>
+                </unit>
+                <unit>
+                    <form>wakx,...</form>
+                    <gloss>vaca</gloss>
+                </unit>
+            </morpheme_analysis>
+            <syntactic_analysis>
+                <unit>
+                    <form>Xek'is el ri wakx,...</form>
+                    <gloss>SVI</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <paralel_phrase>
+                <original>Iwir xilitäj jun kök chi wochoch</original>
+                <translation>Ayer se encontró una tortuga en mi casa.</translation>
+            </paralel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>iwir</form>
+                    <gloss>ADV</gloss>
+                </unit>
+                <unit>
+                    <form>x-</form>
+                    <gloss>COM-</gloss>
+                </unit>
+                <unit>
+                    <form>Ø-</form>
+                    <gloss>B3s-</gloss>
+                </unit>
+                <unit>
+                    <form>il-</form>
+                    <gloss>encontrar-</gloss>
+                </unit>
+                <unit>
+                    <form>itäj</form>
+                    <gloss>PAS</gloss>
+                </unit>
+                <unit>
+                    <form>jun</form>
+                    <gloss>IND</gloss>
+                </unit>
+                <unit>
+                    <form>kök</form>
+                    <gloss>tortuga</gloss>
+                </unit>
+                <unit>
+                    <form>chi</form>
+                    <gloss>PRE</gloss>
+                </unit>
+                <unit>
+                    <form>w-</form>
+                    <gloss>A3s.</gloss>
+                </unit>
+                <unit>
+                    <form>ochoch.</form>
+                    <gloss>casa</gloss>
+                </unit>
+            </morpheme_analysis>
+            <syntactic_analysis>
+                <unit>
+                    <form>Iwir xilitäj jun kök chi wochoch</form>
+                    <gloss>SVI</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <seccion tipo="Modificadores del verbo intransitivo">
+            <linea>... / ... / ... Modificadores del verbo intransitivo</linea>
+            <linea>Como queda dicho, un sintagma verbal está constituido por un verbo intransitivo más</linea>
+            <linea>otros elementos que lo modifican, los que cumplen distintas funciones; algunos lo</linea>
+            <linea>anteceden y otros lo posponen. Entre estos modificadores hay partículas y diferentes</linea>
+            <linea>tipos de adjuntos (adverbiales o nominales).</linea>
+        </seccion>
+        <seccion tipo="Partículas">
+            <linea>... / ... / ... Partículas</linea>
+            <linea>El verbo intransitivo puede ser acompañado por diversas partículas que modifican su</linea>
+            <linea>significado. Las partículas pueden ser: direccionales, auxiliares, negativa más partícula</linea>
+            <linea>complementaria y otras partículas como wi, kan, k'a, na, y yan. A continuación su</linea>
+            <linea>descripción:</linea>
+        </seccion>
+    </pagina>
+</documento>
