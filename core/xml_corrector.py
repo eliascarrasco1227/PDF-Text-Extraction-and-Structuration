@@ -7,7 +7,7 @@ from core.logger_config import app_logger
 class XMLCorrector:
     """
     Especialista en corregir XMLs que no cumplen el DTD.
-    Usa un modelo superior (Pro) para asegurar la validez estructural.
+    Usa un modelo sin limite de llamadas para asegurar la validez estructural.
     """
     def __init__(self, model: str = "gemma-3-27b-it"):
         self.client = genai.Client()
@@ -50,7 +50,7 @@ class XMLCorrector:
                 model=self.model,
                 contents=contents,
                 config=types.GenerateContentConfig(
-                    temperature=0.0, # Mínima creatividad para correcciones técnicas
+                    temperature=0.1, # Mínima creatividad para correcciones técnicas
                     top_p=0.1
                 )
             )

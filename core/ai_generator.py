@@ -99,7 +99,7 @@ class AIGenerator:
 
     def _generate_content_with_retry(self, target_pdf_bytes: bytes, prompt: str) -> str:
         contents = []
-        # ... (Carga de Few-Shot igual que antes) ...
+        # Carga de Few-Shot 
         if self.few_shot_examples:
             contents.append("INSTRUCCIONES DE ENTRENAMIENTO (FEW-SHOT):")
             contents.append("A continuación se presentan ejemplos de documentos PDF y sus transcripciones XML correctas. Úsalos como referencia estricta de formato y estructura.")
@@ -131,7 +131,7 @@ class AIGenerator:
                 # PASO 1: Obtener el XML (Generación inicial o Corrección)
                 if attempt == 0:
                     self.logger.info(f"📡 Generando XML inicial...")
-                    # Tu llamada original a Gemini
+                    # Llamada original a Gemini
                     response = self.client.models.generate_content(
                         model=self.model,
                         contents=contents,
@@ -214,7 +214,6 @@ Cada página vaya dentro de <pagina num="N">. Las páginas a extraer son de la {
                          limit_match = re.search(r"quotaValue': '(\d+)'", error_msg)
                     limit = limit_match.group(1) if limit_match else "?"
                     
-                    # Mensaje bonito y único
                     self.logger.error(f"🚫 Superaste el limite de uso de gemini de tu versión, recuerda que el limite diario es {limit}")
                     
                     # Lanzamos el error para que main lo atrape y pare el programa
