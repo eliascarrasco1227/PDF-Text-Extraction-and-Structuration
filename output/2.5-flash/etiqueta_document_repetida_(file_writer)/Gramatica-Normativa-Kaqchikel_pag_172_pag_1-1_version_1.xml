@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document source="Gramatica-Normativa-Kaqchikel.pdf" pages="172-172">
-    <page number="170">
-        <line>plural) del objeto y sujeto. La palabra principal incluye primeramente el tiempo/aspecto</line>
+<document source="Gramatica-Normativa-Kaqchikel_pag_172.pdf" pages="1-1">
+<document source="Gramatica-Normativa-Kaqchikel.pdf" pages="171-171">
+    <page number="171">
+        <line>(plural) del objeto y sujeto. La palabra principal incluye primeramente el tiempo/aspecto</line>
         <line>o modo (excepto en el perfectivo que es la última), seguido por el juego absolutivo,</line>
         <line>juego ergativo, la raíz o base en calidad de obligatorios y sufijos de categoría en casos</line>
         <line>específicos (si el verbo es derivado). Como elementos opcionales incluye el movimiento,</line>
         <line>su posición es siempre antes del juego ergativo. Ejemplos:</line>
+        
         <heading>Marca de tiempo/aspecto/modo:</heading>
         <interlinear_gloss>
             <parallel_phrase>
@@ -18,7 +20,7 @@
                     <gloss>COM-</gloss>
                 </unit>
                 <unit>
-                    <form>Ø-</form>
+                    <form>0-</form>
                     <gloss>B3S-</gloss>
                 </unit>
                 <unit>
@@ -27,7 +29,7 @@
                 </unit>
                 <unit>
                     <form>n-</form>
-                    <gloss>A1s-</gloss>
+                    <gloss>Als-</gloss>
                 </unit>
                 <unit>
                     <form>tz'et-</form>
@@ -56,11 +58,12 @@
             </morpheme_analysis>
             <syntactic_analysis>
                 <unit>
-                    <form>Xb'entz'eta' na kan ri ak'wal.</form>
+                    <form>Xb'entz'eta'</form>
                     <gloss>SVT</gloss>
                 </unit>
             </syntactic_analysis>
         </interlinear_gloss>
+        
         <heading>Marca el objeto en el verbo:</heading>
         <interlinear_gloss>
             <parallel_phrase>
@@ -113,17 +116,18 @@
                     <gloss>PL</gloss>
                 </unit>
                 <unit>
-                    <form>rija'...</form>
+                    <form>rija'</form>
                     <gloss>él</gloss>
                 </unit>
             </morpheme_analysis>
             <syntactic_analysis>
                 <unit>
-                    <form>kan jeb'ël ok xerutz'ët ri ch'uta'q xtani'</form>
+                    <form>xerutz'ët</form>
                     <gloss>SVT</gloss>
                 </unit>
             </syntactic_analysis>
         </interlinear_gloss>
+        
         <heading>Marca el sujeto en el verbo:</heading>
         <interlinear_gloss>
             <parallel_phrase>
@@ -136,7 +140,7 @@
                     <gloss>COM-</gloss>
                 </unit>
                 <unit>
-                    <form>Ø-</form>
+                    <form>0-</form>
                     <gloss>B3s-</gloss>
                 </unit>
                 <unit>
@@ -174,11 +178,12 @@
             </morpheme_analysis>
             <syntactic_analysis>
                 <unit>
-                    <form>Xkilöq' jun uqaj</form>
+                    <form>Xkilöq'</form>
                     <gloss>SVT</gloss>
                 </unit>
             </syntactic_analysis>
         </interlinear_gloss>
+        
         <interlinear_gloss>
             <parallel_phrase>
                 <original>Xusipaj ri xkoya' ri xtän.</original>
@@ -190,7 +195,7 @@
                     <gloss>COM-</gloss>
                 </unit>
                 <unit>
-                    <form>Ø-</form>
+                    <form>0-</form>
                     <gloss>B3s-</gloss>
                 </unit>
                 <unit>
@@ -228,16 +233,17 @@
             </morpheme_analysis>
             <syntactic_analysis>
                 <unit>
-                    <form>Xusipaj ri xkoya'</form>
+                    <form>Xusipaj</form>
                     <gloss>SVT</gloss>
                 </unit>
             </syntactic_analysis>
         </interlinear_gloss>
+        
         <heading>Marca movimiento en el verbo:</heading>
         <interlinear_gloss>
             <parallel_phrase>
-                <original>...nb'esamäj qatata', nb'eqato',...</original>
-                <translation>...nuestro papá va a trabajar, vamos a ayudarlo,...</translation>
+                <original>...nb'esamäj qatata', nb'eqato'....</original>
+                <translation>...nuestro papá va a trabajar, vamos a ayudarlo....</translation>
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
@@ -247,4 +253,5 @@
             </syntactic_analysis>
         </interlinear_gloss>
     </page>
+</document>
 </document>

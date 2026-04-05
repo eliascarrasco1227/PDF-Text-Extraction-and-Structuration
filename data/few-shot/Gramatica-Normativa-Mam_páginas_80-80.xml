@@ -1,69 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<documento fuente="Gramatica-Normativa-Mam.pdf" paginas="80-80">
-    <pagina num="80">
-        <linea>Ejemplo:</linea>
-        <paralel_phrase>
+<document source="Gramatica-Normativa-Mam.pdf" pages="80-80">
+    <page number="80">
+        <line>Ejemplo:</line>
+        <parallel_phrase>
             <original>witzaja</original>
             <translation>mi hierba</translation>
-        </paralel_phrase>
-        <paralel_phrase>
+        </parallel_phrase>
+        <parallel_phrase>
             <original>wuk'ila</original>
             <translation>mi compañero</translation>
-        </paralel_phrase>
-        <seccion tipo="Uso de la consonante epentética /y/">
-            <linea>Uso de la consonante epentética /y/</linea>
-            <linea>Cuando el sustantivo finaliza con vocal, se introduce la /y/ para</linea>
-            <linea>separar la vocal del enclítico de persona.</linea>
-            <linea>Ejemplos:</linea>
-            <paralel_phrase>
-                <original>ja</original>
-                <translation>casa</translation>
-            </paralel_phrase>
-            <paralel_phrase>
-                <original>njaye</original>
-                <translation>mi casa</translation>
-            </paralel_phrase>
-            <paralel_phrase>
-                <original>tjaya</original>
-                <translation>tu casa</translation>
-            </paralel_phrase>
-            <paralel_phrase>
-                <original>qjaye</original>
-                <translation>nuestra casa (excl.)</translation>
-            </paralel_phrase>
-            <paralel_phrase>
-                <original>kyjaye</original>
-                <translation>la casa de ustedes</translation>
-            </paralel_phrase>
-            <paralel_phrase>
-                <original>wa</original>
-                <translation>comida</translation>
-            </paralel_phrase>
-            <paralel_phrase>
-                <original>nwaya</original>
-                <translation>mi comida</translation>
-            </paralel_phrase>
-            <paralel_phrase>
-                <original>twaya</original>
-                <translation>tu comida</translation>
-            </paralel_phrase>
-            <paralel_phrase>
-                <original>qwaya</original>
-                <translation>nuestra comida (excl.)</translation>
-            </paralel_phrase>
-            <paralel_phrase>
-                <original>kywaya</original>
-                <translation>la comida de ustedes</translation>
-            </paralel_phrase>
-        </seccion>
-        <seccion
-            tipo="Techlal b'ib'aj toj mya' pakb'a'n yol / Pronombres personales para predicados no verbales">
-            <linea>Techlal b'ib'aj toj mya' pakb'a'n yol /</linea>
-            <linea>Pronombres personales para predicados no</linea>
-            <linea>verbales</linea>
-            <linea>De acuerdo al estudio de variación dialectal realizado por Pé-</linea>
-            <linea>rez, Jiménez y García (2000), se puede concluir que las formas</linea>
-            <linea>de marcar el sujeto estativo son bastante regulares; por lo que</linea>
-        </seccion>
-    </pagina>
-</documento>
+        </parallel_phrase>
+        
+        <heading>Uso de la consonante epentética /y/</heading>
+        <line>Cuando el sustantivo finaliza con vocal, se introduce la /y/ para</line>
+        <line>separar la vocal del enclítico de persona.</line>
+        <line>Ejemplos:</line>
+        <parallel_phrase>
+            <original>ja</original>
+            <translation>casa</translation>
+        </parallel_phrase>
+        <parallel_phrase>
+            <original>njaye</original>
+            <translation>mi casa</translation>
+        </parallel_phrase>
+        <parallel_phrase>
+            <original>tjaya</original>
+            <translation>tu casa</translation>
+        </parallel_phrase>
+        <parallel_phrase>
+            <original>qjaye</original>
+            <translation>nuestra casa (excl.)</translation>
+        </parallel_phrase>
+        <parallel_phrase>
+            <original>kyjaye</original>
+            <translation>la casa de ustedes</translation>
+        </parallel_phrase>
+        <parallel_phrase>
+            <original>wa</original>
+            <translation>comida</translation>
+        </parallel_phrase>
+        <parallel_phrase>
+            <original>nwaya</original>
+            <translation>mi comida</translation>
+        </parallel_phrase>
+        <parallel_phrase>
+            <original>twaya</original>
+            <translation>tu comida</translation>
+        </parallel_phrase>
+        <parallel_phrase>
+            <original>qwaya</original>
+            <translation>nuestra comida (excl.)</translation>
+        </parallel_phrase>
+        <parallel_phrase>
+            <original>kywaya</original>
+            <translation>la comida de ustedes</translation>
+        </parallel_phrase>
+
+        <heading>Techlal b'ib'aj toj mya' pakb'a'n yol / Pronombres personales para predicados no verbales</heading>
+        <line>De acuerdo al estudio de variación dialectal realizado por Pé-</line>
+        <line>rez, Jiménez y García (2000), se puede concluir que las formas</line>
+        <line>de marcar el sujeto estativo son bastante regulares; por lo que</line>
+    </page>
+</document>

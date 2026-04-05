@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document source="Gramatica-Normativa-Kaqchikel.pdf" pages="172-172">
+<documento fuente="Gramatica-Normativa-Kaqchikel_pag_172.pdf" paginas="1-1">
+<document source="Gramatica-Normativa-Kaqchikel.pdf" pages="170-170">
     <page number="170">
         <line>plural) del objeto y sujeto. La palabra principal incluye primeramente el tiempo/aspecto</line>
         <line>o modo (excepto en el perfectivo que es la última), seguido por el juego absolutivo,</line>
@@ -14,12 +15,40 @@
             </parallel_phrase>
             <morpheme_analysis>
                 <unit>
+                    <form>Xb'entz'eta'</form>
+                    <gloss>SVT</gloss>
+                </unit>
+                <unit>
+                    <form>na</form>
+                    <gloss>PAR</gloss>
+                </unit>
+                <unit>
+                    <form>kan</form>
+                    <gloss>DIR</gloss>
+                </unit>
+                <unit>
+                    <form>ri</form>
+                    <gloss>DET</gloss>
+                </unit>
+                <unit>
+                    <form>ak'wal</form>
+                    <gloss>niño</gloss>
+                </unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>X-0-b'e-n-tz'et-a' na kan ri ak'wal</original>
+                <translation>Todavía fui a ver al niño.</translation>
+            </parallel_phrase>
+            <morpheme_analysis>
+                <unit>
                     <form>X-</form>
                     <gloss>COM-</gloss>
                 </unit>
                 <unit>
-                    <form>Ø-</form>
-                    <gloss>B3S-</gloss>
+                    <form>0-</form>
+                    <gloss>B3s-</gloss>
                 </unit>
                 <unit>
                     <form>b'e-</form>
@@ -27,7 +56,7 @@
                 </unit>
                 <unit>
                     <form>n-</form>
-                    <gloss>A1s-</gloss>
+                    <gloss>Als-</gloss>
                 </unit>
                 <unit>
                     <form>tz'et-</form>
@@ -54,17 +83,51 @@
                     <gloss>niño</gloss>
                 </unit>
             </morpheme_analysis>
-            <syntactic_analysis>
-                <unit>
-                    <form>Xb'entz'eta' na kan ri ak'wal.</form>
-                    <gloss>SVT</gloss>
-                </unit>
-            </syntactic_analysis>
         </interlinear_gloss>
         <heading>Marca el objeto en el verbo:</heading>
         <interlinear_gloss>
             <parallel_phrase>
                 <original>...kan jeb'ël ok xerutz'ët ri ch'uta'q xtani' rija'...</original>
+                <translation>...vio muy hermosas a las niñas...</translation>
+            </parallel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>kan</form>
+                    <gloss>PAR</gloss>
+                </unit>
+                <unit>
+                    <form>jeb'ël</form>
+                    <gloss>hermosa</gloss>
+                </unit>
+                <unit>
+                    <form>ok</form>
+                    <gloss>DIR</gloss>
+                </unit>
+                <unit>
+                    <form>xerutz'ët</form>
+                    <gloss>COM-B3p-A3s-ver</gloss>
+                </unit>
+                <unit>
+                    <form>ri</form>
+                    <gloss>DET</gloss>
+                </unit>
+                <unit>
+                    <form>ch'uta'q</form>
+                    <gloss>DIM</gloss>
+                </unit>
+                <unit>
+                    <form>xtani'</form>
+                    <gloss>Niña-PL</gloss>
+                </unit>
+                <unit>
+                    <form>rija'</form>
+                    <gloss>él</gloss>
+                </unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>...kan jeb'ël ok x-e-ru-tz'ët ri ch'uta'q xtan-i' rija'...</original>
                 <translation>...vio muy hermosas a las niñas...</translation>
             </parallel_phrase>
             <morpheme_analysis>
@@ -105,24 +168,14 @@
                     <gloss>DIM</gloss>
                 </unit>
                 <unit>
-                    <form>xtan-</form>
-                    <gloss>Niña-</gloss>
+                    <form>xtan-i'</form>
+                    <gloss>Niña-PL</gloss>
                 </unit>
                 <unit>
-                    <form>i'</form>
-                    <gloss>PL</gloss>
-                </unit>
-                <unit>
-                    <form>rija'...</form>
+                    <form>rija'</form>
                     <gloss>él</gloss>
                 </unit>
             </morpheme_analysis>
-            <syntactic_analysis>
-                <unit>
-                    <form>kan jeb'ël ok xerutz'ët ri ch'uta'q xtani'</form>
-                    <gloss>SVT</gloss>
-                </unit>
-            </syntactic_analysis>
         </interlinear_gloss>
         <heading>Marca el sujeto en el verbo:</heading>
         <interlinear_gloss>
@@ -132,20 +185,8 @@
             </parallel_phrase>
             <morpheme_analysis>
                 <unit>
-                    <form>X-</form>
-                    <gloss>COM-</gloss>
-                </unit>
-                <unit>
-                    <form>Ø-</form>
-                    <gloss>B3s-</gloss>
-                </unit>
-                <unit>
-                    <form>ki-</form>
-                    <gloss>A3p-</gloss>
-                </unit>
-                <unit>
-                    <form>löq'</form>
-                    <gloss>comprar</gloss>
+                    <form>Xkilöq'</form>
+                    <gloss>COM-B3s-A3p-comprar</gloss>
                 </unit>
                 <unit>
                     <form>jun</form>
@@ -164,20 +205,10 @@
                     <gloss>dos</gloss>
                 </unit>
                 <unit>
-                    <form>achi'-</form>
-                    <gloss>hombre-</gloss>
-                </unit>
-                <unit>
-                    <form>a'.</form>
-                    <gloss>PL</gloss>
+                    <form>achi'a'.</form>
+                    <gloss>hombre-PL</gloss>
                 </unit>
             </morpheme_analysis>
-            <syntactic_analysis>
-                <unit>
-                    <form>Xkilöq' jun uqaj</form>
-                    <gloss>SVT</gloss>
-                </unit>
-            </syntactic_analysis>
         </interlinear_gloss>
         <interlinear_gloss>
             <parallel_phrase>
@@ -186,28 +217,8 @@
             </parallel_phrase>
             <morpheme_analysis>
                 <unit>
-                    <form>X-</form>
-                    <gloss>COM-</gloss>
-                </unit>
-                <unit>
-                    <form>Ø-</form>
-                    <gloss>B3s-</gloss>
-                </unit>
-                <unit>
-                    <form>u-</form>
-                    <gloss>A3s-</gloss>
-                </unit>
-                <unit>
-                    <form>sip-</form>
-                    <gloss>regalar-</gloss>
-                </unit>
-                <unit>
-                    <form>a-</form>
-                    <gloss>BV-</gloss>
-                </unit>
-                <unit>
-                    <form>j</form>
-                    <gloss>SC</gloss>
+                    <form>Xusipaj</form>
+                    <gloss>COM-B3s-A3s-regalar-BV-SC</gloss>
                 </unit>
                 <unit>
                     <form>ri</form>
@@ -226,25 +237,20 @@
                     <gloss>señorita</gloss>
                 </unit>
             </morpheme_analysis>
-            <syntactic_analysis>
-                <unit>
-                    <form>Xusipaj ri xkoya'</form>
-                    <gloss>SVT</gloss>
-                </unit>
-            </syntactic_analysis>
         </interlinear_gloss>
         <heading>Marca movimiento en el verbo:</heading>
         <interlinear_gloss>
             <parallel_phrase>
-                <original>...nb'esamäj qatata', nb'eqato',...</original>
-                <translation>...nuestro papá va a trabajar, vamos a ayudarlo,...</translation>
+                <original>...nb'esamäj qatata', nb'eqato'....</original>
+                <translation>...nuestro papá va a trabajar, vamos a ayudarlo....</translation>
             </parallel_phrase>
-            <syntactic_analysis>
+            <morpheme_analysis>
                 <unit>
-                    <form>nb'eqato'</form>
+                    <form>nb'esamäj</form>
                     <gloss>SVT</gloss>
                 </unit>
-            </syntactic_analysis>
+            </morpheme_analysis>
         </interlinear_gloss>
     </page>
 </document>
+</documento>
