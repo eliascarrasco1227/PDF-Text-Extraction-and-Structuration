@@ -1,8 +1,5 @@
 <!ELEMENT document (page+)>
-<!ATTLIST document
-            source CDATA #REQUIRED
-            pages CDATA #REQUIRED
-            date CDATA #IMPLIED>
+<!ATTLIST document>
 
 <!ELEMENT page (line | heading | title | interlinear_gloss | parallel_phrase)*>
 <!ATTLIST page
