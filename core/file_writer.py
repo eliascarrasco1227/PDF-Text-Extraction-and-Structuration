@@ -37,7 +37,8 @@ class FileWriter:
 '''
         except Exception as e:
             self.logger.warning(f"No se pudo generar wrapper completo: {str(e)}")
-            return f"<document>{content}</document>"
+            return f'''<?xml version="1.0" encoding="UTF-8"?>"
+"{content}'''
 
     def _get_path(self, filename: str) -> str:
         return os.path.join(self.output_dir, filename)

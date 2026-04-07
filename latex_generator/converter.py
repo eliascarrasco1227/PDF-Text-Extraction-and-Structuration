@@ -4,6 +4,7 @@ from lxml import etree
 from pylatex import Document, Section, Subsection, Command, NoEscape
 from pylatex.utils import bold, italic
 from core.logger_config import app_logger
+from config.properties import PDF_PATH
 
 class XMLToLaTeXConverter:
     def __init__(self, xml_path):
@@ -18,6 +19,7 @@ class XMLToLaTeXConverter:
         self.doc.packages.append(Command('usepackage', 'geometry'))
         self.doc.packages.append(Command('geometry', 'margin=2cm'))
         self.doc.preamble.append(NoEscape(r'\lingset{everygla=\it}'))
+        self.doc.packages.append(Command('usepackage', 'babel', 'spanish'))
 
     def _clean_for_latex(self, text: str) -> str:
         """Limpia caracteres Unicode problemáticos y escapa caracteres especiales"""
@@ -38,6 +40,11 @@ class XMLToLaTeXConverter:
         text = text.replace('_', r'\_').replace('$', r'\$').replace('%', r'\%')
         
         return text.strip()
+    
+    def getTitle(self, path):
+        # Extrae el nombre del archivo, quita la extensión y limpia el texto
+        filename = os.path.splitext(os.path.basename(path))[0]
+        return filename.split('_pag_')[0].replace('-', ' ')
 
     def parse_and_generate(self):
         """Punto de entrada principal para el procesamiento"""
@@ -45,11 +52,10 @@ class XMLToLaTeXConverter:
             tree = etree.parse(self.xml_path)
             root = tree.getroot()
 
-            source = root.get('source', 'Unknown')
-            pages = root.get('pages', 'N/A')
-            
+            source = root.get('source', self.getTitle(PDF_PATH))
+
             self.doc.preamble.append(Command('title', f'Análisis Lingüístico: {source}'))
-            self.doc.preamble.append(Command('author', f'Páginas: {pages}'))
+            self.doc.preamble.append(Command('author', 'Generado por el TFM de Elías Carrasco'))
             self.doc.append(NoEscape(r'\maketitle'))
 
             for page in root.findall('page'):
@@ -114,7 +120,7 @@ class XMLToLaTeXConverter:
                 if f:
                     f_c = self._clean_for_latex(f)
                     g_c = self._clean_for_latex(g)
-                    syntax_units.append(f"[{f_c}]_{{{g_c}}}")
+                    syntax_units.append(f"[{f_c}]\\textsubscript{{{g_c}}}")
 
         # Unimos las listas fuera de las f-strings
         forms_str = " ".join(morph_forms)
