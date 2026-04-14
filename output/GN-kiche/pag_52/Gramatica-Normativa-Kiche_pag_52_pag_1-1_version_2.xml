@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <page number="51">
+        <line>a)</line>
+        <heading>Sintagma Nominal</heading>
+        <line>En el idioma K'iche' se presentan los siguientes casos de sintagma nominal, con los</line>
+        <line>siguientes modificadores: demostrativos, adjetivos, clasificadores personales, pronombres,</line>
+        <line>afectivos, pluralizadores, negativos y poseedores.</line>
+        <heading>Demostrativo</heading>
+        <line>Se refieren a un nominal identificado o conocido.</line>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>Xink'ayij le kej.</original>
+                <translation>Vendí el caballo</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>le kej</form>
+                    <gloss>SN</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>Xkisipaj we pas.</original>
+                <translation>Regalaron la faja</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>we pas</form>
+                    <gloss>SN</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>Kqachakuj ri ulew.</original>
+                <translation>Trabajamos la tierra.</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>ri ulew</form>
+                    <gloss>SN</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <heading>Adjetivo</heading>
+        <line>El adjetivo va en posición anterior a los núcleos nominales.</line>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>Chiwila pe' jun je'l po't.</original>
+                <translation>vean un güipil bonito.</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>jun je'l po't</form>
+                    <gloss>SN</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>Je'l kwil le kaq atz'yaq.</original>
+                <translation>¡Que hermosa se ve esa ropa roja!</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>le kaq atz'yaq</form>
+                    <gloss>SN</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <heading>Clasificadores</heading>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>Ktze'n le ali Xpuch.</original>
+                <translation>La señorita Xpuch se está riendo.</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>le ali Xpuch</form>
+                    <gloss>SN</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>Ri tat Xwan utzalaj winaq.</original>
+                <translation>Don Juan es una persona muy buena.</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>Ri tat Xwan</form>
+                    <gloss>SN</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>A Xwan sib'alaj ajchak.</original>
+                <translation>Juan es un muchacho muy trabajador.</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>A Xwan</form>
+                    <gloss>SN</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+    </page>
+</document>

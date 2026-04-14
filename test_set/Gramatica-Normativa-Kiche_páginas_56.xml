@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <page number="55">
+        <heading>c) Sintagma Estativo</heading>
+        <line>Este tipo de sintagma puede tener por núcleo un sustantivo, adjetivo, número, adjetivo</line>
+        <line>posicional, adverbio o existencial. Dichas palabras pueden ser modificadas por</line>
+        <line>elementos facultativos, como las partículas de negación, de interrogación y direccionales.</line>
+        <line>Ejemplos:</line>
+        <heading>Interrogación + adjetivo posicional + partícula</heading>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>¿La t’uyul k’u ri k’amal b’e?</original>
+                <translation>¿Está sentado el presidente?</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>¿La t’uyul k’u ri</form>
+                    <gloss>SET</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <heading>c) Sintagma Adjetival</heading>
+        <line>Este tipo de sintagma tiene como núcleo un adjetivo y puede llevar otro adjetivo más un</line>
+        <line>intensificador.</line>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>Ch'am chi ri alanxax.</original>
+                <translation>La naranja ya está agria.</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>Ch'am chi</form>
+                    <gloss>SADJ</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>Jun je’lalaj ch’aqal che' k'o pa b’e.</original>
+                <translation>Un palo bonito mojado está en el camino.</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>Jun je’lalaj ch’aqal</form>
+                    <gloss>SADJ</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <heading>Interrogación</heading>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>¿La pim k’u le tz'alam?</original>
+                <translation>¿Es gruesa la tabla?</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>La pim k’u</form>
+                    <gloss>SADJ</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        
+        <heading>Afirmación</heading>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>Je', chaq' ri wa.</original>
+                <translation>Sí, los tamales están cocidos</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>Je', chaq'</form>
+                    <gloss>SADJ</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <heading>e) Sintagma Adverbial</heading>
+        <line>Este tipo de sintagma lleva un adverbio como núcleo, que puede ser modificado por uno</line>
+        <line>o dos adverbios, partículas de interrogación y negación.</line>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>Iwir xujjach'anik. Ayer tapizcamos.</original>
+                <translation>Ayer tapizcamos.</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>Iwir</form>
+                    <gloss>SAD</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>Nimaq'ab' chwe'q kixb'e pa yuq'.</original>
+                <translation>Mañana temprano, se van a pastorear.</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>Nimaq'ab' chwe'q</form>
+                    <gloss>SAD</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+        <heading>Adverbio + Partícula</heading>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>¿La junab'ir xatk'uli' ruk' ali Nikte'?</original>
+                <translation>¿Fue el año pasado que te casaste con la señorita Nikte'?</translation>
+            </parallel_phrase>
+            <syntactic_analysis>
+                <unit>
+                    <form>La junab'ir</form>
+                    <gloss>SAD</gloss>
+                </unit>
+            </syntactic_analysis>
+        </interlinear_gloss>
+    </page>
+</document>
