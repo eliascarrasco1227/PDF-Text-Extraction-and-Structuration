@@ -1,7 +1,7 @@
 # Configuración editable
 #PDF_PATH = 'data/Gramatica-Normativa-Mam.pdf'
 #PDF_PATH = 'data/few-shot/Gramatica-Normativa-Kaqchikel_pag_146.pdf'
-PDF_PATH = 'data/reducidos/Gramatica-Normativa-Kiche_pag_56.pdf'
+PDF_PATH = 'data/reducidos/Gramatica-Normativa-Mam_pag_231.pdf'
 #PDF_PATH = 'data/Gramatica-Normativa-Kaqchikel.pdf'
 #PDF_PATH = 'data/Gramatica-Normativa-Kiche.pdf'
 #PDF_PATH = 'data/reducidos/Gramatica-Normativa-Kiche_pag_44.pdf'
