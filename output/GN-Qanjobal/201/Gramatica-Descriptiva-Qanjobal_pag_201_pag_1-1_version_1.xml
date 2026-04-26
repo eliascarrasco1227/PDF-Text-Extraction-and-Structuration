@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <page number="205">
+        <line>INC-B3</line>
+        <line>Lo quiere</line>
+        <heading>Negación de una acción</heading>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>k'am</original>
+                <translation>No lo quiere</translation>
+            </parallel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>k'am</form>
+                    <gloss>A3-querer-SC</gloss>
+                </unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>chi-ø</original>
+                <translation>INC-B3</translation>
+            </parallel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>chi-</form>
+                    <gloss>INC-</gloss>
+                </unit>
+                <unit>
+                    <form>ø</form>
+                    <gloss>B3</gloss>
+                </unit>
+                <unit>
+                    <form>y-oche-j</form>
+                    <gloss>A3-querer-SC</gloss>
+                </unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <heading>Oración base (acción en potencial)</heading>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>hoq ø achn-oq</original>
+                <translation>Él se bañará</translation>
+            </parallel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>hoq</form>
+                    <gloss>POT-B3</gloss>
+                </unit>
+                <unit>
+                    <form>ø</form>
+                    <gloss>bañar-</gloss>
+                </unit>
+                <unit>
+                    <form>achn-oq</form>
+                    <gloss>SC</gloss>
+                </unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <heading>Negación de una acción</heading>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>man hoq ø achn-oq</original>
+                <translation>No se bañará</translation>
+            </parallel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>man</form>
+                    <gloss>no</gloss>
+                </unit>
+                <unit>
+                    <form>hoq</form>
+                    <gloss>POT-B3</gloss>
+                </unit>
+                <unit>
+                    <form>ø</form>
+                    <gloss>bañar-</gloss>
+                </unit>
+                <unit>
+                    <form>achn-oq</form>
+                    <gloss>SC</gloss>
+                </unit>
+                <unit>
+                    <form>naq</form>
+                    <gloss>PRO:él</gloss>
+                </unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <heading>Oración base (acción en incompletivo)</heading>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>ch-in toj</original>
+                <translation>Me iré mañana</translation>
+            </parallel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>ch-in</form>
+                    <gloss>INC-B1SG</gloss>
+                </unit>
+                <unit>
+                    <form>toj</form>
+                    <gloss>ir</gloss>
+                </unit>
+                <unit>
+                    <form>yekal</form>
+                    <gloss>mañana</gloss>
+                </unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <heading>Negación de una acción</heading>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>maj hin toq</original>
+                <translation>No me iré mañana</translation>
+            </parallel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>maj</form>
+                    <gloss>no</gloss>
+                </unit>
+                <unit>
+                    <form>hin</form>
+                    <gloss>A1SG</gloss>
+                </unit>
+                <unit>
+                    <form>toq</form>
+                    <gloss>ir</gloss>
+                </unit>
+                <unit>
+                    <form>yekal</form>
+                    <gloss>mañana</gloss>
+                </unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <heading>Oración base (predicado no verbal)</heading>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>lek-an ø</original>
+                <translation>Ella está parada</translation>
+            </parallel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>lek-an</form>
+                    <gloss>parado-POS</gloss>
+                </unit>
+                <unit>
+                    <form>ø</form>
+                    <gloss>B3</gloss>
+                </unit>
+                <unit>
+                    <form>aj</form>
+                    <gloss>DIR:hacia arriba</gloss>
+                </unit>
+                <unit>
+                    <form>ix</form>
+                    <gloss>PRO:ella</gloss>
+                </unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <heading>Negación de un predicado no verbal</heading>
+        <interlinear_gloss>
+            <parallel_phrase>
+                <original>man lekan-oq</original>
+                <translation></translation>
+            </parallel_phrase>
+            <morpheme_analysis>
+                <unit>
+                    <form>man</form>
+                    <gloss>lekan-oq</gloss>
+                </unit>
+                <unit>
+                    <form>ø</form>
+                    <gloss>aj ix</gloss>
+                </unit>
+            </morpheme_analysis>
+        </interlinear_gloss>
+        <line>Gramática Descriptiva..p65</line>
+        <line>205</line>
+        <line>08/07/2009, 8:52</line>
+    </page>
+</document>

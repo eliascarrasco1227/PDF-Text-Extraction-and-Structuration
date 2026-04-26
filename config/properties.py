@@ -1,13 +1,14 @@
 # Configuración editable
 #PDF_PATH = 'data/Gramatica-Normativa-Mam.pdf'
 #PDF_PATH = 'data/few-shot/Gramatica-Normativa-Kaqchikel_pag_146.pdf'
-PDF_PATH = 'data/reducidos/Gramatica-Normativa-Mam_pag_231.pdf'
+#PDF_PATH = 'data/reducidos/Gramatica-Normativa-Mam_pag_231.pdf'
 #PDF_PATH = 'data/Gramatica-Normativa-Kaqchikel.pdf'
 #PDF_PATH = 'data/Gramatica-Normativa-Kiche.pdf'
 #PDF_PATH = 'data/reducidos/Gramatica-Normativa-Kiche_pag_44.pdf'
+PDF_PATH = 'data/reducidos/Gramatica-Descriptiva-Qanjobal_pag_201.pdf'
 
 PROMPT_PATH = 'prompts/prompt_v5'
-OUTPUT_DIR = 'output' #/GN-kaqchikel-205
+OUTPUT_DIR = 'output/GN-Qanjobal/201' #/GN-kaqchikel-205
 LOG_DIR = 'logs'  # directorio de logs
 ALL_PAGES = True  # Si es True, procesa todas las páginas del PDF ignorando PAGINAS
 PAGINAS = (205, 205)  # Páginas a procesar (inicio, fin), ambas inclusive.  (primera página = 0. pagina = las que indica el pdf - 1)
