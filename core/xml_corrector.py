@@ -9,7 +9,7 @@ class XMLCorrector:
     Especialista en corregir XMLs que no cumplen el DTD.
     Usa un modelo sin limite de llamadas para asegurar la validez estructural.
     """
-    def __init__(self, model: str = "gemma-3-27b-it"):
+    def __init__(self, model: str = "gemini-3.1-flash-lite"):
         self.client = genai.Client()
         self.model = model
         self.logger = app_logger

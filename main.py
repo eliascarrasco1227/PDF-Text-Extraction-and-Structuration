@@ -89,6 +89,9 @@ class DocumentProcessor:
                     success = compiler.compile_to_pdf(base_name + ".tex")
                     
                     self.logger.info(f"✨ LaTeX generado correctamente en: {base_name}.tex")
+
+                    return saved_xml_path
+                
                 except Exception as e:
                     self.logger.error(f"❌ Error durante la generación de LaTeX: {str(e)}")
                 # ----------------------------------------

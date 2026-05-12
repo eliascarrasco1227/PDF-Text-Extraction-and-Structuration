@@ -1,80 +1,65 @@
-import os
 import time
+import os
+import re
 from main import DocumentProcessor
-from config.properties import PROMPT_PATH
+from evaluator.single_evaluator import calculate_character_error_rate
+from core.logger_config import app_logger
 
-# --- CONFIGURACIÓN DEL EXPERIMENTO ---
-TEMPERATURES = [0.5, 1.0]
-ITERATIONS = 2
-
-# Definimos tus casos de test (Ruta del PDF, Páginas)
-# Nota: Como main.py procesa lo que digan las propiedades, aquí trucaremos un poco
-# pasando rutas de PDFs recortados (de una sola página) para ir más rápido.
-TEST_CASES = [
-    {
-        "name": "Kaqchikel_146",
-        "pdf": "data/reducidos/Gramatica-Normativa-Kaqchikel_pag_146.pdf" 
-    },
-    {
-        "name": "Kaqchikel_172",
-        "pdf": "data/reducidos/Gramatica-Normativa-Kaqchikel_pag_172.pdf"
-    },
-    {
-        "name": "Kiche_43",
-        # Asumo la ruta basada en tus archivos subidos, ajusta si es necesario
-        "pdf": "data/reducidos/Gramatica-Normativa-Kiche_pag_44.pdf" # Ojo: ajusta al archivo correcto de la pag 43
-    },
-    {
-        "name": "Mam_80",
-        "pdf": "data/reducidos/Gramatica-Normativa-Mam_pag_80.pdf" # Asegúrate de tener este PDF reducido
-    }
+# CONFIGURACIÓN DEL EXPERIMENTO
+# Formato: (Nombre_PDF, Pagina_Inicio, Pagina_Fin, XML_Referencia)
+EXPERIMENTOS = [
+    ("Gramatica-Normativa-Kaqchikel_pag_172.pdf", 172, 172, "test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"),
+    ("Gramatica-Normativa-Mam_pag_80.pdf", 80, 80, "test_set/Gramatica-Normativa-Mam_páginas_80.xml"),
 ]
 
-BASE_OUTPUT_DIR = "output/experiment_results_2"
+VERSIONES = 3 
 
-def run_experiment():
-    print(f"🚀 INICIANDO EXPERIMENTO MASIVO DE TEMPERATURAS")
-    print(f"🌡️ Temperaturas: {TEMPERATURES}")
-    print(f"📂 Casos de test: {len(TEST_CASES)}")
-    print(f"🔄 Repeticiones por caso: {ITERATIONS}")
-    print("--------------------------------------------------")
+def run_benchmarks():
+    logger = app_logger
+    print(f"\n{'PÁGINA':<35} | {'V1':<8} | {'V2':<8} | {'V3':<8} | {'MEDIA'}")
+    print("-" * 85)
 
-    total_runs = len(TEMPERATURES) * len(TEST_CASES) * ITERATIONS
-    current_run = 0
+    for pdf_name, p_start, p_end, ref_path in EXPERIMENTOS:
+        pdf_path = os.path.join("data/reducidos", pdf_name)
+        resultados_similitud = []
 
-    for temp in TEMPERATURES:
-        # Carpeta específica para esta temperatura
-        temp_dir = os.path.join(BASE_OUTPUT_DIR, f"temp_{str(temp).replace('.', '_')}")
-        
-        for case in TEST_CASES:
-            # Subcarpeta para el archivo específico
-            case_dir = os.path.join(temp_dir, case["name"])
-            
-            print(f"\n🌡️  Procesando Temperatura {temp} | Caso: {case['name']}")
-            
-            for i in range(1, ITERATIONS + 1):
-                current_run += 1
-                print(f"    ▶️ Ejecución {i}/{ITERATIONS} (Progreso Total: {current_run}/{total_runs})")
+        if not os.path.exists(ref_path):
+            print(f"⚠️ Error: No existe la referencia {ref_path}. Saltando...")
+            continue
+
+        for v in range(VERSIONES):
+            try:
+                # Ejecutamos el procesador normal
+                # Asegúrate de que en config/properties.py PAGINAS esté configurado 
+                # para la página que quieres testear antes de lanzar esto, 
+                # o que DocumentProcessor acepte el rango.
+                processor = DocumentProcessor(pdf_path=pdf_path)
+                xml_generado_path = processor.process() 
                 
-                try:
-                    # Instanciamos el procesador con la configuración dinámica
-                    processor = DocumentProcessor(
-                        pdf_path=case["pdf"],
-                        output_dir=case_dir,
-                        temperature=temp
-                    )
-                    
-                    # Ejecutamos
-                    processor.process()
-                    
-                    # Pequeña pausa para no saturar la API (opcional)
-                    time.sleep(2) 
-                    
-                except Exception as e:
-                    print(f"    ❌ Error en ejecución {i}: {str(e)}")
+                # Calculamos similitud usando la función puente
+                cer_val = calculate_character_error_rate(ref_path, xml_generado_path)
+                
+                if cer_val is not None:
+                    similitud = (1 - cer_val) * 100
+                    resultados_similitud.append(similitud)
+                else:
+                    resultados_similitud.append(0.0)
 
-    print("\n✅ EXPERIMENTO FINALIZADO")
-    print(f"📁 Resultados guardados en: {BASE_OUTPUT_DIR}")
+                time.sleep(5) # Delay para evitar 429 Resource Exhausted
+
+            except Exception as e:
+                print(f"❌ Error en {pdf_name} V{v+1}: {str(e)}")
+                resultados_similitud.append(0.0)
+
+        # Rellenar con 0 si algo falló para que la tabla no se rompa
+        while len(resultados_similitud) < VERSIONES:
+            resultados_similitud.append(0.0)
+
+        media = sum(resultados_similitud) / VERSIONES
+        v1, v2, v3 = resultados_similitud
+        
+        nombre_fila = f"{pdf_name} (P{p_start})"
+        print(f"{nombre_fila:<35} | {v1:>7.1f}% | {v2:>7.1f}% | {v3:>7.1f}% | {media:>7.1f}%")
 
 if __name__ == "__main__":
-    run_experiment()
+    run_benchmarks()

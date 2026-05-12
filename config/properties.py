@@ -1,14 +1,14 @@
 # Configuración editable
 #PDF_PATH = 'data/Gramatica-Normativa-Mam.pdf'
-#PDF_PATH = 'data/few-shot/Gramatica-Normativa-Kaqchikel_pag_146.pdf'
+PDF_PATH = 'data/reducidos/Gramatica-Normativa-Kaqchikel_pag_172.pdf'
 #PDF_PATH = 'data/reducidos/Gramatica-Normativa-Mam_pag_231.pdf'
 #PDF_PATH = 'data/Gramatica-Normativa-Kaqchikel.pdf'
 #PDF_PATH = 'data/Gramatica-Normativa-Kiche.pdf'
 #PDF_PATH = 'data/reducidos/Gramatica-Normativa-Kiche_pag_44.pdf'
-PDF_PATH = 'data/reducidos/Gramatica-Descriptiva-Qanjobal_pag_201.pdf'
+#PDF_PATH = 'data/reducidos/Gramatica-Descriptiva-Qanjobal_pag_201.pdf'
 
 PROMPT_PATH = 'prompts/prompt_v5'
-OUTPUT_DIR = 'output/GN-Qanjobal/201' #/GN-kaqchikel-205
+OUTPUT_DIR = 'output/' #/GN-kaqchikel-205
 LOG_DIR = 'logs'  # directorio de logs
 ALL_PAGES = True  # Si es True, procesa todas las páginas del PDF ignorando PAGINAS
 PAGINAS = (205, 205)  # Páginas a procesar (inicio, fin), ambas inclusive.  (primera página = 0. pagina = las que indica el pdf - 1)
@@ -34,7 +34,9 @@ FEW_SHOT_XML_PATH_2 = 'data/few-shot/Gramatica-Normativa-Mam_páginas_80-80.xml'
 # Temperatura: 0.0 = Deterministico (Mejor para extracción fiel). 1.0 = Creativo. (default in gemini 1.0, balanced) 
 TEMPERATURE = 0.25
 
-GEMINI_MODEL = 'gemini-2.5-flash-lite' #'gemma-3-27b-it' # #'gemini-2.5-flash-lite' #'gemini-2.5-flash' #'gemini-3-flash-preview' #  # #'gemma-3-27b-it' #'gemini-2.5-flash-lite' #  # Modelo de Gemini a usar
+GEMINI_MODEL = 'gemini-3.1-flash-lite' #'gemini-2.5-flash-lite' #'gemini-2.5-flash'   # Modelo de Gemini a usar
+
+# Sustituto gemma: gemini-3.1-flash-lite
 
 
 # Validator

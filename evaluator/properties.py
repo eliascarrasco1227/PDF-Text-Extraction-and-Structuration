@@ -37,8 +37,10 @@
 
 
 
-REFERENCE_XML = "../test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"
-HYPOTHESIS_XML = "../output/Gramatica-Normativa-Kaqchikel"
+#REFERENCE_XML = "../test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"
+#HYPOTHESIS_XML = "../output/Gramatica-Normativa-Kaqchikel"
+
+
 #HYPOTHESIS_XML = "../output/antiguos/13-pdf/Gramatica-Normativa-Kaqchikel"
 #HYPOTHESIS_XML = "../output/2.5-flash/Gramatica-Normativa-Kaqchikel"
 
@@ -59,6 +61,11 @@ HYPOTHESIS_XML = "../output/Gramatica-Normativa-Kaqchikel"
 #REFERENCE_XML = "../test_set/Gramatica-Normativa-Kiche_páginas_43.xml"
 #HYPOTHESIS_XML = "../output/Gramatica-Normativa-Kiche_pag_44_páginas_1-1_version_7.xml"
 
+#REFERENCE_XML = "../test_set/Gramatica-Descriptiva-Qanjobal_pag_201.xml"
+#HYPOTHESIS_XML = "../output/Gramatica-Descriptiva-Qanjobal"
+
+REFERENCE_XML = "../test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"
+HYPOTHESIS_XML = "../output/Gramatica-Normativa-Kaqchikel"
 
 
 import os

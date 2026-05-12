@@ -3,8 +3,11 @@ import lxml.etree as etree
 from jiwer import cer
 from pathlib import Path
 import re 
-# Asegúrate de que 'properties' exista y contenga REFERENCE_XML, HYPOTHESIS_XML
-from properties import REFERENCE_XML, HYPOTHESIS_XML 
+
+try:
+    from .properties import REFERENCE_XML, HYPOTHESIS_XML
+except ImportError:
+    from properties import REFERENCE_XML, HYPOTHESIS_XML
 
 def extract_text_from_xml(xml_path: str) -> str:
     """
