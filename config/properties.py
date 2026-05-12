@@ -8,7 +8,7 @@ PDF_PATH = 'data/reducidos/Gramatica-Normativa-Kaqchikel_pag_172.pdf'
 #PDF_PATH = 'data/reducidos/Gramatica-Descriptiva-Qanjobal_pag_201.pdf'
 
 PROMPT_PATH = 'prompts/prompt_v5'
-OUTPUT_DIR = 'output/' #/GN-kaqchikel-205
+OUTPUT_DIR = 'output/experiment_results/' #/GN-kaqchikel-205
 LOG_DIR = 'logs'  # directorio de logs
 ALL_PAGES = True  # Si es True, procesa todas las páginas del PDF ignorando PAGINAS
 PAGINAS = (205, 205)  # Páginas a procesar (inicio, fin), ambas inclusive.  (primera página = 0. pagina = las que indica el pdf - 1)
