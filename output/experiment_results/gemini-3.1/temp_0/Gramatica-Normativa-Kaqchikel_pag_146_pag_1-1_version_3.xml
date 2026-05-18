@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <page number="145">
+    <line>Demostrativo la.....la’:</line>
+    <interlinear_gloss>
+      <parallel_phrase>
+        <original>Yalan nxik’an la jun tz’ikin la’.</original>
+        <translation>Ese pájaro vuela mucho.</translation>
+      </parallel_phrase>
+      <morpheme_analysis>
+        <unit><form>yalan</form><gloss>INT</gloss></unit>
+        <unit><form>n-ø-xik’-a-n</form><gloss>INC-B3s-volar-BV-AP</gloss></unit>
+        <unit><form>la</form><gloss>DEM</gloss></unit>
+        <unit><form>jun</form><gloss>IND</gloss></unit>
+        <unit><form>tz’ikin</form><gloss>pájaro</gloss></unit>
+        <unit><form>la’</form><gloss>DEM</gloss></unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <parallel_phrase>
+        <original>Pa la jun tinamit la’ e k’o mama’ taq che’.</original>
+        <translation>En ese pueblo hay árboles muy grandes.</translation>
+      </parallel_phrase>
+      <morpheme_analysis>
+        <unit><form>Pa</form><gloss>PRE</gloss></unit>
+        <unit><form>la</form><gloss>DEM</gloss></unit>
+        <unit><form>jun</form><gloss>IND</gloss></unit>
+        <unit><form>tinamit</form><gloss>pueblo</gloss></unit>
+        <unit><form>la’</form><gloss>DEM</gloss></unit>
+        <unit><form>e</form><gloss>B3p</gloss></unit>
+        <unit><form>k’o</form><gloss>EST</gloss></unit>
+        <unit><form>mama’</form><gloss>grande</gloss></unit>
+        <unit><form>taq</form><gloss>PL/DIM</gloss></unit>
+        <unit><form>che’</form><gloss>árbol</gloss></unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <line>De los anteriores demostrativos pueden acompañar al sustantivo solamente los antepuestos re y la, para indicar la visibilidad o cercanía del sustantivo. La partícula ri también funciona como demostrativo lo cual indica lejanía y sustantivo conocido.</line>
+    <line>Ejemplos:</line>
+    <heading>Demostrativo re:</heading>
+    <interlinear_gloss>
+      <parallel_phrase>
+        <original>...re ixöq nqakanoj.</original>
+        <translation>...la señora que buscamos.</translation>
+      </parallel_phrase>
+      <morpheme_analysis>
+        <unit><form>re</form><gloss>DEM</gloss></unit>
+        <unit><form>ixöq</form><gloss>mujer</gloss></unit>
+        <unit><form>n-ø-qa-kan-o-j</form><gloss>INC-B3s-A1p-buscar-BV-SC</gloss></unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <interlinear_gloss>
+      <parallel_phrase>
+        <original>Re ak’wala’ xketamaj.</original>
+        <translation>Estos niños lo supieron.</translation>
+      </parallel_phrase>
+      <morpheme_analysis>
+        <unit><form>Re</form><gloss>DEM</gloss></unit>
+        <unit><form>ak’wal-a’</form><gloss>niño-PL</gloss></unit>
+        <unit><form>x-ø-k-etam-a-j</form><gloss>COM-B3s-A3p-saber-BV-VT</gloss></unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <heading>Demostrativo la:</heading>
+    <interlinear_gloss>
+      <parallel_phrase>
+        <original>...chuqa’ la tz’ite’ che’...</original>
+        <translation>...también ese árbol de pito...</translation>
+      </parallel_phrase>
+      <morpheme_analysis>
+        <unit><form>chuqa’</form><gloss>CONJ</gloss></unit>
+        <unit><form>la</form><gloss>DEM</gloss></unit>
+        <unit><form>tz’ite’</form><gloss>palo de pito</gloss></unit>
+        <unit><form>che’</form><gloss>árbol</gloss></unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+  </page>
+</document>
