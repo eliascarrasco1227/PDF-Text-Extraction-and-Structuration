@@ -8,7 +8,7 @@ PDF_PATH = 'data/reducidos/Gramatica-Normativa-Kaqchikel_pag_172.pdf'
 #PDF_PATH = 'data/reducidos/Gramatica-Descriptiva-Qanjobal_pag_201.pdf'
 
 PROMPT_PATH = 'prompts/prompt_v5'
-OUTPUT_DIR = 'output/experiment_results/gemini-3.1/temp_2.0/' #/GN-kaqchikel-205
+OUTPUT_DIR = 'output/experiment_results/gemini-3.1/temp_0.75/' #/GN-kaqchikel-205
 LOG_DIR = 'logs'  # directorio de logs
 ALL_PAGES = True  # Si es True, procesa todas las páginas del PDF ignorando PAGINAS
 PAGINAS = (205, 205)  # Páginas a procesar (inicio, fin), ambas inclusive.  (primera página = 0. pagina = las que indica el pdf - 1)
@@ -32,7 +32,7 @@ FEW_SHOT_XML_PATH_2 = 'data/few-shot/Gramatica-Normativa-Mam_páginas_80-80.xml'
 
 
 # Temperatura: 0.0 = Deterministico (Mejor para extracción fiel). 1.0 = Creativo. (default in gemini 1.0, balanced) 
-TEMPERATURE = 2.0
+TEMPERATURE = 0.75
 
 GEMINI_MODEL = 'gemini-3.1-flash-lite' #'gemini-2.5-flash-lite' #'gemini-2.5-flash'   # Modelo de Gemini a usar
 
