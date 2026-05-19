@@ -65,7 +65,7 @@
 #HYPOTHESIS_XML = "../output/Gramatica-Descriptiva-Qanjobal"
 
 REFERENCE_XML = "../test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"
-HYPOTHESIS_XML = "../output/experiment_results/gemini-3.1/temp_0/Gramatica-Normativa-Kaqchikel_pag_172"
+HYPOTHESIS_XML = "../output/experiment_results/gemini-3.1/temp_0.75/Gramatica-Normativa-Kaqchikel_pag_172"
 
 import os
 
