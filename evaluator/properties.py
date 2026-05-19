@@ -65,21 +65,28 @@
 #HYPOTHESIS_XML = "../output/Gramatica-Descriptiva-Qanjobal"
 
 REFERENCE_XML = "../test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"
-HYPOTHESIS_XML = "../output/Gramatica-Normativa-Kaqchikel"
-
+HYPOTHESIS_XML = "../output/experiment_results/gemini-3.1/temp_0/Gramatica-Normativa-Kaqchikel_pag_172"
 
 import os
 
-# --- NUEVA CONFIGURACIÓN PARA EVALUACIÓN MASIVA ---
+EXPERIMENTS_DIR = os.path.join("..", "output", "experiment_results", "gemini-3.1")
 
-# Ruta base donde están todas las carpetas de temperaturas (temp_0_1, temp_0_5, etc.)
-EXPERIMENTS_DIR = os.path.join("..", "output", "experiment_results")
-
-# Mapeo: "Nombre de la carpeta del caso" -> "Ruta del XML de Referencia (Gold Standard)"
-# Asegúrate de que las rutas relativas apuntan correctamente a tu carpeta test_set
+# ref: XML de referencia | prefix: prefijo exacto de los archivos de hipótesis
 TEST_CASE_MAPPING = {
-    "Kaqchikel_146": os.path.join("..", "test_set", "Gramatica-Normativa-Kaqchikel_páginas_146.xml"),
-    "Kaqchikel_172": os.path.join("..", "test_set", "Gramatica-Normativa-Kaqchikel_páginas_172.xml"),
-    "Kiche_43":      os.path.join("..", "test_set", "Gramatica-Normativa-Kiche_páginas_43.xml"),
-    "Mam_80":        os.path.join("..", "test_set", "Gramatica-Normativa-Mam_páginas_80.xml")
+    "Kaqchikel_146": {
+        "ref":    os.path.join("..", "test_set", "Gramatica-Normativa-Kaqchikel_páginas_146.xml"),
+        "prefix": "Gramatica-Normativa-Kaqchikel_pag_146_"
+    },
+    "Kaqchikel_172": {
+        "ref":    os.path.join("..", "test_set", "Gramatica-Normativa-Kaqchikel_páginas_172.xml"),
+        "prefix": "Gramatica-Normativa-Kaqchikel_pag_172_"
+    },
+    "Kiche_43": {
+        "ref":    os.path.join("..", "test_set", "Gramatica-Normativa-Kiche_páginas_43.xml"),
+        "prefix": "Gramatica-Normativa-Kiche_pag_43_"
+    },
+    "Mam_80": {
+        "ref":    os.path.join("..", "test_set", "Gramatica-Normativa-Mam_páginas_80.xml"),
+        "prefix": "Gramatica-Normativa-Mam_pag_80_"
+    },
 }
