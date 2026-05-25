@@ -64,8 +64,8 @@
 #REFERENCE_XML = "../test_set/Gramatica-Descriptiva-Qanjobal_pag_201.xml"
 #HYPOTHESIS_XML = "../output/Gramatica-Descriptiva-Qanjobal"
 
-REFERENCE_XML = "../test_set/Gramatica-Descriptiva-Qanjobal_pag_94.xml"
-HYPOTHESIS_XML = "../output/experiment_results/gemini-3.1/temp_2.0/Gramatica-Descriptiva-Qanjobal_pag_94"
+REFERENCE_XML = "../test_set/Gramatica-Descriptiva-Qanjobal_pag_201.xml"
+HYPOTHESIS_XML = "../output/experiment_results/gemini-3.1/temp_2.0/Gramatica-Descriptiva-Qanjobal_pag_201"
 
 import os
 
