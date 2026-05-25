@@ -64,8 +64,8 @@
 #REFERENCE_XML = "../test_set/Gramatica-Descriptiva-Qanjobal_pag_201.xml"
 #HYPOTHESIS_XML = "../output/Gramatica-Descriptiva-Qanjobal"
 
-REFERENCE_XML = "../test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"
-HYPOTHESIS_XML = "../output/experiment_results/gemini-3.1/temp_0/Gramatica-Normativa-Kaqchikel_pag_172"
+REFERENCE_XML = "../test_set/Gramatica-Descriptiva-Qanjobal_pag_94.xml"
+HYPOTHESIS_XML = "../output/experiment_results/gemini-3.1/temp_2.0/Gramatica-Descriptiva-Qanjobal_pag_94"
 
 import os
 
@@ -88,5 +88,9 @@ TEST_CASE_MAPPING = {
     "Mam_80": {
         "ref":    os.path.join("..", "test_set", "Gramatica-Normativa-Mam_páginas_80.xml"),
         "prefix": "Gramatica-Normativa-Mam_pag_80_"
+    },
+    "Mam_90": {
+        "ref":    os.path.join("..", "test_set", "Gramatica-Normativa-Mam_páginas_90.xml"),
+        "prefix": "Gramatica-Normativa-Mam_pag_90_"
     },
 }
