@@ -8,23 +8,21 @@ from core.logger_config import app_logger
 # CONFIGURACIÓN DEL EXPERIMENTO
 # Formato: (Nombre_PDF, Pagina_Inicio, Pagina_Fin, XML_Referencia)
 EXPERIMENTOS = [
-    ("Gramatica-Normativa-Kaqchikel_pag_172.pdf", 172, 172, "test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"),
-    ("Gramatica-Normativa-Mam_pag_80.pdf", 80, 80, "test_set/Gramatica-Normativa-Mam_páginas_80.xml"),
     ("Gramatica-Descriptiva-Qanjobal_pag_44.pdf", 44, 44, "test_set/Gramatica-Descriptiva-Qanjobal_pag_44.xml"),
     ("Gramatica-Descriptiva-Qanjobal_pag_94.pdf", 94, 94, "test_set/Gramatica-Descriptiva-Qanjobal_pag_94.xml"),
     ("Gramatica-Descriptiva-Qanjobal_pag_201.pdf", 201, 201, "test_set/Gramatica-Descriptiva-Qanjobal_pag_201.xml"),
     ("Gramatica-Normativa-Kaqchikel_pag_205.pdf", 205, 205, "test_set/Gramatica-Normativa-Kaqchikel_pag_205.xml"),
-    ("Gramatica-Normativa-Kaqchikel_pag_146.pdf", 146, 146, "test_set/Gramatica-Normativa-Kaqchikel_páginas_146.xml"),
+    #("Gramatica-Normativa-Kaqchikel_pag_146.pdf", 146, 146, "test_set/Gramatica-Normativa-Kaqchikel_páginas_146.xml"),
     ("Gramatica-Normativa-Kaqchikel_pag_172.pdf", 172, 172, "test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"),
-    ("Gramatica-Normativa-Kiche_pag_43.pdf", 43, 43, "test_set/Gramatica-Normativa-Kiche_páginas_43.xml"),
+    #("Gramatica-Normativa-Kiche_pag_43.pdf", 43, 43, "test_set/Gramatica-Normativa-Kiche_páginas_43.xml"),
     ("Gramatica-Normativa-Kiche_pag_52.pdf", 52, 52, "test_set/Gramatica-Normativa-Kiche_páginas_52.xml"),
     ("Gramatica-Normativa-Kiche_pag_56.pdf", 56, 56, "test_set/Gramatica-Normativa-Kiche_páginas_56.xml"),
-    ("Gramatica-Normativa-Mam_pag_80.pdf", 80, 80, "test_set/Gramatica-Normativa-Mam_páginas_80.xml"),
+    #("Gramatica-Normativa-Mam_pag_80.pdf", 80, 80, "test_set/Gramatica-Normativa-Mam_páginas_80.xml"),
     ("Gramatica-Normativa-Mam_pag_90.pdf", 90, 90, "test_set/Gramatica-Normativa-Mam_páginas_90.xml"),
     ("Gramatica-Normativa-Mam_pag_231.pdf", 231, 231, "test_set/Gramatica-Normativa-Mam_páginas_231.xml"),
 ]
 
-VERSIONES = 3 
+VERSIONES = 2 
 
 def run_benchmarks():
     logger = app_logger
@@ -64,14 +62,14 @@ def run_benchmarks():
                 resultados_similitud.append(0.0)
 
         # Rellenar con 0 si algo falló para que la tabla no se rompa
-        while len(resultados_similitud) < VERSIONES:
-            resultados_similitud.append(0.0)
+        #while len(resultados_similitud) < VERSIONES:
+            #resultados_similitud.append(0.0)
 
-        media = sum(resultados_similitud) / VERSIONES
-        v1, v2, v3 = resultados_similitud
+        #media = sum(resultados_similitud) / VERSIONES
+        #v1, v2 = resultados_similitud
         
-        nombre_fila = f"{pdf_name} (P{p_start})"
-        print(f"{nombre_fila:<35} | {v1:>7.1f}% | {v2:>7.1f}% | {v3:>7.1f}% | {media:>7.1f}%")
+        #nombre_fila = f"{pdf_name} (P{p_start})"
+        #print(f"{nombre_fila:<35} | {v1:>7.1f}% | {v2:>7.1f}% | {v3:>7.1f}% | {media:>7.1f}%")
 
 if __name__ == "__main__":
     run_benchmarks()
