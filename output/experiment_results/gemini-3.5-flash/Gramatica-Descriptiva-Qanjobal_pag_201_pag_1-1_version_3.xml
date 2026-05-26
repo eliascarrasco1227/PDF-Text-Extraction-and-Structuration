@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <page number="205">
+    <heading>Sintáxis</heading>
+    <interlinear_gloss>
+      <parallel_phrase>
+        <original>INC-B3 A3-querer-SC</original>
+        <translation>Lo quiere</translation>
+      </parallel_phrase>
+    </interlinear_gloss>
+    <line>Negación de una acción</line>
+    <interlinear_gloss>
+      <parallel_phrase>
+        <original>b. k’am chi-ø y-oche-j</original>
+        <translation>No lo quiere</translation>
+      </parallel_phrase>
+      <morpheme_analysis>
+        <unit><form>k’am</form><gloss>no</gloss></unit>
+        <unit><form>chi-ø</form><gloss>INC-B3</gloss></unit>
+        <unit><form>y-oche-j</form><gloss>A3-querer-SC</gloss></unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <line>Oración base (acción en potencial)</line>
+    <interlinear_gloss>
+      <parallel_phrase>
+        <original>(273) a. hoq ø achn-oq naq</original>
+        <translation>Él se bañará</translation>
+      </parallel_phrase>
+    </interlinear_gloss>
+    <line>Negación de una acción</line>
+    <interlinear_gloss>
+      <parallel_phrase>
+        <original>b. man hoq ø achn-oq naq</original>
+        <translation>No se bañará</translation>
+      </parallel_phrase>
+      <morpheme_analysis>
+        <unit><form>man</form><gloss>no</gloss></unit>
+        <unit><form>hoq</form><gloss>POT-B3</gloss></unit>
+        <unit><form>achn-oq</form><gloss>bañar-SC</gloss></unit>
+        <unit><form>naq</form><gloss>PRO:él</gloss></unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <line>Oración base (acción en incompletivo)</line>
+    <interlinear_gloss>
+      <parallel_phrase>
+        <original>(274) a. ch-in toj yekal</original>
+        <translation>Me iré mañana</translation>
+      </parallel_phrase>
+    </interlinear_gloss>
+    <line>Negación de una acción</line>
+    <interlinear_gloss>
+      <parallel_phrase>
+        <original>b. maj hin toq yekal</original>
+        <translation>No me iré mañana</translation>
+      </parallel_phrase>
+      <morpheme_analysis>
+        <unit><form>maj</form><gloss>no</gloss></unit>
+        <unit><form>hin</form><gloss>A1SG</gloss></unit>
+        <unit><form>toq</form><gloss>ir</gloss></unit>
+        <unit><form>yekal</form><gloss>mañana</gloss></unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <line>Oración base (predicado no verbal)</line>
+    <interlinear_gloss>
+      <parallel_phrase>
+        <original>(275) a. lek-an ø aj ix</original>
+        <translation>Ella está parada</translation>
+      </parallel_phrase>
+      <morpheme_analysis>
+        <unit><form>lek-an</form><gloss>parado-POS</gloss></unit>
+        <unit><form>ø</form><gloss>B3</gloss></unit>
+        <unit><form>aj</form><gloss>DIR:hacia arriba</gloss></unit>
+        <unit><form>ix</form><gloss>PRO:ella</gloss></unit>
+      </morpheme_analysis>
+    </interlinear_gloss>
+    <line>Negación de un predicado no verbal</line>
+    <interlinear_gloss>
+      <parallel_phrase>
+        <original>b. man lekan-oq ø ajix</original>
+        <translation>No está parada</translation>
+      </parallel_phrase>
+    </interlinear_gloss>
+  </page>
+</document>
