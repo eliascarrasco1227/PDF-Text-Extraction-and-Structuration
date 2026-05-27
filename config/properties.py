@@ -34,7 +34,7 @@ FEW_SHOT_XML_PATH_2 = 'data/few-shot/Gramatica-Normativa-Mam_páginas_80-80.xml'
 # Temperatura: 0.0 = Deterministico (Mejor para extracción fiel). 1.0 = Creativo. (default in gemini 1.0, balanced) 
 TEMPERATURE = 1.0
 
-GEMINI_MODEL = 'gemini-3-flash-preview'  #'gemini-3.1-flash-lite' #''gemini-3.5-flash' #'gemini-2.5-flash-lite' #'gemini-2.5-flash'   # Modelo de Gemini a usar
+GEMINI_MODEL = 'gemini-3.5-flash'#'gemini-3-flash-preview'  #'gemini-3.1-flash-lite' #''gemini-3.5-flash' #'gemini-2.5-flash-lite' #'gemini-2.5-flash'   # Modelo de Gemini a usar
 
 # Sustituto gemma: gemini-3.1-flash-lite
 

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
     <page number="203">
-        <heading>... / .. / .... Oración compleja</heading>
-        <line>La oración compleja se forma con más de una cláusula, una de ellas es la principal y</line>
-        <line>otra la subordinada. La idea que expresan las cláusulas subordinadas siempre dependen</line>
+        <heading>... / .. / ..... Oración compleja</heading>
+        <line>La oración compleja se forma con más de una cláusula, una de ellas es la principal y otra</line>
+        <line>la subordinada. La idea que expresan las cláusulas subordinadas siempre dependen</line>
         <line>de la cláusula principal, su posición es siempre después de ésta. Una cláusula subordinada</line>
         <line>se introduce por medio de subordinadores, aunque hay excepciones. Son oraciones</line>
         <line>complejas si dentro de la cláusula principal se encuentran las siguientes cláusulas</line>
         <line>subordinadas:</line>
+        
         <line>Cláusula relativa</line>
         <line>Cláusula adjunta o adverbial</line>
         <line>Cláusula de complemento</line>
-        
-        <heading>... / .. / .... / . Cláusula relativa</heading>
+
+        <heading>... / .. / .... / • Cláusula relativa</heading>
         <line>La cláusula relativa modifica a sustantivos, describe alguna característica, por eso</line>
         <line>funciona como adjetivo. La cláusula relativa se introduce por los subordinadores: ri,</line>
         <line>re, la, achoq rik'in y achoq chi re o simplemente sin subordinador. Estas partículas se</line>
@@ -101,7 +102,7 @@
                 </unit>
                 <unit>
                     <form>ak'wal,</form>
-                    <gloss>niño</gloss>
+                    <gloss>niño,</gloss>
                 </unit>
                 <unit>
                     <form>re</form>
@@ -139,7 +140,7 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>la xloq'o ri wexaj</form>
+                    <form>la xloq'o</form>
                     <gloss>CR</gloss>
                 </unit>
             </syntactic_analysis>

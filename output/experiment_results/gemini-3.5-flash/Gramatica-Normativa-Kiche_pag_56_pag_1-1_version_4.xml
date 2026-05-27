@@ -6,7 +6,7 @@
         <line>posicional, adverbio o existencial. Dichas palabras pueden ser modificadas por</line>
         <line>elementos facultativos, como las partículas de negación, de interrogación y direccionales.</line>
         <line>Ejemplos:</line>
-
+        
         <heading>Interrogación + adjetivo posicional + partícula</heading>
         <interlinear_gloss>
             <parallel_phrase>
@@ -15,7 +15,7 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>¿La t’uyul k’u ri k’amal b’e?</form>
+                    <form>¿La t’uyul k’u ri</form>
                     <gloss>SET</gloss>
                 </unit>
             </syntactic_analysis>
@@ -24,7 +24,7 @@
         <heading>c) Sintagma Adjetival</heading>
         <line>Este tipo de sintagma tiene como núcleo un adjetivo y puede llevar otro adjetivo más un</line>
         <line>intensificador.</line>
-
+        
         <interlinear_gloss>
             <parallel_phrase>
                 <original>Ch’am chi ri alanxax.</original>
@@ -32,7 +32,7 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>Ch’am chi ri alanxax.</form>
+                    <form>Ch’am chi</form>
                     <gloss>SADJ</gloss>
                 </unit>
             </syntactic_analysis>
@@ -45,7 +45,7 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>Jun je’lalaj ch’aqal che’ k’o pa b’e.</form>
+                    <form>Jun je’lalaj ch’aqal</form>
                     <gloss>SADJ</gloss>
                 </unit>
             </syntactic_analysis>
@@ -59,7 +59,7 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>¿La pim k’u le tz’alam?</form>
+                    <form>¿La pim k’u</form>
                     <gloss>SADJ</gloss>
                 </unit>
             </syntactic_analysis>
@@ -73,7 +73,7 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>Je’, chaq’ ri wa.</form>
+                    <form>Je’, chaq’</form>
                     <gloss>SADJ</gloss>
                 </unit>
             </syntactic_analysis>
@@ -90,7 +90,7 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>Iwir xujjach’anik.</form>
+                    <form>Iwir</form>
                     <gloss>SAD</gloss>
                 </unit>
             </syntactic_analysis>
@@ -103,7 +103,7 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>Nimaq’ab’ chwe’q kixb’e pa yuq’.</form>
+                    <form>Nimaq’ab’ chwe’q</form>
                     <gloss>SAD</gloss>
                 </unit>
             </syntactic_analysis>
@@ -117,7 +117,7 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>¿La junab’ir xatk’uli’ ruk’ ali Nikte’?</form>
+                    <form>¿La junab’ir</form>
                     <gloss>SAD</gloss>
                 </unit>
             </syntactic_analysis>

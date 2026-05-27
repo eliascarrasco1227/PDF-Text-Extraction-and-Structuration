@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.1.20)  26 MAY 2026 21:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.1.20)  26 MAY 2026 21:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -302,8 +302,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 \subsection{q≠st≠j}
-                            %
+l.70 q ≠
+           s ≠ t ≠ j %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -315,8 +315,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 \subsection{q≠st≠j}
-                            %
+l.70 q ≠ s ≠
+                 t ≠ j %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -328,98 +328,153 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 \subsection{r≠ kh≠ b'}
-                               %
+l.70 q ≠ s ≠ t ≠
+                       j %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.30 \subsection{r≠ kh≠ b'}
-                               %
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.34 \subsection{t's ≠ m}
-                           %
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 \subsection{tz' ≠ x r≠h ≠ b' ≠ k'}
-                                               %
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 \subsection{tz' ≠ x r≠h ≠ b' ≠ k'}
-                                               %
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 \subsection{tz' ≠ x r≠h ≠ b' ≠ k'}
-                                               %
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 \subsection{tz' ≠ x r≠h ≠ b' ≠ k'}
-                                               %
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Package lastpage Warning: Rerun to get the references right on input line 42.
-
-
-AED: lastpage setting LastPage
 [1
 
 {C:/Users/elcar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/elca
 r/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}]
+
+! LaTeX Error: Unicode character ≠ (U+2260)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 r ≠
+            k ≠ h ≠ b’ %
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≠ (U+2260)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 r ≠ k ≠
+                  h ≠ b’ %
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≠ (U+2260)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 r ≠ k ≠ h ≠
+                        b’ %
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≠ (U+2260)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 t’ ≠
+               s ≠ m %
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≠ (U+2260)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 t’ ≠ s ≠
+                     m %
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[2]
+
+! LaTeX Error: Unicode character ≠ (U+2260)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.194 tz’ ≠
+                x ≠ r ≠ h ≠ b’ ≠ k’ %
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≠ (U+2260)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.194 tz’ ≠ x ≠
+                      r ≠ h ≠ b’ ≠ k’ %
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≠ (U+2260)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.194 tz’ ≠ x ≠ r ≠
+                            h ≠ b’ ≠ k’ %
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≠ (U+2260)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.194 tz’ ≠ x ≠ r ≠ h ≠
+                                  b’ ≠ k’ %
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≠ (U+2260)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.194 tz’ ≠ x ≠ r ≠ h ≠ b’ ≠
+                                           k’ %
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[3]
+
+Package lastpage Warning: Rerun to get the references right on input line 263.
+
+
+AED: lastpage setting LastPage
+[4]
 (C:\Users\elcar\OneDrive\Documentos\MASTER\TFM\output\experiment_results\gemini
 -3.5-flash\Gramatica-Descriptiva-Qanjobal_pag_44_pag_1-1_version_4.aux
 LaTeX Info: Redefining \. on input line 8.
@@ -435,22 +490,23 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 3823 strings out of 474486
- 64846 string characters out of 5743755
- 1926542 words of memory out of 5000000
- 26082 multiletter control sequences out of 15000+600000
- 587856 words of font info for 53 fonts, out of 8000000 for 9000
+ 3821 strings out of 474486
+ 64815 string characters out of 5743755
+ 1931542 words of memory out of 5000000
+ 26079 multiletter control sequences out of 15000+600000
+ 592119 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,6n,68p,333b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/elcar/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/elcar/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb
 ><C:/Users/elcar/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
-<C:/Users/elcar/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb>
+<C:/Users/elcar/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><
+C:/Users/elcar/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb>
 Output written on C:\Users\elcar\OneDrive\Documentos\MASTER\TFM\output\experime
 nt_results\gemini-3.5-flash\Gramatica-Descriptiva-Qanjobal_pag_44_pag_1-1_versi
-on_4.pdf (1 page, 99910 bytes).
+on_4.pdf (4 pages, 130368 bytes).
 PDF statistics:
- 27 PDF objects out of 1000 (max. 8388607)
+ 41 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

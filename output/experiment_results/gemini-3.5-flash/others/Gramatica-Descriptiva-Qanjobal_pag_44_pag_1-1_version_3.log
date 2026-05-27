@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.1.20)  26 MAY 2026 21:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.1.20)  26 MAY 2026 21:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -302,8 +302,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.74 \gla q≠st≠j //
-                       
+l.70 q ≠
+           s ≠ t ≠ j %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -315,8 +315,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.74 \gla q≠st≠j //
-                       
+l.70 q ≠ s ≠
+                 t ≠ j %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -328,73 +328,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.75 \glb q≠st≠j //
-                       
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.75 \glb q≠st≠j //
-                       
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 \endgl
-           
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 \endgl
-           
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 \endgl
-           
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 \endgl
-           
+l.70 q ≠ s ≠ t ≠
+                       j %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -410,8 +345,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.129 \gla r≠ kh≠ b' //
-                           
+l.115 r ≠
+            k ≠ h ≠ b’ %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -423,8 +358,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.129 \gla r≠ kh≠ b' //
-                           
+l.115 r ≠ k ≠
+                  h ≠ b’ %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -436,8 +371,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.130 \glb r≠ kh≠ b' //
-                           
+l.115 r ≠ k ≠ h ≠
+                        b’ %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -449,8 +384,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.130 \glb r≠ kh≠ b' //
-                           
+l.160 t’ ≠
+               s ≠ m %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -462,47 +397,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.132 \endgl
-            
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.132 \endgl
-            
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.132 \endgl
-            
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.132 \endgl
-            
+l.160 t’ ≠ s ≠
+                     m %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -515,8 +411,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.184 \gla t's ≠ m //
-                       
+l.194 tz’ ≠
+                x ≠ r ≠ h ≠ b’ ≠ k’ %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -528,8 +424,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.185 \glb t's ≠ m //
-                       
+l.194 tz’ ≠ x ≠
+                      r ≠ h ≠ b’ ≠ k’ %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -541,8 +437,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.187 \endgl
-            
+l.194 tz’ ≠ x ≠ r ≠
+                            h ≠ b’ ≠ k’ %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -554,8 +450,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.187 \endgl
-            
+l.194 tz’ ≠ x ≠ r ≠ h ≠
+                                  b’ ≠ k’ %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -567,209 +463,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.228 \gla tz' ≠ x r≠h ≠ b' ≠ k' //
-                                           
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.228 \gla tz' ≠ x r≠h ≠ b' ≠ k' //
-                                           
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.228 \gla tz' ≠ x r≠h ≠ b' ≠ k' //
-                                           
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.228 \gla tz' ≠ x r≠h ≠ b' ≠ k' //
-                                           
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.229 \glb tz' ≠ x r≠h ≠ b' ≠ k' //
-                                           
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.229 \glb tz' ≠ x r≠h ≠ b' ≠ k' //
-                                           
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.229 \glb tz' ≠ x r≠h ≠ b' ≠ k' //
-                                           
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.229 \glb tz' ≠ x r≠h ≠ b' ≠ k' //
-                                           
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 \endgl
-            
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 \endgl
-            
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 \endgl
-            
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 \endgl
-            
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 \endgl
-            
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 \endgl
-            
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 \endgl
-            
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ≠ (U+2260)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 \endgl
-            
+l.194 tz’ ≠ x ≠ r ≠ h ≠ b’ ≠
+                                           k’ %
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 [3]
 
-Package lastpage Warning: Rerun to get the references right on input line 303.
+Package lastpage Warning: Rerun to get the references right on input line 263.
 
 
 AED: lastpage setting LastPage
@@ -789,24 +490,23 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 3823 strings out of 474486
- 64838 string characters out of 5743755
- 1934542 words of memory out of 5000000
- 26080 multiletter control sequences out of 15000+600000
- 595114 words of font info for 55 fonts, out of 8000000 for 9000
+ 3821 strings out of 474486
+ 64815 string characters out of 5743755
+ 1931542 words of memory out of 5000000
+ 26079 multiletter control sequences out of 15000+600000
+ 592119 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,6n,68p,333b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/elcar/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
-b><C:/Users/elcar/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
+<C:/Users/elcar/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/elcar/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb
 ><C:/Users/elcar/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
 <C:/Users/elcar/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><
 C:/Users/elcar/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb>
 Output written on C:\Users\elcar\OneDrive\Documentos\MASTER\TFM\output\experime
 nt_results\gemini-3.5-flash\Gramatica-Descriptiva-Qanjobal_pag_44_pag_1-1_versi
-on_3.pdf (4 pages, 159593 bytes).
+on_3.pdf (4 pages, 130368 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
+ 41 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

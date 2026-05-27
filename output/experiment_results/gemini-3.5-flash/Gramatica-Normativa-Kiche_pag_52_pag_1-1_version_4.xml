@@ -16,12 +16,12 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>le kej</form>
+                    <form>le kej.</form>
                     <gloss>SN</gloss>
                 </unit>
             </syntactic_analysis>
         </interlinear_gloss>
-
+        
         <interlinear_gloss>
             <parallel_phrase>
                 <original>Xkisipaj we pas.</original>
@@ -29,12 +29,12 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>we pas</form>
+                    <form>we pas.</form>
                     <gloss>SN</gloss>
                 </unit>
             </syntactic_analysis>
         </interlinear_gloss>
-
+        
         <interlinear_gloss>
             <parallel_phrase>
                 <original>Kqachakuj ri ulew.</original>
@@ -42,15 +42,15 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>ri ulew</form>
+                    <form>ri ulew.</form>
                     <gloss>SN</gloss>
                 </unit>
             </syntactic_analysis>
         </interlinear_gloss>
-
+        
         <heading>Adjetivo</heading>
         <line>El adjetivo va en posición anterior a los núcleos nominales.</line>
-
+        
         <interlinear_gloss>
             <parallel_phrase>
                 <original>Chiwila pe’ jun je’l po’t.</original>
@@ -58,12 +58,12 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>jun je’l po’t</form>
+                    <form>jun je’l po’t.</form>
                     <gloss>SN</gloss>
                 </unit>
             </syntactic_analysis>
         </interlinear_gloss>
-
+        
         <interlinear_gloss>
             <parallel_phrase>
                 <original>Je’l kwil le kaq atz’yaq.</original>
@@ -71,13 +71,14 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>kaq atz’yaq</form>
+                    <form>kaq atz’yaq.</form>
                     <gloss>SN</gloss>
                 </unit>
             </syntactic_analysis>
         </interlinear_gloss>
-
+        
         <heading>Clasificadores</heading>
+        
         <interlinear_gloss>
             <parallel_phrase>
                 <original>Ktze’n le ali Xpuch.</original>
@@ -85,12 +86,12 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>le ali Xpuch</form>
+                    <form>le ali Xpuch.</form>
                     <gloss>SN</gloss>
                 </unit>
             </syntactic_analysis>
         </interlinear_gloss>
-
+        
         <interlinear_gloss>
             <parallel_phrase>
                 <original>Ri tat Xwan utzalaj winaq.</original>
@@ -103,7 +104,7 @@
                 </unit>
             </syntactic_analysis>
         </interlinear_gloss>
-
+        
         <interlinear_gloss>
             <parallel_phrase>
                 <original>A Xwan sib’alaj ajchak.</original>
@@ -111,7 +112,7 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>Xwan</form>
+                    <form>A Xwan</form>
                     <gloss>SN</gloss>
                 </unit>
             </syntactic_analysis>

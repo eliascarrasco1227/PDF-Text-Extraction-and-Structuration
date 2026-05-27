@@ -14,7 +14,7 @@ EXPERIMENTOS = [
     ("Gramatica-Normativa-Kaqchikel_pag_205.pdf", 205, 205, "test_set/Gramatica-Normativa-Kaqchikel_pag_205.xml"),
     #("Gramatica-Normativa-Kaqchikel_pag_146.pdf", 146, 146, "test_set/Gramatica-Normativa-Kaqchikel_páginas_146.xml"),
     ("Gramatica-Normativa-Kaqchikel_pag_172.pdf", 172, 172, "test_set/Gramatica-Normativa-Kaqchikel_páginas_172.xml"),
-    #("Gramatica-Normativa-Kiche_pag_43.pdf", 43, 43, "test_set/Gramatica-Normativa-Kiche_páginas_43.xml"),
+    ("Gramatica-Normativa-Kiche_pag_43.pdf", 43, 43, "test_set/Gramatica-Normativa-Kiche_páginas_43.xml"),
     ("Gramatica-Normativa-Kiche_pag_52.pdf", 52, 52, "test_set/Gramatica-Normativa-Kiche_páginas_52.xml"),
     ("Gramatica-Normativa-Kiche_pag_56.pdf", 56, 56, "test_set/Gramatica-Normativa-Kiche_páginas_56.xml"),
     #("Gramatica-Normativa-Mam_pag_80.pdf", 80, 80, "test_set/Gramatica-Normativa-Mam_páginas_80.xml"),

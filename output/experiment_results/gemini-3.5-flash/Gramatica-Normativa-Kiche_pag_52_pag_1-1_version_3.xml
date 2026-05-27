@@ -6,7 +6,7 @@
         
         <heading>Demostrativo</heading>
         <line>Se refieren a un nominal identificado o conocido.</line>
-
+        
         <interlinear_gloss>
             <parallel_phrase>
                 <original>Xink’ayij le kej.</original>
@@ -97,7 +97,7 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>Ri tat Xwan</form>
+                    <form>tat Xwan</form>
                     <gloss>SN</gloss>
                 </unit>
             </syntactic_analysis>
@@ -110,7 +110,7 @@
             </parallel_phrase>
             <syntactic_analysis>
                 <unit>
-                    <form>A Xwan</form>
+                    <form>Xwan</form>
                     <gloss>SN</gloss>
                 </unit>
             </syntactic_analysis>
