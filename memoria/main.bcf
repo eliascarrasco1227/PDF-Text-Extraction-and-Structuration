@@ -3126,4 +3126,14 @@
                 labelalphanametemplatename="global"
                 namehashtemplatename="global">
   </bcf:datalist>
+  <bcf:datalist section="0"
+                name="apa/global//global/global/global"
+                type="entry"
+                sortingtemplatename="apa"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global"
+                namehashtemplatename="global">
+  </bcf:datalist>
 </bcf:controlfile>

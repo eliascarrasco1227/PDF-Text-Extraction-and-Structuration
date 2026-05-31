@@ -1,22 +1,49 @@
-\chapter{Introducción}
-En la actualidad, la gestión eficiente de la información y la documentación es una necesidad crítica para muchas organizaciones. Empresas, instituciones y proyectos a gran escala dependen de bases de datos robustas para almacenar, organizar y acceder rápidamente a grandes volúmenes de documentos.
+\chapter{Introducción y definición del problema}
 
-Sin embargo, uno de los desafíos más comunes es asegurarse de que los documentos estén correctamente almacenados, organizados y accesibles únicamente por el personal autorizado. Por ejemplo, el equipo de tecnologías de la información no debería tener acceso a la información contenida en un contrato de crédito.
+La digitalización de obras lingüísticas complejas se enfrenta a un obstáculo fundamental: la dicotomía entre la representación visual y la estructura lógica. El problema central se desglosa en los siguientes puntos críticos:
 
-A esto se suma que, en muchas empresas, la generación de documentos se delega a proveedores externos, lo que implica que el flujo de un documento pase por varias etapas. Esto aumenta el riesgo de que se produzcan pérdidas o errores en el almacenamiento. En este contexto, es crucial contar con herramientas que permitan realizar verificaciones automáticas y comprobar que los documentos se encuentran correctamente guardados.
+\begin{enumerate}
+    \item Naturaleza heterogénea de las fuentes (PDFs no procesados) 
+    
+    A diferencia de los documentos digitales nativos, el corpus de trabajo presenta una gran disparidad en su calidad técnica. Se ha identificado que un volumen significativo de los archivos PDF no son documentos con texto seleccionable y fondo limpio, sino fotografías directas de las páginas del libro físico. Estas fuentes carecen de cualquier pre-procesamiento de imagen o capa de texto subyacente, lo que implica:
+    Ruido visual: Presencia de sombras, texturas del papel y falta de contraste entre la tipografía y el fondo.
+    Inexistencia de metadatos de texto: La imposibilidad de extraer caracteres mediante scripts sencillos de lectura de PDF, obligando al sistema a realizar una interpretación visual completa de la imagen.
+    
+    \item Insuficiencia del OCR convencional 
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.95\linewidth]{imagenes/gramaticas/ocr_vs_kachiquel.png}
+        \caption{Comparación OCR vs. Kaqchikel}
+        \label{fig:ocr_vs_kachiquel}
+    \end{figure}
 
-Otro aspecto relevante es la necesidad de proteger la información confidencial. Para evitar comprometer la seguridad de los datos de clientes y empresas, es indispensable que las herramientas puedan verificar el correcto almacenamiento de los documentos sin acceder a su contenido o metadatos. Esta capacidad es fundamental para mantener la integridad y confidencialidad de la información.
+    Los sistemas de OCR tradicionales están diseñados para la extracción de texto lineal en documentos con una disposición de página sencilla como la parte izquierda de la figura \ref{fig:ocr_vs_kachiquel}. Sin embargo, la amalgama de una baja calidad de imagen junto con la arquitectura tipográfica y análisis sintácticos y morfológicos de las gramáticas como en la parte derecha de la figura \ref{fig:ocr_vs_kachiquel}, genera fallos sistemáticos en:
+    \begin{itemize}
+        \item Sistemas de numeración jerárquica: 
+        
+        Divisiones en secciones, tablas y disposiciones en vertical que suelen confundirse con el texto horizontal.
+        \item Glosas y ejemplos multilingües: 
+        
+        La alternancia entre el castellano y la lengua maya, a menudo en bloques adyacentes, que el OCR estándar tiende a mezclar al no reconocer los límites visuales de las columnas o tablas.
+        \item Estructuras morfológicas complejas: 
+        
+        Paradigmas verbales que, al ser extraídos de una "foto" como texto plano, se convierten en caracteres inconexos.
+        \item Estructuras sintácticas de subrayado: 
+        
+        Interpretaciones de segmentos de las oraciones subrayadas mediante análisis sintáctico.
+        \item Texto sobrante: 
+        
+        a menudo al escanear un libro se recogen en la imagenes caracteres de las páginas adyacentes, manchas que dificultan la identificación de las letras, dibujos decorativos a inicio de página…
+    \end{itemize}
 
-El desarrollo de aplicaciones web con tecnologías modernas como Spring Boot, JPA y Thymeleaf ha cobrado gran relevancia debido a su capacidad para ofrecer soluciones eficientes en la gestión de bases de datos y el procesamiento de información. Estas tecnologías permiten crear aplicaciones ágiles y seguras, que pueden realizar operaciones complejas de filtrado, validación y acceso a datos en tiempo real.
+    \item La pérdida de información al emplear PDF digitales
+    
+    El formato PDF actúa aquí como un mero contenedor de imágenes. Al carecer de etiquetas semánticas (ej. <titulo>, <ejemplo>, <regla\_gramatical>), la información queda aislada de cualquier posibilidad de procesamiento masivo, análisis computacional o migración automática a formatos modernos. Se puede apreciar la diferencia entre ambos archivos de información comparando la figura (imagen) pagina\_original\_Kaqchikel en el código \ref{code:kachiquel_xml}.
 
-La aplicación web propuesta en este proyecto tiene como objetivo facilitar el filtrado y la validación de documentos almacenados. Con este fin, se desarrollará una interfaz con una tabla que muestre campos del documento como su identificador y la hora a la que se almacenó en la base de datos, asegurando así su correcto almacenamiento y la consistencia de los datos, sin poder acceder a campos del documento con información confidencial.
+    \item El Desafío de la Inconsistencia Estructural en la IA 
+    
+    Incluso mediante el uso de LLMs multimodales, capaces de "ver" y procesar estas fotos de libros, existe una tendencia a la generación de errores sintácticos en el marcado XML (etiquetas mal cerradas o jerarquías invertidas), especialmente en páginas de alta densidad informativa como la páginas con análisis sintácticos o morfológicos.
+    Parte de este problema se debe a la creatividad de los LLMs que puede generar alucinaciones incluso empleando la metodología esquema de respuesta (response schema).
 
-Todo el código de la aplicación SIDManager está disponible en la plataforma GitHub de manera pública en el enlace a pie de página \footnote{\url{https://github.com/eliascarrasco1227/SIDManager}}. La aplicación sigue las indicaciones de la estrategia de software de código abierto (open source) de la Comisión Europea, como se puede ver en el enlace en el pie de página \footnote{\url{https://commission.europa.eu/about/departments-and-executive-agencies/digital-services/open-source-software-strategy_en\#opensourcesoftwarestrategy}}.
-
-El nombre de esta aplicación, SIDManager, proviene de dos componentes.
-El primero, \acrshort{sid}, corresponde con las siglas de \acrlong{sid}, un conjunto de scripts y aplicaciones web que se encargan de la gestión, impresión, envío y modificación de documentos.
-El segundo componente, Manager, proviene del inglés y significa administrador, ya que es la web encargada de la administración de los documentos; es decir, sirve para verificar la situación de los documentos y ver si se han almacenado correctamente en la base de datos.
-
-Finalmente, esta herramienta está diseñada para simplificar el acceso y la gestión de datos en entornos empresariales, priorizando la seguridad, el rendimiento y la escalabilidad. Al mismo tiempo, desacopla la lógica de negocio de la aplicación, ya que no necesita acceder al contenido de los documentos. 
-
-Con la implementación de Spring Security, se garantiza un acceso seguro, mientras que log4j permite un seguimiento detallado de las operaciones y posibles incidencias. De este modo, el proyecto ofrece una solución accesible y eficiente para cualquier empresa o individuo que necesite verificar y gestionar documentos, sin recurrir a equipos especializados o productos de software externos.
+\end{enumerate}
