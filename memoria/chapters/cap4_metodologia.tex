@@ -1,0 +1,42 @@
+
+    
+\chapter{Metodología} \label{metodologia}
+
+
+
+\section{Marco de Trabajo: Scrum Adaptado}
+Durante el desarrollo de SIDManager, adoptamos una metodología ágil basada en Scrum, adaptada a las necesidades del proyecto y a la colaboración remota con Santander Consumer Finance. Implementamos:
+
+\begin{itemize}
+    \item Sprints Semanales: Cada lunes, realizábamos una planificación de sprint con el tutor de Santander, donde definíamos los objetivos clave y priorizábamos tareas usando diagramas UML de secuencia.
+    \item Daily Standups Virtuales: Breves reuniones matutinas (15 min) para sincronizar avances y bloquedores, manteniendo al equipo alineado a pesar de la distancia.
+    \item Retrospectivas: Al final de cada sprint, analizábamos qué funcionó (ej: code reviews estructuradas) y qué mejorar (ej: ajustar la granularidad de las user stories).
+\end{itemize}
+
+\section{Herramientas Ágiles Clave}
+
+Para garantizar trazabilidad y calidad:
+
+\begin{itemize}
+    \item Code Reviews Colaborativas: Se realizaron revisiones de código semanales, donde el tutor evaluaba los commits contra estándares como Java Code Conventions y patrones de diseño como Singleton o Facade.
+    \item UML como Lenguaje Común: Diagramas de secuencia  servían como esquemas técnicos antes de implementar features críticas (ej: flujo de autenticación con Spring Security).
+    \item Tablero Kanban Digital: En Trello, gestionábamos tareas con columnas clásicas (To Do, In Progress, Done) y etiquetas de prioridad.
+\end{itemize}
+
+\section{Adaptación a Cambios}
+La naturaleza iterativa de Scrum nos permitió:
+
+\begin{itemize}
+    \item Incorporar Feedback en Tiempo Real: Cuando se identificó la necesidad de pseudopaginación para 20K documentos, ajustamos el sprint siguiente para priorizarlo.
+    \item Mantener Calidad bajo Presión: Las definition of done incluían: (1) pruebas manuales, (2) logs estructurados con Log4j, y (3) documentación Javadoc.
+\end{itemize}
+
+Este enfoque en metodologías ágiles generó resultados tangibles.
+
+\begin{itemize}
+    \item Entregables Consistentes: 8 sprints completados, con demo funcional tras cada uno.
+    \item Código Limpio y Documentado: +15 clases con Javadoc, facilitando la transición al equipo de Santander.
+    \item Flexibilidad: Algunos cambios mayores de requisitos absorbidos sin impactar la fecha de entrega (como la migración del inicio de sesión manual a Spring Security).
+\end{itemize}
+
+

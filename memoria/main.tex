@@ -1,0 +1,144 @@
+
+\documentclass[a4paper, 11pt, titlepage]{scrbook}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+% \usepackage[T1]{fontenc}  
+% \usepackage{lmodern}
+
+
+\usepackage{todonotes}
+
+\usepackage{csquotes}
+\usepackage{epigraph}
+\usepackage[backend=biber, style=apa]{biblatex}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+\addbibresource{bibliografia/bibliografia.bib}
+\DeclareFieldFormat[online]{citetitle}{#1}
+\DeclareFieldFormat[online]{title}{#1} 
+
+
+
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref} %referencia
+\usepackage{tabularx}
+
+
+\usepackage{pdfpages}
+
+\usepackage[acronym]{glossaries}
+\makenoidxglossaries
+\input{glosario/entradas_glosario.tex}
+
+
+
+% CODIGO
+\usepackage{listings}
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true, % Permite el salto de línea automático
+    frame=single, % Añade un marco alrededor del código
+    backgroundcolor=\color{gray!10}, % Fondo gris claro
+    keywordstyle=\color{blue}, % Palabras clave en azul
+    commentstyle=\color{green!50!black}, % Comentarios en verde
+    stringstyle=\color{red}, % Cadenas de texto en rojo
+    showstringspaces=false, % No mostrar espacios en cadenas
+    numbers=left, % Números de línea a la izquierda
+    numberstyle=\tiny\color{gray}, % Estilo de los números de línea
+    inputencoding=utf8,
+    extendedchars=true,
+    literate={á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {ó}{{\'o}}1 {ñ}{{\~n}}1 
+}
+
+
+
+% minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]
+   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+
+
+
+
+\newcommand{\myTitle}{Digitalización, estructuración y preservación lingüística de gramáticas mayas minorizadas mediante inteligencia artificial multimodal}
+\newcommand{\mySubtitle}{Automatización de la preservación de lenguas minorizadas: un enfoque basado en modelos de lenguaje y marcado XML}
+\newcommand{\myDegree}{Máster en Inteligencia Artificial}
+\newcommand{\myName}{Elías Alfonso Carrasco Guerrero}
+\newcommand{\myProf}{Juan Antonio Pérez Ortiz}
+\newcommand{\myFaculty}{Escuela Politécnica Superior de la Universidad de Alicante}
+\newcommand{\myFacultyShort}{EPS UA}
+\newcommand{\depTutorOne}{Departamento de Lenguajes y Sistemas Informáticos}
+
+
+\newcommand{\myUni}{\protect{Universidad de Alicante}}
+\newcommand{\myLocation}{Alicante}
+\newcommand{\myTime}{\today}
+\newcommand{\logoGrado}{imagenes/UA/logoim.jpg}
+\newcommand{\logoFacultad}{imagenes/UA/logoeps.jpg}
+\newcommand{\logoUniversidad}{imagenes/UA/logoua.jpg}
+
+\usepackage{url}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{\nouppercase\leftmark}
+\fancyhead[RE]{\nouppercase\rightmark}
+\fancyhead[RO,LE]{\thepage}
+
+
+% \setlength{\headheight}{1.5\headheight}
+
+
+% Para que en las páginas en blanco no ponga cabeceras
+\makeatletter
+\def\clearpage{%
+  \ifvmode
+    \ifnum \@dbltopnum =\m@ne
+      \ifdim \pagetotal <\topskip
+        \hbox{}
+      \fi
+    \fi
+  \fi
+  \newpage
+  \thispagestyle{empty}
+  \write\m@ne{}
+  \vbox{}
+  \penalty -\@Mi
+}
+\makeatother
+
+
+
+
+
+
+\AtBeginDocument{%
+  \renewcommand\tablename{Tabla}
+  \renewcommand{\listtablename}{Índice de tablas} 
+}
+
+
+\renewcommand{\lstlistingname}{Listado}
+\renewcommand{\lstlistlistingname}
+             {Índice de \lstlistingname s}
+
+\begin{document}
+% portada
+\frontmatter
+\input{portada/portada} %la portada en color
+\input{portada/portada_2} %la portada en b/n
+\input{front_matter.tex}
+\mainmatter
+%\input{chapters/cap1_introduccion}
+%\input{chapters/cap3_viabilidad}
+%\input{chapters/cap3_estado_cuestion}
+%\input{chapters/cap2_objetivos}
+%\input{chapters/cap4_metodologia}
+%\input{chapters/cap5_analisis}
+%\input{chapters/cap5_diseño}
+%\input{chapters/cap6_implementacion}
+%\input{chapters/cap7_resultados}
+%\input{chapters/cap8_conclusiones}
+%\input{back_matter}
+\end{document}

@@ -1,0 +1,19 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'tfg-gim-v2.blg'
+[122] biber-MSWIN64:342> INFO - === 
+[178] Biber.pm:421> INFO - Reading 'tfg-gim-v2.bcf'
+[283] Biber.pm:1002> INFO - Found 15 citekeys in bib section 0
+[305] Biber.pm:4487> INFO - Processing section 0
+[316] Biber.pm:4678> INFO - Looking for bibtex file 'bibliografia/bibliografia.bib' for section 0
+[559] bibtex.pm:1713> INFO - LaTeX decoding ...
+[602] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliografia/bibliografia.bib'
+[677] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[677] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[677] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[700] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[700] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[700] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[721] bbl.pm:676> INFO - Writing 'tfg-gim-v2.bbl' with encoding 'UTF-8'
+[732] bbl.pm:779> INFO - Output to tfg-gim-v2.bbl
+[732] Biber.pm:132> WARN - Duplicate entry key: 'IBM2024' in file 'bibliografia/bibliografia.bib', skipping ...
+[732] Biber.pm:134> INFO - WARNINGS: 1

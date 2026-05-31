@@ -1,0 +1,22 @@
+\chapter{Introducción}
+En la actualidad, la gestión eficiente de la información y la documentación es una necesidad crítica para muchas organizaciones. Empresas, instituciones y proyectos a gran escala dependen de bases de datos robustas para almacenar, organizar y acceder rápidamente a grandes volúmenes de documentos.
+
+Sin embargo, uno de los desafíos más comunes es asegurarse de que los documentos estén correctamente almacenados, organizados y accesibles únicamente por el personal autorizado. Por ejemplo, el equipo de tecnologías de la información no debería tener acceso a la información contenida en un contrato de crédito.
+
+A esto se suma que, en muchas empresas, la generación de documentos se delega a proveedores externos, lo que implica que el flujo de un documento pase por varias etapas. Esto aumenta el riesgo de que se produzcan pérdidas o errores en el almacenamiento. En este contexto, es crucial contar con herramientas que permitan realizar verificaciones automáticas y comprobar que los documentos se encuentran correctamente guardados.
+
+Otro aspecto relevante es la necesidad de proteger la información confidencial. Para evitar comprometer la seguridad de los datos de clientes y empresas, es indispensable que las herramientas puedan verificar el correcto almacenamiento de los documentos sin acceder a su contenido o metadatos. Esta capacidad es fundamental para mantener la integridad y confidencialidad de la información.
+
+El desarrollo de aplicaciones web con tecnologías modernas como Spring Boot, JPA y Thymeleaf ha cobrado gran relevancia debido a su capacidad para ofrecer soluciones eficientes en la gestión de bases de datos y el procesamiento de información. Estas tecnologías permiten crear aplicaciones ágiles y seguras, que pueden realizar operaciones complejas de filtrado, validación y acceso a datos en tiempo real.
+
+La aplicación web propuesta en este proyecto tiene como objetivo facilitar el filtrado y la validación de documentos almacenados. Con este fin, se desarrollará una interfaz con una tabla que muestre campos del documento como su identificador y la hora a la que se almacenó en la base de datos, asegurando así su correcto almacenamiento y la consistencia de los datos, sin poder acceder a campos del documento con información confidencial.
+
+Todo el código de la aplicación SIDManager está disponible en la plataforma GitHub de manera pública en el enlace a pie de página \footnote{\url{https://github.com/eliascarrasco1227/SIDManager}}. La aplicación sigue las indicaciones de la estrategia de software de código abierto (open source) de la Comisión Europea, como se puede ver en el enlace en el pie de página \footnote{\url{https://commission.europa.eu/about/departments-and-executive-agencies/digital-services/open-source-software-strategy_en\#opensourcesoftwarestrategy}}.
+
+El nombre de esta aplicación, SIDManager, proviene de dos componentes.
+El primero, \acrshort{sid}, corresponde con las siglas de \acrlong{sid}, un conjunto de scripts y aplicaciones web que se encargan de la gestión, impresión, envío y modificación de documentos.
+El segundo componente, Manager, proviene del inglés y significa administrador, ya que es la web encargada de la administración de los documentos; es decir, sirve para verificar la situación de los documentos y ver si se han almacenado correctamente en la base de datos.
+
+Finalmente, esta herramienta está diseñada para simplificar el acceso y la gestión de datos en entornos empresariales, priorizando la seguridad, el rendimiento y la escalabilidad. Al mismo tiempo, desacopla la lógica de negocio de la aplicación, ya que no necesita acceder al contenido de los documentos. 
+
+Con la implementación de Spring Security, se garantiza un acceso seguro, mientras que log4j permite un seguimiento detallado de las operaciones y posibles incidencias. De este modo, el proyecto ofrece una solución accesible y eficiente para cualquier empresa o individuo que necesite verificar y gestionar documentos, sin recurrir a equipos especializados o productos de software externos.

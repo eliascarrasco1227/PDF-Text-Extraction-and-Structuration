@@ -1,0 +1,42 @@
+
+\chapter{Conclusiones y trabajos futuros}
+
+Este capítulo sirve como cierre del proyecto y está dividido en dos secciones principales. En la Sección \ref{sec:conclusiones} se presenta un análisis que compara los objetivos alcanzados y aquellos que pueden mejorarse. En la Sección \ref{futuro} se proponen posibles mejoras y líneas de trabajo futuro, tanto en términos de investigación como de desarrollo adicional de la aplicación, además de una reflexión personal sobre el proceso de desarrollo.
+
+\section{Conclusiones}
+\label{sec:conclusiones}
+
+Se ha cumplido con el objetivo principal de este TFG, desarrollando una aplicación funcional que resuelve de manera efectiva los problemas identificados en la gestión documental. A través de un proceso riguroso de análisis, diseño e implementación, se han alcanzado todos los objetivos planteados inicialmente con precisión, obteniendo así las siguientes conclusiones:
+
+\begin{itemize}
+    \item Planificación y organización: Hacer las cosas bien desde el principio ahorra tiempo y esfuerzo a largo plazo. Por ejemplo, la implementación de logs propios y el uso de archivos externos para mensajes de la aplicación han demostrado ser decisiones acertadas que facilitaron el mantenimiento y la depuración del código.
+    
+    \item Subestimación de tecnologías: Durante el desarrollo, se observó que algunas tecnologías o tareas aparentemente simples pueden resultar más complejas de lo esperado. Esto subraya la importancia de investigar y planificar adecuadamente antes de implementar soluciones.
+    
+    \item Documentación y buenas prácticas: Nombrar variables y clases de manera significativa y seguir estándares de codificación ha sido fundamental para mantener un código legible y fácil de mantener, especialmente en un proyecto con más de 60 archivos editados.
+    
+    \item Importancia de la modularidad: Separar los mensajes de la aplicación en archivos externos desde el principio ha demostrado ser una práctica muy útil, ya que evita la necesidad de modificar el código fuente cada vez que se requiere un cambio en los textos.
+
+    \item Uso de tecnologías modernas: La elección de tecnologías como  Thymeleaf, en lugar de REST para el backend ha permitido aprovechar al máximo el potencial de SpringBoot. Sin embargo no ha permitido desacoplar el frontend del backend en su totalidad, lo que podría probocar problemas en  la escalabilidad y la integración con frameworks modernos como React o Angular.
+\end{itemize}
+
+En resumen, este proyecto ha sido una oportunidad para aplicar conocimientos previos, aprender nuevas herramientas y adoptar buenas prácticas de desarrollo. Aunque se han alcanzado los objetivos principales, siempre hay margen para mejorar y optimizar el trabajo realizado.
+
+\section{Líneas de trabajo futuras}
+\label{futuro}
+
+A lo largo del desarrollo del proyecto, surgieron varias ideas y mejoras que, debido a limitaciones de tiempo y alcance, no pudieron implementarse. A continuación, se proponen algunas líneas de trabajo futuro para continuar mejorando la aplicación:
+
+\begin{itemize}
+    \item Implementación de un framework moderno para el frontend: Utilizar tecnologías como Vite, Next.js o un framework similar para el desarrollo del frontend, aprovechando el controlador REST ya implementado. Esto mejoraría la experiencia del usuario y facilitaría la creación de interfaces más dinámicas y responsivas.
+    
+    \item Paginación en la carga de documentos: Implementar un sistema de paginación para la carga de documentos, lo que mejoraría el rendimiento de la aplicación al manejar grandes volúmenes de datos.
+    
+    \item Buscador avanzado: Implementar un sistema de búsqueda avanzada que permita a los usuarios introducir identificadores específicos (como client\_app\_id o client\_doc\_id) para filtrar y localizar documentos de manera rápida y precisa. Esta funcionalidad mejoraría la usabilidad de la aplicación al permitir búsquedas más eficientes y reducir el tiempo necesario para encontrar información específica.
+    
+    \item Sistema de descarga de datos: Implementar un sistema integrado en la aplicación para facilitar la descarga de conjuntos de datos de la tabla con los documentos filtrados.
+\end{itemize}
+
+Estas propuestas representan oportunidades para seguir avanzando en el desarrollo de la aplicación y explorar nuevas áreas de investigación. La implementación de estas mejoras no solo mejoraría la funcionalidad y usabilidad de la aplicación, sino que también abriría nuevas posibilidades para su uso en entornos académicos y profesionales.
+
+

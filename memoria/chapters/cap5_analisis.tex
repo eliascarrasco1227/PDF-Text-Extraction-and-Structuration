@@ -1,0 +1,137 @@
+
+
+\chapter{Análisis de Requerimientos según IEEE 830}
+
+\section{Introducción}
+Este capítulo presenta el análisis detallado de los requerimientos funcionales y no funcionales del sistema SIDManager, siguiendo las directrices de la norma IEEE 830 para la especificación de requisitos de software. El documento establece las capacidades que el sistema debe proveer, las restricciones bajo las cuales debe operar y los atributos de calidad que debe cumplir.
+
+\section{Requerimientos Funcionales}
+
+\subsection{Gestión de Documentos}
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{1.25cm}|>{\raggedright\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{5.5cm}|>{\raggedright\arraybackslash}p{1.75cm}|>{\raggedright\arraybackslash}p{2.5cm}|}
+\hline
+\textbf{ID} & \textbf{Requerimiento} & \textbf{Descripción} & \textbf{Prioridad} & \textbf{Actores} \\
+\hline
+RF-01 & Visualización de documentos & El sistema debe mostrar una tabla con los campos: client\_app\_id, client\_doc\_id, provider\_id, sent\_at y received\_at & Alta & Usuario autenticado \\
+\hline
+RF-02 & Filtrado por fecha & El sistema debe permitir filtrar documentos por rango de fechas (sent\_at y received\_at) & Alta & Usuario autenticado \\
+\hline
+RF-03 & Documentos no recibidos & El sistema debe proporcionar una vista especial para documentos con received\_at = null & Media & Usuario autenticado \\
+\hline
+RF-04 & Paginación & El sistema debe implementar pseudopaginación limitando el rango de fechas mostrado & Media & Sistema \\
+\hline
+\end{longtable}
+
+
+\subsection{Gestión de Usuarios}
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{1.25cm}|>{\raggedright\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{5.5cm}|>{\raggedright\arraybackslash}p{1.75cm}|>{\raggedright\arraybackslash}p{2.5cm}|}
+\hline
+\textbf{ID} & \textbf{Requerimiento} & \textbf{Descripción} & \textbf{Prioridad} & \textbf{Actores} \\
+\hline
+RF-05 & Registro de usuarios & El sistema debe permitir el registro mediante email y contraseña & Alta & Usuario no autenticado \\
+\hline
+RF-06 & Confirmación por email & El sistema debe enviar un email con código de confirmación al registrar un usuario & Alta & Sistema, Usuario \\
+\hline
+RF-07 & Inicio de sesión & El sistema debe autenticar usuarios con email y contraseña & Alta & Usuario no autenticado \\
+\hline
+RF-08 & Recuperación de contraseña & El sistema debe permitir restablecer la contraseña mediante email & Media & Usuario no autenticado \\
+\hline
+RF-09 & Gestión de sesiones & El sistema debe mantener sesiones seguras mediante Spring Security & Alta & Sistema \\
+\hline
+\end{longtable}
+
+
+\subsection{Seguridad}
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{1.25cm}|>{\raggedright\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{5.5cm}|>{\raggedright\arraybackslash}p{1.75cm}|>{\raggedright\arraybackslash}p{2.5cm}|}
+\hline
+\textbf{ID} & \textbf{Requerimiento} & \textbf{Descripción} & \textbf{Prioridad} & \textbf{Actores} \\
+\hline
+RF-10 & Cifrado de contraseñas & El sistema debe almacenar contraseñas usando BCrypt & Alta & Sistema \\
+\hline
+RF-11 & Protección CSRF & El sistema debe implementar tokens CSRF en formularios & Alta & Sistema \\
+\hline
+RF-12 & Control de accesos & El sistema debe restringir el acceso a recursos según autenticación & Alta & Sistema, Usuario \\
+\hline
+\end{longtable}
+
+
+\section{Requerimientos No Funcionales}
+
+\subsection{Rendimiento}
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{2cm}|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{8cm}|}
+\hline
+\textbf{ID} & \textbf{Requerimiento} & \textbf{Descripción} \\
+\hline
+RNF-01 & Tiempo de respuesta & La carga inicial de documentos debe completarse en < 3s para 80,000 registros \\
+\hline
+RNF-02 & Disponibilidad & El sistema debe mantener 99\% de disponibilidad en horario laboral \\
+\hline
+\end{longtable}
+
+\subsection{Seguridad}
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{2cm}|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{8cm}|}
+\hline
+\textbf{ID} & \textbf{Requerimiento} & \textbf{Descripción} \\
+\hline
+RNF-03 & Encriptación & Las credenciales de BD deben almacenarse cifradas (AES-128) \\
+\hline
+RNF-04 & Auditoría & Todas las operaciones críticas deben registrarse en los logs \\
+\hline
+\end{longtable}
+
+\subsection{Usabilidad}
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{2cm}|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{8cm}|}
+\hline
+\textbf{ID} & \textbf{Requerimiento} & \textbf{Descripción} \\
+\hline
+RNF-05 & Interfaz intuitiva & La interfaz debe ser usable sin capacitación previa \\
+\hline
+RNF-06 & Mensajes claros & Los mensajes de error deben ser descriptivos y útiles \\
+\hline
+\end{longtable}
+
+\subsection{Mantenibilidad}
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{2cm}|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{8cm}|}
+\hline
+\textbf{ID} & \textbf{Requerimiento} & \textbf{Descripción} \\
+\hline
+RNF-07 & Documentación & El código debe incluir Javadoc para todas las clases públicas \\
+\hline
+RNF-08 & Logging & El sistema debe implementar logs estructurados con log4j \\
+\hline
+\end{longtable}
+
+\section{Restricciones}
+\begin{itemize}
+\item La aplicación debe desarrollarse con Spring Boot 2.7.18
+\item La base de datos relacional debe ser MySQL 8.0+
+\item El frontend debe implementarse con Thymeleaf
+\item El código debe ser compatible con Java JDK 1.8
+\item La aplicación debe seguir el estándar Open Source de la UE
+\end{itemize}
+
+\section{Diagrama de Contexto}
+El sistema interactúa con:
+\begin{itemize}
+\item Usuarios finales (gestores documentales)
+\item Sistema de correo electrónico (SMTP)
+\item Base de datos MySQL
+\item Proveedores externos de documentos (vía API)
+\end{itemize}
+
+\section{Trazabilidad}
+Los requerimientos se relacionan con los objetivos del proyecto presentados en el capítulo \ref{objetivos}:
+\begin{itemize}
+\item RF-01 a RF-04 $\rightarrow$ Objetivo 1 (Interfaz usable)
+\item RF-05 a RF-09 $\rightarrow$ Objetivo 3 (Seguridad avanzada)
+\item RNF-01 a RNF-04 $\rightarrow$ Objetivo 4 (Rendimiento optimizado)
+\item RNF-07 a RNF-08 $\rightarrow$ Objetivo 5 (Código documentado)
+\end{itemize}
+

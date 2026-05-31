@@ -1,0 +1,171 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\nonumberline Resumen}{\es@scroman {v}}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Estado de la cuestión}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Impacto y costes ante la pérdida de documentos}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Otras iniciativas}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Estudio de tecnologías web}{4}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Diferencia entre script y web application}{4}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}HTTP Methods}{4}{subsection.2.3.2}%
+\contentsline {subsubsection}{\nonumberline GET}{4}{subsubsection*.15}%
+\contentsline {subsubsection}{\nonumberline POST}{4}{subsubsection*.16}%
+\contentsline {subsection}{\numberline {2.3.3}API}{5}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}REST}{5}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Estudio de herramientas para el desarrollo}{5}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Angular}{5}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}React}{6}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Spring}{7}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Spring Boot}{8}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}JPA}{9}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.6}Maven}{9}{subsection.2.4.6}%
+\contentsline {subsection}{\numberline {2.4.7}Thymeleaf}{9}{subsection.2.4.7}%
+\contentsline {section}{\numberline {2.5}Ciberseguridad}{10}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Cifrado}{10}{subsection.2.5.1}%
+\contentsline {subsubsection}{\nonumberline Cifrado Simétrico}{10}{subsubsection*.19}%
+\contentsline {subsubsection}{\nonumberline Cifrado Asimétrico}{10}{subsubsection*.20}%
+\contentsline {subsubsection}{\nonumberline Cifrado de Contraseñas}{11}{subsubsection*.21}%
+\contentsline {subsection}{\numberline {2.5.2}Capas de Seguridad en el Login}{11}{subsection.2.5.2}%
+\contentsline {subsubsection}{\nonumberline Protección contra Ataques de Fuerza Bruta}{11}{subsubsection*.22}%
+\contentsline {subsubsection}{\nonumberline Protección contra Ataques CSRF (Cross-Site Request Forgery)}{12}{subsubsection*.23}%
+\contentsline {subsubsection}{\nonumberline Registro y Monitoreo de Actividad}{12}{subsubsection*.24}%
+\contentsline {section}{\numberline {2.6}Diseño software}{12}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Patrones de diseño software}{12}{subsection.2.6.1}%
+\contentsline {subsubsection}{\nonumberline Patrón Fachada (Facade)}{12}{subsubsection*.26}%
+\contentsline {subsubsection}{\nonumberline Patrón Singleton}{13}{subsubsection*.27}%
+\contentsline {subsubsection}{\nonumberline Otros patrones comunes}{13}{subsubsection*.28}%
+\contentsline {subsection}{\numberline {2.6.2}Diagramas UML}{13}{subsection.2.6.2}%
+\contentsline {subsubsection}{\nonumberline Diagrama de secuencia UML}{13}{subsubsection*.30}%
+\contentsline {subsubsection}{\nonumberline Otros diagramas UML}{14}{subsubsection*.31}%
+\contentsline {chapter}{\numberline {3}Metodología}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Gestión del trabajo}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Metodología de proyecto}{15}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Spring boot}{15}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Maven}{16}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Thymeleaf}{19}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}JPA}{19}{subsection.3.2.4}%
+\contentsline {chapter}{\numberline {4}Objetivos}{21}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Diseño}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Arquitectura seleccionada}{23}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Descripción de la arquitectura}{23}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Herramientas utilizadas}{24}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Esquema de la arquitectura}{24}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Resumen de la arquitectura}{24}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Diagrama UML de secuencia}{24}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Arquitectura de la base de datos}{26}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Arquitectura de los documentos}{26}{subsection.5.3.1}%
+\contentsline {subsubsection}{\nonumberline Ejemplo de arquitectura de los documentos}{26}{subsubsection*.33}%
+\contentsline {subsection}{\numberline {5.3.2}Arquitectura de los usuarios}{27}{subsection.5.3.2}%
+\contentsline {subsubsection}{\nonumberline Ejemplo de arquitectura de los usuarios}{28}{subsubsection*.34}%
+\contentsline {chapter}{\numberline {6}Implementación}{31}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Entorno de desarrollo}{31}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Entorno de desarrollo integrado (IDE)}{31}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Framework y herramientas principales}{31}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Gestión de dependencias con Maven}{32}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}Dependencias principales}{32}{subsection.6.1.4}%
+\contentsline {section}{\numberline {6.2}API de gestión de documentos}{33}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Función getAllDocuments}{33}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Función getNotReceivedDocuments}{33}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Función listDocuments}{34}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}API de gestión de usuarios}{36}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Proceso de registro (signup)}{36}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Inicio de sesión (login)}{40}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Cambio de contraseña (update password)}{41}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Acceso a la base de datos}{44}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Generación automática de consultas SQL con JPA}{44}{subsection.6.4.1}%
+\contentsline {subsubsection}{\nonumberline Ejemplo avanzado de sintaxis JPA}{46}{subsubsection*.35}%
+\contentsline {section}{\numberline {6.5}Login}{47}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Integración con Spring Boot Security}{47}{subsection.6.5.1}%
+\contentsline {subsubsection}{\nonumberline Pasos para la migración a Spring Boot Security}{48}{subsubsection*.36}%
+\contentsline {subsubsection}{\nonumberline Conclusión de Spring Boot Security}{50}{subsubsection*.37}%
+\contentsline {subsection}{\numberline {6.5.2}Cifrado y seguridad (AES Encoder, EscriptorFacade y passwordEncoder)}{50}{subsection.6.5.2}%
+\contentsline {subsubsection}{\nonumberline PasswordEncoder}{50}{subsubsection*.38}%
+\contentsline {subsubsection}{\nonumberline Clase Encryptor}{51}{subsubsection*.39}%
+\contentsline {paragraph}{\nonumberline Algoritmo AES/ECB/PKCS5Padding}{52}{paragraph*.40}%
+\contentsline {paragraph}{\nonumberline Método encryptMessage}{52}{paragraph*.41}%
+\contentsline {paragraph}{\nonumberline Método decryptMessage}{52}{paragraph*.42}%
+\contentsline {paragraph}{\nonumberline Uso en DataSourceConfig}{53}{paragraph*.43}%
+\contentsline {paragraph}{\nonumberline Archivo application.properties}{53}{paragraph*.44}%
+\contentsline {paragraph}{\nonumberline Archivo encrypt.key}{53}{paragraph*.45}%
+\contentsline {paragraph}{\nonumberline Conclusión Encryptor}{53}{paragraph*.46}%
+\contentsline {subsubsection}{\nonumberline Generación de códigos aleatorios}{54}{subsubsection*.47}%
+\contentsline {paragraph}{\nonumberline Elección del tamaño del código (30 caracteres)}{54}{paragraph*.48}%
+\contentsline {paragraph}{\nonumberline Ventajas de RandomStringUtils.randomAlphanumeric}{54}{paragraph*.49}%
+\contentsline {paragraph}{\nonumberline Uso en la aplicación}{55}{paragraph*.50}%
+\contentsline {paragraph}{\nonumberline Explicación del código}{55}{paragraph*.51}%
+\contentsline {paragraph}{\nonumberline Conclusión de randomAlphanumeric}{55}{paragraph*.52}%
+\contentsline {section}{\numberline {6.6}Thymeleaf}{55}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Uso del Model en Thymeleaf}{55}{subsection.6.6.1}%
+\contentsline {subsubsection}{\nonumberline El objeto model en el controlador}{55}{subsubsection*.53}%
+\contentsline {subsubsection}{\nonumberline Visualización de los datos en el frontend}{56}{subsubsection*.54}%
+\contentsline {subsubsection}{\nonumberline Explicación del código Thymeleaf}{56}{subsubsection*.55}%
+\contentsline {subsubsection}{\nonumberline Resultado en el frontend}{56}{subsubsection*.56}%
+\contentsline {subsection}{\numberline {6.6.2}Tabla de Bootstrap 5}{57}{subsection.6.6.2}%
+\contentsline {subsubsection}{\nonumberline Implementación de la tabla}{57}{subsubsection*.57}%
+\contentsline {subsubsection}{\nonumberline Ventajas de usar Bootstrap 5 y DataTables}{57}{subsubsection*.58}%
+\contentsline {subsubsection}{\nonumberline Recursos utilizados}{58}{subsubsection*.59}%
+\contentsline {subsubsection}{\nonumberline Conclusión de Tabla de Bootstrap 5}{58}{subsubsection*.60}%
+\contentsline {subsection}{\numberline {6.6.3}Mensajes de alerta}{58}{subsection.6.6.3}%
+\contentsline {subsubsection}{\nonumberline Código de Thymeleaf para mensajes de alerta}{58}{subsubsection*.61}%
+\contentsline {subsubsection}{\nonumberline Explicación del código}{58}{subsubsection*.62}%
+\contentsline {subsubsection}{\nonumberline Integración con el controlador}{59}{subsubsection*.63}%
+\contentsline {subsubsection}{\nonumberline Conclusión de mensajes de alerta}{59}{subsubsection*.64}%
+\contentsline {section}{\numberline {6.7}Clases propias}{59}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Mail}{59}{subsection.6.7.1}%
+\contentsline {subsubsection}{\nonumberline Funcionalidades principales}{60}{subsubsection*.65}%
+\contentsline {subsubsection}{\nonumberline Flujo de trabajo}{60}{subsubsection*.66}%
+\contentsline {subsubsection}{\nonumberline Integración con la aplicación}{60}{subsubsection*.67}%
+\contentsline {subsubsection}{\nonumberline Ventajas de la implementación}{60}{subsubsection*.68}%
+\contentsline {subsubsection}{\nonumberline Conclusión de Mail}{61}{subsubsection*.69}%
+\contentsline {subsection}{\numberline {6.7.2}SharedProperties y archivo application.properties}{61}{subsection.6.7.2}%
+\contentsline {subsubsection}{\nonumberline Patrón Singleton y Carga de Propiedades}{61}{subsubsection*.70}%
+\contentsline {subsubsection}{\nonumberline Acceso Seguro y Manejo de Valores}{61}{subsubsection*.71}%
+\contentsline {subsubsection}{\nonumberline Manejo de Errores y Robustez}{61}{subsubsection*.72}%
+\contentsline {subsubsection}{\nonumberline Funcionalidad Adicional}{62}{subsubsection*.73}%
+\contentsline {subsubsection}{\nonumberline El archivo application.properties}{62}{subsubsection*.74}%
+\contentsline {subsection}{\numberline {6.7.3}Clase para controlar rutas}{62}{subsection.6.7.3}%
+\contentsline {subsubsection}{\nonumberline Obtención Dinámica de Rutas: PathManager}{62}{subsubsection*.75}%
+\contentsline {subsubsection}{\nonumberline Métodos Principales de PathManager}{63}{subsubsection*.76}%
+\contentsline {subsubsection}{\nonumberline Importancia en la Configuración Dinámica}{63}{subsubsection*.77}%
+\contentsline {subsection}{\numberline {6.7.4}Agrupaci\'on de las funciones de fecha en DateUtils}{63}{subsection.6.7.4}%
+\contentsline {subsection}{\numberline {6.7.5}Manejador fechas, DateRange}{63}{subsection.6.7.5}%
+\contentsline {section}{\numberline {6.8}Funcionalidades extra}{64}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Controller REST: Hacia una Arquitectura Moderna y Desacoplada}{64}{subsection.6.8.1}%
+\contentsline {subsubsection}{\nonumberline Ventajas de Usar un Controller REST}{64}{subsubsection*.78}%
+\contentsline {subsubsection}{\nonumberline Implementación del Controller REST}{65}{subsubsection*.79}%
+\contentsline {subsubsection}{\nonumberline Conclusión}{65}{subsubsection*.80}%
+\contentsline {subsection}{\numberline {6.8.2}Manejo de Mensajes de Error y Alertas}{65}{subsection.6.8.2}%
+\contentsline {subsubsection}{\nonumberline Implementación de Mensajes Externos}{65}{subsubsection*.81}%
+\contentsline {subsubsection}{\nonumberline Uso de Enumeraciones para Gestión de Mensajes}{65}{subsubsection*.82}%
+\contentsline {subsubsection}{\nonumberline Visualización de Mensajes en la Interfaz}{66}{subsubsection*.83}%
+\contentsline {subsubsection}{\nonumberline Ventajas del Sistema Implementado}{66}{subsubsection*.84}%
+\contentsline {subsection}{\numberline {6.8.3}Internacionalización}{66}{subsection.6.8.3}%
+\contentsline {subsubsection}{\nonumberline Detectando el Idioma del Usuario}{66}{subsubsection*.85}%
+\contentsline {subsubsection}{\nonumberline Configuración de la Internacionalización}{66}{subsubsection*.86}%
+\contentsline {subsubsection}{\nonumberline Implementación en Spring Boot}{67}{subsubsection*.87}%
+\contentsline {subsubsection}{\nonumberline Uso en la Aplicación}{67}{subsubsection*.88}%
+\contentsline {subsubsection}{\nonumberline Ventajas de la Internacionalización}{67}{subsubsection*.89}%
+\contentsline {subsection}{\numberline {6.8.4}Registros (Logs) Propios y de la Aplicación}{67}{subsection.6.8.4}%
+\contentsline {subsubsection}{\nonumberline Almacenamiento de Registros}{68}{subsubsection*.90}%
+\contentsline {subsubsection}{\nonumberline Implementación de Registros Manuales}{68}{subsubsection*.91}%
+\contentsline {subsubsection}{\nonumberline Ventajas del Uso de Registros}{68}{subsubsection*.92}%
+\contentsline {subsubsection}{\nonumberline Ejemplo de Registros}{68}{subsubsection*.93}%
+\contentsline {subsection}{\numberline {6.8.5}Documentación Estándar con Javadoc}{69}{subsection.6.8.5}%
+\contentsline {subsubsection}{\nonumberline Ventajas de la Documentación con Javadoc}{69}{subsubsection*.94}%
+\contentsline {subsubsection}{\nonumberline Ejemplo de Documentación}{69}{subsubsection*.95}%
+\contentsline {subsubsection}{\nonumberline Conclusión de documentación}{70}{subsubsection*.96}%
+\contentsline {chapter}{\numberline {7}Pruebas y validación}{71}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Estrategia de pruebas}{71}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Validación de requisitos}{71}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Resultados de las pruebas}{72}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Resultados}{73}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Resultados técnicos}{73}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Resultados funcionales}{73}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Conclusiones}{75}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Conclusiones}{75}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Líneas de trabajo futuras}{76}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Reflexión personal}{76}{subsection.9.2.1}%
+\def \@chapapp {\appendixname }
+\contentsline {chapter}{\numberline {A}Anexo I. Esquema de base de datos}{81}{chapter.A}%
+\contentsline {chapter}{\numberline {B}Anexo II. Otros...}{83}{chapter.B}%
+\contentsline {chapter}{Glosario}{83}{chapter.B}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
