@@ -455,6 +455,11 @@ INPUT front_matter.tex
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
+INPUT ./imagenes/ALMG/web_ALMG.png
+INPUT ./imagenes/ALMG/web_ALMG.png
+INPUT ./imagenes/ALMG/web_ALMG.png
+INPUT ./imagenes/ALMG/web_ALMG.png
+INPUT ./imagenes/ALMG/web_ALMG.png
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT ./main.toc
@@ -474,6 +479,15 @@ INPUT ./main.lol
 INPUT ./main.lol
 INPUT main.lol
 OUTPUT main.lol
+INPUT ./chapters/cap1_introduccion.tex
+INPUT ./chapters/cap1_introduccion.tex
+INPUT ./chapters/cap1_introduccion.tex
+INPUT ./chapters/cap1_introduccion.tex
+INPUT chapters/cap1_introduccion.tex
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
 INPUT main.aux
 INPUT main.run.xml
 OUTPUT main.run.xml
@@ -481,6 +495,8 @@ INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb

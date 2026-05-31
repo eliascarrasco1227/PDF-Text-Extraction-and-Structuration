@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.31)  31 MAY 2026 20:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.31)  31 MAY 2026 20:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1098,6 +1098,7 @@ LaTeX Info: Redefining \. on input line 17.
 LaTeX Info: Redefining \% on input line 17.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 17.
+\g__glossaries_gls_ref_acronym_int=\count529
 )
 \openout1 = `main.aux'.
 
@@ -1123,16 +1124,16 @@ LaTeX Info: Redefining \. on input line 126.
 LaTeX Info: Redefining \% on input line 126.
  (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count529
+\scratchcounter=\count530
 \scratchdimen=\dimen315
 \scratchbox=\box81
-\nofMPsegments=\count530
-\nofMParguments=\count531
+\nofMPsegments=\count531
+\nofMParguments=\count532
 \everyMPshowfont=\toks58
-\MPscratchCnt=\count532
+\MPscratchCnt=\count533
 \MPscratchDim=\dimen316
-\MPnumerator=\count533
-\makeMPintoPDFobject=\count534
+\MPnumerator=\count534
+\makeMPintoPDFobject=\count535
 \everyMPtoPDFconversion=\toks59
 ) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1174,7 +1175,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-\c@lstlisting=\count535
+\c@lstlisting=\count536
 Package tocbasic Info: setting babel extension for `lol' on input line 126.
 \scr@dte@lstlisting@maxnumwidth=\skip128
  (./portada/portada.tex
@@ -1244,10 +1245,15 @@ chapter without number
 [5] [6
 
 
-] [7] [8
+]
+<imagenes/ALMG/web_ALMG.png, id=68, 970.3753pt x 925.95938pt>
+File: imagenes/ALMG/web_ALMG.png Graphic file (type png)
+<use imagenes/ALMG/web_ALMG.png>
+Package pdftex.def Info: imagenes/ALMG/web_ALMG.png  used on input line 21.
+(pdftex.def)             Requested size: 397.34149pt x 379.16542pt.
+ [7] [8 <./imagenes/ALMG/web_ALMG.png>] [9
 
 
-] [9
 
 
 ] [10
@@ -1273,6 +1279,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/sc' undefined
 Package spanish Warning: Replacing `OT1/cmss/bx/sc' by 
 (spanish)                faked small caps on input line 2.
 
+Package tocbasic Info: Using my definition of `\numberline' on input line 3.
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1287,6 +1294,12 @@ Package spanish Warning: Replacing `OT1/cmss/bx/sc' by
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
+Package tocbasic Info: Using my definition of `\numberline' on input line 3.
+
+Overfull \hbox (0.158pt too wide) detected at line 3
+ [][]
+ []
+
 )
 \tf@lof=\write6
 \openout6 = `main.lof'.
@@ -1316,13 +1329,23 @@ LaTeX Info: Redefining \% on input line 1.
 ) [19] [20
 
 
-]
+] (./chapters/cap1_introduccion.tex
+chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+  [][][][]$\OT1/cmr/m/n/9 https : / / commission . europa . eu / about / departments-[]and-[]executive-[]agencies / digital-[]services /
+ []
+
+[1
+
+
+])
 
 Package glossaries Warning: No \printnoidxglossary or \printnoidxglossaries
  found. (Remove \makenoidxglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-(./main.aux
+[2] (./main.aux
 LaTeX Info: Redefining \sptext on input line 17.
 LaTeX Info: Redefining \. on input line 17.
 LaTeX Info: Redefining \% on input line 17.
@@ -1340,18 +1363,21 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44541 strings out of 467337
- 888688 string characters out of 5419514
- 1977886 words of memory out of 5000000
- 73040 multiletter control sequences out of 15000+600000
- 636041 words of font info for 67 fonts, out of 8000000 for 9000
+ 44611 strings out of 467337
+ 890285 string characters out of 5419514
+ 1978991 words of memory out of 5000000
+ 73095 multiletter control sequences out of 15000+600000
+ 637178 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,17n,121p,11288b,2907s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (20 pages, 421011 bytes).
+
+pdfTeX warning (dest): name{glo:sid} has been referenced but does not exist, replaced by a fixed one
+
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (22 pages, 597888 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 217 PDF objects out of 1000 (max. 8388607)
+ 157 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 64 words of extra memory for PDF output out of 10000 (max. 10000000)
 
