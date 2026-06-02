@@ -1,8 +1,13 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\nonumberline Resumen}{\es@scroman {v}}{chapter*.1}%
-\contentsline {chapter}{\numberline {1}Introducción y definición del problema}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Definición del problema}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Alcance y limitaciones}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Restricciones de propiedad intelectual y publicación de datos}{3}{subsection.1.2.1}%
+\contentsline {subsubsection}{\nonumberline Acotación de la carga de trabajo}{3}{subsubsection*.9}%
+\contentsline {subsubsection}{\nonumberline Limitaciones técnicas de la API de Gemini}{4}{subsubsection*.10}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\numberline {A}Anexo I. Esquema de base de datos}{5}{chapter.A}%
-\contentsline {chapter}{\numberline {B}Anexo II. Código de la aplicación SIDManager}{7}{chapter.B}%
-\contentsline {chapter}{Lista de acrónimos}{32}{lstnumber.B.35.22}%
+\contentsline {chapter}{\numberline {A}Anexo I. Esquema de base de datos}{9}{chapter.A}%
+\contentsline {chapter}{\numberline {B}Anexo II. Código de la aplicación SIDManager}{11}{chapter.B}%
+\contentsline {chapter}{Lista de acrónimos}{36}{lstnumber.B.35.22}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

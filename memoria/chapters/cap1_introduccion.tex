@@ -1,4 +1,6 @@
-\chapter{Introducción y definición del problema}
+\chapter{Introducción}
+
+\section{Definición del problema}
 
 La digitalización de obras lingüísticas complejas se enfrenta a un obstáculo fundamental: la dicotomía entre la representación visual y la estructura lógica. El problema central se desglosa en los siguientes puntos críticos:
 
@@ -47,3 +49,74 @@ La digitalización de obras lingüísticas complejas se enfrenta a un obstáculo
     Parte de este problema se debe a la creatividad de los LLMs que puede generar alucinaciones incluso empleando la metodología esquema de respuesta (response schema).
 
 \end{enumerate}
+
+
+
+\section{Alcance y limitaciones}
+
+El desarrollo de este Trabajo de Fin de Máster está condicionado por factores de carácter ético, legal y técnico que delimitan el marco de actuación. A continuación, se detallan las restricciones que han definido el alcance final de la investigación.
+
+\subsection{ Restricciones de propiedad intelectual y publicación de datos}
+
+El corpus bibliográfico utilizado en este proyecto, consistente en gramáticas normativas de lenguas mayas, es propiedad intelectual de la Academia de Lenguas Mayas de Guatemala (ALMG). Como resultado de esta titularidad, se han establecido las siguientes limitaciones en cuanto a la difusión de datos:
+
+\begin{itemize}
+    \item Prohibición de redistribución: No se permite la subida de los archivos PDF originales a repositorios públicos como GitHub. El acceso a las fuentes debe realizarse exclusivamente a través del portal institucional de la ALMG.
+    \item Publicación de resultados parciales: El alcance de la publicación de resultados se limita a la estructura XML generada y a los fragmentos utilizados en el conjunto de pruebas (test set), preservando la integridad de la obra original.
+    \item Lógica de replicabilidad: Para solventar esta limitación, el proyecto se enfoca en la liberación del código fuente (scripts de procesamiento), permitiendo que otros investigadores con acceso legítimo a los documentos puedan ejecutar el pipeline de digitalización de forma independiente.
+\end{itemize}
+
+Cabe destacar que el 70\% de los documentos mayas publicados en 2025 ya no están disponibles porque se han eliminado del catálogo de la web de la ALMG sin previo aviso. Esto provocó una gran dificultad en el trabajo ya que se tuvo que proseguir con los pocos documentos que se habían guardado en local antes de la actualización del catálogo.
+
+\subsubsection{Acotación de la carga de trabajo}
+De acuerdo con las directrices marcadas por la tutoría académica y con el fin de ajustar el proyecto a una carga de trabajo estrictamente acotada de 250 horas, se ha definido un alcance modular y selectivo:
+\begin{itemize}
+    \item Selección de test set: En lugar de proceder a la digitalización de los libros completos, lo cual excedería el tiempo asignado en el cronograma, se ha optado por un análisis empírico profundo sobre una muestra representativa. Se han seleccionado un rango de 2 a 3 páginas de alta complejidad por cada idioma (Kaqchikel, K’iche, Mam y Qanjobal) para conformar el conjunto de validación final (Ground Truth).
+    \item Priorización técnica: Se ha priorizado el perfeccionamiento de los módulos de validación estructural (xml\_corrector.py) y la traducción automatizada a LaTeX sobre el procesamiento masivo de volumen, garantizando la robustez de la arquitectura antes de su escalabilidad futura.
+\end{itemize}
+
+\subsubsection{Limitaciones técnicas de la API de Gemini}
+La dependencia de servicios de inteligencia artificial en la nube ha supuesto uno de los mayores desafíos logísticos del proyecto, debido a cambios imprevistos en las políticas de uso de Google Cloud y AI Studio, así como a la obsolescencia programada de sus arquitecturas:
+\begin{itemize}
+    \item Restricción drástica de cuotas de uso: Durante el transcurso del desarrollo, el sistema sufrió una reducción crítica en los límites de peticiones permitidas. Se pasó de un margen operativo de 1.500 usos diarios (Requests Per Day - RPD) a un límite restrictivo de apenas 20 peticiones al día para los modelos en el nivel gratuito tal y como se ve en la tabla \ref{tab:modelos_rpd}.
+    Esta limitación del 98.6\% en la capacidad de cómputo obligó a reestructurar el flujo de trabajo, priorizando ejecuciones de prueba extremadamente precisas y limitando la posibilidad de realizar procesamientos masivos de páginas en una sola jornada.
+    
+    \begin{table}[h]
+    \centering
+    \caption{Comparativa de disponibilidad de modelos 2025-2026}
+    \label{tab:modelos_rpd}
+    \begin{tabular}{|l|c|c|}
+    \hline
+    \textbf{Modelos} & \textbf{Disponibilidad 2025 RPD} & \textbf{Disponibilidad 2026 RPD} \\
+    \hline
+    gemini 1.5 flash & 500 & Deprecated \\
+    gemini 1.5 flash-lite & 1500 & Deprecated \\
+    gemini 2.0 flash & 200 & Deprecated \\
+    gemini 2.0 flash-lite & 500 & Deprecated \\
+    gemini 2.5 flash & 20 & 20 \\
+    gemini 2.5 flash-lite & 20 & 20 \\
+    gemma 3 27b & 15.000 & Deprecated \\
+    gemma 4 27b & No se había lanzado & Solo texto (al quitarle PDF) \\
+    gemini-3-flash-preview & No se había lanzado & 20 \\
+    gemini-3.1-flash-lite & No se había lanzado & 500 \\
+    gemini-3.5-flash & No se había lanzado & 20 \\
+    \hline
+    \end{tabular}
+    \end{table}
+    
+    \item Reducción en la disponibilidad y ciclo de vida de los modelos: Inicialmente, el entorno permitía el acceso concurrente a una variedad de entre 4 y 5 modelos de lenguaje distintos (incluyendo versiones experimentales y estables). No obstante, esta disponibilidad se vio mermada a solo 1 o 2 modelos activos por ventana de desarrollo debido a la depreciación masiva de arquitecturas estables. Específicamente, hitos de la plataforma como el del 29 de septiembre de 2025 supusieron la eliminación silenciosa de modelos de referencia como gemini-1.5-pro y gemini-1.5-flash, restringiendo la capacidad de realizar comparativas directas de rendimiento intramodelo de forma simultánea.
+    \item Impacto en la metodología y presupuesto de tokens: Estas limitaciones técnicas externas impusieron una estricta "economía de tokens" y de tiempo. Se ha calculado matemáticamente el coste por llamada del pipeline mediante la ecuación de consumo estructural de tokens \ref{eq:tokens_por_llamada}, considerando el prompt base y las capas de información visual y estructural que se envían a la API en cada iteración.
+
+
+\begin{align}
+\text{Tokens por llamada} &= 5.000 \text{ (prompt)} \\
+&\quad + [2.000 \text{ (imagen PDF)} + 2.000 \text{ (esquema XML)}] \times 2 \\
+&= 13.000 \text{ tokens}
+\label{eq:tokens_por_llamada}
+\end{align}
+
+    Considerando las restricciones de la API para cuentas de desarrollo sin facturación asociadas a un techo de 250.000 tokens por minuto (Tokens Per Minute - TPM) y un límite de 10 solicitudes por minuto (RPM), la ventana de transmisión quedó restringida físicamente a un máximo de 19 llamadas simultáneas por minuto, forzando la inclusión de retrasos controlados en el script orquestador de 10 segundos en los reintentos. Sin embargo, tal y como se ha comentado anteriormente, la limitación más restrictiva fue la de peticiones por día (RPD - Request Per Day), ya que es más probable alcanzar 20 llamadas en un día que 19 llamadas en un minuto.
+    \item Otra problemática de la API de gemini es que en momentos de alta demanda, esta no te devuelve resultados, te da error de servidor sobrecargado, lo que ha obligado a que en el proyecto se controle este flujo implementando un reintento a las 15 segundos.
+\end{itemize}
+
+Ante la inviabilidad operativa de las cuotas comerciales y los intentos fallidos de implementar arquitecturas locales basadas en la familia Gemma —debido a que gemma-3 fue completamente retirado por el proveedor y gemma-4 arrojó errores de servidor 500 al procesar de forma nativa la capa visual de los PDFs—, se optó estratégicamente por reorientar el pipeline hacia un modelo alternativo con límites específicos: gemini-3.1-flash-lite. Este cambio permitió eludir el bloqueo de cuota diaria (al ofrecer un techo de 500 peticiones), asumiendo una penalización marginal del 10\% en la tasa de error de caracteres (CER) frente a los modelos de mayor escala, lo que obligó a robustecer los algoritmos heurísticos de post-procesamiento en el core del sistema.
