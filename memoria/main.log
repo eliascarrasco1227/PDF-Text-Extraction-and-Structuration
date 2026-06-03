@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.31)  3 JUN 2026 00:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.31)  3 JUN 2026 13:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -806,58 +806,94 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
 \Hy@SectionHShift=\skip109
+) (c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen266
+\lightrulewidth=\dimen267
+\cmidrulewidth=\dimen268
+\belowrulesep=\dimen269
+\belowbottomsep=\dimen270
+\aboverulesep=\dimen271
+\abovetopsep=\dimen272
+\cmidrulesep=\dimen273
+\cmidrulekern=\dimen274
+\defaultaddspace=\dimen275
+\@cmidla=\count470
+\@cmidlb=\count471
+\@aboverulesep=\dimen276
+\@belowrulesep=\dimen277
+\@thisruleclass=\count472
+\@lastruleclass=\count473
+\@thisrulewidth=\dimen278
 ) (c:/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
  (c:/texlive/2026/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen266
+\col@sep=\dimen279
 \ar@mcellbox=\box66
-\extrarowheight=\dimen267
+\extrarowheight=\dimen280
 \NC@list=\toks38
 \extratabsurround=\skip110
 \backup@length=\skip111
 \ar@cellbox=\box67
 )
-\TX@col@width=\dimen268
-\TX@old@table=\dimen269
-\TX@old@col=\dimen270
-\TX@target=\dimen271
-\TX@delta=\dimen272
-\TX@cols=\count470
+\TX@col@width=\dimen281
+\TX@old@table=\dimen282
+\TX@old@col=\dimen283
+\TX@target=\dimen284
+\TX@delta=\dimen285
+\TX@cols=\count474
 \TX@ftn=\toks39
+) (c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+ (c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count475
+\Gm@cntv=\count476
+\c@Gm@tempcnt=\count477
+\Gm@bindingoffset=\dimen286
+\Gm@wd@mp=\dimen287
+\Gm@odd@mp=\dimen288
+\Gm@even@mp=\dimen289
+\Gm@layoutwidth=\dimen290
+\Gm@layoutheight=\dimen291
+\Gm@layouthoffset=\dimen292
+\Gm@layoutvoffset=\dimen293
+\Gm@dimlist=\toks40
 ) (c:/texlive/2026/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2026/03/30 v0.6h Insert pages of external PDF documents (AM)
  (c:/texlive/2026/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
-\ESO@tempdima=\dimen273
-\ESO@tempdimb=\dimen274
+\ESO@tempdima=\dimen294
+\ESO@tempdimb=\dimen295
 )
-\AM@pagewidth=\dimen275
-\AM@pageheight=\dimen276
-\AM@fboxrule=\dimen277
+\AM@pagewidth=\dimen296
+\AM@pageheight=\dimen297
+\AM@fboxrule=\dimen298
  (c:/texlive/2026/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2026/03/30 v0.6h Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count471
+\pdfpages@includegraphics@status=\count478
 \AM@pagebox=\box68
-\AM@global@opts=\toks40
-\AM@pagecnt=\count472
-\AM@toc@title=\toks41
-\AM@lof@heading=\toks42
-\c@AM@survey=\count473
+\AM@global@opts=\toks41
+\AM@pagecnt=\count479
+\AM@toc@title=\toks42
+\AM@lof@heading=\toks43
+\c@AM@survey=\count480
 \AM@templatesizebox=\box69
 ) (c:/texlive/2026/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2026/04/21 v5.1 (NLCT)
  (c:/texlive/2026/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
 Package: mfirstuc 2025/04/03 v2.09 (NLCT)
-\@glsmfirst=\toks43
-\@glsmrest=\toks44
+\@glsmfirst=\toks44
+\@glsmrest=\toks45
 ) (c:/texlive/2026/texmf-dist/tex/latex/xfor/xfor.sty
 Package: xfor 2009/02/05 v1.05 (NLCT)
 ) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks45
-\ex@=\dimen278
+\@emptytoks=\toks46
+\ex@=\dimen299
 ) (c:/texlive/2026/texmf-dist/tex/latex/tracklang/tracklang.sty
 Package: tracklang 2026/05/24 v1.6.8 (NLCT) Track Languages
  (c:/texlive/2026/texmf-dist/tex/generic/tracklang/tracklang.tex)
@@ -878,18 +914,18 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2024/11/17 v2.01 AMS text
 ) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen279
+\pmbraise@=\dimen300
 ) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count474
+\inf@bad=\count481
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count475
-\leftroot@=\count476
+\uproot@=\count482
+\leftroot@=\count483
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count477
-\DOTSCASE@=\count478
+\classnum@=\count484
+\DOTSCASE@=\count485
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -899,87 +935,87 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen280
+\big@size=\dimen301
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count479
+\macc@depth=\count486
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count480
+\c@MaxMatrixCols=\count487
 \dotsspace@=\muskip22
-\c@parentequation=\count481
-\dspbrk@lvl=\count482
-\tag@help=\toks46
-\row@=\count483
-\column@=\count484
-\maxfields@=\count485
-\andhelp@=\toks47
-\eqnshift@=\dimen281
-\alignsep@=\dimen282
-\tagshift@=\dimen283
-\tagwidth@=\dimen284
-\totwidth@=\dimen285
-\lineht@=\dimen286
-\@envbody=\toks48
+\c@parentequation=\count488
+\dspbrk@lvl=\count489
+\tag@help=\toks47
+\row@=\count490
+\column@=\count491
+\maxfields@=\count492
+\andhelp@=\toks48
+\eqnshift@=\dimen302
+\alignsep@=\dimen303
+\tagshift@=\dimen304
+\tagwidth@=\dimen305
+\totwidth@=\dimen306
+\lineht@=\dimen307
+\@envbody=\toks49
 \multlinegap=\skip113
 \multlinetaggap=\skip114
-\mathdisplay@stack=\toks49
+\mathdisplay@stack=\toks50
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
-\l__datatool_tmpa_int=\count486
-\l__datatool_tmpb_int=\count487
-\l__datatool_tmpc_int=\count488
-\l__datatool_tmpd_int=\count489
-\l__datatool_count_int=\count490
-\l__datatool_tmp_datatype_int=\count491
-\l__datatool_tmpa_dim=\dimen287
-\l__datatool_tmpb_dim=\dimen288
+\l__datatool_tmpa_int=\count493
+\l__datatool_tmpb_int=\count494
+\l__datatool_tmpc_int=\count495
+\l__datatool_tmpd_int=\count496
+\l__datatool_count_int=\count497
+\l__datatool_tmp_datatype_int=\count498
+\l__datatool_tmpa_dim=\dimen308
+\l__datatool_tmpb_dim=\dimen309
  (c:/texlive/2026/texmf-dist/tex/latex/datatool/datatool-l3fp.def
 File: datatool-l3fp.def 2025/12/04 v3.4.3 (NLCT)
 )
-\@dtl@toks=\toks50
-\@dtl@tmpcount=\count492
+\@dtl@toks=\toks51
+\@dtl@tmpcount=\count499
 \dtl@tmplength=\skip115
 \l__datatool_measure_box=\box72
-\dtl@sortresult=\count493
+\dtl@sortresult=\count500
  (c:/texlive/2026/texmf-dist/tex/latex/datatool/datatool-utf8.ldf
 File: datatool-utf8.ldf 2025/12/04 v3.4.3 (NLCT)
 )
-\@dtl@datatype=\count494
-\c_datatool_unknown_int=\count495
-\l__datatool_year_int=\count496
-\l__datatool_month_int=\count497
-\l__datatool_day_int=\count498
-\l__datatool_hour_int=\count499
-\l__datatool_minute_int=\count500
-\l__datatool_second_int=\count501
-\l__datatool_tzhour_int=\count502
-\l__datatool_tzminute_int=\count503
-\l__datatool_julian_int=\count504
-\l__datatool_local_julian_int=\count505
-\l__datatool_prefix_int=\count506
-\l__datatool_suffix_int=\count507
-\@dtl@foreach@level=\count508
+\@dtl@datatype=\count501
+\c_datatool_unknown_int=\count502
+\l__datatool_year_int=\count503
+\l__datatool_month_int=\count504
+\l__datatool_day_int=\count505
+\l__datatool_hour_int=\count506
+\l__datatool_minute_int=\count507
+\l__datatool_second_int=\count508
+\l__datatool_tzhour_int=\count509
+\l__datatool_tzminute_int=\count510
+\l__datatool_julian_int=\count511
+\l__datatool_local_julian_int=\count512
+\l__datatool_prefix_int=\count513
+\l__datatool_suffix_int=\count514
+\@dtl@foreach@level=\count515
 
 
 Package tracklang Warning: No `datatool' support for dialect `spanish'  on input line 9924.
 
-\dtl@codeA=\count509
-\dtl@codeB=\count510
+\dtl@codeA=\count516
+\dtl@codeB=\count517
 )
-\gls@level=\count511
-\@gls@tmpb=\toks51
+\gls@level=\count518
+\@gls@tmpb=\toks52
 \gls@tmplen=\skip116
-\l__glossaries_tmpa_dim=\dimen289
-\l__glossaries_tmpb_dim=\dimen290
-\glskeylisttok=\toks52
-\glslabeltok=\toks53
-\glsshorttok=\toks54
-\glslongtok=\toks55
+\l__glossaries_tmpa_dim=\dimen310
+\l__glossaries_tmpb_dim=\dimen311
+\glskeylisttok=\toks53
+\glslabeltok=\toks54
+\glsshorttok=\toks55
+\glslongtok=\toks56
  (c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
 Package: glossary-hypernav 2026/04/21 v5.1 (NLCT)
 ) (c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
@@ -993,18 +1029,18 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTright=\skip119
 \LTpre=\skip120
 \LTpost=\skip121
-\LTchunksize=\count512
-\LTcapwidth=\dimen291
+\LTchunksize=\count519
+\LTcapwidth=\dimen312
 \LT@head=\box73
 \LT@firsthead=\box74
 \LT@foot=\box75
 \LT@lastfoot=\box76
 \LT@gbox=\box77
-\LT@cols=\count513
-\LT@rows=\count514
-\c@LT@tables=\count515
-\c@LT@chunks=\count516
-\LT@p@ftn=\toks56
+\LT@cols=\count520
+\LT@rows=\count521
+\c@LT@tables=\count522
+\c@LT@chunks=\count523
+\LT@p@ftn=\toks57
 )
 Class scrbook Info: longtable captions redefined on input line 47.
 \glsdescwidth=\skip122
@@ -1013,54 +1049,54 @@ Class scrbook Info: longtable captions redefined on input line 47.
 Package: glossary-super 2026/04/21 v5.1 (NLCT)
  (c:/texlive/2026/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2025/06/26 v4.2d the supertabular environment
-\c@tracingst=\count517
-\ST@wd=\dimen292
+\c@tracingst=\count524
+\ST@wd=\dimen313
 \ST@rightskip=\skip124
 \ST@leftskip=\skip125
 \ST@parfillskip=\skip126
-\ST@pageleft=\dimen293
-\ST@headht=\dimen294
-\ST@tailht=\dimen295
-\ST@pagesofar=\dimen296
-\ST@pboxht=\dimen297
-\ST@rowht=\dimen298
-\ST@prevht=\dimen299
-\ST@toadd=\dimen300
-\ST@dimen=\dimen301
+\ST@pageleft=\dimen314
+\ST@headht=\dimen315
+\ST@tailht=\dimen316
+\ST@pagesofar=\dimen317
+\ST@pboxht=\dimen318
+\ST@rowht=\dimen319
+\ST@prevht=\dimen320
+\ST@toadd=\dimen321
+\ST@dimen=\dimen322
 \ST@pbox=\box78
 )) (c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
 Package: glossary-tree 2026/04/21 v5.1 (NLCT)
-\l__glossaries_tree_max_known_level_int=\count518
-\l__glossaries_tree_offset_dim=\dimen302
-\l__glossaries_tree_namewidth_dim=\dimen303
-\l__glossaries_tree_symbolwidth_dim=\dimen304
-\l__glossaries_tree_prenamesym_width_dim=\dimen305
-\l__glossaries_tree_presubnamesym_width_dim=\dimen306
-\l__glossaries_tree_namewidth_padding_dim=\dimen307
-\l__glossaries_tree_symbolwidth_padding_dim=\dimen308
-\l__glossaries_tree_namesymbolwidth_dim=\dimen309
-\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen310
-\l__glossaries_tree_level_int=\count519
+\l__glossaries_tree_max_known_level_int=\count525
+\l__glossaries_tree_offset_dim=\dimen323
+\l__glossaries_tree_namewidth_dim=\dimen324
+\l__glossaries_tree_symbolwidth_dim=\dimen325
+\l__glossaries_tree_prenamesym_width_dim=\dimen326
+\l__glossaries_tree_presubnamesym_width_dim=\dimen327
+\l__glossaries_tree_namewidth_padding_dim=\dimen328
+\l__glossaries_tree_symbolwidth_padding_dim=\dimen329
+\l__glossaries_tree_namesymbolwidth_dim=\dimen330
+\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen331
+\l__glossaries_tree_level_int=\count526
 \glstreeindent=\skip127
 )) (./glosario/entradas_glosario.tex) (c:/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count520
+\lst@mode=\count527
 \lst@gtempboxa=\box79
-\lst@token=\toks57
-\lst@length=\count521
-\lst@currlwidth=\dimen311
-\lst@column=\count522
-\lst@pos=\count523
-\lst@lostspace=\dimen312
-\lst@width=\dimen313
-\lst@newlines=\count524
-\lst@lineno=\count525
-\lst@maxwidth=\dimen314
+\lst@token=\toks58
+\lst@length=\count528
+\lst@currlwidth=\dimen332
+\lst@column=\count529
+\lst@pos=\count530
+\lst@lostspace=\dimen333
+\lst@width=\dimen334
+\lst@newlines=\count531
+\lst@lineno=\count532
+\lst@maxwidth=\dimen335
  (c:/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 ) (c:/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count526
-\lst@skipnumbers=\count527
+\c@lstnumber=\count533
+\lst@skipnumbers=\count534
 \lst@framebox=\box80
 ) (c:/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
@@ -1084,56 +1120,57 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 126.
-Class scrbook Info: temporary deactivation of babel-spanish quoting  on input line 126.
+(scrbook)           before \begin{document} on input line 128.
+Class scrbook Info: temporary deactivation of babel-spanish quoting  on input line 128.
 (c:/texlive/2026/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2026-05-21 v1.32 PDF bookmarks (HO)
  (c:/texlive/2026/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2026-05-21 v1.32 bookmark driver for pdfTeX (HO)
-\BKM@id=\count528
+\BKM@id=\count535
 ))
-Class scrbook Info: reactivation of babel-spanish quoting  on input line 126.
+Class scrbook Info: reactivation of babel-spanish quoting  on input line 128.
  (./main.aux
 LaTeX Info: Redefining \. on input line 17.
 LaTeX Info: Redefining \% on input line 17.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 17.
+\g__glossaries_gls_ref_acronym_int=\count536
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Info: Redefining \. on input line 126.
-LaTeX Info: Redefining \% on input line 126.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Info: Redefining \. on input line 128.
+LaTeX Info: Redefining \% on input line 128.
  (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count529
-\scratchdimen=\dimen315
+\scratchcounter=\count537
+\scratchdimen=\dimen336
 \scratchbox=\box81
-\nofMPsegments=\count530
-\nofMParguments=\count531
-\everyMPshowfont=\toks58
-\MPscratchCnt=\count532
-\MPscratchDim=\dimen316
-\MPnumerator=\count533
-\makeMPintoPDFobject=\count534
-\everyMPtoPDFconversion=\toks59
+\nofMPsegments=\count538
+\nofMParguments=\count539
+\everyMPshowfont=\toks59
+\MPscratchCnt=\count540
+\MPscratchDim=\dimen337
+\MPnumerator=\count541
+\makeMPintoPDFobject=\count542
+\everyMPtoPDFconversion=\toks60
 ) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1162,10 +1199,45 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 126.
-Package biblatex Info: Reference segment=0 on input line 126.
-Package hyperref Info: Link coloring OFF on input line 126.
- (c:/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package biblatex Info: Reference section=0 on input line 128.
+Package biblatex Info: Reference segment=0 on input line 128.
+Package hyperref Info: Link coloring OFF on input line 128.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.70166pt, 418.25368pt, 107.55254pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=-0.56833pt
+* \evensidemargin=35.28255pt
+* \topmargin=-8.26335pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=89.62619pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(c:/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2025-06-23 v0.14 Display of landscape pages in PDF
  (c:/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
 Package: pdflscape-nometadata 2025-06-23 v0.14 Display of landscape pages in PDF (HO)
@@ -1174,8 +1246,8 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-\c@lstlisting=\count535
-Package tocbasic Info: setting babel extension for `lol' on input line 126.
+\c@lstlisting=\count543
+Package tocbasic Info: setting babel extension for `lol' on input line 128.
 \scr@dte@lstlisting@maxnumwidth=\skip128
  (./portada/portada.tex
 \centeroffset=\skip129
@@ -1212,7 +1284,7 @@ Package pdftex.def Info: portada/portada-tfm.pdf , page1 used on input line 8.
 
 
 ]
-Overfull \hbox (29.8754pt too wide) in paragraph at lines 8--21
+Overfull \hbox (17.92543pt too wide) in paragraph at lines 8--21
 | $[]$ 
  []
 
@@ -1232,7 +1304,7 @@ File: imagenes/UA/logoua.jpg Graphic file (type jpg)
 Package pdftex.def Info: imagenes/UA/logoua.jpg  used on input line 42.
 (pdftex.def)             Requested size: 142.26378pt x 29.16463pt.
 
-Overfull \hbox (29.8754pt too wide) in paragraph at lines 23--54
+Overfull \hbox (17.92543pt too wide) in paragraph at lines 23--54
 | $[]$
  []
 
@@ -1249,7 +1321,7 @@ chapter without number
 File: imagenes/ALMG/web_ALMG.png Graphic file (type png)
 <use imagenes/ALMG/web_ALMG.png>
 Package pdftex.def Info: imagenes/ALMG/web_ALMG.png  used on input line 21.
-(pdftex.def)             Requested size: 397.34149pt x 379.16542pt.
+(pdftex.def)             Requested size: 397.3397pt x 379.15129pt.
  [7] [8 <./imagenes/ALMG/web_ALMG.png>] [9
 
 
@@ -1282,20 +1354,56 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 3.
 Package tocbasic Info: Using my definition of `\numberline' on input line 4.
 Package tocbasic Info: Using my definition of `\numberline' on input line 5.
 Package tocbasic Info: Using my definition of `\numberline' on input line 6.
+Package tocbasic Info: Using my definition of `\numberline' on input line 9.
 Package tocbasic Info: Using my definition of `\numberline' on input line 10.
 Package tocbasic Info: Using my definition of `\numberline' on input line 11.
 Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 13.
+Package tocbasic Info: Using my definition of `\numberline' on input line 14.
+Package tocbasic Info: Using my definition of `\numberline' on input line 15.
+Package tocbasic Info: Using my definition of `\numberline' on input line 16.
+Package tocbasic Info: Using my definition of `\numberline' on input line 17.
+Package tocbasic Info: Using my definition of `\numberline' on input line 18.
+Package tocbasic Info: Using my definition of `\numberline' on input line 19.
+Package tocbasic Info: Using my definition of `\numberline' on input line 20.
+Package tocbasic Info: Using my definition of `\numberline' on input line 21.
+Package tocbasic Info: Using my definition of `\numberline' on input line 22.
+Package tocbasic Info: Using my definition of `\numberline' on input line 23.
+Package tocbasic Info: Using my definition of `\numberline' on input line 24.
+Package tocbasic Info: Using my definition of `\numberline' on input line 25.
+Package tocbasic Info: Using my definition of `\numberline' on input line 26.
+Package tocbasic Info: Using my definition of `\numberline' on input line 27.
+Package tocbasic Info: Using my definition of `\numberline' on input line 28.
+Package tocbasic Info: Using my definition of `\numberline' on input line 29.
+Package tocbasic Info: Using my definition of `\numberline' on input line 30.
+Package tocbasic Info: Using my definition of `\numberline' on input line 31.
+Package tocbasic Info: Using my definition of `\numberline' on input line 32.
+Package tocbasic Info: Using my definition of `\numberline' on input line 33.
+Package tocbasic Info: Using my definition of `\numberline' on input line 34.
+Package tocbasic Info: Using my definition of `\numberline' on input line 35.
+Package tocbasic Info: Using my definition of `\numberline' on input line 36.
+Package tocbasic Info: Using my definition of `\numberline' on input line 37.
+Package tocbasic Info: Using my definition of `\numberline' on input line 38.
+Package tocbasic Info: Using my definition of `\numberline' on input line 39.
+[13
+
+
+]
+Package tocbasic Info: Using my definition of `\numberline' on input line 40.
+Package tocbasic Info: Using my definition of `\numberline' on input line 41.
+Package tocbasic Info: Using my definition of `\numberline' on input line 42.
+Package tocbasic Info: Using my definition of `\numberline' on input line 44.
+Package tocbasic Info: Using my definition of `\numberline' on input line 45.
+Package tocbasic Info: Using my definition of `\numberline' on input line 46.
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [13
-
-
-] [14
-
-
-] (./main.lof
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 79.
+ [14] (./main.lof
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1306,12 +1414,18 @@ Overfull \hbox (0.158pt too wide) detected at line 3
  []
 
 Package tocbasic Info: Using my definition of `\numberline' on input line 5.
+Package tocbasic Info: Using my definition of `\numberline' on input line 7.
 Package tocbasic Info: Using my definition of `\numberline' on input line 8.
+Package tocbasic Info: Using my definition of `\numberline' on input line 9.
+Package tocbasic Info: Using my definition of `\numberline' on input line 12.
 )
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [15] [16
+ [15
+
+
+] [16
 
 
 ] (./main.lot
@@ -1319,6 +1433,7 @@ LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 Package tocbasic Info: Using my definition of `\numberline' on input line 4.
+Package tocbasic Info: Using my definition of `\numberline' on input line 6.
 )
 \tf@lot=\write7
 \openout7 = `main.lot'.
@@ -1330,7 +1445,6 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 4.
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-Package tocbasic Info: Using my definition of `\numberline' on input line 7.
 Package tocbasic Info: Using my definition of `\numberline' on input line 8.
 Package tocbasic Info: Using my definition of `\numberline' on input line 9.
 Package tocbasic Info: Using my definition of `\numberline' on input line 10.
@@ -1365,6 +1479,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 38.
 Package tocbasic Info: Using my definition of `\numberline' on input line 39.
 Package tocbasic Info: Using my definition of `\numberline' on input line 40.
 Package tocbasic Info: Using my definition of `\numberline' on input line 41.
+Package tocbasic Info: Using my definition of `\numberline' on input line 42.
 )
 \tf@lol=\write8
 \openout8 = `main.lol'.
@@ -1374,50 +1489,245 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 41.
 
 ] (./chapters/cap1_introduccion.tex
 chapter 1.
-<imagenes/gramaticas/ocr_vs_kachiquel.png, id=232, 1893.32344pt x 1029.8475pt>
+<imagenes/gramaticas/ocr_vs_kachiquel.png, id=312, 1893.32344pt x 1029.8475pt>
 File: imagenes/gramaticas/ocr_vs_kachiquel.png Graphic file (type png)
 <use imagenes/gramaticas/ocr_vs_kachiquel.png>
 Package pdftex.def Info: imagenes/gramaticas/ocr_vs_kachiquel.png  used on input line 18.
-(pdftex.def)             Requested size: 397.34149pt x 216.11722pt.
+(pdftex.def)             Requested size: 397.3397pt x 216.11722pt.
 [1
 
 
 ]
-LaTeX Info: Redefining \. on input line 58.
-LaTeX Info: Redefining \% on input line 58.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 58.
+LaTeX Info: Redefining \. on input line 51.
+LaTeX Info: Redefining \% on input line 51.
  [2 <./imagenes/gramaticas/ocr_vs_kachiquel.png>]
-LaTeX Info: Redefining \. on input line 80.
-LaTeX Info: Redefining \% on input line 80.
+LaTeX Info: Redefining \. on input line 76.
+LaTeX Info: Redefining \% on input line 76.
  [3]
-Overfull \hbox (8.49652pt too wide) in paragraph at lines 88--105
+Overfull \hbox (8.4984pt too wide) in paragraph at lines 88--105
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 116.
-LaTeX Info: Redefining \% on input line 116.
-[4]) (./back_matter.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 109.
+LaTeX Info: Redefining \% on input line 109.
+[4]) (./chapters/cap3_estado_cuestion.tex
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
  [5] [6
 
 
-] [7]
+]
+chapter 2.
+[7]
+Overfull \hbox (10.20891pt too wide) in paragraph at lines 60--60
+[]|\OT1/cmr/bx/n/6 Tokens/min| 
+ []
 
-LaTeX Warning: Empty bibliography on input line 8.
 
-[8
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\OT1/cmr/bx/n/6 Notas
+ []
+
+
+Underfull \hbox (badness 4582) in paragraph at lines 60--60
+[]|\OT1/cmr/m/n/6 Tier gra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\OT1/cmr/m/n/6 L^^S^^Pmi-tes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/cmr/m/n/6 res-tric-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/cmr/m/n/6 ti-vos en
+ []
+
+
+Overfull \hbox (6.6179pt too wide) in paragraph at lines 60--60
+[]|\OT1/cmr/m/n/6 Multimodal.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/cmr/m/n/6 Op-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\OT1/cmr/m/n/6 Velocidad
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/cmr/m/n/6 300-400
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\OT1/cmr/m/n/6 El m^^Sas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/cmr/m/n/6 per-mi-si-vo
+ []
+
+
+Overfull \hbox (8.34015pt too wide) in paragraph at lines 60--60
+[]|\OT1/cmr/m/n/6 Arquitectura
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]| \OT1/cmr/m/n/6 1M
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\OT1/cmr/m/n/6 2,600
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]| \OT1/cmr/m/n/6 1M
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]| \OT1/cmr/m/n/6 1B
+ []
+
+
+Underfull \hbox (badness 8038) in paragraph at lines 60--60
+[]| \OT1/cmr/m/n/6 1B to-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\OT1/cmr/m/n/6 Requiere
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\OT1/cmr/m/n/6 No tie-ne
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 76.
+LaTeX Info: Redefining \% on input line 76.
+[8]
+Overfull \hbox (19.62524pt too wide) in paragraph at lines 85--86
+[]\OT1/cmr/m/n/10.95 La tem-pe-ra-tu-ra es un hi-per par^^Same-tro que re-gu-la el gra-do de alea-to-rie-dad o ^^Xcreatividad"del
+ []
+
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
+[9]
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
+ [10]
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 135.
+ (c:/texlive/2026/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Info: Redefining \. on input line 136.
+LaTeX Info: Redefining \% on input line 136.
+ [11]
+LaTeX Info: Redefining \. on input line 167.
+LaTeX Info: Redefining \% on input line 167.
+ [12{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+LaTeX Info: Redefining \. on input line 191.
+LaTeX Info: Redefining \% on input line 191.
+ [13]
+LaTeX Info: Redefining \. on input line 215.
+LaTeX Info: Redefining \% on input line 215.
+ [14]
+<imagenes/code/angular_components.png, id=438, 561.09625pt x 310.15875pt>
+File: imagenes/code/angular_components.png Graphic file (type png)
+<use imagenes/code/angular_components.png>
+Package pdftex.def Info: imagenes/code/angular_components.png  used on input line 218.
+(pdftex.def)             Requested size: 313.69025pt x 173.39902pt.
+LaTeX Info: Redefining \. on input line 230.
+LaTeX Info: Redefining \% on input line 230.
+ [15 <./imagenes/code/angular_components.png (PNG copy)>]
+<imagenes/scheme/react_virtual_dom.png, id=446, 816.04875pt x 389.455pt>
+File: imagenes/scheme/react_virtual_dom.png Graphic file (type png)
+<use imagenes/scheme/react_virtual_dom.png>
+Package pdftex.def Info: imagenes/scheme/react_virtual_dom.png  used on input line 242.
+(pdftex.def)             Requested size: 313.69025pt x 149.7059pt.
+LaTeX Info: Redefining \. on input line 251.
+LaTeX Info: Redefining \% on input line 251.
+ [16 <./imagenes/scheme/react_virtual_dom.png (PNG copy)>]
+LaTeX Info: Redefining \. on input line 272.
+LaTeX Info: Redefining \% on input line 272.
+ [17]
+<imagenes/scheme/spring_boot_layers.png, id=475, 1084.05pt x 501.875pt>
+File: imagenes/scheme/spring_boot_layers.png Graphic file (type png)
+<use imagenes/scheme/spring_boot_layers.png>
+Package pdftex.def Info: imagenes/scheme/spring_boot_layers.png  used on input line 279.
+(pdftex.def)             Requested size: 313.69025pt x 145.22604pt.
+LaTeX Info: Redefining \. on input line 295.
+LaTeX Info: Redefining \% on input line 295.
+ [18 <./imagenes/scheme/spring_boot_layers.png>]
+Overfull \hbox (5.93887pt too wide) in paragraph at lines 313--314
+[]\OT1/cmr/m/n/10.95 Thymeleaf es un mo-tor de plan-ti-llas pa-ra apli-ca-cio-nes Ja-va, crea-do por Da-niel Fern^^Sandez
+ []
+
+LaTeX Info: Redefining \. on input line 331.
+LaTeX Info: Redefining \% on input line 331.
+[19]
+Underfull \vbox (badness 1005) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 355.
+LaTeX Info: Redefining \% on input line 355.
+ [20]
+Overfull \hbox (0.62572pt too wide) in paragraph at lines 357--358
+[]\OT1/cmr/m/n/10.95 BCrypt: Es una fun-ci^^Son de hash di-se~nada es-pec^^S^^Pfi-ca-men-te pa-ra con-tra-se~nas. BCrypt
+ []
+
+LaTeX Info: Redefining \. on input line 386.
+LaTeX Info: Redefining \% on input line 386.
+[21]
+LaTeX Info: Redefining \. on input line 408.
+LaTeX Info: Redefining \% on input line 408.
+ [22]) (./back_matter.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [23] [24
+
+
+] [25] [26
+
+
+] [27]
+
+Package biblatex Warning: No driver for 'standard'.
+(biblatex)                Using fallback driver on input line 8.
+
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+[28]
+LaTeX Info: Redefining \. on input line 16.
+LaTeX Info: Redefining \% on input line 16.
+ [29] [30
 
 
 ]
 chapter A.
-<imagenes//scheme/SIDManager_BD.jpg, id=284, 589.20125pt x 257.96375pt>
+<imagenes//scheme/SIDManager_BD.jpg, id=640, 589.20125pt x 257.96375pt>
 File: imagenes//scheme/SIDManager_BD.jpg Graphic file (type jpg)
 <use imagenes//scheme/SIDManager_BD.jpg>
 Package pdftex.def Info: imagenes//scheme/SIDManager_BD.jpg  used on input line 21.
-(pdftex.def)             Requested size: 209.12778pt x 91.56004pt.
-[9 <./imagenes//scheme/SIDManager_BD.jpg>] [10
+(pdftex.def)             Requested size: 209.12683pt x 91.56004pt.
+[31 <./imagenes//scheme/SIDManager_BD.jpg>] [32
 
 
 ]
@@ -1426,68 +1736,74 @@ chapter B.
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 ) (c:/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-) [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 154.
-LaTeX Info: Redefining \% on input line 154.
- [13] (c:/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-) [14]
-LaTeX Info: Redefining \. on input line 272.
-LaTeX Info: Redefining \% on input line 272.
- [15] [16]
-LaTeX Info: Redefining \. on input line 379.
-LaTeX Info: Redefining \% on input line 379.
- [17] [18]
-LaTeX Info: Redefining \. on input line 478.
-LaTeX Info: Redefining \% on input line 478.
- [19] [20]
-LaTeX Info: Redefining \. on input line 596.
-LaTeX Info: Redefining \% on input line 596.
- [21] [22]
-LaTeX Info: Redefining \. on input line 706.
-LaTeX Info: Redefining \% on input line 706.
- [23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24]
-LaTeX Info: Redefining \. on input line 809.
-LaTeX Info: Redefining \% on input line 809.
- [25]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26]
-LaTeX Info: Redefining \. on input line 902.
-LaTeX Info: Redefining \% on input line 902.
- [27] [28]
-LaTeX Info: Redefining \. on input line 1019.
-LaTeX Info: Redefining \% on input line 1019.
- [29] [30{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-LaTeX Info: Redefining \. on input line 1116.
-LaTeX Info: Redefining \% on input line 1116.
- [31]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 1197.
-LaTeX Info: Redefining \% on input line 1197.
- [33]
+) [33]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34]
-LaTeX Info: Redefining \. on input line 1298.
-LaTeX Info: Redefining \% on input line 1298.
- [35]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package glossaries Warning: Empty glossary for \printnoidxglossary[type={acronym}]. Rerun may be required (or you may have forgotten to use commands like \gls) on input line 1312.
+LaTeX Info: Redefining \. on input line 153.
+LaTeX Info: Redefining \% on input line 153.
+ [35] (c:/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+) [36]
+LaTeX Info: Redefining \. on input line 271.
+LaTeX Info: Redefining \% on input line 271.
+ [37] [38]
+LaTeX Info: Redefining \. on input line 377.
+LaTeX Info: Redefining \% on input line 377.
+ [39] [40]
+LaTeX Info: Redefining \. on input line 474.
+LaTeX Info: Redefining \% on input line 474.
+ [41] [42]
+LaTeX Info: Redefining \. on input line 592.
+LaTeX Info: Redefining \% on input line 592.
+ [43] [44]
+LaTeX Info: Redefining \. on input line 694.
+LaTeX Info: Redefining \% on input line 694.
+ [45] [46]
+LaTeX Info: Redefining \. on input line 804.
+LaTeX Info: Redefining \% on input line 804.
+ [47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-) [36] (./main.aux
+ [48]
+LaTeX Info: Redefining \. on input line 897.
+LaTeX Info: Redefining \% on input line 897.
+ [49] [50]
+LaTeX Info: Redefining \. on input line 1005.
+LaTeX Info: Redefining \% on input line 1005.
+ [51] [52]
+LaTeX Info: Redefining \. on input line 1107.
+LaTeX Info: Redefining \% on input line 1107.
+ [53]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1188.
+LaTeX Info: Redefining \% on input line 1188.
+ [55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56]
+LaTeX Info: Redefining \. on input line 1289.
+LaTeX Info: Redefining \% on input line 1289.
+ [57]
+
+Package glossaries Info: Preparing to sort glossary `acronym' (total number of
+(glossaries)             referenced entries: 26)
+
+[58] [59
+
+
+
+
+])
+LaTeX Info: Redefining \. on input line 146.
+LaTeX Info: Redefining \% on input line 146.
+ [60] (./main.aux
 LaTeX Info: Redefining \sptext on input line 17.
 LaTeX Info: Redefining \. on input line 17.
 LaTeX Info: Redefining \% on input line 17.
@@ -1500,31 +1816,23 @@ L3 programming layer <2026-05-26>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46608 strings out of 467337
- 921273 string characters out of 5419514
- 2343804 words of memory out of 5000000
- 74030 multiletter control sequences out of 15000+600000
- 637262 words of font info for 72 fonts, out of 8000000 for 9000
+ 47900 strings out of 467337
+ 948310 string characters out of 5419514
+ 2368737 words of memory out of 5000000
+ 75184 multiletter control sequences out of 15000+600000
+ 638367 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,17n,121p,11288b,2907s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (56 pages, 2559961 bytes).
+ 125i,17n,121p,11288b,4002s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (80 pages, 2819219 bytes).
 PDF statistics:
- 1687 PDF objects out of 1728 (max. 8388607)
- 1570 compressed objects within 16 object streams
- 1089 named destinations out of 1200 (max. 500000)
- 122 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2223 PDF objects out of 2487 (max. 8388607)
+ 2063 compressed objects within 21 object streams
+ 1210 named destinations out of 1440 (max. 500000)
+ 409 words of extra memory for PDF output out of 10000 (max. 10000000)
 

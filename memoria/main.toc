@@ -6,8 +6,42 @@
 \contentsline {subsection}{\numberline {1.2.1}Restricciones de propiedad intelectual y publicación de datos}{3}{subsection.1.2.1}%
 \contentsline {subsubsection}{\nonumberline Acotación de la carga de trabajo}{3}{subsubsection*.9}%
 \contentsline {subsubsection}{\nonumberline Limitaciones técnicas de la API de Gemini}{4}{subsubsection*.10}%
+\contentsline {chapter}{\numberline {2}Estado de la cuestión}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Modelos de lenguaje de gran tamaño (LLMs) aplicados a OCR}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}APIs de LLMs}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Ecosistema actual}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Análisis de la Volatilidad y Restricciones de Acceso}{8}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Configuración de Modelos: Parámetro de Temperatura}{9}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Transfer Learning: Sinergias Lingüísticas y Extrapolación Global}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Inferencia multilingüe y pesos compartidos}{10}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}El valor de los datos estructurados (XML/LaTeX)}{10}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Democratización del conocimiento lingüístico}{11}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Impacto y costes de la pérdida de documentos}{11}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Riesgos en el ciclo de vida documental}{11}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Consecuencias operativas y regulatorias}{12}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Otras iniciativas}{12}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Tecnologías web}{13}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Metodos HTTP}{14}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}API}{14}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}REST}{14}{subsection.2.6.3}%
+\contentsline {section}{\numberline {2.7}Herramientas para el desarrollo}{14}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Angular}{14}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}React}{16}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Spring}{17}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.4}Spring Boot}{17}{subsection.2.7.4}%
+\contentsline {subsection}{\numberline {2.7.5}JPA}{18}{subsection.2.7.5}%
+\contentsline {subsection}{\numberline {2.7.6}Maven}{19}{subsection.2.7.6}%
+\contentsline {subsection}{\numberline {2.7.7}Thymeleaf}{19}{subsection.2.7.7}%
+\contentsline {section}{\numberline {2.8}Ciberseguridad}{20}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Cifrado simétrico}{20}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Cifrado asimétrico}{20}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Cifrado de contraseñas}{21}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.4}Capas de Seguridad en el login}{21}{subsection.2.8.4}%
+\contentsline {section}{\numberline {2.9}Diseño software}{22}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Patrones de diseño software}{22}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}Diagramas UML}{23}{subsection.2.9.2}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\numberline {A}Anexo I. Esquema de base de datos}{9}{chapter.A}%
-\contentsline {chapter}{\numberline {B}Anexo II. Código de la aplicación SIDManager}{11}{chapter.B}%
-\contentsline {chapter}{Lista de acrónimos}{36}{lstnumber.B.35.22}%
+\contentsline {chapter}{\numberline {A}Anexo I. Esquema de base de datos}{31}{chapter.A}%
+\contentsline {chapter}{\numberline {B}Anexo II. Código de la aplicación SIDManager}{33}{chapter.B}%
+\contentsline {chapter}{Lista de acrónimos}{58}{lstnumber.B.35.22}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

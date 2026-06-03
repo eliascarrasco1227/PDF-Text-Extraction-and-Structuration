@@ -3,8 +3,12 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Web de la ALMG}}{\es@scroman {viii}}{figure.0.1}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Comparación OCR vs. Kaqchikel}}{2}{figure.1.1}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Ejemplo de componentes de Angular con código Typescript. }}{15}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplo de DOM virtual de React hecho por \blx@tocontentsinit {0}\textcite {virtual-dom-scheme}}}{16}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Capas de Spring Boot hecho por \blx@tocontentsinit {0}\textcite {spring-layers}}}{18}{figure.2.3}%
 \def \@chapapp {\appendixname }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Esquema de la base de datos}}{9}{figure.Alph1.1}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Esquema de la base de datos}}{31}{figure.Alph1.1}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

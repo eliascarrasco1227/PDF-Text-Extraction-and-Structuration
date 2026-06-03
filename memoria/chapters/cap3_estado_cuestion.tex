@@ -1,5 +1,128 @@
 
 \chapter{Estado de la cuestión}
+
+\section{Modelos de lenguaje de gran tamaño (LLMs) aplicados a OCR}
+
+Tradicionalmente, el Reconocimiento Óptico de Caracteres (OCR) se ha abordado mediante técnicas de visión artificial centradas en la detección de patrones de píxeles y la segmentación de glifos 
+tal y como sostiene \textcite{Singh2015ARO}. Herramientas clásicas como Tesseract o motores basados en redes neuronales convolucionales (CNN) han demostrado una alta eficacia en textos lineales y documentos digitales nativos. Sin embargo, su rendimiento decrece significativamente ante documentos con estructuras tipográficas complejas, ruido visual o disposiciones no lineales de la información.
+En los últimos años, la irrupción de los Modelos de Lenguaje de Gran Tamaño (LLMs) ha provocado un cambio de paradigma, evolucionando hacia lo que se conoce como OCR Estructurado o Document AI. A diferencia del OCR convencional, que se limita a transcribir caracteres, los LLMs con capacidades multimodales (Visual-Language Models o VLMs) procesan el documento como un todo semántico 
+\parencite{11451708}.
+Esta metodología se fundamenta en los siguientes pilares:
+
+
+\begin{itemize}
+    \item Comprensión contextual y multimodalidad: Los modelos de última generación, como la familia Gemini empleada en este trabajo, integran codificadores visuales y de lenguaje. Esto permite al sistema no solo "ver" los caracteres, sino comprender la relación espacial entre ellos
+    \parencite{ding2026surveymllmbasedvisuallyrich}.
+
+
+
+    En el contexto de las gramáticas mayas, esta capacidad es crítica para diferenciar una glosa interlineal de un cuerpo de texto estándar, basándose en la disposición física en la página.
+    
+    \item Capacidad de inferencia y reconstrucción: A diferencia de los sistemas tradicionales que fallan ante caracteres ambiguos o manchas en el papel (comunes en las fotos de libros de la ALMG), los LLMs utilizan su conocimiento previo del lenguaje para inferir palabras probables, actuando simultáneamente como motor de extracción y corrector ortográfico contextual
+    \parencite{11451708}.
+
+    \item Generación de salida estructurada: Uno de los mayores avances aplicados a este proyecto es la capacidad de estos modelos para seguir instrucciones complejas de formato (prompting). Mientras que un OCR tradicional devuelve texto plano (.txt), los LLMs pueden ser instruidos para encapsular la información directamente en lenguajes de marcado como XML. Esto elimina la necesidad de capas intermedias de análisis de layout (Layout Analysis), permitiendo que el modelo genere la jerarquía de capítulos, secciones y subsecciones de forma nativa.
+    \item Resiliencia ante fuentes heterogéneas: Se ha observado que los LLMs presentan una robustez superior al procesar documentos que carecen de metadatos de texto, como es el caso de las capturas fotográficas de libros antiguos. Su entrenamiento masivo en conjuntos de datos diversos les permite normalizar variaciones en la iluminación, curvatura de página y texturas del papel que suelen ser insalvables para algoritmos de binarización clásicos.
+\end{itemize}
+
+No obstante, la aplicación de LLMs al OCR introduce desafíos específicos, principalmente su naturaleza estocástica. Al ser modelos probabilísticos, existe el riesgo de "alucinaciones" estructurales (etiquetas XML inexistentes o mal cerradas). Esta limitación justifica la implementación de módulos de validación externa y corrección estructural, tales como el script xml\_corrector.py desarrollado en este TFM, para garantizar que la potencia de comprensión del modelo se ajuste estrictamente a la gramática formal (DTD) requerida.
+
+
+\section{APIs de LLMs}
+
+\subsection{ Ecosistema actual}
+En el ecosistema tecnológico de 2026, el acceso a Modelos de Lenguaje de Gran Tamaño se realiza mayoritariamente a través de interfaces de programación de aplicaciones (APIs) bajo un modelo de computación en la nube (Serverless AI). Este paradigma permite a los desarrolladores integrar capacidades cognitivas avanzadas sin la necesidad de gestionar infraestructura de hardware costosa. Sin embargo, el mercado se caracteriza por una alta volatilidad en los precios y, especialmente, en las políticas de cuotas de uso gratuito para investigación académica.
+En la tabla \ref{tab:llm-apis}, se presenta una comparativa de las principales APIs disponibles, considerando las versiones de los modelos que lideran el sector en el presente año usando como fuente la web \href{https://www.cloudzero.com/blog/llm-api-pricing-comparison/}{Cloudzero - LLM API Comparison In 2026}.
+
+
+
+\begin{table}[h]
+    \label{tab:llm-apis}
+    \centering
+    \tiny
+    \begin{tabularx}{\textwidth}{l l X X X X X X}
+    \toprule
+    \textbf{Proveedor / Modelo} & \textbf{Plataforma} & \textbf{Req/día} & \textbf{Req/min} & \textbf{Tokens/min} & \textbf{Ventana} & \textbf{Max. Salida} & \textbf{Notas clave} \\
+    \midrule
+    gemini-2.5-flash & Google API & 20 & 15 & 1M & 1M & 8K & Tier gratuito permanente. \\
+    gemini-3.1-flash-lite & Google API & 1500 & 15 & 250K & 1M & 8K & Límites restrictivos en free tier. \\
+    gemini-2.0-flash & Google API & 20 & 15 & 1M & 1M & 8K & Multimodal. Opción legacy. \\
+    llama-3.3-70b-versatile & GroqCloud & 1,000 & 30 & 6,000 & 128K & 32K & Velocidad 300-400 TPS. \\
+    llama-3.1-8b-instant & GroqCloud & 14,400 & 30 & 30,000 & 128K & 8K & El más permisivo de Groq. \\
+    llama-4-scout-17b & GroqCloud & 1,000 & 30 & 30,000 & 128K & 16K & Arquitectura nueva. \\
+    llama-3.3-70b & Cerebras Cloud & ~1M tok/día & 30 & 60k-100k & 8K & 8K & 2,600 TPS. \\
+    qwen3-32b & Cerebras Cloud & ~1M tok/día & 30 & 60,000 & 64K & 32K & Pool compartido. \\
+    mistral-small-3.1 & La Plateforme & ~1B tok/mes & 500 & 500,000 & 128K & 8K & ~1B tokens/mes. \\
+    DeepSeek v3 / r1 & DeepSeek Platf. & Sin límite & Dinám. & Dinám. & 128K & 8K & 5M tokens registro. \\
+    gpt-4o / mini & OpenAI API & — & — & — & 128K & 16K & Requiere depósito. \\
+    claude-sonnet/haiku & Anthropic API & — & — & — & 200K & 8K & No tiene API free. \\
+    \bottomrule
+    \end{tabularx}
+    \caption{Comparativa de proveedores de modelos de IA (Junio 2026)}
+\end{table}
+
+
+
+
+
+\subsection{ Análisis de la Volatilidad y Restricciones de Acceso}
+
+Uno de los hallazgos más relevantes durante el desarrollo de este TFM ha sido la inestabilidad de los servicios API como infraestructura para la digitalización lingüística. A diferencia de años anteriores, donde las cuotas para desarrolladores eran amplias, en 2026 se ha detectado una política de "ajuste agresivo" por parte de los grandes proveedores (específicamente Google Cloud/AI Studio).
+Se ha documentado, mediante la bitácora de desarrollo de este trabajo, que las condiciones de acceso para el modelo Gemini sufrieron una degradación crítica sin previo aviso:
+
+\begin{itemize}
+    \item Colapso de cuota: El margen operativo se redujo de 1.500 peticiones diarias a solo 20, lo que representa una caída del 98.6% en la capacidad de procesamiento experimental.
+    \item Restricción de modelos: La oferta de arquitecturas disponibles para pruebas concurrentes pasó de 8 modelos activos a únicamente 5, limitando la capacidad de realizar estudios comparativos de rendimiento intramodelo.
+\end{itemize}
+
+Esta situación subraya la importancia del objetivo específico 6 de este trabajo: la evaluación de la portabilidad hacia modelos locales. La dependencia de APIs comerciales, aunque ofrece una potencia de inferencia superior y capacidades multimodales nativas para procesar fotos de libros, introduce un riesgo de "apagón técnico" que puede comprometer cronogramas de investigación académica estricta.
+En conclusión, mientras que APIs como DeepSeek ofrecen el mejor ratio coste-beneficio en términos de tokens, Google sigue liderando en ventana de contexto, a pesar de la fragilidad de sus cuotas para el estamento de usuarios no corporativos.
+
+\subsection{Configuración de Modelos: Parámetro de Temperatura}
+
+Para optimizar el rendimiento de un LLM en tareas de digitalización estructurada, no solo es determinante la elección de la API, sino también el ajuste de sus hiperparámetros de generación y la selección de la arquitectura adecuada para la carga de trabajo.
+
+La temperatura es un hiper parámetro que regula el grado de aleatoriedad o "creatividad" del modelo durante la fase de muestreo de tokens. Normalmente se define con un número en el rango del 0 al 1 (siendo 0 el mínimo y 1 el máximo grado de temperatura), aunque en gemini se regula de 0 a 2. Técnicamente, actúa sobre la función softmax de la capa de salida del modelo, modificando la distribución de probabilidad de las palabras candidatas:
+
+\begin{itemize}
+    \item Temperaturas bajas (T aprox 0.0 a 0.3): El modelo se comporta de forma cuasi-determinista, seleccionando siempre los tokens con mayor probabilidad estadística. En el contexto de este TFM, este rango es esencial para garantizar que la estructura XML sea coherente y que la transcripción de las gramáticas mayas sea fiel al original, minimizando la "alucinación" de etiquetas.
+    \item Temperaturas altas (T > 0.7): El modelo aplana la curva de probabilidad, otorgando oportunidades a tokens menos frecuentes. Aunque esto favorece la creatividad en redacción literaria, en la digitalización de documentos técnicos suele derivar en el colapso estructural del XML (etiquetas mal cerradas o duplicadas) y en la invención de términos lingüísticos inexistentes.
+\end{itemize}
+
+
+\section{ Transfer Learning: Sinergias Lingüísticas y Extrapolación Global }
+El aprendizaje por transferencia (Transfer Learning) representa uno de los pilares más avanzados de la Inteligencia Artificial moderna. Se define como la capacidad de un modelo de computación neuronal para aplicar el conocimiento adquirido en una tarea previa (fuente) a una tarea nueva pero relacionada (objetivo). En el marco de este TFM, esta técnica adquiere una dimensión crítica: el procesamiento de lenguas minorizadas con recursos computacionales limitados.
+
+\subsection{ Inferencia multilingüe y pesos compartidos }
+Los Modelos de Lenguaje de Gran Tamaño (LLMs) han sido entrenados sobre corpus masivos que incluyen cientos de idiomas. Durante este proceso, las redes neuronales identifican estructuras universales de la lengua (como la relación entre sujetos, verbos y complementos). A través del algoritmo de retropropagación o backpropagation, el modelo ajusta sus pesos internos para minimizar el error de predicción.
+\textcite{conneau-etal-2020-unsupervised}
+
+
+Cuando el sistema procesa una lengua de la familia maya, como el Kaqchikel, no parte de cero. Aprovecha la "memoria técnica" de estructuras gramaticales similares encontradas en otros idiomas. Este fenómeno permite que el aprendizaje de una lengua minoritaria "ayude" a otras; por ejemplo, la comprensión de la morfología aglutinante o el uso de glosas en el K’iche’ prepara los circuitos del modelo para ser mucho más eficiente al enfrentarse al Mam o, por extensión, a lenguas no relacionadas pero igualmente complejas (como el quechua o el ainu).
+
+\subsection{ El valor de los datos estructurados (XML/LaTeX) }
+La mayor barrera para la digitalización de lenguas minoritarias es la "escasez de datos" (Data Scarcity). Sin embargo, el sistema desarrollado en este trabajo soluciona este problema mediante la generación de contenido de alta fidelidad.
+Aceleración del Fine-Tuning: Los archivos XML y LaTeX que genera la aplicación constituyen lo que en IA llamamos "Gold Standard" o datos de referencia. Con una cantidad mínima de estas páginas estructuradas, es posible realizar un ajuste fino (fine-tuning) de modelos más pequeños y locales.
+Eficiencia en pocos ejemplos (Few-shot Learning): Como se observa en la arquitectura de carpetas de este proyecto (módulo data/few-shot), el modelo es capaz de aprender la jerarquía de una gramática completa tras ver solo dos o tres ejemplos bien etiquetados. Esta capacidad de generalización es extrapolable a cualquier lengua del mundo: si el pipeline es robusto para la complejidad de las lenguas mayas, su aplicación a otras familias lingüísticas requiere una inversión de tiempo y datos drásticamente inferior.
+
+\subsection{ Democratización del conocimiento lingüístico }
+La metodología propuesta en este TFM establece un precedente para la preservación del patrimonio digital global. Al transformar "fotos de libros" en "datos estructurados validados", estamos creando el combustible necesario para que los algoritmos de backpropagation de futuros modelos comprendan lenguas que, de otro modo, quedarían fuera del radar tecnológico.
+En conclusión, el Transfer Learning permite que el esfuerzo dedicado a digitalizar la Academia de Lenguas Mayas de Guatemala se convierta en un activo científico universal. La estructura lógica aprendida y los mecanismos de corrección implementados (xml\_corrector.py) funcionan como un esquema transferible que garantiza que, con muy poca información inicial, cualquier lengua minorizada pueda alcanzar el mismo nivel de accesibilidad digital que las lenguas mayoritarias.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 El desarrollo de sistemas de gestión y monitorización de documentos es un área de gran relevancia en el ámbito empresarial, especialmente en sectores donde la integridad y disponibilidad de la información son críticas. En este capítulo, se analiza el impacto de la pérdida de documentos, las iniciativas existentes para su monitorización y las tecnologías web más utilizadas en la actualidad.
 
 Aquí tienes la sección ampliada con los cambios solicitados, incorporando mayor detalle y referencias bibliográficas:
