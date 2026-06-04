@@ -179,16 +179,164 @@ Más allá de la mera transcripción tipográfica, cuando un modelo multimodal d
 
     $F_\beta = (1 + \beta^2) \cdot \frac{\text{precisión} \times \text{cobertura}}{(\beta^2 \times \text{precisión}) + \text{cobertura}}$
 
-
-
-
-
-
 Mediante la alteración del parámetro b, la comunidad científica puede ponderar el impacto de la cobertura sobre la precisión según las necesidades específicas del modelado lingüístico.
 
 \end{itemize}
 
 
+\subsection{Evaluación de la integridad estructural en LLMs}
+
+Con la aparición de los Modelos de Lenguaje de Gran Tamaño (LLMs) capaces de generar código o lenguajes de marcado (XML, JSON), ha surgido la necesidad de evaluar la consistencia sintáctica. A diferencia del texto plano, una salida estructurada debe cumplir con reglas de jerarquía y anidamiento. La evaluación en este ámbito se realiza mediante:
+
+\begin{itemize}
+    \item Validación de esquema: Comprobación booleana de que el documento generado es "bien formado" (well formed) y cumple con un estándar formal (como un DTD o XSD). Un DTD (por sus siglas en inglés, Document Type Definition o Definición de Tipo de Documento) es un conjunto de reglas que define la estructura, los elementos (etiquetas) y los atributos permitidos en un archivo XML o SGML. En el caso del proyecto se ha empleado el siguiente DTD \ref{code:dtd}.
+    \item Estabilidad estructural: Análisis de la tasa de éxito del modelo para cerrar etiquetas y mantener la profundidad del árbol jerárquico sin colapsar ante una alta densidad de información. Está métrica es más genérica que la validación de esquema y por tanto más fácil de comprobar. Si la salida tiene estabilidad estructural se dice que es válida (valid).
+\end{itemize}
+
+
+\section{ Lingüística computacional: análisis morfosintáctico y glosas }
+El procesamiento de gramáticas no se limita a la transcripción de caracteres; requiere una comprensión profunda de los componentes que estructuran el conocimiento lingüístico. A diferencia de las lenguas indoeuropeas, las familias mayas presentan desafíos específicos en su representación digital.
+
+\subsection{ Análisis morfológico en lenguas aglutinantes }
+Las lenguas mayas se caracterizan por ser altamente sintéticas y aglutinantes. Esto significa que una sola palabra puede contener múltiples morfemas (raíces, prefijos y sufijos) que indican persona, tiempo, aspecto, modo y otras categorías gramaticales.
+En la digitalización, es crítico que el sistema no rompa estas cadenas de caracteres de forma arbitraria. El análisis morfológico extraído por la IA debe preservar la integridad de los afijos, ya que la pérdida de un solo fonema puede alterar completamente el sentido de una regla gramatical descrita en el libro original.
+
+\subsection{ Estructura sintáctica y variabilidad }
+La sintaxis de estas lenguas suele seguir órdenes de palabras menos comunes en idiomas mayoritarios, como VSO (Verbo-Sujeto-Objeto) o VOS. A continuación exponemos algunos ejemplos de diferentes ordenes:
+
+\begin{enumerate}
+    \item Estructura VSO (Verbo-Sujeto-Objeto):
+    \item Ejemplo (Irlandés): Ólann (V) Seán (S) uisce (O).
+    \item (Traducción: Juan bebe agua).
+\end{enumerate}
+
+
+\begin{enumerate}
+    \item Estructura VOS (Verbo-Objeto-Sujeto):
+    \item Ejemplo (Malgache): Manasa (V) lamba (O) Rabe (S).
+    \item (Traducción: Rabe lava la ropa).
+\end{enumerate}
+
+\begin{enumerate}
+    \item Estructura VOS (Verbo-Objeto-Sujeto):
+    \item Ejemplo: Kuxlan (V) kaxlan wa (O) ri achi (S).
+    \item (Traducción: El hombre come pan).
+    \item Análisis: Kuxlan (come) es el verbo, kaxlan wa (pan) es el objeto, y ri achi (el hombre) es el sujeto.
+\end{enumerate}
+
+Las gramáticas de la ALMG explican estas variaciones mediante ejemplos complejos. El sistema de digitalización estructurada debe ser capaz de identificar cuándo una oración es un ejemplo de "sintaxis normativa" y cuándo es una "excepción dialectal", encapsulando cada caso en su etiqueta XML correspondiente para permitir búsquedas especializadas por parte de lingüistas.
+
+\subsection{ El desafío de las glosas interlineales }
+El componente más crítico y difícil de procesar en estas obras son las glosas interlineales. Este es un estándar académico de representación que suele constar de tres o cuatro niveles de información alineados verticalmente:
+\begin{enumerate}
+    \item Línea de texto original: La oración en lengua maya.
+    \item Línea de traducción: El significado global en castellano.
+    \item Línea de segmentación morfológica: Desglose de la palabra en sus componentes.
+    \item Línea de etiquetas gramaticales: Descripción técnica de cada morfema (ej. 1Sg, DET, PL).
+\end{enumerate}
+
+Para ver un ejemplo de esta estructura, se recomienda consultar la figura \ref{fig:ejemplo_glosa}, que ilustra claramente cómo cada nivel de información se corresponde verticalmente, lo que representa un desafío significativo para los sistemas de OCR tradicionales.  
+
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{imagenes/gramaticas/ejemplo_glosa.png}
+    \caption{Ejemplo de glosa interlineal}
+    \label{fig:ejemplo_glosa}
+\end{figure}
+
+
+El OCR convencional falla estrepitosamente ante esta estructura, ya que tiende a leer de forma horizontal, mezclando el maya con las etiquetas técnicas y el castellano, generando un resultado carente de sentido.
+El uso de LLMs multimodales en este trabajo permite realizar una alineación semántica vertical. El modelo "entiende" que la palabra de la línea 1 se corresponde con la etiqueta de la línea 3, permitiendo que nuestra aplicación genere una estructura XML donde cada componente lingüístico está perfectamente vinculado. Esta es la base para que, en el futuro, estos datos puedan alimentar motores de traducción automática o diccionarios inteligentes.
+
+\section{Contexto sociolingüístico: lenguas minorizadas y preservación digital}
+
+La diversidad lingüística del mundo se encuentra en una situación de vulnerabilidad sin precedentes. Según datos de la UNESCO, se estima que cada dos semanas desaparece una lengua, llevando consigo un sistema único de conocimiento y cosmovisión. En este escenario, la tecnología actúa como un arma de doble filo: puede acelerar la asimilación hacia lenguas mayoritarias o, si se emplea correctamente, servir como un motor de revitalización y resiliencia cultural.
+
+\subsection{El concepto de lengua minorizada}
+
+El término ``lengua minorizada'' hace referencia a aquellos idiomas que, por procesos históricos y políticos, han sido desplazados de los espacios públicos, administrativos y, fundamentalmente, digitales. En el caso de Guatemala, el país alberga una extraordinaria riqueza lingüística con 22 idiomas mayas, además del xinka y el garífuna. A pesar de contar con millones de hablantes, lenguas como el Kaqchikel, el K'iche' y el Mam sufren una brecha digital lingüística. La falta de herramientas básicas en el ecosistema digital (teclados predictivos, correctores, traductores o bases de datos consultables) condena a estas lenguas a una existencia analógica que dificulta su transmisión a las nuevas generaciones de ``nativos digitales''.
+
+\subsection{El papel de la Academia de Lenguas Mayas de Guatemala (ALMG)}
+
+La ALMG, como entidad rectora de este patrimonio, ha realizado una labor histórica de codificación a través de sus gramáticas normativas. Estos documentos son la ``Constitución'' lingüística de cada idioma. Sin embargo, su almacenamiento mayoritario en archivos PDF estáticos (o fotos de libros, como se ha analizado en este trabajo) limita su impacto. La digitalización estructural que propone este TFM no es solo un cambio de formato; es un acto de soberanía tecnológica. Al convertir estas gramáticas en datos procesables, estamos permitiendo que las lenguas mayas entren en la era de la Inteligencia Artificial en igualdad de condiciones semánticas.
+
+\subsection{Urgencia de la preservación estructurada}
+
+La preservación digital no debe confundirse con el simple escaneo de documentos. Un libro escaneado es una ``tumba digital'' si la información no es recuperable por una máquina. La aportación de este trabajo radica en la creación de un corpus estructurado. Disponer de la normativa gramatical en formatos como XML y \LaTeX{} permite:
+
+\begin{itemize}
+    \item Crear aplicaciones educativas interactivas.
+    \item Desarrollar sistemas de búsqueda avanzada para investigadores y hablantes.
+    \item Alimentar modelos de lenguaje locales (revisados en el apartado 2.4) que no dependan de la infraestructura de grandes corporaciones tecnológicas.
+\end{itemize}
+
+En conclusión, la digitalización de las lenguas Kaqchikel, K'iche' y Mam mediante técnicas de IA avanzada es una respuesta necesaria ante el riesgo de ``extinción digital''. Este TFM se alinea con los objetivos internacionales de desarrollo sostenible, promoviendo el acceso a la información y la protección de la diversidad cultural a través de la innovación tecnológica.
+
+
+\section{Lenguajes de marcado y estándares de representación documental}
+
+La transformación de información no estructurada, como los documentos en formato PDF o imágenes, en conocimiento digital procesable requiere el uso de estándares que garanticen la interoperabilidad, la validación y la calidad estética. En el ámbito académico y editorial, el ecosistema tecnológico actual se apoya en lenguajes de marcado semántico y sistemas de composición tipográfica avanzada.
+
+\subsection{XML y la representación jerárquica de la información}
+
+El lenguaje XML (Extensible Markup Language) se mantiene como el estándar de facto para el almacenamiento y el intercambio de documentos complejos. A diferencia de lenguajes como el HTML, cuyo propósito es la visualización, el XML permite la definición de etiquetas personalizadas que describen la naturaleza semántica de los datos.
+
+En el campo de las Humanidades Digitales y la Lingüística, el XML es fundamental por las siguientes razones:
+
+\begin{itemize}
+    \item \textbf{Estructuración semántica:} Permite encapsular la jerarquía de un libro (partes, capítulos, secciones) y elementos específicos (glosas, morfemas, ejemplos) en una estructura de árbol legible tanto por humanos como por máquinas.
+    
+    \item \textbf{Preservación a largo plazo:} Al ser un formato basado en texto plano y no propietario, garantiza que la información digitalizada sea recuperable independientemente de la evolución del software.
+    
+    \item \textbf{Separación de contenido y formato:} Facilita que un mismo conjunto de datos sea exportado a múltiples formatos (PDF, ePub, Web) manteniendo la integridad del contenido.
+\end{itemize}
+
+\subsection{Mecanismos de validación estructural (DTD y XSD)}
+
+La fiabilidad de los datos estructurados depende de su cumplimiento con una gramática formal. En el estado del arte actual, el DTD (Document Type Definition) y el XSD (XML Schema Definition) son las tecnologías que actúan como esquemas de validación.
+
+Estos componentes permiten establecer un ``contrato estructural'' que define:
+
+\begin{itemize}
+    \item La obligatoriedad y el orden de aparición de los elementos.
+    \item La jerarquía de anidamiento permitida.
+    \item Las reglas gramaticales que la salida de un sistema automático (como un motor de IA) debe respetar.
+\end{itemize}
+
+Esta validación es crítica en flujos de trabajo automatizados, ya que permite detectar de forma inmediata errores de formación o inconsistencias lógicas antes de que los datos sean integrados en bases de datos o compilados para su publicación.
+
+\subsection{Composición de textos mediante \LaTeX}
+
+Para la generación de documentación científica de alta calidad, \LaTeX{} representa el estándar internacional en las comunidades académicas de ingeniería y ciencias exactas. Se define como un sistema de composición de textos que separa la escritura del diseño editorial.
+
+Sus principales aportaciones al estado de la técnica incluyen:
+
+\begin{itemize}
+    \item \textbf{Excelencia tipográfica:} Gestión superior de la microtipografía, el espaciado y la renderización de caracteres especiales, algo esencial para la representación de glifos lingüísticos y alfabetos fonéticos.
+    
+    \item \textbf{Automatización de estructuras:} Capacidad para generar de forma dinámica índices, referencias cruzadas y numeraciones complejas a partir de fuentes de datos estructuradas.
+    
+    \item \textbf{Tratamiento de glosas lingüísticas:} Mediante paquetes especializados (como \texttt{expex} o \texttt{gb4e}), \LaTeX{} permite la alineación vertical de múltiples niveles de análisis lingüístico, garantizando una presentación profesional que los procesadores de texto convencionales no pueden alcanzar de forma automatizada.
+\end{itemize}
+
+
+\subsection{Paradigmas de intercambio de datos: XML frente a JSON}
+
+En la actualidad, existe un debate técnico entre el uso de JSON (JavaScript Object Notation) y XML. Mientras que JSON ha ganado terreno en el desarrollo de aplicaciones web y APIs ligeras debido a su baja verbosidad y facilidad de lectura en entornos de programación modernos, el XML sigue siendo superior en el ámbito de la documentación técnica y lingüística.
+
+La superioridad del XML en este contexto radica en su capacidad nativa para gestionar documentos extensos con jerarquías profundas y en la madurez de sus herramientas de validación estructural (como XPath y DTD). En tareas de digitalización masiva mediante Modelos de Lenguaje de Gran Tamaño (LLMs), el XML proporciona un marco de contención más rígido que ayuda a mitigar la naturaleza estocástica de la generación de la IA, asegurando que la estructura del documento original se preserve fielmente.
+
+\subsection{Paradigmas de almacenamiento lingüístico: XML estructurado frente a corpus paralelos convencionales}
+
+En el ámbito de la lingüística computacional aplicada a lenguas minorizadas, la elección del modelo de datos determina críticamente la riqueza del conocimiento analizable por una máquina. Históricamente, los enfoques tradicionales de traducción automática se han apoyado en los denominados \textit{corpus paralelos} (\textit{parallel corpora}), los cuales se limitan a alinear oraciones equivalentes en dos o más idiomas (generalmente bajo una estructura lineal de texto plano o bitexto). Sin embargo, para la preservación y el estudio filológico de gramáticas densas como las de la familia maya, este paradigma plano presenta deficiencias metodológicas insalvables frente al marcado jerárquico XML.
+
+El inconveniente cardinal de los corpus paralelos radica en la pérdida irreversible de la información estructural y espacial de las glosas interlineales. Al reducir un texto normativo complejo a meros pares tipográficos aislados (oración en lengua maya frente a su traducción en castellano), se destruyen las capas intermedias esenciales de segmentación morfológica y categorización gramatical. Este achatamiento de la información reproduce un efecto análogo al fallo de lectura horizontal que adolecen los sistemas de OCR convencionales, donde las columnas y niveles analíticos verticales se mezclan de forma caótica.
+
+Frente a la planitud del corpus paralelo, la encapsulación del texto mediante etiquetas semánticas en XML proporciona un entorno de aprendizaje drásticamente superior para los Modelos de Lenguaje de Gran Tamaño (LLMs). Una Inteligencia Artificial comprende y procesa con mayor precisión la correlación entre una raíz morfológica aglutinante y su respectivo morfema técnico si estas variables se encuentran delimitadas en nodos jerárquicos explícitos (ej. \texttt{<glosa>}, \texttt{<segmentacion>}, \texttt{<categoria>}).
+
+Esta delimitación por bloques sintácticos previene que la naturaleza estocástica de los modelos confunda la traducción libre con las reglas sintácticas subyacentes. En consecuencia, para capturar la gramática profunda y la semántica de una lengua minorizada sin sacrificar recursos científicos tan valiosos como las glosas normativas de la ALMG, la adopción de una arquitectura basada en XML estructurado se consolida en el estado de la técnica actual como una estrategia muy superior a la de un corpus paralelo convencional, garantizando que el conocimiento digitalizado sea verdaderamente explotable para la investigación lingüística avanzada.
 
 
 

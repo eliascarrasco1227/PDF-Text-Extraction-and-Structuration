@@ -187,6 +187,64 @@ En conclusión, este proyecto no solo ha cumplido con sus objetivos iniciales, s
 }
 \end{lstlisting}
 
+
+\begin{lstlisting}[
+    language=xml,
+    label=code:dtd,
+    caption={Document Type Definition}
+]
+<!ELEMENT document (page+)>
+<!ATTLIST document>
+
+<!ELEMENT page (line | heading | title | interlinear_gloss | parallel_phrase)*>
+<!ATTLIST page
+            number CDATA #REQUIRED>
+
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT line (#PCDATA)>
+
+<!ELEMENT interlinear_gloss (parallel_phrase?, morpheme_analysis?, syntactic_analysis?)>
+
+<!ELEMENT parallel_phrase (original, translation)>
+<!ELEMENT original (#PCDATA)>
+<!ELEMENT translation (#PCDATA)>
+
+<!ELEMENT morpheme_analysis (unit+)>
+<!ELEMENT syntactic_analysis (unit+)>
+
+<!ELEMENT unit (form, gloss)>
+<!ELEMENT form (#PCDATA)>
+<!ELEMENT gloss (#PCDATA)>
+
+}
+\end{lstlisting}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{lstlisting}[
     language=Java, 
     label=code:not-received-controller, 
