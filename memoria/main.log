@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.31)  5 JUN 2026 14:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.31)  5 JUN 2026 14:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1291,28 +1291,28 @@ Package tocbasic Info: setting babel extension for `lol' on input line 130.
 \scr@dte@lstlisting@maxnumwidth=\skip128
  (./portada/portada.tex
 \centeroffset=\skip129
-<portada/portada-tfm.pdf, id=7, 597.55246pt x 845.07718pt>
+<portada/portada-tfm.pdf, id=7, 597.73312pt x 845.40843pt>
 File: portada/portada-tfm.pdf Graphic file (type pdf)
 <use portada/portada-tfm.pdf>
 Package pdftex.def Info: portada/portada-tfm.pdf  used on input line 8.
-(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-<portada/portada-tfm.pdf, id=9, page=1, 597.55246pt x 845.07718pt>
+(pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
+<portada/portada-tfm.pdf, id=9, page=1, 597.73312pt x 845.40843pt>
 File: portada/portada-tfm.pdf Graphic file (type pdf)
 <use portada/portada-tfm.pdf, page 1>
 Package pdftex.def Info: portada/portada-tfm.pdf , page1 used on input line 8.
-(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+(pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
 File: portada/portada-tfm.pdf Graphic file (type pdf)
 <use portada/portada-tfm.pdf, page 1>
 Package pdftex.def Info: portada/portada-tfm.pdf , page1 used on input line 8.
-(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+(pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
 File: portada/portada-tfm.pdf Graphic file (type pdf)
 <use portada/portada-tfm.pdf, page 1>
 Package pdftex.def Info: portada/portada-tfm.pdf , page1 used on input line 8.
-(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+(pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
 File: portada/portada-tfm.pdf Graphic file (type pdf)
 <use portada/portada-tfm.pdf, page 1>
 Package pdftex.def Info: portada/portada-tfm.pdf , page1 used on input line 8.
-(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+(pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
  [1
 
 
@@ -1328,17 +1328,17 @@ Overfull \hbox (17.92543pt too wide) in paragraph at lines 8--21
 | $[]$ 
  []
 
-<imagenes/UA/logoim.jpg, id=40, 52.0344pt x 49.8663pt>
+<imagenes/UA/logoim.jpg, id=62, 52.0344pt x 49.8663pt>
 File: imagenes/UA/logoim.jpg Graphic file (type jpg)
 <use imagenes/UA/logoim.jpg>
 Package pdftex.def Info: imagenes/UA/logoim.jpg  used on input line 32.
 (pdftex.def)             Requested size: 13.00856pt x 12.46654pt.
-<imagenes/UA/logoeps.jpg, id=41, 146.2263pt x 53.9616pt>
+<imagenes/UA/logoeps.jpg, id=63, 146.2263pt x 53.9616pt>
 File: imagenes/UA/logoeps.jpg Graphic file (type jpg)
 <use imagenes/UA/logoeps.jpg>
 Package pdftex.def Info: imagenes/UA/logoeps.jpg  used on input line 39.
 (pdftex.def)             Requested size: 142.26378pt x 52.50159pt.
-<imagenes/UA/logoua.jpg, id=42, 183.3249pt x 37.5804pt>
+<imagenes/UA/logoua.jpg, id=64, 183.3249pt x 37.5804pt>
 File: imagenes/UA/logoua.jpg Graphic file (type jpg)
 <use imagenes/UA/logoua.jpg>
 Package pdftex.def Info: imagenes/UA/logoua.jpg  used on input line 42.
@@ -1357,7 +1357,7 @@ chapter without number
 
 
 ]
-<imagenes/ALMG/web_ALMG.png, id=68, 970.3753pt x 925.95938pt>
+<imagenes/ALMG/web_ALMG.png, id=90, 970.3753pt x 925.95938pt>
 File: imagenes/ALMG/web_ALMG.png Graphic file (type png)
 <use imagenes/ALMG/web_ALMG.png>
 Package pdftex.def Info: imagenes/ALMG/web_ALMG.png  used on input line 21.
@@ -1588,7 +1588,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 15.
 
 ] (./chapters/cap1_introduccion.tex
 chapter 1.
-<imagenes/gramaticas/ocr_vs_kachiquel.png, id=407, 1893.32344pt x 1029.8475pt>
+<imagenes/gramaticas/ocr_vs_kachiquel.png, id=429, 1893.32344pt x 1029.8475pt>
 File: imagenes/gramaticas/ocr_vs_kachiquel.png Graphic file (type png)
 <use imagenes/gramaticas/ocr_vs_kachiquel.png>
 Package pdftex.def Info: imagenes/gramaticas/ocr_vs_kachiquel.png  used on input line 18.
@@ -1747,7 +1747,7 @@ LaTeX Info: Redefining \% on input line 151.
 LaTeX Info: Redefining \. on input line 170.
 LaTeX Info: Redefining \% on input line 170.
  [13]
-<imagenes/external/recall_precision.png, id=502, 1204.5pt x 803.0pt>
+<imagenes/external/recall_precision.png, id=524, 1204.5pt x 803.0pt>
 File: imagenes/external/recall_precision.png Graphic file (type png)
 <use imagenes/external/recall_precision.png>
 Package pdftex.def Info: imagenes/external/recall_precision.png  used on input line 173.
@@ -1758,7 +1758,7 @@ LaTeX Info: Redefining \% on input line 192.
 LaTeX Info: Redefining \. on input line 217.
 LaTeX Info: Redefining \% on input line 217.
  [15]
-<imagenes/gramaticas/ejemplo_glosa.png, id=519, 821.0675pt x 204.765pt>
+<imagenes/gramaticas/ejemplo_glosa.png, id=541, 821.0675pt x 204.765pt>
 File: imagenes/gramaticas/ejemplo_glosa.png Graphic file (type png)
 <use imagenes/gramaticas/ejemplo_glosa.png>
 Package pdftex.def Info: imagenes/gramaticas/ejemplo_glosa.png  used on input line 244.
@@ -2013,10 +2013,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  125i,17n,121p,11288b,2907s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (91 pages, 3783956 bytes).
+Output written on main.pdf (91 pages, 3784565 bytes).
 PDF statistics:
- 1533 PDF objects out of 1728 (max. 8388607)
- 1375 compressed objects within 14 object streams
+ 1555 PDF objects out of 1728 (max. 8388607)
+ 1385 compressed objects within 14 object streams
  496 named destinations out of 1000 (max. 500000)
  975 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1780659917.28435 "main.bcf" "main.bbl" "main" 1780660890.97354 0
+["biber main"] 1780659917.28435 "main.bcf" "main.bbl" "main" 1780661892.96934 0
   "bibliografia/bibliografia.bib" 1780500810 21762 8e8a338c05781b0f36f6ae79a15d79ed ""
-  "main.bcf" 1780660890 134908 4934d3459b4217aa0c180429a566ec23 "pdflatex"
+  "main.bcf" 1780661891 134908 4934d3459b4217aa0c180429a566ec23 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1780660880.82534 "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" "main.pdf" "main" 1780660890.97648 0
+["pdflatex"] 1780661882.06599 "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" "main.pdf" "main" 1780661892.97308 0
   "back_matter.tex" 1780660854 45398 995487411d4960e80701f40e5f669b5b ""
   "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" 1780660228 3887 5e62214d50a12750e4d02334a4fc5b9a ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1780230687 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -257,15 +257,15 @@
   "imagenes/external/recall_precision.png" 1780502015 1063072 d15442d9ecd10b22383ffef2a05fe181 ""
   "imagenes/gramaticas/ejemplo_glosa.png" 1780592410 94149 1d6c07a9e5455b36a5b5c6fc1f37a62b ""
   "imagenes/gramaticas/ocr_vs_kachiquel.png" 1780251924 1706114 713ef59e41fe2a4804854d404ba6f8d4 ""
-  "main.aux" 1780660890 89938 1b2ed9a7ce7147ef4bc94426deed6c70 "pdflatex"
+  "main.aux" 1780661891 89938 1b2ed9a7ce7147ef4bc94426deed6c70 "pdflatex"
   "main.bbl" 1780659924 50399 3915be8bbf58f39d559a9dcb0df80b65 "biber main"
-  "main.lof" 1780660890 766 5a54e515bf8f2eb173d6660e0e17a877 "pdflatex"
-  "main.lol" 1780660890 824 6400a8489b89072295c16cc50133e26e "pdflatex"
-  "main.lot" 1780660890 844 1344a44cfd37f069d48b63beb24a8b73 "pdflatex"
-  "main.run.xml" 1780660890 2374 84b3c453a69351e7c18dc5329eb72f5e "pdflatex"
+  "main.lof" 1780661892 766 5a54e515bf8f2eb173d6660e0e17a877 "pdflatex"
+  "main.lol" 1780661892 824 6400a8489b89072295c16cc50133e26e "pdflatex"
+  "main.lot" 1780661892 844 1344a44cfd37f069d48b63beb24a8b73 "pdflatex"
+  "main.run.xml" 1780661892 2374 84b3c453a69351e7c18dc5329eb72f5e "pdflatex"
   "main.tex" 1780660228 3887 5e62214d50a12750e4d02334a4fc5b9a ""
-  "main.toc" 1780660890 13415 07fc028a1ca5a0a4cd2caa034775faa5 "pdflatex"
-  "portada/portada-tfm.pdf" 1780249162 123694 5f1bffccfdf742b3f82934a586b42df3 ""
+  "main.toc" 1780661892 13415 07fc028a1ca5a0a4cd2caa034775faa5 "pdflatex"
+  "portada/portada-tfm.pdf" 1780661860 126499 fe1d12ae8524c80a7ee80981549f4123 ""
   "portada/portada.tex" 1780249162 325 22611075635420b29f794da6a0afcdf6 ""
   "portada/portada_2.tex" 1780249162 1019 41fab9129ff26e09de13c508f948bc7d ""
   (generated)
