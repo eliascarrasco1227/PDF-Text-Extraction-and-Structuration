@@ -1,21 +1,29 @@
 
 %Objetivos
-\chapter{Objetivos} \label{objetivos}
-El objetivo general de este proyecto es el diseño y desarrollo de una aplicación web para la gestión eficiente de documentos en una organización, facilitando conocer su estado y si han sido almacenados o no. Además, mediante el uso de filtros avanzados, los usuarios podrán identificar y gestionar de manera eficiente los metadatos de estos documentos, mejorando así la integridad y el control de la información. 
-La aplicación también será escalable y segura, garantizando su adecuado funcionamiento en diversos entornos y proporcionando una herramienta útil para la gestión de bases de datos.
+\chapter{Objetivos del trabajo}
 
-Los objetivos específicos del proyecto son:
-\begin{enumerate}
-    \item Desarrollar una interfaz web altamente usable. El diseño de la interfaz será intuitivo y accesible, permitiendo que cualquier usuario, independientemente de su nivel de conocimientos técnicos, pueda interactuar con la aplicación sin dificultad. Esto facilitará su adopción en empresas de distintos tamaños y sectores.
+El propósito fundamental de este proyecto es la creación de un ecosistema tecnológico que permita la transición de gramáticas de lenguas mayas desde formatos estáticos y no estructurados hacia documentos digitales estructurados.
 
-    \item Implementar un sistema basado en arquitectura cliente-servidor para ordenador. La aplicación será accesible a través de un navegador web, sin necesidad de instalación en dispositivos locales. Funcionará bajo una arquitectura cliente-servidor, donde el servidor aloja y gestiona los datos, mientras que los usuarios interactúan con la aplicación desde el cliente, facilitando así su uso en múltiples dispositivos y plataformas, sin las limitaciones de una aplicación de escritorio.
+\section{Objetivo general}
+
+Diseñar e implementar un sistema automatizado basado en llamadas a APIs de Modelos de Lenguaje de Gran Tamaño (LLMs) para la extracción, estructuración y digitalización de gramáticas normativas de lenguas mayas minorizadas (Kaqchikel, K'iche, Mam y Kanjobal), transformando fuentes documentales complejas (incluyendo imágenes y PDFs sin capa de texto) en datos estructurados bajo el estándar XML y compilables en \LaTeX{}.
+
+\section{Objetivos específicos}
+
+Para dar cumplimiento al objetivo general, se han definido las siguientes metas técnicas y de investigación:
+
+\begin{itemize}
+    \item \textbf{Desarrollar un pipeline modular de procesamiento:} Codificar una arquitectura en Python que integre la gestión de documentos PDF, el preprocesamiento de imágenes y la interacción con la API de Gemini, permitiendo un flujo de trabajo escalable y reproducible para el aumento de recursos de cualquier idioma.
     
-    \item Implementar mecanismos de seguridad avanzados. La aplicación incorporará diversas capas de seguridad, incluyendo autenticación de usuarios y cifrado robusto para proteger las credenciales. Se prestará especial atención a la prevención de vulnerabilidades, mediante el uso de sesiones seguras, códigos aleatorios y la gestión adecuada de estados.
+    \item \textbf{Definir una gramática formal de datos:} Establecer un Documento de Definición de Tipo (DTD) que actúe como esquema de validación, garantizando que el modelo de IA genere etiquetas XML jerárquicamente coherentes con la estructura de un texto lingüístico (títulos, líneas, glosas, análisis sintáctico\ldots).
     
-    \item Optimizar la eficiencia y rendimiento de la aplicación. Se aplicarán técnicas y buenas prácticas para minimizar los tiempos de carga y garantizar que la aplicación funcione de manera rápida y eficiente, incluso cuando se maneje un gran volumen de datos.
-
-    \item Generar un código limpio, modular y bien documentado. El código será diseñado para ser fácilmente reusable y mantenible, con una arquitectura desacoplada que permita modificar los inputs desde archivos externos. Además, se integrarán logs exhaustivos y documentación clara para facilitar futuras mejoras y el trabajo de otros desarrolladores.
-
-    \item Aplicar diagramas de secuencia UML. Para garantizar un desarrollo estructurado y coherente, se emplearán diagramas de secuencia UML, permitiendo una planificación detallada de los flujos de trabajo y las interacciones entre los componentes del sistema.
-
-\end{enumerate}
+    \item \textbf{Implementar herramientas de corrección estructural:} Programar módulos de post-procesamiento capaces de detectar y subsanar automáticamente inconsistencias sintácticas en el marcado XML, tales como etiquetas mal cerradas o jerarquías invertidas, propias de la generación estocástica de los LLMs.
+    
+    \item \textbf{Analizar empíricamente la influencia de la temperatura:} Realizar un estudio sistemático sobre el parámetro de temperatura del modelo para identificar el ``punto dulce'' que equilibre la precisión del OCR con la flexibilidad necesaria para interpretar estructuras tabulares y glosas complejas.
+    
+    \item \textbf{Automatizar la generación de documentación científica:} Desarrollar un motor de conversión que traslade los datos validados en XML a código \LaTeX{}, asegurando que la salida final mantenga los estándares de calidad tipográfica requeridos en el ámbito académico.
+    
+    \item \textbf{Manejo y control de errores en la aplicación:} Manejar los errores más comunes (ya bien sea por librerías o APIs externas) y generar cuadernos de bitácora o \textit{logs} con los registros completos para entender y monitorear el flujo y los posibles errores durante la ejecución del programa.
+    
+    \item \textbf{Evaluar la portabilidad a modelos locales:} Investigar la viabilidad técnica de sustituir o complementar la API de Gemini con modelos de código abierto o locales (como Mistral OCR o DeepSeek-OCR), con el fin de explorar alternativas que reduzcan la dependencia de servicios de terceros y costes de API.
+\end{itemize}

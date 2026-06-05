@@ -1,42 +1,198 @@
+\chapter{Metodología y entorno de desarrollo}
 
+Este capítulo detalla el marco metodológico, las herramientas técnicas y los procedimientos de seguridad empleados para la consecución de los objetivos. Se describe un enfoque centrado en la reproducibilidad y la eficiencia bajo restricciones de recursos.
+
+\section{Gestión del ciclo de vida del proyecto}
+
+El desarrollo de este Trabajo de Fin de Máster se ha articulado bajo una metodología iterativa e incremental, permitiendo ajustar el sistema a medida que se descubrían las particularidades de las gramáticas mayas y las limitaciones de la API de Gemini.
+
+\subsection{Planificación bajo restricciones}
+
+Siguiendo las directrices de la tutoría académica, el proyecto se diseñó para ser ejecutado en una carga de trabajo acotada de 250 horas. Esta restricción temporal ha sido un factor determinante en la toma de decisiones estratégicas, priorizando:
+
+\begin{itemize}
+    \item La robustez del \textit{pipeline} modular sobre el volumen de procesamiento masivo.
     
-\chapter{Metodología} \label{metodologia}
-
-
-
-\section{Marco de Trabajo: Scrum Adaptado}
-Durante el desarrollo de SIDManager, adoptamos una metodología ágil basada en Scrum, adaptada a las necesidades del proyecto y a la colaboración remota con Santander Consumer Finance. Implementamos:
-
-\begin{itemize}
-    \item Sprints Semanales: Cada lunes, realizábamos una planificación de sprint con el tutor de Santander, donde definíamos los objetivos clave y priorizábamos tareas usando diagramas UML de secuencia.
-    \item Daily Standups Virtuales: Breves reuniones matutinas (15 min) para sincronizar avances y bloquedores, manteniendo al equipo alineado a pesar de la distancia.
-    \item Retrospectivas: Al final de cada sprint, analizábamos qué funcionó (ej: code reviews estructuradas) y qué mejorar (ej: ajustar la granularidad de las user stories).
+    \item El desarrollo de un \textit{Test Set} representativo (de 2 a 3 páginas críticas por idioma) que permitiera validar el sistema de forma empírica sin necesidad de procesar los libros completos en esta fase inicial, optimizando el consumo de cuotas diarias de la API.
 \end{itemize}
 
-\section{Herramientas Ágiles Clave}
+\subsection{Fases del desarrollo}
 
-Para garantizar trazabilidad y calidad:
-
-\begin{itemize}
-    \item Code Reviews Colaborativas: Se realizaron revisiones de código semanales, donde el tutor evaluaba los commits contra estándares como Java Code Conventions y patrones de diseño como Singleton o Facade.
-    \item UML como Lenguaje Común: Diagramas de secuencia  servían como esquemas técnicos antes de implementar features críticas (ej: flujo de autenticación con Spring Security).
-    \item Tablero Kanban Digital: En Trello, gestionábamos tareas con columnas clásicas (To Do, In Progress, Done) y etiquetas de prioridad.
-\end{itemize}
-
-\section{Adaptación a Cambios}
-La naturaleza iterativa de Scrum nos permitió:
+El ciclo de vida del software se ha dividido en cuatro fases principales, reflejadas en la bitácora de desarrollo y el repositorio:
 
 \begin{itemize}
-    \item Incorporar Feedback en Tiempo Real: Cuando se identificó la necesidad de pseudopaginación para 20K documentos, ajustamos el sprint siguiente para priorizarlo.
-    \item Mantener Calidad bajo Presión: Las definition of done incluían: (1) pruebas manuales, (2) logs estructurados con Log4j, y (3) documentación Javadoc.
+    \item \textbf{Fase de exploración y prototipado (Zero-Shot):} En las primeras etapas, se realizaron pruebas de extracción de texto plano para evaluar la capacidad de visión de Gemini. Se detectó la necesidad de transicionar hacia una salida estructurada debido a la pérdida de jerarquía semántica.
+    
+    \item \textbf{Fase de ingeniería de prompts y estructuración (Few-Shot):} Se implementó la lógica de \textit{Few-Shot Learning} (visible en la carpeta \texttt{data/few-shot}), proporcionando al modelo ejemplos de XML validado para guiar la generación. Metodológicamente, se optó por la técnica avanzada de pre-carga de historial (\textit{History Pre-loading}) a nivel de SDK, inyectando los pares de imagen y XML directamente en el búfer de la sesión antes del envío del mensaje del usuario, lo que optimizó drásticamente la latencia y la eficiencia en la transferencia de red. Durante esta fase se documentó el fenómeno de \textit{overfitting} o pérdida de generalización cognitiva al incrustar capturas fijas directamente en el prompt; el modelo tendía a reproducir de forma literal metadatos espurios del ejemplo (como la cadena ``Adidas'' o las oraciones exactas de la muestra) en las nuevas páginas, lo que obligó a refinar la abstracción del prompt textual. En esta fase se definió el DTD inicial.
+    
+    \item \textbf{Fase de refinamiento estructural y validación:} Desarrollo de los módulos de post-procesamiento (\texttt{xml\_corrector.py} y \texttt{xml\_validator.py}). Se iteró sobre el código para subsanar los errores estructurales típicos del modelo (etiquetas mal cerradas o duplicadas). En esta fase se diseñó la lógica de escape del bucle de validación (\textit{Validation Loop}): si tras el quinto intento de autoreparación iterativa el XML generado persiste en incumplir las especificaciones gramaticales del archivo DTD, el orquestador interrumpe las llamadas para evitar el bloqueo del \textit{pipeline}, guardando la última traza con errores heurísticos y continuando con el flujo secuencial de ejecución.
+    
+    \item \textbf{Fase de experimentación y análisis:} Realización de pruebas sistemáticas variando la temperatura del modelo (de 0.0 a 1.5) para identificar el ``punto dulce'' de precisión, tal como se detalla en el análisis de resultados del Capítulo 5. Durante esta etapa (específicamente en los ensayos del 10 de febrero de 2026), se descubrió una limitación física insalvable en el procesamiento por bloques: el sistema se encuentra acotado a un máximo de 2 páginas simultáneas. Debido a que cada sílaba analizada lingüísticamente en las glosas exige un mínimo de 4 etiquetas XML anidadas (aproximadamente 6 líneas de marcado), un volumen superior satura la ventana máxima de tokens de salida de la API, provocando truncamientos estructurales fatales.
 \end{itemize}
 
-Este enfoque en metodologías ágiles generó resultados tangibles.
+\subsection{Control de versiones y documentación}
+
+La trazabilidad del proyecto se ha garantizado mediante el uso de un repositorio en GitHub, organizando el código en una arquitectura modular que separa la lógica de procesamiento (\texttt{core/}), la configuración (\texttt{config/}), la validación (\texttt{validator/}) y la evaluación (\texttt{evaluator/}). Este ordenamiento facilita la mantenibilidad del sistema y su posible escalabilidad futura.
+    
+
+\section{Configuración del entorno de desarrollo}
+
+La estabilidad de un sistema de Inteligencia Artificial depende críticamente de la gestión de dependencias y la insolación del entorno de ejecución. Para este proyecto, se ha diseñado un ecosistema basado en estándares de la industria que garantiza la portabilidad del código.
+
+\subsection{Gestión de entornos virtuales (Anaconda)}
+
+Se ha utilizado Anaconda como gestor de entornos y paquetes, permitiendo aislar las librerías del TFM del resto del sistema operativo. Esta decisión técnica evita conflictos entre versiones de Python y facilita la replicabilidad por parte de otros investigadores.
 
 \begin{itemize}
-    \item Entregables Consistentes: 8 sprints completados, con demo funcional tras cada uno.
-    \item Código Limpio y Documentado: +15 clases con Javadoc, facilitando la transición al equipo de Santander.
-    \item Flexibilidad: Algunos cambios mayores de requisitos absorbidos sin impactar la fecha de entrega (como la migración del inicio de sesión manual a Spring Security).
+    \item \textbf{Nombre del entorno:} \texttt{gemini-env}.
+    
+    \item \textbf{Versión de Python:} 3.12 (seleccionada por su optimización en la gestión de hilos y compatibilidad con las últimas librerías de Google AI).
+    
+    \item \textbf{Procedimiento de inicialización:} El entorno se activa mediante el comando \texttt{conda activate gemini-env}, asegurando que todas las variables de ruta apuntan a las binarias correctas.
 \end{itemize}
+
+\textbf{Nota de resolución de entorno:} Durante la fase inicial de despliegue, se documentó un conflicto de resolución de entorno derivado del uso del comando abreviado \texttt{py} en sistemas Windows. Dicho comando puenteaba el entorno virtual activo de Anaconda ejecutando el intérprete global del sistema, lo que impedía la localización de la SDK \texttt{google-genai}. El problema se solventó forzando metodológicamente la sintaxis explícita \texttt{python main.py}, garantizando así la vinculación estricta de las variables de entorno de \texttt{gemini-env}.
+
+\subsection{Dependencias y librerías críticas}
+
+El sistema se apoya en un conjunto de librerías especializadas instaladas a través de \texttt{pip} y gestionadas mediante el archivo \texttt{requirements.txt}. Las dependencias clave se agrupan en tres categorías:
+
+\paragraph{Interacción con modelos de IA}
+
+\begin{itemize}
+    \item \textbf{\texttt{google-generativeai}:} Librería principal para la comunicación con la API de Gemini (modelos 1.5 Pro, Flash y 2.5 Flash-lite). Gestiona el envío de imágenes y la recepción de respuestas estructuradas.
+\end{itemize}
+
+\paragraph{Procesamiento de documentos y visión}
+
+\begin{itemize}
+    \item \textbf{\texttt{pdf2image}:} Utilizada para convertir las páginas del PDF en imágenes de alta resolución, paso necesario para que el modelo multimodal pueda ``ver'' la disposición tipográfica de las gramáticas.
+    
+    \item \textbf{\texttt{Pillow (PIL)}:} Empleada para el preprocesamiento de imágenes antes de su envío a la API.
+\end{itemize}
+
+\paragraph{Gestión y validación de datos}
+
+\begin{itemize}
+    \item \textbf{\texttt{lxml}:} Librería fundamental para el procesamiento de XML en Python. Se utiliza en el módulo \texttt{xml\_validator.py} para contrastar la salida de la IA contra el archivo \texttt{gramatica.dtd}, asegurando que el documento cumpla con las reglas gramaticales definidas.
+    
+    \item \textbf{\texttt{python-dotenv}:} Para la carga segura de variables de entorno, evitando la exposición de claves de API en el código fuente.
+\end{itemize}
+
+\subsection{Estructura de directorios}
+
+El entorno se ha organizado siguiendo una arquitectura limpia (\textit{Clean Architecture}), donde el script principal \texttt{main.py} actúa como orquestador, invocando módulos específicos para cada tarea. Esta modularidad permite, por ejemplo, actualizar el motor de conversión a \LaTeX{} (\texttt{converter.py}) sin afectar a la lógica de extracción de la IA (\texttt{ai\_generator.py}).
+
+
+\section{Gestión de claves de API y seguridad de la información}
+
+En proyectos que dependen de servicios en la nube facturables o sujetos a cuotas restrictivas, la seguridad de las credenciales de acceso es una prioridad crítica. Durante el desarrollo de este TFM, se han implementado protocolos para asegurar que la API Key de Gemini sea gestionada de forma externa al código fuente.
+
+\subsection{Externalización de credenciales}
+
+Siguiendo los estándares de seguridad de software, se ha evitado la práctica de ``hardcodear'' (insertar directamente) las claves en los scripts de Python. En su lugar, se ha optado por un sistema de variables de entorno:
+
+\begin{itemize}
+    \item \textbf{Inyección en tiempo de ejecución:} La clave se carga en la memoria del sistema operativo antes de ejecutar la aplicación mediante el comando \texttt{set GEMINI\_API\_KEY=[CLAVE\_SECRETA]}.
+    
+    \item \textbf{Consumo mediante código:} El módulo \texttt{config/properties.py} utiliza la librería \texttt{os} para recuperar esta clave de forma dinámica, asegurando que el valor real nunca quede registrado en el historial de archivos del proyecto.
+\end{itemize}
+
+\subsection{Protección del repositorio y prevención de fugas}
+
+Para garantizar que la información sensible no sea publicada accidentalmente en el repositorio de GitHub, se han aplicado las siguientes medidas:
+
+\begin{itemize}
+    \item \textbf{Uso de \texttt{.gitignore}:} Se ha configurado un archivo de exclusión que impide que archivos de configuración local (como \texttt{.env}), registros de logs con trazas de depuración o carpetas de entorno virtual sean subidos al servidor público.
+    
+    \item \textbf{Aislamiento de logs:} El sistema de registro implementado en \texttt{core/logger\_config.py} ha sido configurado para monitorizar el flujo de la aplicación sin volcar en los archivos de texto (\texttt{logs/*.log}) el contenido íntegro de las peticiones de API que contienen la clave de acceso.
+\end{itemize}
+
+\subsection{Integridad de los datos de la ALMG}
+
+En cumplimiento con las restricciones de propiedad intelectual mencionadas en el Capítulo 1, el entorno de desarrollo se ha configurado para que los archivos PDF originales de la Academia de Lenguas Mayas de Guatemala residan únicamente en el almacenamiento local del investigador. El repositorio en la nube solo contiene los scripts de procesamiento y los resultados validados, garantizando el respeto a los derechos de autor de las fuentes originales.
+
+\section{Selección y descripción del corpus de trabajo}
+
+La validez de este estudio depende de la representatividad y complejidad del material documental seleccionado. Para ello, se ha conformado un corpus de trabajo compuesto por tres gramáticas normativas fundamentales, editadas por la Academia de Lenguas Mayas de Guatemala (ALMG), que representan diferentes variantes y desafíos técnicos.
+
+\subsection{Criterios de selección}
+
+Se han seleccionado estas obras basándose en tres criterios estratégicos:
+
+\begin{itemize}
+    \item \textbf{Relevancia demográfica:} El K'iche', el Kaqchikel y el Mam se encuentran entre las lenguas mayas con mayor número de hablantes y producción académica, lo que garantiza que los resultados tengan un impacto social significativo.
+    
+    \item \textbf{Diversidad estructural:} Cada gramática presenta una disposición tipográfica distinta, lo que permite evaluar la resiliencia del sistema ante diferentes estilos editoriales.
+    
+    \item \textbf{Complejidad del soporte:} El corpus incluye tanto documentos digitales con capa de texto como archivos consistentes en fotografías de libros físicos, permitiendo testear las capacidades multimodales del modelo Gemini.
+\end{itemize}
+
+\subsection{Caracterización del material documental}
+
+A continuación, se detallan las fuentes que integran el corpus de estudio:
+
+\begin{itemize}
+    \item \textbf{Gramática Normativa Kaqchikel:} Representa el mayor desafío estructural del proyecto. Se ha identificado como una obra con alta densidad de glosas interlineales y tablas de paradigmas verbales complejos. Especialmente, la página 172 de este documento se ha utilizado como ``patrón de estrés'' para las pruebas de temperatura debido a su saturación informativa.
+    
+    \item \textbf{Gramática Normativa K'iche':} Este documento destaca por su rigor en el análisis morfológico. Ha servido para validar la capacidad de la IA en la extracción de segmentaciones lingüísticas y su correcta traducción al castellano en bloques adyacentes.
+    
+    \item \textbf{Gramática Normativa Mam:} Incorporada para asegurar que el pipeline sea capaz de manejar variaciones en el conjunto de caracteres Unicode y estructuras de numeración jerárquica que difieren levemente de las otras dos variantes.
+\end{itemize}
+
+\subsection{Conformación del test set (Conjunto de pruebas)}
+
+Dada la restricción de tiempo y potencia de cómputo (analizada en el Capítulo 1), no se ha procedido al procesado lineal de los libros completos. En su lugar, se ha construido un \textit{Test Set} compuesto por una selección de 2 a 3 páginas de alta complejidad por cada idioma.
+
+Este subconjunto de datos ha sido etiquetado manualmente para generar el \textit{Ground Truth} necesario, permitiendo que el módulo \texttt{evaluator} realice comparativas estadísticas precisas sobre la estabilidad del sistema bajo diferentes configuraciones de temperatura.
+
+
+
+
+
+
+
+
+
+
+
+% \chapter{Metodología} \label{metodologia}
+
+
+
+% \section{Marco de Trabajo: Scrum Adaptado}
+% Durante el desarrollo de SIDManager, adoptamos una metodología ágil basada en Scrum, adaptada a las necesidades del proyecto y a la colaboración remota con Santander Consumer Finance. Implementamos:
+
+% \begin{itemize}
+%     \item Sprints Semanales: Cada lunes, realizábamos una planificación de sprint con el tutor de Santander, donde definíamos los objetivos clave y priorizábamos tareas usando diagramas UML de secuencia.
+%     \item Daily Standups Virtuales: Breves reuniones matutinas (15 min) para sincronizar avances y bloquedores, manteniendo al equipo alineado a pesar de la distancia.
+%     \item Retrospectivas: Al final de cada sprint, analizábamos qué funcionó (ej: code reviews estructuradas) y qué mejorar (ej: ajustar la granularidad de las user stories).
+% \end{itemize}
+
+% \section{Herramientas Ágiles Clave}
+
+% Para garantizar trazabilidad y calidad:
+
+% \begin{itemize}
+%     \item Code Reviews Colaborativas: Se realizaron revisiones de código semanales, donde el tutor evaluaba los commits contra estándares como Java Code Conventions y patrones de diseño como Singleton o Facade.
+%     \item UML como Lenguaje Común: Diagramas de secuencia  servían como esquemas técnicos antes de implementar features críticas (ej: flujo de autenticación con Spring Security).
+%     \item Tablero Kanban Digital: En Trello, gestionábamos tareas con columnas clásicas (To Do, In Progress, Done) y etiquetas de prioridad.
+% \end{itemize}
+
+% \section{Adaptación a Cambios}
+% La naturaleza iterativa de Scrum nos permitió:
+
+% \begin{itemize}
+%     \item Incorporar Feedback en Tiempo Real: Cuando se identificó la necesidad de pseudopaginación para 20K documentos, ajustamos el sprint siguiente para priorizarlo.
+%     \item Mantener Calidad bajo Presión: Las definition of done incluían: (1) pruebas manuales, (2) logs estructurados con Log4j, y (3) documentación Javadoc.
+% \end{itemize}
+
+% Este enfoque en metodologías ágiles generó resultados tangibles.
+
+% \begin{itemize}
+%     \item Entregables Consistentes: 8 sprints completados, con demo funcional tras cada uno.
+%     \item Código Limpio y Documentado: +15 clases con Javadoc, facilitando la transición al equipo de Santander.
+%     \item Flexibilidad: Algunos cambios mayores de requisitos absorbidos sin impactar la fecha de entrega (como la migración del inicio de sesión manual a Spring Security).
+% \end{itemize}
 
 

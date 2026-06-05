@@ -1,0 +1,122 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\nonumberline Resumen}{\es@scroman {v}}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Definición del problema}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Alcance y limitaciones}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Restricciones de propiedad intelectual y publicación de datos}{3}{subsection.1.2.1}%
+\contentsline {subsubsection}{\nonumberline Acotación de la carga de trabajo}{3}{subsubsection*.9}%
+\contentsline {subsubsection}{\nonumberline Limitaciones técnicas de la API de Gemini}{4}{subsubsection*.10}%
+\contentsline {chapter}{\numberline {2}Estado de la cuestión}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Modelos de lenguaje de gran tamaño (LLMs) aplicados a OCR}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}APIs de LLMs}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Ecosistema actual}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Análisis de la Volatilidad y Restricciones de Acceso}{8}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Configuración de Modelos: Parámetro de Temperatura}{9}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Transfer Learning: Sinergias Lingüísticas y Extrapolación Global}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Inferencia multilingüe y pesos compartidos}{10}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}El valor de los datos estructurados (XML/LaTeX)}{10}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Democratización del conocimiento lingüístico}{11}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Alternativas en modelos locales y soberanía tecnológica}{11}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Mistral OCR y la eficiencia europea}{11}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}DeepSeek-OCR-2: El avance de los VLMs}{12}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}IBM granite-docling: miniaturización y precisión}{12}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Ventajas de la implementación local}{12}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}Metodología de evaluación y métricas de rendimiento en IA}{12}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Métricas de error de texto (CER y WER)}{13}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Métricas de clasificación y precisión general}{13}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Evaluación de la integridad estructural en LLMs}{14}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Lingüística computacional: análisis morfosintáctico y glosas}{15}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Análisis morfológico en lenguas aglutinantes}{15}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Estructura sintáctica y variabilidad}{15}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}El desafío de las glosas interlineales}{16}{subsection.2.6.3}%
+\contentsline {section}{\numberline {2.7}Contexto sociolingüístico: lenguas minorizadas y preservación digital}{17}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}El concepto de lengua minorizada}{17}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}El papel de la Academia de Lenguas Mayas de Guatemala (ALMG)}{17}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Urgencia de la preservación estructurada}{18}{subsection.2.7.3}%
+\contentsline {section}{\numberline {2.8}Lenguajes de marcado y estándares de representación documental}{18}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}XML y la representación jerárquica de la información}{18}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Mecanismos de validación estructural (DTD y XSD)}{19}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Composición de textos mediante \LaTeX }{19}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.4}Paradigmas de intercambio de datos: XML frente a JSON}{20}{subsection.2.8.4}%
+\contentsline {subsection}{\numberline {2.8.5}Paradigmas de almacenamiento lingüístico: XML estructurado frente a corpus paralelos convencionales}{20}{subsection.2.8.5}%
+\contentsline {chapter}{\numberline {3}Objetivos del trabajo}{23}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Objetivo general}{23}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Objetivos específicos}{23}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Metodología y entorno de desarrollo}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Gestión del ciclo de vida del proyecto}{25}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Planificación bajo restricciones}{25}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Fases del desarrollo}{25}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Control de versiones y documentación}{26}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Configuración del entorno de desarrollo}{26}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Gestión de entornos virtuales (Anaconda)}{27}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Dependencias y librerías críticas}{27}{subsection.4.2.2}%
+\contentsline {paragraph}{\nonumberline Interacción con modelos de IA}{27}{paragraph*.11}%
+\contentsline {paragraph}{\nonumberline Procesamiento de documentos y visión}{27}{paragraph*.12}%
+\contentsline {paragraph}{\nonumberline Gestión y validación de datos}{28}{paragraph*.13}%
+\contentsline {subsection}{\numberline {4.2.3}Estructura de directorios}{28}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Gestión de claves de API y seguridad de la información}{28}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Externalización de credenciales}{28}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Protección del repositorio y prevención de fugas}{28}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Integridad de los datos de la ALMG}{29}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Selección y descripción del corpus de trabajo}{29}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Criterios de selección}{29}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Caracterización del material documental}{29}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Conformación del test set (Conjunto de pruebas)}{30}{subsection.4.4.3}%
+\contentsline {chapter}{\numberline {5}Diseño e implementación del sistema}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Arquitectura general del sistema}{31}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Flujo de trabajo del pipeline}{31}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Organización de los módulos del sistema}{32}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Estructuración y Formalización del Esquema XML y DTD}{33}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Definición Formal de la Gramática de Datos (DTD)}{34}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Módulo de procesamiento de documentos (\texttt {pdf\_processor.py})}{35}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Lógica de extracción y segmentación de bytes}{35}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Gestión de la integridad y fidelidad del documento}{35}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Selección de rangos y modularidad}{36}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Motor de generación mediante IA (\texttt {ai\_generator.py})}{36}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Configuración y parametrización del modelo}{36}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Estrategia de inferencia: Few-Shot Learning}{37}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Ingeniería de prompts estructural}{37}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Limpieza de respuesta (Parsing)}{37}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}Estructuración, corrección y validación XML}{37}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Definición de la gramática de datos (DTD)}{38}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Corrección heurística automática (\texttt {xml\_corrector.py})}{38}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Validación de integridad estructural (\texttt {xml\_validator.py})}{38}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}Motor de conversión y tipografía científica (\texttt {converter.py})}{39}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Mapeo semántico XML--\LaTeX }{39}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Tratamiento de glosas y caracteres especiales}{39}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Automatización de la compilación}{40}{subsection.5.5.3}%
+\contentsline {section}{\numberline {5.6}Automatización de experimentos y orquestación (\texttt {experiment\_runner.py})}{40}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Diseño del barrido de hiperparámetros}{41}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Flujo de orquestación modular}{41}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Persistencia y versionado de resultados}{41}{subsection.5.6.3}%
+\contentsline {chapter}{\numberline {6}Experimentación y Análisis de Resultados}{43}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Diseño Experimental y Metodología de Evaluación}{43}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Análisis Empírico del Parámetro de Temperatura}{43}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Comportamiento Global y No Monotonicidad del Sistema}{44}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}El ``Punto Dulce'' (\textit {Sweet Spot}) frente al Determinismo Absoluto}{44}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Resiliencia Estructural e Insensibilidad Térmica en Páginas Estables}{45}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Correlación entre la Complejidad del Contenido y la Sensibilidad Térmica}{46}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Evaluación Comparativa de Arquitecturas Multimodales (Modelos)}{48}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Dominancia Sistémica de la Arquitectura Avanzada (\texttt {gemini-3.5-flash})}{48}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}El Comportamiento Paradójico de los Modelos de Escala Reducida (\texttt {Lite})}{49}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Elasticidad de la Brecha Intermodelo en Función de la Complejidad del \textit {Layout}}{50}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}No Linealidad Genérica del Rendimiento frente al Nomenclátor de Versión}{51}{subsection.6.3.4}%
+\contentsline {chapter}{\numberline {7}Conclusiones y trabajo futuro}{53}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Síntesis del trabajo desarrollado}{53}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Conclusiones del experimento con diferentes temperaturas}{53}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Conclusiones del experimento con diferentes modelos}{55}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2}Grado de cumplimiento de los objetivos}{56}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Lecciones aprendidas y desafíos técnicos}{57}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}La fragilidad de la dependencia de APIs externas}{57}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}La IA como motor, la ingeniería como cinturón de seguridad}{57}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Complejidad lingüística maya}{57}{subsection.7.3.3}%
+\contentsline {section}{\numberline {7.4}Líneas de investigación futura}{58}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Migración a modelos locales y soberanía tecnológica}{58}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Expansión del corpus lingüístico}{58}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Desarrollo de una plataforma de consulta lingüística}{58}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.4}Optimización del pipeline mediante RAG}{59}{subsection.7.4.4}%
+\contentsline {subsection}{\numberline {7.4.5}Colaboración institucional y difusión de datos}{59}{subsection.7.4.5}%
+\def \@chapapp {\appendixname }
+\contentsline {chapter}{\numberline {A}Anexo I. Esquemas en xml}{65}{chapter.A}%
+\contentsline {chapter}{Lista de acrónimos}{69}{lstnumber.A.3.20}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

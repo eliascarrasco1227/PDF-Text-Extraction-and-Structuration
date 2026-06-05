@@ -1,274 +1,646 @@
 
-\chapter{Diseño de SIDManager} \label{disenyo}
+\chapter{Diseño e implementación del sistema}
 
-\section{Modelo de los documentos}
-\label{subsec:document-architecture}
-Para comprender bien las tablas de la base de datos que vamos a utilizar, cabe destacar que se ha empleado una base de datos de la empresa Santander. Al ser una base de datos de una entidad bancaria, no se pueden mostrar todas las entidades de esta base de datos por motivos de seguridad. Es por este motivo que aquí únicamente hablaremos de las entidades directamente relacionadas con la aplicación, que son dos. La primera ya existía antes de crear la aplicación y se llamaba Documents (Documentos) y la segunda se creó durante el desarrollo de la aplicación SIDManager; su nombre es ClientUser (Usuario Cliente o simplemente usuario). 
+En este capítulo se describe la arquitectura técnica del sistema desarrollado, detallando la lógica de cada módulo y los mecanismos de integración entre el procesamiento de documentos, la inteligencia artificial y la generación de documentación científica.
 
-En caso de querer saber más sobre la base de datos, consulte el esquema del anexo \ref{fig:BD-scheme}.
+\section{Arquitectura general del sistema}
 
-A lo largo del siguiente capítulo se hablará mucho de los documentos; por ello, es necesario explicar bien a qué queremos decir cuando hablamos de estos. Esta aplicación ha sido creada, como se ha dicho anteriormente, con el fin de confirmar si los documentos están guardados correctamente, pero estos pueden contener información sensible a la cual no debemos acceder. Es por ello que, inclusive, los metadatos de este documento están restringidos. Es por ello que debemos mostrar la mínima información posible al usuario sobre el documento, pero que sepa que este está correctamente guardado. Para ello, en la aplicación, los documentos tienen 5 apartados:
+El sistema se ha diseñado bajo una arquitectura modular y desacoplada, organizada en un \textit{pipeline} de procesamiento secuencial con capas de validación. Esta estructura permite que cada componente cumpla una función única, facilitando el mantenimiento y la posible sustitución de módulos (como el cambio de modelo de IA) sin afectar al resto del ecosistema.
+
+\subsection{Flujo de trabajo del pipeline}
+
+El proceso de transformación de una gramática analógica en un documento estructurado sigue un flujo de cinco etapas:
+
 \begin{enumerate}
-    \item client\_app\_id:
-    identificador numérico de la aplicacion del cliente, es el identificador que tiene la aplicación que ha creado el documento, es decir, si en la empresa hay 3 aplicaciones como OutSystem, Vue y Java cada una de estas aplicaciones tendría un identificador (1, 2 y 3). Por tanto con este dato sabemos en que aplicación se ha creado el documento. Podríamos definir cliente como la aplicación donde ese crea. Este identificador es repetible ya que dos documentos pueden ser creados por la misma aplicación.
+    \item \textbf{Capa de ingesta y preprocesamiento:} El sistema localiza los archivos PDF en el directorio \texttt{data/} y los transforma en imágenes de alta resolución compatibles con la entrada multimodal de la API.
+    
+    \item \textbf{Capa de inferencia (Motor de IA):} Se envían las imágenes junto con un \textit{prompt} especializado y ejemplos de entrenamiento (\textit{few-shot}) para obtener una respuesta en formato XML.
+    
+    \item \textbf{Capa de post-procesamiento y corrección:} La salida de la IA se somete a una limpieza automática para corregir errores sintácticos comunes en la generación estocástica (etiquetas mal formadas o duplicadas).
+    
+    \item \textbf{Capa de validación estructural:} Se contrasta el XML generado contra el archivo de definición \texttt{gramatica.dtd} para asegurar el cumplimiento de la jerarquía lingüística.
+    
+    \item \textbf{Capa de exportación y tipografía:} Una vez validado, el contenido se traslada a formatos finales: XML para almacenamiento de datos, \LaTeX{} para publicación académica y PDF para mayor visibilidad.
+\end{enumerate}
+
+\subsection{Organización de los módulos del sistema}
+
+La implementación se refleja en la siguiente organización de directorios en el repositorio:
+
+\begin{itemize}
+    \item \textbf{\texttt{core/}:} Contiene la lógica de negocio principal, incluyendo la interacción con la IA, la gestión de archivos y el corrector de XML.
+    
+    \item \textbf{\texttt{config/}:} Centraliza los parámetros del sistema, rutas de directorios y la gestión de la arquitectura técnica.
+    
+    \item \textbf{\texttt{validator/}:} Aloja las reglas formales (DTD) y el script de validación que garantiza la calidad de los datos.
+    
+    \item \textbf{\texttt{latex\_generator/}:} Módulo especializado en la conversión de etiquetas XML a comandos de tipografía científica.
+    
+    \item \textbf{\texttt{evaluator/}:} Infraestructura para la comparación de resultados y cálculo de métricas de precisión frente al \textit{test set}.
+\end{itemize}
+
+Esta arquitectura garantiza la trazabilidad absoluta de los datos: desde el PDF original hasta el archivo \texttt{.tex} final, cada paso es registrado y puede ser auditado mediante el sistema de \textit{logs} centralizado.
+
+Además de las carpetas anteriores, también existen directorios destinados al almacenamiento de datos y recursos auxiliares:
+
+\begin{itemize}
+    \item \textbf{\texttt{data/}:} Contiene los datos de entrada al programa, como gramáticas en PDF, incluyendo los ejemplos de entrada y salida utilizados en el proceso de \textit{few-shot learning}.
+    
+    \item \textbf{\texttt{logs/}:} Almacena de manera permanente todos los archivos de texto con registros de la aplicación para poder consultar los procesos que se han ejecutado en cada momento.
+    
+    \item \textbf{\texttt{output/}:} Carpeta por defecto para la salida del sistema y donde se almacenan las ejecuciones anteriores para futuros análisis y comparativas.
+    
+    \item \textbf{\texttt{prompts/}:} Aloja los archivos de texto con las diferentes versiones de los \textit{prompts} que se han ido utilizando a lo largo del desarrollo.
+    
+    \item \textbf{\texttt{test\_set/}:} Centraliza los conjuntos de pruebas empleados para la evaluación de la salida del programa.
+\end{itemize}
 
 
-    \item client\_doc\_id:
-    identificador numérico del documento del cliente, es el identificador que la aplicación le ha asignado al documento. Como las aplicaciones no pueden ni deben acceder a los documentos de otras, este identificador se puede repetir de una aplicación a otra. Es decir, podría haber el primer documento creado por Java y el primer documento creado por OutSystem. Para resumir este identificador es repetible ya que dos documentos pueden tener asignados el mismo identificador por aplicaciones distintas.
+\subsection{Estructuración y Formalización del Esquema XML y DTD}
+
+La consecución de un corpus digitalizado con valor científico para la lingüística computacional exige que la salida generada por el Modelo de Lenguaje de Gran Tamaño (LLM) no solo sea precisa a nivel grafémico, sino que se ajuste estrictamente a una gramática de datos formal. Para ello, se ha diseñado un esquema jerárquico personalizado bajo el estándar XML, cuya validez sintáctica y estructural queda gobernada por una Definición de Tipo de Documento (DTD).
+
+En las etapas iniciales de prototipado del sistema, se propuso una nomenclatura e infraestructura de marcado en castellano orientada a emular la disposición física y bidimensional de las páginas. El marcado inicial respondía al patrón heurístico mostrado en la Tabla~\ref{tab:evolucion_nomenclaturas}.
+
+\begin{table}[ht]
+\centering
+\caption{Evolución de la nomenclatura XML durante el diseño del esquema estructural}
+\label{tab:evolucion_nomenclaturas}
+\begin{tabular}{|l|l|l|}
+\hline
+Anterior & Nuevo & Descripción \\ \hline
+glosa\_interlineal & interlinear\_gloss & Conjunto semántico a analizar \\ \hline
+corpus\_paralelo & parallel\_phrase & Frases en idioma original y traducido \\ \hline
+frase\_original & original & Frase en idioma original (maya) \\ \hline
+frase\_español & translation & Frase en idioma traducido (español) \\ \hline
+glosa & morpheme\_analysis & Análisis morfológico \\ \hline
+columna1 & unit & Unidad a analizar \\ \hline
+fila1 & form & Parte de la frase original \\ \hline
+fila2 & gloss & Análisis morfológico del segmento de la frase original \\ \hline
+\end{tabular}
+\end{table}
+
+La estructura inicial del marcado XML puede observarse en el Código~\ref{code:modelo_glosa_inicial}. Este diseño perseguía representar de forma explícita la disposición de las glosas interlineales mediante elementos que simulaban columnas y filas, facilitando la interpretación visual de la información lingüística.
+
+Sin embargo, a través de un proceso de refinamiento iterativo, se descartó esta aproximación debido a dos deficiencias de diseño:
+
+\begin{itemize}
+    \item Acoplamiento visual: las etiquetas como \texttt{<columna1>} o \texttt{<fila1>} forzaban al modelo de IA a realizar un análisis geométrico del soporte físico en lugar de una interpretación lingüística, lo que aumentaba la tasa de error por la distorsión espacial de las fuentes escaneadas.
+
+    \item Incompatibilidad internacional: se requería una transición hacia los estándares anglosajones dominantes en el Procesamiento del Lenguaje Natural (PLN).
+\end{itemize}
+
+En consecuencia, el esquema se reestructuró por completo hacia una ontología abstracta en inglés, abstrayendo el diseño plano y encapsulando las unidades lingüísticas en árboles semánticos de análisis morfémico y sintáctico. Asimismo, se optimizó la flexibilidad de la estructura eliminando contenedores intermedios rígidos para secciones complejas, lo que dotó al \textit{pipeline} de una mayor resiliencia ante la naturaleza estocástica del LLM. El esquema anterior se transforma en la estructura mostrada en el código~\ref{code:kachiquel_xml_refinado}.
+
+\begin{lstlisting}[
+    language={},
+    label=code:kachiquel_xml_refinado,
+    caption={Esquema XML refinado para la representación de glosas interlineales}
+]
+<interlinear_gloss>
+  <parallel_phrase>
+    <original>k'am chi-Ø w-il-a'</original>
+    <translation>No lo veo</translation>
+  </parallel_phrase>
+
+  <morpheme_analysis>
+    <unit>
+      <form>k'am</form>
+      <gloss>NEG</gloss>
+    </unit>
+
+    <unit>
+      <form>chi-Ø</form>
+      <gloss>INC-</gloss>
+    </unit>
+
+    ...
+  </morpheme_analysis>
+</interlinear_gloss>
+\end{lstlisting}
+
+\subsection{Definición Formal de la Gramática de Datos (DTD)}
+
+El contrato estructural definitivo que rige la validación sintáctica del sistema se encuentra formalizado en el archivo \texttt{gramatica.dtd}, cuyo código se detalla en el Código~\ref{code:dtd}.
+
+Con este archivo DTD, el documento XML resultante se articula como un árbol jerárquico de herencia y adyacencia donde se diferencian dos grandes tipologías de elementos:
+
+\begin{itemize}
+    \item Elementos de estructura editorial 
+    
+    (\texttt{document}, \texttt{page}, \texttt{heading}, \texttt{title}, \texttt{line}): \texttt{document} opera como el nodo raíz del sistema. Este contiene de forma iterativa uno o más elementos \texttt{page}. Cada página está dotada de un atributo obligatorio (\texttt{number}) para preservar la trazabilidad bibliográfica respecto al PDF original. El contenido interno de \texttt{page} es de tipo mixto y libre de contenedores rígidos; permite la aparición libre e intercalada de líneas ordinarias (\texttt{line}), títulos capitulares (\texttt{title}) y encabezados (\texttt{heading}), mitigando los bloqueos en el analizador sintáctico (\textit{parser}) cuando la IA procesa estructuras transicionales de maquetación.
+
+    \item Elementos de análisis lingüístico avanzado 
+    
+    (\texttt{interlinear\_gloss}, \texttt{parallel\_phrase}, \texttt{morpheme\_analysis}, \texttt{syntactic\_analysis}, \texttt{unit}): el elemento central de la digitalización semántica es \texttt{interlinear\_gloss}. Como se especifica en la lógica relacional de la DTD, este nodo actúa como un orquestador que puede integrar, de manera opcional y secuencial, un bloque de traducción directa (\texttt{parallel\_phrase}), una capa de desagregación morfológica (\texttt{morpheme\_analysis}) y una capa de segmentación de sintagmas y funciones gramaticales (\texttt{syntactic\_analysis}). Las capas morfológica y sintáctica se componen obligatoriamente de una o más estructuras constitutivas denominadas \texttt{unit}. A nivel atómico, cada \texttt{unit} asocia unívocamente una forma morfológica o sintáctica concreta de la lengua maya (\texttt{form}) con su glosa explicativa parametrizada en castellano (\texttt{gloss}).
+\end{itemize}
+
+Mediante esta arquitectura relacional, el sistema no solo salvaguarda el texto plano de las gramáticas normativas, sino que genera un mapa posicional y gramatical explícito altamente estructurado, idóneo para el entrenamiento automatizado de futuros modelos cognitivos.
 
 
-    \item provider\_id: identificador numérico del proveedor, es el identificador asignado a las empresas que a partir del documento en un formato de datos basado en texto, se encargan de procesarlo y convertirlo a un formato adaptado a la impresión y enviarlo en formato físico y digital.
 
-    \item sent\_at:
-    Este campo corresponde a la fecha y hora a la que el documento fue mandado a a la empresa que se encarga de procesarlo (proveedor) en formato timestamp (aaaa/mm/dd hh:mm:ss).
+\section{Módulo de procesamiento de documentos (\texttt{pdf\_processor.py})}
+
+El primer eslabón del \textit{pipeline} es el módulo encargado de la ingesta y manipulación de los archivos fuente. Dado que las gramáticas de la ALMG presentan una naturaleza heterogénea, se ha implementado una estrategia de segmentación y extracción de flujo binario que permite aislar fragmentos del documento original sin alterar su estructura interna.
+
+\subsection{Lógica de extracción y segmentación de bytes}
+
+El script \texttt{pdf\_processor.py} actúa como un gestor de \textit{streams} de datos que opera directamente sobre la estructura del formato PDF. En lugar de realizar una rasterización de páginas, su función principal es segmentar el documento para extraer rangos específicos de páginas y servirlos en formato binario (\textit{bytes}) de forma eficiente.
+
+\begin{itemize}
+    \item Herramientas técnicas: se utiliza la librería \texttt{PyPDF2}, que permite realizar operaciones de lectura y escritura a bajo nivel sobre archivos PDF.
+
+    \item Procedimiento: el módulo abre el archivo fuente mediante \texttt{PdfReader}, calcula el índice de las páginas solicitado realizando el ajuste de base 1 a base 0 requerido por la librería, y emplea \texttt{PdfWriter} para encapsular únicamente las páginas seleccionadas. El resultado no es una imagen, sino un objeto serializado en memoria (\texttt{io.BytesIO}) que contiene el PDF resultante, el cual se retorna como un flujo de \textit{bytes}. Este enfoque asegura que la IA reciba la información más pura posible del documento, conservando su estructura vectorial nativa.
+\end{itemize}
+
+\subsection{Gestión de la integridad y fidelidad del documento}
+
+Un factor crítico en este desarrollo es la preservación de la integridad del documento original durante el filtrado. Al trabajar con la manipulación de \textit{bytes} en lugar de conversiones a imagen, el sistema garantiza:
+
+\begin{itemize}
+    \item Ausencia de degradación: al evitar procesos de binarización o compresión de imágenes, el texto y los elementos gráficos del PDF mantienen su definición nativa, facilitando que el modelo multimodal interprete caracteres pequeños y estructuras complejas con mayor precisión.
+
+    \item Eficacia en el entorno de producción: la entrega del contenido en formato de flujo binario permite una integración directa con los \textit{endpoints} de la API de Gemini que aceptan archivos PDF como fuente, aprovechando la capacidad del modelo para ``leer'' la estructura interna del documento sin necesidad de procesar metadatos innecesarios o ruido visual generado por conversiones de formato.
+\end{itemize}
+
+\subsection{Selección de rangos y modularidad}
+
+Para optimizar el consumo de \textit{tokens} y asegurar el cumplimiento de las cuotas diarias de la API, el procesador incluye una lógica de extracción selectiva basada en rangos. Esta funcionalidad ha sido determinante para trabajar sobre el \textit{Test Set} de forma aislada, permitiendo ejecutar pruebas rápidas, precisas y fácilmente reproducibles sin cargar volúmenes masivos de datos irrelevantes.
+
+En resumen, \texttt{pdf\_processor.py} garantiza que el sistema gestione la ingesta de documentos de manera modular y técnica, proporcionando a la Inteligencia Artificial una entrada de datos fiel al original y optimizada para el \textit{pipeline} de digitalización estructural.
+
+
+
+
+
+\section{Motor de generación mediante IA (\texttt{ai\_generator.py})}
+
+Este módulo constituye el núcleo cognitivo del sistema. Su función es orquestar la comunicación con los Modelos de Lenguaje de Gran Tamaño (LLMs) de la familia Gemini, transformando las imágenes procesadas en datos estructurados mediante técnicas avanzadas de ingeniería de \textit{prompts}.
+
+\subsection{Configuración y parametrización del modelo}
+
+El script \texttt{ai\_generator.py} gestiona la forma en la que se realiza la llamada a la API del modelo generativo. La configuración de la petición se centra en tres parámetros fundamentales:
+
+\begin{itemize}
+    \item Temperatura: parámetro central de la experimentación de este TFM, que regula el equilibrio entre determinismo y creatividad. Se ha implementado de forma variable para permitir el estudio sistemático de su impacto en la precisión estructural.
+
+    \item Modelo: identifica el modelo utilizado para generar la respuesta. Esta constante se encuentra definida en el archivo \texttt{properties.py}.
+
+    \item Contenido: engloba tanto el \textit{prompt} principal como los ejemplos de \textit{few-shot learning}, incluyendo sus respectivas entradas, salidas y explicaciones.
+\end{itemize}
+
+\subsection{Estrategia de inferencia: Few-Shot Learning}
+
+Para garantizar que el modelo genere una estructura XML coherente con la gramática formal definida por la DTD, el sistema no utiliza una estrategia de \textit{Zero-Shot Learning}, sino una aproximación basada en \textit{Few-Shot Learning}.
+
+A través del módulo \texttt{prompt\_reader.py}, el sistema incorpora a la petición ejemplos reales formados por pares de entrada y salida compuestos por una imagen y su correspondiente XML validado, almacenados en la carpeta \texttt{data/few-shot}.
+
+Esta técnica proporciona al modelo un patrón visual y sintáctico previo, reduciendo significativamente las alucinaciones estructurales y favoreciendo una aplicación consistente de las etiquetas XML definidas en el esquema de datos.
+
+\subsection{Ingeniería de prompts estructural}
+
+El \textit{prompt} enviado al modelo ha sido diseñado para actuar como una guía técnica de generación. Entre las directrices incorporadas destacan las siguientes:
+
+\begin{itemize}
+    \item Fidelidad textual: obligatoriedad de transcribir caracteres especiales, signos diacríticos y grafías propias de las lenguas mayas sin aplicar normalizaciones innecesarias.
+
+    \item Jerarquía XML: instrucciones explícitas para encapsular la información siguiendo la estructura formal descrita en la DTD.
+
+    \item Manejo de errores visuales: directrices sobre cómo proceder ante manchas de tinta, texto parcialmente oculto o imágenes borrosas, instando al modelo a emplear inferencia contextual para reconstruir palabras o segmentos incompletos.
+\end{itemize}
+
+\subsection{Limpieza de respuesta (Parsing)}
+
+Dado que los LLMs suelen devolver sus respuestas encapsuladas en bloques de código Markdown mediante delimitadores de triple comilla invertida, \texttt{ai\_generator.py} incorpora una fase de limpieza o \textit{parsing} destinada a extraer exclusivamente el contenido XML generado.
+
+Esta operación constituye un paso previo imprescindible para que la salida pueda ser procesada correctamente por los módulos de corrección y validación estructural, evitando que elementos de presentación ajenos al documento interfieran con el análisis sintáctico posterior.
+
+
+
+\section{Estructuración, corrección y validación XML}
+
+Uno de los mayores desafíos de emplear LLMs para la generación de datos es su naturaleza estocástica, que puede derivar en errores sintácticos de marcado. Para mitigar este riesgo, el sistema incorpora una capa de garantía de calidad (\textit{Quality Assurance}, QA) que combina corrección heurística y validación formal.
+
+\subsection{Definición de la gramática de datos (DTD)}
+
+La estructura jerárquica de las gramáticas mayas se ha formalizado en el archivo \texttt{validator/gramatica.dtd}. Este documento actúa como el contrato estructural que debe cumplir cualquier salida generada por el sistema.
+
+El DTD establece las relaciones jerárquicas entre los distintos elementos del documento, definiendo qué etiquetas pueden aparecer, en qué orden deben hacerlo y cuáles son sus restricciones estructurales. Gracias a este mecanismo, se garantiza que los documentos XML producidos por la Inteligencia Artificial mantengan una organización coherente y compatible con las fases posteriores de procesamiento.
+
+\subsection{Corrección heurística automática (\texttt{xml\_corrector.py})}
+
+Antes de someter la respuesta de la IA a una validación formal, el sistema invoca el módulo \texttt{xml\_corrector.py}. Este componente aplica una serie de algoritmos de limpieza destinados a subsanar los errores más frecuentes detectados durante la fase de prototipado.
+
+Entre las operaciones realizadas destacan:
+
+\begin{itemize}
+    \item Cierre de etiquetas: detección y clausura automática de etiquetas que el modelo ha dejado abiertas debido a límites de generación o errores de inferencia.
+
+    \item Eliminación de redundancias: supresión de cabeceras XML duplicadas, bloques explicativos ajenos al documento o fragmentos de texto generados fuera de la estructura esperada.
+
+    \item Normalización estructural: verificación de la existencia de un único elemento raíz, corrigiendo situaciones en las que el modelo produce múltiples nodos principales incompatibles con la sintaxis XML.
+\end{itemize}
+
+Estas operaciones permiten aumentar significativamente la tasa de éxito de las validaciones posteriores sin alterar el contenido semántico generado por el modelo.
+
+\subsection{Validación de integridad estructural (\texttt{xml\_validator.py})}
+
+Una vez corregido, el documento XML es procesado por el módulo de validación. Utilizando la librería \texttt{lxml}, el sistema compara la estructura generada con las reglas definidas en el archivo DTD.
+
+El resultado de este proceso es binario:
+
+\begin{itemize}
+    \item Si el documento cumple todas las restricciones gramaticales, se autoriza su almacenamiento y posterior conversión a \LaTeX.
+
+    \item Si se detecta cualquier incumplimiento estructural, el error es capturado y registrado automáticamente en el sistema de \textit{logs}.
+\end{itemize}
+
+Esta capacidad de detección ha permitido cuantificar experimentalmente la estabilidad de las diferentes configuraciones de temperatura analizadas en el Capítulo 5. De este modo, una ejecución puede clasificarse como fallida incluso cuando el contenido textual es correcto, siempre que la estructura jerárquica no respete las reglas definidas por la gramática formal.
+
+La incorporación de esta capa de validación transforma una herramienta de generación textual en un sistema de extracción de datos con garantías académicas, asegurando que la información digitalizada sea estructuralmente consistente y apta para su integración en repositorios lingüísticos y bases de datos especializadas.
+
+\section{Motor de conversión y tipografía científica (\texttt{converter.py})}
+
+La etapa final del sistema tiene como objetivo transformar los datos estructurados en XML en un documento de alta calidad tipográfica apto para su consulta, análisis y publicación académica. Para ello, se ha desarrollado el módulo \texttt{converter.py}, encargado de realizar la traducción semántica entre el modelo de datos XML y el lenguaje de composición tipográfica \LaTeX.
+
+\subsection{Mapeo semántico XML--\LaTeX}
+
+El convertidor implementa una lógica de transformación que asocia cada etiqueta XML con su representación correspondiente en \LaTeX, preservando la jerarquía definida en la gramática original.
+
+Entre las transformaciones más relevantes se encuentran:
+
+\begin{itemize}
+    \item Estructura jerárquica: los elementos que representan títulos, encabezados y divisiones documentales se convierten dinámicamente en comandos como \verb|\chapter{}|, \verb|\section{}| o \verb|\subsection{}| según su nivel de profundidad.
+
+    \item Cuerpo de texto: los bloques de contenido textual se normalizan para asegurar una correcta gestión de párrafos, saltos de línea y separación entre elementos, siguiendo los estándares de edición científica.
+\end{itemize}
+
+Este mecanismo garantiza que la organización lógica del documento permanezca inalterada durante todo el proceso de conversión.
+
+\subsection{Tratamiento de glosas y caracteres especiales}
+
+Uno de los principales retos técnicos abordados por este módulo es la correcta representación de los caracteres específicos de las lenguas mayas, incluyendo saltillos, vocales modificadas y otros símbolos lingüísticos presentes en las gramáticas normativas.
+
+Para ello, el sistema incorpora las siguientes estrategias:
+
+\begin{itemize}
+    \item Codificación Unicode: toda la salida se genera en formato UTF-8, permitiendo que motores de composición modernos como XeLaTeX o LuaLaTeX representen correctamente los caracteres especiales.
+
+    \item Formateo de glosas: los ejemplos lingüísticos se estructuran mediante tablas, listas y entornos especializados que preservan la alineación entre formas originales, segmentaciones morfológicas y traducciones, evitando los problemas de desorganización visual característicos de las conversiones automáticas desde texto plano.
+\end{itemize}
+
+Estas medidas resultan fundamentales para garantizar la fidelidad lingüística del documento final.
+
+\subsection{Automatización de la compilación}
+
+El proceso de conversión se encuentra completamente automatizado. Una vez que el archivo XML supera satisfactoriamente la validación estructural, \texttt{converter.py} genera de forma inmediata un archivo \texttt{.tex} completo y listo para compilar.
+
+Entre las tareas realizadas automáticamente destacan:
+
+\begin{itemize}
+    \item Generación del preámbulo técnico necesario para la configuración del documento.
+
+    \item Inclusión de los paquetes requeridos para el soporte de idiomas, codificación y maquetación.
+
+    \item Construcción automática de la estructura jerárquica utilizada posteriormente por \LaTeX{} para generar índices y referencias cruzadas.
+
+    \item Producción de un archivo final preparado para su compilación directa a PDF sin necesidad de intervención manual.
+\end{itemize}
+
+Esta capacidad de automatización completa el ciclo de digitalización propuesto en este trabajo: la información que originalmente se encuentra en fotografías o documentos PDF se transforma en un recurso digital estructurado, consultable, reutilizable y presentado con una calidad tipográfica equivalente a la de una edición académica profesional.
+
+
+
+
+
+
+\section{Automatización de experimentos y orquestación (\texttt{experiment\_runner.py})}
+
+Para llevar a cabo un estudio empírico sobre el comportamiento de los LLMs en la digitalización lingüística, se ha desarrollado un módulo de orquestación denominado \texttt{experiment\_runner.py}. Este componente permite ejecutar pruebas masivas de forma sistemática, eliminando el sesgo asociado al procesamiento manual y garantizando la reproducibilidad de los experimentos.
+
+\subsection{Diseño del barrido de hiperparámetros}
+
+El módulo está diseñado para realizar un barrido (\textit{sweep}) sobre el parámetro de temperatura del modelo. Para ello, el orquestador ejecuta el \textit{pipeline} completo de forma iterativa, variando la temperatura en un conjunto predefinido de valores, como por ejemplo 0.0, 0.1, 0.25, 0.5, 1.0 y 1.5.
+
+Con el objetivo de reducir el impacto de la variabilidad inherente a los modelos generativos, el sistema permite configurar múltiples repeticiones para cada valor de temperatura. Habitualmente se emplean entre 10 y 15 ejecuciones por configuración experimental.
+
+Esta estrategia permite calcular métricas agregadas y detectar comportamientos anómalos, especialmente en configuraciones de alta temperatura donde pueden aparecer fenómenos de inestabilidad estructural o pérdida de coherencia en la generación del XML.
+
+\subsection{Flujo de orquestación modular}
+
+El módulo \texttt{experiment\_runner.py} actúa como coordinador del sistema, invocando secuencialmente los distintos componentes del \textit{pipeline} para cada experimento.
+
+El flujo de ejecución sigue el siguiente orden:
+
+\begin{enumerate}
+    \item Obtención del documento de prueba mediante \texttt{pdf\_processor.py}.
+
+    \item Ejecución de \texttt{ai\_generator.py} utilizando la temperatura correspondiente a la iteración experimental.
+
+    \item Aplicación de las reglas de corrección implementadas en \texttt{xml\_corrector.py}.
+
+    \item Validación formal del resultado mediante \texttt{xml\_validator.py}.
+
+    \item Conversión del XML validado a \LaTeX{} utilizando \texttt{converter.py}.
+\end{enumerate}
+
+Esta organización modular permite reutilizar los mismos componentes tanto en experimentos automatizados como en ejecuciones individuales, garantizando la consistencia metodológica de todo el proceso.
+
+\subsection{Persistencia y versionado de resultados}
+
+Una de las características más relevantes de este módulo es su sistema de almacenamiento jerárquico de resultados. Cada ejecución se organiza automáticamente según criterios como el modelo empleado, el idioma procesado y la temperatura utilizada.
+
+El sistema incorpora además un mecanismo de versionado incremental. Cada resultado generado se almacena con un identificador de versión secuencial (\texttt{v1}, \texttt{v2}, \texttt{v3}, etc.), permitiendo estudiar la estabilidad del modelo a lo largo de múltiples ejecuciones.
+
+Gracias a este enfoque resulta posible analizar el grado de determinismo del sistema. Si varias ejecuciones producen exactamente la misma salida, puede inferirse un comportamiento altamente estable. Por el contrario, si aparecen diferencias significativas entre versiones generadas bajo la misma configuración, estas variaciones pueden cuantificarse y analizarse estadísticamente.
+
+Adicionalmente, el orquestador registra información relativa al tiempo de respuesta de la API y monitoriza posibles excepciones durante la ejecución. Entre ellas se incluyen errores de conectividad, interrupciones del servicio o agotamiento de cuotas de uso. La captura y almacenamiento de estos eventos permite reanudar experimentos interrumpidos sin comprometer la integridad de los datos obtenidos.
+
+Gracias a este nivel de automatización, el sistema trasciende el ámbito de una prueba conceptual y se convierte en una infraestructura experimental capaz de generar evidencia empírica sobre la fiabilidad de los Modelos de Lenguaje de Gran Tamaño en tareas de preservación y digitalización del patrimonio lingüístico. Los datos producidos por este módulo constituyen la base cuantitativa empleada posteriormente en el análisis de resultados presentado en el Capítulo 5.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% \chapter{Diseño de SIDManager} \label{disenyo}
+
+% \section{Modelo de los documentos}
+% \label{subsec:document-architecture}
+% Para comprender bien las tablas de la base de datos que vamos a utilizar, cabe destacar que se ha empleado una base de datos de la empresa Santander. Al ser una base de datos de una entidad bancaria, no se pueden mostrar todas las entidades de esta base de datos por motivos de seguridad. Es por este motivo que aquí únicamente hablaremos de las entidades directamente relacionadas con la aplicación, que son dos. La primera ya existía antes de crear la aplicación y se llamaba Documents (Documentos) y la segunda se creó durante el desarrollo de la aplicación SIDManager; su nombre es ClientUser (Usuario Cliente o simplemente usuario). 
+
+% En caso de querer saber más sobre la base de datos, consulte el esquema del anexo \ref{fig:BD-scheme}.
+
+% A lo largo del siguiente capítulo se hablará mucho de los documentos; por ello, es necesario explicar bien a qué queremos decir cuando hablamos de estos. Esta aplicación ha sido creada, como se ha dicho anteriormente, con el fin de confirmar si los documentos están guardados correctamente, pero estos pueden contener información sensible a la cual no debemos acceder. Es por ello que, inclusive, los metadatos de este documento están restringidos. Es por ello que debemos mostrar la mínima información posible al usuario sobre el documento, pero que sepa que este está correctamente guardado. Para ello, en la aplicación, los documentos tienen 5 apartados:
+% \begin{enumerate}
+%     \item client\_app\_id:
+%     identificador numérico de la aplicacion del cliente, es el identificador que tiene la aplicación que ha creado el documento, es decir, si en la empresa hay 3 aplicaciones como OutSystem, Vue y Java cada una de estas aplicaciones tendría un identificador (1, 2 y 3). Por tanto con este dato sabemos en que aplicación se ha creado el documento. Podríamos definir cliente como la aplicación donde ese crea. Este identificador es repetible ya que dos documentos pueden ser creados por la misma aplicación.
+
+
+%     \item client\_doc\_id:
+%     identificador numérico del documento del cliente, es el identificador que la aplicación le ha asignado al documento. Como las aplicaciones no pueden ni deben acceder a los documentos de otras, este identificador se puede repetir de una aplicación a otra. Es decir, podría haber el primer documento creado por Java y el primer documento creado por OutSystem. Para resumir este identificador es repetible ya que dos documentos pueden tener asignados el mismo identificador por aplicaciones distintas.
+
+
+%     \item provider\_id: identificador numérico del proveedor, es el identificador asignado a las empresas que a partir del documento en un formato de datos basado en texto, se encargan de procesarlo y convertirlo a un formato adaptado a la impresión y enviarlo en formato físico y digital.
+
+%     \item sent\_at:
+%     Este campo corresponde a la fecha y hora a la que el documento fue mandado a a la empresa que se encarga de procesarlo (proveedor) en formato timestamp (aaaa/mm/dd hh:mm:ss).
    
-    \item received\_at: 
-    Este campo corresponde a la fecha y hora a la que el documento fue recibido en la base de datos de la propia empresa, es decir, con este campo podemos saber si un documento está correctamente guardado en la base de datos y no se ha perdido (ya que los proveedores pueden cometer el error de no enviar de vuelta el documento). Tiene el mismo formato que sent\_at.
+%     \item received\_at: 
+%     Este campo corresponde a la fecha y hora a la que el documento fue recibido en la base de datos de la propia empresa, es decir, con este campo podemos saber si un documento está correctamente guardado en la base de datos y no se ha perdido (ya que los proveedores pueden cometer el error de no enviar de vuelta el documento). Tiene el mismo formato que sent\_at.
 
-\end{enumerate}
+% \end{enumerate}
 
-Veamos un ejemplo de cómo se vería un documento en la aplicación SIDManager para mayor comprensión de estos. En este apartado se van a hacer varios supuestos para entender qué significa cada campo del documento tal y como vemos en la tabla \ref{table:documentModel}.
+% Veamos un ejemplo de cómo se vería un documento en la aplicación SIDManager para mayor comprensión de estos. En este apartado se van a hacer varios supuestos para entender qué significa cada campo del documento tal y como vemos en la tabla \ref{table:documentModel}.
 
-\begin{table}
-    \caption{Modelo de los documentos}
-    \label{table:documentModel}
-    \begin{center}
-    \begin{tabularx}{\textwidth}{|l|X|X|}
-    \hline
-    \textbf{Nombre} & \textbf{Ejemplo de Contenido} & \textbf{Interpretación} \\
-    \hline
-    Client app id & 20 & Puede indicar que ha sido creada por la aplicación de Java (si Java es la aplicación número 20) \\
-    \hline
-    Client doc id & 12385823 & Quiere decir que de todos los documentos creados con java es el número 12385823 \\
-    \hline
-    Provider id & \texttt{jiehw72ih4r94yir9712} & Empresa que procesa los documentos (ej. Accenture) \\
-    \hline
-    Sent at & \texttt{2023-08-07 22:02:12} & Fecha y hora de envío del documento al proveedor \\
-    \hline
-    Received at & Not received & Documento aún no recibido por el proveedor (representado como \texttt{null} en la base de datos) \\
-    \hline
-    \end{tabularx}
-    \end{center}
-\end{table}
+% \begin{table}
+%     \caption{Modelo de los documentos}
+%     \label{table:documentModel}
+%     \begin{center}
+%     \begin{tabularx}{\textwidth}{|l|X|X|}
+%     \hline
+%     \textbf{Nombre} & \textbf{Ejemplo de Contenido} & \textbf{Interpretación} \\
+%     \hline
+%     Client app id & 20 & Puede indicar que ha sido creada por la aplicación de Java (si Java es la aplicación número 20) \\
+%     \hline
+%     Client doc id & 12385823 & Quiere decir que de todos los documentos creados con java es el número 12385823 \\
+%     \hline
+%     Provider id & \texttt{jiehw72ih4r94yir9712} & Empresa que procesa los documentos (ej. Accenture) \\
+%     \hline
+%     Sent at & \texttt{2023-08-07 22:02:12} & Fecha y hora de envío del documento al proveedor \\
+%     \hline
+%     Received at & Not received & Documento aún no recibido por el proveedor (representado como \texttt{null} en la base de datos) \\
+%     \hline
+%     \end{tabularx}
+%     \end{center}
+% \end{table}
 
 
-\section{Modelo de los usuarios}
-\label{subsec:user-architecture}
+% \section{Modelo de los usuarios}
+% \label{subsec:user-architecture}
 
-A lo largo del siguiente capítulo se hablará en múltiples ocasiones sobre los usuarios, por lo que es necesario explicar con detalle a qué nos referimos cuando mencionamos este concepto dentro del sistema.
+% A lo largo del siguiente capítulo se hablará en múltiples ocasiones sobre los usuarios, por lo que es necesario explicar con detalle a qué nos referimos cuando mencionamos este concepto dentro del sistema.
 
-Los usuarios en la aplicación representan a las personas que interactúan con el sistema, ya sea para acceder a sus funcionalidades o para gestionar información. Cada usuario está debidamente registrado en la base de datos con ciertos atributos que permiten su autenticación y gestión dentro de la plataforma. 
+% Los usuarios en la aplicación representan a las personas que interactúan con el sistema, ya sea para acceder a sus funcionalidades o para gestionar información. Cada usuario está debidamente registrado en la base de datos con ciertos atributos que permiten su autenticación y gestión dentro de la plataforma. 
 
-Para garantizar la seguridad y la correcta administración de los accesos, cada usuario en la aplicación se define mediante los siguientes apartados:
+% Para garantizar la seguridad y la correcta administración de los accesos, cada usuario en la aplicación se define mediante los siguientes apartados:
 
-\begin{enumerate}
-    \item Email:  
-    Es la dirección de correo electrónico del usuario. Se utiliza como identificador único del usuario en el sistema, permitiendo que cada usuario acceda con sus credenciales y reciba notificaciones o confirmaciones por correo.
+% \begin{enumerate}
+%     \item Email:  
+%     Es la dirección de correo electrónico del usuario. Se utiliza como identificador único del usuario en el sistema, permitiendo que cada usuario acceda con sus credenciales y reciba notificaciones o confirmaciones por correo.
 
-    \item Password:  
-    Contraseña asociada a la cuenta del usuario. Por razones de seguridad, la contraseña no se almacena en texto plano, sino que se codifica mediante un algoritmo de cifrado seguro (como se explicará en capítulos posteriores). En la base de datos se almacena la versión encriptada de la contraseña, lo que impide que sea visible en su formato original.
+%     \item Password:  
+%     Contraseña asociada a la cuenta del usuario. Por razones de seguridad, la contraseña no se almacena en texto plano, sino que se codifica mediante un algoritmo de cifrado seguro (como se explicará en capítulos posteriores). En la base de datos se almacena la versión encriptada de la contraseña, lo que impide que sea visible en su formato original.
 
-    \item Code:  
-    Código único generado para cada usuario en el momento de su registro. Este código será utilizado en dos situaciones clave, a la hora de confirmar el registro y al recuperar la contraseña.
-    Cuando un usuario se registra, se le envía un correo con este código para verificar su identidad y confirmar la cuenta.
-    Si un usuario olvida su contraseña, este código se usa para permitirle restablecerla de manera segura.
-
-    
-    \item Status:  
-    Representa el estado actual de la cuenta del usuario. Puede tener dos valores, 0 o 1.
-    Cuando el valor de status es 0 significa que el usuario ha sido creado en la base de datos, pero aún no ha confirmado su correo electrónico.
-    Sin embargo cuando el valor de status es 1 quiere decir que el usuario ha completado el proceso de confirmación y su cuenta está activa.
+%     \item Code:  
+%     Código único generado para cada usuario en el momento de su registro. Este código será utilizado en dos situaciones clave, a la hora de confirmar el registro y al recuperar la contraseña.
+%     Cuando un usuario se registra, se le envía un correo con este código para verificar su identidad y confirmar la cuenta.
+%     Si un usuario olvida su contraseña, este código se usa para permitirle restablecerla de manera segura.
 
     
-    \item Creation Date:  
-    Fecha y hora en la que el usuario se registró en la plataforma. 
+%     \item Status:  
+%     Representa el estado actual de la cuenta del usuario. Puede tener dos valores, 0 o 1.
+%     Cuando el valor de status es 0 significa que el usuario ha sido creado en la base de datos, pero aún no ha confirmado su correo electrónico.
+%     Sin embargo cuando el valor de status es 1 quiere decir que el usuario ha completado el proceso de confirmación y su cuenta está activa.
 
-    \item Confirmation Date:  
-    Fecha y hora en la que el usuario confirmó su cuenta mediante el código de verificación enviado a su correo. Si este campo es nulo (null), significa que el usuario aún no ha validado su dirección de correo electrónico y, por lo tanto, no tiene acceso completo a la plataforma.
+    
+%     \item Creation Date:  
+%     Fecha y hora en la que el usuario se registró en la plataforma. 
 
-\end{enumerate}
+%     \item Confirmation Date:  
+%     Fecha y hora en la que el usuario confirmó su cuenta mediante el código de verificación enviado a su correo. Si este campo es nulo (null), significa que el usuario aún no ha validado su dirección de correo electrónico y, por lo tanto, no tiene acceso completo a la plataforma.
 
-Para una mejor comprensión de cómo se almacenan los usuarios en la base de datos, se puede consultar un ejemplo de cómo se vería un usuario en el sistema en la tabla \ref{table:userModel}.
+% \end{enumerate}
 
-\begin{table}
-    \caption{ Modelo de los usuarios}
-    \label{table:userModel}
-    \begin{tabularx}{\textwidth}{|l|X|X|}
-    \hline
-    \textbf{Nombre} & \textbf{Ejemplo de Contenido} & \textbf{Interpretación} \\
-    \hline
-    Email & \texttt{elias@gmail.com} & Correo con el que el usuario se registró en la plataforma \\
-    \hline
-    Password & \texttt{\$2a\$10\$HnIEMbmEeayF5fuz 4LQH0OGWBPifFDX5/WMahhl S5AogsGK1Zh7tG} & Contraseña almacenada encriptada con BCrypt para mayor seguridad \\
-    \hline
-    Code & \texttt{CAWUxr2Gz4nGcWkOsLyGysh GDhbOtL} & Código único del usuario, utilizado para la validación de la cuenta \\
-    \hline
-    Status & \texttt{0} & Indica que la cuenta ha sido creada pero aún no confirmada \\
-    \hline
-    Creation Date & \texttt{2024-08-26 16:50:09.0} & Fecha y hora en que el usuario se registró en la plataforma \\
-    \hline
-    Confirmation Date & \texttt{null} & Indica que el usuario aún no ha validado su cuenta \\
-    \hline
-    \end{tabularx}
-\end{table}
+% Para una mejor comprensión de cómo se almacenan los usuarios en la base de datos, se puede consultar un ejemplo de cómo se vería un usuario en el sistema en la tabla \ref{table:userModel}.
 
-
-
-\section{Descripción de las capas de la aplicación}
-
-En esta sección se describe la arquitectura seleccionada para el desarrollo del sistema, destacando la división entre el frontend y el backend, y cómo estos componentes interactúan para ofrecer una experiencia fluida al usuario. La arquitectura sigue un patrón típico de aplicaciones web basado en capas, un ejemplo de esto podría ser la arquitectura modelo-vista-controlador (MVC) explicada en el artículo \textcite{MVC}.
-
-La arquitectura seleccionada se basa en el framework Spring Boot para el backend y Thymeleaf para el frontend. Este enfoque garantiza una integración robusta entre la lógica de negocio y las interfaces de usuario.
-
-El usuario interactúa con la aplicación a través de las interfaces de frontend desarrolladas con Thymeleaf, un motor de plantillas que permite generar dinámicamente las vistas en función de los datos obtenidos desde el backend. Estas interfaces envían y reciben peticiones HTTP (HTTP requests), que son gestionadas por los controladores en el backend.
-
-La Figura \ref{fig:arquitecture_SIDManager} muestra un esquema de la arquitectura seleccionada, donde se representa la interacción entre las capas y cómo se comunican entre sí. La información detallada sobre cada capa es la siguiente:
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.95\linewidth]{imagenes/scheme/arquitectura-SIDManager.jpg}
-    \caption{Arquitectura de las capas aplicación SIDManager}
-    \label{fig:arquitecture_SIDManager}
-\end{figure}
-
-\begin{enumerate}
-    \item Capa de presentación:
-    La capa de presentación es la encargada de manejar la interfaz de usuario y las interacciones del usuario, presentando información a los usuarios y capturando su entrada.
-    En este proyecto contiene dos componentes en esta capa, la vista y el controlador.
-    Por un lado el cliente accede a las interfaces visuales, las cuales están diseñadas con Thymeleaf para garantizar una generación dinámica y eficiente de las vistas (views). Este motor de plantillas permite incluir datos provenientes del back-end directamente en las páginas HTML, facilitando la comunicación entre ambas capas.
-    Por otro lado los controladores (controllers) son responsables de gestionar las peticiones HTTP provenientes del front-end. Estos se encargan de procesar la solicitud y delegar la lógica de negocio al siguiente nivel, los servicios (services). En otras palabras, son conectores que dirigen las peticiones del usuario a los servicios correspondientes sin modificar ni hacer operaciones de lógica de negocio.
-
-    \item Capa de negocio:
-    Esta capa es la encargada de implementar la funcionalidad principal y las reglas que impulsan los procesos y operaciones del negocio.
-    En la aplicación, está capa esta definida en los servicios, que se encargan de realizar las transformaciones necesarias sobre los datos y delegan las operaciones de almacenamiento o consulta al repositorio.
-
-    \item Capa de persistencia:
-    La función principal de esta capa es manejar el almacenamiento y recuperación de datos de bases de datos.
-    En este proyecto contiene dos componentes en esta capa, del repositorio y el modelo.
-    Por un lado, el repositorio (repository) utiliza JPA (Java Persistence API) y se conecta con la base de datos para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar). 
-    Por otro lado, el modelo (model) está representado por los datos manejados por la aplicación mediante entidades JPA. Estos modelos mapean las tablas de la base de datos, permitiendo que la lógica de negocio interactúe con ellas de forma directa.
-    Esta capa abstrae los detalles de implementación de la base de datos, permitiendo una interacción más sencilla.
-
-    \item Base de datos:
-    La función principal de esta capa es almacenar, mantener y administrar datos de forma estructural y organizativa.
-    La conexión con la base de datos se realiza mediante JPA, utilizando herramientas ya mencionadas en capítulos anteriores.
-\end{enumerate}
-
-Este esquema destaca cómo cada capa cumple un rol específico, asegurando la separación de responsabilidades y facilitando el mantenimiento y escalabilidad del sistema.
-
-Para mayor entendimiento sobre las tecnologías utilizadas en cada capa, se puede ver el esquema de las tecnologías empleadas \ref{fig:technology_arquitecture}.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.95\linewidth]{imagenes//scheme/Tecnologías SIDManager.png}
-    \caption{Arquitectura de las tecnologías de la aplicación SIDManager}
-    \label{fig:technology_arquitecture}
-\end{figure}
-
-\section{Diagrama UML de secuencia}
-Antes de desarrollar cualquier proyecto, es fundamental planificar qué se va a implementar y cómo. Por esta razón, mi tutor en la empresa me solicitaba elaborar diagramas de secuencia UML antes de trabajar en funciones clave del sistema. Estos diagramas ayudaban a visualizar el flujo de la aplicación y asegurar un diseño coherente. En este documento, se han incluido dos de los diagramas que se realizaron digitalmente: uno corresponde al proceso de registro (Figura \ref{fig:sign-up-uml-diagram}) y otro al proceso de carga de documentos filtrados por fechas (Figura \ref{fig:list-documents-uml-diagram}).
-
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.95\linewidth]{imagenes/UML/SignUpPostUserCreate.jpg}
-    \caption{Diagrama UML de la función createClientUser}
-    \label{fig:sign-up-uml-diagram}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.95\linewidth]{imagenes/UML/getTable.jpg}
-    \caption{Diagrama UML de la función listDocuments}
-    \label{fig:list-documents-uml-diagram}
-\end{figure}
+% \begin{table}
+%     \caption{ Modelo de los usuarios}
+%     \label{table:userModel}
+%     \begin{tabularx}{\textwidth}{|l|X|X|}
+%     \hline
+%     \textbf{Nombre} & \textbf{Ejemplo de Contenido} & \textbf{Interpretación} \\
+%     \hline
+%     Email & \texttt{elias@gmail.com} & Correo con el que el usuario se registró en la plataforma \\
+%     \hline
+%     Password & \texttt{\$2a\$10\$HnIEMbmEeayF5fuz 4LQH0OGWBPifFDX5/WMahhl S5AogsGK1Zh7tG} & Contraseña almacenada encriptada con BCrypt para mayor seguridad \\
+%     \hline
+%     Code & \texttt{CAWUxr2Gz4nGcWkOsLyGysh GDhbOtL} & Código único del usuario, utilizado para la validación de la cuenta \\
+%     \hline
+%     Status & \texttt{0} & Indica que la cuenta ha sido creada pero aún no confirmada \\
+%     \hline
+%     Creation Date & \texttt{2024-08-26 16:50:09.0} & Fecha y hora en que el usuario se registró en la plataforma \\
+%     \hline
+%     Confirmation Date & \texttt{null} & Indica que el usuario aún no ha validado su cuenta \\
+%     \hline
+%     \end{tabularx}
+% \end{table}
 
 
 
-\section{ Tecnologías selecionadas }
+% \section{Descripción de las capas de la aplicación}
 
-De las opciones de las posibles tecnologías para llevar a cabo el proyecto abordadas en el estado de la cuestión, estas son las que se han elegido:
+% En esta sección se describe la arquitectura seleccionada para el desarrollo del sistema, destacando la división entre el frontend y el backend, y cómo estos componentes interactúan para ofrecer una experiencia fluida al usuario. La arquitectura sigue un patrón típico de aplicaciones web basado en capas, un ejemplo de esto podría ser la arquitectura modelo-vista-controlador (MVC) explicada en el artículo \textcite{MVC}.
 
-\subsection{ Spring Boot }
-Aunque existen otros frameworks populares hoy en día, como Angular y React, estos están basados en JavaScript, un lenguaje diferente de Java. JavaScript es más versátil al permitir el desarrollo tanto en frontend como en backend, pero presenta desventajas en términos de seguridad. Al no ser un lenguaje tipado ni ejecutarse en una máquina virtual, es más vulnerable a ciertos tipos de ataques, como se explica en el artículo \textcite{java-vs-javascript}. Por esta razón, para este proyecto fue necesario optar por un framework que utilizara Java.
+% La arquitectura seleccionada se basa en el framework Spring Boot para el backend y Thymeleaf para el frontend. Este enfoque garantiza una integración robusta entre la lógica de negocio y las interfaces de usuario.
 
-Spring Boot ha sido la tecnología seleccionada para el desarrollo de esta aplicación web debido a sus características que facilitan la creación de aplicaciones empresariales robustas y escalables. 
+% El usuario interactúa con la aplicación a través de las interfaces de frontend desarrolladas con Thymeleaf, un motor de plantillas que permite generar dinámicamente las vistas en función de los datos obtenidos desde el backend. Estas interfaces envían y reciben peticiones HTTP (HTTP requests), que son gestionadas por los controladores en el backend.
 
-Dado que el proyecto se centra en la monitorización de documentos en un entorno bancario, donde la seguridad, eficiencia y fiabilidad son aspectos clave, Spring Boot proporciona una base sólida. Con su configuración mínima y capacidades integradas, permite un desarrollo rápido y efectivo, adaptándose a las necesidades de este entorno.
+% La Figura \ref{fig:arquitecture_SIDManager} muestra un esquema de la arquitectura seleccionada, donde se representa la interacción entre las capas y cómo se comunican entre sí. La información detallada sobre cada capa es la siguiente:
 
-Una de las principales ventajas de Spring Boot es su capacidad para simplificar el desarrollo de aplicaciones complejas gracias a su amplia gama de bibliotecas y configuraciones predeterminadas. Su integración con tecnologías como Spring Security facilita la implementación de controles de acceso y autenticación, esenciales en un entorno bancario. Además, su soporte para la gestión eficiente de bases de datos mediante JPA es ideal para manejar grandes volúmenes de datos, como los documentos almacenados en esta aplicación.
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.95\linewidth]{imagenes/scheme/arquitectura-SIDManager.jpg}
+%     \caption{Arquitectura de las capas aplicación SIDManager}
+%     \label{fig:arquitecture_SIDManager}
+% \end{figure}
 
-Otra ventaja importante para el uso de Spring Boot es la popularidad de Java, ya que es el séptimo lenguaje de programación más usado por profesionales según \citeauthor{most-used-tech}, como se puede ver en la figura \ref{fig:most-used-tech}. Cabe destacar en popularidad también al propio framework Spring Boot, que es el undécimo framework de desarrollo más utilizado en el mundo, como se muestra en la figura 5.2. Esto garantiza que la tecnología continúe evolucionando, lo que asegura la viabilidad del proyecto a largo plazo, además de la abundante documentación y comunidad de soporte. Spring Boot también es uno de los frameworks preferidos por los bancos, como se destaca en distintos artículos online como \textcite{java-usage-banks}. Esto se debe a su robustez, estabilidad, seguridad y escalabilidad, características clave en aplicaciones empresariales críticas.
+% \begin{enumerate}
+%     \item Capa de presentación:
+%     La capa de presentación es la encargada de manejar la interfaz de usuario y las interacciones del usuario, presentando información a los usuarios y capturando su entrada.
+%     En este proyecto contiene dos componentes en esta capa, la vista y el controlador.
+%     Por un lado el cliente accede a las interfaces visuales, las cuales están diseñadas con Thymeleaf para garantizar una generación dinámica y eficiente de las vistas (views). Este motor de plantillas permite incluir datos provenientes del back-end directamente en las páginas HTML, facilitando la comunicación entre ambas capas.
+%     Por otro lado los controladores (controllers) son responsables de gestionar las peticiones HTTP provenientes del front-end. Estos se encargan de procesar la solicitud y delegar la lógica de negocio al siguiente nivel, los servicios (services). En otras palabras, son conectores que dirigen las peticiones del usuario a los servicios correspondientes sin modificar ni hacer operaciones de lógica de negocio.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.85\linewidth]{imagenes/charts/java_stadistics.jpg}
-    \caption{Gráfico de tecnologías más populares. Fuente: \textcite{most-used-tech}.}
-    \label{fig:most-used-tech}
-\end{figure}
+%     \item Capa de negocio:
+%     Esta capa es la encargada de implementar la funcionalidad principal y las reglas que impulsan los procesos y operaciones del negocio.
+%     En la aplicación, está capa esta definida en los servicios, que se encargan de realizar las transformaciones necesarias sobre los datos y delegan las operaciones de almacenamiento o consulta al repositorio.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\linewidth]{imagenes/charts/spring_boot_stadistics.pdf}
-    \caption{Gráfico de frameworks web más usados por desarrolladores. Fuente: \textcite{most-used-frameworks}.}
-    \label{fig:most-used-frameworks}
-\end{figure}
+%     \item Capa de persistencia:
+%     La función principal de esta capa es manejar el almacenamiento y recuperación de datos de bases de datos.
+%     En este proyecto contiene dos componentes en esta capa, del repositorio y el modelo.
+%     Por un lado, el repositorio (repository) utiliza JPA (Java Persistence API) y se conecta con la base de datos para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar). 
+%     Por otro lado, el modelo (model) está representado por los datos manejados por la aplicación mediante entidades JPA. Estos modelos mapean las tablas de la base de datos, permitiendo que la lógica de negocio interactúe con ellas de forma directa.
+%     Esta capa abstrae los detalles de implementación de la base de datos, permitiendo una interacción más sencilla.
 
+%     \item Base de datos:
+%     La función principal de esta capa es almacenar, mantener y administrar datos de forma estructural y organizativa.
+%     La conexión con la base de datos se realiza mediante JPA, utilizando herramientas ya mencionadas en capítulos anteriores.
+% \end{enumerate}
 
+% Este esquema destaca cómo cada capa cumple un rol específico, asegurando la separación de responsabilidades y facilitando el mantenimiento y escalabilidad del sistema.
 
-No obstante, el uso de Spring Boot también presenta ciertos inconvenientes. Aunque su automatización y configuraciones predeterminadas aceleran el desarrollo, en proyectos a gran escala pueden generar una sobrecarga del sistema si no se optimizan los recursos adecuadamente. La facilidad para incluir dependencias adicionales puede aumentar la complejidad del proyecto, afectando al rendimiento y a la mantenibilidad del código a largo plazo.
+% Para mayor entendimiento sobre las tecnologías utilizadas en cada capa, se puede ver el esquema de las tecnologías empleadas \ref{fig:technology_arquitecture}.
 
-Otro aspecto a considerar es que, al estar basado en Java, Spring Boot puede requerir mayores recursos de memoria y procesamiento en comparación con tecnologías más ligeras. Esto puede ser un reto en servidores con limitaciones de hardware o cuando se buscan optimizaciones de recursos.
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.95\linewidth]{imagenes//scheme/Tecnologías SIDManager.png}
+%     \caption{Arquitectura de las tecnologías de la aplicación SIDManager}
+%     \label{fig:technology_arquitecture}
+% \end{figure}
 
-A pesar de estos inconvenientes, Spring Boot sigue siendo una opción sólida y flexible para desarrollar aplicaciones empresariales seguras y escalables, como es el caso de esta solución para la gestión documental en entornos bancarios.
-
-\subsection{ Maven }
-
-Maven ha sido elegido como la herramienta de gestión de dependencias y automatización de la construcción para este proyecto debido a su fiabilidad y popularidad en el ecosistema Java. Una de las principales razones por las que Maven es ampliamente utilizado en proyectos empresariales es su capacidad para simplificar la gestión de dependencias, lo que facilita la integración de bibliotecas externas necesarias para el correcto funcionamiento de la aplicación.
-
-Una ventaja significativa de Maven es su capacidad para gestionar de manera eficiente las versiones de las dependencias y sus transitorios, asegurando que siempre se utilicen versiones compatibles y actualizadas de las bibliotecas, lo que es crucial para mantener la seguridad y estabilidad del proyecto en el tiempo. Además, Maven proporciona una estructura de proyecto estándar y bien organizada, lo que facilita la colaboración entre distintos equipos y la integración con herramientas de \acrfull{cicd}.
-
-Según la encuesta de Stack Overflow, Maven es una de las herramientas de automatización de construcción más usadas en el mundo, lo que garantiza una amplia documentación y soporte por parte de la comunidad, como muestran los informes de \textcite{most-used-tech}. Esto asegura la viabilidad de su uso a largo plazo, además de la fácil capacitación de nuevos desarrolladores que se unan al proyecto.
-
-Sin embargo, uno de los inconvenientes de Maven es su curva de aprendizaje inicial, especialmente para desarrolladores que no están familiarizados con su configuración basada en XML. Además, en proyectos de gran escala, la acumulación de dependencias puede generar archivos de configuración extensos y difíciles de manejar si no se estructuran adecuadamente. Otro aspecto a considerar es el tiempo de compilación, que puede ser considerable en proyectos grandes debido a la resolución de dependencias y la construcción de los módulos.
-
-A pesar de estos inconvenientes, Maven sigue siendo la opción ideal para este proyecto, ya que proporciona una solución integral para la gestión de dependencias y la automatización de la construcción, permitiendo un desarrollo ágil y organizado.
-
-\subsection{ Thymeleaf }
-
-Thymeleaf ha sido seleccionado como el motor de plantillas para el desarrollo del frontend de esta aplicación debido a su estrecha integración con Spring Boot y su capacidad para crear vistas dinámicas basadas en HTML. Al ser una tecnología diseñada específicamente para aplicaciones web Java, Thymeleaf permite renderizar páginas de manera eficiente, con una sintaxis que resulta intuitiva para los desarrolladores que ya están familiarizados con HTML y CSS.
-
-Una de las principales ventajas de Thymeleaf es que permite construir plantillas que son directamente visualizables en navegadores, incluso sin un servidor backend activo, lo que agiliza el desarrollo de interfaces. Esto se alinea con la necesidad de este proyecto de desarrollar una aplicación web accesible y fácil de mantener. Además, Thymeleaf soporta la validación de formularios y la internacionalización, características clave para una aplicación que pueda ser utilizada en distintos contextos empresariales y por usuarios de diversas regiones.
-
-Según la propia web de \citeauthor{thymeleaf-downloads}, es uno de los motores de plantillas más populares dentro del ecosistema de Spring, ya que tiene más de un millón y medio de descargas al mes, lo que asegura la existencia de abundante documentación y ejemplos prácticos, como se puede ver en el siguiente gráfico \ref{fig:descargas_mensuales_thymeleaf}. Esto facilita su integración y reduce la curva de aprendizaje para nuevos desarrolladores.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.75\linewidth]{imagenes/charts/thymeleaf_usage.png}
-    \caption{Descargas mensuales de Thymeleaf. Fuente: \textcite{thymeleaf-downloads}.}
-    \label{fig:descargas_mensuales_thymeleaf}
-\end{figure}
-
-No obstante, Thymeleaf presenta algunos inconvenientes. Al ser un motor de plantillas del lado del servidor, puede tener un rendimiento inferior en comparación con soluciones de frontend basadas en JavaScript, como React o Angular, especialmente cuando se trata de aplicaciones con una gran cantidad de interacciones simultáneas. Además, la generación de vistas en el servidor puede aumentar la carga de procesamiento en aplicaciones con un gran número de usuarios concurrentes, lo que puede requerir optimizaciones adicionales en el backend.
-
-A pesar de estos desafíos, Thymeleaf sigue siendo una opción adecuada para este proyecto, ya que facilita la creación de una interfaz de usuario dinámica y bien integrada con Spring Boot, manteniendo un enfoque en la simplicidad y la seguridad, lo cual es crucial para aplicaciones bancarias y empresariales.
+% \section{Diagrama UML de secuencia}
+% Antes de desarrollar cualquier proyecto, es fundamental planificar qué se va a implementar y cómo. Por esta razón, mi tutor en la empresa me solicitaba elaborar diagramas de secuencia UML antes de trabajar en funciones clave del sistema. Estos diagramas ayudaban a visualizar el flujo de la aplicación y asegurar un diseño coherente. En este documento, se han incluido dos de los diagramas que se realizaron digitalmente: uno corresponde al proceso de registro (Figura \ref{fig:sign-up-uml-diagram}) y otro al proceso de carga de documentos filtrados por fechas (Figura \ref{fig:list-documents-uml-diagram}).
 
 
-\subsection{ JPA }
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.95\linewidth]{imagenes/UML/SignUpPostUserCreate.jpg}
+%     \caption{Diagrama UML de la función createClientUser}
+%     \label{fig:sign-up-uml-diagram}
+% \end{figure}
 
-JPA (Java Persistence API) ha sido elegido en este proyecto por su capacidad para simplificar la interacción con la base de datos, eliminando la necesidad de escribir consultas SQL manuales en la mayoría de los casos. Al trabajar con JPA, el desarrollador puede centrarse en los objetos de dominio de Java, ya que JPA se encarga de la persistencia de los datos de manera automática, permitiendo asignar las entidades directamente a las tablas de la base de datos.
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.95\linewidth]{imagenes/UML/getTable.jpg}
+%     \caption{Diagrama UML de la función listDocuments}
+%     \label{fig:list-documents-uml-diagram}
+% \end{figure}
 
-Una de las principales ventajas de JPA es su capacidad para abstraer la complejidad del SQL. Esto simplifica el desarrollo al utilizar operaciones CRUD predefinidas y un lenguaje de consultas más amigable como \acrfull{jpql}, que evita la necesidad de escribir SQL detallado. Además, JPA se integra perfectamente con Spring Data, lo que permite generar repositorios y consultas dinámicas de forma automática, lo cual mejora la productividad y reduce el riesgo de errores en la interacción con la base de datos.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.75\linewidth]{imagenes/code/JPA_usage.pdf}
-    \caption{Diferencia entre usar y no usar JPA (elaboración propia).}
-    \label{fig:jpa-usage}
-\end{figure}
 
-JPA también garantiza la independencia de la base de datos, ya que facilita la migración entre distintos sistemas de gestión de bases de datos sin cambios significativos en el código. 
+% \section{ Tecnologías selecionadas }
 
-Sin embargo, uno de los inconvenientes de JPA es su rendimiento en escenarios con consultas SQL muy complejas o específicas, donde puede ser necesario optimizar manualmente el SQL para obtener mejores tiempos de respuesta. Además, JPA puede añadir una cierta sobrecarga en términos de recursos debido a la gestión de la caché y las transacciones automáticas.
+% De las opciones de las posibles tecnologías para llevar a cabo el proyecto abordadas en el estado de la cuestión, estas son las que se han elegido:
 
-A pesar de estos desafíos, JPA sigue siendo una opción ideal para este proyecto, ya que facilita enormemente la gestión de la persistencia de datos, minimizando la necesidad de escribir SQL manual y aumentando la eficiencia del desarrollo.
+% \subsection{ Spring Boot }
+% Aunque existen otros frameworks populares hoy en día, como Angular y React, estos están basados en JavaScript, un lenguaje diferente de Java. JavaScript es más versátil al permitir el desarrollo tanto en frontend como en backend, pero presenta desventajas en términos de seguridad. Al no ser un lenguaje tipado ni ejecutarse en una máquina virtual, es más vulnerable a ciertos tipos de ataques, como se explica en el artículo \textcite{java-vs-javascript}. Por esta razón, para este proyecto fue necesario optar por un framework que utilizara Java.
+
+% Spring Boot ha sido la tecnología seleccionada para el desarrollo de esta aplicación web debido a sus características que facilitan la creación de aplicaciones empresariales robustas y escalables. 
+
+% Dado que el proyecto se centra en la monitorización de documentos en un entorno bancario, donde la seguridad, eficiencia y fiabilidad son aspectos clave, Spring Boot proporciona una base sólida. Con su configuración mínima y capacidades integradas, permite un desarrollo rápido y efectivo, adaptándose a las necesidades de este entorno.
+
+% Una de las principales ventajas de Spring Boot es su capacidad para simplificar el desarrollo de aplicaciones complejas gracias a su amplia gama de bibliotecas y configuraciones predeterminadas. Su integración con tecnologías como Spring Security facilita la implementación de controles de acceso y autenticación, esenciales en un entorno bancario. Además, su soporte para la gestión eficiente de bases de datos mediante JPA es ideal para manejar grandes volúmenes de datos, como los documentos almacenados en esta aplicación.
+
+% Otra ventaja importante para el uso de Spring Boot es la popularidad de Java, ya que es el séptimo lenguaje de programación más usado por profesionales según \citeauthor{most-used-tech}, como se puede ver en la figura \ref{fig:most-used-tech}. Cabe destacar en popularidad también al propio framework Spring Boot, que es el undécimo framework de desarrollo más utilizado en el mundo, como se muestra en la figura 5.2. Esto garantiza que la tecnología continúe evolucionando, lo que asegura la viabilidad del proyecto a largo plazo, además de la abundante documentación y comunidad de soporte. Spring Boot también es uno de los frameworks preferidos por los bancos, como se destaca en distintos artículos online como \textcite{java-usage-banks}. Esto se debe a su robustez, estabilidad, seguridad y escalabilidad, características clave en aplicaciones empresariales críticas.
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.85\linewidth]{imagenes/charts/java_stadistics.jpg}
+%     \caption{Gráfico de tecnologías más populares. Fuente: \textcite{most-used-tech}.}
+%     \label{fig:most-used-tech}
+% \end{figure}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.9\linewidth]{imagenes/charts/spring_boot_stadistics.pdf}
+%     \caption{Gráfico de frameworks web más usados por desarrolladores. Fuente: \textcite{most-used-frameworks}.}
+%     \label{fig:most-used-frameworks}
+% \end{figure}
+
+
+
+% No obstante, el uso de Spring Boot también presenta ciertos inconvenientes. Aunque su automatización y configuraciones predeterminadas aceleran el desarrollo, en proyectos a gran escala pueden generar una sobrecarga del sistema si no se optimizan los recursos adecuadamente. La facilidad para incluir dependencias adicionales puede aumentar la complejidad del proyecto, afectando al rendimiento y a la mantenibilidad del código a largo plazo.
+
+% Otro aspecto a considerar es que, al estar basado en Java, Spring Boot puede requerir mayores recursos de memoria y procesamiento en comparación con tecnologías más ligeras. Esto puede ser un reto en servidores con limitaciones de hardware o cuando se buscan optimizaciones de recursos.
+
+% A pesar de estos inconvenientes, Spring Boot sigue siendo una opción sólida y flexible para desarrollar aplicaciones empresariales seguras y escalables, como es el caso de esta solución para la gestión documental en entornos bancarios.
+
+% \subsection{ Maven }
+
+% Maven ha sido elegido como la herramienta de gestión de dependencias y automatización de la construcción para este proyecto debido a su fiabilidad y popularidad en el ecosistema Java. Una de las principales razones por las que Maven es ampliamente utilizado en proyectos empresariales es su capacidad para simplificar la gestión de dependencias, lo que facilita la integración de bibliotecas externas necesarias para el correcto funcionamiento de la aplicación.
+
+% Una ventaja significativa de Maven es su capacidad para gestionar de manera eficiente las versiones de las dependencias y sus transitorios, asegurando que siempre se utilicen versiones compatibles y actualizadas de las bibliotecas, lo que es crucial para mantener la seguridad y estabilidad del proyecto en el tiempo. Además, Maven proporciona una estructura de proyecto estándar y bien organizada, lo que facilita la colaboración entre distintos equipos y la integración con herramientas de \acrfull{cicd}.
+
+% Según la encuesta de Stack Overflow, Maven es una de las herramientas de automatización de construcción más usadas en el mundo, lo que garantiza una amplia documentación y soporte por parte de la comunidad, como muestran los informes de \textcite{most-used-tech}. Esto asegura la viabilidad de su uso a largo plazo, además de la fácil capacitación de nuevos desarrolladores que se unan al proyecto.
+
+% Sin embargo, uno de los inconvenientes de Maven es su curva de aprendizaje inicial, especialmente para desarrolladores que no están familiarizados con su configuración basada en XML. Además, en proyectos de gran escala, la acumulación de dependencias puede generar archivos de configuración extensos y difíciles de manejar si no se estructuran adecuadamente. Otro aspecto a considerar es el tiempo de compilación, que puede ser considerable en proyectos grandes debido a la resolución de dependencias y la construcción de los módulos.
+
+% A pesar de estos inconvenientes, Maven sigue siendo la opción ideal para este proyecto, ya que proporciona una solución integral para la gestión de dependencias y la automatización de la construcción, permitiendo un desarrollo ágil y organizado.
+
+% \subsection{ Thymeleaf }
+
+% Thymeleaf ha sido seleccionado como el motor de plantillas para el desarrollo del frontend de esta aplicación debido a su estrecha integración con Spring Boot y su capacidad para crear vistas dinámicas basadas en HTML. Al ser una tecnología diseñada específicamente para aplicaciones web Java, Thymeleaf permite renderizar páginas de manera eficiente, con una sintaxis que resulta intuitiva para los desarrolladores que ya están familiarizados con HTML y CSS.
+
+% Una de las principales ventajas de Thymeleaf es que permite construir plantillas que son directamente visualizables en navegadores, incluso sin un servidor backend activo, lo que agiliza el desarrollo de interfaces. Esto se alinea con la necesidad de este proyecto de desarrollar una aplicación web accesible y fácil de mantener. Además, Thymeleaf soporta la validación de formularios y la internacionalización, características clave para una aplicación que pueda ser utilizada en distintos contextos empresariales y por usuarios de diversas regiones.
+
+% Según la propia web de \citeauthor{thymeleaf-downloads}, es uno de los motores de plantillas más populares dentro del ecosistema de Spring, ya que tiene más de un millón y medio de descargas al mes, lo que asegura la existencia de abundante documentación y ejemplos prácticos, como se puede ver en el siguiente gráfico \ref{fig:descargas_mensuales_thymeleaf}. Esto facilita su integración y reduce la curva de aprendizaje para nuevos desarrolladores.
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.75\linewidth]{imagenes/charts/thymeleaf_usage.png}
+%     \caption{Descargas mensuales de Thymeleaf. Fuente: \textcite{thymeleaf-downloads}.}
+%     \label{fig:descargas_mensuales_thymeleaf}
+% \end{figure}
+
+% No obstante, Thymeleaf presenta algunos inconvenientes. Al ser un motor de plantillas del lado del servidor, puede tener un rendimiento inferior en comparación con soluciones de frontend basadas en JavaScript, como React o Angular, especialmente cuando se trata de aplicaciones con una gran cantidad de interacciones simultáneas. Además, la generación de vistas en el servidor puede aumentar la carga de procesamiento en aplicaciones con un gran número de usuarios concurrentes, lo que puede requerir optimizaciones adicionales en el backend.
+
+% A pesar de estos desafíos, Thymeleaf sigue siendo una opción adecuada para este proyecto, ya que facilita la creación de una interfaz de usuario dinámica y bien integrada con Spring Boot, manteniendo un enfoque en la simplicidad y la seguridad, lo cual es crucial para aplicaciones bancarias y empresariales.
+
+
+% \subsection{ JPA }
+
+% JPA (Java Persistence API) ha sido elegido en este proyecto por su capacidad para simplificar la interacción con la base de datos, eliminando la necesidad de escribir consultas SQL manuales en la mayoría de los casos. Al trabajar con JPA, el desarrollador puede centrarse en los objetos de dominio de Java, ya que JPA se encarga de la persistencia de los datos de manera automática, permitiendo asignar las entidades directamente a las tablas de la base de datos.
+
+% Una de las principales ventajas de JPA es su capacidad para abstraer la complejidad del SQL. Esto simplifica el desarrollo al utilizar operaciones CRUD predefinidas y un lenguaje de consultas más amigable como \acrfull{jpql}, que evita la necesidad de escribir SQL detallado. Además, JPA se integra perfectamente con Spring Data, lo que permite generar repositorios y consultas dinámicas de forma automática, lo cual mejora la productividad y reduce el riesgo de errores en la interacción con la base de datos.
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.75\linewidth]{imagenes/code/JPA_usage.pdf}
+%     \caption{Diferencia entre usar y no usar JPA (elaboración propia).}
+%     \label{fig:jpa-usage}
+% \end{figure}
+
+% JPA también garantiza la independencia de la base de datos, ya que facilita la migración entre distintos sistemas de gestión de bases de datos sin cambios significativos en el código. 
+
+% Sin embargo, uno de los inconvenientes de JPA es su rendimiento en escenarios con consultas SQL muy complejas o específicas, donde puede ser necesario optimizar manualmente el SQL para obtener mejores tiempos de respuesta. Además, JPA puede añadir una cierta sobrecarga en términos de recursos debido a la gestión de la caché y las transacciones automáticas.
+
+% A pesar de estos desafíos, JPA sigue siendo una opción ideal para este proyecto, ya que facilita enormemente la gestión de la persistencia de datos, minimizando la necesidad de escribir SQL manual y aumentando la eficiencia del desarrollo.

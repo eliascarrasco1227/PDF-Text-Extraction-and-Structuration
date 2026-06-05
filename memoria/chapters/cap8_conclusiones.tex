@@ -1,42 +1,247 @@
+\chapter{Conclusiones y trabajo futuro}
 
-\chapter{Conclusiones y trabajos futuros}
+Este capítulo final ofrece una visión retrospectiva sobre el desarrollo del proyecto, evalúa el cumplimiento de las metas propuestas y proyecta posibles líneas de investigación que permitan escalar el sistema a nuevos horizontes tecnológicos.
 
-Este capítulo sirve como cierre del proyecto y está dividido en dos secciones principales. En la Sección \ref{sec:conclusiones} se presenta un análisis que compara los objetivos alcanzados y aquellos que pueden mejorarse. En la Sección \ref{futuro} se proponen posibles mejoras y líneas de trabajo futuro, tanto en términos de investigación como de desarrollo adicional de la aplicación, además de una reflexión personal sobre el proceso de desarrollo.
+\section{Síntesis del trabajo desarrollado}
 
-\section{Conclusiones}
-\label{sec:conclusiones}
+En el marco de este Trabajo de Fin de Máster, hemos diseñado e implementado un ecosistema tecnológico integral orientado a la preservación digital de lenguas mayas minorizadas (Kaqchikel, K’iche’ y Mam). La investigación ha abordado con éxito el desafío de transformar documentos estáticos y fotografías de libros de la Academia de Lenguas Mayas de Guatemala (ALMG) en datos digitales inteligentes y estructurados.
 
-Se ha cumplido con el objetivo principal de este TFG, desarrollando una aplicación funcional que resuelve de manera efectiva los problemas identificados en la gestión documental. A través de un proceso riguroso de análisis, diseño e implementación, se han alcanzado todos los objetivos planteados inicialmente con precisión, obteniendo así las siguientes conclusiones:
-
-\begin{itemize}
-    \item Planificación y organización: Hacer las cosas bien desde el principio ahorra tiempo y esfuerzo a largo plazo. Por ejemplo, la implementación de logs propios y el uso de archivos externos para mensajes de la aplicación han demostrado ser decisiones acertadas que facilitaron el mantenimiento y la depuración del código.
-    
-    \item Subestimación de tecnologías: Durante el desarrollo, se observó que algunas tecnologías o tareas aparentemente simples pueden resultar más complejas de lo esperado. Esto subraya la importancia de investigar y planificar adecuadamente antes de implementar soluciones.
-    
-    \item Documentación y buenas prácticas: Nombrar variables y clases de manera significativa y seguir estándares de codificación ha sido fundamental para mantener un código legible y fácil de mantener, especialmente en un proyecto con más de 60 archivos editados.
-    
-    \item Importancia de la modularidad: Separar los mensajes de la aplicación en archivos externos desde el principio ha demostrado ser una práctica muy útil, ya que evita la necesidad de modificar el código fuente cada vez que se requiere un cambio en los textos.
-
-    \item Uso de tecnologías modernas: La elección de tecnologías como  Thymeleaf, en lugar de REST para el backend ha permitido aprovechar al máximo el potencial de SpringBoot. Sin embargo no ha permitido desacoplar el frontend del backend en su totalidad, lo que podría probocar problemas en  la escalabilidad y la integración con frameworks modernos como React o Angular.
-\end{itemize}
-
-En resumen, este proyecto ha sido una oportunidad para aplicar conocimientos previos, aprender nuevas herramientas y adoptar buenas prácticas de desarrollo. Aunque se han alcanzado los objetivos principales, siempre hay margen para mejorar y optimizar el trabajo realizado.
-
-\section{Líneas de trabajo futuras}
-\label{futuro}
-
-A lo largo del desarrollo del proyecto, surgieron varias ideas y mejoras que, debido a limitaciones de tiempo y alcance, no pudieron implementarse. A continuación, se proponen algunas líneas de trabajo futuro para continuar mejorando la aplicación:
+El trabajo desarrollado se ha materializado en un pipeline modular en Python que orquesta cuatro procesos críticos:
 
 \begin{itemize}
-    \item Implementación de un framework moderno para el frontend: Utilizar tecnologías como Vite, Next.js o un framework similar para el desarrollo del frontend, aprovechando el controlador REST ya implementado. Esto mejoraría la experiencia del usuario y facilitaría la creación de interfaces más dinámicas y responsivas.
+    \item Procesamiento multimodal: La conversión de documentos PDF heterogéneos en entradas visuales de alta calidad.
     
-    \item Paginación en la carga de documentos: Implementar un sistema de paginación para la carga de documentos, lo que mejoraría el rendimiento de la aplicación al manejar grandes volúmenes de datos.
+    \item Inferencia Inteligente: El uso de modelos de lenguaje de gran tamaño (Gemini 1.5, 2.5…) mediante técnicas de Few-Shot Learning para la extracción semántica de gramáticas complejas.
     
-    \item Buscador avanzado: Implementar un sistema de búsqueda avanzada que permita a los usuarios introducir identificadores específicos (como client\_app\_id o client\_doc\_id) para filtrar y localizar documentos de manera rápida y precisa. Esta funcionalidad mejoraría la usabilidad de la aplicación al permitir búsquedas más eficientes y reducir el tiempo necesario para encontrar información específica.
+    \item Garantía de calidad estructural: La implementación de una capa de validación basada en un Documento de Definición de Tipo (DTD) y un corrector heurístico que subsana las limitaciones sintácticas de la IA.
     
-    \item Sistema de descarga de datos: Implementar un sistema integrado en la aplicación para facilitar la descarga de conjuntos de datos de la tabla con los documentos filtrados.
+    \item Exportación académica: La traslación automática de los datos a código LaTeX, permitiendo una reconstrucción tipográfica profesional de las obras originales.
 \end{itemize}
 
-Estas propuestas representan oportunidades para seguir avanzando en el desarrollo de la aplicación y explorar nuevas áreas de investigación. La implementación de estas mejoras no solo mejoraría la funcionalidad y usabilidad de la aplicación, sino que también abriría nuevas posibilidades para su uso en entornos académicos y profesionales.
+\subsection{Conclusiones del experimento con diferentes temperaturas}
+
+Más allá del desarrollo de software, este trabajo ha aportado un valor investigador significativo mediante un estudio empírico de la temperatura del modelo. Los experimentos han demostrado una serie de conclusiones que mostramos a continuación:
+
+\begin{itemize}
+    \item La temperatura 0,5 es la configuración globalmente recomendable para el sistema evaluado sobre este corpus. Es la única que maximiza simultáneamente la media de las puntuaciones CER (94,02) y minimiza su dispersión entre páginas (\(\sigma=5,06\)), ofreciendo el mejor rendimiento promedio con la mayor consistencia.
+    
+    \item La temperatura no es el factor determinante del rendimiento global del sistema. La variabilidad entre páginas ---de hasta 30 puntos--- supera con creces el efecto de la temperatura ---cuya influencia máxima sobre la media global es de 1,88 puntos---. El principal determinante del CER es la complejidad intrínseca de cada página.
+    
+    \item La temperatura extrema alta (\(T=2,0\)) es la peor configuración del rango evaluado, con la menor media global (92,14) y la mayor dispersión (\(\sigma=8,51\)). Su uso no ofrece ventajas sostenidas en ninguna página del corpus.
+    
+    \item El determinismo absoluto (\(T=0\)) tampoco es óptimo. La intuición de que la mínima temperatura maximiza la precisión no se confirma en los datos: \(T=0\) produce la segunda menor media global (92,44) y una dispersión elevada (\(\sigma=8,45\)). Para esta tarea, el modo puramente determinista es subóptimo.
+    
+    \item La sensibilidad a la temperatura es función de la dificultad de la página. Siete de las nueve páginas son prácticamente insensibles al parámetro (rango < 2 puntos). La temperatura solo produce variaciones de magnitud operativa en páginas que ya presentan dificultades para el sistema.
+    
+    \item La relación entre temperatura y CER no es monotónica. El ordenamiento de temperaturas por media global no sigue ningún patrón predecible de creatividad creciente. El óptimo global se sitúa en un punto intermedio (\(T=0,5\)), y los extremos del rango son los peores en términos de media.
+\end{itemize}
+
+Conclusiones con reservas:
+
+\begin{itemize}
+    \item En páginas de alta dificultad, la temperatura alta tiende a producir mejores resultados que la temperatura baja. Las dos páginas más difíciles (Qanjobal\_201 y Kiche\_56) muestran un efecto neto positivo de la temperatura alta (\(\Delta=+1,69\) y \(+0,63\)). Sin embargo, la existencia de Kaqchikel\_205 como excepción significativa (\(\Delta=-1,42\) con dificultad intermedia) impide elevar esta tendencia a conclusión general. Se trata de una señal observable, no de una regla.
+\end{itemize}
+
+Limitaciones del estudio:
+
+\begin{itemize}
+    \item La ausencia de réplicas por condición impide realizar pruebas de significancia estadística. Las diferencias inferiores a 2 puntos porcentuales deben considerarse indicativas.
+    
+    \item El corpus de nueve páginas, aunque diverso, es reducido. Las conclusiones tienen validez interna para el conjunto evaluado y requieren verificación en corpus ampliados antes de generalizarse.
+    
+    \item No es posible determinar a partir de los datos disponibles la causa concreta del bajo rendimiento sistemático de Qanjobal\_201. Un análisis cualitativo de esta página es recomendable para identificar sus factores limitantes y orientar futuras mejoras del sistema.
+\end{itemize}
+
+
+
+\subsection{Conclusiones del experimento con diferentes modelos}
+
+Además del estudio sobre temperaturas también contamos con el experimento de los diferentes modelos de gemini. Las conclusiones obtenidas han sido las siguientes:
+
+\begin{enumerate}
+    \item gemini-3.5-flash es el modelo dominante en todos los sentidos.
+
+    Es simultáneamente el de mayor media (95.69) y el de menor desviación estándar (3.59). Que ambas métricas apunten al mismo modelo es un resultado robusto: no solo rinde más, sino que lo hace de forma consistente. Además gana en 6 de las 9 páginas.
+
+    \item gemini-2.5-flash-lite tiene un comportamiento paradójico.
+
+    Es el peor modelo en media global (84.94) y el más variable (\(\sigma=10.71\)), pero alcanza un CER perfecto de 100.00 en Qanjobal\_94 junto con gemini-2.5-flash. Esto descarta que sea un modelo uniformemente deficiente: es extremadamente sensible a la dificultad del contenido. Cuando la página es fácil, compite con el mejor; cuando es difícil, se desploma hasta 70.14.
+
+    \item La elección del modelo importa mucho más en páginas difíciles.
+
+    En Qanjobal\_94 (la página más fácil), el rango entre el mejor y el peor modelo es de 1.44 puntos (98.56--100.00). En Qanjobal\_201 (la más difícil), ese rango es de 17.65 puntos (70.31--87.96). En términos prácticos: para contenido sencillo da igual qué modelo usar; para contenido complejo, la elección es determinante.
+
+    \item gemini-3.5-flash domina especialmente en las páginas más problemáticas.
+
+    En Kiche\_56, obtiene 96.80 frente a un máximo de 91.67 del segundo mejor modelo, una brecha de 5.13 puntos, la mayor observada en cualquier página. En Qanjobal\_201 también lidera con 87.96. Este modelo no solo gana en la media, sino que es donde más se necesita.
+
+    \item La generación del modelo no predice linealmente el rendimiento.
+
+    gemini-3-flash-preview (generación ``3'') queda por debajo de gemini-2.5-flash (generación ``2.5'') en media global (92.44 vs. 93.37). Y gemini-3.1-flash-lite obtiene resultados comparables a gemini-2.5-flash a pesar de ser una versión ``lite''. El número de versión no es un predictor fiable del CER en este estudio.
+
+    \item gemini-3.5-flash no gana en todas las páginas sin excepción.
+
+    En Kaqchikel\_205, gemini-3-flash-preview obtiene 94.70 frente a 92.32 de gemini-3.5-flash. Es el único caso en que otro modelo supera al dominante, lo que impide afirmar que gemini-3.5-flash sea universalmente óptimo.
+\end{enumerate}
+
+Lo que no se puede afirmar:
+
+\begin{itemize}
+    \item Con 9 páginas no hay suficiente muestra para establecer significancia estadística.
+
+    \item Tampoco es posible saber si las diferencias entre modelos se deben a la arquitectura, al entrenamiento con estas lenguas concretas, o a otros factores.
+
+    \item La comparación solo es válida a temperatura 1.0.
+\end{itemize}
+
+
+
+
+\section{Grado de cumplimiento de los objetivos}
+
+Tras finalizar el desarrollo y la experimentación, se confirma que el proyecto ha cumplido satisfactoriamente con el objetivo general y los objetivos específicos definidos en la introducción de esta memoria. A continuación, se detalla el grado de consecución de cada uno de ellos:
+
+\begin{itemize}
+    \item Objetivo 1: Implementación del pipeline de procesamiento.
+
+    Estado: Alcanzado. Se ha codificado una arquitectura modular en Python que integra con éxito la ingesta de PDFs, la interacción con la API de Gemini y la gestión de archivos de salida. El sistema es plenamente funcional y reproducible.
+
+    \item Objetivo 2: Definición de la estructura de datos (DTD).
+
+    Estado: Alcanzado. Se ha diseñado una gramática formal (\texttt{gramatica.dtd}) que encapsula la complejidad de los textos lingüísticos mayas, asegurando que la información extraída mantenga su jerarquía lógica.
+
+    \item Objetivo 3: Desarrollo de herramientas de validación y corrección.
+
+    Estado: Alcanzado. Los módulos \texttt{xml\_corrector.py} y \texttt{xml\_validator.py} han demostrado ser fundamentales para subsanar la inestabilidad de los LLMs, logrando que el 100\% de las salidas aprobadas por el sistema sean estructuralmente válidas.
+
+    \item Objetivo 4: Estudio empírico de la temperatura.
+
+    Estado: Alcanzado. Se ha realizado una experimentación sistemática que ha permitido identificar el intervalo de 0.1 a 0.25 como el ``punto dulce'' de rendimiento, aportando una conclusión técnica de alto valor para futuros trabajos en el área.
+
+    \item Objetivo 5: Generación de documentación en LaTeX.
+
+    Estado: Alcanzado. El script \texttt{converter.py} automatiza la traslación de los datos estructurados a archivos \texttt{.tex} de alta calidad, permitiendo la reconstrucción visual de las gramáticas de la ALMG bajo estándares académicos.
+
+    \item Objetivo 6: Evaluación de la portabilidad a modelos locales.
+
+    Estado: Alcanzado (Nivel Exploratorio). Se ha realizado un análisis del estado del arte (Capítulo 2.4) identificando a Mistral OCR y Granite-Docling como las alternativas locales más viables para mitigar la dependencia de APIs externas detectadas durante el desarrollo.
+\end{itemize}
+
+Conclusión del Objetivo General:
+
+El sistema desarrollado constituye una solución robusta para la digitalización y estructuración de lenguas minorizadas. Se ha logrado transformar fuentes documentales analógicas en activos digitales de alta precisión (90-100\%), cumpliendo con los estándares de calidad tipográfica y técnica requeridos para un TFM de Máster en Inteligencia Artificial.
+
+\section{Lecciones aprendidas y desafíos técnicos}
+
+El desarrollo de este proyecto ha supuesto un proceso de aprendizaje continuo, enfrentando retos que van más allá del desarrollo de software y que tocan la realidad operativa de la Inteligencia Artificial en 2026.
+
+\subsection{La fragilidad de la dependencia de APIs externas}
+
+El desafío técnico más crítico fue la inestabilidad de las condiciones de servicio de Google AI Studio. Durante el proyecto, la cuota de uso sufrió una degradación drástica, pasando de 1.500 peticiones diarias a solo 20.
+
+Lección: Esta limitación forzó una transición desde un enfoque de ``procesamiento masivo'' hacia una ``economía de tokens'' y de tiempo. Se aprendió que en investigación es vital contar con un Test Set optimizado para no agotar los recursos en pruebas fallidas. Asimismo, subraya la necesidad de avanzar hacia el despliegue de modelos locales (como se propone en el trabajo futuro) para garantizar la soberanía tecnológica del proyecto.
+
+\subsection{La IA como motor, la ingeniería como cinturón de seguridad}
+
+Una lección fundamental ha sido la confirmación de que, en tareas de digitalización académica, no se puede confiar ciegamente en la salida de un LLM, por avanzado que sea.
+
+Lección: La verdadera robustez del sistema no reside en el modelo Gemini en sí, sino en la capa de validación externa (DTD) y en el post-procesamiento heurístico (\texttt{xml\_corrector.py}). Se ha aprendido que la IA es excelente para la comprensión contextual, pero la programación tradicional sigue siendo indispensable para garantizar la perfección sintáctica necesaria en formatos como XML o LaTeX.
+
+\subsection{Complejidad lingüística maya}
+
+El procesamiento de glosas interlineales y caracteres especiales puso a prueba los límites del modelo.
+
+Lección: Se aprendió que el Few-Shot Learning es la herramienta más potente para ``enseñar'' a una IA reglas de una lengua minorizada en pocos segundos. Sin estos ejemplos previos, el modelo tendía a ignorar la estructura vertical de las glosas, lo que demuestra la importancia de la curación de datos por parte del investigador.
+
+
+
+\section{Líneas de investigación futura}
+
+El sistema desarrollado en este TFM sienta las bases para un ecosistema de digitalización lingüística mucho más amplio. Se proponen las siguientes líneas de trabajo para dar continuidad a la investigación:
+
+\subsection{Migración a modelos locales y soberanía tecnológica}
+
+La línea prioritaria de investigación futura es la sustitución o apoyo de la API de Gemini por modelos de pesos abiertos (\textit{Open Weights}) que puedan ejecutarse en infraestructura local.
+
+\begin{itemize}
+    \item Implementación de Mistral OCR y DeepSeek-OCR: Evaluar el rendimiento de estos modelos especializados en visión documental para eliminar la dependencia de cuotas de terceros y costes por token.
+
+    \item Despliegue de modelos ligeros: Explorar el uso de IBM Granite-Docling (258M) en entornos de computación restringida (como Google Colab o servidores departamentales), lo que permitiría el procesado masivo de las gramáticas de forma ininterrumpida.
+\end{itemize}
+
+\subsection{Expansión del corpus lingüístico}
+
+Una vez validado el pipeline en Kaqchikel, K’iche’ y Mam, el siguiente paso natural es extender el proceso a las restantes lenguas de la Academia de Lenguas Mayas de Guatemala.
+
+\begin{itemize}
+    \item Inclusión de lenguas con menos recursos: Aplicar la metodología al Q’eqchi’, Q’anjob’al y Poqomchi’, entre otros, para verificar si la capacidad de Transfer Learning del sistema se mantiene constante en toda la familia maya.
+\end{itemize}
+
+\subsection{Desarrollo de una plataforma de consulta lingüística}
+
+El contenido estructurado en XML generado por este sistema permite el desarrollo de herramientas de nivel superior:
+
+\begin{itemize}
+    \item Buscador semántico: Crear una base de datos que permita a lingüistas realizar búsquedas complejas (ej. ``buscar todos los ejemplos de verbos transitivos en Kaqchikel con su glosa correspondiente'').
+
+    \item Generación automática de diccionarios: Utilizar las glosas extraídas para alimentar automáticamente bases de datos léxicas y motores de traducción automática.
+\end{itemize}
+
+\subsection{Optimización del pipeline mediante RAG}
+
+Implementar una arquitectura de Generación Aumentada por Recuperación (RAG) para la selección dinámica de ejemplos few-shot. En lugar de usar ejemplos estáticos, el sistema podría buscar en una base de datos de páginas ya validadas aquellas que tengan un layout similar a la página actual, optimizando así la precisión de la IA en tiempo real.
+
+\subsection{Colaboración institucional y difusión de datos}
+
+Continuar con las gestiones iniciadas por la tutoría académica para establecer acuerdos con la ALMG que permitan, en un futuro, la liberación de los corpus estructurados bajo licencias abiertas, contribuyendo de forma definitiva a la digitalización de las lenguas mayas.
+
+
+
+
+
+
+
+
+
+
+% \chapter{Conclusiones y trabajos futuros}
+
+% Este capítulo sirve como cierre del proyecto y está dividido en dos secciones principales. En la Sección \ref{sec:conclusiones} se presenta un análisis que compara los objetivos alcanzados y aquellos que pueden mejorarse. En la Sección \ref{futuro} se proponen posibles mejoras y líneas de trabajo futuro, tanto en términos de investigación como de desarrollo adicional de la aplicación, además de una reflexión personal sobre el proceso de desarrollo.
+
+% \section{Conclusiones}
+% \label{sec:conclusiones}
+
+% Se ha cumplido con el objetivo principal de este TFG, desarrollando una aplicación funcional que resuelve de manera efectiva los problemas identificados en la gestión documental. A través de un proceso riguroso de análisis, diseño e implementación, se han alcanzado todos los objetivos planteados inicialmente con precisión, obteniendo así las siguientes conclusiones:
+
+% \begin{itemize}
+%     \item Planificación y organización: Hacer las cosas bien desde el principio ahorra tiempo y esfuerzo a largo plazo. Por ejemplo, la implementación de logs propios y el uso de archivos externos para mensajes de la aplicación han demostrado ser decisiones acertadas que facilitaron el mantenimiento y la depuración del código.
+    
+%     \item Subestimación de tecnologías: Durante el desarrollo, se observó que algunas tecnologías o tareas aparentemente simples pueden resultar más complejas de lo esperado. Esto subraya la importancia de investigar y planificar adecuadamente antes de implementar soluciones.
+    
+%     \item Documentación y buenas prácticas: Nombrar variables y clases de manera significativa y seguir estándares de codificación ha sido fundamental para mantener un código legible y fácil de mantener, especialmente en un proyecto con más de 60 archivos editados.
+    
+%     \item Importancia de la modularidad: Separar los mensajes de la aplicación en archivos externos desde el principio ha demostrado ser una práctica muy útil, ya que evita la necesidad de modificar el código fuente cada vez que se requiere un cambio en los textos.
+
+%     \item Uso de tecnologías modernas: La elección de tecnologías como  Thymeleaf, en lugar de REST para el backend ha permitido aprovechar al máximo el potencial de SpringBoot. Sin embargo no ha permitido desacoplar el frontend del backend en su totalidad, lo que podría probocar problemas en  la escalabilidad y la integración con frameworks modernos como React o Angular.
+% \end{itemize}
+
+% En resumen, este proyecto ha sido una oportunidad para aplicar conocimientos previos, aprender nuevas herramientas y adoptar buenas prácticas de desarrollo. Aunque se han alcanzado los objetivos principales, siempre hay margen para mejorar y optimizar el trabajo realizado.
+
+% \section{Líneas de trabajo futuras}
+% \label{futuro}
+
+% A lo largo del desarrollo del proyecto, surgieron varias ideas y mejoras que, debido a limitaciones de tiempo y alcance, no pudieron implementarse. A continuación, se proponen algunas líneas de trabajo futuro para continuar mejorando la aplicación:
+
+% \begin{itemize}
+%     \item Implementación de un framework moderno para el frontend: Utilizar tecnologías como Vite, Next.js o un framework similar para el desarrollo del frontend, aprovechando el controlador REST ya implementado. Esto mejoraría la experiencia del usuario y facilitaría la creación de interfaces más dinámicas y responsivas.
+    
+%     \item Paginación en la carga de documentos: Implementar un sistema de paginación para la carga de documentos, lo que mejoraría el rendimiento de la aplicación al manejar grandes volúmenes de datos.
+    
+%     \item Buscador avanzado: Implementar un sistema de búsqueda avanzada que permita a los usuarios introducir identificadores específicos (como client\_app\_id o client\_doc\_id) para filtrar y localizar documentos de manera rápida y precisa. Esta funcionalidad mejoraría la usabilidad de la aplicación al permitir búsquedas más eficientes y reducir el tiempo necesario para encontrar información específica.
+    
+%     \item Sistema de descarga de datos: Implementar un sistema integrado en la aplicación para facilitar la descarga de conjuntos de datos de la tabla con los documentos filtrados.
+% \end{itemize}
+
+% Estas propuestas representan oportunidades para seguir avanzando en el desarrollo de la aplicación y explorar nuevas áreas de investigación. La implementación de estas mejoras no solo mejoraría la funcionalidad y usabilidad de la aplicación, sino que también abriría nuevas posibilidades para su uso en entornos académicos y profesionales.
 
 

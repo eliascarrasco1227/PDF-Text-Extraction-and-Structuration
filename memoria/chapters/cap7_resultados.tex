@@ -1,64 +1,307 @@
+\chapter{Experimentación y Análisis de Resultados}
 
-\chapter{Pruebas, validación y resultados}\label{resultados}
-Las pruebas y la validación son etapas críticas en el desarrollo de cualquier sistema de software, ya que permiten garantizar que la aplicación cumple con los requisitos funcionales y no funcionales, además de asegurar su correcto funcionamiento en diferentes escenarios. A continuación, se describen las estrategias y metodologías utilizadas para validar el correcto funcionamiento de SIDManager, así como los resultados obtenidos durante este proceso.
+Este capítulo aborda la evaluación empírica y sistemática del sistema automatizado de digitalización lingüística desarrollado en este trabajo. A través de una metodología basada en la ejecución secuencial y controlada de un corpus de prueba representativo (\textit{Test Set}), compuesto por nueve páginas críticas pertenecientes a las gramáticas normativas de la Academia de Lenguas Mayas de Guatemala (ALMG), se analiza el comportamiento del \textit{pipeline} bajo diferentes configuraciones operativas. Los resultados se presentan normalizados en términos de porcentaje de similitud estricta, métrica ortogonal e inversa al error a nivel de carácter (\textit{Character Error Rate}, CER).
 
-\section{Estrategia de pruebas}
-Para garantizar la calidad del software, se ha seguido una estrategia de pruebas que combina técnicas de prueba manual y automatizada. Esta estrategia se ha dividido en tres niveles principales:
+\section{Diseño Experimental y Metodología de Evaluación}
 
-\begin{itemize}    
-    \item \textbf{Pruebas de integración}: Se han llevado a cabo pruebas para validar la interacción entre los diferentes componentes del sistema, como la conexión entre el backend y la base de datos, o la integración entre los servicios y los controladores. Estas pruebas han sido esenciales para detectar posibles errores en la comunicación entre módulos.
+Para verificar el comportamiento estocástico del modelo multimodal y evaluar la resiliencia del sistema de validación sintáctica implementado en \texttt{xml\_corrector.py}, se ha estructurado un protocolo experimental dividido en dos dimensiones complementarias: el barrido hiperparamétrico de la temperatura de generación y la comparativa entre diferentes arquitecturas de modelos desplegadas en la nube.
+
+El corpus de validación comprende variantes dialectales e idiomáticas con distintos niveles de complejidad tipográfica, maquetación y ruido visual. Concretamente, se han seleccionado páginas pertenecientes a las gramáticas de Kaqchikel (páginas 172 y 205), Mam (páginas 90 y 231), K'iche' (páginas 52 y 56) y Q'anjob'al (páginas 44, 94 y 201).
+
+El análisis de los datos se orienta a determinar cómo las características estructurales del documento fuente interactúan con las capacidades probabilísticas del modelo, evaluando la capacidad del sistema para generar documentos XML jerárquicamente válidos y compatibles con la especificación formal definida en el archivo DTD.
+
+\section{Análisis Empírico del Parámetro de Temperatura}
+
+El parámetro de temperatura (\(T\)) constituye el hiperparámetro crítico que gobierna la entropía y la distribución de probabilidad aplicada durante la generación de texto por parte del modelo. Su influencia resulta especialmente relevante en tareas de digitalización estructurada, donde existe un equilibrio delicado entre la reproducción fiel del contenido original y la capacidad de inferencia necesaria para reconstruir estructuras complejas o parcialmente degradadas.
+
+Con el propósito de identificar el punto de equilibrio óptimo entre determinismo y flexibilidad generativa, se ha realizado un barrido sistemático de temperatura cubriendo ocho configuraciones diferenciadas:
+
+\[
+T \in \{0.0,\; 0.1,\; 0.25,\; 0.5,\; 0.75,\; 1.0,\; 1.5,\; 2.0\}
+\]
+
+Cada configuración ha sido evaluada mediante múltiples ejecuciones independientes sobre el conjunto de pruebas, permitiendo analizar tanto la calidad media de los resultados como la estabilidad estadística del proceso de generación. Esta metodología permite cuantificar la relación existente entre la variabilidad introducida por el modelo y la robustez del sistema de validación estructural desarrollado en los capítulos anteriores.
+
+
+\subsection{Comportamiento Global y No Monotonicidad del Sistema}
+
+El análisis agregado de las muestras revela una propiedad matemática fundamental: la relación entre la temperatura de generación y la fidelidad textual, medida mediante el porcentaje de similitud, no presenta un comportamiento lineal ni monotónico. La ordenación de los niveles térmicos en función de la media global obtenida es la siguiente:
+
+\[
+T=0.5 > T=0.25 > T=1.5 > T=0.75 > T=1.0 > T=0.1 > T=0.0 > T=2.0
+\]
+
+Este comportamiento pone de manifiesto que la precisión del sistema disminuye tanto en el extremo de máxima aleatoriedad (\(T=2.0\)), con una similitud media del 92.14\,\% y una elevada dispersión reflejada en una desviación estándar de \(\sigma = 8.51\), como en el extremo opuesto de determinismo absoluto (\(T=0.0\)), cuya media global alcanza únicamente el 92.44\,\%.
+
+La configuración correspondiente a \(T=0.5\) emerge de forma inequívoca como el punto óptimo de funcionamiento del sistema. Esta temperatura registra simultáneamente la mayor similitud media global (94.02\,\%) y la menor desviación estándar observada durante la experimentación (\(\sigma = 5.06\)). La convergencia de ambas métricas estadísticas en un mismo valor paramétrico constituye una evidencia sólida de que una cantidad moderada de aleatoriedad maximiza el rendimiento global del proceso de digitalización estructurada.
+
+\subsection{El ``Punto Dulce'' (\textit{Sweet Spot}) frente al Determinismo Absoluto}
+
+Contrariamente a la hipótesis habitual en tareas tradicionales de OCR y extracción automática de información, donde suele asumirse que una configuración completamente determinista (\(T=0.0\)) minimiza los errores al seleccionar siempre el token más probable, los resultados experimentales obtenidos muestran que esta estrategia resulta subóptima cuando se trabaja con estructuras lingüísticas complejas.
+
+La diferencia se aprecia claramente al comparar los resultados obtenidos bajo determinismo estricto con aquellos alcanzados dentro de la ventana térmica comprendida entre \(T=0.1\) y \(T=0.5\), identificada durante este trabajo como el \textit{Sweet Spot} del sistema.
+
+\begin{itemize}
+    \item Caso \texttt{Kaqchikel\_205}: bajo una configuración completamente determinista (\(T=0.0\)), la similitud obtenida se reduce hasta el 92.66\,\%. Sin embargo, al incrementar ligeramente la temperatura hasta \(T=0.25\), el sistema alcanza un máximo de precisión del 97.76\,\%, lo que supone una mejora neta de 5.10 puntos porcentuales.
+
+    \item Caso \texttt{Q'anjob'al\_201}: este ejemplo constituye la evidencia más significativa de las limitaciones del determinismo absoluto. Con \(T=0.0\), la similitud registrada es del 70.63\,\%. Cuando la temperatura se ajusta a \(T=0.5\), el rendimiento aumenta hasta el 82.57\,\%, representando una mejora cercana a los 12 puntos porcentuales.
+\end{itemize}
+
+La explicación teórica de este fenómeno puede interpretarse en términos de lo que, dentro de este trabajo, se denomina \textit{micro-flexibilidad cognitiva}. Durante el procesamiento de documentos analógicos heterogéneos, caracterizados por ruido visual, ausencia de metadatos textuales y estructuras complejas de glosas interlineales, una política completamente determinista obliga al modelo a permanecer dentro de trayectorias probabilísticas extremadamente rígidas.
+
+Como consecuencia, pequeños errores de alineación, saltos de línea anómalos o ambigüedades visuales pueden propagarse sin posibilidad de corrección. Por el contrario, una temperatura moderada, comprendida aproximadamente entre \(T=0.25\) y \(T=0.5\), introduce la flexibilidad necesaria para explorar interpretaciones alternativas de la estructura documental sin comprometer la coherencia global ni vulnerar las restricciones sintácticas impuestas por la gramática XML.
+
+Los resultados obtenidos sugieren, por tanto, que la digitalización lingüística mediante modelos multimodales no debe abordarse como un problema puramente determinista. La incorporación controlada de aleatoriedad constituye un mecanismo eficaz para mejorar simultáneamente la fidelidad textual y la estabilidad estructural de la información generada.
+
+
+\subsection{Resiliencia Estructural e Insensibilidad Térmica en Páginas Estables}
+
+A pesar de las fluctuaciones observadas en las medias globales, el análisis desagregado de los resultados pone de manifiesto que la temperatura constituye un factor secundario para la mayoría de las muestras evaluadas. En concreto, siete de las nueve páginas analizadas (Kaqchikel\_172, Mam\_90, Mam\_231, K'iche'\_52, K'iche'\_56, Q'anjob'al\_44 y Q'anjob'al\_94) presentan una sensibilidad extremadamente reducida frente a las variaciones del parámetro térmico, manteniendo rangos de oscilación inferiores o iguales a 1.61 puntos porcentuales.
+
+El cálculo individual del rango de dispersión, definido como la diferencia entre el valor máximo y mínimo observado para cada página,
+
+\[
+R = \text{máx} - \text{mín},
+\]
+
+permite cuantificar con precisión esta estabilidad estructural.
+
+Entre los casos más representativos destacan los siguientes:
+
+\begin{itemize}
+    \item Q'anjob'al\_44 (\(R = 0.19\)): constituye el ejemplo más extremo de estabilidad. La página mantiene una similitud constante del 96.10\,\% para todas las configuraciones comprendidas entre \(T=0.0\) y \(T=0.75\). Únicamente a partir de \(T \ge 1.0\) se observa una ligera transición hacia un valor estable del 95.91\,\%. Esta evolución presenta un comportamiento similar a una función escalón, lo que sugiere una elevada inmunidad frente al ruido estocástico introducido por el modelo.
+
+    \item Q'anjob'al\_94 (\(R = 0.35\)): muestra un patrón análogo. La similitud permanece prácticamente invariable en torno al 99.92\,\% para casi todas las temperaturas analizadas, registrando pequeñas desviaciones únicamente en \(T=0.5\) y \(T=2.0\), donde alcanza el 99.57\,\%.
+
+    \item K'iche'\_52 (\(R = 0.56\)), Mam\_231 (\(R = 0.61\)) y K'iche'\_56 (\(R = 0.68\)): presentan igualmente líneas de tendencia prácticamente horizontales. Resulta especialmente interesante el caso de K'iche'\_56, cuya similitud permanece estabilizada alrededor del 88.90\,\% independientemente de la temperatura utilizada. Este comportamiento sugiere la existencia de una limitación estructural específica de la página, posiblemente asociada a elementos complejos de maquetación, glifos ambiguos o construcciones lingüísticas que exceden las capacidades de interpretación del sistema. En consecuencia, incrementar o reducir la aleatoriedad del modelo no produce mejoras apreciables.
+\end{itemize}
+
+La evidencia experimental obtenida permite concluir que la tipología documental, la calidad de digitalización y la complejidad estructural de la página original constituyen el principal factor limitante del proceso de extracción. Su influencia resulta significativamente superior a la derivada de la configuración térmica del modelo.
+
+Desde esta perspectiva, la temperatura actúa como un factor de ajuste fino cuya capacidad de mejora depende de la existencia previa de ambigüedades interpretativas. Cuando el documento presenta una estructura limpia, una disposición tipográfica estable y texto claramente identificable, el sistema converge de forma consistente hacia niveles de similitud próximos al 99\,\%. Por el contrario, las páginas con ruido visual, estructuras complejas o dificultades inherentes de maquetación permanecen confinadas a techos de rendimiento relativamente estables, independientemente del nivel de creatividad asignado al modelo generativo.
+
+
+\subsection{Correlación entre la Complejidad del Contenido y la Sensibilidad Térmica}
+
+Con el objetivo de profundizar en la relación entre la dificultad intrínseca del documento y el impacto de la creatividad introducida por el modelo, se ha definido una métrica específica denominada factor diferencial de creatividad (\(\Delta\)). Esta magnitud cuantifica la diferencia de rendimiento entre entornos de alta creatividad y configuraciones cercanas al determinismo.
+
+Formalmente, el factor se define como:
+
+\[
+\Delta_{\text{creatividad}}
+=
+\text{Media}(T=1.5,\,T=2.0)
+-
+\text{Media}(T=0.0,\,T=0.1)
+\]
+
+Un valor positivo de \(\Delta\) indica que el aumento de la creatividad beneficia el proceso de extracción, mientras que un valor negativo implica que la mayor aleatoriedad degrada el rendimiento y favorece la aparición de errores estructurales o textuales.
+
+Al relacionar esta métrica con la dificultad media de cada página, medida mediante su porcentaje de similitud global, se obtiene la distribución mostrada en la Tabla~\ref{tab:delta_creatividad}.
+
+\begin{table}[ht]
+\centering
+\caption{Relación entre dificultad documental e impacto de la creatividad}
+\label{tab:delta_creatividad}
+\begin{tabular}{lccp{3.5cm}}
+\hline
+Página & Similitud media & \(\Delta\) & Impacto \\ \hline
+Q'anjob'al\_201 & 75.32\% & +1.69 & Beneficioso \\
+K'iche'\_56 & 88.90\% & +0.63 & Beneficioso \\
+Kaqchikel\_205 & 93.43\% & -1.42 & Perjudicial \\
+Kaqchikel\_172 & 93.47\% & -0.05 & Neutro \\
+Mam\_90 & 94.02\% & -0.30 & Perjudicial \\
+Q'anjob'al\_44 & 96.03\% & -0.19 & Perjudicial \\
+K'iche'\_52 & 98.32\% & -0.14 & Perjudicial \\
+Mam\_231 & 98.64\% & -0.30 & Perjudicial \\
+Q'anjob'al\_94 & 99.83\% & -0.17 & Perjudicial \\ \hline
+\end{tabular}
+\end{table}
+
+Los resultados obtenidos permiten extraer varias observaciones relevantes acerca del comportamiento del sistema.
+
+En primer lugar, se aprecia una tendencia de compensación mediante creatividad. Las dos páginas con menor rendimiento global, Q'anjob'al\_201 y K'iche'\_56, son precisamente las únicas que presentan valores positivos de \(\Delta\). Este comportamiento sugiere que, cuando el modelo se enfrenta a documentos con elevados niveles de ambigüedad visual o dificultades de interpretación estructural, una mayor libertad probabilística favorece la reconstrucción contextual de información incompleta o deteriorada.
+
+Por el contrario, en aquellas páginas cuya similitud media supera aproximadamente el 94\,\%, la creatividad elevada no aporta beneficios observables. Los valores de \(\Delta\) se mantienen sistemáticamente en una banda reducida comprendida entre \(-0.05\) y \(-0.30\), indicando que el incremento de temperatura introduce pequeñas alteraciones que terminan perjudicando la calidad de la extracción. En documentos con buena calidad visual y estructuras claramente identificables, la tarea se aproxima a un problema de transcripción directa donde la exploración probabilística resulta innecesaria.
+
+Un aspecto especialmente interesante lo constituye el caso de Kaqchikel\_205. A pesar de presentar una dificultad intermedia-alta, con una similitud media del 93.43\,\%, el aumento de creatividad provoca una degradación significativa de 1.42 puntos porcentuales. Este comportamiento rompe la tendencia general observada y sugiere que no todas las formas de complejidad documental se benefician por igual de la aleatoriedad. Es posible que la dificultad de esta página esté asociada a estructuras altamente jerarquizadas, como tablas de conjugación verbal o disposiciones sintácticas rígidas, cuya correcta interpretación requiere estabilidad estructural más que capacidad inferencial.
+
+En conjunto, los resultados indican que el efecto de la temperatura depende no solo del grado de dificultad de la página, sino también de la naturaleza específica de dicha dificultad. Mientras que los problemas asociados a ruido visual o información incompleta pueden beneficiarse de una mayor flexibilidad generativa, las estructuras lingüísticas altamente organizadas tienden a degradarse cuando aumenta la variabilidad probabilística.
+
+A la luz de esta evidencia, la ventana térmica comprendida entre \(T=0.25\) y \(T=0.5\) se consolida como la configuración más equilibrada para un sistema generalista de digitalización de gramáticas de la ALMG. Este intervalo proporciona suficiente flexibilidad para mejorar la extracción en los documentos más complejos, manteniendo simultáneamente la estabilidad necesaria para evitar degradaciones en aquellas páginas que presentan una estructura clara y fácilmente interpretable.
+
+
+
+
+\section{Evaluación Comparativa de Arquitecturas Multimodales (Modelos)}
+
+Una vez determinado el impacto del entorno térmico sobre el proceso de inferencia, la segunda dimensión experimental de este estudio se centra en la comparación directa de diferentes arquitecturas multimodales disponibles a través de la API de Google AI.
+
+Con el fin de aislar las capacidades intrínsecas de reconocimiento visual, razonamiento documental y estructuración sintáctica de cada modelo, todas las pruebas se ejecutaron utilizando una temperatura constante de \(T=1.0\). Esta parametrización permite minimizar el efecto de la configuración térmica y atribuir las diferencias observadas exclusivamente a las características propias de cada arquitectura.
+
+El análisis incluye cinco modelos pertenecientes a distintas generaciones de la familia Gemini:
+
+\begin{itemize}
+    \item \texttt{gemini-2.5-flash}
+    \item \texttt{gemini-2.5-flash-lite}
+    \item \texttt{gemini-3-flash-preview}
+    \item \texttt{gemini-3.1-flash-lite}
+    \item \texttt{gemini-3.5-flash}
+\end{itemize}
+
+Los resultados obtenidos muestran diferencias significativas tanto en precisión como en estabilidad, especialmente cuando los modelos se enfrentan a documentos con una elevada complejidad estructural.
+
+\subsection{Dominancia Sistémica de la Arquitectura Avanzada (\texttt{gemini-3.5-flash})}
+
+Los resultados experimentales identifican de forma clara a \texttt{gemini-3.5-flash} como la arquitectura con mejor rendimiento global dentro del conjunto analizado.
+
+Este modelo alcanza una similitud media del 95.69\,\%, la más elevada de todo el estudio, y presenta simultáneamente la menor dispersión estadística, con una desviación estándar de apenas
+
+\[
+\sigma = 3.59.
+\]
+
+La combinación de una elevada precisión media y una baja variabilidad constituye una evidencia sólida de la robustez operativa del modelo. No solo obtiene mejores resultados absolutos, sino que además mantiene un comportamiento consistente entre documentos de naturaleza muy diversa.
+
+La superioridad de la arquitectura queda reforzada al comprobar que obtiene la mejor puntuación en seis de las nueve páginas incluidas en el corpus experimental.
+
+Las diferencias se vuelven especialmente relevantes en aquellos documentos catalogados como escenarios de alta complejidad estructural.
+
+\begin{itemize}
+    \item Caso K'iche'\_56: \texttt{gemini-3.5-flash} alcanza una similitud del 96.80\,\%, superando en 5.13 puntos porcentuales al segundo modelo mejor clasificado, \texttt{gemini-3-flash-preview}, que obtiene un 91.67\,\%. Esta diferencia constituye la mayor separación observada entre dos arquitecturas durante todo el estudio y pone de manifiesto la importancia de la capacidad de razonamiento documental cuando el sistema debe interpretar estructuras complejas.
+
+    \item Caso Q'anjob'al\_201: considerada la página más difícil del conjunto de pruebas, \texttt{gemini-3.5-flash} lidera nuevamente la clasificación con una similitud del 87.96\,\%. Se trata de la única arquitectura capaz de aproximarse de forma consistente a niveles de precisión compatibles con una digitalización prácticamente autónoma en un entorno de elevada dificultad.
+\end{itemize}
+
+Estos resultados sugieren que el incremento de capacidad computacional y profundidad de razonamiento incorporado en las arquitecturas más avanzadas no solo mejora el reconocimiento textual, sino que también incrementa significativamente la capacidad del modelo para interpretar jerarquías documentales complejas, glosas interlineales y estructuras lingüísticas altamente organizadas.
+
+La evidencia empírica obtenida permite concluir que \texttt{gemini-3.5-flash} representa la opción más adecuada para tareas de digitalización lingüística avanzada, especialmente cuando el objetivo es preservar simultáneamente la fidelidad textual y la estructura semántica de documentos especializados.
+
+
+
+\subsection{El Comportamiento Paradójico de los Modelos de Escala Reducida (\texttt{Lite})}
+
+La evaluación de \texttt{gemini-2.5-flash-lite} revela un comportamiento especialmente interesante desde el punto de vista de la ingeniería de \textit{prompts} y de la selección de arquitecturas para tareas de digitalización documental.
+
+A nivel agregado, este modelo obtiene los resultados más modestos de todo el estudio, registrando una similitud media global del 84.94\,\% y la mayor dispersión estadística observada entre todas las arquitecturas evaluadas, con una desviación estándar de
+
+\[
+\sigma = 10.71.
+\]
+
+Estos valores reflejan una elevada sensibilidad a las características específicas del documento procesado. Sin embargo, un análisis desagregado muestra que esta arquitectura no puede considerarse simplemente como un modelo de bajo rendimiento.
+
+Los resultados evidencian una fuerte dependencia respecto a la complejidad intrínseca de la página analizada. En documentos con una estructura sencilla, escasa densidad de glosas y una maquetación clara, el modelo ofrece resultados altamente competitivos. Un ejemplo representativo es la página Q'anjob'al\_94, donde alcanza una similitud del 100.00\,\%, igualando el mejor resultado obtenido durante toda la experimentación y compartiendo dicha posición con \texttt{gemini-2.5-flash}.
+
+No obstante, esta capacidad se degrada rápidamente cuando aumenta la complejidad documental. En páginas caracterizadas por estructuras densas, presencia de ruido visual, escaneados de baja calidad o distribuciones espaciales complejas, el modelo experimenta una caída significativa de rendimiento. El caso más representativo corresponde a Kaqchikel\_172, donde la similitud desciende hasta el 70.14\,\%.
+
+Esta marcada asimetría sugiere que las versiones reducidas presentan limitaciones para mantener representaciones internas suficientemente robustas cuando la tarea requiere combinar simultáneamente reconocimiento visual, razonamiento estructural y generación jerárquica de XML. Como consecuencia, su utilización resulta especialmente adecuada en escenarios donde los documentos han sido previamente limpiados, normalizados o presentan una estructura relativamente lineal.
+
+\subsection{Elasticidad de la Brecha Intermodelo en Función de la Complejidad del \textit{Layout}}
+
+Uno de los hallazgos más relevantes de esta experimentación es que la importancia de seleccionar una arquitectura específica depende directamente de la complejidad del documento procesado.
+
+Los resultados muestran que la diferencia entre el mejor y el peor modelo no permanece constante, sino que aumenta progresivamente a medida que disminuye la legibilidad o aumenta la complejidad estructural de la página.
+
+En los documentos más sencillos, las diferencias entre arquitecturas son prácticamente insignificantes. El ejemplo más representativo es la página Q'anjob'al\_94, donde la distancia entre el peor y el mejor resultado es de únicamente 1.44 puntos porcentuales, oscilando entre el 98.56\,\% y el 100.00\,\%.
+
+Desde una perspectiva práctica, este comportamiento indica que en tareas de baja complejidad la elección del modelo tiene un impacto limitado sobre la calidad final de la digitalización. En estos escenarios resulta razonable priorizar factores operativos como el coste por token, el tiempo de respuesta o el consumo de recursos computacionales.
+
+La situación cambia radicalmente en los documentos más complejos. En la página Q'anjob'al\_201, identificada como la muestra de mayor dificultad del corpus, la diferencia entre la mejor y la peor arquitectura se amplía hasta 17.65 puntos porcentuales, abarcando desde un mínimo del 70.31\,\% hasta un máximo del 87.96\,\%.
+
+Esta expansión de la brecha de rendimiento evidencia que la complejidad documental actúa como un factor amplificador de las diferencias arquitectónicas. Cuando el modelo debe interpretar estructuras lingüísticas densas, glosas interlineales complejas o disposiciones tipográficas ambiguas, las capacidades de razonamiento multimodal y representación jerárquica adquieren una importancia decisiva.
+
+Los resultados permiten concluir que la selección de la arquitectura es prácticamente irrelevante para documentos sencillos, pero se convierte en un factor crítico conforme aumenta la complejidad del material analizado. En estos contextos, la diferencia entre una arquitectura avanzada y una versión reducida puede determinar si el sistema genera una representación XML válida o si, por el contrario, se producen errores estructurales que comprometen la utilidad del documento digitalizado.
+
+
+
+
+\subsection{No Linealidad Genérica del Rendimiento frente al Nomenclátor de Versión}
+
+Los resultados experimentales obtenidos permiten cuestionar una hipótesis frecuentemente asumida en el ámbito de los Modelos de Lenguaje de Gran Tamaño: que una versión más reciente de una arquitectura implica necesariamente una mejora proporcional en el rendimiento de tareas especializadas.
+
+La evidencia recopilada durante este estudio demuestra que la numeración generacional de un modelo no constituye un predictor fiable de su desempeño en procesos de digitalización lingüística estructurada. Por el contrario, el rendimiento observado depende de factores más complejos relacionados con la arquitectura interna, los procedimientos de entrenamiento y los mecanismos específicos de razonamiento multimodal incorporados en cada versión.
+
+Un primer ejemplo de esta no linealidad se observa al comparar \texttt{gemini-3-flash-preview} con \texttt{gemini-2.5-flash}. Aunque el primero pertenece nominalmente a una generación posterior, registra una similitud media global inferior. Mientras \texttt{gemini-2.5-flash} alcanza una media del 93.37\,\%, \texttt{gemini-3-flash-preview} obtiene un 92.44\,\%.
+
+Un comportamiento similar se aprecia en \texttt{gemini-3.1-flash-lite}. A pesar de tratarse de una variante ligera, sus resultados se mantienen próximos a los obtenidos por \texttt{gemini-2.5-flash}, alcanzando niveles de precisión que superan las expectativas habitualmente asociadas a modelos de menor tamaño.
+
+La naturaleza no lineal de esta relación se manifiesta con especial claridad al analizar casos individuales. El ejemplo más representativo corresponde a la página Kaqchikel\_205. En este documento, \texttt{gemini-3-flash-preview} alcanza una similitud del 94.70\,\%, superando a \texttt{gemini-3.5-flash}, que registra un 92.32\,\%.
+
+Este resultado constituye una inversión local de la jerarquía global observada anteriormente y demuestra que la superioridad estadística de un modelo no garantiza necesariamente un mejor comportamiento en todos los escenarios posibles. Determinadas configuraciones documentales pueden alinearse mejor con los sesgos internos o las capacidades específicas de arquitecturas concretas, produciendo resultados superiores a los obtenidos por modelos de mayor capacidad general.
+
+Desde una perspectiva metodológica, esta observación posee implicaciones relevantes para el diseño de sistemas de digitalización lingüística. Los resultados sugieren que la selección del modelo no debería realizarse exclusivamente atendiendo a su posición dentro de una determinada familia de versiones, sino considerando también la naturaleza estructural del corpus que se desea procesar.
+
+En consecuencia, la evidencia empírica obtenida respalda la adopción de arquitecturas flexibles capaces de conmutar dinámicamente entre diferentes modelos según las características del documento de entrada. Este enfoque permite aprovechar las fortalezas específicas de cada arquitectura y evita depender de la hipótesis simplificadora de que una versión más reciente constituye siempre la mejor alternativa para cualquier tarea de digitalización estructurada.
+
+En definitiva, la evolución cronológica de los modelos no sigue una relación lineal con el rendimiento observado. La interacción entre complejidad documental, capacidades multimodales y sesgos de entrenamiento genera un escenario donde la elección óptima depende del contexto particular de cada documento, reforzando la necesidad de evaluar empíricamente cada arquitectura antes de integrarla en un entorno de producción.
+
+
+
+
+
+
+
+% \chapter{Pruebas, validación y resultados}\label{resultados}
+% Las pruebas y la validación son etapas críticas en el desarrollo de cualquier sistema de software, ya que permiten garantizar que la aplicación cumple con los requisitos funcionales y no funcionales, además de asegurar su correcto funcionamiento en diferentes escenarios. A continuación, se describen las estrategias y metodologías utilizadas para validar el correcto funcionamiento de SIDManager, así como los resultados obtenidos durante este proceso.
+
+% \section{Estrategia de pruebas}
+% Para garantizar la calidad del software, se ha seguido una estrategia de pruebas que combina técnicas de prueba manual y automatizada. Esta estrategia se ha dividido en tres niveles principales:
+
+% \begin{itemize}    
+%     \item \textbf{Pruebas de integración}: Se han llevado a cabo pruebas para validar la interacción entre los diferentes componentes del sistema, como la conexión entre el backend y la base de datos, o la integración entre los servicios y los controladores. Estas pruebas han sido esenciales para detectar posibles errores en la comunicación entre módulos.
     
-    \item \textbf{Pruebas de sistema}: Se han realizado pruebas end-to-end para validar el flujo completo de la aplicación, desde la interacción del usuario con la interfaz hasta la persistencia de datos en la base de datos. Estas pruebas han incluido escenarios como el registro de usuarios, la autenticación, la gestión de documentos y la recuperación de contraseñas.
-\end{itemize}
+%     \item \textbf{Pruebas de sistema}: Se han realizado pruebas end-to-end para validar el flujo completo de la aplicación, desde la interacción del usuario con la interfaz hasta la persistencia de datos en la base de datos. Estas pruebas han incluido escenarios como el registro de usuarios, la autenticación, la gestión de documentos y la recuperación de contraseñas.
+% \end{itemize}
 
-\section{Validación de requisitos}
-Durante las pruebas, se ha validado que la aplicación cumple con todos los requisitos, incluyendo:
+% \section{Validación de requisitos}
+% Durante las pruebas, se ha validado que la aplicación cumple con todos los requisitos, incluyendo:
 
-\begin{itemize}
-    \item \textbf{Funcionalidades principales}: Registro y autenticación de usuarios, gestión de documentos, filtrado por fechas y verificación del estado de los documentos.
-    \item \textbf{Seguridad}: Validación del cifrado de contraseñas y manejo seguro de sesiones.
-    \item \textbf{Rendimiento}: Evaluación del tiempo de respuesta de la aplicación bajo diferentes cargas de trabajo, garantizando un rendimiento óptimo incluso con grandes volúmenes de datos.
-\end{itemize}
-
-
-Los resultados obtenidos en el desarrollo de SIDManager demuestran que la aplicación cumple con los objetivos planteados inicialmente, ofreciendo una solución robusta, segura y escalable para la gestión y monitorización de documentos en entornos empresariales. A continuación, se presentan los resultados más relevantes del proyecto, tanto a nivel técnico como funcional.
-
-\section{Resultados técnicos}
-\begin{itemize}
-    \item \textbf{Arquitectura modular}: La aplicación se ha desarrollado siguiendo una arquitectura basada en capas (vista, controlador, servicio, repositorio), lo que ha facilitado su mantenimiento y escalabilidad.
-    \item \textbf{Seguridad implementada}: Se ha logrado un alto nivel de seguridad gracias al uso de Spring Security, el cifrado de contraseñas con BCrypt y la protección contra ataques comunes.
-    \item \textbf{Integración de tecnologías modernas}: El uso de Spring Boot, Thymeleaf y JPA ha permitido desarrollar una aplicación eficiente y fácil de mantener.
-    \item \textbf{Documentación completa}: El código ha sido documentado utilizando Javadoc, lo que facilita su comprensión y mantenimiento por parte de otros desarrolladores.
-\end{itemize}
-
-\section{Resultados funcionales}
-\begin{itemize}
-    \item \textbf{Gestión de documentos}: La aplicación permite filtrar y visualizar documentos de manera eficiente, verificando su correcto almacenamiento en la base de datos como se puede ver en las figuras \ref{fig:documentsView} y \ref{fig:documentsView_2}.
-    \item \textbf{Autenticación y registro}: Los usuarios pueden registrarse, confirmar sus cuentas mediante correo electrónico y autenticarse de manera segura. Para ver la apariencia de la parte del registro consultar la figura \ref{fig:sign_up_view}.
-    \item \textbf{Recuperación de contraseñas}: Se ha implementado un sistema seguro para la recuperación de contraseñas, utilizando códigos de confirmación únicos.
-    \item \textbf{Interfaz intuitiva}: La interfaz de usuario, desarrollada con Thymeleaf y Bootstrap, es clara y fácil de usar, lo que mejora la experiencia del usuario.
-\end{itemize}
+% \begin{itemize}
+%     \item \textbf{Funcionalidades principales}: Registro y autenticación de usuarios, gestión de documentos, filtrado por fechas y verificación del estado de los documentos.
+%     \item \textbf{Seguridad}: Validación del cifrado de contraseñas y manejo seguro de sesiones.
+%     \item \textbf{Rendimiento}: Evaluación del tiempo de respuesta de la aplicación bajo diferentes cargas de trabajo, garantizando un rendimiento óptimo incluso con grandes volúmenes de datos.
+% \end{itemize}
 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.75\linewidth]{imagenes/view/documentsView.png}
-    \caption{Apariencia de la página principal de la aplicación SDIManager}
-    \label{fig:documentsView}
-\end{figure}
+% Los resultados obtenidos en el desarrollo de SIDManager demuestran que la aplicación cumple con los objetivos planteados inicialmente, ofreciendo una solución robusta, segura y escalable para la gestión y monitorización de documentos en entornos empresariales. A continuación, se presentan los resultados más relevantes del proyecto, tanto a nivel técnico como funcional.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.75\linewidth]{imagenes/view/documentsView_2.png}
-    \caption{Apariencia de la parte baja de página principal de la aplicación SDIManager}
-    \label{fig:documentsView_2}
-\end{figure}
+% \section{Resultados técnicos}
+% \begin{itemize}
+%     \item \textbf{Arquitectura modular}: La aplicación se ha desarrollado siguiendo una arquitectura basada en capas (vista, controlador, servicio, repositorio), lo que ha facilitado su mantenimiento y escalabilidad.
+%     \item \textbf{Seguridad implementada}: Se ha logrado un alto nivel de seguridad gracias al uso de Spring Security, el cifrado de contraseñas con BCrypt y la protección contra ataques comunes.
+%     \item \textbf{Integración de tecnologías modernas}: El uso de Spring Boot, Thymeleaf y JPA ha permitido desarrollar una aplicación eficiente y fácil de mantener.
+%     \item \textbf{Documentación completa}: El código ha sido documentado utilizando Javadoc, lo que facilita su comprensión y mantenimiento por parte de otros desarrolladores.
+% \end{itemize}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.75\linewidth]{imagenes/view/sign_up_view.png}
-    \caption{Apariencia del registro de usuarios de la aplicación SDIManager}
-    \label{fig:sign_up_view}
-\end{figure}
+% \section{Resultados funcionales}
+% \begin{itemize}
+%     \item \textbf{Gestión de documentos}: La aplicación permite filtrar y visualizar documentos de manera eficiente, verificando su correcto almacenamiento en la base de datos como se puede ver en las figuras \ref{fig:documentsView} y \ref{fig:documentsView_2}.
+%     \item \textbf{Autenticación y registro}: Los usuarios pueden registrarse, confirmar sus cuentas mediante correo electrónico y autenticarse de manera segura. Para ver la apariencia de la parte del registro consultar la figura \ref{fig:sign_up_view}.
+%     \item \textbf{Recuperación de contraseñas}: Se ha implementado un sistema seguro para la recuperación de contraseñas, utilizando códigos de confirmación únicos.
+%     \item \textbf{Interfaz intuitiva}: La interfaz de usuario, desarrollada con Thymeleaf y Bootstrap, es clara y fácil de usar, lo que mejora la experiencia del usuario.
+% \end{itemize}
 
-Para más información de los resultados y las interfaces finales, se puede visualizar el video sobre la aplicación SIDManager en el siguiente enlace \url{https://youtu.be/DZQm53UCwSE}.
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.75\linewidth]{imagenes/view/documentsView.png}
+%     \caption{Apariencia de la página principal de la aplicación SDIManager}
+%     \label{fig:documentsView}
+% \end{figure}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.75\linewidth]{imagenes/view/documentsView_2.png}
+%     \caption{Apariencia de la parte baja de página principal de la aplicación SDIManager}
+%     \label{fig:documentsView_2}
+% \end{figure}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.75\linewidth]{imagenes/view/sign_up_view.png}
+%     \caption{Apariencia del registro de usuarios de la aplicación SDIManager}
+%     \label{fig:sign_up_view}
+% \end{figure}
+
+% Para más información de los resultados y las interfaces finales, se puede visualizar el video sobre la aplicación SIDManager en el siguiente enlace \url{https://youtu.be/DZQm53UCwSE}.
