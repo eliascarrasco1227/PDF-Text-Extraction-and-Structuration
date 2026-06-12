@@ -2,6 +2,158 @@
 
 Este capítulo aborda la evaluación empírica y sistemática del sistema automatizado de digitalización lingüística desarrollado en este trabajo. A través de una metodología basada en la ejecución secuencial y controlada de un corpus de prueba representativo (\textit{Test Set}), compuesto por nueve páginas críticas pertenecientes a las gramáticas normativas de la Academia de Lenguas Mayas de Guatemala (ALMG), se analiza el comportamiento del \textit{pipeline} bajo diferentes configuraciones operativas. Los resultados se presentan normalizados en términos de porcentaje de similitud estricta, métrica ortogonal e inversa al error a nivel de carácter (\textit{Character Error Rate}, CER).
 
+\section{Contextualización de resultados}
+
+\section{Contextualización de resultados}
+
+Antes de adentrarnos en el análisis detallado de los resultados, es importante contextualizar el flujo completo de la aplicación y comprender cómo se transforma una fuente documental original en un recurso digital estructurado.
+
+Tal y como se ha descrito en capítulos anteriores, el sistema recibe como entrada un documento PDF procedente de las gramáticas normativas de la Academia de Lenguas Mayas de Guatemala (ALMG) y genera automáticamente tres tipos de salida complementarios: un archivo XML estructurado, un documento LaTeX y un PDF compilado a partir de dicho código LaTeX.
+
+Para ilustrar este proceso, a continuación se presenta una misma glosa interlineal extraída de la página 172 de la Gramática Normativa Kaqchikel. Se muestran tanto la fuente original en formato PDF (\ref{fig:glosa_input}) como las diferentes representaciones generadas por el sistema: el archivo XML (\ref{code:kachiquel_xml_172}), el código LaTeX (\ref{code:kachiquel_latex_172}) y el PDF compilado resultante (\ref{glosa_kachikel_pdf_compilado}).
+
+Si se compara la imagen original con el PDF compilado, se aprecia una diferencia significativa en la calidad visual. Mientras que la fuente original corresponde a una fotografía o digitalización de una página impresa, la salida final constituye un documento generado digitalmente mediante composición tipográfica avanzada. Sin embargo, el contenido lingüístico permanece inalterado, demostrando la capacidad del sistema para preservar con precisión tanto la información textual como la estructura gramatical presente en la fuente original.
+
+Este proceso de digitalización estructurada resulta especialmente relevante en el contexto de las lenguas minorizadas, ya que transforma documentos estáticos en recursos digitales reutilizables, buscables y procesables por sistemas informáticos. De este modo, las gramáticas dejan de ser únicamente documentos de consulta humana para convertirse también en recursos explotables por herramientas de lingüística computacional, sistemas de búsqueda avanzada y futuros modelos de inteligencia artificial.
+
+Por otro lado, el código LaTeX generado permite observar cómo la información lingüística extraída del XML se transforma en una representación formal siguiendo los estándares internacionales utilizados en documentación lingüística. El sistema emplea el paquete \texttt{expex}, ampliamente utilizado en lingüística descriptiva y tipología lingüística para la representación de glosas interlineales.
+
+A continuación se describen los principales elementos presentes en la salida LaTeX:
+
+\begin{itemize}
+
+\item \texttt{\textbackslash par\textbackslash medskip}: introduce una separación vertical entre bloques de contenido. Su función es mejorar la legibilidad del documento y delimitar visualmente cada ejemplo lingüístico.
+
+\item \texttt{\textbackslash ex}: inicia un nuevo ejemplo lingüístico numerado. Este comando es proporcionado por el paquete \texttt{expex} y permite que los ejemplos sean numerados automáticamente a lo largo del documento.
+
+\item \texttt{\textbackslash textit{}}: representa la traducción libre del ejemplo en castellano mediante tipografía cursiva. Esta convención es habitual en publicaciones lingüísticas para diferenciar claramente la traducción del texto original.
+
+\item \texttt{\textbackslash begingl}: marca el inicio de una glosa interlineal. A partir de este punto se definen los diferentes niveles de análisis lingüístico asociados al ejemplo.
+
+\item \texttt{\textbackslash gla}: contiene la oración original tal y como aparece en la lengua maya analizada. Constituye el nivel superficial de representación y muestra la frase completa sin segmentación morfológica explícita.
+
+\item \texttt{\textbackslash glb}: almacena la segmentación morfológica de la oración. En esta línea se separan explícitamente los prefijos, raíces y sufijos que componen cada palabra, permitiendo visualizar la estructura interna de las formas lingüísticas.
+
+\item \texttt{\textbackslash glc}: contiene la glosa morfológica asociada a cada uno de los segmentos identificados en la línea anterior. Esta capa proporciona la interpretación gramatical de cada morfema mediante abreviaturas estandarizadas como COM (completivo), B3s (tercera persona singular de la serie B), A3p (tercera persona plural de la serie A), DET (determinante) o PL (plural).
+
+\item \texttt{\textbackslash glft}: incorpora información adicional asociada al ejemplo. En este trabajo se utiliza para representar el análisis sintáctico generado por el sistema, indicando la función gramatical de determinados constituyentes de la oración.
+
+\item \texttt{\textbackslash textsubscript{}}: permite representar etiquetas gramaticales en formato subíndice. En el ejemplo mostrado se emplea para indicar la categoría sintáctica asociada al constituyente analizado.
+
+\item \texttt{//}: actúa como delimitador de línea dentro del entorno de glosas. Este símbolo indica al paquete \texttt{expex} dónde finaliza cada nivel de análisis lingüístico.
+
+\item \texttt{\textbackslash endgl}: señala el final de la glosa interlineal y cierra el bloque iniciado mediante \texttt{\textbackslash begingl}.
+
+\item \texttt{\textbackslash xe}: finaliza el ejemplo lingüístico y cierra la estructura abierta mediante \texttt{\textbackslash ex}.
+
+\end{itemize}
+
+La comparación entre las distintas representaciones permite observar cómo una misma información lingüística puede expresarse simultáneamente en varios niveles de abstracción. El XML proporciona una estructura formal orientada al procesamiento automático, LaTeX ofrece una representación tipográfica especializada para documentación científica y el PDF compilado constituye el producto final destinado a la consulta humana. Esta separación entre contenido, estructura y presentación constituye uno de los principios fundamentales sobre los que se sustenta el sistema desarrollado en este trabajo.
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imagenes/gramaticas/ejemplo_glosa.png}
+    \caption{Glosa interlineal en el documento de entrada (pdf)}
+    \label{fig:glosa_input}
+\end{figure}
+
+\begin{lstlisting}[
+    language={},
+    label=code:kachiquel_xml_172,
+    caption={Esquema XML refinado para la representación de glosas interlineales}
+]
+<interlinear_gloss>
+    <parallel_phrase>
+        <original>Xkilöq' jun uqaj ri ka'i' achi'a'.</original>
+        <translation>Los dos hombres compraron un corte.</translation>
+    </parallel_phrase>
+    <morpheme_analysis>
+        <unit>
+            <form>X-</form>
+            <gloss>COM-</gloss>
+        </unit>
+        <unit>
+            <form>Ø-</form>
+            <gloss>B3s-</gloss>
+        </unit>
+        <unit>
+            <form>ki-</form>
+            <gloss>A3p-</gloss>
+        </unit>
+        <unit>
+            <form>löq'</form>
+            <gloss>comprar</gloss>
+        </unit>
+        <unit>
+            <form>jun</form>
+            <gloss>IND</gloss>
+        </unit>
+        <unit>
+            <form>uqaj</form>
+            <gloss>corte</gloss>
+        </unit>
+        <unit>
+            <form>ri</form>
+            <gloss>DET</gloss>
+        </unit>
+        <unit>
+            <form>ka'i'</form>
+            <gloss>dos</gloss>
+        </unit>
+        <unit>
+            <form>achi'-</form>
+            <gloss>hombre-</gloss>
+        </unit>
+        <unit>
+            <form>a'.</form>
+            <gloss>PL</gloss>
+        </unit>
+    </morpheme_analysis>
+    <syntactic_analysis>
+        <unit>
+            <form>Xkilöq'</form>
+            <gloss>SVT</gloss>
+        </unit>
+    </syntactic_analysis>
+</interlinear_gloss>
+\end{lstlisting}
+
+\begin{lstlisting}[
+    language={},
+    label=code:kachiquel_latex_172,
+    caption={Esquema Latex para la representación de glosas interlineales}
+]
+\par\medskip%
+\ex
+\textit{Los dos hombres compraron un corte.} \\
+\begingl
+\gla Xkilöq' jun uqaj ri ka'i' achi'a'. //
+\glb X-ø-ki-löq' jun uqaj ri ka'i' achi'-a'. //
+\glc \textbf{COM-B3s-A3p-comprar} \textbf{IND} \textbf{corte} \textbf{DET} \textbf{dos} \textbf{hombre-PL} //
+\glft \textbf{Sintaxis:} [Xkilöq' jun uqaj]\textsubscript{SVT} // 
+\endgl
+\xe
+\end{lstlisting}
+
+
+\begin{figure}[htbp]
+\centering
+\par\medskip%
+\caption{Glosa interlineal en el documento de salida a partir del Latex compilado (pdf)}
+\label{glosa_kachikel_pdf_compilado}
+\ex
+\textit{Los dos hombres compraron un corte.} \\
+\begingl
+\gla Xkilöq' jun uqaj ri ka'i' achi'a'. //
+\glb X-ø-ki-löq' jun uqaj ri ka'i' achi'-a'. //
+\glc \textbf{COM-B3s-A3p-comprar} \textbf{IND} \textbf{corte} \textbf{DET} \textbf{dos} \textbf{hombre-PL} //
+\glft \textbf{Sintaxis:} [Xkilöq' jun uqaj]  \textsubscript{  SVT} // 
+\endgl
+\xe
+\end{figure}
+
+
 \section{Diseño Experimental y Metodología de Evaluación}
 
 Para verificar el comportamiento estocástico del modelo multimodal y evaluar la resiliencia del sistema de validación sintáctica implementado en \texttt{xml\_corrector.py}, se ha estructurado un protocolo experimental dividido en dos dimensiones complementarias: el barrido hiperparamétrico de la temperatura de generación y la comparativa entre diferentes arquitecturas de modelos desplegadas en la nube.

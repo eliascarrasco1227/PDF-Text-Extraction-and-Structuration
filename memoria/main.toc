@@ -90,33 +90,35 @@
 \contentsline {subsection}{\numberline {5.6.2}Flujo de orquestación modular}{41}{subsection.5.6.2}%
 \contentsline {subsection}{\numberline {5.6.3}Persistencia y versionado de resultados}{41}{subsection.5.6.3}%
 \contentsline {chapter}{\numberline {6}Experimentación y Análisis de Resultados}{43}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Diseño Experimental y Metodología de Evaluación}{43}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Análisis Empírico del Parámetro de Temperatura}{43}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Comportamiento Global y No Monotonicidad del Sistema}{44}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}El ``Punto Dulce'' (\textit {Sweet Spot}) frente al Determinismo Absoluto}{44}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Resiliencia Estructural e Insensibilidad Térmica en Páginas Estables}{45}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Correlación entre la Complejidad del Contenido y la Sensibilidad Térmica}{46}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Evaluación Comparativa de Arquitecturas Multimodales (Modelos)}{48}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Dominancia Sistémica de la Arquitectura Avanzada (\texttt {gemini-3.5-flash})}{48}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}El Comportamiento Paradójico de los Modelos de Escala Reducida (\texttt {Lite})}{49}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Elasticidad de la Brecha Intermodelo en Función de la Complejidad del \textit {Layout}}{50}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}No Linealidad Genérica del Rendimiento frente al Nomenclátor de Versión}{51}{subsection.6.3.4}%
-\contentsline {chapter}{\numberline {7}Conclusiones y trabajo futuro}{53}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Síntesis del trabajo desarrollado}{53}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Conclusiones del experimento con diferentes temperaturas}{53}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Conclusiones del experimento con diferentes modelos}{55}{subsection.7.1.2}%
-\contentsline {section}{\numberline {7.2}Grado de cumplimiento de los objetivos}{56}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Lecciones aprendidas y desafíos técnicos}{57}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}La fragilidad de la dependencia de APIs externas}{57}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}La IA como motor, la ingeniería como cinturón de seguridad}{57}{subsection.7.3.2}%
-\contentsline {subsection}{\numberline {7.3.3}Complejidad lingüística maya}{57}{subsection.7.3.3}%
-\contentsline {section}{\numberline {7.4}Líneas de investigación futura}{58}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Migración a modelos locales y soberanía tecnológica}{58}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Expansión del corpus lingüístico}{58}{subsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.4.3}Desarrollo de una plataforma de consulta lingüística}{58}{subsection.7.4.3}%
-\contentsline {subsection}{\numberline {7.4.4}Optimización del pipeline mediante RAG}{59}{subsection.7.4.4}%
-\contentsline {subsection}{\numberline {7.4.5}Colaboración institucional y difusión de datos}{59}{subsection.7.4.5}%
+\contentsline {section}{\numberline {6.1}Contextualización de resultados}{43}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Contextualización de resultados}{43}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Diseño Experimental y Metodología de Evaluación}{47}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Análisis Empírico del Parámetro de Temperatura}{47}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Comportamiento Global y No Monotonicidad del Sistema}{48}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}El ``Punto Dulce'' (\textit {Sweet Spot}) frente al Determinismo Absoluto}{48}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Resiliencia Estructural e Insensibilidad Térmica en Páginas Estables}{49}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Correlación entre la Complejidad del Contenido y la Sensibilidad Térmica}{50}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}Evaluación Comparativa de Arquitecturas Multimodales (Modelos)}{52}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Dominancia Sistémica de la Arquitectura Avanzada (\texttt {gemini-3.5-flash})}{52}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}El Comportamiento Paradójico de los Modelos de Escala Reducida (\texttt {Lite})}{53}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Elasticidad de la Brecha Intermodelo en Función de la Complejidad del \textit {Layout}}{54}{subsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.5.4}No Linealidad Genérica del Rendimiento frente al Nomenclátor de Versión}{55}{subsection.6.5.4}%
+\contentsline {chapter}{\numberline {7}Conclusiones y trabajo futuro}{57}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Síntesis del trabajo desarrollado}{57}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Conclusiones del experimento con diferentes temperaturas}{57}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Conclusiones del experimento con diferentes modelos}{59}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2}Grado de cumplimiento de los objetivos}{60}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Lecciones aprendidas y desafíos técnicos}{61}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}La fragilidad de la dependencia de APIs externas}{61}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}La IA como motor, la ingeniería como cinturón de seguridad}{61}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Complejidad lingüística maya}{61}{subsection.7.3.3}%
+\contentsline {section}{\numberline {7.4}Líneas de investigación futura}{62}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Migración a modelos locales y soberanía tecnológica}{62}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Expansión del corpus lingüístico}{62}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Desarrollo de una plataforma de consulta lingüística}{62}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.4}Optimización del pipeline mediante RAG}{63}{subsection.7.4.4}%
+\contentsline {subsection}{\numberline {7.4.5}Colaboración institucional y difusión de datos}{63}{subsection.7.4.5}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\numberline {A}Anexo I. Esquemas en xml}{65}{chapter.A}%
-\contentsline {chapter}{Lista de acrónimos}{69}{lstnumber.A.3.20}%
+\contentsline {chapter}{\numberline {A}Anexo I. Esquemas en xml}{69}{chapter.A}%
+\contentsline {chapter}{Lista de acrónimos}{73}{lstnumber.A.3.20}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
