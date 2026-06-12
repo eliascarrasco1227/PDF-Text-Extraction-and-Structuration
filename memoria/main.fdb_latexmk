@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1781279440.4779 "main.bcf" "main.bbl" "main" 1781281303.61809 0
-  "bibliografia/bibliografia.bib" 1780500810 21762 8e8a338c05781b0f36f6ae79a15d79ed ""
-  "main.bcf" 1781281303 134908 4934d3459b4217aa0c180429a566ec23 "pdflatex"
+["biber main"] 1781305212.12715 "main.bcf" "main.bbl" "main" 1781305237.95968 0
+  "bibliografia/bibliografia.bib" 1781304880 22014 310f78c847f846c43996415078a19288 ""
+  "main.bcf" 1781305237 134980 cc201d12e80023df59c4f9f4c51efaf8 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1781281298.64678 "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" "main.pdf" "main" 1781281303.62193 0
+["pdflatex"] 1781305227.89729 "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" "main.pdf" "main" 1781305237.96255 0
   "back_matter.tex" 1780660854 45398 995487411d4960e80701f40e5f669b5b ""
   "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" 1781279329 3919 12d7a0702f46bd4844be47ca33f61106 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1780230687 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -243,7 +243,7 @@
   "c:/texlive/2026/texmf.cnf" 1780245197 713 e69b156964470283e0530f5060668171 ""
   "chapters/cap1_introduccion.tex" 1780437754 11870 8df621031811cb14d1e8a64f2d00efa6 ""
   "chapters/cap2_objetivos.tex" 1780656509 3176 785d34ade9ca311b5e9350fa7426b759 ""
-  "chapters/cap3_estado_cuestion.tex" 1780594355 71594 4bfde181ea92e429fd1add624ec452d2 ""
+  "chapters/cap3_estado_cuestion.tex" 1781305199 75390 bb0874beac7c8bf6463398924714af6a ""
   "chapters/cap4_metodologia.tex" 1780657767 16517 38d46ee31d0886491bf0078aed7c6000 ""
   "chapters/cap5_diseño.tex" 1780659778 54848 1eddb319dd4f20882b422910f717844c ""
   "chapters/cap7_resultados.tex" 1781281294 41944 fbc1be854708b381ee5ee1eb5fa41158 ""
@@ -257,14 +257,14 @@
   "imagenes/external/recall_precision.png" 1780502015 1063072 d15442d9ecd10b22383ffef2a05fe181 ""
   "imagenes/gramaticas/ejemplo_glosa.png" 1780592410 94149 1d6c07a9e5455b36a5b5c6fc1f37a62b ""
   "imagenes/gramaticas/ocr_vs_kachiquel.png" 1780251924 1706114 713ef59e41fe2a4804854d404ba6f8d4 ""
-  "main.aux" 1781281303 92242 31acb7dc03af914b6dd0ea3de4f47b26 "pdflatex"
-  "main.bbl" 1781279443 50399 3915be8bbf58f39d559a9dcb0df80b65 "biber main"
-  "main.lof" 1781281303 1044 745bc92fb77b0071090ea8254ebabde1 "pdflatex"
-  "main.lol" 1781281303 1087 6190169021c222cc556a3a80bd90cb6e "pdflatex"
-  "main.lot" 1781281303 844 1dfef67661a33dbd4349940ff17a820b "pdflatex"
-  "main.run.xml" 1781281303 2374 84b3c453a69351e7c18dc5329eb72f5e "pdflatex"
+  "main.aux" 1781305237 93345 af50e1c05fbe30ec139d4dbdc42bc0d6 "pdflatex"
+  "main.bbl" 1781305217 53147 40b3f0bd2d0d74a0ed9d5dbd7d934506 "biber main"
+  "main.lof" 1781305237 1044 73c140478158740cc93af20f911b83da "pdflatex"
+  "main.lol" 1781305237 1087 6190169021c222cc556a3a80bd90cb6e "pdflatex"
+  "main.lot" 1781305237 845 b28ca6e176cf8efb89e6630246faf6aa "pdflatex"
+  "main.run.xml" 1781305237 2374 84b3c453a69351e7c18dc5329eb72f5e "pdflatex"
   "main.tex" 1781279329 3919 12d7a0702f46bd4844be47ca33f61106 ""
-  "main.toc" 1781281303 13601 943e4afb396ad3d382f705f895c31052 "pdflatex"
+  "main.toc" 1781305237 13729 f400fdd49059b4550b02096729448916 "pdflatex"
   "portada/portada-tfm.pdf" 1780661860 126499 fe1d12ae8524c80a7ee80981549f4123 ""
   "portada/portada.tex" 1780249162 325 22611075635420b29f794da6a0afcdf6 ""
   "portada/portada_2.tex" 1780249162 1019 41fab9129ff26e09de13c508f948bc7d ""

@@ -8,37 +8,38 @@
 \contentsline {subsubsection}{\nonumberline Limitaciones técnicas de la API de Gemini}{4}{subsubsection*.10}%
 \contentsline {chapter}{\numberline {2}Estado de la cuestión}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Modelos de lenguaje de gran tamaño (LLMs) aplicados a OCR}{7}{section.2.1}%
-\contentsline {section}{\numberline {2.2}APIs de LLMs}{8}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Ecosistema actual}{8}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Análisis de la Volatilidad y Restricciones de Acceso}{8}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Configuración de Modelos: Parámetro de Temperatura}{9}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Transfer Learning: Sinergias Lingüísticas y Extrapolación Global}{10}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Inferencia multilingüe y pesos compartidos}{10}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}El valor de los datos estructurados (XML/LaTeX)}{10}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Democratización del conocimiento lingüístico}{11}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Alternativas en modelos locales y soberanía tecnológica}{11}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Mistral OCR y la eficiencia europea}{11}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}DeepSeek-OCR-2: El avance de los VLMs}{12}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}IBM granite-docling: miniaturización y precisión}{12}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Ventajas de la implementación local}{12}{subsection.2.4.4}%
-\contentsline {section}{\numberline {2.5}Metodología de evaluación y métricas de rendimiento en IA}{12}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Métricas de error de texto (CER y WER)}{13}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Métricas de clasificación y precisión general}{13}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Evaluación de la integridad estructural en LLMs}{14}{subsection.2.5.3}%
-\contentsline {section}{\numberline {2.6}Lingüística computacional: análisis morfosintáctico y glosas}{15}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Análisis morfológico en lenguas aglutinantes}{15}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Estructura sintáctica y variabilidad}{15}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}El desafío de las glosas interlineales}{16}{subsection.2.6.3}%
-\contentsline {section}{\numberline {2.7}Contexto sociolingüístico: lenguas minorizadas y preservación digital}{17}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}El concepto de lengua minorizada}{17}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}El papel de la Academia de Lenguas Mayas de Guatemala (ALMG)}{17}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}Urgencia de la preservación estructurada}{18}{subsection.2.7.3}%
-\contentsline {section}{\numberline {2.8}Lenguajes de marcado y estándares de representación documental}{18}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}XML y la representación jerárquica de la información}{18}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}Mecanismos de validación estructural (DTD y XSD)}{19}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Composición de textos mediante \LaTeX }{19}{subsection.2.8.3}%
-\contentsline {subsection}{\numberline {2.8.4}Paradigmas de intercambio de datos: XML frente a JSON}{20}{subsection.2.8.4}%
-\contentsline {subsection}{\numberline {2.8.5}Paradigmas de almacenamiento lingüístico: XML estructurado frente a corpus paralelos convencionales}{20}{subsection.2.8.5}%
+\contentsline {subsection}{\numberline {2.1.1}Evaluación de la integridad estructural en LLMs}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Modelos multimodales y evaluación mediante OCRBench v2}{8}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}APIs de LLMs}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Ecosistema actual}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Análisis de la Volatilidad y Restricciones de Acceso}{10}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Configuración de Modelos: Parámetro de Temperatura}{11}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Transfer Learning: Sinergias Lingüísticas y Extrapolación Global}{12}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Inferencia multilingüe y pesos compartidos}{12}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}El valor de los datos estructurados (XML/LaTeX)}{12}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Democratización del conocimiento lingüístico}{13}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Alternativas en modelos locales y soberanía tecnológica}{13}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Mistral OCR y la eficiencia europea}{13}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}DeepSeek-OCR-2: El avance de los VLMs}{13}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}IBM granite-docling: miniaturización y precisión}{14}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Ventajas de la implementación local}{14}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}Metodología de evaluación y métricas de rendimiento en IA}{14}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Métricas de error de texto (CER y WER)}{14}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Métricas de clasificación y precisión general}{15}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}Lingüística computacional: análisis morfosintáctico y glosas}{16}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Análisis morfológico en lenguas aglutinantes}{16}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Estructura sintáctica y variabilidad}{17}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}El desafío de las glosas interlineales}{17}{subsection.2.6.3}%
+\contentsline {section}{\numberline {2.7}Contexto sociolingüístico: lenguas minorizadas y preservación digital}{18}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}El concepto de lengua minorizada}{18}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}El papel de la Academia de Lenguas Mayas de Guatemala (ALMG)}{19}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Urgencia de la preservación estructurada}{19}{subsection.2.7.3}%
+\contentsline {section}{\numberline {2.8}Lenguajes de marcado y estándares de representación documental}{19}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}XML y la representación jerárquica de la información}{20}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Mecanismos de validación estructural (DTD y XSD)}{20}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Composición de textos mediante \LaTeX }{20}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.4}Paradigmas de intercambio de datos: XML frente a JSON}{21}{subsection.2.8.4}%
+\contentsline {subsection}{\numberline {2.8.5}Paradigmas de almacenamiento lingüístico: XML estructurado frente a corpus paralelos convencionales}{21}{subsection.2.8.5}%
 \contentsline {chapter}{\numberline {3}Objetivos del trabajo}{23}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Objetivo general}{23}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Objetivos específicos}{23}{section.3.2}%

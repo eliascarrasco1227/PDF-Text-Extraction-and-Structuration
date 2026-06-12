@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.31)  12 JUN 2026 18:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.31)  13 JUN 2026 01:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1431,12 +1431,12 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 39.
 ]
 Package tocbasic Info: Using my definition of `\numberline' on input line 40.
 Package tocbasic Info: Using my definition of `\numberline' on input line 41.
+Package tocbasic Info: Using my definition of `\numberline' on input line 42.
 
-Overfull \hbox (4.17609pt too wide) in paragraph at lines 41--41
+Overfull \hbox (4.17609pt too wide) in paragraph at lines 42--42
  [][] [][]\OT1/cmr/m/n/10.95 Paradigmas de al-ma-ce-na-mien-to ling^^?u^^S^^Psti-co: XML es-truc-tu-ra-do fren- 
  []
 
-Package tocbasic Info: Using my definition of `\numberline' on input line 42.
 Package tocbasic Info: Using my definition of `\numberline' on input line 43.
 Package tocbasic Info: Using my definition of `\numberline' on input line 44.
 Package tocbasic Info: Using my definition of `\numberline' on input line 45.
@@ -1447,7 +1447,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 49.
 Package tocbasic Info: Using my definition of `\numberline' on input line 50.
 Package tocbasic Info: Using my definition of `\numberline' on input line 51.
 Package tocbasic Info: Using my definition of `\numberline' on input line 52.
-Package tocbasic Info: Using my definition of `\numberline' on input line 56.
+Package tocbasic Info: Using my definition of `\numberline' on input line 53.
 Package tocbasic Info: Using my definition of `\numberline' on input line 57.
 Package tocbasic Info: Using my definition of `\numberline' on input line 58.
 Package tocbasic Info: Using my definition of `\numberline' on input line 59.
@@ -1500,12 +1500,12 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 99.
 Package tocbasic Info: Using my definition of `\numberline' on input line 100.
 Package tocbasic Info: Using my definition of `\numberline' on input line 101.
 Package tocbasic Info: Using my definition of `\numberline' on input line 102.
+Package tocbasic Info: Using my definition of `\numberline' on input line 103.
 
-Overfull \hbox (20.38466pt too wide) in paragraph at lines 102--102
+Overfull \hbox (20.38466pt too wide) in paragraph at lines 103--103
  [][] [][]\OT1/cmr/m/n/10.95 Dominancia Sist^^Semi-ca de la Ar-qui-tec-tu-ra Avan-za-da (\OT1/cmtt/m/n/10.95 gemini-3.5-flash\OT1/cmr/m/n/10.95 )[] [][]  
  []
 
-Package tocbasic Info: Using my definition of `\numberline' on input line 103.
 Package tocbasic Info: Using my definition of `\numberline' on input line 104.
 Package tocbasic Info: Using my definition of `\numberline' on input line 105.
 Package tocbasic Info: Using my definition of `\numberline' on input line 106.
@@ -1522,13 +1522,14 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 116.
 Package tocbasic Info: Using my definition of `\numberline' on input line 117.
 Package tocbasic Info: Using my definition of `\numberline' on input line 118.
 Package tocbasic Info: Using my definition of `\numberline' on input line 119.
-Package tocbasic Info: Using my definition of `\numberline' on input line 120.
-LaTeX Info: Redefining \sptext on input line 122.
-LaTeX Info: Redefining \. on input line 122.
-LaTeX Info: Redefining \% on input line 122.
+LaTeX Info: Redefining \sptext on input line 120.
+LaTeX Info: Redefining \. on input line 120.
+LaTeX Info: Redefining \% on input line 120.
 [15]
-Package tocbasic Info: Using my definition of `\numberline' on input line 122.
+Package tocbasic Info: Using my definition of `\numberline' on input line 120.
+Package tocbasic Info: Using my definition of `\numberline' on input line 121.
 Package tocbasic Info: Using my definition of `\numberline' on input line 123.
+Package tocbasic Info: Using my definition of `\numberline' on input line 124.
 )
 \tf@toc=\write6
 \openout6 = `main.toc'.
@@ -1594,7 +1595,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 17.
 
 ] (./chapters/cap1_introduccion.tex
 chapter 1.
-<imagenes/gramaticas/ocr_vs_kachiquel.png, id=442, 1893.32344pt x 1029.8475pt>
+<imagenes/gramaticas/ocr_vs_kachiquel.png, id=444, 1893.32344pt x 1029.8475pt>
 File: imagenes/gramaticas/ocr_vs_kachiquel.png Graphic file (type png)
 <use imagenes/gramaticas/ocr_vs_kachiquel.png>
 Package pdftex.def Info: imagenes/gramaticas/ocr_vs_kachiquel.png  used on input line 18.
@@ -1626,176 +1627,178 @@ LaTeX Info: Redefining \% on input line 2.
 ]
 chapter 2.
 [7]
+LaTeX Info: Redefining \. on input line 45.
+LaTeX Info: Redefining \% on input line 45.
+ [8]
+LaTeX Info: Redefining \. on input line 66.
+LaTeX Info: Redefining \% on input line 66.
+ [9]
 \excnt=1
 \excnt=1
 
-Overfull \hbox (10.20891pt too wide) in paragraph at lines 60--60
+Overfull \hbox (10.20891pt too wide) in paragraph at lines 97--97
 []|\OT1/cmr/bx/n/6 Tokens/min| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []|\OT1/cmr/bx/n/6 Notas
  []
 
 
-Underfull \hbox (badness 4582) in paragraph at lines 60--60
+Underfull \hbox (badness 4582) in paragraph at lines 97--97
 []|\OT1/cmr/m/n/6 Tier gra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []|\OT1/cmr/m/n/6 L^^S^^Pmi-tes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 \OT1/cmr/m/n/6 res-tric-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 \OT1/cmr/m/n/6 ti-vos en
  []
 
 
-Overfull \hbox (6.6179pt too wide) in paragraph at lines 60--60
+Overfull \hbox (6.6179pt too wide) in paragraph at lines 97--97
 []|\OT1/cmr/m/n/6 Multimodal.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 \OT1/cmr/m/n/6 Op-ci^^Son
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []|\OT1/cmr/m/n/6 Velocidad
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 \OT1/cmr/m/n/6 300-400
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []|\OT1/cmr/m/n/6 El m^^Sas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 \OT1/cmr/m/n/6 per-mi-si-vo
  []
 
 
-Overfull \hbox (8.34015pt too wide) in paragraph at lines 60--60
+Overfull \hbox (8.34015pt too wide) in paragraph at lines 97--97
 []|\OT1/cmr/m/n/6 Arquitectura
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []| \OT1/cmr/m/n/6 1M
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []|\OT1/cmr/m/n/6 2,600
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []| \OT1/cmr/m/n/6 1M
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []| \OT1/cmr/m/n/6 1B
  []
 
 
-Underfull \hbox (badness 8038) in paragraph at lines 60--60
+Underfull \hbox (badness 8038) in paragraph at lines 97--97
 []| \OT1/cmr/m/n/6 1B to-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []|\OT1/cmr/m/n/6 Requiere
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []|\OT1/cmr/m/n/6 No tie-ne
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \. on input line 76.
-LaTeX Info: Redefining \% on input line 76.
-[8]
-Overfull \hbox (19.62524pt too wide) in paragraph at lines 85--86
+LaTeX Info: Redefining \. on input line 109.
+LaTeX Info: Redefining \% on input line 109.
+[10]
+Overfull \hbox (19.62524pt too wide) in paragraph at lines 122--123
 []\OT1/cmr/m/n/10.95 La tem-pe-ra-tu-ra es un hi-per par^^Same-tro que re-gu-la el gra-do de alea-to-rie-dad o ^^Xcreatividad"del
  []
 
-LaTeX Info: Redefining \. on input line 88.
-LaTeX Info: Redefining \% on input line 88.
-[9]
-LaTeX Info: Redefining \. on input line 107.
-LaTeX Info: Redefining \% on input line 107.
- [10]
-LaTeX Info: Redefining \. on input line 130.
-LaTeX Info: Redefining \% on input line 130.
- [11]
-LaTeX Info: Redefining \. on input line 151.
-LaTeX Info: Redefining \% on input line 151.
+LaTeX Info: Redefining \. on input line 132.
+LaTeX Info: Redefining \% on input line 132.
+[11]
+Underfull \vbox (badness 3088) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
  [12]
-LaTeX Info: Redefining \. on input line 170.
-LaTeX Info: Redefining \% on input line 170.
+LaTeX Info: Redefining \. on input line 172.
+LaTeX Info: Redefining \% on input line 172.
  [13]
-<imagenes/external/recall_precision.png, id=537, 1204.5pt x 803.0pt>
+LaTeX Info: Redefining \. on input line 191.
+LaTeX Info: Redefining \% on input line 191.
+ [14]
+<imagenes/external/recall_precision.png, id=546, 1204.5pt x 803.0pt>
 File: imagenes/external/recall_precision.png Graphic file (type png)
 <use imagenes/external/recall_precision.png>
-Package pdftex.def Info: imagenes/external/recall_precision.png  used on input line 173.
+Package pdftex.def Info: imagenes/external/recall_precision.png  used on input line 210.
 (pdftex.def)             Requested size: 250.95476pt x 167.29942pt.
-LaTeX Info: Redefining \. on input line 192.
-LaTeX Info: Redefining \% on input line 192.
- [14 <./imagenes/external/recall_precision.png (PNG copy)>]
-LaTeX Info: Redefining \. on input line 217.
-LaTeX Info: Redefining \% on input line 217.
- [15]
-<imagenes/gramaticas/ejemplo_glosa.png, id=554, 821.0675pt x 204.765pt>
-File: imagenes/gramaticas/ejemplo_glosa.png Graphic file (type png)
-<use imagenes/gramaticas/ejemplo_glosa.png>
-Package pdftex.def Info: imagenes/gramaticas/ejemplo_glosa.png  used on input line 244.
-(pdftex.def)             Requested size: 313.69025pt x 78.23018pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 256.
-LaTeX Info: Redefining \% on input line 256.
-[16]
-LaTeX Info: Redefining \. on input line 268.
-LaTeX Info: Redefining \% on input line 268.
- [17 <./imagenes/gramaticas/ejemplo_glosa.png>]
-LaTeX Info: Redefining \. on input line 294.
-LaTeX Info: Redefining \% on input line 294.
- [18]
-LaTeX Info: Redefining \. on input line 328.
-LaTeX Info: Redefining \% on input line 328.
+LaTeX Info: Redefining \. on input line 216.
+LaTeX Info: Redefining \% on input line 216.
+[15]
+LaTeX Info: Redefining \. on input line 230.
+LaTeX Info: Redefining \% on input line 230.
+ [16 <./imagenes/external/recall_precision.png (PNG copy)>]
+LaTeX Info: Redefining \. on input line 266.
+LaTeX Info: Redefining \% on input line 266.
+ [17]
+<imagenes/gramaticas/ejemplo_glosa.png, id=576, 821.0675pt x 204.765pt>
+File: imagenes/gramaticas/ejemplo_glosa.png Graphic file (type png)
+<use imagenes/gramaticas/ejemplo_glosa.png>
+Package pdftex.def Info: imagenes/gramaticas/ejemplo_glosa.png  used on input line 271.
+(pdftex.def)             Requested size: 313.69025pt x 78.23018pt.
+LaTeX Info: Redefining \. on input line 287.
+LaTeX Info: Redefining \% on input line 287.
+ [18 <./imagenes/gramaticas/ejemplo_glosa.png>]
+LaTeX Info: Redefining \. on input line 312.
+LaTeX Info: Redefining \% on input line 312.
  [19]
-LaTeX Info: Redefining \. on input line 340.
-LaTeX Info: Redefining \% on input line 340.
- [20]) (./chapters/cap2_objetivos.tex
+LaTeX Info: Redefining \. on input line 346.
+LaTeX Info: Redefining \% on input line 346.
+ [20]
+LaTeX Info: Redefining \. on input line 364.
+LaTeX Info: Redefining \% on input line 364.
+ [21]) (./chapters/cap2_objetivos.tex
 LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
- [21] [22
-
-
-]
+ [22]
 chapter 3.
-[23]) (./chapters/cap4_metodologia.tex
+[23
+
+
+]) (./chapters/cap4_metodologia.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [24]
@@ -2038,18 +2041,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47265 strings out of 467337
- 931971 string characters out of 5419514
- 2353414 words of memory out of 5000000
- 75175 multiletter control sequences out of 15000+600000
+ 47274 strings out of 467337
+ 932256 string characters out of 5419514
+ 2353491 words of memory out of 5000000
+ 75182 multiletter control sequences out of 15000+600000
  638800 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,17n,121p,11288b,2907s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (95 pages, 3801850 bytes).
+Output written on main.pdf (95 pages, 3805996 bytes).
 PDF statistics:
- 1673 PDF objects out of 1728 (max. 8388607)
- 1498 compressed objects within 15 object streams
- 570 named destinations out of 1000 (max. 500000)
- 991 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1682 PDF objects out of 1728 (max. 8388607)
+ 1506 compressed objects within 16 object streams
+ 572 named destinations out of 1000 (max. 500000)
+ 999 words of extra memory for PDF output out of 10000 (max. 10000000)
 

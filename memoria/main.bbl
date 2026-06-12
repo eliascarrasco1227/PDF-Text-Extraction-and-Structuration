@@ -353,6 +353,36 @@
       \endverb
       \keyw{humanidades digitales ; métricas de evaluación ; impresos antiguos ; manuscritos ; OCR ; HTR ; ATR ; Word Error Rate ; Error Rate}
     \endentry
+    \entry{fu2025ocrbenchv2}{misc}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=13a57a10d89ff32476d687d4b331c1bd}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Ling},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{fullhash}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{fullhashraw}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{bibnamehash}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{authorbibnamehash}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{authornamehash}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{authorfullhash}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{authorfullhashraw}{9a8673268ce15ae10bfceb17127012d7}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{NeurIPS Datasets and Benchmarks Track}
+      \field{title}{OCRBench v2: An Improved Benchmark for Evaluating Large Multimodal Models on Visual Text Localization and Reasoning}
+      \field{year}{2025}
+    \endentry
     \entry{11451708}{article}{}{}
       \name{author}{7}{}{%
         {{un=0,uniquepart=base,hash=d33373a81dbbb9f0e1efd59c5f9c4c78}{%
@@ -927,6 +957,36 @@
       \verb https://hal.science/hal-05267874
       \endverb
       \keyw{humanidades digitales ; métricas de evaluación ; impresos antiguos ; manuscritos ; OCR ; HTR ; ATR ; Word Error Rate ; Error Rate}
+    \endentry
+    \entry{fu2025ocrbenchv2}{misc}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=13a57a10d89ff32476d687d4b331c1bd}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Ling},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{fullhash}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{fullhashraw}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{bibnamehash}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{authorbibnamehash}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{authornamehash}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{authorfullhash}{9a8673268ce15ae10bfceb17127012d7}
+      \strng{authorfullhashraw}{9a8673268ce15ae10bfceb17127012d7}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{NeurIPS Datasets and Benchmarks Track}
+      \field{title}{OCRBench v2: An Improved Benchmark for Evaluating Large Multimodal Models on Visual Text Localization and Reasoning}
+      \field{year}{2025}
     \endentry
     \entry{11451708}{article}{}{}
       \name{author}{7}{}{%

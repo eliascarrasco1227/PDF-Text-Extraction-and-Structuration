@@ -28,6 +28,43 @@ Esta metodología se fundamenta en los siguientes pilares:
 No obstante, la aplicación de LLMs al OCR introduce desafíos específicos, principalmente su naturaleza estocástica. Al ser modelos probabilísticos, existe el riesgo de "alucinaciones" estructurales (etiquetas XML inexistentes o mal cerradas). Esta limitación justifica la implementación de módulos de validación externa y corrección estructural, tales como el script xml\_corrector.py desarrollado en este TFM, para garantizar que la potencia de comprensión del modelo se ajuste estrictamente a la gramática formal (DTD) requerida.
 
 
+\subsection{Evaluación de la integridad estructural en LLMs}
+
+Con la aparición de los Modelos de Lenguaje de Gran Tamaño (LLMs) capaces de generar código o lenguajes de marcado (XML, JSON), ha surgido la necesidad de evaluar la consistencia sintáctica. A diferencia del texto plano, una salida estructurada debe cumplir con reglas de jerarquía y anidamiento. La evaluación en este ámbito se realiza mediante:
+
+\begin{itemize}
+    \item Validación de esquema: Comprobación booleana de que el documento generado es "bien formado" (well formed) y cumple con un estándar formal (como un DTD o XSD). Un DTD (por sus siglas en inglés, Document Type Definition o Definición de Tipo de Documento) es un conjunto de reglas que define la estructura, los elementos (etiquetas) y los atributos permitidos en un archivo XML o SGML. En el caso del proyecto se ha empleado el siguiente DTD \ref{code:dtd}.
+    \item Estabilidad estructural: Análisis de la tasa de éxito del modelo para cerrar etiquetas y mantener la profundidad del árbol jerárquico sin colapsar ante una alta densidad de información. Está métrica es más genérica que la validación de esquema y por tanto más fácil de comprobar. Si la salida tiene estabilidad estructural se dice que es válida (valid).
+\end{itemize}
+
+\subsection{Modelos multimodales y evaluación mediante OCRBench v2}
+
+La evolución reciente de la Inteligencia Artificial ha dado lugar a los denominados modelos multimodales o \textit{Large Multimodal Models} (LMMs). Estos sistemas son capaces de procesar simultáneamente diferentes modalidades de información, como texto, imágenes, audio o vídeo, integrando todas ellas dentro de un mismo espacio de representación semántica.
+
+En el contexto de la digitalización documental, los modelos multimodales han supuesto un cambio de paradigma respecto a los sistemas OCR tradicionales. Mientras que los motores OCR clásicos se limitan a reconocer caracteres de forma secuencial, los LMMs combinan reconocimiento visual, comprensión contextual y razonamiento lingüístico. Esto les permite interpretar estructuras complejas como tablas, diagramas, glosas interlineales o documentos con disposiciones tipográficas no convencionales.
+
+Desde un punto de vista arquitectónico, estos modelos suelen estar compuestos por tres bloques principales:
+
+\begin{itemize}
+    \item Un codificador visual (\textit{Vision Encoder}), encargado de transformar la imagen en representaciones numéricas.
+
+    \item Un mecanismo de proyección o alineamiento multimodal, que traduce las características visuales al espacio semántico utilizado por el modelo lingüístico.
+
+    \item Un Modelo de Lenguaje de Gran Tamaño (LLM), responsable de interpretar la información visual y generar la salida textual correspondiente.
+
+\end{itemize}
+
+Durante el entrenamiento, estas arquitecturas son expuestas a grandes volúmenes de pares imagen-texto, aprendiendo a asociar elementos visuales con sus descripciones lingüísticas. Posteriormente suelen aplicarse fases de ajuste fino (\textit{fine-tuning}) e instrucción (\textit{instruction tuning}) orientadas a tareas específicas como OCR, extracción documental o razonamiento visual.
+
+Para evaluar de forma objetiva las capacidades de estos sistemas, han surgido diversos benchmarks especializados. Entre ellos destaca OCRBench v2 \cite{fu2025ocrbenchv2}, considerado uno de los conjuntos de evaluación más completos para tareas de reconocimiento y comprensión documental.
+
+OCRBench v2 incluye más de 10.000 pares pregunta-respuesta verificados manualmente y evalúa ocho capacidades fundamentales: reconocimiento de texto, localización, extracción de información, parsing estructural, cálculo, comprensión, referencia espacial y razonamiento. El benchmark incorpora además documentos complejos, contenido manuscrito, tablas y estructuras visuales que representan escenarios próximos a los encontrados en aplicaciones reales de digitalización.
+
+Los resultados publicados muestran que incluso los modelos multimodales más avanzados continúan presentando dificultades en tareas de parsing documental y comprensión estructural. En la clasificación de 2026 destacan modelos como Gemini 3 Pro Preview, Gemini 2.5 Pro, NVIDIA Nemotron Omni y Qwen3-Omni, que obtienen resultados superiores al resto en tareas de extracción documental. Sin embargo, los autores señalan que la mayoría de arquitecturas todavía presentan limitaciones significativas en percepción de layouts complejos, parsing de elementos jerárquicos y razonamiento sobre estructuras documentales.
+
+Esta observación resulta especialmente relevante para el presente Trabajo de Fin de Máster, ya que las gramáticas normativas de la ALMG contienen glosas interlineales, segmentaciones morfológicas y disposiciones tipográficas complejas que exigen capacidades de parsing estructural avanzadas. Por ello, la elección de modelos multimodales modernos como Gemini constituye un requisito fundamental para alcanzar niveles de precisión adecuados en el proceso de digitalización.
+
+
 \section{APIs de LLMs}
 
 \subsection{ Ecosistema actual}
@@ -181,16 +218,6 @@ Más allá de la mera transcripción tipográfica, cuando un modelo multimodal d
 
 Mediante la alteración del parámetro b, la comunidad científica puede ponderar el impacto de la cobertura sobre la precisión según las necesidades específicas del modelado lingüístico.
 
-\end{itemize}
-
-
-\subsection{Evaluación de la integridad estructural en LLMs}
-
-Con la aparición de los Modelos de Lenguaje de Gran Tamaño (LLMs) capaces de generar código o lenguajes de marcado (XML, JSON), ha surgido la necesidad de evaluar la consistencia sintáctica. A diferencia del texto plano, una salida estructurada debe cumplir con reglas de jerarquía y anidamiento. La evaluación en este ámbito se realiza mediante:
-
-\begin{itemize}
-    \item Validación de esquema: Comprobación booleana de que el documento generado es "bien formado" (well formed) y cumple con un estándar formal (como un DTD o XSD). Un DTD (por sus siglas en inglés, Document Type Definition o Definición de Tipo de Documento) es un conjunto de reglas que define la estructura, los elementos (etiquetas) y los atributos permitidos en un archivo XML o SGML. En el caso del proyecto se ha empleado el siguiente DTD \ref{code:dtd}.
-    \item Estabilidad estructural: Análisis de la tasa de éxito del modelo para cerrar etiquetas y mantener la profundidad del árbol jerárquico sin colapsar ante una alta densidad de información. Está métrica es más genérica que la validación de esquema y por tanto más fácil de comprobar. Si la salida tiene estabilidad estructural se dice que es válida (valid).
 \end{itemize}
 
 
