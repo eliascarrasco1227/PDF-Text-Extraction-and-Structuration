@@ -23,8 +23,8 @@ El trabajo desarrollado se ha materializado en un pipeline modular en Python que
 Más allá del desarrollo de software, este trabajo ha aportado un valor investigador significativo mediante un estudio empírico de la temperatura del modelo. Los experimentos han demostrado una serie de conclusiones que mostramos a continuación:
 
 \begin{itemize}
-    \item La temperatura 0,5 es la configuración globalmente recomendable para el sistema evaluado sobre este corpus. Es la única que maximiza simultáneamente la media de las puntuaciones CER (94,02) y minimiza su dispersión entre páginas (\(\sigma=5,06\)), ofreciendo el mejor rendimiento promedio con la mayor consistencia.
-    
+    \item El rango comprendido entre \(T=0.1\) y \(T=0.75\) es la configuración globalmente recomendable para el sistema evaluado sobre este corpus. Aunque \(T=0.5\) obtiene la mayor media de similitud (94,02) y la menor dispersión entre páginas (\(\sigma=5,06\)), las diferencias entre las temperaturas bajas y moderadas no son lo suficientemente amplias como para justificar una recomendación limitada a un único valor. Por ello, resulta más prudente considerar una ventana de trabajo estable, en la que el sistema mantiene un rendimiento alto sin depender de una temperatura exacta.
+
     \item La temperatura no es el factor determinante del rendimiento global del sistema. La variabilidad entre páginas ---de hasta 30 puntos--- supera con creces el efecto de la temperatura ---cuya influencia máxima sobre la media global es de 1,88 puntos---. El principal determinante del CER es la complejidad intrínseca de cada página.
     
     \item La temperatura extrema alta (\(T=2,0\)) es la peor configuración del rango evaluado, con la menor media global (92,14) y la mayor dispersión (\(\sigma=8,51\)). Su uso no ofrece ventajas sostenidas en ninguna página del corpus.
@@ -33,7 +33,7 @@ Más allá del desarrollo de software, este trabajo ha aportado un valor investi
     
     \item La sensibilidad a la temperatura es función de la dificultad de la página. Siete de las nueve páginas son prácticamente insensibles al parámetro (rango < 2 puntos). La temperatura solo produce variaciones de magnitud operativa en páginas que ya presentan dificultades para el sistema.
     
-    \item La relación entre temperatura y CER no es monotónica. El ordenamiento de temperaturas por media global no sigue ningún patrón predecible de creatividad creciente. El óptimo global se sitúa en un punto intermedio (\(T=0,5\)), y los extremos del rango son los peores en términos de media.
+    \item La relación entre temperatura y CER no es monotónica. El ordenamiento de temperaturas por media global no sigue ningún patrón predecible de creatividad creciente. En lugar de existir un valor óptimo único, los resultados apuntan a una ventana recomendable entre \(T=0.1\) y \(T=0.75\), mientras que los extremos del rango, especialmente \(T=0\) y \(T=2.0\), son menos adecuados en términos de media y estabilidad.
 \end{itemize}
 
 Conclusiones con reservas:
@@ -116,8 +116,8 @@ Tras finalizar el desarrollo y la experimentación, se confirma que el proyecto 
 
     \item Objetivo 4: Estudio empírico de la temperatura.
 
-    Estado: Alcanzado. Se ha realizado una experimentación sistemática que ha permitido identificar el intervalo de 0.1 a 0.25 como el ``punto dulce'' de rendimiento, aportando una conclusión técnica de alto valor para futuros trabajos en el área.
-
+    Estado: Alcanzado. Se ha realizado una experimentación sistemática que ha permitido identificar el intervalo de \(T=0.1\) a \(T=0.75\) como el rango de funcionamiento más recomendable, aportando una conclusión técnica de alto valor para futuros trabajos en el área.
+    
     \item Objetivo 5: Generación de documentación en LaTeX.
 
     Estado: Alcanzado. El script \texttt{converter.py} automatiza la traslación de los datos estructurados a archivos \texttt{.tex} de alta calidad, permitiendo la reconstrucción visual de las gramáticas de la ALMG bajo estándares académicos.

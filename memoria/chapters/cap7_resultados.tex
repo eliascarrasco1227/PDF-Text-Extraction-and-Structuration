@@ -4,8 +4,6 @@ Este capítulo aborda la evaluación empírica y sistemática del sistema automa
 
 \section{Contextualización de resultados}
 
-\section{Contextualización de resultados}
-
 Antes de adentrarnos en el análisis detallado de los resultados, es importante contextualizar el flujo completo de la aplicación y comprender cómo se transforma una fuente documental original en un recurso digital estructurado.
 
 Tal y como se ha descrito en capítulos anteriores, el sistema recibe como entrada un documento PDF procedente de las gramáticas normativas de la Academia de Lenguas Mayas de Guatemala (ALMG) y genera automáticamente tres tipos de salida complementarios: un archivo XML estructurado, un documento LaTeX y un PDF compilado a partir de dicho código LaTeX.
@@ -185,14 +183,14 @@ T=0.5 > T=0.25 > T=1.5 > T=0.75 > T=1.0 > T=0.1 > T=0.0 > T=2.0
 
 Este comportamiento pone de manifiesto que la precisión del sistema disminuye tanto en el extremo de máxima aleatoriedad (\(T=2.0\)), con una similitud media del 92.14\,\% y una elevada dispersión reflejada en una desviación estándar de \(\sigma = 8.51\), como en el extremo opuesto de determinismo absoluto (\(T=0.0\)), cuya media global alcanza únicamente el 92.44\,\%.
 
-La configuración correspondiente a \(T=0.5\) emerge de forma inequívoca como el punto óptimo de funcionamiento del sistema. Esta temperatura registra simultáneamente la mayor similitud media global (94.02\,\%) y la menor desviación estándar observada durante la experimentación (\(\sigma = 5.06\)). La convergencia de ambas métricas estadísticas en un mismo valor paramétrico constituye una evidencia sólida de que una cantidad moderada de aleatoriedad maximiza el rendimiento global del proceso de digitalización estructurada.
+Aunque la configuración correspondiente a \(T=0.5\) registra la mayor similitud media global (94.02\,\%) y la menor desviación estándar observada durante la experimentación (\(\sigma = 5.06\)), los resultados no permiten reducir la recomendación a un único valor aislado. En conjunto, la ventana comprendida entre \(T=0.1\) y \(T=0.75\) puede considerarse el rango más recomendable para el sistema, ya que agrupa configuraciones con un rendimiento elevado y diferencias relativamente reducidas entre sí. Esta observación sugiere que el sistema no depende de una temperatura exacta, sino de mantener un nivel de aleatoriedad bajo o moderado que proporcione cierta flexibilidad sin comprometer la estabilidad estructural.
+
 
 \subsection{El ``Punto Dulce'' (\textit{Sweet Spot}) frente al Determinismo Absoluto}
 
 Contrariamente a la hipótesis habitual en tareas tradicionales de OCR y extracción automática de información, donde suele asumirse que una configuración completamente determinista (\(T=0.0\)) minimiza los errores al seleccionar siempre el token más probable, los resultados experimentales obtenidos muestran que esta estrategia resulta subóptima cuando se trabaja con estructuras lingüísticas complejas.
 
-La diferencia se aprecia claramente al comparar los resultados obtenidos bajo determinismo estricto con aquellos alcanzados dentro de la ventana térmica comprendida entre \(T=0.1\) y \(T=0.5\), identificada durante este trabajo como el \textit{Sweet Spot} del sistema.
-
+La diferencia se aprecia claramente al comparar los resultados obtenidos bajo determinismo estricto con aquellos alcanzados dentro de la ventana térmica comprendida entre \(T=0.1\) y \(T=0.75\), identificada durante este trabajo como el rango de funcionamiento más recomendable del sistema.
 \begin{itemize}
     \item Caso \texttt{Kaqchikel\_205}: bajo una configuración completamente determinista (\(T=0.0\)), la similitud obtenida se reduce hasta el 92.66\,\%. Sin embargo, al incrementar ligeramente la temperatura hasta \(T=0.25\), el sistema alcanza un máximo de precisión del 97.76\,\%, lo que supone una mejora neta de 5.10 puntos porcentuales.
 
@@ -201,7 +199,7 @@ La diferencia se aprecia claramente al comparar los resultados obtenidos bajo de
 
 La explicación teórica de este fenómeno puede interpretarse en términos de lo que, dentro de este trabajo, se denomina \textit{micro-flexibilidad cognitiva}. Durante el procesamiento de documentos analógicos heterogéneos, caracterizados por ruido visual, ausencia de metadatos textuales y estructuras complejas de glosas interlineales, una política completamente determinista obliga al modelo a permanecer dentro de trayectorias probabilísticas extremadamente rígidas.
 
-Como consecuencia, pequeños errores de alineación, saltos de línea anómalos o ambigüedades visuales pueden propagarse sin posibilidad de corrección. Por el contrario, una temperatura moderada, comprendida aproximadamente entre \(T=0.25\) y \(T=0.5\), introduce la flexibilidad necesaria para explorar interpretaciones alternativas de la estructura documental sin comprometer la coherencia global ni vulnerar las restricciones sintácticas impuestas por la gramática XML.
+Por el contrario, una temperatura baja o moderada, comprendida aproximadamente entre \(T=0.1\) y \(T=0.75\), introduce la flexibilidad necesaria para explorar interpretaciones alternativas de la estructura documental sin comprometer la coherencia global ni vulnerar las restricciones sintácticas impuestas por la gramática XML.
 
 Los resultados obtenidos sugieren, por tanto, que la digitalización lingüística mediante modelos multimodales no debe abordarse como un problema puramente determinista. La incorporación controlada de aleatoriedad constituye un mecanismo eficaz para mejorar simultáneamente la fidelidad textual y la estabilidad estructural de la información generada.
 
@@ -280,8 +278,7 @@ Un aspecto especialmente interesante lo constituye el caso de Kaqchikel\_205. A 
 
 En conjunto, los resultados indican que el efecto de la temperatura depende no solo del grado de dificultad de la página, sino también de la naturaleza específica de dicha dificultad. Mientras que los problemas asociados a ruido visual o información incompleta pueden beneficiarse de una mayor flexibilidad generativa, las estructuras lingüísticas altamente organizadas tienden a degradarse cuando aumenta la variabilidad probabilística.
 
-A la luz de esta evidencia, la ventana térmica comprendida entre \(T=0.25\) y \(T=0.5\) se consolida como la configuración más equilibrada para un sistema generalista de digitalización de gramáticas de la ALMG. Este intervalo proporciona suficiente flexibilidad para mejorar la extracción en los documentos más complejos, manteniendo simultáneamente la estabilidad necesaria para evitar degradaciones en aquellas páginas que presentan una estructura clara y fácilmente interpretable.
-
+A la luz de esta evidencia, la ventana térmica comprendida entre \(T=0.1\) y \(T=0.75\) se consolida como la configuración más equilibrada para un sistema generalista de digitalización de gramáticas de la ALMG. Este intervalo proporciona suficiente flexibilidad para mejorar la extracción en los documentos más complejos, manteniendo simultáneamente la estabilidad necesaria para evitar degradaciones en aquellas páginas que presentan una estructura clara y fácilmente interpretable.
 
 
 

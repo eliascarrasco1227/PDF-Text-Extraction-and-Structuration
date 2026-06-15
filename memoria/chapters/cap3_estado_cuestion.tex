@@ -28,6 +28,7 @@ Esta metodología se fundamenta en los siguientes pilares:
 No obstante, la aplicación de LLMs al OCR introduce desafíos específicos, principalmente su naturaleza estocástica. Al ser modelos probabilísticos, existe el riesgo de "alucinaciones" estructurales (etiquetas XML inexistentes o mal cerradas). Esta limitación justifica la implementación de módulos de validación externa y corrección estructural, tales como el script xml\_corrector.py desarrollado en este TFM, para garantizar que la potencia de comprensión del modelo se ajuste estrictamente a la gramática formal (DTD) requerida.
 
 
+
 \subsection{Evaluación de la integridad estructural en LLMs}
 
 Con la aparición de los Modelos de Lenguaje de Gran Tamaño (LLMs) capaces de generar código o lenguajes de marcado (XML, JSON), ha surgido la necesidad de evaluar la consistencia sintáctica. A diferencia del texto plano, una salida estructurada debe cumplir con reglas de jerarquía y anidamiento. La evaluación en este ámbito se realiza mediante:
