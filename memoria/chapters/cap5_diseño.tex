@@ -9,8 +9,7 @@ El sistema se ha diseñado bajo una arquitectura modular y desacoplada, organiza
 
 \subsection{Flujo de trabajo del pipeline}
 
-El proceso de transformación de una gramática analógica en un documento estructurado sigue un flujo de cinco etapas:
-
+El proceso de transformación de una gramática analógica en un documento estructurado sigue un flujo de cinco etapas, representadas de forma secuencial en la Figura~\ref{fig:uml_pipeline_principal}:
 \begin{enumerate}
     \item \textbf{Capa de ingesta y preprocesamiento:} El sistema localiza los archivos PDF en el directorio \texttt{data/} y extrae el rango de páginas solicitado. En la ruta experimental principal, esta extracción se realiza mediante segmentación del PDF en un flujo binario (\textit{bytes}), sin rasterizar las páginas. De forma complementaria, el sistema contempla una ruta alternativa de prototipado basada en imágenes rasterizadas.
     
@@ -23,9 +22,18 @@ El proceso de transformación de una gramática analógica en un documento estru
     \item \textbf{Capa de exportación y tipografía:} Una vez validado, el contenido se traslada a formatos finales: XML para almacenamiento de datos, \LaTeX{} para publicación académica y PDF para mayor visibilidad.
 \end{enumerate}
 
+La Figura~\ref{fig:uml_pipeline_principal} representa el flujo secuencial del \textit{pipeline} principal, desde la petición inicial del usuario hasta la generación del XML, su validación, corrección, conversión a \LaTeX{} y compilación final a PDF.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{imagenes/scheme/diagrama_uml_pipeline_principal.png}
+    \caption{Diagrama UML de secuencia del \textit{pipeline} principal del sistema.}
+    \label{fig:uml_pipeline_principal}
+\end{figure}
+
 \subsection{Organización de los módulos del sistema}
 
-La implementación se refleja en la siguiente organización de directorios en el repositorio:
+La implementación se refleja en la siguiente organización de directorios en el repositorio, representada visualmente en la Figura~\ref{fig:arquitectura_modular_repositorio}:
 
 \begin{itemize}
     \item \textbf{\texttt{core/}:} Contiene la lógica de negocio principal, incluyendo la interacción con la IA, la gestión de archivos y el corrector de XML.
@@ -38,6 +46,15 @@ La implementación se refleja en la siguiente organización de directorios en el
     
     \item \textbf{\texttt{evaluator/}:} Infraestructura para la comparación de resultados y cálculo de métricas de precisión frente al \textit{test set}.
 \end{itemize}
+
+La Figura~\ref{fig:arquitectura_modular_repositorio} muestra la organización modular del repositorio y la relación entre el orquestador principal, los paquetes funcionales y los módulos Python que intervienen en el proceso.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imagenes/scheme/arquitectura_modular_repositorio.png}
+    \caption{Arquitectura modular del repositorio y distribución de los módulos principales del sistema.}
+    \label{fig:arquitectura_modular_repositorio}
+\end{figure}
 
 Esta arquitectura garantiza la trazabilidad absoluta de los datos: desde el PDF original hasta el archivo \texttt{.tex} final, cada paso es registrado y puede ser auditado mediante el sistema de \textit{logs} centralizado.
 
@@ -58,7 +75,25 @@ Además de las carpetas anteriores, también existen directorios destinados al a
 
 \subsection{Estructuración y Formalización del Esquema XML y DTD}
 
+La Figura~\ref{fig:pipeline_transformacion_documental} resume la transformación documental completa desde una fuente PDF no estructurada hasta la obtención de un recurso digital validado y reutilizable. Esta representación permite visualizar el papel central del XML semántico dentro del sistema, actuando como punto intermedio entre la extracción mediante Gemini, la validación estructural y la posterior generación de documentación en \LaTeX{}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{imagenes/scheme/pipeline_transformacion_documental.png}
+    \caption{Pipeline de transformación documental desde el PDF original hasta la generación del recurso estructurado final.}
+    \label{fig:pipeline_transformacion_documental}
+\end{figure}
+
 La consecución de un corpus digitalizado con valor científico para la lingüística computacional exige que la salida generada por el Modelo de Lenguaje de Gran Tamaño (LLM) no solo sea precisa a nivel grafémico, sino que se ajuste estrictamente a una gramática de datos formal. Para ello, se ha diseñado un esquema jerárquico personalizado bajo el estándar XML, cuya validez sintáctica y estructural queda gobernada por una Definición de Tipo de Documento (DTD).
+
+La Figura~\ref{fig:esquema_xml_semantico} resume la jerarquía semántica definida para representar las gramáticas procesadas. Esta estructura permite separar elementos editoriales generales, como títulos o líneas ordinarias, de elementos lingüísticos especializados, como glosas interlineales, análisis morfológico y análisis sintáctico.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imagenes/scheme/diagrama_xml_semantico.png}
+    \caption{Esquema XML semántico utilizado para estructurar los elementos documentales y lingüísticos de las gramáticas.}
+    \label{fig:esquema_xml_semantico}
+\end{figure}
 
 En las etapas iniciales de prototipado del sistema, se propuso una nomenclatura e infraestructura de marcado en castellano orientada a emular la disposición física y bidimensional de las páginas. El marcado inicial respondía al patrón heurístico mostrado en la Tabla~\ref{tab:evolucion_nomenclaturas}.
 
@@ -121,7 +156,7 @@ En consecuencia, el esquema se reestructuró por completo hacia una ontología a
 
 \subsection{Definición Formal de la Gramática de Datos (DTD)}
 
-El contrato estructural definitivo que rige la validación sintáctica del sistema se encuentra formalizado en el archivo \texttt{gramatica.dtd}, cuyo código se detalla en el Código~\ref{code:dtd}.
+El contrato estructural definitivo que rige la validación sintáctica del sistema se encuentra formalizado en el archivo \texttt{gramatica.dtd}, cuyo código se detalla en el Código~\ref{code:dtd} y cuya jerarquía general se resume en la Figura~\ref{fig:esquema_xml_semantico}.
 
 Con este archivo DTD, el documento XML resultante se articula como un árbol jerárquico de herencia y adyacencia donde se diferencian dos grandes tipologías de elementos:
 
@@ -328,8 +363,7 @@ Esta estrategia permite reducir parcialmente el efecto de la variabilidad propia
 
 \subsection{Flujo de orquestación modular}
 
-El módulo \texttt{experiment\_runner.py} actúa como coordinador del sistema, invocando secuencialmente los distintos componentes del \textit{pipeline} para cada experimento.
-
+El módulo \texttt{experiment\_runner.py} actúa como coordinador del sistema, invocando secuencialmente los distintos componentes del \textit{pipeline} para cada experimento. Este flujo de evaluación se resume en la Figura~\ref{fig:uml_evaluacion_experimentos}.
 El flujo de ejecución sigue el siguiente orden:
 
 \begin{enumerate}
@@ -344,7 +378,14 @@ El flujo de ejecución sigue el siguiente orden:
     \item Conversión del XML validado a \LaTeX{} utilizando \texttt{converter.py}.
 \end{enumerate}
 
-Esta organización modular permite reutilizar los mismos componentes tanto en experimentos automatizados como en ejecuciones individuales, garantizando la consistencia metodológica de todo el proceso.
+La Figura~\ref{fig:uml_evaluacion_experimentos} muestra el flujo de evaluación empleado para comparar la salida generada con el XML de referencia. Este proceso permite calcular la tasa de error y derivar el porcentaje de similitud utilizado posteriormente en el análisis experimental.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{imagenes/scheme/diagrama_uml_evaluacion_experimentos.png}
+    \caption{Diagrama UML de secuencia del proceso de evaluación de experimentos.}
+    \label{fig:uml_evaluacion_experimentos}
+\end{figure}
 
 \subsection{Persistencia y versionado de resultados}
 

@@ -175,10 +175,55 @@ Cada celda experimental, definida por la combinación de una página del \textit
 
 Debe señalarse que las desviaciones o rangos presentados en este capítulo describen la variabilidad entre páginas o configuraciones agregadas, no la variabilidad entre las tres ejecuciones individuales de cada celda, ya que dichos valores individuales no fueron conservados.
 
+La Tabla~\ref{tab:resultados_temperatura} recoge los resultados completos del experimento de temperatura. Cada celda representa la media de tres ejecuciones independientes para la combinación de una página del \textit{test set} y un valor concreto de temperatura.
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\caption{Resultados de similitud media (\%) para el experimento con diferentes temperaturas}
+\label{tab:resultados_temperatura}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+\textbf{Página} & \textbf{\(T=0.0\)} & \textbf{\(T=0.1\)} & \textbf{\(T=0.25\)} & \textbf{\(T=0.5\)} & \textbf{\(T=0.75\)} & \textbf{\(T=1.0\)} & \textbf{\(T=1.5\)} & \textbf{\(T=2.0\)} \\
+\midrule
+Kaqchikel\_172   & 93.19 & 93.54 & 93.50 & 93.53 & 93.60 & 93.78 & 92.75 & 93.88 \\
+Kaqchikel\_205   & 92.66 & 93.85 & 97.76 & 94.29 & 91.71 & 93.51 & 93.39 & 90.29 \\
+Mam\_90          & 93.05 & 94.66 & 93.42 & 94.66 & 94.66 & 94.60 & 93.59 & 93.52 \\
+Mam\_231         & 98.95 & 98.77 & 98.42 & 98.42 & 98.60 & 98.82 & 98.77 & 98.34 \\
+K'iche'\_52      & 98.77 & 98.21 & 98.21 & 98.21 & 98.21 & 98.21 & 98.38 & 98.32 \\
+K'iche'\_56      & 88.73 & 88.73 & 88.73 & 88.86 & 88.73 & 88.73 & 89.31 & 89.41 \\
+Q'anjob'al\_44   & 96.10 & 96.10 & 96.10 & 96.10 & 96.10 & 95.91 & 95.91 & 95.91 \\
+Q'anjob'al\_94   & 99.92 & 99.92 & 99.92 & 99.57 & 99.92 & 99.92 & 99.92 & 99.57 \\
+Q'anjob'al\_201  & 70.63 & 73.35 & 77.07 & 82.57 & 76.89 & 74.67 & 77.37 & 69.99 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+La Figura~\ref{fig:temperatura_vs_similitud_media} resume la similitud media obtenida para cada valor de temperatura. Esta visualización permite observar que el rendimiento no sigue una relación lineal con el aumento de \(T\), sino que alcanza su mejor valor medio en \(T=0.5\).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imagenes/charts/grafica_temperatura_vs_similitud.png}
+    \caption{Evolución de la similitud media en función de la temperatura.}
+    \label{fig:temperatura_vs_similitud_media}
+\end{figure}
+
+Además de la media global, resulta necesario analizar el comportamiento individual de cada página del \textit{test set}. La Figura~\ref{fig:temperatura_vs_similitud_por_pagina} muestra que la mayoría de páginas presentan una evolución estable, mientras que \texttt{Q'anjob'al\_201} concentra la mayor variabilidad y confirma que la dificultad documental influye más que la temperatura por sí sola.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imagenes/charts/grafica_temperatura_vs_similitud_por_pagina.png}
+    \caption{Evolución de la similitud por página del \textit{test set} para cada valor de temperatura.}
+    \label{fig:temperatura_vs_similitud_por_pagina}
+\end{figure}
+
+
 \subsection{Comportamiento Global y No Monotonicidad del Sistema}
 
-El análisis agregado de las muestras revela una propiedad matemática fundamental: la relación entre la temperatura de generación y la fidelidad textual, medida mediante el porcentaje de similitud, no presenta un comportamiento lineal ni monotónico. La ordenación de los niveles térmicos en función de la media global obtenida es la siguiente:
-
+El análisis agregado de las muestras revela una propiedad matemática fundamental: la relación entre la temperatura de generación y la fidelidad textual, medida mediante el porcentaje de similitud, no presenta un comportamiento lineal ni monotónico. Esta tendencia puede observarse visualmente en la Figura~\ref{fig:temperatura_vs_similitud_media}.
 \[
 T=0.5 > T=0.25 > T=1.5 > T=0.75 > T=1.0 > T=0.1 > T=0.0 > T=2.0
 \]
@@ -208,7 +253,7 @@ Los resultados obtenidos sugieren, por tanto, que la digitalización lingüísti
 
 \subsection{Resiliencia Estructural e Insensibilidad Térmica en Páginas Estables}
 
-A pesar de las fluctuaciones observadas en las medias globales, el análisis desagregado de los resultados pone de manifiesto que la temperatura constituye un factor secundario para la mayoría de las muestras evaluadas. En concreto, siete de las nueve páginas analizadas (Kaqchikel\_172, Mam\_90, Mam\_231, K'iche'\_52, K'iche'\_56, Q'anjob'al\_44 y Q'anjob'al\_94) presentan una sensibilidad extremadamente reducida frente a las variaciones del parámetro térmico, manteniendo rangos de oscilación inferiores o iguales a 1.61 puntos porcentuales.
+A pesar de las fluctuaciones observadas en las medias globales, el análisis desagregado de los resultados pone de manifiesto que la temperatura constituye un factor secundario para la mayoría de las muestras evaluadas, como se aprecia en la Figura~\ref{fig:temperatura_vs_similitud_por_pagina}. En concreto, siete de las nueve páginas analizadas (Kaqchikel\_172, Mam\_90, Mam\_231, K'iche'\_52, K'iche'\_56, Q'anjob'al\_44 y Q'anjob'al\_94) presentan una sensibilidad extremadamente reducida frente a las variaciones del parámetro térmico, manteniendo rangos de oscilación inferiores o iguales a 1.61 puntos porcentuales.
 
 El cálculo individual del rango de dispersión, definido como la diferencia entre el valor máximo y mínimo observado para cada página,
 
@@ -300,11 +345,57 @@ El análisis incluye cinco modelos pertenecientes a distintas generaciones de la
     \item \texttt{gemini-3.5-flash}
 \end{itemize}
 
+Los resultados completos de la comparación entre modelos se presentan en la Tabla~\ref{tab:resultados_modelos}. Cada celda representa la media de tres ejecuciones independientes para la combinación de una página del \textit{test set} y un modelo concreto, manteniendo fija la temperatura en \(T=1.0\).
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\caption{Resultados de similitud media (\%) para el experimento con diferentes modelos Gemini}
+\label{tab:resultados_modelos}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Página} & \textbf{2.5-flash} & \textbf{2.5-flash-lite} & \textbf{3.5-flash} & \textbf{3-flash-preview} & \textbf{3.1-flash-lite} \\
+\midrule
+Kaqchikel\_172   & 90.22 & 70.14 & 94.65 & 85.95 & 93.78 \\
+Kaqchikel\_205   & 94.31 & 88.79 & 92.32 & 94.70 & 93.51 \\
+Mam\_90          & 93.96 & 74.92 & 95.43 & 92.80 & 94.60 \\
+Mam\_231         & 95.86 & 96.82 & 99.78 & 92.47 & 98.82 \\
+K'iche'\_52      & 95.87 & 91.66 & 98.42 & 96.11 & 98.21 \\
+K'iche'\_56      & 88.17 & 80.06 & 96.80 & 91.67 & 88.73 \\
+Q'anjob'al\_44   & 96.54 & 91.76 & 95.91 & 96.10 & 95.91 \\
+Q'anjob'al\_94   & 100.00 & 100.00 & 99.94 & 98.56 & 99.92 \\
+Q'anjob'al\_201  & 85.39 & 70.31 & 87.96 & 83.61 & 74.67 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
 Los resultados obtenidos muestran diferencias relevantes tanto en precisión como en estabilidad, especialmente cuando los modelos se enfrentan a documentos con una elevada complejidad estructural. Estas diferencias deben interpretarse dentro del marco experimental definido, es decir, con una temperatura fija de \(T=1.0\).
+
+La Figura~\ref{fig:modelo_vs_similitud_media} resume visualmente la similitud media obtenida por cada modelo. Esta representación permite apreciar de forma directa la ventaja global de \texttt{gemini-3.5-flash} frente al resto de arquitecturas evaluadas.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imagenes/charts/grafica_modelo_vs_similitud.png}
+    \caption{Comparación de similitud media obtenida por cada modelo Gemini evaluado.}
+    \label{fig:modelo_vs_similitud_media}
+\end{figure}
+
+Además de la media global, resulta relevante observar el comportamiento de cada modelo por página del \textit{test set}. La Figura~\ref{fig:modelo_vs_similitud_por_pagina} muestra que las diferencias entre arquitecturas no son homogéneas: algunas páginas se mantienen estables en todos los modelos, mientras que otras, como \texttt{Q'anjob'al\_201}, presentan una sensibilidad mucho mayor.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imagenes/charts/grafica_modelo_vs_similitud_por_pagina.png}
+    \caption{Comparación de similitud por página del \textit{test set} para cada modelo Gemini evaluado.}
+    \label{fig:modelo_vs_similitud_por_pagina}
+\end{figure}
+
 
 \subsection{Dominancia Sistémica de la Arquitectura Avanzada (\texttt{gemini-3.5-flash})}
 
-Los resultados experimentales identifican de forma clara a \texttt{gemini-3.5-flash} como la arquitectura con mejor rendimiento global dentro del conjunto analizado.
+Los resultados experimentales identifican de forma clara a \texttt{gemini-3.5-flash} como la arquitectura con mejor rendimiento global dentro del conjunto analizado, tal y como se observa en la Figura~\ref{fig:modelo_vs_similitud_media}.
 
 Este modelo alcanza una similitud media del 95.69\,\%, la más elevada de todo el estudio, y presenta simultáneamente la menor dispersión estadística, con una desviación estándar de apenas
 
