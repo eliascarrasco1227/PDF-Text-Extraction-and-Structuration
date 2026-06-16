@@ -92,6 +92,70 @@
       \field{pages}{719\bibrangedash 728}
       \range{pages}{10}
     \endentry
+    \entry{cardoso_pereira_iversen_ramos_2014}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=da6190afe14e95b1dc00b2ac6f329975}{%
+           family={Cardoso},
+           familyi={C\bibinitperiod},
+           given={Jefferson\bibnamedelima Rosa},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a2bc58fa7adfef4eda8d9c2d7d17af32}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Ligia\bibnamedelima Maxwell},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=098c0df94b301b8e19f0bcabf418d43f}{%
+           family={Iversen},
+           familyi={I\bibinitperiod},
+           given={Maura\bibnamedelima Daly},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bb10772d07803864192535aeb6be2f60}{%
+           family={Ramos},
+           familyi={R\bibinitperiod},
+           given={Adilson\bibnamedelima Luiz},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Dental Press International}%
+      }
+      \strng{namehash}{b55ec921e55916bebd0a5395dff03b6e}
+      \strng{fullhash}{b428b0a7c1c5a068e7c22b77c42b7808}
+      \strng{fullhashraw}{b428b0a7c1c5a068e7c22b77c42b7808}
+      \strng{bibnamehash}{b428b0a7c1c5a068e7c22b77c42b7808}
+      \strng{authorbibnamehash}{b428b0a7c1c5a068e7c22b77c42b7808}
+      \strng{authornamehash}{b55ec921e55916bebd0a5395dff03b6e}
+      \strng{authorfullhash}{b428b0a7c1c5a068e7c22b77c42b7808}
+      \strng{authorfullhashraw}{b428b0a7c1c5a068e7c22b77c42b7808}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2176-9451}
+      \field{journaltitle}{Dental Press Journal of Orthodontics}
+      \field{month}{9}
+      \field{number}{5}
+      \field{title}{What is gold standard and what is ground truth?}
+      \field{volume}{19}
+      \field{year}{2014}
+      \field{pages}{27\bibrangedash 30}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1590/2176-9451.19.5.027-030.ebo
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1590/2176-9451.19.5.027-030.ebo
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1590/2176-9451.19.5.027-030.ebo
+      \endverb
+    \endentry
     \entry{conneau-etal-2020-unsupervised}{inbook}{}{}
       \name{author}{10}{}{%
         {{un=0,uniquepart=base,hash=7cf7ac6a9456559cc67ee138c7f21cec}{%
@@ -383,6 +447,92 @@
       \field{title}{OCRBench v2: An Improved Benchmark for Evaluating Large Multimodal Models on Visual Text Localization and Reasoning}
       \field{year}{2025}
     \endentry
+    \entry{halfon2024staytunedempiricalstudy}{misc}{}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=408703223b0ba8b1af451aa6828bddbd}{%
+           family={Halfon},
+           familyi={H\bibinitperiod},
+           given={Alon},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73ae2b1b8e390df904ebd3ae945af859}{%
+           family={Gretz},
+           familyi={G\bibinitperiod},
+           given={Shai},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=117b92410bee1ea2785d9a329ebcb5ea}{%
+           family={Arviv},
+           familyi={A\bibinitperiod},
+           given={Ofir},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a16fb0bb04e22a1b929cebd0571bd67a}{%
+           family={Spector},
+           familyi={S\bibinitperiod},
+           given={Artem},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=496a022769af0130118533274ca789b8}{%
+           family={Toledo-Ronen},
+           familyi={T\bibinithyphendelim R\bibinitperiod},
+           given={Orith},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c438f811a9e5235f85dc146165a93aef}{%
+           family={Katz},
+           familyi={K\bibinitperiod},
+           given={Yoav},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=194943ef5bd286a8414abb1ced2b142b}{%
+           family={Ein-Dor},
+           familyi={E\bibinithyphendelim D\bibinitperiod},
+           given={Liat},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f77becd7849439ddd40e2d990094068e}{%
+           family={Shmueli-Scheuer},
+           familyi={S\bibinithyphendelim S\bibinitperiod},
+           given={Michal},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a3f3b5b76ea6c44d493994fd5a453df}{%
+           family={Slonim},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9251cdcdee5450e96694146e06956469}
+      \strng{fullhash}{468d831bf4c87bf010e63878547ee0df}
+      \strng{fullhashraw}{468d831bf4c87bf010e63878547ee0df}
+      \strng{bibnamehash}{468d831bf4c87bf010e63878547ee0df}
+      \strng{authorbibnamehash}{468d831bf4c87bf010e63878547ee0df}
+      \strng{authornamehash}{9251cdcdee5450e96694146e06956469}
+      \strng{authorfullhash}{468d831bf4c87bf010e63878547ee0df}
+      \strng{authorfullhashraw}{468d831bf4c87bf010e63878547ee0df}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Stay Tuned: An Empirical Study of the Impact of Hyperparameters on LLM Tuning in Real-World Applications}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2407.18990
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2407.18990
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2407.18990
+      \endverb
+    \endentry
     \entry{Kann2020Acquisition}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4ad8d51802941285dfefe5363d6e7fe1}{%
@@ -425,6 +575,62 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.7275/zwwg-0g10
+      \endverb
+    \endentry
+    \entry{peeperkorn2024temperaturecreativityparameterlarge}{misc}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=cbc92ef26e7d798a88077535782a73fe}{%
+           family={Peeperkorn},
+           familyi={P\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=52db3c458ce13313570c7d45467fc32a}{%
+           family={Kouwenhoven},
+           familyi={K\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00d0054d2b763892268758224004fc92}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9796b7fb7f6a9526c9f7cd61275b249}{%
+           family={Jordanous},
+           familyi={J\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f894e30504ef934d80f324936c5faf1d}
+      \strng{fullhash}{4710e423912f45a61adf773309031f8a}
+      \strng{fullhashraw}{4710e423912f45a61adf773309031f8a}
+      \strng{bibnamehash}{4710e423912f45a61adf773309031f8a}
+      \strng{authorbibnamehash}{4710e423912f45a61adf773309031f8a}
+      \strng{authornamehash}{f894e30504ef934d80f324936c5faf1d}
+      \strng{authorfullhash}{4710e423912f45a61adf773309031f8a}
+      \strng{authorfullhashraw}{4710e423912f45a61adf773309031f8a}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{Is Temperature the Creativity Parameter of Large Language Models?}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2405.00492
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2405.00492
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2405.00492
       \endverb
     \endentry
     \entry{pires-etal-2019-multilingual}{inbook}{}{}
@@ -821,6 +1027,70 @@
       \field{pages}{719\bibrangedash 728}
       \range{pages}{10}
     \endentry
+    \entry{cardoso_pereira_iversen_ramos_2014}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=da6190afe14e95b1dc00b2ac6f329975}{%
+           family={Cardoso},
+           familyi={C\bibinitperiod},
+           given={Jefferson\bibnamedelima Rosa},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a2bc58fa7adfef4eda8d9c2d7d17af32}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Ligia\bibnamedelima Maxwell},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=098c0df94b301b8e19f0bcabf418d43f}{%
+           family={Iversen},
+           familyi={I\bibinitperiod},
+           given={Maura\bibnamedelima Daly},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bb10772d07803864192535aeb6be2f60}{%
+           family={Ramos},
+           familyi={R\bibinitperiod},
+           given={Adilson\bibnamedelima Luiz},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Dental Press International}%
+      }
+      \strng{namehash}{b55ec921e55916bebd0a5395dff03b6e}
+      \strng{fullhash}{b428b0a7c1c5a068e7c22b77c42b7808}
+      \strng{fullhashraw}{b428b0a7c1c5a068e7c22b77c42b7808}
+      \strng{bibnamehash}{b428b0a7c1c5a068e7c22b77c42b7808}
+      \strng{authorbibnamehash}{b428b0a7c1c5a068e7c22b77c42b7808}
+      \strng{authornamehash}{b55ec921e55916bebd0a5395dff03b6e}
+      \strng{authorfullhash}{b428b0a7c1c5a068e7c22b77c42b7808}
+      \strng{authorfullhashraw}{b428b0a7c1c5a068e7c22b77c42b7808}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2176-9451}
+      \field{journaltitle}{Dental Press Journal of Orthodontics}
+      \field{month}{9}
+      \field{number}{5}
+      \field{title}{What is gold standard and what is ground truth?}
+      \field{volume}{19}
+      \field{year}{2014}
+      \field{pages}{27\bibrangedash 30}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1590/2176-9451.19.5.027-030.ebo
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1590/2176-9451.19.5.027-030.ebo
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1590/2176-9451.19.5.027-030.ebo
+      \endverb
+    \endentry
     \entry{conneau-etal-2020-unsupervised}{inbook}{}{}
       \name{author}{10}{}{%
         {{un=0,uniquepart=base,hash=7cf7ac6a9456559cc67ee138c7f21cec}{%
@@ -1112,6 +1382,92 @@
       \field{title}{OCRBench v2: An Improved Benchmark for Evaluating Large Multimodal Models on Visual Text Localization and Reasoning}
       \field{year}{2025}
     \endentry
+    \entry{halfon2024staytunedempiricalstudy}{misc}{}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=408703223b0ba8b1af451aa6828bddbd}{%
+           family={Halfon},
+           familyi={H\bibinitperiod},
+           given={Alon},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73ae2b1b8e390df904ebd3ae945af859}{%
+           family={Gretz},
+           familyi={G\bibinitperiod},
+           given={Shai},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=117b92410bee1ea2785d9a329ebcb5ea}{%
+           family={Arviv},
+           familyi={A\bibinitperiod},
+           given={Ofir},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a16fb0bb04e22a1b929cebd0571bd67a}{%
+           family={Spector},
+           familyi={S\bibinitperiod},
+           given={Artem},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=496a022769af0130118533274ca789b8}{%
+           family={Toledo-Ronen},
+           familyi={T\bibinithyphendelim R\bibinitperiod},
+           given={Orith},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c438f811a9e5235f85dc146165a93aef}{%
+           family={Katz},
+           familyi={K\bibinitperiod},
+           given={Yoav},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=194943ef5bd286a8414abb1ced2b142b}{%
+           family={Ein-Dor},
+           familyi={E\bibinithyphendelim D\bibinitperiod},
+           given={Liat},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f77becd7849439ddd40e2d990094068e}{%
+           family={Shmueli-Scheuer},
+           familyi={S\bibinithyphendelim S\bibinitperiod},
+           given={Michal},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a3f3b5b76ea6c44d493994fd5a453df}{%
+           family={Slonim},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9251cdcdee5450e96694146e06956469}
+      \strng{fullhash}{468d831bf4c87bf010e63878547ee0df}
+      \strng{fullhashraw}{468d831bf4c87bf010e63878547ee0df}
+      \strng{bibnamehash}{468d831bf4c87bf010e63878547ee0df}
+      \strng{authorbibnamehash}{468d831bf4c87bf010e63878547ee0df}
+      \strng{authornamehash}{9251cdcdee5450e96694146e06956469}
+      \strng{authorfullhash}{468d831bf4c87bf010e63878547ee0df}
+      \strng{authorfullhashraw}{468d831bf4c87bf010e63878547ee0df}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Stay Tuned: An Empirical Study of the Impact of Hyperparameters on LLM Tuning in Real-World Applications}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2407.18990
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2407.18990
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2407.18990
+      \endverb
+    \endentry
     \entry{Kann2020Acquisition}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4ad8d51802941285dfefe5363d6e7fe1}{%
@@ -1154,6 +1510,62 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.7275/zwwg-0g10
+      \endverb
+    \endentry
+    \entry{peeperkorn2024temperaturecreativityparameterlarge}{misc}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=cbc92ef26e7d798a88077535782a73fe}{%
+           family={Peeperkorn},
+           familyi={P\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=52db3c458ce13313570c7d45467fc32a}{%
+           family={Kouwenhoven},
+           familyi={K\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00d0054d2b763892268758224004fc92}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9796b7fb7f6a9526c9f7cd61275b249}{%
+           family={Jordanous},
+           familyi={J\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f894e30504ef934d80f324936c5faf1d}
+      \strng{fullhash}{4710e423912f45a61adf773309031f8a}
+      \strng{fullhashraw}{4710e423912f45a61adf773309031f8a}
+      \strng{bibnamehash}{4710e423912f45a61adf773309031f8a}
+      \strng{authorbibnamehash}{4710e423912f45a61adf773309031f8a}
+      \strng{authornamehash}{f894e30504ef934d80f324936c5faf1d}
+      \strng{authorfullhash}{4710e423912f45a61adf773309031f8a}
+      \strng{authorfullhashraw}{4710e423912f45a61adf773309031f8a}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{Is Temperature the Creativity Parameter of Large Language Models?}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2405.00492
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2405.00492
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2405.00492
       \endverb
     \endentry
     \entry{pires-etal-2019-multilingual}{inbook}{}{}

@@ -109,7 +109,7 @@ Uno de los hallazgos más relevantes durante el desarrollo de este TFM ha sido l
 Se ha documentado, mediante la bitácora de desarrollo de este trabajo, que las condiciones de acceso para el modelo Gemini sufrieron una degradación crítica sin previo aviso:
 
 \begin{itemize}
-    \item Colapso de cuota: El margen operativo se redujo de 1.500 peticiones diarias a solo 20, lo que representa una caída del 98.6% en la capacidad de procesamiento experimental.
+    \item Colapso de cuota: El margen operativo se redujo de 1.500 peticiones diarias a solo 20, lo que representa una caída del 98.6\% en la capacidad de procesamiento experimental.
     \item Restricción de modelos: La oferta de arquitecturas disponibles para pruebas concurrentes pasó de 8 modelos activos a únicamente 5, limitando la capacidad de realizar estudios comparativos de rendimiento intramodelo.
 \end{itemize}
 
@@ -118,13 +118,13 @@ En conclusión, mientras que APIs como DeepSeek ofrecen el mejor ratio coste-ben
 
 \subsection{Configuración de Modelos: Parámetro de Temperatura}
 
-Para optimizar el rendimiento de un LLM en tareas de digitalización estructurada, no solo es determinante la elección de la API, sino también el ajuste de sus hiperparámetros de generación y la selección de la arquitectura adecuada para la carga de trabajo.
+Para optimizar el rendimiento de un LLM en tareas de digitalización estructurada, no solo es determinante la elección de la API, sino también el ajuste de sus hiperparámetros de generación y la selección de la arquitectura adecuada para la carga de trabajo \parencite{halfon2024staytunedempiricalstudy}.
 
-La temperatura es un hiper parámetro que regula el grado de aleatoriedad o "creatividad" del modelo durante la fase de muestreo de tokens. Normalmente se define con un número en el rango del 0 al 1 (siendo 0 el mínimo y 1 el máximo grado de temperatura), aunque en gemini se regula de 0 a 2. Técnicamente, actúa sobre la función softmax de la capa de salida del modelo, modificando la distribución de probabilidad de las palabras candidatas:
+La temperatura es un hiper parámetro que regula el grado de aleatoriedad o "creatividad" del modelo durante la fase de muestreo de tokens \parencite{peeperkorn2024temperaturecreativityparameterlarge}. Normalmente se define con un número en el rango del 0 al 1 (siendo 0 el mínimo y 1 el máximo grado de temperatura), aunque en gemini se regula de 0 a 2. Técnicamente, actúa sobre la función softmax de la capa de salida del modelo, modificando la distribución de probabilidad de las palabras candidatas:
 
 \begin{itemize}
     \item Temperaturas bajas (T aprox 0.0 a 0.3): El modelo se comporta de forma cuasi-determinista, seleccionando siempre los tokens con mayor probabilidad estadística. En el contexto de este TFM, este rango es esencial para garantizar que la estructura XML sea coherente y que la transcripción de las gramáticas mayas sea fiel al original, minimizando la "alucinación" de etiquetas.
-    \item Temperaturas altas (T > 0.7): El modelo aplana la curva de probabilidad, otorgando oportunidades a tokens menos frecuentes. Aunque esto favorece la creatividad en redacción literaria, en la digitalización de documentos técnicos suele derivar en el colapso estructural del XML (etiquetas mal cerradas o duplicadas) y en la invención de términos lingüísticos inexistentes.
+    \item Temperaturas altas (T \texttt{\textless} 0.7): El modelo aplana la curva de probabilidad, otorgando oportunidades a tokens menos frecuentes. Aunque esto favorece la creatividad en redacción literaria, en la digitalización de documentos técnicos suele derivar en el colapso estructural del XML (etiquetas mal cerradas o duplicadas) y en la invención de términos lingüísticos inexistentes.
 \end{itemize}
 
 
@@ -140,7 +140,7 @@ Cuando los LLMs reciben como entrada una lengua de la que han recibido poca info
 
 \subsection{ El valor de los datos estructurados (XML/LaTeX) }
 La mayor barrera para la digitalización de lenguas minorizadas es la escasez de datos estructurados y validados. En este contexto, los archivos XML y \LaTeX{} generados por la aplicación pueden considerarse recursos de referencia útiles para posteriores tareas de análisis, consulta o entrenamiento de modelos especializados.
-Aceleración del Fine-Tuning: Los archivos XML y LaTeX que genera la aplicación constituyen lo que en IA llamamos "Gold Standard" o datos de referencia. Con una cantidad mínima de estas páginas estructuradas, es posible realizar un ajuste fino (fine-tuning) de modelos más pequeños y locales.
+Aceleración del Fine-Tuning: Los archivos XML y LaTeX que genera la aplicación constituyen lo que en IA llamamos Gold Standard o datos de referencia \parencite{cardoso_pereira_iversen_ramos_2014}. Con una cantidad mínima de estas páginas estructuradas, es posible realizar un ajuste fino (fine-tuning) de modelos más pequeños y locales.
 Eficiencia en pocos ejemplos (Few-shot Learning): Como se observa en la arquitectura de carpetas de este proyecto (módulo data/few-shot), el modelo es capaz de aprender la jerarquía de una gramática completa tras ver solo dos o tres ejemplos bien etiquetados. Esta capacidad de generalización es extrapolable a cualquier lengua del mundo: si el pipeline es robusto para la complejidad de las lenguas mayas, su aplicación a otras familias lingüísticas requiere una inversión de tiempo y datos drásticamente inferior.
 
 \subsection{ Democratización del conocimiento lingüístico }

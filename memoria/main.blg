@@ -1,21 +1,22 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[141] biber-MSWIN64:342> INFO - === 
-[213] Biber.pm:421> INFO - Reading 'main.bcf'
-[335] Biber.pm:1002> INFO - Found 11 citekeys in bib section 0
-[360] Biber.pm:4487> INFO - Processing section 0
-[371] Biber.pm:4678> INFO - Looking for bibtex file 'bibliografia/bibliografia.bib' for section 0
-[501] bibtex.pm:1713> INFO - LaTeX decoding ...
-[582] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliografia/bibliografia.bib'
-[721] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[721] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[722] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[750] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[750] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[750] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[772] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[798] bbl.pm:779> INFO - Output to main.bbl
-[799] Biber.pm:132> WARN - Duplicate entry key: '11451708' in file 'bibliografia/bibliografia.bib', skipping ...
-[799] Biber.pm:132> WARN - Duplicate entry key: 'IBM2024' in file 'bibliografia/bibliografia.bib', skipping ...
-[799] Biber.pm:132> WARN - legacy month field 'March' in entry 'A_Bhat_2026_WACV' is not an integer - this will probably not sort properly.
-[799] Biber.pm:134> INFO - WARNINGS: 3
+[158] biber-MSWIN64:342> INFO - === 
+[221] Biber.pm:421> INFO - Reading 'main.bcf'
+[335] Biber.pm:1002> INFO - Found 14 citekeys in bib section 0
+[357] Biber.pm:4487> INFO - Processing section 0
+[368] Biber.pm:4678> INFO - Looking for bibtex file 'bibliografia/bibliografia.bib' for section 0
+[482] bibtex.pm:1713> INFO - LaTeX decoding ...
+[557] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliografia/bibliografia.bib'
+[779] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[779] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[779] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[888] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[888] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[889] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[960] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1037] bbl.pm:779> INFO - Output to main.bbl
+[1038] Biber.pm:132> WARN - Duplicate entry key: '11451708' in file 'bibliografia/bibliografia.bib', skipping ...
+[1038] Biber.pm:132> WARN - Duplicate entry key: 'IBM2024' in file 'bibliografia/bibliografia.bib', skipping ...
+[1039] Biber.pm:132> WARN - legacy month field 'Sep' in entry 'cardoso_pereira_iversen_ramos_2014' is not an integer - this will probably not sort properly.
+[1039] Biber.pm:132> WARN - legacy month field 'March' in entry 'A_Bhat_2026_WACV' is not an integer - this will probably not sort properly.
+[1039] Biber.pm:134> INFO - WARNINGS: 4

@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1781622635.81852 "main.bcf" "main.bbl" "main" 1781622924.37361 0
-  "bibliografia/bibliografia.bib" 1781607203 23989 aace2981e81eebdbbf42fec63418c825 ""
-  "main.bcf" 1781622923 135139 fe381682ecde33b0c0814bed2c02814f "pdflatex"
+["biber main"] 1781625655.95751 "main.bcf" "main.bbl" "main" 1781625659.29091 0
+  "bibliografia/bibliografia.bib" 1781625654 25465 6ae1f8ee5a9d03eea1c7791b5c0044a1 ""
+  "main.bcf" 1781625502 135333 f5ab69116385707e0a458bb8f669e907 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1781622908.29199 "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" "main.pdf" "main" 1781622924.37803 0
+["pdflatex"] 1781625494.72761 "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" "main.pdf" "main" 1781625659.29113 0
   "back_matter.tex" 1780660854 45398 995487411d4960e80701f40e5f669b5b ""
   "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" 1781279329 3919 12d7a0702f46bd4844be47ca33f61106 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1780230687 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -245,12 +245,12 @@
   "c:/texlive/2026/texmf.cnf" 1780245197 713 e69b156964470283e0530f5060668171 ""
   "chapters/cap1_introduccion.tex" 1781555926 11879 590d3ed5449eae866441ca57e2396961 ""
   "chapters/cap2_objetivos.tex" 1781555961 3182 2a8eb8ad241d3e2dd62b93cca684c4fa ""
-  "chapters/cap3_estado_cuestion.tex" 1781618604 75773 428f40f19112e8395a75c49a8e94c799 ""
+  "chapters/cap3_estado_cuestion.tex" 1781625493 75899 a6805e0c5c41ca49b67bec8ef5f1a9e1 ""
   "chapters/cap4_metodologia.tex" 1781618740 17334 ef28bd64d18da8b8c97adaecd4e83571 ""
   "chapters/cap5_diseño.tex" 1781622898 59296 8e79f3fd25eae343c7560e6028b9eef4 ""
   "chapters/cap7_resultados.tex" 1781621209 49396 470bd8a43b619472d4f80b3de6b6f6c3 ""
   "chapters/cap8_conclusiones.tex" 1781618149 21487 cea57831eb85afb8a5420f04ebd09be7 ""
-  "front_matter.tex" 1781555876 7924 cc42d22b65c9959c7e7ed1c4e7eaf89f ""
+  "front_matter.tex" 1781625004 8009 b200a26c8e25e564377b9ac161c8afee ""
   "glosario/entradas_glosario.tex" 1780249163 3057 6f4fceb84415007b5606f4b214ceec43 ""
   "imagenes/ALMG/web_ALMG.png" 1780143283 235890 825b25da13521f1298f4768d5b9e3803 ""
   "imagenes/UA/logoeps.jpg" 1780249162 65392 7bde4d5589e704da3043530db31981f2 ""
@@ -268,14 +268,14 @@
   "imagenes/scheme/diagrama_uml_pipeline_principal.png" 1781619242 254955 151048a1b82ad4b1110d47d51e07d593 ""
   "imagenes/scheme/diagrama_xml_semantico.png" 1781619114 195995 db88c210426a0c1d360b931fccfbaaa2 ""
   "imagenes/scheme/pipeline_transformacion_documental.png" 1781619207 307068 2241324b0d8ea336a7606df5a822f9d4 ""
-  "main.aux" 1781622923 97439 eb25bf97f40f6402c98b2a731089ea85 "pdflatex"
-  "main.bbl" 1781622639 64699 1c91c00cb6ae3b0013d3820b8313cd8c "biber main"
-  "main.lof" 1781622923 2517 04fabe73b380e4880477ce79f38a3298 "pdflatex"
-  "main.lol" 1781622923 1087 f0a22ade77b4f249e5be6d751e467e29 "pdflatex"
-  "main.lot" 1781622923 1157 84acd14a11d85b6a87fa7c90d66f5a31 "pdflatex"
-  "main.run.xml" 1781622923 2374 84b3c453a69351e7c18dc5329eb72f5e "pdflatex"
+  "main.aux" 1781625502 98104 5e52a88e91fe42fb15ab511f8f386526 "pdflatex"
+  "main.bbl" 1781625659 76121 646c4d29b1c5f7562858664c8469c5ce "biber main"
+  "main.lof" 1781625502 2517 04fabe73b380e4880477ce79f38a3298 "pdflatex"
+  "main.lol" 1781625502 1087 f0a22ade77b4f249e5be6d751e467e29 "pdflatex"
+  "main.lot" 1781625502 1157 84acd14a11d85b6a87fa7c90d66f5a31 "pdflatex"
+  "main.run.xml" 1781625502 2374 84b3c453a69351e7c18dc5329eb72f5e "pdflatex"
   "main.tex" 1781279329 3919 12d7a0702f46bd4844be47ca33f61106 ""
-  "main.toc" 1781622923 13626 929c51a2d93babb844e758df62a97dc5 "pdflatex"
+  "main.toc" 1781625502 13626 929c51a2d93babb844e758df62a97dc5 "pdflatex"
   "portada/portada-tfm.pdf" 1780661860 126499 fe1d12ae8524c80a7ee80981549f4123 ""
   "portada/portada.tex" 1780249162 325 22611075635420b29f794da6a0afcdf6 ""
   "portada/portada_2.tex" 1780249162 1019 41fab9129ff26e09de13c508f948bc7d ""
