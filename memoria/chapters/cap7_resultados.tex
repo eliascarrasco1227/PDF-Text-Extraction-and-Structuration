@@ -1,4 +1,5 @@
 \chapter{Experimentación y Análisis de Resultados}
+\label{cap:resultados}
 
 Este capítulo aborda la evaluación empírica y sistemática del sistema automatizado de digitalización lingüística desarrollado en este trabajo. A través de una metodología basada en la ejecución secuencial y controlada de un corpus de prueba representativo (\textit{Test Set}), compuesto por nueve páginas críticas pertenecientes a las gramáticas normativas de la Academia de Lenguas Mayas de Guatemala (ALMG), se analiza el comportamiento del \textit{pipeline} bajo diferentes configuraciones operativas. Los resultados se presentan normalizados en términos de porcentaje de similitud estricta, métrica ortogonal e inversa al error a nivel de carácter (\textit{Character Error Rate}, CER).
 
@@ -6,11 +7,11 @@ Este capítulo aborda la evaluación empírica y sistemática del sistema automa
 
 Antes de adentrarnos en el análisis detallado de los resultados, es importante contextualizar el flujo completo de la aplicación y comprender cómo se transforma una fuente documental original en un recurso digital estructurado.
 
-Tal y como se ha descrito en capítulos anteriores, el sistema recibe como entrada un documento PDF procedente de las gramáticas normativas de la Academia de Lenguas Mayas de Guatemala (ALMG) y genera automáticamente tres tipos de salida complementarios: un archivo XML estructurado, un documento LaTeX y un PDF compilado a partir de dicho código LaTeX.
+Tal y como se ha descrito en capítulos anteriores, el sistema recibe como entrada un fragmento de documento PDF segmentado en bytes procedente de las gramáticas normativas de la Academia de Lenguas Mayas de Guatemala (ALMG) y genera automáticamente tres tipos de salida complementarios: un archivo XML estructurado, un documento LaTeX y un PDF compilado a partir de dicho código LaTeX. Esta ruta de entrada por PDF segmentado es la utilizada en la experimentación final.
 
 Para ilustrar este proceso, a continuación se presenta una misma glosa interlineal extraída de la página 172 de la Gramática Normativa Kaqchikel. Se muestran tanto la fuente original en formato PDF (\ref{fig:glosa_input}) como las diferentes representaciones generadas por el sistema: el archivo XML (\ref{code:kachiquel_xml_172}), el código LaTeX (\ref{code:kachiquel_latex_172}) y el PDF compilado resultante (\ref{glosa_kachikel_pdf_compilado}).
 
-Si se compara la imagen original con el PDF compilado, se aprecia una diferencia significativa en la calidad visual. Mientras que la fuente original corresponde a una fotografía o digitalización de una página impresa, la salida final constituye un documento generado digitalmente mediante composición tipográfica avanzada. Sin embargo, el contenido lingüístico permanece inalterado, demostrando la capacidad del sistema para preservar con precisión tanto la información textual como la estructura gramatical presente en la fuente original.
+Si se compara la página original del PDF con el PDF compilado, se aprecia una diferencia significativa en la calidad visual. Mientras que la fuente original corresponde a una fotografía o digitalización de una página impresa, la salida final constituye un documento generado digitalmente mediante composición tipográfica avanzada. Sin embargo, en los casos de mayor rendimiento, el contenido lingüístico se conserva con alta fidelidad, demostrando la capacidad del sistema para preservar gran parte de la información textual y de la estructura gramatical presente en la fuente original. Esta afirmación debe interpretarse de forma condicionada, ya que los resultados experimentales muestran que la fidelidad varía en función de la complejidad documental de cada página.
 
 Este proceso de digitalización estructurada resulta especialmente relevante en el contexto de las lenguas minorizadas, ya que transforma documentos estáticos en recursos digitales reutilizables, buscables y procesables por sistemas informáticos. De este modo, las gramáticas dejan de ser únicamente documentos de consulta humana para convertirse también en recursos explotables por herramientas de lingüística computacional, sistemas de búsqueda avanzada y futuros modelos de inteligencia artificial.
 
@@ -138,7 +139,7 @@ La comparación entre las distintas representaciones permite observar cómo una 
 \begin{figure}[htbp]
 \centering
 \par\medskip%
-\caption{Glosa interlineal en el documento de salida a partir del Latex compilado (pdf)}
+\caption{Glosa interlineal del documento de salida a partir del Latex compilado (pdf)}
 \label{glosa_kachikel_pdf_compilado}
 \ex
 \textit{Los dos hombres compraron un corte.} \\
@@ -158,7 +159,7 @@ Para verificar el comportamiento estocástico del modelo multimodal y evaluar la
 
 El corpus de validación comprende variantes dialectales e idiomáticas con distintos niveles de complejidad tipográfica, maquetación y ruido visual. Concretamente, se han seleccionado páginas pertenecientes a las gramáticas de Kaqchikel (páginas 172 y 205), Mam (páginas 90 y 231), K’iche’ (páginas 52 y 56) y Q’anjob’al (páginas 44, 94 y 201).
 
-El análisis de los datos se orienta a determinar cómo las características estructurales del documento fuente interactúan con las capacidades probabilísticas del modelo, evaluando la capacidad del sistema para generar documentos XML jerárquicamente válidos y compatibles con la especificación formal definida en el archivo DTD.
+El análisis de los datos se orienta a determinar cómo las características estructurales del documento fuente interactúan con las capacidades probabilísticas del modelo, evaluando tanto la capacidad del sistema para generar documentos XML jerárquicamente válidos y compatibles con la especificación formal definida en el archivo DTD como el grado de similitud textual alcanzado respecto al \textit{Ground Truth}. Por tanto, una salida estructuralmente válida no implica necesariamente una transcripción completamente fiel.
 
 \section{Análisis Empírico del Parámetro de Temperatura}
 
@@ -170,8 +171,9 @@ Con el propósito de identificar el punto de equilibrio óptimo entre determinis
 T \in \{0.0,\; 0.1,\; 0.25,\; 0.5,\; 0.75,\; 1.0,\; 1.5,\; 2.0\}
 \]
 
-Cada configuración ha sido evaluada mediante múltiples ejecuciones independientes sobre el conjunto de pruebas, permitiendo analizar tanto la calidad media de los resultados como la estabilidad estadística del proceso de generación. Esta metodología permite cuantificar la relación existente entre la variabilidad introducida por el modelo y la robustez del sistema de validación estructural desarrollado en los capítulos anteriores.
+Cada celda experimental, definida por la combinación de una página del \textit{test set} y una configuración concreta, se obtuvo ejecutando el programa tres veces y calculando la media aritmética de los resultados. En el experimento de temperatura, las configuraciones corresponden a los distintos valores de \(T\); en el experimento de modelos, corresponden a las arquitecturas Gemini evaluadas. Dado que no se conservaron los valores individuales de cada intento, el análisis se presenta como exploratorio y se limita a las medias agregadas, sin calcular desviaciones típicas entre ejecuciones ni pruebas de significancia estadística.
 
+Debe señalarse que las desviaciones o rangos presentados en este capítulo describen la variabilidad entre páginas o configuraciones agregadas, no la variabilidad entre las tres ejecuciones individuales de cada celda, ya que dichos valores individuales no fueron conservados.
 
 \subsection{Comportamiento Global y No Monotonicidad del Sistema}
 
@@ -194,7 +196,7 @@ La diferencia se aprecia claramente al comparar los resultados obtenidos bajo de
 \begin{itemize}
     \item Caso \texttt{Kaqchikel\_205}: bajo una configuración completamente determinista (\(T=0.0\)), la similitud obtenida se reduce hasta el 92.66\,\%. Sin embargo, al incrementar ligeramente la temperatura hasta \(T=0.25\), el sistema alcanza un máximo de precisión del 97.76\,\%, lo que supone una mejora neta de 5.10 puntos porcentuales.
 
-    \item Caso \texttt{Q'anjob'al\_201}: este ejemplo constituye la evidencia más significativa de las limitaciones del determinismo absoluto. Con \(T=0.0\), la similitud registrada es del 70.63\,\%. Cuando la temperatura se ajusta a \(T=0.5\), el rendimiento aumenta hasta el 82.57\,\%, representando una mejora cercana a los 12 puntos porcentuales.
+    \item Caso \texttt{Q’anjob’al\_201}: este ejemplo constituye la evidencia más significativa de las limitaciones del sistema en páginas de alta dificultad. Con \(T=0.0\), la similitud registrada es del 70.63\,\%. Cuando la temperatura se ajusta a \(T=0.5\), el rendimiento aumenta hasta el 82.57\,\%, representando una mejora cercana a los 12 puntos porcentuales. Aun así, incluso en su mejor configuración dentro de este experimento, la página queda lejos de una conservación completa del contenido, por lo que debe considerarse un caso límite que exige una consideración especial.
 \end{itemize}
 
 La explicación teórica de este fenómeno puede interpretarse en términos de lo que, dentro de este trabajo, se denomina \textit{micro-flexibilidad cognitiva}. Durante el procesamiento de documentos analógicos heterogéneos, caracterizados por ruido visual, ausencia de metadatos textuales y estructuras complejas de glosas interlineales, una política completamente determinista obliga al modelo a permanecer dentro de trayectorias probabilísticas extremadamente rígidas.
@@ -268,7 +270,7 @@ Q'anjob'al\_94 & 99.83\% & -0.17 & Perjudicial \\ \hline
 \end{tabular}
 \end{table}
 
-Los resultados obtenidos permiten extraer varias observaciones relevantes acerca del comportamiento del sistema.
+Los resultados obtenidos permiten extraer varias observaciones relevantes acerca del comportamiento del sistema. En particular, la página \texttt{Q’anjob’al\_201}, con una similitud media de 75.32\,\%, muestra que el sistema no alcanza una fidelidad homogénea en todo el corpus. Por ello, las afirmaciones sobre preservación del contenido deben entenderse como dependientes del grado de complejidad documental y no como una garantía absoluta aplicable a todas las páginas.
 
 En primer lugar, se aprecia una tendencia de compensación mediante creatividad. Las dos páginas con menor rendimiento global, Q'anjob'al\_201 y K'iche'\_56, son precisamente las únicas que presentan valores positivos de \(\Delta\). Este comportamiento sugiere que, cuando el modelo se enfrenta a documentos con elevados niveles de ambigüedad visual o dificultades de interpretación estructural, una mayor libertad probabilística favorece la reconstrucción contextual de información incompleta o deteriorada.
 
@@ -286,7 +288,7 @@ A la luz de esta evidencia, la ventana térmica comprendida entre \(T=0.1\) y \(
 
 Una vez determinado el impacto del entorno térmico sobre el proceso de inferencia, la segunda dimensión experimental de este estudio se centra en la comparación directa de diferentes arquitecturas multimodales disponibles a través de la API de Google AI.
 
-Con el fin de aislar las capacidades intrínsecas de reconocimiento visual, razonamiento documental y estructuración sintáctica de cada modelo, todas las pruebas se ejecutaron utilizando una temperatura constante de \(T=1.0\). Esta parametrización permite minimizar el efecto de la configuración térmica y atribuir las diferencias observadas exclusivamente a las características propias de cada arquitectura.
+Con el fin de aislar las capacidades intrínsecas de reconocimiento visual, razonamiento documental y estructuración sintáctica de cada modelo, todas las pruebas se ejecutaron utilizando una temperatura constante de \(T=1.0\). Esta elección se debe a que \(T=1.0\) constituye una configuración general recomendada por Gemini para tareas de propósito amplio, por lo que se consideró un punto de comparación neutro entre arquitecturas. No obstante, debe tenerse en cuenta que esta comparativa evalúa los modelos únicamente bajo dicha configuración térmica.
 
 El análisis incluye cinco modelos pertenecientes a distintas generaciones de la familia Gemini:
 
@@ -298,7 +300,7 @@ El análisis incluye cinco modelos pertenecientes a distintas generaciones de la
     \item \texttt{gemini-3.5-flash}
 \end{itemize}
 
-Los resultados obtenidos muestran diferencias significativas tanto en precisión como en estabilidad, especialmente cuando los modelos se enfrentan a documentos con una elevada complejidad estructural.
+Los resultados obtenidos muestran diferencias relevantes tanto en precisión como en estabilidad, especialmente cuando los modelos se enfrentan a documentos con una elevada complejidad estructural. Estas diferencias deben interpretarse dentro del marco experimental definido, es decir, con una temperatura fija de \(T=1.0\).
 
 \subsection{Dominancia Sistémica de la Arquitectura Avanzada (\texttt{gemini-3.5-flash})}
 

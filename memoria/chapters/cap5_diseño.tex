@@ -12,9 +12,9 @@ El sistema se ha diseñado bajo una arquitectura modular y desacoplada, organiza
 El proceso de transformación de una gramática analógica en un documento estructurado sigue un flujo de cinco etapas:
 
 \begin{enumerate}
-    \item \textbf{Capa de ingesta y preprocesamiento:} El sistema localiza los archivos PDF en el directorio \texttt{data/} y los transforma en imágenes de alta resolución compatibles con la entrada multimodal de la API.
+    \item \textbf{Capa de ingesta y preprocesamiento:} El sistema localiza los archivos PDF en el directorio \texttt{data/} y extrae el rango de páginas solicitado. En la ruta experimental principal, esta extracción se realiza mediante segmentación del PDF en un flujo binario (\textit{bytes}), sin rasterizar las páginas. De forma complementaria, el sistema contempla una ruta alternativa de prototipado basada en imágenes rasterizadas.
     
-    \item \textbf{Capa de inferencia (Motor de IA):} Se envían las imágenes junto con un \textit{prompt} especializado y ejemplos de entrenamiento (\textit{few-shot}) para obtener una respuesta en formato XML.
+    \item \textbf{Capa de inferencia (Motor de IA):} Se envía el fragmento documental obtenido, principalmente como PDF segmentado en bytes, junto con un \textit{prompt} especializado y ejemplos de entrenamiento (\textit{few-shot}) para obtener una respuesta en formato XML.
     
     \item \textbf{Capa de post-procesamiento y corrección:} La salida de la IA se somete a una limpieza automática para corregir errores sintácticos comunes en la generación estocástica (etiquetas mal formadas o duplicadas).
     
@@ -135,17 +135,17 @@ Con este archivo DTD, el documento XML resultante se articula como un árbol jer
     (\texttt{interlinear\_gloss}, \texttt{parallel\_phrase}, \texttt{morpheme\_analysis}, \texttt{syntactic\_analysis}, \texttt{unit}): el elemento central de la digitalización semántica es \texttt{interlinear\_gloss}. Como se especifica en la lógica relacional de la DTD, este nodo actúa como un orquestador que puede integrar, de manera opcional y secuencial, un bloque de traducción directa (\texttt{parallel\_phrase}), una capa de desagregación morfológica (\texttt{morpheme\_analysis}) y una capa de segmentación de sintagmas y funciones gramaticales (\texttt{syntactic\_analysis}). Las capas morfológica y sintáctica se componen obligatoriamente de una o más estructuras constitutivas denominadas \texttt{unit}. A nivel atómico, cada \texttt{unit} asocia unívocamente una forma morfológica o sintáctica concreta de la lengua maya (\texttt{form}) con su glosa explicativa parametrizada en castellano (\texttt{gloss}).
 \end{itemize}
 
-Mediante esta arquitectura relacional, el sistema no solo salvaguarda el texto plano de las gramáticas normativas, sino que genera un mapa posicional y gramatical explícito altamente estructurado, idóneo para el entrenamiento automatizado de futuros modelos cognitivos.
+Mediante esta arquitectura relacional, el sistema busca preservar el texto plano de las gramáticas normativas y generar un mapa posicional y gramatical explícito altamente estructurado. No obstante, el grado de fidelidad alcanzado depende de la complejidad de cada página y debe evaluarse empíricamente mediante las métricas presentadas en el capítulo de resultados.
 
 
 
 \section{Módulo de procesamiento de documentos (\texttt{pdf\_processor.py})}
 
-El primer eslabón del \textit{pipeline} es el módulo encargado de la ingesta y manipulación de los archivos fuente. Dado que las gramáticas de la ALMG presentan una naturaleza heterogénea, se ha implementado una estrategia de segmentación y extracción de flujo binario que permite aislar fragmentos del documento original sin alterar su estructura interna.
+El primer eslabón del \textit{pipeline} es el módulo encargado de la ingesta y manipulación de los archivos fuente. Dado que las gramáticas de la ALMG presentan una naturaleza heterogénea, se ha implementado una estrategia principal de segmentación y extracción de flujo binario que permite aislar fragmentos del documento original sin alterar su estructura interna. Esta es la ruta utilizada en la experimentación final; la conversión a imagen queda reservada como alternativa de prototipado para casos concretos en los que se requiera inspección visual aislada.
 
 \subsection{Lógica de extracción y segmentación de bytes}
 
-El script \texttt{pdf\_processor.py} actúa como un gestor de \textit{streams} de datos que opera directamente sobre la estructura del formato PDF. En lugar de realizar una rasterización de páginas, su función principal es segmentar el documento para extraer rangos específicos de páginas y servirlos en formato binario (\textit{bytes}) de forma eficiente.
+El script \texttt{pdf\_processor.py} actúa como un gestor de \textit{streams} de datos que opera directamente sobre la estructura del formato PDF. En la ruta principal del sistema, no realiza una rasterización de páginas; su función es segmentar el documento para extraer rangos específicos de páginas y servirlos en formato binario (\textit{bytes}) de forma eficiente.
 
 \begin{itemize}
     \item Herramientas técnicas: se utiliza la librería \texttt{PyPDF2}, que permite realizar operaciones de lectura y escritura a bajo nivel sobre archivos PDF.
@@ -155,7 +155,7 @@ El script \texttt{pdf\_processor.py} actúa como un gestor de \textit{streams} d
 
 \subsection{Gestión de la integridad y fidelidad del documento}
 
-Un factor crítico en este desarrollo es la preservación de la integridad del documento original durante el filtrado. Al trabajar con la manipulación de \textit{bytes} en lugar de conversiones a imagen, el sistema garantiza:
+Un factor crítico en este desarrollo es la preservación de la integridad del documento original durante el filtrado. Al trabajar en la ruta experimental principal con la manipulación de \textit{bytes} en lugar de conversiones a imagen, el sistema garantiza:
 
 \begin{itemize}
     \item Ausencia de degradación: al evitar procesos de binarización o compresión de imágenes, el texto y los elementos gráficos del PDF mantienen su definición nativa, facilitando que el modelo multimodal interprete caracteres pequeños y estructuras complejas con mayor precisión.
@@ -175,7 +175,7 @@ En resumen, \texttt{pdf\_processor.py} garantiza que el sistema gestione la inge
 
 \section{Motor de generación mediante IA (\texttt{ai\_generator.py})}
 
-Este módulo constituye el núcleo cognitivo del sistema. Su función es orquestar la comunicación con los Modelos de Lenguaje de Gran Tamaño (LLMs) de la familia Gemini, transformando las imágenes procesadas en datos estructurados mediante técnicas avanzadas de ingeniería de \textit{prompts}.
+Este módulo constituye el núcleo cognitivo del sistema. Su función es orquestar la comunicación con los Modelos de Lenguaje de Gran Tamaño (LLMs) de la familia Gemini, transformando los fragmentos documentales procesados en datos estructurados mediante técnicas avanzadas de ingeniería de \textit{prompts}.
 
 \subsection{Configuración y parametrización del modelo}
 
@@ -255,9 +255,9 @@ El resultado de este proceso es binario:
     \item Si se detecta cualquier incumplimiento estructural, el error es capturado y registrado automáticamente en el sistema de \textit{logs}.
 \end{itemize}
 
-Esta capacidad de detección ha permitido cuantificar experimentalmente la estabilidad de las diferentes configuraciones de temperatura analizadas en el Capítulo 5. De este modo, una ejecución puede clasificarse como fallida incluso cuando el contenido textual es correcto, siempre que la estructura jerárquica no respete las reglas definidas por la gramática formal.
+Esta capacidad de detección ha permitido cuantificar experimentalmente la estabilidad de las diferentes configuraciones de temperatura analizadas en el Capítulo~\ref{cap:resultados}. De este modo, una ejecución puede clasificarse como fallida incluso cuando el contenido textual es correcto, siempre que la estructura jerárquica no respete las reglas definidas por la gramática formal.
 
-La incorporación de esta capa de validación transforma una herramienta de generación textual en un sistema de extracción de datos con garantías académicas, asegurando que la información digitalizada sea estructuralmente consistente y apta para su integración en repositorios lingüísticos y bases de datos especializadas.
+La incorporación de esta capa de validación transforma una herramienta de generación textual en un sistema de extracción de datos con mayores garantías estructurales. Esta validación asegura que el XML respete la gramática formal definida, aunque no implica necesariamente una fidelidad textual completa respecto al documento original; dicha fidelidad se evalúa de forma separada mediante las métricas experimentales.
 
 \section{Motor de conversión y tipografía científica (\texttt{converter.py})}
 
@@ -307,7 +307,7 @@ Entre las tareas realizadas automáticamente destacan:
     \item Producción de un archivo final preparado para su compilación directa a PDF sin necesidad de intervención manual.
 \end{itemize}
 
-Esta capacidad de automatización completa el ciclo de digitalización propuesto en este trabajo: la información que originalmente se encuentra en fotografías o documentos PDF se transforma en un recurso digital estructurado, consultable, reutilizable y presentado con una calidad tipográfica equivalente a la de una edición académica profesional.
+Esta capacidad de automatización completa el ciclo de digitalización propuesto en este trabajo: la información que originalmente se encuentra en documentos PDF procedentes de fotografías o digitalizaciones de obras impresas se transforma en un recurso digital estructurado, consultable, reutilizable y presentado con una calidad tipográfica equivalente a la de una edición académica profesional.
 
 
 
@@ -320,11 +320,11 @@ Para llevar a cabo un estudio empírico sobre el comportamiento de los LLMs en l
 
 \subsection{Diseño del barrido de hiperparámetros}
 
-El módulo está diseñado para realizar un barrido (\textit{sweep}) sobre el parámetro de temperatura del modelo. Para ello, el orquestador ejecuta el \textit{pipeline} completo de forma iterativa, variando la temperatura en un conjunto predefinido de valores, como por ejemplo 0.0, 0.1, 0.25, 0.5, 1.0 y 1.5.
+El módulo está diseñado para realizar experimentos sistemáticos sobre distintas configuraciones del sistema. En este trabajo se han llevado a cabo dos experimentos principales: un barrido sobre el parámetro de temperatura del modelo y una comparativa entre diferentes modelos de la familia Gemini.
 
-Con el objetivo de reducir el impacto de la variabilidad inherente a los modelos generativos, el sistema permite configurar múltiples repeticiones para cada valor de temperatura. Habitualmente se emplean entre 10 y 15 ejecuciones por configuración experimental.
+En ambos experimentos, el eje de análisis vertical estuvo formado por las páginas del \textit{test set}. En el experimento de temperatura, el eje horizontal correspondió a los valores \(T \in \{0.0,\;0.1,\;0.25,\;0.5,\;0.75,\;1.0,\;1.5,\;2.0\}\). En el experimento de modelos, el eje horizontal correspondió a las distintas arquitecturas Gemini evaluadas. Para obtener el valor de cada celda de las tablas de resultados, el programa se ejecutó tres veces bajo la misma configuración y se calculó la media aritmética de las tres salidas.
 
-Esta estrategia permite calcular métricas agregadas y detectar comportamientos anómalos, especialmente en configuraciones de alta temperatura donde pueden aparecer fenómenos de inestabilidad estructural o pérdida de coherencia en la generación del XML.
+Esta estrategia permite reducir parcialmente el efecto de la variabilidad propia de los modelos generativos y obtener una estimación media para cada combinación de página y configuración. No obstante, al no conservarse los valores individuales de cada una de las tres ejecuciones, el análisis se limita a las medias obtenidas.
 
 \subsection{Flujo de orquestación modular}
 
@@ -333,7 +333,7 @@ El módulo \texttt{experiment\_runner.py} actúa como coordinador del sistema, i
 El flujo de ejecución sigue el siguiente orden:
 
 \begin{enumerate}
-    \item Obtención del documento de prueba mediante \texttt{pdf\_processor.py}.
+    \item Obtención del documento de prueba mediante \texttt{pdf\_processor.py}, generando el fragmento PDF segmentado en bytes correspondiente al rango de páginas evaluado.
 
     \item Ejecución de \texttt{ai\_generator.py} utilizando la temperatura correspondiente a la iteración experimental.
 
@@ -350,13 +350,13 @@ Esta organización modular permite reutilizar los mismos componentes tanto en ex
 
 Una de las características más relevantes de este módulo es su sistema de almacenamiento jerárquico de resultados. Cada ejecución se organiza automáticamente según criterios como el modelo empleado, el idioma procesado y la temperatura utilizada.
 
-El sistema incorpora además un mecanismo de versionado incremental. Cada resultado generado se almacena con un identificador de versión secuencial (\texttt{v1}, \texttt{v2}, \texttt{v3}, etc.), permitiendo estudiar la estabilidad del modelo a lo largo de múltiples ejecuciones.
+El sistema incorpora además un mecanismo de versionado incremental. Cada resultado generado se almacena con un identificador de versión secuencial (\texttt{v1}, \texttt{v2}, \texttt{v3}, etc.), lo que permite mantener la trazabilidad de las ejecuciones realizadas.
 
-Gracias a este enfoque resulta posible analizar el grado de determinismo del sistema. Si varias ejecuciones producen exactamente la misma salida, puede inferirse un comportamiento altamente estable. Por el contrario, si aparecen diferencias significativas entre versiones generadas bajo la misma configuración, estas variaciones pueden cuantificarse y analizarse estadísticamente.
+En este trabajo, las ejecuciones repetidas se han utilizado para obtener una media por celda experimental. Sin embargo, dado que no se han conservado los valores individuales de cada intento, no se realiza un análisis estadístico de la variabilidad entre repeticiones. Por tanto, las conclusiones deben interpretarse como un análisis empírico exploratorio basado en medias agregadas.
 
 Adicionalmente, el orquestador registra información relativa al tiempo de respuesta de la API y monitoriza posibles excepciones durante la ejecución. Entre ellas se incluyen errores de conectividad, interrupciones del servicio o agotamiento de cuotas de uso. La captura y almacenamiento de estos eventos permite reanudar experimentos interrumpidos sin comprometer la integridad de los datos obtenidos.
 
-Gracias a este nivel de automatización, el sistema trasciende el ámbito de una prueba conceptual y se convierte en una infraestructura experimental capaz de generar evidencia empírica sobre la fiabilidad de los Modelos de Lenguaje de Gran Tamaño en tareas de preservación y digitalización del patrimonio lingüístico. Los datos producidos por este módulo constituyen la base cuantitativa empleada posteriormente en el análisis de resultados presentado en el Capítulo 5.
+Gracias a este nivel de automatización, el sistema trasciende el ámbito de una prueba conceptual y se convierte en una infraestructura experimental capaz de generar evidencia empírica sobre la fiabilidad de los Modelos de Lenguaje de Gran Tamaño en tareas de preservación y digitalización del patrimonio lingüístico. Los datos producidos por este módulo constituyen la base cuantitativa empleada posteriormente en el análisis de resultados presentado en el Capítulo~\ref{cap:resultados}.
 
 
 

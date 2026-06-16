@@ -23,11 +23,11 @@ El ciclo de vida del software se ha dividido en cuatro fases principales, reflej
 \begin{itemize}
     \item \textbf{Fase de exploración y prototipado (Zero-Shot):} En las primeras etapas, se realizaron pruebas de extracción de texto plano para evaluar la capacidad de visión de Gemini. Se detectó la necesidad de transicionar hacia una salida estructurada debido a la pérdida de jerarquía semántica.
     
-    \item \textbf{Fase de ingeniería de prompts y estructuración (Few-Shot):} Se implementó la lógica de \textit{Few-Shot Learning} (visible en la carpeta \texttt{data/few-shot}), proporcionando al modelo ejemplos de XML validado para guiar la generación. Metodológicamente, se optó por la técnica avanzada de pre-carga de historial (\textit{History Pre-loading}) a nivel de SDK, inyectando los pares de imagen y XML directamente en el búfer de la sesión antes del envío del mensaje del usuario, lo que optimizó drásticamente la latencia y la eficiencia en la transferencia de red. Durante esta fase se documentó el fenómeno de \textit{overfitting} o pérdida de generalización cognitiva al incrustar capturas fijas directamente en el prompt; el modelo tendía a reproducir de forma literal metadatos espurios del ejemplo (como la cadena ``Adidas'' o las oraciones exactas de la muestra) en las nuevas páginas, lo que obligó a refinar la abstracción del prompt textual. En esta fase se definió el DTD inicial.
+    \item \textbf{Fase de ingeniería de prompts y estructuración (Few-Shot):} Se implementó la lógica de \textit{Few-Shot Learning} (visible en la carpeta \texttt{data/few-shot}), proporcionando al modelo ejemplos de XML validado para guiar la generación. Metodológicamente, se optó por la técnica avanzada de pre-carga de historial (\textit{History Pre-loading}) a nivel de SDK, inyectando pares de documento de entrada y XML directamente en el búfer de la sesión antes del envío del mensaje del usuario, lo que optimizó drásticamente la latencia y la eficiencia en la transferencia de red. Durante esta fase se documentó el fenómeno de \textit{overfitting} o pérdida de generalización cognitiva al incrustar ejemplos documentales fijos directamente en el prompt; el modelo tendía a reproducir de forma literal metadatos espurios del ejemplo (como la cadena ``Adidas'' o las oraciones exactas de la muestra) en las nuevas páginas, lo que obligó a refinar la abstracción del prompt textual. En esta fase se definió el DTD inicial.
     
     \item \textbf{Fase de refinamiento estructural y validación:} Desarrollo de los módulos de post-procesamiento (\texttt{xml\_corrector.py} y \texttt{xml\_validator.py}). Se iteró sobre el código para subsanar los errores estructurales típicos del modelo (etiquetas mal cerradas o duplicadas). En esta fase se diseñó la lógica de escape del bucle de validación (\textit{Validation Loop}): si tras el quinto intento de autoreparación iterativa el XML generado persiste en incumplir las especificaciones gramaticales del archivo DTD, el orquestador interrumpe las llamadas para evitar el bloqueo del \textit{pipeline}, guardando la última traza con errores heurísticos y continuando con el flujo secuencial de ejecución.
     
-    \item \textbf{Fase de experimentación y análisis:} Realización de pruebas sistemáticas variando la temperatura del modelo (de 0.0 a 1.5) para identificar el ``punto dulce'' de precisión, tal como se detalla en el análisis de resultados del Capítulo 5. Durante esta etapa (específicamente en los ensayos del 10 de febrero de 2026), se descubrió una limitación física insalvable en el procesamiento por bloques: el sistema se encuentra acotado a un máximo de 2 páginas simultáneas. Debido a que cada sílaba analizada lingüísticamente en las glosas exige un mínimo de 4 etiquetas XML anidadas (aproximadamente 6 líneas de marcado), un volumen superior satura la ventana máxima de tokens de salida de la API, provocando truncamientos estructurales fatales.
+    \item \textbf{Fase de experimentación y análisis:} Realización de pruebas sistemáticas variando la temperatura del modelo (de 0.0 a 1.5) para identificar el ``punto dulce'' de precisión, tal como se detalla en el análisis de resultados del Capítulo~\ref{cap:resultados}. Durante esta etapa (específicamente en los ensayos del 10 de febrero de 2026), se descubrió una limitación física insalvable en el procesamiento por bloques: el sistema se encuentra acotado a un máximo de 2 páginas simultáneas. Debido a que cada sílaba analizada lingüísticamente en las glosas exige un mínimo de 4 etiquetas XML anidadas (aproximadamente 6 líneas de marcado), un volumen superior satura la ventana máxima de tokens de salida de la API, provocando truncamientos estructurales fatales.
 \end{itemize}
 
 \subsection{Control de versiones y documentación}
@@ -37,7 +37,7 @@ La trazabilidad del proyecto se ha garantizado mediante el uso de un repositorio
 
 \section{Configuración del entorno de desarrollo}
 
-La estabilidad de un sistema de Inteligencia Artificial depende críticamente de la gestión de dependencias y la insolación del entorno de ejecución. Para este proyecto, se ha diseñado un ecosistema basado en estándares de la industria que garantiza la portabilidad del código.
+La estabilidad de un sistema de Inteligencia Artificial depende críticamente de la gestión de dependencias y el aislamiento del entorno de ejecución. Para este proyecto, se ha diseñado un ecosistema basado en estándares de la industria que garantiza la portabilidad del código.
 
 \subsection{Gestión de entornos virtuales (Anaconda)}
 
@@ -60,15 +60,15 @@ El sistema se apoya en un conjunto de librerías especializadas instaladas a tra
 \paragraph{Interacción con modelos de IA}
 
 \begin{itemize}
-    \item \textbf{\texttt{google-generativeai}:} Librería principal para la comunicación con la API de Gemini (modelos 1.5 Pro, Flash y 2.5 Flash-lite). Gestiona el envío de imágenes y la recepción de respuestas estructuradas.
+    \item \textbf{\texttt{google-generativeai}:} Librería principal para la comunicación con la API de Gemini. Gestiona el envío de documentos PDF segmentados o imágenes, según la ruta de entrada utilizada, y la recepción de respuestas estructuradas.
 \end{itemize}
 
-\paragraph{Procesamiento de documentos y visión}
+\paragraph{Procesamiento de documentos}
 
 \begin{itemize}
-    \item \textbf{\texttt{pdf2image}:} Utilizada para convertir las páginas del PDF en imágenes de alta resolución, paso necesario para que el modelo multimodal pueda ``ver'' la disposición tipográfica de las gramáticas.
-    
-    \item \textbf{\texttt{Pillow (PIL)}:} Empleada para el preprocesamiento de imágenes antes de su envío a la API.
+    \item \textbf{\texttt{PyPDF2}:} Librería utilizada en el flujo experimental principal para segmentar los documentos PDF por rangos de páginas y generar un flujo binario (\textit{bytes}) que conserva la estructura interna del archivo antes de enviarlo a la API de Gemini.
+
+    \item \textbf{\texttt{pdf2image} y \texttt{Pillow (PIL)}:} Librerías contempladas durante el prototipado para una ruta alternativa de entrada por imagen rasterizada. Esta vía permite convertir páginas concretas del PDF en imágenes de alta resolución y preprocesarlas antes de su envío al modelo, pero no constituye la ruta principal utilizada en los experimentos finales.
 \end{itemize}
 
 \paragraph{Gestión y validación de datos}

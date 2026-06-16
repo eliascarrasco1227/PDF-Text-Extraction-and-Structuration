@@ -4,14 +4,14 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Comparación OCR vs. Kaqchikel}}{2}{figure.1.1}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Curvas de precisión y cobertura en función del parámetro b del F1-Score}}{16}{figure.2.1}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Relación entre precisión, cobertura y el parámetro \(\beta \) en la métrica \(F_\beta \)}}{16}{figure.2.1}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplo de glosa interlineal}}{18}{figure.2.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Glosa interlineal en el documento de entrada (pdf)}}{45}{figure.6.1}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Glosa interlineal en el documento de salida a partir del Latex compilado (pdf)}}{47}{figure.6.2}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Glosa interlineal del documento de salida a partir del Latex compilado (pdf)}}{47}{figure.6.2}%
 \addvspace {10\p@ }
 \def \@chapapp {\appendixname }
 \addvspace {10\p@ }

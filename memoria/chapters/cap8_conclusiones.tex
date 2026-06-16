@@ -13,7 +13,7 @@ El trabajo desarrollado se ha materializado en un pipeline modular en Python que
     
     \item Inferencia Inteligente: El uso de modelos de lenguaje de gran tamaño (Gemini 1.5, 2.5…) mediante técnicas de Few-Shot Learning para la extracción semántica de gramáticas complejas.
     
-    \item Garantía de calidad estructural: La implementación de una capa de validación basada en un Documento de Definición de Tipo (DTD) y un corrector heurístico que subsana las limitaciones sintácticas de la IA.
+        \item Garantía de calidad estructural: La implementación de una capa de validación basada en un Documento de Definición de Tipo (DTD) y un corrector heurístico que reduce las limitaciones sintácticas de la IA. Esta capa garantiza la coherencia formal del XML, aunque no sustituye la evaluación de fidelidad textual frente al documento original.
     
     \item Exportación académica: La traslación automática de los datos a código LaTeX, permitiendo una reconstrucción tipográfica profesional de las obras originales.
 \end{itemize}
@@ -45,7 +45,7 @@ Conclusiones con reservas:
 Limitaciones del estudio:
 
 \begin{itemize}
-    \item La ausencia de réplicas por condición impide realizar pruebas de significancia estadística. Las diferencias inferiores a 2 puntos porcentuales deben considerarse indicativas.
+        \item Aunque cada celda experimental se calculó como la media de tres ejecuciones, no se conservaron los valores individuales de cada intento. Por este motivo, no es posible calcular desviaciones típicas entre repeticiones ni realizar pruebas de significancia estadística. Las diferencias inferiores a 2 puntos porcentuales deben considerarse indicativas.
     
     \item El corpus de nueve páginas, aunque diverso, es reducido. Las conclusiones tienen validez interna para el conjunto evaluado y requieren verificación en corpus ampliados antes de generalizarse.
     
@@ -91,7 +91,7 @@ Lo que no se puede afirmar:
 
     \item Tampoco es posible saber si las diferencias entre modelos se deben a la arquitectura, al entrenamiento con estas lenguas concretas, o a otros factores.
 
-    \item La comparación solo es válida a temperatura 1.0.
+        \item La comparación solo es válida a temperatura \(T=1.0\), seleccionada por ser una configuración general recomendada por Gemini para tareas de propósito amplio. Por tanto, la dominancia observada de \texttt{gemini-3.5-flash} debe entenderse dentro de esta configuración experimental concreta.
 \end{itemize}
 
 
@@ -129,7 +129,7 @@ Tras finalizar el desarrollo y la experimentación, se confirma que el proyecto 
 
 Conclusión del Objetivo General:
 
-El sistema desarrollado constituye una solución robusta para la digitalización y estructuración de lenguas minorizadas. Se ha logrado transformar fuentes documentales analógicas en activos digitales de alta precisión (90-100\%), cumpliendo con los estándares de calidad tipográfica y técnica requeridos para un TFM de Máster en Inteligencia Artificial.
+El sistema desarrollado constituye una solución robusta para la digitalización y estructuración de lenguas minorizadas. Se ha logrado transformar fuentes documentales analógicas en activos digitales de alta precisión (90-100\%) en 8 de las 9 páginas testeadas, cumpliendo con los estándares de calidad tipográfica y técnica requeridos para un TFM de Máster en Inteligencia Artificial.
 
 \section{Lecciones aprendidas y desafíos técnicos}
 

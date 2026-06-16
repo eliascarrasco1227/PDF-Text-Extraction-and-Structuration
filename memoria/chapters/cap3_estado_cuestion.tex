@@ -75,7 +75,6 @@ En la tabla \ref{tab:llm-apis}, se presenta una comparativa de las principales A
 
 
 \begin{table}[h]
-    \label{tab:llm-apis}
     \centering
     \tiny
     \begin{tabularx}{\textwidth}{l l X X X X X X}
@@ -97,6 +96,7 @@ En la tabla \ref{tab:llm-apis}, se presenta una comparativa de las principales A
     \bottomrule
     \end{tabularx}
     \caption{Comparativa de proveedores de modelos de IA (Junio 2026)}
+    \label{tab:llm-apis}
 \end{table}
 
 
@@ -129,23 +129,23 @@ La temperatura es un hiper parámetro que regula el grado de aleatoriedad o "cre
 
 
 \section{ Transfer Learning: Sinergias Lingüísticas y Extrapolación Global }
-El aprendizaje por transferencia (Transfer Learning) representa uno de los pilares más avanzados de la Inteligencia Artificial moderna. Se define como la capacidad de un modelo de computación neuronal para aplicar el conocimiento adquirido en una tarea previa (fuente) a una tarea nueva pero relacionada (objetivo). En el marco de este TFM, esta técnica adquiere una dimensión crítica: el procesamiento de lenguas minorizadas con recursos computacionales limitados.
+El aprendizaje por transferencia (Transfer Learning) representa uno de los pilares más avanzados de la Inteligencia Artificial moderna, especialmente en contextos donde los datos disponibles son escasos. Se define como la capacidad de un modelo de computación neuronal para aplicar el conocimiento adquirido en una tarea previa (fuente) a una tarea nueva pero relacionada (objetivo) \parencite{pires-etal-2019-multilingual}. En el marco de este TFM, esta técnica adquiere una dimensión crítica: el procesamiento de lenguas minorizadas con recursos computacionales limitados.
 
 \subsection{ Inferencia multilingüe y pesos compartidos }
-Los Modelos de Lenguaje de Gran Tamaño (LLMs) han sido entrenados sobre corpus masivos que incluyen cientos de idiomas. Durante este proceso, las redes neuronales identifican estructuras universales de la lengua (como la relación entre sujetos, verbos y complementos). A través del algoritmo de retropropagación o backpropagation, el modelo ajusta sus pesos internos para minimizar el error de predicción.
-\textcite{conneau-etal-2020-unsupervised}
+Los Modelos de Lenguaje de Gran Tamaño (LLMs) han sido entrenados sobre corpus masivos que incluyen cientos de idiomas. Durante este proceso, las redes neuronales identifican estructuras universales de la lengua (como la relación entre sujetos, verbos y complementos) tal y como se observa en estudios como \cite{Kann2020Acquisition}. A través del algoritmo de retropropagación o backpropagation, el modelo ajusta sus pesos internos para minimizar el error de predicción
+\textcite{conneau-etal-2020-unsupervised}.
 
 
-Cuando el sistema procesa una lengua de la familia maya, como el Kaqchikel, no parte de cero. Aprovecha la "memoria técnica" de estructuras gramaticales similares encontradas en otros idiomas. Este fenómeno permite que el aprendizaje de una lengua minoritaria "ayude" a otras; por ejemplo, la comprensión de la morfología aglutinante o el uso de glosas en el K’iche’ prepara los circuitos del modelo para ser mucho más eficiente al enfrentarse al Mam o, por extensión, a lenguas no relacionadas pero igualmente complejas (como el quechua o el ainu).
+Cuando los LLMs reciben como entrada una lengua de la que han recibido poca información en su entrenamiento, como las lenguas mayas, no parte de cero. Aprovecha la "memoria técnica" de estructuras gramaticales similares encontradas en otros idiomas. Este fenómeno permite que el aprendizaje de una lengua minoritaria "ayude" a otras; por ejemplo, la comprensión de la morfología aglutinante o el uso de glosas en el K’iche’ ajusta los pesos de las neuronas del modelo para ser mucho más eficiente al enfrentarse al Mam o, por extensión, a lenguas no relacionadas pero igualmente complejas (como el quechua o el ainu).
 
 \subsection{ El valor de los datos estructurados (XML/LaTeX) }
-La mayor barrera para la digitalización de lenguas minoritarias es la "escasez de datos" (Data Scarcity). Sin embargo, el sistema desarrollado en este trabajo soluciona este problema mediante la generación de contenido de alta fidelidad.
+La mayor barrera para la digitalización de lenguas minorizadas es la escasez de datos estructurados y validados. En este contexto, los archivos XML y \LaTeX{} generados por la aplicación pueden considerarse recursos de referencia útiles para posteriores tareas de análisis, consulta o entrenamiento de modelos especializados.
 Aceleración del Fine-Tuning: Los archivos XML y LaTeX que genera la aplicación constituyen lo que en IA llamamos "Gold Standard" o datos de referencia. Con una cantidad mínima de estas páginas estructuradas, es posible realizar un ajuste fino (fine-tuning) de modelos más pequeños y locales.
 Eficiencia en pocos ejemplos (Few-shot Learning): Como se observa en la arquitectura de carpetas de este proyecto (módulo data/few-shot), el modelo es capaz de aprender la jerarquía de una gramática completa tras ver solo dos o tres ejemplos bien etiquetados. Esta capacidad de generalización es extrapolable a cualquier lengua del mundo: si el pipeline es robusto para la complejidad de las lenguas mayas, su aplicación a otras familias lingüísticas requiere una inversión de tiempo y datos drásticamente inferior.
 
 \subsection{ Democratización del conocimiento lingüístico }
-La metodología propuesta en este TFM establece un precedente para la preservación del patrimonio digital global. Al transformar "fotos de libros" en "datos estructurados validados", estamos creando el combustible necesario para que los algoritmos de backpropagation de futuros modelos comprendan lenguas que, de otro modo, quedarían fuera del radar tecnológico.
-En conclusión, el Transfer Learning permite que el esfuerzo dedicado a digitalizar la Academia de Lenguas Mayas de Guatemala se convierta en un activo científico universal. La estructura lógica aprendida y los mecanismos de corrección implementados (xml\_corrector.py) funcionan como un esquema transferible que garantiza que, con muy poca información inicial, cualquier lengua minorizada pueda alcanzar el mismo nivel de accesibilidad digital que las lenguas mayoritarias.
+La metodología propuesta en este TFM puede servir como punto de partida para futuras investigaciones sobre preservación digital de lenguas de bajos recursos. Al transformar documentos estáticos en datos estructurados y validados, se generan materiales potencialmente reutilizables en tareas posteriores de lingüística computacional, búsqueda documental o entrenamiento de modelos locales.
+En conclusión, el Transfer Learning permite que el esfuerzo dedicado a digitalizar la Academia de Lenguas Mayas de Guatemala se convierta en un activo usable. La estructura lógica aprendida y los mecanismos de corrección implementados (xml\_corrector.py) funcionan como un esquema transferible que garantiza que, con muy poca información inicial, cualquier lengua minorizada pueda acercarse al nivel de accesibilidad digital que las lenguas mayoritarias en modelos de lenguaje.
 
 
 
@@ -209,7 +209,7 @@ Más allá de la mera transcripción tipográfica, cuando un modelo multimodal d
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{imagenes/external/recall_precision.png}
-    \caption{Curvas de precisión y cobertura en función del parámetro b del F1-Score}
+    \caption{Relación entre precisión, cobertura y el parámetro \(\beta\) en la métrica \(F_\beta\)}
     \label{fig:accuracy_precision}
 \end{figure}
 

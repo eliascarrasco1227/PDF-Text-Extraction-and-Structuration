@@ -383,6 +383,130 @@
       \field{title}{OCRBench v2: An Improved Benchmark for Evaluating Large Multimodal Models on Visual Text Localization and Reasoning}
       \field{year}{2025}
     \endentry
+    \entry{Kann2020Acquisition}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4ad8d51802941285dfefe5363d6e7fe1}{%
+           family={Kann},
+           familyi={K\bibinitperiod},
+           given={Katharina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Society for Computation in Linguistics}%
+      }
+      \strng{namehash}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{fullhash}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{fullhashraw}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{bibnamehash}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{authorbibnamehash}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{authornamehash}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{authorfullhash}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{authorfullhashraw}{4ad8d51802941285dfefe5363d6e7fe1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the Society for Computation in Linguistics}
+      \field{number}{1}
+      \field{title}{Acquisition of Inflectional Morphology in Artificial Neural Networks With Prior Knowledge}
+      \field{volume}{3}
+      \field{year}{2020}
+      \field{pages}{99\bibrangedash 109}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.7275/zwwg-0g10
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.7275/zwwg-0g10
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.7275/zwwg-0g10
+      \endverb
+    \endentry
+    \entry{pires-etal-2019-multilingual}{inbook}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=76abc25c11a150f8ef7d480698ecf64b}{%
+           family={Pires},
+           familyi={P\bibinitperiod},
+           given={Telmo},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=319c0ae1daee376ff3ec688e62591bf3}{%
+           family={Schlinger},
+           familyi={S\bibinitperiod},
+           given={Eva},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1245f407feda6a1ff1dfff776cc5403b}{%
+           family={Garrette},
+           familyi={G\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=088f1cd997c8227387a06e1cb2dc1538}{%
+           family={Korhonen},
+           familyi={K\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=852889328d57da2df5bccea3165205d0}{%
+           family={Traum},
+           familyi={T\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=98a908240c23e42cd08857cd67e53cff}{%
+           family={Màrquez},
+           familyi={M\bibinitperiod},
+           given={Lluís},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Florence, Italy}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{93a9650d36ed2afcaa1f3149bc05497d}
+      \strng{fullhash}{d27a4ed5ef34b8ef01f219b18cbfd130}
+      \strng{fullhashraw}{d27a4ed5ef34b8ef01f219b18cbfd130}
+      \strng{bibnamehash}{d27a4ed5ef34b8ef01f219b18cbfd130}
+      \strng{authorbibnamehash}{d27a4ed5ef34b8ef01f219b18cbfd130}
+      \strng{authornamehash}{93a9650d36ed2afcaa1f3149bc05497d}
+      \strng{authorfullhash}{d27a4ed5ef34b8ef01f219b18cbfd130}
+      \strng{authorfullhashraw}{d27a4ed5ef34b8ef01f219b18cbfd130}
+      \strng{editorbibnamehash}{5d0d019d65674f287aa73e6f7f5b6291}
+      \strng{editornamehash}{5c88cffc3efd571ed140bf0bd890dbe2}
+      \strng{editorfullhash}{5d0d019d65674f287aa73e6f7f5b6291}
+      \strng{editorfullhashraw}{5d0d019d65674f287aa73e6f7f5b6291}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we show that Multilingual BERT (M-BERT), released by Devlin et al. (2018) as a single language model pre-trained from monolingual corpora in 104 languages, is surprisingly good at zero-shot cross-lingual model transfer, in which task-specific annotations in one language are used to fine-tune the model for evaluation in another language. To understand why, we present a large number of probing experiments, showing that transfer is possible even to languages in different scripts, that transfer works best between typologically similar languages, that monolingual corpora can train models for code-switching, and that the model can find translation pairs. From these results, we can conclude that M-BERT does create multilingual representations, but that these representations exhibit systematic deficiencies affecting certain language pairs.}
+      \field{booktitle}{Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics}
+      \field{month}{7}
+      \field{title}{How Multilingual is Multilingual {BERT}?}
+      \field{year}{2019}
+      \field{pages}{4996\bibrangedash 5001}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.18653/v1/P19-1493
+      \endverb
+      \verb{urlraw}
+      \verb https://aclanthology.org/P19-1493/
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/P19-1493/
+      \endverb
+    \endentry
     \entry{11451708}{article}{}{}
       \name{author}{7}{}{%
         {{un=0,uniquepart=base,hash=d33373a81dbbb9f0e1efd59c5f9c4c78}{%
@@ -987,6 +1111,130 @@
       \field{booktitle}{NeurIPS Datasets and Benchmarks Track}
       \field{title}{OCRBench v2: An Improved Benchmark for Evaluating Large Multimodal Models on Visual Text Localization and Reasoning}
       \field{year}{2025}
+    \endentry
+    \entry{Kann2020Acquisition}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4ad8d51802941285dfefe5363d6e7fe1}{%
+           family={Kann},
+           familyi={K\bibinitperiod},
+           given={Katharina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Society for Computation in Linguistics}%
+      }
+      \strng{namehash}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{fullhash}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{fullhashraw}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{bibnamehash}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{authorbibnamehash}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{authornamehash}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{authorfullhash}{4ad8d51802941285dfefe5363d6e7fe1}
+      \strng{authorfullhashraw}{4ad8d51802941285dfefe5363d6e7fe1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the Society for Computation in Linguistics}
+      \field{number}{1}
+      \field{title}{Acquisition of Inflectional Morphology in Artificial Neural Networks With Prior Knowledge}
+      \field{volume}{3}
+      \field{year}{2020}
+      \field{pages}{99\bibrangedash 109}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.7275/zwwg-0g10
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.7275/zwwg-0g10
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.7275/zwwg-0g10
+      \endverb
+    \endentry
+    \entry{pires-etal-2019-multilingual}{inbook}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=76abc25c11a150f8ef7d480698ecf64b}{%
+           family={Pires},
+           familyi={P\bibinitperiod},
+           given={Telmo},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=319c0ae1daee376ff3ec688e62591bf3}{%
+           family={Schlinger},
+           familyi={S\bibinitperiod},
+           given={Eva},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1245f407feda6a1ff1dfff776cc5403b}{%
+           family={Garrette},
+           familyi={G\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=088f1cd997c8227387a06e1cb2dc1538}{%
+           family={Korhonen},
+           familyi={K\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=852889328d57da2df5bccea3165205d0}{%
+           family={Traum},
+           familyi={T\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=98a908240c23e42cd08857cd67e53cff}{%
+           family={Màrquez},
+           familyi={M\bibinitperiod},
+           given={Lluís},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Florence, Italy}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{93a9650d36ed2afcaa1f3149bc05497d}
+      \strng{fullhash}{d27a4ed5ef34b8ef01f219b18cbfd130}
+      \strng{fullhashraw}{d27a4ed5ef34b8ef01f219b18cbfd130}
+      \strng{bibnamehash}{d27a4ed5ef34b8ef01f219b18cbfd130}
+      \strng{authorbibnamehash}{d27a4ed5ef34b8ef01f219b18cbfd130}
+      \strng{authornamehash}{93a9650d36ed2afcaa1f3149bc05497d}
+      \strng{authorfullhash}{d27a4ed5ef34b8ef01f219b18cbfd130}
+      \strng{authorfullhashraw}{d27a4ed5ef34b8ef01f219b18cbfd130}
+      \strng{editorbibnamehash}{5d0d019d65674f287aa73e6f7f5b6291}
+      \strng{editornamehash}{5c88cffc3efd571ed140bf0bd890dbe2}
+      \strng{editorfullhash}{5d0d019d65674f287aa73e6f7f5b6291}
+      \strng{editorfullhashraw}{5d0d019d65674f287aa73e6f7f5b6291}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we show that Multilingual BERT (M-BERT), released by Devlin et al. (2018) as a single language model pre-trained from monolingual corpora in 104 languages, is surprisingly good at zero-shot cross-lingual model transfer, in which task-specific annotations in one language are used to fine-tune the model for evaluation in another language. To understand why, we present a large number of probing experiments, showing that transfer is possible even to languages in different scripts, that transfer works best between typologically similar languages, that monolingual corpora can train models for code-switching, and that the model can find translation pairs. From these results, we can conclude that M-BERT does create multilingual representations, but that these representations exhibit systematic deficiencies affecting certain language pairs.}
+      \field{booktitle}{Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics}
+      \field{month}{7}
+      \field{title}{How Multilingual is Multilingual {BERT}?}
+      \field{year}{2019}
+      \field{pages}{4996\bibrangedash 5001}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.18653/v1/P19-1493
+      \endverb
+      \verb{urlraw}
+      \verb https://aclanthology.org/P19-1493/
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/P19-1493/
+      \endverb
     \endentry
     \entry{11451708}{article}{}{}
       \name{author}{7}{}{%
