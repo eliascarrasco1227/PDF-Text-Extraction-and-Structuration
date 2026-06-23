@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.31)  16 JUN 2026 18:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.31)  23 JUN 2026 18:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1621,18 +1621,18 @@ Package pdftex.def Info: imagenes/gramaticas/ocr_vs_kachiquel.png  used on input
 
 
 ]
-LaTeX Info: Redefining \. on input line 51.
-LaTeX Info: Redefining \% on input line 51.
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
  [2 <./imagenes/gramaticas/ocr_vs_kachiquel.png>]
 LaTeX Info: Redefining \. on input line 76.
 LaTeX Info: Redefining \% on input line 76.
  [3]
-Overfull \hbox (8.4984pt too wide) in paragraph at lines 88--105
+Overfull \hbox (8.4984pt too wide) in paragraph at lines 89--106
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 109.
-LaTeX Info: Redefining \% on input line 109.
+LaTeX Info: Redefining \. on input line 111.
+LaTeX Info: Redefining \% on input line 111.
 [4]
 \excnt=1
 ) (./chapters/cap3_estado_cuestion.tex
@@ -1771,7 +1771,7 @@ LaTeX Info: Redefining \% on input line 173.
 LaTeX Info: Redefining \. on input line 192.
 LaTeX Info: Redefining \% on input line 192.
  [14]
-<imagenes/external/recall_precision.png, id=585, 1204.5pt x 803.0pt>
+<imagenes/external/recall_precision.png, id=597, 1204.5pt x 803.0pt>
 File: imagenes/external/recall_precision.png Graphic file (type png)
 <use imagenes/external/recall_precision.png>
 Package pdftex.def Info: imagenes/external/recall_precision.png  used on input line 211.
@@ -1789,7 +1789,7 @@ LaTeX Info: Redefining \% on input line 231.
 LaTeX Info: Redefining \. on input line 267.
 LaTeX Info: Redefining \% on input line 267.
  [17]
-<imagenes/gramaticas/ejemplo_glosa.png, id=614, 821.0675pt x 204.765pt>
+<imagenes/gramaticas/ejemplo_glosa.png, id=626, 821.0675pt x 204.765pt>
 File: imagenes/gramaticas/ejemplo_glosa.png Graphic file (type png)
 <use imagenes/gramaticas/ejemplo_glosa.png>
 Package pdftex.def Info: imagenes/gramaticas/ejemplo_glosa.png  used on input line 272.
@@ -1853,12 +1853,12 @@ chapter 5.
 
 
 ]
-<imagenes/scheme/diagrama_uml_pipeline_principal.png, id=687, 1293.3045pt x 715.1445pt>
+<imagenes/scheme/diagrama_uml_pipeline_principal.png, id=699, 1293.3045pt x 715.1445pt>
 File: imagenes/scheme/diagrama_uml_pipeline_principal.png Graphic file (type png)
 <use imagenes/scheme/diagrama_uml_pipeline_principal.png>
 Package pdftex.def Info: imagenes/scheme/diagrama_uml_pipeline_principal.png  used on input line 29.
 (pdftex.def)             Requested size: 418.25368pt x 231.27342pt.
-<imagenes/scheme/arquitectura_modular_repositorio.png, id=690, 1076.4945pt x 642.8745pt>
+<imagenes/scheme/arquitectura_modular_repositorio.png, id=702, 1076.4945pt x 642.8745pt>
 File: imagenes/scheme/arquitectura_modular_repositorio.png Graphic file (type png)
 <use imagenes/scheme/arquitectura_modular_repositorio.png>
 Package pdftex.def Info: imagenes/scheme/arquitectura_modular_repositorio.png  used on input line 54.
@@ -1869,12 +1869,12 @@ LaTeX Info: Redefining \% on input line 57.
 LaTeX Info: Redefining \. on input line 73.
 LaTeX Info: Redefining \% on input line 73.
  [33 <./imagenes/scheme/arquitectura_modular_repositorio.png>]
-<imagenes/scheme/pipeline_transformacion_documental.png, id=703, 1293.3045pt x 715.1445pt>
+<imagenes/scheme/pipeline_transformacion_documental.png, id=715, 1293.3045pt x 715.1445pt>
 File: imagenes/scheme/pipeline_transformacion_documental.png Graphic file (type png)
 <use imagenes/scheme/pipeline_transformacion_documental.png>
 Package pdftex.def Info: imagenes/scheme/pipeline_transformacion_documental.png  used on input line 82.
 (pdftex.def)             Requested size: 418.25368pt x 231.27342pt.
-<imagenes/scheme/diagrama_xml_semantico.png, id=705, 1076.4945pt x 679.0095pt>
+<imagenes/scheme/diagrama_xml_semantico.png, id=717, 1076.4945pt x 679.0095pt>
 File: imagenes/scheme/diagrama_xml_semantico.png Graphic file (type png)
 <use imagenes/scheme/diagrama_xml_semantico.png>
 Package pdftex.def Info: imagenes/scheme/diagrama_xml_semantico.png  used on input line 93.
@@ -1925,7 +1925,7 @@ LaTeX Info: Redefining \% on input line 341.
 LaTeX Info: Redefining \. on input line 370.
 LaTeX Info: Redefining \% on input line 370.
  [43]
-<imagenes/scheme/diagrama_uml_evaluacion_experimentos.png, id=779, 1076.4945pt x 606.7395pt>
+<imagenes/scheme/diagrama_uml_evaluacion_experimentos.png, id=791, 1076.4945pt x 606.7395pt>
 File: imagenes/scheme/diagrama_uml_evaluacion_experimentos.png Graphic file (type png)
 <use imagenes/scheme/diagrama_uml_evaluacion_experimentos.png>
 Package pdftex.def Info: imagenes/scheme/diagrama_uml_evaluacion_experimentos.png  used on input line 385.
@@ -1968,12 +1968,12 @@ LaTeX Info: Redefining \% on input line 132.
 LaTeX Info: Redefining \. on input line 168.
 LaTeX Info: Redefining \% on input line 168.
  [51]
-<imagenes/charts/grafica_temperatura_vs_similitud.png, id=892, 932.283pt x 534.4695pt>
+<imagenes/charts/grafica_temperatura_vs_similitud.png, id=904, 932.283pt x 534.4695pt>
 File: imagenes/charts/grafica_temperatura_vs_similitud.png Graphic file (type png)
 <use imagenes/charts/grafica_temperatura_vs_similitud.png>
 Package pdftex.def Info: imagenes/charts/grafica_temperatura_vs_similitud.png  used on input line 209.
 (pdftex.def)             Requested size: 397.3397pt x 227.79488pt.
-<imagenes/charts/grafica_temperatura_vs_similitud_por_pagina.png, id=894, 1004.553pt x 570.276pt>
+<imagenes/charts/grafica_temperatura_vs_similitud_por_pagina.png, id=906, 1004.553pt x 570.276pt>
 File: imagenes/charts/grafica_temperatura_vs_similitud_por_pagina.png Graphic file (type png)
 <use imagenes/charts/grafica_temperatura_vs_similitud_por_pagina.png>
 Package pdftex.def Info: imagenes/charts/grafica_temperatura_vs_similitud_por_pagina.png  used on input line 218.
@@ -2000,7 +2000,7 @@ LaTeX Info: Redefining \% on input line 319.
 LaTeX Info: Redefining \. on input line 328.
 LaTeX Info: Redefining \% on input line 328.
  [57]
-<imagenes/charts/grafica_modelo_vs_similitud.png, id=929, 1004.553pt x 533.8125pt>
+<imagenes/charts/grafica_modelo_vs_similitud.png, id=941, 1004.553pt x 533.8125pt>
 File: imagenes/charts/grafica_modelo_vs_similitud.png Graphic file (type png)
 <use imagenes/charts/grafica_modelo_vs_similitud.png>
 Package pdftex.def Info: imagenes/charts/grafica_modelo_vs_similitud.png  used on input line 381.
@@ -2011,7 +2011,7 @@ LaTeX Info: Redefining \% on input line 387.
 LaTeX Info: Redefining \. on input line 387.
 LaTeX Info: Redefining \% on input line 387.
  [59 <./imagenes/charts/grafica_modelo_vs_similitud.png>]
-<imagenes/charts/grafica_modelo_vs_similitud_por_pagina.png, id=940, 1077.1515pt x 606.411pt>
+<imagenes/charts/grafica_modelo_vs_similitud_por_pagina.png, id=952, 1077.1515pt x 606.411pt>
 File: imagenes/charts/grafica_modelo_vs_similitud_por_pagina.png Graphic file (type png)
 <use imagenes/charts/grafica_modelo_vs_similitud_por_pagina.png>
 Package pdftex.def Info: imagenes/charts/grafica_modelo_vs_similitud_por_pagina.png  used on input line 390.
@@ -2117,18 +2117,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47409 strings out of 467337
- 938355 string characters out of 5419514
- 2357359 words of memory out of 5000000
- 75293 multiletter control sequences out of 15000+600000
+ 47434 strings out of 467337
+ 939489 string characters out of 5419514
+ 2357673 words of memory out of 5000000
+ 75314 multiletter control sequences out of 15000+600000
  639109 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,17n,121p,11288b,2907s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (103 pages, 5554532 bytes).
+Output written on main.pdf (103 pages, 5557363 bytes).
 PDF statistics:
- 1807 PDF objects out of 2073 (max. 8388607)
- 1602 compressed objects within 17 object streams
- 595 named destinations out of 1000 (max. 500000)
+ 1826 PDF objects out of 2073 (max. 8388607)
+ 1621 compressed objects within 17 object streams
+ 599 named destinations out of 1000 (max. 500000)
  1036 words of extra memory for PDF output out of 10000 (max. 10000000)
 

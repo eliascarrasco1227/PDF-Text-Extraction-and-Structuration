@@ -533,6 +533,65 @@
       \verb https://arxiv.org/abs/2407.18990
       \endverb
     \endentry
+    \entry{app14125068}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6b21443484567402bf1b1e0df875d5c0}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Dawei},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5ab9fee4b52ad9c7848397c1513b72d3}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Chuan},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=16a77262afb7cc9b0229c21f168bd098}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Qing},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e1b562b9254107984d46949e937c63a}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Xiaojiang},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3ff485bad91f3dc71fb29a79c3b1ed0f}
+      \strng{fullhash}{8c1dac03ea8f77edb8bac90dee401969}
+      \strng{fullhashraw}{8c1dac03ea8f77edb8bac90dee401969}
+      \strng{bibnamehash}{8c1dac03ea8f77edb8bac90dee401969}
+      \strng{authorbibnamehash}{8c1dac03ea8f77edb8bac90dee401969}
+      \strng{authornamehash}{3ff485bad91f3dc71fb29a79c3b1ed0f}
+      \strng{authorfullhash}{8c1dac03ea8f77edb8bac90dee401969}
+      \strng{authorfullhashraw}{8c1dac03ea8f77edb8bac90dee401969}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With the deepening of research on Large Language Models (LLMs), significant progress has been made in recent years on the development of Large Multimodal Models (LMMs), which are gradually moving toward Artificial General Intelligence. This paper aims to summarize the recent progress from LLMs to LMMs in a comprehensive and unified way. First, we start with LLMs and outline various conceptual frameworks and key techniques. Then, we focus on the architectural components, training strategies, fine-tuning guidance, and prompt engineering of LMMs, and present a taxonomy of the latest vision–language LMMs. Finally, we provide a summary of both LLMs and LMMs from a unified perspective, make an analysis of the development status of large-scale models in the view of globalization, and offer potential research directions for large-scale models.}
+      \field{issn}{2076-3417}
+      \field{journaltitle}{Applied Sciences}
+      \field{number}{12}
+      \field{title}{From Large Language Models to Large Multimodal Models: A Literature Review}
+      \field{volume}{14}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.3390/app14125068
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2076-3417/14/12/5068
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2076-3417/14/12/5068
+      \endverb
+    \endentry
     \entry{Kann2020Acquisition}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4ad8d51802941285dfefe5363d6e7fe1}{%
@@ -575,6 +634,49 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.7275/zwwg-0g10
+      \endverb
+    \endentry
+    \entry{miller2025ocr}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d6d9ff510b15c8f94074c841b61c44fe}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Chreston},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e6a19ccf204702d99ec712e20fec2b66}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod},
+           given={Bipasha},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{fullhash}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{fullhashraw}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{bibnamehash}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{authorbibnamehash}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{authornamehash}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{authorfullhash}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{authorfullhashraw}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the International Conference on Machine Learning and Applications}
+      \field{title}{Optical Character Recognition for Pre-Digital Historical Documents using Large Language Models}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.1109/ICMLA66185.2025.00025
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/ICMLA66185.2025.00025
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/ICMLA66185.2025.00025
       \endverb
     \endentry
     \entry{peeperkorn2024temperaturecreativityparameterlarge}{misc}{}{}
@@ -950,6 +1052,275 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2409.00088
+      \endverb
+    \endentry
+    \entry{10832176}{article}{}{}
+      \name{author}{21}{}{%
+        {{un=0,uniquepart=base,hash=649892bc3e7c9c570cbb91cb84df3c86}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Chao-Han\bibnamedelima Huck},
+           giveni={C\bibinithyphendelim H\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=373ef13e908bab1ac8bf98709645568b}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Taejin},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=001add0b14cdbd927a79bb51b1e48332}{%
+           family={Gong},
+           familyi={G\bibinitperiod},
+           given={Yuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0e16becac3e3b3a08d3018d88785f41d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yuanchao},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c4d374c630e3002e6c077be470a838e}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Zhehuai},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce255c720cb3999b851f7fc9307c556e}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Yen-Ting},
+           giveni={Y\bibinithyphendelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=da31f56113cb61a1fef7cf7543eefff8}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Chen},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=529cdf6b469f2301c2ce92bf86674382}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Yuchen},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=12e02caceb6326a133cb0e54e52a6539}{%
+           family={Dhawan},
+           familyi={D\bibinitperiod},
+           given={Kunal},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53020ec5b0d50ad6dfab032a7218b6a2}{%
+           family={Żelasko},
+           familyi={Ż\bibinitperiod},
+           given={Piotr},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=03ae9f31823ca904e5b163319d310224}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0995e21442083712fc384a0a90860c4}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yun-Nung},
+           giveni={Y\bibinithyphendelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1f4dedf9b9690e5648804ba97f7dbbdd}{%
+           family={Tsao},
+           familyi={T\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b97872c91329998f3b918d28321a7f8}{%
+           family={Balam},
+           familyi={B\bibinitperiod},
+           given={Jagadeesh},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57b6ee8703cf89267a2d51429a4e61a7}{%
+           family={Ginsburg},
+           familyi={G\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb7d562efc3b00ab06612d1ff6df1534}{%
+           family={Siniscalchi},
+           familyi={S\bibinitperiod},
+           given={Sabato\bibnamedelima Marco},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53d4f35e2541041fac8947cc15d26853}{%
+           family={Chng},
+           familyi={C\bibinitperiod},
+           given={Eng\bibnamedelima Siong},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c5131d4f5264c3c5c9b3999661099d4}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a604590c804005bdb5cd0ecea49dd481}{%
+           family={Lai},
+           familyi={L\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae898cb785c2eecb4cda42d862e0d5d4}{%
+           family={Watanabe},
+           familyi={W\bibinitperiod},
+           given={Shinji},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8b60cd3ee633c8d1d585f08b92fefbf4}{%
+           family={Stolcke},
+           familyi={S\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ce23e1670cd10c755576b595a16b0b7a}
+      \strng{fullhash}{52751a92f7ccc388c143ddca64f7cffb}
+      \strng{fullhashraw}{52751a92f7ccc388c143ddca64f7cffb}
+      \strng{bibnamehash}{fda31ced18d837800e2031a251e34fa8}
+      \strng{authorbibnamehash}{fda31ced18d837800e2031a251e34fa8}
+      \strng{authornamehash}{ce23e1670cd10c755576b595a16b0b7a}
+      \strng{authorfullhash}{52751a92f7ccc388c143ddca64f7cffb}
+      \strng{authorfullhashraw}{52751a92f7ccc388c143ddca64f7cffb}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2024 IEEE Spoken Language Technology Workshop (SLT)}
+      \field{title}{Large Language Model Based Generative Error Correction: A Challenge and Baselines For Speech Recognition, Speaker Tagging, and Emotion Recognition}
+      \field{year}{2024}
+      \field{pages}{371\bibrangedash 378}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/SLT61566.2024.10832176
+      \endverb
+      \keyw{Measurement;Emotion recognition;Generative AI;Large language models;Tagging;Linguistics;Error correction;Speech processing;Probes;Context modeling;Language modeling;speech recognition postprocessing;speaker tagging;speech emotion recognition}
+    \endentry
+    \entry{ye2023ureader}{article}{}{}
+      \name{author}{14}{}{%
+        {{un=0,uniquepart=base,hash=4f5f3e6c1928d261b6b2fdb7f9e1ab26}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Jiabo},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3280ddc7058c6feaad8b0173ffcd072f}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Anwen},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8fe14b0a8215f3c9541485fb4059819}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Haiyang},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d42e9f5cdf5fdb66b855f1d2e9500e13}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Qinghao},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79fe9ee59a1861260d00afe58df7ead0}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Mingshi},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bda03ba432a13da7b8bb14f43deada97}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Guohai},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc90189e403c903655a1cbc1af93456b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Chenliang},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7da01e2bbb6a060b7eff5d8f1dc59144}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Junfeng},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2552ce900f90a65e9981774d8911835c}{%
+           family={Qian},
+           familyi={Q\bibinitperiod},
+           given={Qi},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f83176d7990e7bd6ad17dee08c194d1c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Ji},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=def32f2a7218d17c304f6d73170e1521}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Qin},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=adfefaa85b31c9e30a67c95f9858f3f3}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4009e963a9f7a218cfa1e91b974fefa0}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=705771ea1592a6b446489b7eb486e7c9}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Feiyan},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{86f5f328416e36b89f2087e88a77c599}
+      \strng{fullhash}{abf0c02f5b4125e74f18bc93b99cfa8e}
+      \strng{fullhashraw}{abf0c02f5b4125e74f18bc93b99cfa8e}
+      \strng{bibnamehash}{abf0c02f5b4125e74f18bc93b99cfa8e}
+      \strng{authorbibnamehash}{abf0c02f5b4125e74f18bc93b99cfa8e}
+      \strng{authornamehash}{86f5f328416e36b89f2087e88a77c599}
+      \strng{authorfullhash}{abf0c02f5b4125e74f18bc93b99cfa8e}
+      \strng{authorfullhashraw}{abf0c02f5b4125e74f18bc93b99cfa8e}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}
+      \field{title}{UReader: Universal OCR-free Visually-situated Language Understanding with Multimodal Large Language Model}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.48550/arXiv.2310.05126
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2310.05126
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2310.05126
       \endverb
     \endentry
   \enddatalist
@@ -1468,6 +1839,65 @@
       \verb https://arxiv.org/abs/2407.18990
       \endverb
     \endentry
+    \entry{app14125068}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6b21443484567402bf1b1e0df875d5c0}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Dawei},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5ab9fee4b52ad9c7848397c1513b72d3}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Chuan},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=16a77262afb7cc9b0229c21f168bd098}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Qing},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e1b562b9254107984d46949e937c63a}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Xiaojiang},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3ff485bad91f3dc71fb29a79c3b1ed0f}
+      \strng{fullhash}{8c1dac03ea8f77edb8bac90dee401969}
+      \strng{fullhashraw}{8c1dac03ea8f77edb8bac90dee401969}
+      \strng{bibnamehash}{8c1dac03ea8f77edb8bac90dee401969}
+      \strng{authorbibnamehash}{8c1dac03ea8f77edb8bac90dee401969}
+      \strng{authornamehash}{3ff485bad91f3dc71fb29a79c3b1ed0f}
+      \strng{authorfullhash}{8c1dac03ea8f77edb8bac90dee401969}
+      \strng{authorfullhashraw}{8c1dac03ea8f77edb8bac90dee401969}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With the deepening of research on Large Language Models (LLMs), significant progress has been made in recent years on the development of Large Multimodal Models (LMMs), which are gradually moving toward Artificial General Intelligence. This paper aims to summarize the recent progress from LLMs to LMMs in a comprehensive and unified way. First, we start with LLMs and outline various conceptual frameworks and key techniques. Then, we focus on the architectural components, training strategies, fine-tuning guidance, and prompt engineering of LMMs, and present a taxonomy of the latest vision–language LMMs. Finally, we provide a summary of both LLMs and LMMs from a unified perspective, make an analysis of the development status of large-scale models in the view of globalization, and offer potential research directions for large-scale models.}
+      \field{issn}{2076-3417}
+      \field{journaltitle}{Applied Sciences}
+      \field{number}{12}
+      \field{title}{From Large Language Models to Large Multimodal Models: A Literature Review}
+      \field{volume}{14}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.3390/app14125068
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2076-3417/14/12/5068
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2076-3417/14/12/5068
+      \endverb
+    \endentry
     \entry{Kann2020Acquisition}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4ad8d51802941285dfefe5363d6e7fe1}{%
@@ -1510,6 +1940,49 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.7275/zwwg-0g10
+      \endverb
+    \endentry
+    \entry{miller2025ocr}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d6d9ff510b15c8f94074c841b61c44fe}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Chreston},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e6a19ccf204702d99ec712e20fec2b66}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod},
+           given={Bipasha},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{fullhash}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{fullhashraw}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{bibnamehash}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{authorbibnamehash}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{authornamehash}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{authorfullhash}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \strng{authorfullhashraw}{cfb8fe677ac9a8e7d429489028baa8ec}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the International Conference on Machine Learning and Applications}
+      \field{title}{Optical Character Recognition for Pre-Digital Historical Documents using Large Language Models}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.1109/ICMLA66185.2025.00025
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/ICMLA66185.2025.00025
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/ICMLA66185.2025.00025
       \endverb
     \endentry
     \entry{peeperkorn2024temperaturecreativityparameterlarge}{misc}{}{}
@@ -1885,6 +2358,275 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2409.00088
+      \endverb
+    \endentry
+    \entry{10832176}{article}{}{}
+      \name{author}{21}{}{%
+        {{un=0,uniquepart=base,hash=649892bc3e7c9c570cbb91cb84df3c86}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Chao-Han\bibnamedelima Huck},
+           giveni={C\bibinithyphendelim H\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=373ef13e908bab1ac8bf98709645568b}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Taejin},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=001add0b14cdbd927a79bb51b1e48332}{%
+           family={Gong},
+           familyi={G\bibinitperiod},
+           given={Yuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0e16becac3e3b3a08d3018d88785f41d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yuanchao},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c4d374c630e3002e6c077be470a838e}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Zhehuai},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce255c720cb3999b851f7fc9307c556e}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Yen-Ting},
+           giveni={Y\bibinithyphendelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=da31f56113cb61a1fef7cf7543eefff8}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Chen},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=529cdf6b469f2301c2ce92bf86674382}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Yuchen},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=12e02caceb6326a133cb0e54e52a6539}{%
+           family={Dhawan},
+           familyi={D\bibinitperiod},
+           given={Kunal},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53020ec5b0d50ad6dfab032a7218b6a2}{%
+           family={Żelasko},
+           familyi={Ż\bibinitperiod},
+           given={Piotr},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=03ae9f31823ca904e5b163319d310224}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0995e21442083712fc384a0a90860c4}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yun-Nung},
+           giveni={Y\bibinithyphendelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1f4dedf9b9690e5648804ba97f7dbbdd}{%
+           family={Tsao},
+           familyi={T\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b97872c91329998f3b918d28321a7f8}{%
+           family={Balam},
+           familyi={B\bibinitperiod},
+           given={Jagadeesh},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57b6ee8703cf89267a2d51429a4e61a7}{%
+           family={Ginsburg},
+           familyi={G\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb7d562efc3b00ab06612d1ff6df1534}{%
+           family={Siniscalchi},
+           familyi={S\bibinitperiod},
+           given={Sabato\bibnamedelima Marco},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53d4f35e2541041fac8947cc15d26853}{%
+           family={Chng},
+           familyi={C\bibinitperiod},
+           given={Eng\bibnamedelima Siong},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c5131d4f5264c3c5c9b3999661099d4}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a604590c804005bdb5cd0ecea49dd481}{%
+           family={Lai},
+           familyi={L\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae898cb785c2eecb4cda42d862e0d5d4}{%
+           family={Watanabe},
+           familyi={W\bibinitperiod},
+           given={Shinji},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8b60cd3ee633c8d1d585f08b92fefbf4}{%
+           family={Stolcke},
+           familyi={S\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ce23e1670cd10c755576b595a16b0b7a}
+      \strng{fullhash}{52751a92f7ccc388c143ddca64f7cffb}
+      \strng{fullhashraw}{52751a92f7ccc388c143ddca64f7cffb}
+      \strng{bibnamehash}{fda31ced18d837800e2031a251e34fa8}
+      \strng{authorbibnamehash}{fda31ced18d837800e2031a251e34fa8}
+      \strng{authornamehash}{ce23e1670cd10c755576b595a16b0b7a}
+      \strng{authorfullhash}{52751a92f7ccc388c143ddca64f7cffb}
+      \strng{authorfullhashraw}{52751a92f7ccc388c143ddca64f7cffb}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2024 IEEE Spoken Language Technology Workshop (SLT)}
+      \field{title}{Large Language Model Based Generative Error Correction: A Challenge and Baselines For Speech Recognition, Speaker Tagging, and Emotion Recognition}
+      \field{year}{2024}
+      \field{pages}{371\bibrangedash 378}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/SLT61566.2024.10832176
+      \endverb
+      \keyw{Measurement;Emotion recognition;Generative AI;Large language models;Tagging;Linguistics;Error correction;Speech processing;Probes;Context modeling;Language modeling;speech recognition postprocessing;speaker tagging;speech emotion recognition}
+    \endentry
+    \entry{ye2023ureader}{article}{}{}
+      \name{author}{14}{}{%
+        {{un=0,uniquepart=base,hash=4f5f3e6c1928d261b6b2fdb7f9e1ab26}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Jiabo},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3280ddc7058c6feaad8b0173ffcd072f}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Anwen},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8fe14b0a8215f3c9541485fb4059819}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Haiyang},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d42e9f5cdf5fdb66b855f1d2e9500e13}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Qinghao},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79fe9ee59a1861260d00afe58df7ead0}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Mingshi},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bda03ba432a13da7b8bb14f43deada97}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Guohai},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc90189e403c903655a1cbc1af93456b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Chenliang},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7da01e2bbb6a060b7eff5d8f1dc59144}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Junfeng},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2552ce900f90a65e9981774d8911835c}{%
+           family={Qian},
+           familyi={Q\bibinitperiod},
+           given={Qi},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f83176d7990e7bd6ad17dee08c194d1c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Ji},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=def32f2a7218d17c304f6d73170e1521}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Qin},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=adfefaa85b31c9e30a67c95f9858f3f3}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4009e963a9f7a218cfa1e91b974fefa0}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=705771ea1592a6b446489b7eb486e7c9}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Feiyan},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{86f5f328416e36b89f2087e88a77c599}
+      \strng{fullhash}{abf0c02f5b4125e74f18bc93b99cfa8e}
+      \strng{fullhashraw}{abf0c02f5b4125e74f18bc93b99cfa8e}
+      \strng{bibnamehash}{abf0c02f5b4125e74f18bc93b99cfa8e}
+      \strng{authorbibnamehash}{abf0c02f5b4125e74f18bc93b99cfa8e}
+      \strng{authornamehash}{86f5f328416e36b89f2087e88a77c599}
+      \strng{authorfullhash}{abf0c02f5b4125e74f18bc93b99cfa8e}
+      \strng{authorfullhashraw}{abf0c02f5b4125e74f18bc93b99cfa8e}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}
+      \field{title}{UReader: Universal OCR-free Visually-situated Language Understanding with Multimodal Large Language Model}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.48550/arXiv.2310.05126
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2310.05126
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2310.05126
       \endverb
     \endentry
   \enddatalist

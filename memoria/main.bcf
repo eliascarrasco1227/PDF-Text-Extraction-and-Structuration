@@ -3071,24 +3071,29 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bibliografia/bibliografia.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">Singh2015ARO</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">Singh2015ARO</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">11451708</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">ding2026surveymllmbasedvisuallyrich</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">11451708</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">10832176</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Singh2015ARO</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">Singh2015ARO</bcf:citekey>
     <bcf:citekey order="5" intorder="1">11451708</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">fu2025ocrbenchv2</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">halfon2024staytunedempiricalstudy</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">peeperkorn2024temperaturecreativityparameterlarge</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">pires-etal-2019-multilingual</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">Kann2020Acquisition</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">conneau-etal-2020-unsupervised</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">conneau-etal-2020-unsupervised</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">cardoso_pereira_iversen_ramos_2014</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">A_Bhat_2026_WACV</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">wei2026deepseekocr2visualcausal</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">xu2024ondevicelanguagemodelscomprehensive</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">xu2024ondevicelanguagemodelscomprehensive</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">echavarria:hal-05267874</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">ding2026surveymllmbasedvisuallyrich</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">11451708</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">miller2025ocr</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">app14125068</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">ye2023ureader</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">fu2025ocrbenchv2</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">halfon2024staytunedempiricalstudy</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">peeperkorn2024temperaturecreativityparameterlarge</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">pires-etal-2019-multilingual</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Kann2020Acquisition</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">conneau-etal-2020-unsupervised</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">conneau-etal-2020-unsupervised</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">cardoso_pereira_iversen_ramos_2014</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">A_Bhat_2026_WACV</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">wei2026deepseekocr2visualcausal</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">xu2024ondevicelanguagemodelscomprehensive</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">xu2024ondevicelanguagemodelscomprehensive</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">echavarria:hal-05267874</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

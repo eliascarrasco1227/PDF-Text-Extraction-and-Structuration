@@ -7,20 +7,21 @@ La digitalización de obras lingüísticas complejas se enfrenta a un obstáculo
 \begin{enumerate}
     \item Naturaleza heterogénea de las fuentes (PDFs no procesados) 
     
-    A diferencia de los documentos digitales nativos, el corpus de trabajo presenta una gran disparidad en su calidad técnica. Se ha identificado que un volumen significativo de los archivos PDF no son documentos con texto seleccionable y fondo limpio, sino fotografías directas de las páginas del libro físico. Estas fuentes carecen de cualquier pre-procesamiento de imagen o capa de texto subyacente, lo que implica:
-    Ruido visual: Presencia de sombras, texturas del papel y falta de contraste entre la tipografía y el fondo.
-    Inexistencia de metadatos de texto: La imposibilidad de extraer caracteres mediante scripts sencillos de lectura de PDF, obligando al sistema a realizar una interpretación visual completa de la imagen.
+    A diferencia de los documentos digitales nativos, el corpus de trabajo presenta una gran disparidad en su calidad técnica. Se ha identificado que un volumen significativo de los archivos PDF no son documentos con texto seleccionable y fondo limpio, sino fotografías directas de las páginas del libro físico. Estas fuentes carecen de cualquier pre-procesamiento de imagen o capa de texto subyacente, lo que implica, por un lado
+    la existencia de ruido visual como presencia de sombras, texturas del papel y falta de contraste entre la tipografía y el fondo.
+    Por otro lado también implica la inexistencia de metadatos de texto, es decir, la imposibilidad de extraer caracteres mediante scripts sencillos de lectura de PDF, obligando al sistema a realizar una interpretación visual completa de la imagen.
     
     \item Insuficiencia del OCR convencional 
     
     \begin{figure}
         \centering
         \includegraphics[width=0.95\linewidth]{imagenes/gramaticas/ocr_vs_kachiquel.png}
-        \caption{Comparación OCR vs. Kaqchikel}
+        \caption{Comparación entrada típica de un OCR vs ejemplo grámatica Kaqchikel}
         \label{fig:ocr_vs_kachiquel}
     \end{figure}
 
-    Los sistemas de OCR tradicionales están diseñados para la extracción de texto lineal en documentos con una disposición de página sencilla como la parte izquierda de la figura \ref{fig:ocr_vs_kachiquel}. Sin embargo, la amalgama de una baja calidad de imagen junto con la arquitectura tipográfica y análisis sintácticos y morfológicos de las gramáticas como en la parte derecha de la figura \ref{fig:ocr_vs_kachiquel}, genera fallos sistemáticos en:
+    Los sistemas de OCR tradicionales están diseñados para la extracción de texto lineal en documentos con una disposición de página sencilla como la parte izquierda de la figura \ref{fig:ocr_vs_kachiquel}. Sin embargo, la amalgama de una baja calidad de imagen junto con la arquitectura tipográfica y análisis sintácticos y morfológicos de las gramáticas como en la parte derecha de la figura \ref{fig:ocr_vs_kachiquel}, genera fallos sistemáticos \parencite{11451708} en:
+    
     \begin{itemize}
         \item Sistemas de numeración jerárquica: 
         
@@ -30,22 +31,22 @@ La digitalización de obras lingüísticas complejas se enfrenta a un obstáculo
         La alternancia entre el castellano y la lengua maya, a menudo en bloques adyacentes, que el OCR estándar tiende a mezclar al no reconocer los límites visuales de las columnas o tablas.
         \item Estructuras morfológicas complejas: 
         
-        Paradigmas verbales que, al ser extraídos de una "foto" como texto plano, se convierten en caracteres inconexos.
+        Paradigmas verbales que, al ser extraídos de una foto como texto plano, se convierten en caracteres inconexos.
         \item Estructuras sintácticas de subrayado: 
         
         Interpretaciones de segmentos de las oraciones subrayadas mediante análisis sintáctico.
         \item Texto sobrante: 
         
-        a menudo al escanear un libro se recogen en la imagenes caracteres de las páginas adyacentes, manchas que dificultan la identificación de las letras, dibujos decorativos a inicio de página…
+        A menudo al escanear un libro se recogen en la imagenes caracteres de las páginas adyacentes, manchas que dificultan la identificación de las letras, dibujos decorativos a inicio de página…
     \end{itemize}
 
     \item La pérdida de información al emplear PDF digitales
     
-    El formato PDF actúa aquí como un mero contenedor de imágenes. Al carecer de etiquetas semánticas (ej. <titulo>, <ejemplo>, <regla\_gramatical>), la información queda aislada de cualquier posibilidad de procesamiento masivo, análisis computacional o migración automática a formatos modernos. Se puede apreciar la diferencia entre ambos archivos de información comparando la figura (imagen) pagina\_original\_Kaqchikel en el código \ref{code:kachiquel_xml}.
+    El formato PDF actúa aquí como un mero contenedor de imágenes. Al carecer de etiquetas semánticas (ejemplo \verb|<titulo>|, \verb|<ejemplo>|, \verb|<regla_gramatical>|), la información queda aislada de cualquier posibilidad de procesamiento masivo, análisis computacional o migración automática a formatos modernos. Se puede apreciar la diferencia entre ambos archivos de información comparando la figura \ref{fig:ocr_vs_kachiquel} pagina\_original\_Kaqchikel en el código \ref{code:kachiquel_xml}.
 
     \item El Desafío de la Inconsistencia Estructural en la IA 
     
-    Incluso mediante el uso de LLMs multimodales, capaces de "ver" y procesar estas fotos de libros, existe una tendencia a la generación de errores sintácticos en el marcado XML (etiquetas mal cerradas o jerarquías invertidas), especialmente en páginas de alta densidad informativa como la páginas con análisis sintácticos o morfológicos.
+    Incluso mediante el uso de LLMs multimodales, capaces de ver y procesar estas fotos de libros, existe una tendencia a la generación de errores sintácticos en el marcado XML (etiquetas mal cerradas o jerarquías invertidas) \parencite{10832176}, especialmente en páginas de alta densidad informativa como la páginas con análisis sintácticos o morfológicos.
     Parte de este problema se debe a la creatividad de los LLMs que puede generar alucinaciones incluso empleando la metodología esquema de respuesta (response schema).
 
 \end{enumerate}
@@ -63,15 +64,15 @@ El corpus bibliográfico utilizado en este proyecto, consistente en gramáticas 
 \begin{itemize}
     \item Prohibición de redistribución: No se permite la subida de los archivos PDF originales a repositorios públicos como GitHub. El acceso a las fuentes debe realizarse exclusivamente a través del portal institucional de la ALMG.
     \item Publicación de resultados parciales: El alcance de la publicación de resultados se limita a la estructura XML generada y a los fragmentos utilizados en el conjunto de pruebas (test set), preservando la integridad de la obra original.
-    \item Lógica de replicabilidad: Para solventar esta limitación, el proyecto se enfoca en la liberación del código fuente (scripts de procesamiento), permitiendo que otros investigadores con acceso legítimo a los documentos puedan ejecutar el pipeline de digitalización de forma independiente.
+    \item Lógica de replicabilidad: Para solventar esta limitación, el proyecto se enfoca en la liberación del código fuente (scripts de procesamiento), permitiendo que otros investigadores con acceso legítimo a los documentos puedan ejecutar el pipeline de digitalización de forma independiente. Para acceder al código fuente, se ha habilitado un repositorio público en GitHub, accesible a través del enlace \url{https://github.com/eliascarrasco1227/PDF-Text-Extraction-and-Structuration}.
 \end{itemize}
 
-Cabe destacar que el 70\% de los documentos mayas publicados en 2025 ya no están disponibles porque se han eliminado del catálogo de la web de la ALMG sin previo aviso. Esto provocó una gran dificultad en el trabajo ya que se tuvo que proseguir con los pocos documentos que se habían guardado en local antes de la actualización del catálogo.
+Tal y como se comentó en la sección demotivación y justificación, cabe destacar que el 70\% de los documentos mayas publicados en 2025 ya no están disponibles porque se han eliminado del catálogo de la web de la ALMG sin previo aviso. Esto provocó una gran dificultad en el trabajo ya que se tuvo que proseguir con los pocos documentos que se habían guardado en local antes de la actualización del catálogo.
 
 \subsubsection{Acotación de la carga de trabajo}
 De acuerdo con las directrices marcadas por la tutoría académica y con el fin de ajustar el proyecto a una carga de trabajo estrictamente acotada de 250 horas, se ha definido un alcance modular y selectivo:
 \begin{itemize}
-    \item Selección de test set: En lugar de proceder a la digitalización de los libros completos, lo cual excedería el tiempo asignado en el cronograma, se ha optado por un análisis empírico profundo sobre una muestra representativa. Se han seleccionado un rango de 2 a 3 páginas de alta complejidad por cada idioma (Kaqchikel, K’iche’, Mam y Q’anjob’al) para conformar el conjunto de validación final (Ground Truth).
+    \item Selección de test set: En lugar de proceder a la digitalización de los libros completos, lo cual excedería el tiempo asignado en el cronograma y al presupuesto en tokens, se ha optado por un análisis empírico profundo sobre una muestra representativa. Se han seleccionado un rango de 2 a 3 páginas de alta complejidad por cada idioma (Kaqchikel, K’iche’, Mam y Q’anjob’al) para conformar el conjunto de validación final (Ground Truth).
     \item Priorización técnica: Se ha priorizado el perfeccionamiento de los módulos de validación estructural (xml\_corrector.py) y la traducción automatizada a LaTeX sobre el procesamiento masivo de volumen, garantizando la robustez de la arquitectura antes de su escalabilidad futura.
 \end{itemize}
 
@@ -98,14 +99,16 @@ La dependencia de servicios de inteligencia artificial en la nube ha supuesto un
     gemma 3 27b & 15.000 & Deprecated \\
     gemma 4 27b & No se había lanzado & Solo texto (al quitarle PDF) \\
     gemini-3-flash-preview & No se había lanzado & 20 \\
-    gemini-3.1-flash-lite & No se había lanzado & 500 \\
+    gemini-3.1-flash-lite & No se había lanzado & 500* \\
     gemini-3.5-flash & No se había lanzado & 20 \\
     \hline
     \end{tabular}
     \end{table}
+
+    * La disponibilidad de 500 RPD para gemini-3.1-flash-lite salió el 7 de Mayo de 2026, por lo que durante la fase de desarrollo del proyecto se trabajó con un límite de 20 RPD, lo que supuso una limitación en la ejecución de pruebas y experimentos.
     
     \item Reducción en la disponibilidad y ciclo de vida de los modelos: Inicialmente, el entorno permitía el acceso concurrente a una variedad de entre 4 y 5 modelos de lenguaje distintos (incluyendo versiones experimentales y estables). No obstante, esta disponibilidad se vio mermada a solo 1 o 2 modelos activos por ventana de desarrollo debido a la depreciación masiva de arquitecturas estables. Específicamente, hitos de la plataforma como el del 29 de septiembre de 2025 supusieron la eliminación silenciosa de modelos de referencia como gemini-1.5-pro y gemini-1.5-flash, restringiendo la capacidad de realizar comparativas directas de rendimiento intramodelo de forma simultánea.
-    \item Impacto en la metodología y presupuesto de tokens: Estas limitaciones técnicas externas impusieron una estricta "economía de tokens" y de tiempo. Se ha calculado matemáticamente el coste por llamada del pipeline mediante la ecuación de consumo estructural de tokens \ref{eq:tokens_por_llamada}, considerando el prompt base y las capas de información visual y estructural que se envían a la API en cada iteración.
+    \item Impacto en la metodología y presupuesto de tokens: Estas limitaciones técnicas externas impusieron una estricta economía de tokenss   y de tiempo. Se ha calculado matemáticamente el coste por llamada del pipeline mediante la ecuación de consumo estructural de tokens \ref{eq:tokens_por_llamada}, considerando el prompt base y las capas de información visual y estructural que se envían a la API en cada iteración.
 
 
 \begin{align}
@@ -116,7 +119,7 @@ La dependencia de servicios de inteligencia artificial en la nube ha supuesto un
 \end{align}
 
     Considerando las restricciones de la API para cuentas de desarrollo sin facturación asociadas a un techo de 250.000 tokens por minuto (Tokens Per Minute - TPM) y un límite de 10 solicitudes por minuto (RPM), la ventana de transmisión quedó restringida físicamente a un máximo de 19 llamadas simultáneas por minuto, forzando la inclusión de retrasos controlados en el script orquestador de 10 segundos en los reintentos. Sin embargo, tal y como se ha comentado anteriormente, la limitación más restrictiva fue la de peticiones por día (RPD - Request Per Day), ya que es más probable alcanzar 20 llamadas en un día que 19 llamadas en un minuto.
-    \item Otra problemática de la API de gemini es que en momentos de alta demanda, esta no te devuelve resultados, te da error de servidor sobrecargado, lo que ha obligado a que en el proyecto se controle este flujo implementando un reintento a las 15 segundos.
+    \item Otra problemática de la API de gemini es que en momentos de alta demanda, esta no devuelve resultados, da error de servidor sobrecargado, lo que ha obligado a que en el proyecto se controle este flujo implementando un control de excepciones y reintento a las 15 segundos.
 \end{itemize}
 
 Ante la inviabilidad operativa de las cuotas comerciales y los intentos fallidos de implementar arquitecturas locales basadas en la familia Gemma —debido a que gemma-3 fue completamente retirado por el proveedor y gemma-4 arrojó errores de servidor 500 al procesar de forma nativa la capa visual de los PDFs—, se optó estratégicamente por reorientar el pipeline hacia un modelo alternativo con límites específicos: gemini-3.1-flash-lite. Este cambio permitió eludir el bloqueo de cuota diaria (al ofrecer un techo de 500 peticiones), asumiendo una penalización marginal del 10\% en la tasa de error de caracteres (CER) frente a los modelos de mayor escala, lo que obligó a robustecer los algoritmos heurísticos de post-procesamiento en el core del sistema.

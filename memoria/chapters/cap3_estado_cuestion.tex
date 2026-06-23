@@ -22,10 +22,10 @@ Esta metodología se fundamenta en los siguientes pilares:
     \parencite{11451708}.
 
     \item Generación de salida estructurada: Uno de los mayores avances aplicados a este proyecto es la capacidad de estos modelos para seguir instrucciones complejas de formato (prompting). Mientras que un OCR tradicional devuelve texto plano (.txt), los LLMs pueden ser instruidos para encapsular la información directamente en lenguajes de marcado como XML. Esto elimina la necesidad de capas intermedias de análisis de layout (Layout Analysis), permitiendo que el modelo genere la jerarquía de capítulos, secciones y subsecciones de forma nativa.
-    \item Resiliencia ante fuentes heterogéneas: Se ha observado que los LLMs presentan una robustez superior al procesar documentos que carecen de metadatos de texto, como es el caso de las capturas fotográficas de libros antiguos. Su entrenamiento masivo en conjuntos de datos diversos les permite normalizar variaciones en la iluminación, curvatura de página y texturas del papel que suelen ser insalvables para algoritmos de binarización clásicos.
+    \item Resiliencia ante fuentes heterogéneas: Se ha observado que los LLMs presentan una robustez superior al procesar documentos que carecen de metadatos de texto \parencite{miller2025ocr}, como es el caso de las capturas fotográficas de libros antiguos. Su entrenamiento masivo en conjuntos de datos diversos les permite normalizar variaciones en la iluminación, curvatura de página y texturas del papel que suelen ser insalvables para algoritmos de binarización clásicos.
 \end{itemize}
 
-No obstante, la aplicación de LLMs al OCR introduce desafíos específicos, principalmente su naturaleza estocástica. Al ser modelos probabilísticos, existe el riesgo de "alucinaciones" estructurales (etiquetas XML inexistentes o mal cerradas). Esta limitación justifica la implementación de módulos de validación externa y corrección estructural, tales como el script xml\_corrector.py desarrollado en este TFM, para garantizar que la potencia de comprensión del modelo se ajuste estrictamente a la gramática formal (DTD) requerida.
+No obstante, la aplicación de LLMs al OCR introduce desafíos específicos, principalmente su naturaleza estocástica. Al ser modelos probabilísticos, existe el riesgo de alucinaciones estructurales (etiquetas XML inexistentes o mal cerradas). Esta limitación justifica la implementación de módulos de validación externa y corrección estructural, para garantizar que la potencia de comprensión del modelo se ajuste estrictamente a la gramática formal (DTD) requerida.
 
 
 
@@ -40,9 +40,9 @@ Con la aparición de los Modelos de Lenguaje de Gran Tamaño (LLMs) capaces de g
 
 \subsection{Modelos multimodales y evaluación mediante OCRBench v2}
 
-La evolución reciente de la Inteligencia Artificial ha dado lugar a los denominados modelos multimodales o \textit{Large Multimodal Models} (LMMs). Estos sistemas son capaces de procesar simultáneamente diferentes modalidades de información, como texto, imágenes, audio o vídeo, integrando todas ellas dentro de un mismo espacio de representación semántica.
+La evolución reciente de la Inteligencia Artificial ha dado lugar a los denominados modelos multimodales o \textit{Large Multimodal Models} (LMMs). Estos sistemas son capaces de procesar simultáneamente diferentes modalidades de información, como texto, imágenes, audio o vídeo, integrando todas ellas dentro de un mismo espacio de representación semántica \parencite{app14125068}.
 
-En el contexto de la digitalización documental, los modelos multimodales han supuesto un cambio de paradigma respecto a los sistemas OCR tradicionales. Mientras que los motores OCR clásicos se limitan a reconocer caracteres de forma secuencial, los LMMs combinan reconocimiento visual, comprensión contextual y razonamiento lingüístico. Esto les permite interpretar estructuras complejas como tablas, diagramas, glosas interlineales o documentos con disposiciones tipográficas no convencionales.
+En el contexto de la digitalización documental, los modelos multimodales han supuesto un cambio de paradigma respecto a los sistemas OCR tradicionales. Mientras que los motores OCR clásicos se limitan a reconocer caracteres de forma secuencial, los LMMs combinan reconocimiento visual, comprensión contextual y razonamiento lingüístico. Esto les permite interpretar estructuras complejas como tablas, diagramas, glosas interlineales o documentos con disposiciones tipográficas no convencionales \parencite{ye2023ureader}.
 
 Desde un punto de vista arquitectónico, estos modelos suelen estar compuestos por tres bloques principales:
 
@@ -105,15 +105,15 @@ En la tabla \ref{tab:llm-apis}, se presenta una comparativa de las principales A
 
 \subsection{ Análisis de la Volatilidad y Restricciones de Acceso}
 
-Uno de los hallazgos más relevantes durante el desarrollo de este TFM ha sido la inestabilidad de los servicios API como infraestructura para la digitalización lingüística. A diferencia de años anteriores, donde las cuotas para desarrolladores eran amplias, en 2026 se ha detectado una política de "ajuste agresivo" por parte de los grandes proveedores (específicamente Google Cloud/AI Studio).
+Uno de los hallazgos más relevantes durante el desarrollo de este TFM ha sido la inestabilidad de los servicios API como infraestructura para la digitalización lingüística. A diferencia de años anteriores, donde las cuotas para desarrolladores eran amplias, en 2026 se ha detectado una política de ajuste agresivo por parte de los grandes proveedores (específicamente Google Cloud/AI Studio).
 Se ha documentado, mediante la bitácora de desarrollo de este trabajo, que las condiciones de acceso para el modelo Gemini sufrieron una degradación crítica sin previo aviso:
 
 \begin{itemize}
     \item Colapso de cuota: El margen operativo se redujo de 1.500 peticiones diarias a solo 20, lo que representa una caída del 98.6\% en la capacidad de procesamiento experimental.
-    \item Restricción de modelos: La oferta de arquitecturas disponibles para pruebas concurrentes pasó de 8 modelos activos a únicamente 5, limitando la capacidad de realizar estudios comparativos de rendimiento intramodelo.
+    \item Restricción de modelos: La oferta de arquitecturas disponibles para pruebas concurrentes pasó de 7 modelos activos a únicamente 4, limitando la capacidad de realizar estudios comparativos de rendimiento intramodelo.
 \end{itemize}
 
-Esta situación subraya la importancia del objetivo específico 6 de este trabajo: la evaluación de la portabilidad hacia modelos locales. La dependencia de APIs comerciales, aunque ofrece una potencia de inferencia superior y capacidades multimodales nativas para procesar fotos de libros, introduce un riesgo de "apagón técnico" que puede comprometer cronogramas de investigación académica estricta.
+Esta situación subraya la importancia del objetivo específico 6 de este trabajo: la evaluación de la portabilidad hacia modelos locales. La dependencia de APIs comerciales, aunque ofrece una potencia de inferencia superior y capacidades multimodales nativas para procesar fotos de libros, introduce un riesgo de apagón técnico que puede comprometer cronogramas de investigación académica estricta.
 En conclusión, mientras que APIs como DeepSeek ofrecen el mejor ratio coste-beneficio en términos de tokens, Google sigue liderando en ventana de contexto, a pesar de la fragilidad de sus cuotas para el estamento de usuarios no corporativos.
 
 \subsection{Configuración de Modelos: Parámetro de Temperatura}
