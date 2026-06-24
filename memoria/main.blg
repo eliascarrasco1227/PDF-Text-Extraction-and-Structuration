@@ -1,23 +1,23 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
-[0] Config.pm:331> INFO - Logfile is 'main.blg'
-[123] biber-MSWIN64:342> INFO - === 
-[177] Biber.pm:421> INFO - Reading 'main.bcf'
-[290] Biber.pm:1002> INFO - Found 18 citekeys in bib section 0
-[314] Biber.pm:4487> INFO - Processing section 0
-[328] Biber.pm:4678> INFO - Looking for bibtex file 'bibliografia/bibliografia.bib' for section 0
-[427] bibtex.pm:1713> INFO - LaTeX decoding ...
-[509] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliografia/bibliografia.bib'
-[703] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[703] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[703] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[756] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[756] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[756] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[793] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[843] bbl.pm:779> INFO - Output to main.bbl
-[844] Biber.pm:132> WARN - Duplicate entry key: '11451708' in file 'bibliografia/bibliografia.bib', skipping ...
-[844] Biber.pm:132> WARN - Duplicate entry key: '11451708' in file 'bibliografia/bibliografia.bib', skipping ...
-[844] Biber.pm:132> WARN - Duplicate entry key: 'IBM2024' in file 'bibliografia/bibliografia.bib', skipping ...
-[844] Biber.pm:132> WARN - legacy month field 'Sep' in entry 'cardoso_pereira_iversen_ramos_2014' is not an integer - this will probably not sort properly.
-[845] Biber.pm:132> WARN - legacy month field 'March' in entry 'A_Bhat_2026_WACV' is not an integer - this will probably not sort properly.
-[845] Biber.pm:134> INFO - WARNINGS: 5
+[1] Config.pm:331> INFO - Logfile is 'main.blg'
+[453] biber-MSWIN64:342> INFO - === 
+[654] Biber.pm:421> INFO - Reading 'main.bcf'
+[1164] Biber.pm:1002> INFO - Found 22 citekeys in bib section 0
+[1255] Biber.pm:4487> INFO - Processing section 0
+[1300] Biber.pm:4678> INFO - Looking for bibtex file 'bibliografia/bibliografia.bib' for section 0
+[1834] bibtex.pm:1713> INFO - LaTeX decoding ...
+[2109] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliografia/bibliografia.bib'
+[3000] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3000] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3001] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[3235] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3235] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3235] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[3365] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[3484] bbl.pm:779> INFO - Output to main.bbl
+[3485] Biber.pm:132> WARN - Duplicate entry key: '11451708' in file 'bibliografia/bibliografia.bib', skipping ...
+[3485] Biber.pm:132> WARN - Duplicate entry key: '11451708' in file 'bibliografia/bibliografia.bib', skipping ...
+[3486] Biber.pm:132> WARN - Duplicate entry key: 'IBM2024' in file 'bibliografia/bibliografia.bib', skipping ...
+[3486] Biber.pm:132> WARN - legacy month field 'Sep' in entry 'cardoso_pereira_iversen_ramos_2014' is not an integer - this will probably not sort properly.
+[3486] Biber.pm:132> WARN - legacy month field 'March' in entry 'A_Bhat_2026_WACV' is not an integer - this will probably not sort properly.
+[3486] Biber.pm:134> INFO - WARNINGS: 5

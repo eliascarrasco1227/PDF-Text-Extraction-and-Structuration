@@ -120,10 +120,10 @@ En conclusión, mientras que APIs como DeepSeek ofrecen el mejor ratio coste-ben
 
 Para optimizar el rendimiento de un LLM en tareas de digitalización estructurada, no solo es determinante la elección de la API, sino también el ajuste de sus hiperparámetros de generación y la selección de la arquitectura adecuada para la carga de trabajo \parencite{halfon2024staytunedempiricalstudy}.
 
-La temperatura es un hiper parámetro que regula el grado de aleatoriedad o "creatividad" del modelo durante la fase de muestreo de tokens \parencite{peeperkorn2024temperaturecreativityparameterlarge}. Normalmente se define con un número en el rango del 0 al 1 (siendo 0 el mínimo y 1 el máximo grado de temperatura), aunque en gemini se regula de 0 a 2. Técnicamente, actúa sobre la función softmax de la capa de salida del modelo, modificando la distribución de probabilidad de las palabras candidatas:
+La temperatura es un hiper parámetro que regula el grado de aleatoriedad o creatividad del modelo durante la fase de muestreo de tokens \parencite{peeperkorn2024temperaturecreativityparameterlarge}. Normalmente se define con un número en el rango del 0 al 1 (siendo 0 el mínimo y 1 el máximo grado de temperatura), aunque en gemini se regula de 0 a 2. Técnicamente, actúa sobre la función softmax de la capa de salida del modelo, modificando la distribución de probabilidad de las palabras candidatas:
 
 \begin{itemize}
-    \item Temperaturas bajas (T aprox 0.0 a 0.3): El modelo se comporta de forma cuasi-determinista, seleccionando siempre los tokens con mayor probabilidad estadística. En el contexto de este TFM, este rango es esencial para garantizar que la estructura XML sea coherente y que la transcripción de las gramáticas mayas sea fiel al original, minimizando la "alucinación" de etiquetas.
+    \item Temperaturas bajas (T aprox 0.0 a 0.3): El modelo se comporta de forma cuasi-determinista, seleccionando siempre los tokens con mayor probabilidad estadística. En el contexto de este TFM, este rango es esencial para garantizar que la estructura XML sea coherente y que la transcripción de las gramáticas mayas sea fiel al original, minimizando la alucinación de etiquetas.
     \item Temperaturas altas (T \texttt{\textless} 0.7): El modelo aplana la curva de probabilidad, otorgando oportunidades a tokens menos frecuentes. Aunque esto favorece la creatividad en redacción literaria, en la digitalización de documentos técnicos suele derivar en el colapso estructural del XML (etiquetas mal cerradas o duplicadas) y en la invención de términos lingüísticos inexistentes.
 \end{itemize}
 
@@ -136,12 +136,14 @@ Los Modelos de Lenguaje de Gran Tamaño (LLMs) han sido entrenados sobre corpus 
 \textcite{conneau-etal-2020-unsupervised}.
 
 
-Cuando los LLMs reciben como entrada una lengua de la que han recibido poca información en su entrenamiento, como las lenguas mayas, no parte de cero. Aprovecha la "memoria técnica" de estructuras gramaticales similares encontradas en otros idiomas. Este fenómeno permite que el aprendizaje de una lengua minoritaria "ayude" a otras; por ejemplo, la comprensión de la morfología aglutinante o el uso de glosas en el K’iche’ ajusta los pesos de las neuronas del modelo para ser mucho más eficiente al enfrentarse al Mam o, por extensión, a lenguas no relacionadas pero igualmente complejas (como el quechua o el ainu).
+Cuando los LLMs reciben como entrada una lengua de la que han recibido poca información en su entrenamiento, como las lenguas mayas, no parte de cero. Aprovecha la "memoria técnica" de estructuras gramaticales similares encontradas en otros idiomas. Este fenómeno permite que el aprendizaje de una lengua minoritaria ayude a otras; por ejemplo, la comprensión de la morfología aglutinante o el uso de glosas en el K’iche’ ajusta los pesos de las neuronas del modelo para ser mucho más eficiente al enfrentarse al Mam o, por extensión, a lenguas no relacionadas pero igualmente complejas (como el quechua o el ainu).
 
 \subsection{ El valor de los datos estructurados (XML/LaTeX) }
 La mayor barrera para la digitalización de lenguas minorizadas es la escasez de datos estructurados y validados. En este contexto, los archivos XML y \LaTeX{} generados por la aplicación pueden considerarse recursos de referencia útiles para posteriores tareas de análisis, consulta o entrenamiento de modelos especializados.
-Aceleración del Fine-Tuning: Los archivos XML y LaTeX que genera la aplicación constituyen lo que en IA llamamos Gold Standard o datos de referencia \parencite{cardoso_pereira_iversen_ramos_2014}. Con una cantidad mínima de estas páginas estructuradas, es posible realizar un ajuste fino (fine-tuning) de modelos más pequeños y locales.
-Eficiencia en pocos ejemplos (Few-shot Learning): Como se observa en la arquitectura de carpetas de este proyecto (módulo data/few-shot), el modelo es capaz de aprender la jerarquía de una gramática completa tras ver solo dos o tres ejemplos bien etiquetados. Esta capacidad de generalización es extrapolable a cualquier lengua del mundo: si el pipeline es robusto para la complejidad de las lenguas mayas, su aplicación a otras familias lingüísticas requiere una inversión de tiempo y datos drásticamente inferior.
+\begin{itemize}
+    \item Aceleración del Fine-Tuning: Los archivos XML y LaTeX que genera la aplicación constituyen lo que en IA llamamos Gold Standard o datos de referencia \parencite{cardoso_pereira_iversen_ramos_2014}. Con una cantidad mínima de estas páginas estructuradas, es posible realizar un ajuste fino (fine-tuning) de modelos más pequeños y locales.
+    \item Eficiencia en pocos ejemplos (Few-shot Learning): Como se observa en la arquitectura de carpetas de este proyecto (módulo data/few-shot), el modelo es capaz de aprender la jerarquía de una gramática completa tras ver solo dos o tres ejemplos bien etiquetados. Esta capacidad de generalización es extrapolable a cualquier lengua del mundo: si el pipeline es robusto para la complejidad de las lenguas mayas, su aplicación a otras familias lingüísticas requiere una inversión de tiempo y datos drásticamente inferior.
+\end{itemize}
 
 \subsection{ Democratización del conocimiento lingüístico }
 La metodología propuesta en este TFM puede servir como punto de partida para futuras investigaciones sobre preservación digital de lenguas de bajos recursos. Al transformar documentos estáticos en datos estructurados y validados, se generan materiales potencialmente reutilizables en tareas posteriores de lingüística computacional, búsqueda documental o entrenamiento de modelos locales.
@@ -169,7 +171,7 @@ La familia de modelos DeepSeek-OCR representa la vanguardia en los Modelos de Vi
 
 
 \subsection{ IBM granite-docling: miniaturización y precisión }
-Uno de los hallazgos más relevantes para este trabajo es el modelo Granite-Docling-258M de IBM. Su reducido tamaño (258 millones de parámetros) permite su ejecución en entornos de hardware restringido, como instancias gratuitas de Colab o servidores con GPUs de gama media. Este modelo se complementa con la librería Docling, diseñada específicamente para la exportación de PDFs complejos a formatos estructurados (Markdown o XML). La implementación de Granite-Docling permitiría a la aplicación de este TFM procesar volúmenes masivos de páginas sin incurrir en costes de API ni depender de límites de peticiones por minuto.
+Uno de los hallazgos más relevantes para este trabajo es el modelo Granite-Docling-258M de IBM. Su reducido tamaño (258 millones de parámetros) permite su ejecución en entornos de hardware restringido, como instancias gratuitas de Colab o servidores con GPUs de gama media. Este modelo se complementa con la librería Docling, diseñada específicamente para la exportación de PDFs complejos a formatos estructurados (Markdown o XML).
 
 \subsection{ Ventajas de la implementación local }
 La transición o convivencia con estos modelos locales aportaría al sistema tres beneficios estratégicos según
@@ -178,38 +180,45 @@ La transición o convivencia con estos modelos locales aportaría al sistema tre
 \begin{itemize}
     \item Privacidad y ética: Garantiza que los documentos de la Academia de Lenguas Mayas de Guatemala no sean procesados por servidores externos de terceros, manteniendo la soberanía de los datos.
     \item Determinismo y control: Permite un control total sobre hiperparámetros como la temperatura y el top-p, sin las variaciones impredecibles que suelen introducir las actualizaciones silenciosas (silent updates) de las APIs comerciales.
-    \item Escalabilidad sin coste: Elimina la "economía de tokens", permitiendo la digitalización de libros completos de la ALMG una vez validado el pipeline en el test set.
+    \item Escalabilidad sin coste: Elimina la economía de tokens, permitiendo la digitalización de libros completos de la ALMG una vez validado el pipeline en el test set.
 \end{itemize}
 
 
 \section{  Metodología de evaluación y métricas de rendimiento en IA }
 
-La validación de sistemas basados en Inteligencia Artificial y Visión Artificial aplicados a la digitalización documental requiere un marco metodológico estructurado que permita cuantificar la precisión de los resultados de forma matemática y objetiva. En la literatura científica, la evaluación de modelos de extracción y estructuración de datos se divide generalmente en dos dimensiones ortogonales: la fidelidad de la transcripción textual y la exactitud de la clasificación y asignación jerárquica estructural.
+
+Para evaluar el sistema es necesario medir de forma objetiva la calidad de los resultados. Para encontrar la mejor manera de evaluación, en este trabajo se tienen en cuenta dos aspectos principales: por un lado, la fidelidad con la que se transcribe el contenido del documento original y, por otro, la capacidad del modelo para clasificar correctamente la información y mantener la estructura jerárquica esperada.
+
 
 \subsection{  Métricas de error de texto (CER y WER) }
 Para medir la calidad de la transcripción en tareas de Reconocimiento Óptico de Caracteres (OCR) y Procesamiento de Lenguaje Natural (PLN), el estándar de la industria se fundamenta en la cuantificación de la distancia de edición \parencite{echavarria:hal-05267874}. Esta métrica computa el número mínimo de operaciones elementales necesarias para transformar una cadena de texto generada por el modelo en una cadena de texto de referencia o Ground Truth.
-CER (Character Error Rate): Evalúa el error a nivel de carácter y se define matemáticamente como la suma de sustituciones (S), inserciones (I) y eliminaciones (D) necesarias para igualar las cadenas, normalizada mediante la división por el número total de caracteres de la cadena de referencia (N), tal como se expresa en la ecuación:
+\begin{itemize}
+    \item CER (Character Error Rate): Evalúa el error a nivel de carácter y se define matemáticamente como la suma de sustituciones (S), inserciones (I) y eliminaciones (D) necesarias para igualar las cadenas, normalizada mediante la división por el número total de caracteres de la cadena de referencia (N), tal como se expresa en la ecuación:
 
 
-CER = (S + I + D) / N 
+\[
+CER = \frac{S + I + D}{N}
+\]
 
 
 No obstante, para el análisis de textos con alta densidad de caracteres especiales, resulta metodológicamente más preciso definir esta tasa a partir de la distancia InDel (Insertion-Deletion). Esta métrica constituye una variación de la distancia de Levenshtein clásica que restringe las operaciones permitidas exclusivamente a inserciones y eliminaciones. Funcionalmente, este comportamiento se implementa asignando un peso de 2 a cualquier operación de sustitución, asimilándola a un proceso secuencial de eliminación seguido de una inserción. El CER derivado es la métrica fundamental para determinar la robustez del modelo ante ruidos visuales, variaciones tipográficas o distorsiones en el soporte físico del documento.
 
-WER (Word Error Rate): Mide la tasa de error a nivel de palabra. Siguiendo el mismo principio de distancia de edición, el WER cuantifica el volumen de palabras sustituidas, insertadas o eliminadas, normalizado estrictamente por la longitud total —medida en número de palabras— del texto de referencia. Mientras que el CER detecta fallos de lectura y distorsiones grafémicas individuales, el WER actúa como un indicador macro de la capacidad del sistema para preservar la coherencia léxica y semántica del texto original.
-
+    \item WER (Word Error Rate): Mide la tasa de error a nivel de palabra. Siguiendo el mismo principio de distancia de edición, el WER cuantifica el volumen de palabras sustituidas, insertadas o eliminadas, normalizado estrictamente por la longitud total —medida en número de palabras— del texto de referencia. Mientras que el CER detecta fallos de lectura y distorsiones grafémicas individuales, el WER actúa como un indicador macro de la capacidad del sistema para preservar la coherencia léxica y semántica del texto original.
+\end{itemize}
 
 \subsection{ Métricas de clasificación y precisión general }
 
-Más allá de la mera transcripción tipográfica, cuando un modelo multimodal debe clasificar y etiquetar información (como identificar títulos, glosas interlineales o estructuras jerárquicas), se emplean métricas analíticas derivadas de la matriz de confusión estadística:
+
+Aunque en la tarea de la extracción de texto que buscamos no se puedan aplicar métricas de clasificación binaria (ya que clasificar una transcripción simplemete como buena o mala no es viable), es necesario entender las bases de estás clasificaciones:
+
 \begin{itemize}
-    \item Exactitud (Accuracy): Se define como la proporción de predicciones correctas (tanto verdaderos positivos como verdaderos negativos) frente al total de casos evaluados. En el contexto de documentos estructurados, esta métrica permite cuantificar globalmente la correcta asignación de etiquetas semánticas a lo largo del corpus analizado.
-    \item Precisión (Precision) y Cobertura (Recall): La precisión mide la capacidad del sistema para evitar la inclusión de falsos positivos, determinando la fiabilidad de las etiquetas asignadas. Por su parte, la cobertura (frecuentemente denominada exhaustividad en la literatura clásica) cuantifica la capacidad del modelo para localizar y recuperar la totalidad de los elementos positivos reales presentes en el documento. Para entender mejor la diferencia entre accuracy, precision y recall, ver la figuta \ref{fig:accuracy_precision}. En la digitalización de textos complejos, estas métricas permiten diagnosticar si el modelo está omitiendo secciones analíticas indispensables o si, por el contrario, está generando contenido espurio o alucinaciones estructurales.
+    \item Exactitud (Accuracy): Se define como la proporción de predicciones correctas (tanto verdaderos positivos como verdaderos negativos) frente al total de casos evaluados.
+    \item Precisión (Precision) y Cobertura (Recall): La precisión mide la capacidad del sistema para evitar la inclusión de falsos positivos, determinando la fiabilidad de las etiquetas asignadas. Por su parte, la cobertura (frecuentemente denominada exhaustividad) cuantifica la capacidad del modelo para localizar y recuperar la totalidad de los elementos positivos reales presentes en el documento. Para entender mejor la diferencia entre accuracy, precision y recall, ver la figuta \ref{fig:accuracy_precision}.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{imagenes/external/recall_precision.png}
-    \caption{Relación entre precisión, cobertura y el parámetro \(\beta\) en la métrica \(F_\beta\)}
+    \caption{Relación entre exactitud, precisión y cobertura}
     \label{fig:accuracy_precision}
 \end{figure}
 
@@ -252,7 +261,7 @@ La sintaxis de estas lenguas suele seguir órdenes de palabras menos comunes en 
     \item Análisis: Kuxlan (come) es el verbo, kaxlan wa (pan) es el objeto, y ri achi (el hombre) es el sujeto.
 \end{enumerate}
 
-Las gramáticas de la ALMG explican estas variaciones mediante ejemplos complejos. El sistema de digitalización estructurada debe ser capaz de identificar cuándo una oración es un ejemplo de "sintaxis normativa" y cuándo es una "excepción dialectal", encapsulando cada caso en su etiqueta XML correspondiente para permitir búsquedas especializadas por parte de lingüistas.
+Las gramáticas de la ALMG explican estas variaciones mediante ejemplos complejos. El sistema de digitalización estructurada debe ser capaz de identificar cuándo una oración es un ejemplo de sintaxis normativa y cuándo es una excepción dialectal, encapsulando cada caso en su etiqueta XML correspondiente para permitir búsquedas especializadas por parte de lingüistas.
 
 \subsection{ El desafío de las glosas interlineales }
 El componente más crítico y difícil de procesar en estas obras son las glosas interlineales. Este es un estándar académico de representación que suele constar de tres o cuatro niveles de información alineados verticalmente:
@@ -276,15 +285,15 @@ Para ver un ejemplo de esta estructura, se recomienda consultar la figura \ref{f
 
 
 El OCR convencional falla estrepitosamente ante esta estructura, ya que tiende a leer de forma horizontal, mezclando el maya con las etiquetas técnicas y el castellano, generando un resultado carente de sentido.
-El uso de LLMs multimodales en este trabajo permite realizar una alineación semántica vertical. El modelo "entiende" que la palabra de la línea 1 se corresponde con la etiqueta de la línea 3, permitiendo que nuestra aplicación genere una estructura XML donde cada componente lingüístico está perfectamente vinculado. Esta es la base para que, en el futuro, estos datos puedan alimentar motores de traducción automática o diccionarios inteligentes.
+El uso de LLMs multimodales en este trabajo permite realizar una alineación semántica vertical. El modelo entiende que la palabra de la línea 1 se corresponde con la etiqueta de la línea 3, permitiendo que nuestra aplicación genere una estructura XML donde cada componente lingüístico está perfectamente vinculado. Esta es la base para que, en el futuro, estos datos puedan alimentar motores de traducción automática o diccionarios inteligentes.
 
 \section{Contexto sociolingüístico: lenguas minorizadas y preservación digital}
 
-La diversidad lingüística del mundo se encuentra en una situación de vulnerabilidad sin precedentes. Según datos de la UNESCO, se estima que cada dos semanas desaparece una lengua, llevando consigo un sistema único de conocimiento y cosmovisión. En este escenario, la tecnología actúa como un arma de doble filo: puede acelerar la asimilación hacia lenguas mayoritarias o, si se emplea correctamente, servir como un motor de revitalización y resiliencia cultural.
+La diversidad lingüística del mundo se encuentra en una situación de vulnerabilidad sin precedentes. Según datos de la UNESCO \parencite{unesco2025languages}, se estima que cada dos semanas desaparece una lengua, llevando consigo un sistema único de conocimiento y cosmovisión. En este escenario, la tecnología actúa como un arma de doble filo: puede acelerar la asimilación hacia lenguas mayoritarias o, si se emplea correctamente, servir como un motor de revitalización y resiliencia cultural.
 
 \subsection{El concepto de lengua minorizada}
 
-El término ``lengua minorizada'' hace referencia a aquellos idiomas que, por procesos históricos y políticos, han sido desplazados de los espacios públicos, administrativos y, fundamentalmente, digitales. En el caso de Guatemala, el país alberga una extraordinaria riqueza lingüística con 22 idiomas mayas, además del xinka y el garífuna. A pesar de contar con millones de hablantes, lenguas como el Kaqchikel, el K'iche' y el Mam sufren una brecha digital lingüística. La falta de herramientas básicas en el ecosistema digital (teclados predictivos, correctores, traductores o bases de datos consultables) condena a estas lenguas a una existencia analógica que dificulta su transmisión a las nuevas generaciones de ``nativos digitales''.
+El término ``lengua minorizada'' hace referencia a aquellos idiomas que, por procesos históricos y políticos, han sido desplazados de los espacios públicos, administrativos y, fundamentalmente, digitales. En el caso de Guatemala, el país alberga una extraordinaria riqueza lingüística con 22 idiomas mayas \parencite{ajb1997tension}, además del xinka y el garífuna. A pesar de contar con millones de hablantes, lenguas como el Kaqchikel, el K'iche' y el Mam sufren una brecha digital lingüística \parencite{gomez2021pueblos}. La falta de herramientas básicas en el ecosistema digital (teclados predictivos, correctores, traductores o bases de datos consultables) condena a estas lenguas a una existencia analógica que dificulta su transmisión a las nuevas generaciones de ``nativos digitales''.
 
 \subsection{El papel de la Academia de Lenguas Mayas de Guatemala (ALMG)}
 
@@ -354,7 +363,7 @@ Sus principales aportaciones al estado de la técnica incluyen:
 
 En la actualidad, existe un debate técnico entre el uso de JSON (JavaScript Object Notation) y XML. Mientras que JSON ha ganado terreno en el desarrollo de aplicaciones web y APIs ligeras debido a su baja verbosidad y facilidad de lectura en entornos de programación modernos, el XML sigue siendo superior en el ámbito de la documentación técnica y lingüística.
 
-La superioridad del XML en este contexto radica en su capacidad nativa para gestionar documentos extensos con jerarquías profundas y en la madurez de sus herramientas de validación estructural (como XPath y DTD). En tareas de digitalización masiva mediante Modelos de Lenguaje de Gran Tamaño (LLMs), el XML proporciona un marco de contención más rígido que ayuda a mitigar la naturaleza estocástica de la generación de la IA, asegurando que la estructura del documento original se preserve fielmente.
+La superioridad del XML en este contexto radica en su capacidad nativa para gestionar documentos extensos con jerarquías profundas y en la madurez de sus herramientas de validación estructural (como XPath y DTD). En tareas de digitalización masiva mediante Modelos de Lenguaje de Gran Tamaño (LLMs), el XML proporciona un marco de contención más rígido que ayuda a mitigar la naturaleza estocástica de la generación de la IA \parencite{jearian2026scenario}, asegurando que la estructura del documento original se preserve fielmente.
 
 \subsection{Paradigmas de almacenamiento lingüístico: XML estructurado frente a corpus paralelos convencionales}
 

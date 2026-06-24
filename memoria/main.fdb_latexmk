@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1782233349.41665 "main.bcf" "main.bbl" "main" 1782233512.62304 0
-  "bibliografia/bibliografia.bib" 1782233299 29432 8d47609146e03144afe1c566d53c85da ""
-  "main.bcf" 1782233512 135756 293841c412075a492cc4c2ca12928e3a "pdflatex"
+["biber main"] 1782333469.58542 "main.bcf" "main.bbl" "main" 1782333535.82276 0
+  "bibliografia/bibliografia.bib" 1782333360 30906 06f4fe9c29fd91bc548c7df3a2e68a92 ""
+  "main.bcf" 1782333535 136048 18e880f22f083efe65603661f1d36214 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1782233504.54373 "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" "main.pdf" "main" 1782233512.62522 0
+["pdflatex"] 1782333517.34668 "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" "main.pdf" "main" 1782333535.82686 0
   "back_matter.tex" 1780660854 45398 995487411d4960e80701f40e5f669b5b ""
   "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" 1781279329 3919 12d7a0702f46bd4844be47ca33f61106 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1780230687 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -245,7 +245,7 @@
   "c:/texlive/2026/texmf.cnf" 1780245197 713 e69b156964470283e0530f5060668171 ""
   "chapters/cap1_introduccion.tex" 1782232681 12654 c0808d706ff0a6cd06fb78399c7d2295 ""
   "chapters/cap2_objetivos.tex" 1781555961 3182 2a8eb8ad241d3e2dd62b93cca684c4fa ""
-  "chapters/cap3_estado_cuestion.tex" 1782233503 75949 e157603b0f2f1727670db4a78afa14fe ""
+  "chapters/cap3_estado_cuestion.tex" 1782333441 75356 101bdf3bf15e19bb889e324f69d54f7d ""
   "chapters/cap4_metodologia.tex" 1781618740 17334 ef28bd64d18da8b8c97adaecd4e83571 ""
   "chapters/cap5_diseño.tex" 1781622898 59296 8e79f3fd25eae343c7560e6028b9eef4 ""
   "chapters/cap7_resultados.tex" 1781621209 49396 470bd8a43b619472d4f80b3de6b6f6c3 ""
@@ -268,14 +268,14 @@
   "imagenes/scheme/diagrama_uml_pipeline_principal.png" 1781619242 254955 151048a1b82ad4b1110d47d51e07d593 ""
   "imagenes/scheme/diagrama_xml_semantico.png" 1781619114 195995 db88c210426a0c1d360b931fccfbaaa2 ""
   "imagenes/scheme/pipeline_transformacion_documental.png" 1781619207 307068 2241324b0d8ea336a7606df5a822f9d4 ""
-  "main.aux" 1782233512 99604 0ec2df7052b7693257f4d15c811ac7a4 "pdflatex"
-  "main.bbl" 1782233352 113893 d9b4de9c1f4041b5068697e30c40686a "biber main"
-  "main.lof" 1782233512 2557 176b6b28b0e8d589b89ccc0387dde271 "pdflatex"
-  "main.lol" 1782233512 1087 f0a22ade77b4f249e5be6d751e467e29 "pdflatex"
-  "main.lot" 1782233512 1157 84acd14a11d85b6a87fa7c90d66f5a31 "pdflatex"
-  "main.run.xml" 1782233512 2374 84b3c453a69351e7c18dc5329eb72f5e "pdflatex"
+  "main.aux" 1782333535 100562 b416fd0f30318dc662f8cd3a3695b7cf "pdflatex"
+  "main.bbl" 1782333477 127541 e21e1dc314710adb665b1d0458cd5d07 "biber main"
+  "main.lof" 1782333535 2514 98d59de481179399bb84f34a1b6d1245 "pdflatex"
+  "main.lol" 1782333535 1087 f0a22ade77b4f249e5be6d751e467e29 "pdflatex"
+  "main.lot" 1782333535 1157 84acd14a11d85b6a87fa7c90d66f5a31 "pdflatex"
+  "main.run.xml" 1782333535 2374 84b3c453a69351e7c18dc5329eb72f5e "pdflatex"
   "main.tex" 1781279329 3919 12d7a0702f46bd4844be47ca33f61106 ""
-  "main.toc" 1782233512 13626 929c51a2d93babb844e758df62a97dc5 "pdflatex"
+  "main.toc" 1782333535 13626 929c51a2d93babb844e758df62a97dc5 "pdflatex"
   "portada/portada-tfm.pdf" 1780661860 126499 fe1d12ae8524c80a7ee80981549f4123 ""
   "portada/portada.tex" 1780249162 325 22611075635420b29f794da6a0afcdf6 ""
   "portada/portada_2.tex" 1780249162 1019 41fab9129ff26e09de13c508f948bc7d ""

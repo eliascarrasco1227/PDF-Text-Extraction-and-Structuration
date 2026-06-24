@@ -92,6 +92,34 @@
       \field{pages}{719\bibrangedash 728}
       \range{pages}{10}
     \endentry
+    \entry{ajb1997tension}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f32d45e110258f74d9355ec74b090fb8}{%
+           family={Ajb’ee},
+           familyi={A\bibinitperiod},
+           given={Odilio\bibnamedelima Jiménez},
+           giveni={O\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{fullhash}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{fullhashraw}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{bibnamehash}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{authorbibnamehash}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{authornamehash}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{authorfullhash}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{authorfullhashraw}{f32d45e110258f74d9355ec74b090fb8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Latin American Studies Association Conference, Guadalajara, Mexico}
+      \field{title}{Tensión entre Idiomas: Situación actual de los Idiomas Mayas y el Español en Guatemala}
+      \field{year}{1997}
+    \endentry
     \entry{cardoso_pereira_iversen_ramos_2014}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=da6190afe14e95b1dc00b2ac6f329975}{%
@@ -447,6 +475,36 @@
       \field{title}{OCRBench v2: An Improved Benchmark for Evaluating Large Multimodal Models on Visual Text Localization and Reasoning}
       \field{year}{2025}
     \endentry
+    \entry{gomez2021pueblos}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9376037ad8c37c68b8f3440d26a11745}{%
+           family={Gómez\bibnamedelima Michel},
+           familyi={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Gerardo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Universidad Nacional Autónoma de México. Centro de Investigaciones sobre~…}%
+      }
+      \strng{namehash}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{fullhash}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{fullhashraw}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{bibnamehash}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{authorbibnamehash}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{authornamehash}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{authorfullhash}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{authorfullhashraw}{9376037ad8c37c68b8f3440d26a11745}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Pueblos indígenas y desigualdad lingüística en América Latina}
+      \field{year}{2021}
+    \endentry
     \entry{halfon2024staytunedempiricalstudy}{misc}{}{}
       \name{author}{9}{}{%
         {{un=0,uniquepart=base,hash=408703223b0ba8b1af451aa6828bddbd}{%
@@ -590,6 +648,61 @@
       \endverb
       \verb{url}
       \verb https://www.mdpi.com/2076-3417/14/12/5068
+      \endverb
+    \endentry
+    \entry{jearian2026scenario}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f5d8cbf220ed24fa6c079dcce7e24dcb}{%
+           family={Jegarian},
+           familyi={J\bibinitperiod},
+           given={Majid},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd187c944232c8440e4f68146b795f97}{%
+           family={Esfahani},
+           familyi={E\bibinitperiod},
+           given={Amir\bibnamedelima K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d246c06faa3581ae0e5eb3756d4e308}{%
+           family={Bause},
+           familyi={B\bibinitperiod},
+           given={Katharina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92d2059ddc1abaa0b342569e5f7de754}{%
+           family={D{"u}ser},
+           familyi={D\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b6fea2ae6906ecb5321e4e9457a91469}
+      \strng{fullhash}{fb430a779b957917a1db14b88e6f7c14}
+      \strng{fullhashraw}{fb430a779b957917a1db14b88e6f7c14}
+      \strng{bibnamehash}{fb430a779b957917a1db14b88e6f7c14}
+      \strng{authorbibnamehash}{fb430a779b957917a1db14b88e6f7c14}
+      \strng{authornamehash}{b6fea2ae6906ecb5321e4e9457a91469}
+      \strng{authorfullhash}{fb430a779b957917a1db14b88e6f7c14}
+      \strng{authorfullhashraw}{fb430a779b957917a1db14b88e6f7c14}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE/SICE International Symposium on System Integration}
+      \field{title}{A LLM-Assisted Compiler for Generating Standard-Compliant Driving Scenarios from Natural Language}
+      \field{year}{2026}
+      \verb{doi}
+      \verb 10.1109/SII64115.2026.11404441
+      \endverb
+      \verb{urlraw}
+      \verb https://www.semanticscholar.org/paper/2962c6a01eb82b4dc44836dc4f917957739249c6
+      \endverb
+      \verb{url}
+      \verb https://www.semanticscholar.org/paper/2962c6a01eb82b4dc44836dc4f917957739249c6
       \endverb
     \endentry
     \entry{Kann2020Acquisition}{article}{}{}
@@ -928,6 +1041,38 @@
       \endverb
       \verb{url}
       \verb https://api.semanticscholar.org/CorpusID:201633108
+      \endverb
+    \endentry
+    \entry{unesco2025languages}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8678d59e8b0adbef078a2de259db9251}{%
+           family={{UNESCO Bangkok}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{8678d59e8b0adbef078a2de259db9251}
+      \strng{fullhash}{8678d59e8b0adbef078a2de259db9251}
+      \strng{fullhashraw}{8678d59e8b0adbef078a2de259db9251}
+      \strng{bibnamehash}{8678d59e8b0adbef078a2de259db9251}
+      \strng{authorbibnamehash}{8678d59e8b0adbef078a2de259db9251}
+      \strng{authornamehash}{8678d59e8b0adbef078a2de259db9251}
+      \strng{authorfullhash}{8678d59e8b0adbef078a2de259db9251}
+      \strng{authorfullhashraw}{8678d59e8b0adbef078a2de259db9251}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{note}{Accessed 2026-06-24}
+      \field{title}{Languages are not just words—they’re worlds: UNESCO Bangkok celebrates 25 years of International Mother Language Day}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.unesco.org/en/articles/languages-are-not-just-words-theyre-worlds-unesco-bangkok-celebrates-25-years-international-mother
+      \endverb
+      \verb{url}
+      \verb https://www.unesco.org/en/articles/languages-are-not-just-words-theyre-worlds-unesco-bangkok-celebrates-25-years-international-mother
       \endverb
     \endentry
     \entry{wei2026deepseekocr2visualcausal}{misc}{}{}
@@ -1398,6 +1543,34 @@
       \field{pages}{719\bibrangedash 728}
       \range{pages}{10}
     \endentry
+    \entry{ajb1997tension}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f32d45e110258f74d9355ec74b090fb8}{%
+           family={Ajb’ee},
+           familyi={A\bibinitperiod},
+           given={Odilio\bibnamedelima Jiménez},
+           giveni={O\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{fullhash}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{fullhashraw}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{bibnamehash}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{authorbibnamehash}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{authornamehash}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{authorfullhash}{f32d45e110258f74d9355ec74b090fb8}
+      \strng{authorfullhashraw}{f32d45e110258f74d9355ec74b090fb8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Latin American Studies Association Conference, Guadalajara, Mexico}
+      \field{title}{Tensión entre Idiomas: Situación actual de los Idiomas Mayas y el Español en Guatemala}
+      \field{year}{1997}
+    \endentry
     \entry{cardoso_pereira_iversen_ramos_2014}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=da6190afe14e95b1dc00b2ac6f329975}{%
@@ -1753,6 +1926,36 @@
       \field{title}{OCRBench v2: An Improved Benchmark for Evaluating Large Multimodal Models on Visual Text Localization and Reasoning}
       \field{year}{2025}
     \endentry
+    \entry{gomez2021pueblos}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9376037ad8c37c68b8f3440d26a11745}{%
+           family={Gómez\bibnamedelima Michel},
+           familyi={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Gerardo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Universidad Nacional Autónoma de México. Centro de Investigaciones sobre~…}%
+      }
+      \strng{namehash}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{fullhash}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{fullhashraw}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{bibnamehash}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{authorbibnamehash}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{authornamehash}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{authorfullhash}{9376037ad8c37c68b8f3440d26a11745}
+      \strng{authorfullhashraw}{9376037ad8c37c68b8f3440d26a11745}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Pueblos indígenas y desigualdad lingüística en América Latina}
+      \field{year}{2021}
+    \endentry
     \entry{halfon2024staytunedempiricalstudy}{misc}{}{}
       \name{author}{9}{}{%
         {{un=0,uniquepart=base,hash=408703223b0ba8b1af451aa6828bddbd}{%
@@ -1896,6 +2099,61 @@
       \endverb
       \verb{url}
       \verb https://www.mdpi.com/2076-3417/14/12/5068
+      \endverb
+    \endentry
+    \entry{jearian2026scenario}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f5d8cbf220ed24fa6c079dcce7e24dcb}{%
+           family={Jegarian},
+           familyi={J\bibinitperiod},
+           given={Majid},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd187c944232c8440e4f68146b795f97}{%
+           family={Esfahani},
+           familyi={E\bibinitperiod},
+           given={Amir\bibnamedelima K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d246c06faa3581ae0e5eb3756d4e308}{%
+           family={Bause},
+           familyi={B\bibinitperiod},
+           given={Katharina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92d2059ddc1abaa0b342569e5f7de754}{%
+           family={D{"u}ser},
+           familyi={D\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b6fea2ae6906ecb5321e4e9457a91469}
+      \strng{fullhash}{fb430a779b957917a1db14b88e6f7c14}
+      \strng{fullhashraw}{fb430a779b957917a1db14b88e6f7c14}
+      \strng{bibnamehash}{fb430a779b957917a1db14b88e6f7c14}
+      \strng{authorbibnamehash}{fb430a779b957917a1db14b88e6f7c14}
+      \strng{authornamehash}{b6fea2ae6906ecb5321e4e9457a91469}
+      \strng{authorfullhash}{fb430a779b957917a1db14b88e6f7c14}
+      \strng{authorfullhashraw}{fb430a779b957917a1db14b88e6f7c14}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE/SICE International Symposium on System Integration}
+      \field{title}{A LLM-Assisted Compiler for Generating Standard-Compliant Driving Scenarios from Natural Language}
+      \field{year}{2026}
+      \verb{doi}
+      \verb 10.1109/SII64115.2026.11404441
+      \endverb
+      \verb{urlraw}
+      \verb https://www.semanticscholar.org/paper/2962c6a01eb82b4dc44836dc4f917957739249c6
+      \endverb
+      \verb{url}
+      \verb https://www.semanticscholar.org/paper/2962c6a01eb82b4dc44836dc4f917957739249c6
       \endverb
     \endentry
     \entry{Kann2020Acquisition}{article}{}{}
@@ -2234,6 +2492,38 @@
       \endverb
       \verb{url}
       \verb https://api.semanticscholar.org/CorpusID:201633108
+      \endverb
+    \endentry
+    \entry{unesco2025languages}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8678d59e8b0adbef078a2de259db9251}{%
+           family={{UNESCO Bangkok}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{8678d59e8b0adbef078a2de259db9251}
+      \strng{fullhash}{8678d59e8b0adbef078a2de259db9251}
+      \strng{fullhashraw}{8678d59e8b0adbef078a2de259db9251}
+      \strng{bibnamehash}{8678d59e8b0adbef078a2de259db9251}
+      \strng{authorbibnamehash}{8678d59e8b0adbef078a2de259db9251}
+      \strng{authornamehash}{8678d59e8b0adbef078a2de259db9251}
+      \strng{authorfullhash}{8678d59e8b0adbef078a2de259db9251}
+      \strng{authorfullhashraw}{8678d59e8b0adbef078a2de259db9251}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{note}{Accessed 2026-06-24}
+      \field{title}{Languages are not just words—they’re worlds: UNESCO Bangkok celebrates 25 years of International Mother Language Day}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.unesco.org/en/articles/languages-are-not-just-words-theyre-worlds-unesco-bangkok-celebrates-25-years-international-mother
+      \endverb
+      \verb{url}
+      \verb https://www.unesco.org/en/articles/languages-are-not-just-words-theyre-worlds-unesco-bangkok-celebrates-25-years-international-mother
       \endverb
     \endentry
     \entry{wei2026deepseekocr2visualcausal}{misc}{}{}
