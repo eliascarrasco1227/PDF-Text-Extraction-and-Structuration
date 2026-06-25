@@ -173,7 +173,7 @@ T \in \{0.0,\; 0.1,\; 0.25,\; 0.5,\; 0.75,\; 1.0,\; 1.5,\; 2.0\}
 
 Cada celda experimental, definida por la combinación de una página del \textit{test set} y una configuración concreta, se obtuvo ejecutando el programa tres veces y calculando la media aritmética de los resultados. En el experimento de temperatura, las configuraciones corresponden a los distintos valores de \(T\); en el experimento de modelos, corresponden a las arquitecturas Gemini evaluadas. Dado que no se conservaron los valores individuales de cada intento, el análisis se presenta como exploratorio y se limita a las medias agregadas, sin calcular desviaciones típicas entre ejecuciones ni pruebas de significancia estadística.
 
-Debe señalarse que las desviaciones o rangos presentados en este capítulo describen la variabilidad entre páginas o configuraciones agregadas, no la variabilidad entre las tres ejecuciones individuales de cada celda, ya que dichos valores individuales no fueron conservados.
+Debe señalarse que las desviaciones o rangos presentados en este capítulo describen la variabilidad entre páginas o configuraciones agregadas, no la variabilidad entre las tres ejecuciones individuales de cada celda.
 
 La Tabla~\ref{tab:resultados_temperatura} recoge los resultados completos del experimento de temperatura. Cada celda representa la media de tres ejecuciones independientes para la combinación de una página del \textit{test set} y un valor concreto de temperatura.
 
@@ -397,11 +397,8 @@ Además de la media global, resulta relevante observar el comportamiento de cada
 
 Los resultados experimentales identifican de forma clara a \texttt{gemini-3.5-flash} como la arquitectura con mejor rendimiento global dentro del conjunto analizado, tal y como se observa en la Figura~\ref{fig:modelo_vs_similitud_media}.
 
-Este modelo alcanza una similitud media del 95.69\,\%, la más elevada de todo el estudio, y presenta simultáneamente la menor dispersión estadística, con una desviación estándar de apenas
+Este modelo alcanza una similitud media del 95,69 \%, la más elevada de todo el estudio, frente al 84,94 \% obtenido por gemini-2.5-flash-lite, que presenta el peor rendimiento medio. Además, muestra simultáneamente la menor dispersión estadística, con una desviación estándar de apenas \(\sigma = 3.59\), frente a la mayor desviación observada en gemini-2.5-flash-lite, con \(\sigma = 10.71\).
 
-\[
-\sigma = 3.59.
-\]
 
 La combinación de una elevada precisión media y una baja variabilidad constituye una evidencia sólida de la robustez operativa del modelo. No solo obtiene mejores resultados absolutos, sino que además mantiene un comportamiento consistente entre documentos de naturaleza muy diversa.
 

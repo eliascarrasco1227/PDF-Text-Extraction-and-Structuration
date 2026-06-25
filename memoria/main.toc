@@ -49,19 +49,20 @@
 \contentsline {subsection}{\numberline {4.1.2}Fases del desarrollo}{25}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}Control de versiones y documentación}{26}{subsection.4.1.3}%
 \contentsline {section}{\numberline {4.2}Configuración del entorno de desarrollo}{26}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Gestión de entornos virtuales (Anaconda)}{27}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}Gestión de entornos virtuales (Anaconda)}{26}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Dependencias y librerías críticas}{27}{subsection.4.2.2}%
 \contentsline {paragraph}{\nonumberline Interacción con modelos de IA}{27}{paragraph*.11}%
-\contentsline {paragraph}{\nonumberline Procesamiento de documentos}{27}{paragraph*.12}%
-\contentsline {paragraph}{\nonumberline Gestión y validación de datos}{28}{paragraph*.13}%
+\contentsline {paragraph}{\nonumberline Procesamiento de documentos PDF}{27}{paragraph*.12}%
+\contentsline {paragraph}{\nonumberline Validación y corrección de XML}{27}{paragraph*.13}%
+\contentsline {paragraph}{\nonumberline Gestión de ejecución, configuración y registros}{28}{paragraph*.14}%
 \contentsline {subsection}{\numberline {4.2.3}Estructura de directorios}{28}{subsection.4.2.3}%
 \contentsline {section}{\numberline {4.3}Gestión de claves de API y seguridad de la información}{28}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Externalización de credenciales}{28}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Protección del repositorio y prevención de fugas}{28}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}Protección del repositorio y prevención de fugas}{29}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Integridad de los datos de la ALMG}{29}{subsection.4.3.3}%
 \contentsline {section}{\numberline {4.4}Selección y descripción del corpus de trabajo}{29}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Criterios de selección}{29}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Caracterización del material documental}{29}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.2}Caracterización del material documental}{30}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Conformación del test set (Conjunto de pruebas)}{30}{subsection.4.4.3}%
 \contentsline {chapter}{\numberline {5}Diseño e implementación del sistema}{31}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Arquitectura general del sistema}{31}{section.5.1}%
@@ -70,7 +71,7 @@
 \contentsline {subsection}{\numberline {5.1.3}Estructuración y Formalización del Esquema XML y DTD}{34}{subsection.5.1.3}%
 \contentsline {subsection}{\numberline {5.1.4}Definición Formal de la Gramática de Datos (DTD)}{36}{subsection.5.1.4}%
 \contentsline {section}{\numberline {5.2}Módulo de procesamiento de documentos (\texttt {pdf\_processor.py})}{37}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Lógica de extracción y segmentación de bytes}{37}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.1}Lógica de extracción y segmentación de bytes}{38}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Gestión de la integridad y fidelidad del documento}{38}{subsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.2.3}Selección de rangos y modularidad}{38}{subsection.5.2.3}%
 \contentsline {section}{\numberline {5.3}Motor de generación mediante IA (\texttt {ai\_generator.py})}{39}{section.5.3}%

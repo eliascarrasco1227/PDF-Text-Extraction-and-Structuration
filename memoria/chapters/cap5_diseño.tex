@@ -11,7 +11,7 @@ El sistema se ha diseñado bajo una arquitectura modular y desacoplada, organiza
 
 El proceso de transformación de una gramática analógica en un documento estructurado sigue un flujo de cinco etapas, representadas de forma secuencial en la Figura~\ref{fig:uml_pipeline_principal}:
 \begin{enumerate}
-    \item \textbf{Capa de ingesta y preprocesamiento:} El sistema localiza los archivos PDF en el directorio \texttt{data/} y extrae el rango de páginas solicitado. En la ruta experimental principal, esta extracción se realiza mediante segmentación del PDF en un flujo binario (\textit{bytes}), sin rasterizar las páginas. De forma complementaria, el sistema contempla una ruta alternativa de prototipado basada en imágenes rasterizadas.
+    \item \textbf{Capa de ingesta y preprocesamiento:} El sistema localiza los archivos PDF en el directorio \texttt{data/} y extrae el rango de páginas solicitado. En la ruta experimental principal, esta extracción se realiza mediante segmentación del PDF en un flujo binario (\textit{bytes}), sin rasterizar las páginas.
     
     \item \textbf{Capa de inferencia (Motor de IA):} Se envía el fragmento documental obtenido, principalmente como PDF segmentado en bytes, junto con un \textit{prompt} especializado y ejemplos de entrenamiento (\textit{few-shot}) para obtener una respuesta en formato XML.
     
@@ -38,11 +38,11 @@ La implementación se refleja en la siguiente organización de directorios en el
 \begin{itemize}
     \item \textbf{\texttt{core/}:} Contiene la lógica de negocio principal, incluyendo la interacción con la IA, la gestión de archivos y el corrector de XML.
     
-    \item \textbf{\texttt{config/}:} Centraliza los parámetros del sistema, rutas de directorios y la gestión de la arquitectura técnica.
+    \item \textbf{\texttt{config/}:} Centraliza los parámetros del sistema, rutas de directorios y la gestión de la arquitectura técnica. Algunos ejemplos de configuración incluyen la selección del modelo de IA, la temperatura de generación, los directorios de entrada y salida, el rango de páginas a procesar, rutas a los archivos de few-shot y la ubicación de la DTD...
     
     \item \textbf{\texttt{validator/}:} Aloja las reglas formales (DTD) y el script de validación que garantiza la calidad de los datos.
     
-    \item \textbf{\texttt{latex\_generator/}:} Módulo especializado en la conversión de etiquetas XML a comandos de tipografía científica.
+    \item \textbf{\texttt{latex\_generator/}:} Módulo especializado en la conversión de etiquetas XML a comandos de tipografía científica (\LaTeX{}), incluyendo la gestión de caracteres especiales y glosas interlineales.
     
     \item \textbf{\texttt{evaluator/}:} Infraestructura para la comparación de resultados y cálculo de métricas de precisión frente al \textit{test set}.
 \end{itemize}
@@ -176,7 +176,7 @@ Mediante esta arquitectura relacional, el sistema busca preservar el texto plano
 
 \section{Módulo de procesamiento de documentos (\texttt{pdf\_processor.py})}
 
-El primer eslabón del \textit{pipeline} es el módulo encargado de la ingesta y manipulación de los archivos fuente. Dado que las gramáticas de la ALMG presentan una naturaleza heterogénea, se ha implementado una estrategia principal de segmentación y extracción de flujo binario que permite aislar fragmentos del documento original sin alterar su estructura interna. Esta es la ruta utilizada en la experimentación final; la conversión a imagen queda reservada como alternativa de prototipado para casos concretos en los que se requiera inspección visual aislada.
+El primer eslabón del \textit{pipeline} es el módulo encargado de la ingesta y manipulación de los archivos fuente. Dado que las gramáticas de la ALMG presentan una naturaleza heterogénea, se ha implementado una estrategia principal de segmentación y extracción de flujo binario que permite aislar fragmentos del documento original sin alterar su estructura interna.
 
 \subsection{Lógica de extracción y segmentación de bytes}
 
@@ -228,7 +228,7 @@ El script \texttt{ai\_generator.py} gestiona la forma en la que se realiza la ll
 
 Para garantizar que el modelo genere una estructura XML coherente con la gramática formal definida por la DTD, el sistema no utiliza una estrategia de \textit{Zero-Shot Learning}, sino una aproximación basada en \textit{Few-Shot Learning}.
 
-A través del módulo \texttt{prompt\_reader.py}, el sistema incorpora a la petición ejemplos reales formados por pares de entrada y salida compuestos por una imagen y su correspondiente XML validado, almacenados en la carpeta \texttt{data/few-shot}.
+A través del módulo \texttt{prompt\_reader.py}, el sistema incorpora a la petición ejemplos reales formados por pares de entrada y salida compuestos por una página del pdf original y su correspondiente XML validado, almacenados en la carpeta \texttt{data/few-shot}.
 
 Esta técnica proporciona al modelo un patrón visual y sintáctico previo, reduciendo significativamente las alucinaciones estructurales y favoreciendo una aplicación consistente de las etiquetas XML definidas en el esquema de datos.
 
@@ -321,7 +321,7 @@ Para ello, el sistema incorpora las siguientes estrategias:
 \begin{itemize}
     \item Codificación Unicode: toda la salida se genera en formato UTF-8, permitiendo que motores de composición modernos como XeLaTeX o LuaLaTeX representen correctamente los caracteres especiales.
 
-    \item Formateo de glosas: los ejemplos lingüísticos se estructuran mediante tablas, listas y entornos especializados que preservan la alineación entre formas originales, segmentaciones morfológicas y traducciones, evitando los problemas de desorganización visual característicos de las conversiones automáticas desde texto plano.
+    \item Formateo de glosas: los ejemplos lingüísticos se estructuran mediante tablas, listas y entornos especializados que preservan la alineación entre formas originales, segmentaciones morfológicas y traducciones, evitando los problemas de desorganización visual característicos de las conversiones automáticas desde texto plano tal y como se puede ver en el capitulo \ref{cap:resultados} en la comparación \ref{code:kachiquel_xml_172}.
 \end{itemize}
 
 Estas medidas resultan fundamentales para garantizar la fidelidad lingüística del documento final.
@@ -389,7 +389,7 @@ La Figura~\ref{fig:uml_evaluacion_experimentos} muestra el flujo de evaluación 
 
 \subsection{Persistencia y versionado de resultados}
 
-Una de las características más relevantes de este módulo es su sistema de almacenamiento jerárquico de resultados. Cada ejecución se organiza automáticamente según criterios como el modelo empleado, el idioma procesado y la temperatura utilizada.
+Una de las características más relevantes de este módulo es su sistema de almacenamiento jerárquico de resultados. Cada ejecución se organiza automáticamente según criterios como el idioma procesado y wl rango de páginas utilizadas.
 
 El sistema incorpora además un mecanismo de versionado incremental. Cada resultado generado se almacena con un identificador de versión secuencial (\texttt{v1}, \texttt{v2}, \texttt{v3}, etc.), lo que permite mantener la trazabilidad de las ejecuciones realizadas.
 

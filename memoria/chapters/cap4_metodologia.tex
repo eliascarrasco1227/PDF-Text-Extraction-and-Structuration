@@ -23,11 +23,11 @@ El ciclo de vida del software se ha dividido en cuatro fases principales, reflej
 \begin{itemize}
     \item \textbf{Fase de exploración y prototipado (Zero-Shot):} En las primeras etapas, se realizaron pruebas de extracción de texto plano para evaluar la capacidad de visión de Gemini. Se detectó la necesidad de transicionar hacia una salida estructurada debido a la pérdida de jerarquía semántica.
     
-    \item \textbf{Fase de ingeniería de prompts y estructuración (Few-Shot):} Se implementó la lógica de \textit{Few-Shot Learning} (visible en la carpeta \texttt{data/few-shot}), proporcionando al modelo ejemplos de XML validado para guiar la generación. Metodológicamente, se optó por la técnica avanzada de pre-carga de historial (\textit{History Pre-loading}) a nivel de SDK, inyectando pares de documento de entrada y XML directamente en el búfer de la sesión antes del envío del mensaje del usuario, lo que optimizó drásticamente la latencia y la eficiencia en la transferencia de red. Durante esta fase se documentó el fenómeno de \textit{overfitting} o pérdida de generalización cognitiva al incrustar ejemplos documentales fijos directamente en el prompt; el modelo tendía a reproducir de forma literal metadatos espurios del ejemplo (como la cadena ``Adidas'' o las oraciones exactas de la muestra) en las nuevas páginas, lo que obligó a refinar la abstracción del prompt textual. En esta fase se definió el DTD inicial.
+    \item \textbf{Fase de ingeniería de prompts y estructuración (Few-Shot):} Se implementó la lógica de \textit{Few-Shot Learning} (visible en la carpeta \texttt{data/few-shot}), proporcionando al modelo ejemplos de XML validado para guiar la generación. Metodológicamente, se optó por la técnica avanzada de pre-carga de historial (\textit{History Pre-loading}) a nivel de SDK, inyectando pares de documento de entrada y XML directamente en el búfer de la sesión antes del envío del mensaje del usuario, lo que optimizó drásticamente la latencia y la eficiencia en la transferencia de red. En esta fase se definió el DTD inicial.
     
     \item \textbf{Fase de refinamiento estructural y validación:} Desarrollo de los módulos de post-procesamiento (\texttt{xml\_corrector.py} y \texttt{xml\_validator.py}). Se iteró sobre el código para subsanar los errores estructurales típicos del modelo (etiquetas mal cerradas o duplicadas). En esta fase se diseñó la lógica de escape del bucle de validación (\textit{Validation Loop}): si tras el quinto intento de autoreparación iterativa el XML generado persiste en incumplir las especificaciones gramaticales del archivo DTD, el orquestador interrumpe las llamadas para evitar el bloqueo del \textit{pipeline}, guardando la última traza con errores heurísticos y continuando con el flujo secuencial de ejecución.
     
-    \item \textbf{Fase de experimentación y análisis:} Realización de pruebas sistemáticas variando la temperatura del modelo (de 0.0 a 1.5) para identificar el ``punto dulce'' de precisión, tal como se detalla en el análisis de resultados del Capítulo~\ref{cap:resultados}. Durante esta etapa (específicamente en los ensayos del 10 de febrero de 2026), se descubrió una limitación física insalvable en el procesamiento por bloques: el sistema se encuentra acotado a un máximo de 2 páginas simultáneas. Debido a que cada sílaba analizada lingüísticamente en las glosas exige un mínimo de 4 etiquetas XML anidadas (aproximadamente 6 líneas de marcado), un volumen superior satura la ventana máxima de tokens de salida de la API, provocando truncamientos estructurales fatales.
+    \item \textbf{Fase de experimentación y análisis:} Realización de pruebas sistemáticas variando la temperatura del modelo (de 0.0 a 2.0) para identificar el ``punto dulce'' de precisión, tal como se detalla en el análisis de resultados del Capítulo~\ref{cap:resultados}. Durante esta etapa (específicamente en los ensayos del 10 de febrero de 2026), se descubrió una limitación física insalvable en el procesamiento por bloques: el sistema se encuentra acotado a un máximo de 2 páginas simultáneas. Debido a que cada sílaba analizada lingüísticamente en las glosas exige un mínimo de 4 etiquetas XML anidadas (aproximadamente 6 líneas de marcado), un volumen superior satura la ventana máxima de tokens de salida de la API, provocando truncamientos estructurales fatales.
 \end{itemize}
 
 \subsection{Control de versiones y documentación}
@@ -55,29 +55,40 @@ Se ha utilizado Anaconda como gestor de entornos y paquetes, permitiendo aislar 
 
 \subsection{Dependencias y librerías críticas}
 
-El sistema se apoya en un conjunto de librerías especializadas instaladas a través de \texttt{pip} y gestionadas mediante el archivo \texttt{requirements.txt}. Las dependencias clave se agrupan en tres categorías:
+El sistema se apoya en un conjunto de librerías especializadas instaladas a través de \texttt{pip} y registradas en el archivo \texttt{requirements.txt}. Las dependencias clave se agrupan en tres categorías:
 
 \paragraph{Interacción con modelos de IA}
 
 \begin{itemize}
-    \item \textbf{\texttt{google-generativeai}:} Librería principal para la comunicación con la API de Gemini. Gestiona el envío de documentos PDF segmentados o imágenes, según la ruta de entrada utilizada, y la recepción de respuestas estructuradas.
+    \item \textbf{\texttt{google-genai}:} Librería principal empleada para la comunicación con la API de Gemini. En el proyecto se utiliza para crear el cliente de inferencia, enviar documentos PDF en formato binario mediante \texttt{types.Part.from\_bytes} y configurar parámetros de generación como el modelo y la temperatura. También se emplea en el módulo de corrección automática de XML, donde se realiza una segunda llamada al modelo para corregir salidas que no cumplen el DTD.
 \end{itemize}
 
-\paragraph{Procesamiento de documentos}
+\paragraph{Procesamiento de documentos PDF}
 
 \begin{itemize}
-    \item \textbf{\texttt{PyPDF2}:} Librería utilizada en el flujo experimental principal para segmentar los documentos PDF por rangos de páginas y generar un flujo binario (\textit{bytes}) que conserva la estructura interna del archivo antes de enviarlo a la API de Gemini.
-
-    \item \textbf{\texttt{pdf2image} y \texttt{Pillow (PIL)}:} Librerías contempladas durante el prototipado para una ruta alternativa de entrada por imagen rasterizada. Esta vía permite convertir páginas concretas del PDF en imágenes de alta resolución y preprocesarlas antes de su envío al modelo, pero no constituye la ruta principal utilizada en los experimentos finales.
+    \item \textbf{\texttt{PyPDF2}:} Librería utilizada para leer documentos PDF, calcular el número total de páginas y extraer rangos concretos del documento. El módulo \texttt{pdf\_processor.py} emplea \texttt{PdfReader} y \texttt{PdfWriter} para generar un nuevo PDF en memoria, almacenado como un flujo de bytes mediante \texttt{io.BytesIO}. Este flujo binario es el que posteriormente se envía a Gemini como entrada documental.
 \end{itemize}
 
-\paragraph{Gestión y validación de datos}
+\paragraph{Validación y corrección de XML}
 
 \begin{itemize}
-    \item \textbf{\texttt{lxml}:} Librería fundamental para el procesamiento de XML en Python. Se utiliza en el módulo \texttt{xml\_validator.py} para contrastar la salida de la IA contra el archivo \texttt{gramatica.dtd}, asegurando que el documento cumpla con las reglas gramaticales definidas.
+    \item \textbf{\texttt{lxml}:} Librería utilizada en el módulo \texttt{xml\_validator.py} para comprobar que la salida XML generada por la IA está bien formada y cumple las reglas definidas en el archivo \texttt{gramatica.dtd}. Para ello, el sistema parsea el XML, carga el DTD y valida la estructura antes de aceptar la salida como válida.
+
+    \item \textbf{\texttt{re}:} Librería estándar de Python empleada para limpiar la respuesta generada por el modelo, eliminando posibles delimitadores de Markdown como \texttt{```xml} o \texttt{```} antes de procesar el contenido como XML.
+\end{itemize}
+
+\paragraph{Gestión de ejecución, configuración y registros}
+
+\begin{itemize}
+    \item \textbf{\texttt{os}:} Librería estándar utilizada para comprobar la existencia de archivos, gestionar rutas y crear directorios necesarios durante la ejecución, como el directorio de logs.
+
+    \item \textbf{\texttt{logging}:} Librería estándar empleada para registrar el flujo de ejecución del sistema. El módulo \texttt{logger\_config.py} configura un logger global que escribe tanto en consola como en archivos de log con marca temporal.
+
+    \item \textbf{\texttt{time}:} Librería estándar utilizada para introducir esperas entre reintentos cuando se producen errores temporales en la API, como sobrecarga del servidor o fallos 503.
+
+    \item \textbf{\texttt{datetime}:} Librería estándar utilizada para generar nombres de archivo de log con fecha y hora, facilitando la trazabilidad de las ejecuciones.
+\end{itemize}
     
-    \item \textbf{\texttt{python-dotenv}:} Para la carga segura de variables de entorno, evitando la exposición de claves de API en el código fuente.
-\end{itemize}
 
 \subsection{Estructura de directorios}
 
@@ -93,7 +104,7 @@ En proyectos que dependen de servicios en la nube facturables o sujetos a cuotas
 Siguiendo los estándares de seguridad de software, se ha evitado la práctica de ``hardcodear'' (insertar directamente) las claves en los scripts de Python. En su lugar, se ha optado por un sistema de variables de entorno:
 
 \begin{itemize}
-    \item \textbf{Inyección en tiempo de ejecución:} La clave se carga en la memoria del sistema operativo antes de ejecutar la aplicación mediante el comando \texttt{set GEMINI\_API\_KEY=[CLAVE\_SECRETA]}.
+    \item \textbf{Inyección en tiempo de ejecución:} La clave se carga en la memoria del sistema operativo antes de ejecutar la aplicación mediante el comando: \\ \texttt{set GEMINI\_API\_KEY=[CLAVE\_SECRETA]}.
     
     \item \textbf{Consumo mediante código:} El módulo \texttt{config/properties.py} utiliza la librería \texttt{os} para recuperar esta clave de forma dinámica, asegurando que el valor real nunca quede registrado en el historial de archivos del proyecto.
 \end{itemize}
