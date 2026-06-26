@@ -4,14 +4,14 @@ Este capítulo final ofrece una visión retrospectiva sobre el desarrollo del pr
 
 \section{Síntesis del trabajo desarrollado}
 
-En el marco de este Trabajo de Fin de Máster, hemos diseñado e implementado un ecosistema tecnológico integral orientado a la preservación digital de lenguas mayas minorizadas. La investigación ha abordado con éxito el desafío de transformar documentos estáticos y fotografías de libros de la Academia de Lenguas Mayas de Guatemala (ALMG) en datos digitales inteligentes y estructurados.
+En el marco de este Trabajo de Fin de Máster, hemos diseñado e implementado un ecosistema tecnológico integral orientado a la preservación digital de lenguas mayas minorizadas. La investigación ha abordado con éxito el desafío de transformar documentos estáticos y fotografías de libros de la Academia de Lenguas Mayas de Guatemala (ALMG) en datos digitales usables y estructurados.
 
 El trabajo desarrollado se ha materializado en un pipeline modular en Python que orquesta cuatro procesos críticos:
 
 \begin{itemize}
     \item Procesamiento multimodal: La conversión de documentos PDF heterogéneos en entradas visuales de alta calidad.
     
-    \item Inferencia Inteligente: El uso de modelos de lenguaje de gran tamaño (Gemini 1.5, 2.5…) mediante técnicas de Few-Shot Learning para la extracción semántica de gramáticas complejas.
+    \item Inferencia Inteligente: El uso de modelos de lenguaje de gran tamaño (Gemini 2.5 flash, 3.5 flash…) mediante técnicas de Few-Shot Learning para la extracción semántica de gramáticas complejas.
     
         \item Garantía de calidad estructural: La implementación de una capa de validación basada en un Documento de Definición de Tipo (DTD) y un corrector heurístico que reduce las limitaciones sintácticas de la IA. Esta capa garantiza la coherencia formal del XML, aunque no sustituye la evaluación de fidelidad textual frente al documento original.
     
@@ -31,7 +31,7 @@ Más allá del desarrollo de software, este trabajo ha aportado un valor investi
     
     \item El determinismo absoluto (\(T=0\)) tampoco es óptimo. La intuición de que la mínima temperatura maximiza la precisión no se confirma en los datos: \(T=0\) produce la segunda menor media global (92,44) y una dispersión elevada (\(\sigma=8,45\)). Para esta tarea, el modo puramente determinista es subóptimo.
     
-    \item La sensibilidad a la temperatura es función de la dificultad de la página. Siete de las nueve páginas son prácticamente insensibles al parámetro (rango < 2 puntos). La temperatura solo produce variaciones de magnitud operativa en páginas que ya presentan dificultades para el sistema.
+    \item La sensibilidad a la temperatura es función de la dificultad de la página. Siete de las nueve páginas son prácticamente insensibles al parámetro (rango \textgreater 2 puntos). La temperatura solo produce variaciones de magnitud operativa en páginas que ya presentan dificultades para el sistema.
     
     \item La relación entre temperatura y CER no es monotónica. El ordenamiento de temperaturas por media global no sigue ningún patrón predecible de creatividad creciente. En lugar de existir un valor óptimo único, los resultados apuntan a una ventana recomendable entre \(T=0.1\) y \(T=0.75\), mientras que los extremos del rango, especialmente \(T=0\) y \(T=2.0\), son menos adecuados en términos de media y estabilidad.
 \end{itemize}
@@ -45,9 +45,7 @@ Conclusiones con reservas:
 Limitaciones del estudio:
 
 \begin{itemize}
-        \item Aunque cada celda experimental se calculó como la media de tres ejecuciones, no se conservaron los valores individuales de cada intento. Por este motivo, no es posible calcular desviaciones típicas entre repeticiones ni realizar pruebas de significancia estadística. Las diferencias inferiores a 2 puntos porcentuales deben considerarse indicativas.
-    
-    \item El corpus de nueve páginas, aunque diverso, es reducido. Las conclusiones tienen validez interna para el conjunto evaluado y requieren verificación en corpus ampliados antes de generalizarse.
+    \item Aunque cada celda experimental se calculó como la media de tres ejecuciones, no se conservaron los valores individuales de cada intento. Por este motivo, no es posible calcular desviaciones típicas entre repeticiones ni realizar pruebas de significancia estadística. Las diferencias inferiores a 2 puntos porcentuales deben considerarse indicativas.
     
     \item No es posible determinar a partir de los datos disponibles la causa concreta del bajo rendimiento sistemático de Qanjobal\_201. Un análisis cualitativo de esta página es recomendable para identificar sus factores limitantes y orientar futuras mejoras del sistema.
 \end{itemize}

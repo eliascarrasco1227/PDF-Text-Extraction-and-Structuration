@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1782333469.58542 "main.bcf" "main.bbl" "main" 1782388059.36124 0
+["biber main"] 1782333469.58542 "main.bcf" "main.bbl" "main" 1782470387.33108 0
   "bibliografia/bibliografia.bib" 1782333360 30906 06f4fe9c29fd91bc548c7df3a2e68a92 ""
-  "main.bcf" 1782388057 136048 18e880f22f083efe65603661f1d36214 "pdflatex"
+  "main.bcf" 1782470386 136048 18e880f22f083efe65603661f1d36214 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1782388033.78612 "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" "main.pdf" "main" 1782388059.36585 0
+["pdflatex"] 1782470379.19131 "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" "main.pdf" "main" 1782470387.33309 0
   "back_matter.tex" 1780660854 45398 995487411d4960e80701f40e5f669b5b ""
   "c:/Users/elcar/OneDrive/Documentos/MASTER/TFM/memoria/main.tex" 1781279329 3919 12d7a0702f46bd4844be47ca33f61106 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1780230687 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -135,6 +135,7 @@
   "c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty" 1780226453 2444 9983e1d0683f102e3b190c64a49313aa ""
   "c:/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty" 1780232468 5525 1593ca62a2554dd7423fc8a4e5a82125 ""
   "c:/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty" 1780232468 5048 0270515b828149155424600fd2d58ac5 ""
+  "c:/texlive/2026/texmf-dist/tex/latex/base/omlcmr.fd" 1780232468 2470 cbfd89aa18d2d104ec0041c9de14e544 ""
   "c:/texlive/2026/texmf-dist/tex/latex/biblatex-apa/apa.bbx" 1780227427 70180 805807dcc28924942575038a9c641e96 ""
   "c:/texlive/2026/texmf-dist/tex/latex/biblatex-apa/apa.cbx" 1780227427 21087 9cd140b1444bbb5241971bf99efcbebd ""
   "c:/texlive/2026/texmf-dist/tex/latex/biblatex-apa/apa.dbx" 1780227427 2676 12d5db85c8d2314684d2ab8c20de8d52 ""
@@ -249,7 +250,7 @@
   "chapters/cap4_metodologia.tex" 1782385613 18010 7a0f83f103359472b229b9117e908708 ""
   "chapters/cap5_diseño.tex" 1782386554 59415 307f9df4959d4dfe928da1ebe6019ef2 ""
   "chapters/cap7_resultados.tex" 1782388032 49526 7febce79d71491933129d9581096c157 ""
-  "chapters/cap8_conclusiones.tex" 1781618149 21487 cea57831eb85afb8a5420f04ebd09be7 ""
+  "chapters/cap8_conclusiones.tex" 1782470377 21505 e05cf1574adf92e218a14c6c645eb8d8 ""
   "front_matter.tex" 1782230887 8009 a643f2946232a4a89d32afed907b71e9 ""
   "glosario/entradas_glosario.tex" 1780249163 3057 6f4fceb84415007b5606f4b214ceec43 ""
   "imagenes/ALMG/web_ALMG.png" 1780143283 235890 825b25da13521f1298f4768d5b9e3803 ""
@@ -268,14 +269,14 @@
   "imagenes/scheme/diagrama_uml_pipeline_principal.png" 1781619242 254955 151048a1b82ad4b1110d47d51e07d593 ""
   "imagenes/scheme/diagrama_xml_semantico.png" 1781619114 195995 db88c210426a0c1d360b931fccfbaaa2 ""
   "imagenes/scheme/pipeline_transformacion_documental.png" 1781619207 307068 2241324b0d8ea336a7606df5a822f9d4 ""
-  "main.aux" 1782388057 100721 929436e819105c2b233e8da218c56955 "pdflatex"
+  "main.aux" 1782470386 100721 929436e819105c2b233e8da218c56955 "pdflatex"
   "main.bbl" 1782333477 127541 e21e1dc314710adb665b1d0458cd5d07 "biber main"
-  "main.lof" 1782388058 2514 98d59de481179399bb84f34a1b6d1245 "pdflatex"
-  "main.lol" 1782388058 1087 f0a22ade77b4f249e5be6d751e467e29 "pdflatex"
-  "main.lot" 1782388058 1157 84acd14a11d85b6a87fa7c90d66f5a31 "pdflatex"
-  "main.run.xml" 1782388058 2374 84b3c453a69351e7c18dc5329eb72f5e "pdflatex"
+  "main.lof" 1782470386 2514 98d59de481179399bb84f34a1b6d1245 "pdflatex"
+  "main.lol" 1782470386 1087 f0a22ade77b4f249e5be6d751e467e29 "pdflatex"
+  "main.lot" 1782470386 1157 84acd14a11d85b6a87fa7c90d66f5a31 "pdflatex"
+  "main.run.xml" 1782470386 2374 84b3c453a69351e7c18dc5329eb72f5e "pdflatex"
   "main.tex" 1781279329 3919 12d7a0702f46bd4844be47ca33f61106 ""
-  "main.toc" 1782388058 13743 874230ae50d8374c7fd6ddf0aa11749e "pdflatex"
+  "main.toc" 1782470386 13743 874230ae50d8374c7fd6ddf0aa11749e "pdflatex"
   "portada/portada-tfm.pdf" 1780661860 126499 fe1d12ae8524c80a7ee80981549f4123 ""
   "portada/portada.tex" 1780249162 325 22611075635420b29f794da6a0afcdf6 ""
   "portada/portada_2.tex" 1780249162 1019 41fab9129ff26e09de13c508f948bc7d ""
